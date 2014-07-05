@@ -1,4 +1,4 @@
 sparen.github.io
 ================
 
-Expanded description page
+This is a site where I will dump hopefully relevant information about my Computer Science and Programming projects.
