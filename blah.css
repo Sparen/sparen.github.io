@@ -73,15 +73,15 @@ body{
 }
 /*unvisited link*/
 a:link{
-  color:rgb(82,235,251);
+  color:rgb(192,255,255);
 }
 /* visited link */
 a:visited {
-    color:rgb(50,200,200);
+  color:rgb(50,200,200);
 }
 /* mouse over link */
 a:hover {
-    color:rgb(192,255,255);
+  color:rgb(82,235,251);
 }
 
 #ft{
