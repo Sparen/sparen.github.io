@@ -71,8 +71,17 @@ pre,code,kbd,samp,tt{
 body{
   text-align:center;
 }
-externallink{
-  color:rgb(82,235,251)
+/*unvisited link*/
+a:link{
+  color:rgb(82,235,251);
+}
+/* visited link */
+a:visited {
+    color:rgb(50,200,200);
+}
+/* mouse over link */
+a:hover {
+    color:rgb(192,255,255);
 }
 
 #ft{
