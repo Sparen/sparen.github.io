@@ -10,11 +10,14 @@
   </head>
   <body id="mabout">
     <div class="yui-t1" id="top">
-      <br>
       <center><a href="index.html">Link back to Home Page</a></center>
       <br>
       <div id="menubar">
-	<?php include "menu.php";?>
+        <ul>
+          <li><a class="mhome" href="./index.html">Home</a></li>
+          <li><a class="mabout" href="./aboutme.html">About Me</a></li>
+          <li><a class="mlocaafanfiction" href="./locaafanfiction.html">LOCAA Fanfiction</a></li>
+        </ul>
       </div>
       <div id="bd">
         <div id="yui-main">
@@ -52,11 +55,5 @@
         </div>
       </div>
     </div>
-    <!-- Below is located here so that the DOM has created the Div in question. -->
-    <script type="text/javascript"> 
-    $(function(){
-      $("#menubar").load("menu.html"); 
-    });
-    </script> 
   </body>
 </html>
