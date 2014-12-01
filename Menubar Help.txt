@@ -5,7 +5,6 @@
           <li><a class="mhome" href="./index.html">Home</a></li>
           <li><a class="mabout" href="./aboutme.html">About Me</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials/ph3tutorials.html">ph3 Tutorials</a></li>
-          <li><a class="mlocaafanfiction" href="./locaafanfiction.html">LOCAA Fanfiction</a></li>
         </ul>
       </div>
 
@@ -16,7 +15,6 @@
           <li><a class="mhome" href="../index.html">Home</a></li>
           <li><a class="mabout" href="../aboutme.html">About Me</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html">ph3 Tutorials</a></li>
-          <li><a class="mlocaafanfiction" href="../locaafanfiction.html">LOCAA Fanfiction</a></li>
         </ul>
       </div>
 
