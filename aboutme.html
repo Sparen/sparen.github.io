@@ -8,11 +8,14 @@
       name="description">
     <meta content="BlueGriffon wysiwyg editor" name="generator">
   </head>
-  <body>
+  <body id="mabout">
     <div class="yui-t1" id="top">
       <br>
       <center><a href="index.html">Link back to Home Page</a></center>
       <br>
+      <div id="menubar">
+	<?php include "menu.php";?>
+      </div>
       <div id="bd">
         <div id="yui-main">
           <div class="yui-b">
@@ -49,6 +52,11 @@
         </div>
       </div>
     </div>
-    
+    <!-- Below is located here so that the DOM has created the Div in question. -->
+    <script type="text/javascript"> 
+    $(function(){
+      $("#menubar").load("menu.html"); 
+    });
+    </script> 
   </body>
 </html>
