@@ -1,4 +1,4 @@
-function checkAnswer(quizForm, theAnswer){
+function checkAnswerA2(quizForm, theAnswer){
   var s = "?";
 
   var i = 0;
