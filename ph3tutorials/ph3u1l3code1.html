@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Ph3 Tutorials - Unit 1 Lesson 3</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Andrew Fan's Code Dump: The Embodiment of Code and Hacks (AFCDTECH)"      name="description">    <meta content="BlueGriffon wysiwyg editor" name="generator">  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="../index.html"><img alt="&quot;Site Logo&quot;" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="../index.html">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html">ph3 Tutorial Index</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <!--Embedded code below. Whitespace actually matters for this because it is in a pre block-->
+              <pre><code>#TouhouDanmakufu[Single]
+#ScriptVersion[3] //This is required for ph3 scripts
+#Title["SampleA01"]
+#Text["SampleA01：Shooting Bullets Straight Down"] 
+
+//Load the default shotsheet
+#include"script/default_system/Default_ShotConst.txt"
+//----------------------------------------------------
+//Declaring Global Variables
+//The variables declared here can be used throughout the entire script.
+//However, the variables declared here are static. (They can be changed, but not by themselves as they are not in the main loop)
+//(As execution order cannot be guaranteed, random numbers cannot be used(?))
+//----------------------------------------------------
+let objEnemy; //Enemy object
+let frame = 0; //Counter for timing enemy movements.(Will keep increasing by one in @MainLoop)
+
+//----------------------------------------------------
+//Enemy movement
+//----------------------------------------------------
+@Event
+{
+	alternative(GetEventType())
+	case(EV_REQUEST_LIFE)
+	{
+		//The script asks for the enemy's life
+		SetScriptResult(500);//Setting the enemy's life to 500
+	}
+}
+
+@Initialize
+{
+	//Creating and registering enemy objects
+	objEnemy = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+	ObjEnemy_Regist(objEnemy);
+
+	//Setting the enemy's image
+	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png"; //file path to enemy image
+	ObjPrim_SetTexture(objEnemy, imgExRumia); //Setting the above image file as a texture to the enemy object(objEnemy)
+	ObjSprite2D_SetSourceRect(objEnemy, 64, 1, 127, 64); //Setting the rectangle coordinates in the enemy image to use(Left, Top, Right, Bottom).
+	ObjSprite2D_SetDestCenter(objEnemy); //Positioning the center of the rectangle(w/texture) at (0, 0) on the stage(top left corner).
+
+	//Moving to the coordinate (cx, 60) in 60 frames
+	let cx = GetStgFrameWidth() / 2;//defines the variable cx as the horizontal middle of the stage. (Stage width / 2)
+	ObjMove_SetDestAtFrame(objEnemy, cx, 60, 60);
+}
+
+@MainLoop
+{
+	//retrieving enemy coordinates
+	let ex = ObjMove_GetX(objEnemy);
+	let ey = ObjMove_GetY(objEnemy);
+
+	if(frame == 60)
+	{
+		//executed when frame is equal to 60
+		//・shoots a bullet straight down from the enemy's position
+		//・speed: 3 pixels per frame
+		//・angle: 90 (down)    (0 = right, 180 = left, 270 = up)
+		//・delay: 30 frames 
+		CreateShotA1(ex, ey, 3, 90, DS_BALL_S_RED, 30);
+
+		frame = 0;//after the bullet is shot, frame is returned to 0 to build up to 60 again and fire another bullet.
+
+	}
+
+	//Setting the enemy hit box
+	ObjEnemy_SetIntersectionCircleToShot(objEnemy, ex, ey, 32);//hitbox against player bullets. 32 is the radius.
+	ObjEnemy_SetIntersectionCircleToPlayer(objEnemy, ex, ey, 24);//hitbox against the player. 24 is the radius.
+
+	//adding +1 to frame. "frame++" is equivalent to "frame = frame + 1;" or "frame += 1;"
+	frame++;
+
+	//If the enemy's life is 0
+	if(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) <= 0)
+	{
+		//the enemy is killed immediately when life is 0
+		//As this is a beginner sample script, 
+		//the script is ended immediately without waiting for an explosion effect
+		Obj_Delete(objEnemy);
+		CloseScript(GetOwnScriptID());
+		return;
+	}
+}</code></pre>
+              <br>            </div>          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: Dec 2, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L3Quiz1.js"></script>  </body></html>
