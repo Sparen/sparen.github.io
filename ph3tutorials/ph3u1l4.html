@@ -1,0 +1,134 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Ph3 Tutorials - Unit 1 Lesson 4</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Andrew Fan's Code Dump: The Embodiment of Code and Hacks (AFCDTECH)"      name="description">    <meta content="BlueGriffon wysiwyg editor" name="generator">  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="../index.html"><img alt="&quot;Site Logo&quot;" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="../index.html">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html">ph3 Tutorial Index</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Lesson 4 - Danmakufu Syntax, Structures, and Operations</h1>              <p>The video for this lesson is AJS's entry for the LOCAA 5 contest. It won first place for reasons obvious in the video. In my opinion, this is one of the best dual-boss scripts ever made in Danmakufu ph3, especially considering that although AJS has had a significant amount of experience in Danmakufu, this is his very first ph3 script.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/buqjGcXLBjE">
+	      <div style="width: 450px;" class="tutorialnav">
+                <h2 style="color:aqua">Table of Contents</h2>
+                <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are Comments and How do I Use Them?</a></li>
+	          <li><a href="#sub3">Part 3: What is a Variable?</a></li>
+	          <li><a href="#sub4">Part 4: What are Constants?</a></li>
+	          <li><a href="#sub5">Part 5: What Mathematical Operations Can I Perform in Danmakufu?</a></li>
+	          <li><a href="#sub6">Part 6: What are Local and Global Variables?</a></li>
+	          <li><a href="#quiz1">Quiz: </a></li>
+	          <li><a href="#quiz2">Quiz: </a></li>
+	        </ul>
+	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+              <p>In this lesson, I will cover the following:</p>
+              <ul>
+	          <li>Comments</li>
+	          <li>Variables and Variable Declaration</li>
+	          <li>Constants and Final Constants</li>
+	          <li>Mathematical Operations</li>
+	          <li>Strings</li>
+	          <li>One-Dimensional Arrays</li>
+	          <li>Booleans</li>
+	          <li>Functions</li>
+	      </ul>
+	      <p>Please note that the contents of this page are partially based off of <a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs">CK Crash's Danmakufu ph3 tutorial</a> and that it may be a more suitable option for learning about how Danmakufu treats variables and the like.</p>
+              <h2 style="color:yellow" id="sub2">Part 2: What are Comments and How do I Use Them?</h2>
+                <pre><code>//This is a comment.
+//Anything in Danmakufu that is preceded with two slashes (//) is a line comment.
+//Therefore, anything past a // on a line is not treated as code by Danmakufu and will be ignored.
+/*This is also a comment*/
+//Comments inside /* and */ are considered 'block comments'.
+/*Block
+comments
+can
+span
+multiple
+lines*/
+//Line comments are very good for providing descriptions of what certain code does.
+//Line comments are also very good for commenting out code that you don't want to use right now, such as debug code.
+/*Block Comments are useful for cutting out large chunks of code from execution in order to test one part of a script.*/
+/*Block comments are also used to hold descriptive information about functions and the like*/</code></pre>
+              <p>Note that in code within these tutorials, comments will often be used to note certain important concepts or the functions of certain lines of code, as well as a plethora of other things. This is the same in other tutorials.</p>
+              <h2 style="color:yellow" id="sub3">Part 3: What is a Variable?</h2>
+              <p>A variable in computer science is not exactly the same as in mathematics. In computer science, it is possible for a variable to change its value. A variable stores information, whether it is a constant, a string, or an ID. There are global variables and there are local variables, both of which will be covered shortly. You can think of a variable as a container for some type of information.</p>
+                <pre><code>let x; //This code declares a variable called x.
+x = 5; //Now the value of x has been set to 5.
+x = 3; //The value of x has been overridden and is now 3.
+let y = x; //We have created a new variable y, whose current value is that of x, which is 3.
+x = 4; //x is currently 4, but y maintains its value as 3.</code></pre>
+              <p>Now lets consider the following code.</p>
+                <pre><code>let x; //This code declares a variable called x.
+let x = 5; //Attempt to declare a variable x storing the value 5.</code></pre>
+              <p>The above code, unfortunately, will bring up an error because a variable x already exists! You cannot declare something that already exists (there are exceptions, which we will refer to when we talk about local and global variables).</p>
+              <p>Now lets consider the following code.</p>
+                <pre><code>x = 5; //This code tells the variable x to store the value 5.
+let x = 3; //Declare a variable x storing the value 3.</code></pre>
+              <p>The above code, unfortunately, also brings up an error. This time, you get an error for trying to use a variable that has not been declared. In this case, the line <code>x = 5;</code> refers to a variable x that, at that point in time, does not exist. You must declare a variable before you can use it.</p>
+              <h2 style="color:yellow" id="sub4">Part 4: What are Constants?</h2>
+              <p>Constants are numbers, including integers, floats, and the like.</p>
+                <pre><code>x = 33333; //33333 is a constant (in this case, an integer) being stored in the variable x.</code></pre>
+              <p>Constants are considered to be final if they are declared as global variables and are never to be changed. Final constants are usually all uppercase. For example, final constants in Danmakufu include BLEND_ADD_ARGB and EV_GRAZE, among other things.</p>
+              <h2 style="color:yellow" id="sub5">Part 5: What Mathematical Operations Can I Perform in Danmakufu?</h2>
+                <pre><code>let x;
+x = 3 + 5; //x now holds the value 8
+x=x+3; //x now holds the value 11. Note that white space doesn't matter.
+x++; //This is equivalent to x = x + 1. It increments x by 1. Very helpful for counters.
+x--; //Like the above. Decrements the value of x by 1.
+let y = 6;
+y = y*2; //y is now equal to 12.
+y = y/3; //y is now equal to 4.
+y = y^2; //y is raised to the second power and is now 16.
+y = y%2; //Since the remainder/modulus when y/2 = 0, y is now 0.</code></pre>
+              <p>Keep in mind that Danmakufu uses the Order of Operations and that the square root is the equivalent of raising to the 1/2 power.</p>
+                <pre><code>let angleT = 30; //Danmakufu uses degrees
+angleT+=360/5; //angleT incremented by 72 and is now 102. Shortcuts also exist in the form of -=, *=, and /=
+angleT*=-1; //angleT is now -102.
+let x = (30+angleT)*3; //Use parentheses for order of operations. x now equals 396.</code></pre>
+              <p>However, please pay attention to the following</p>
+                <pre><code>let y = (55)(33); //This will not work. 
+let y = 55*33; //This is the correct way to multiply the two numbers. </code></pre>
+              <p>Also, note that you cannot perform operations on variables that do not exist.</p>
+                <pre><code>let y = 30; 
+let z = x*y; //Will bring up an error since x has not been declared.</code></pre>
+              <p>And finally, one of the more obnoxious errors.</p>
+                <pre><code>let y = 30; 
+y+=.5</code></pre>
+              <p>The error? Well, Danmakufu doesn't understand what the period means. You need to use 0.5 instead of .5 in order for Danmakufu to recognize it and not error at you.</p>
+              <h2 style="color:yellow" id="sub6">Part 6: What are Local and Global Variables?</h2>
+              <h2 style="color:yellow" id="quiz1">Quiz: Quiz Name</h2>
+	        <!--Quiz start.-->
+		<p>Suika would like to make a nonspell for a boss battle in Danmakufu. Which of the following script types should she use?</p>
+                <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+                <input type="RADIO" value="A" name="cc">
+                A. Stage<br>
+                <input type="RADIO" value="B" name="cc">
+                B. Single<br>
+                <input type="RADIO" value="C" name="cc">
+                C. Plural<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+
+              <h2 style="color:yellow" id="quiz2">Quiz: Reimu's Donation Box is now for sale!</h2>
+	        <!--Quiz start.-->
+		<p>Reimu is very angry. She cocks her head one way, and then the other. However, she can't figure out why her script isn't showing up in the list of scripts in Danmakufu ph3's Directory lists. She has reloaded, made sure that the file is in the script directory, and has even considered calling Nitori over. Her Danmakufu header is below, and every line prefixed with a # in the entire script is included in this header.</p>
+                <pre><code>#ScriptVersion[3]
+#Title["Red and White"]
+#Text["Who are the thieves stealing from my donation box?"] </code></pre>
+		<p>Why is her script not showing up?</p>
+                <form method="POST" onSubmit="return checkAnswerA2(this, 'B');">
+                <input type="RADIO" value="A" name="cc">
+                A. She is using #ScriptVersion[3] instead of #ScriptVersion[2]<br>
+                <input type="RADIO" value="B" name="cc">
+                B. She forgot to put #TouhouDanmakufu[Single]<br>
+                <input type="RADIO" value="C" name="cc">
+                C. She did not put a script version.<br>
+                <input type="RADIO" value="D" name="cc">
+                D. It's Yukari's fault<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+              <br>            </div>          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: Dec 2, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L3Quiz1.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L3Quiz2.js"></script>  </body></html>
