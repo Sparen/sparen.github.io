@@ -210,10 +210,10 @@ array = array ~ [string]; //array is now [string], where the value of string is 
                 <pre><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of Danmakufu Scripters
 let lengthdnh = length(dnh); //4
 let scripter = dnh[2]; //Find the item with index 2 - "Trickysticks"
-let scripter2 = dnh[2..3]; //Obtain an array with the 2 to 3rd indices of dnh - ["Trickysticks", "AJS"]
+let scripter2 = dnh[2..4]; //Obtain an array with the 2 through 3rd indices of dnh - ["Trickysticks", "AJS"]
 let scripter3 = dnh[lengthdnh]; //Brings up an error because the fourth index does not exist
 </code></pre>
-		<p>Once you get over the fact that it starts from 0, it's not too bad. Also, note the two dots for obtaining a subarray of the initial array. We will be seeing this later with ascent loops. Now, consider the following array:</p>
+		<p>Once you get over the fact that it starts from 0, it's not too bad. Also, note the two dots for obtaining a subarray of the initial array. The new array includes the index before the two dots but not the one after. We will be seeing this later with ascent loops, and the function slice (See the Danmakufu Wiki) also performs the same function. Now, consider the following array:</p>
                 <pre><code>let array = [3,6,9,12,9,9,12];</code></pre>
 		<p>We are going to perform operations on this array above!</p>
                 <pre><code>array = [3,6,9,12,9,9,12];
