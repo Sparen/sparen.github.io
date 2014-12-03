@@ -158,9 +158,33 @@ x+=9;</code></pre>
                 <input type="SUBMIT" value="Submit">
                 </form>
               <h2 style="color:yellow" id="sub7">Part 7: What are Characters and Can I Change the Type of a Variable?</h2>
+		<p>In Computer Science, a character is a single letter, number, or symbol. Characters are denoted using single quotes, like such: <code>let x = 'a';</code></p>
+		<p>In Danmakufu, you will most likely not use characters - rather, you will use strings, the topic of the next part. However, now is a good time to showcase one of the more important concepts in Danmakufu (and Computer Science in general) - variable types.</p>
+                <pre><code>let x = 6; //x is a container holding an integer 6
+let y = '$'; //y is a container holding the character $
+let z = '3'; //z is a container holding the character 3
+z = '3'; //This code will bring up an error</code></pre>
+		<p>So, why can't you set the variable x's value from 6 to '3'? Well, that's because when you first assign a value to x, it is holding an integer. Later on, you are trying to set its value to a character. This is not allowed, since x has been set to only accept numbers. '3' is not a number in Danmakufu - it is a character. In other languages, characters may have integer equivalents and addition may be possible, but I suggest that you simply don't try to do this as it may have unwanted results.</p>
+		<p>But what if you want to define <code>x = '33';</code>? Well... that's not going to work, and we'll see that in the next part.</p>
               <h2 style="color:yellow" id="sub8">Part 8: What are Strings?</h2>
+		<p>Strings have much more use than characters. Strings can be used to hold phrases, filepaths, and more, and are denoted using double quotes. Please note that if you use smart quotes, Danmakufu will get angry and not work. Below are examples of strings.</p>
+                <pre><code>let randomstring = "This is a random string.";
+let spellname = "Fire and Water Sign \"Geysers of the Deep\"";
+let imgRumia = GetCurrentScriptDirectory()~"img/imgrumia.png";
+let desc = "This is a spellcard made by an unknown scripter.[r]Please play at your own risk.";</code></pre>
+		<p>Obviously, strings hold much more information than a character and are far more useful. You can include numbers in strings, such as "3 + 6 = Cirno" as well as other things. In the four examples above, we have three special scenarios that deserve extra attention - spellname's escape character, imgRumia's string concatenation, and desc's [r].</p>
+		<p>Firstly, the escape character \. In most languages, \ is used as the escape character, and if followed by certain symbols, will perform a specific function. For example, in most languages, \n denotes a new line (not in ph3 - we will discuss this later), \t denotes a tab, and, more specific to this scenario, \" denotes a ". Since strings begin and end with double quotes, having double quotes inside a string requires some workarounds, and that workaround is provided by \", which will not be read as closing the string but rather as a symbol that, when the string is printed, will use a double quote instead of \". This is the simplest way to include a double quote within a string. Very helpful for spell names, depending on your format for spellcard names.</p>
+		<p>Next is string concatenation. For the purposes of this tutorial, be advised that GetCurrentScriptDirectory returns a string.</p>
+                <pre><code>let imgRumia = GetCurrentScriptDirectory()~"img/imgrumia.png";</code></pre>
+		<p>Here we have a string ~ string. So what does this do? This is known as string concatenation, and merges the two strings. For example:</p>
+                <pre><code>let string = "String1"~"String2"; //string is now "String1String2"</code></pre>
+		<p>You will almost always use this for paths being assigned to variables. It also comes in handy in a number of other situations.</p>
+		<p>And finally, [r]. [r] is new in ph3 (0.12m used \n). [r] denotes a new line. Therefore, <code>let string = "one[r]two";</code>, if printed, would show the following:</p>
+                <pre><code>one
+two</code></pre>
+		<p>Very helpful in #Text, with dialogue, and numerous other things.</p>
               <h2 style="color:yellow" id="sub9">Part 9: What are Arrays?</h2>
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Dec 2, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
+        <p style="text-align: center;">Last Update to Page: Dec 3, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/U1L4Quiz1.js"></script>  </body></html>
