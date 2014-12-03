@@ -21,11 +21,5 @@ function checkAnswerA1(quizForm, theAnswer){
     alert("'"+s+"' is incorrect. Plural scripts are used to chain together attacks and are used in boss battles. Please review Part 1.");
   }
 
-  // return "false" to indicate not to
-  // submit the form.
-  // change this to "true" if the form
-  // "action" is valid,
-  // i.e. points to a valid CGI script
-  //
   return false;
 }

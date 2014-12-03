@@ -1,4 +1,4 @@
-function checkAnswer(quizForm, theAnswer){
+function checkAnswerA4(quizForm, theAnswer){
   var s = "?";
 
   var i = 0;
@@ -14,9 +14,9 @@ function checkAnswer(quizForm, theAnswer){
   }
 
   if(s == theAnswer){
-    alert("'"+s+"' is correct! You cannot run ph3 scripts in 0.12m.");
+    alert("'"+s+"' is correct!");
   }else{
-    alert("'"+s+"' is incorrect. Please review Part 5.");
+    alert("'"+s+"' is incorrect. Please review Part 8.");
   }
 
   return false;

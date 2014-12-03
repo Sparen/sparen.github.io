@@ -23,11 +23,5 @@ function checkAnswerA2(quizForm, theAnswer){
     alert("'"+s+"'? Well... I guess it *could* be Yukari's fault, but this is probably not an incident and it is not a good idea to go out and attack someone because of your own mistakes. (Then again, this is Reimu we're talking about, so... hmm...) Anyways, actually choose a legitimate answer next time, OK?");
   }
 
-  // return "false" to indicate not to
-  // submit the form.
-  // change this to "true" if the form
-  // "action" is valid,
-  // i.e. points to a valid CGI script
-  //
   return false;
 }

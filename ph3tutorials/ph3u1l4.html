@@ -23,6 +23,7 @@
 	          <li><a href="#sub7">Part 7: What are Characters and Can I Change the Type of a Variable?</a></li>
 	          <li><a href="#sub8">Part 8: What are Strings?</a></li>
 	          <li><a href="#sub9">Part 9: What are Arrays?</a></li>
+	          <li><a href="#quiz3">Quiz: Strings and Arrays</a></li>
 	        </ul>
 	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
               <p>In this lesson, I will cover the following:</p>
@@ -112,6 +113,11 @@ y+=.5;</code></pre>
 	      <p>Global Variables are variables declared outside of tasks, functions, and routines. They are usually declared bewtween the Danmakufu Header and @Event. A variable declared here can be referenced and changed from any other part of the script. For example, in the code provided, objEnemy and frame are declared as global variables. In @MainLoop, frame is referenced and changed multiple times. Just remember that changes made to a global variable used in multiple locations will affect all locations it is used, so it is recommended that you only change a global variable in one routine/function/task and nowhere else. For counters, I suggest using @MainLoop.</p>
 	      <p>In @MainLoop, the loop starts with the declaration of ex and ey. These are local variables - they only exist in @MainLoop, and once @MainLoop finishes one round, they are reset. This means that they are updated each frame due to @MainLoop's nature.</p>
 	      <p>Local Variables are also created in ascent and descent loops, and parameters of functions and tasks are also local variables, except that these local variables have a special quality - they will override global variables with the same name when called within the given loop, function, or task. This will be explained in the sections for the given concepts.</p>
+	      <p>Finally, you can declare local variables in the following manner:</p>
+                <pre><code>local{
+     let x;
+}</code></pre>
+	      <p>However, very few scripters use it, and you do not need to know this at all unless you are trying to decode someone else's code.</p>
               <h2 style="color:yellow" id="quiz1">Quiz: Mathematical Operations</h2>
 	        <!--Quiz start.-->
 		<p>1) What is the value of x after the following code has been executed?</p>
@@ -184,7 +190,98 @@ let desc = "This is a spellcard made by an unknown scripter.[r]Please play at yo
 two</code></pre>
 		<p>Very helpful in #Text, with dialogue, and numerous other things.</p>
               <h2 style="color:yellow" id="sub9">Part 9: What are Arrays?</h2>
+		<p>The final thing we will discuss in this lesson are arrays, which are essentially containers that hold other things of the same type. For example, you can consider a string to be an array of characters. In Danmakufu, you declare arrays as the following:</p>
+                <pre><code>let array = []; //Declare an empty array
+let array2 = [3, 4, 6, 8]; //Declare an array of numbers of length 4
+let array3 = GetAllEnemyID(); //Declare an array containing the IDs of every enemy currently existing</code></pre>
+		<p>Note that once you declare an array, the variable name you use cannot be used for anything other than an array. You cannot do the following:</p>
+                <pre><code>let array = []; //Declare an empty array
+array = "CIRNO STRIKES BACK";</code></pre>
+		<p>The variable 'array' has been used for an array and cannot be used for anything else.</p>
+		<p>Arrays are very useful, but of course, you will need to add and retrieve data from them. As such, there are ways to add things to arrays, remove things from arrays, and get the values held in arrays.</p>
+		<p>First we will discuss adding things to arrays. Using the concatenation ~, you can do the following:</p>
+                <pre><code>let array = [3, 6]; //Declare an empty array
+array = array ~ [4]; //array is now [3, 6, 4]</code></pre>
+		<p>Please note that you must include the item you are going to add as an array - in essence, you are combining to arrays. Here is another example, this time showing how to include the value of a variable in an array:</p>
+                <pre><code>let array = []; //Declare an empty array
+let string = "Test";
+array = array ~ [string]; //array is now [string], where the value of string is "Test"</code></pre>
+		<p>Next we will discuss indexing. You can obtain the length of an array using length(nameofarray);. First thing's first though - the first item in an array is indexed 0, not 1. You index an array as follows:</p>
+                <pre><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of Danmakufu Scripters
+let lengthdnh = length(dnh); //4
+let scripter = dnh[2]; //Find the item with index 2 - "Trickysticks"
+let scripter2 = dnh[2..3]; //Obtain an array with the 2 to 3rd indices of dnh - ["Trickysticks", "AJS"]
+let scripter3 = dnh[lengthdnh]; //Brings up an error because the fourth index does not exist
+</code></pre>
+		<p>Once you get over the fact that it starts from 0, it's not too bad. Also, note the two dots for obtaining a subarray of the initial array. We will be seeing this later with ascent loops. Now, consider the following array:</p>
+                <pre><code>let array = [3,6,9,12,9,9,12];</code></pre>
+		<p>We are going to perform operations on this array above!</p>
+                <pre><code>let array = [3,6,9,12,9,9,12];
+array[4]--;</code></pre>
+		<p>Now the array looks like this:</p>
+                <pre><code>let array = [3,6,9,12,8,9,12];</code></pre>
+		<p>What we have done is the following: We indexed an array, obtaining a reference to the value contained in that index, and then performed an operation (--, or -1) to it. This is how you perform operations on the contents of arrays.</p>
+		<p>There are, of course, other operations (many significantly more complicated), but for now, we will close with removal of indices. It is actually very simple.</p>
+                <pre><code>let array = [3,6,9,12,8,9,12];
+erase(array, 5); //Erase the fifth index of array 'array'</code></pre>
+		<p>After executing the function erase on the array, we are left with the following array</p>
+                <pre><code>let array = [3,6,9,12,8,12];</code></pre>
+		<p>As a final note, since strings are arrays of characters, you can also index strings the same way you index arrays. CK Crash's tutorial (see Part 1 for link) also includes the boolean trick, but we will discuss booleans in the next lesson. There are also 2D and 3D arrays (etc), but we will not deal with those now - there is limited use for them until you are trying to organize CommonData or spawn bullets in a shape, etc.</p>
+              <h2 style="color:yellow" id="quiz3">Quiz: Strings and Arrays</h2>
+	        <!--Quiz start.-->
+                <pre><code>let spellsigns = ["Fire Sign", "Water Sign", "Moon Sign"];</code></pre>
+		<p>1) What is the value of spellsigns[1]?</p>
+                <form method="POST" onSubmit="return checkAnswerA2(this, 'C');">
+                <input type="RADIO" value="A" name="cc">
+                A. "Fire Sign"<br>
+                <input type="RADIO" value="B" name="cc">
+                B. "Moon Sign"<br>
+                <input type="RADIO" value="C" name="cc">
+                C. "Water Sign"<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+              <br>
+		<p>Now we do the following:</p>
+                <pre><code>spellsigns = spellsigns ~ ["Magical Storm"];</code></pre>
+		<p>2) What is the value of length(spellsigns) after the code has been executed?</p>
+                <form method="POST" onSubmit="return checkAnswerA3(this, 'A');">
+                <input type="RADIO" value="A" name="cc">
+                A. 4<br>
+                <input type="RADIO" value="B" name="cc">
+                B. 3<br>
+                <input type="RADIO" value="C" name="cc">
+                C. "4"<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+              <br>
+		<p>Now we do the following:</p>
+                <pre><code>erase(spellsigns, 0);</code></pre>
+		<p>3) What is the value of spellsigns[0] after the code has been executed?</p>
+                <form method="POST" onSubmit="return checkAnswerA3(this, 'B');">
+                <input type="RADIO" value="A" name="cc">
+                A. "Magical Storm"<br>
+                <input type="RADIO" value="B" name="cc">
+                B. "Water Sign"<br>
+                <input type="RADIO" value="C" name="cc">
+                C. "Fire Sign"<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+              <br>
+		<p>We will now <code>let str = spellsigns[2]; //"Magical Storm"</code></p>
+		<p>4) Which of the following will result in the value of str being <b>printed</b> as <code>Magical Storm "Flurry of Stars"</code>?</p>
+                <form method="POST" onSubmit="return checkAnswerA4(this, 'B');">
+                <input type="RADIO" value="A" name="cc">
+                A. <code>str = str + "Flurry of Stars";</code><br>
+                <input type="RADIO" value="B" name="cc">
+                B. <code>str = str ~ " \"Flurry of Stars\"";</code><br>
+                <input type="RADIO" value="C" name="cc">
+                C. <code>str = str ~ " "Flurry of Stars"";</code><br>
+                <input type="SUBMIT" value="Submit">
+                </form>
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
         <p style="text-align: center;">Last Update to Page: Dec 3, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
-    <script language="JavaScript" type="text/javascript" src="javascript/U1L4Quiz1.js"></script>  </body></html>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L4Quiz1.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L4Quiz2.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L4Quiz3.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L4Quiz4.js"></script>  </body></html>

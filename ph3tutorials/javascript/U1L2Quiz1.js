@@ -21,11 +21,5 @@ function checkAnswer(quizForm, theAnswer){
     alert("'"+s+"' is incorrect. I can't help you if you chose this option... :P");
   }
 
-  // return "false" to indicate not to
-  // submit the form.
-  // change this to "true" if the form
-  // "action" is valid,
-  // i.e. points to a valid CGI script
-  //
   return false;
 }

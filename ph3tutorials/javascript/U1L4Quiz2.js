@@ -1,4 +1,4 @@
-function checkAnswer(quizForm, theAnswer){
+function checkAnswerA2(quizForm, theAnswer){
   var s = "?";
 
   var i = 0;
@@ -14,9 +14,9 @@ function checkAnswer(quizForm, theAnswer){
   }
 
   if(s == theAnswer){
-    alert("'"+s+"' is correct! You cannot run ph3 scripts in 0.12m.");
+    alert("'"+s+"' is correct! The second item in an array is the first index!");
   }else{
-    alert("'"+s+"' is incorrect. Please review Part 5.");
+    alert("'"+s+"' is incorrect. Remember that the first item in an array is the zeroth index.");
   }
 
   return false;
