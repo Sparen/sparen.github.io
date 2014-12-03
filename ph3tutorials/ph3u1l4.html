@@ -202,7 +202,7 @@ array = "CIRNO STRIKES BACK";</code></pre>
 		<p>First we will discuss adding things to arrays. Using the concatenation ~, you can do the following:</p>
                 <pre><code>let array = [3, 6]; //Declare an empty array
 array = array ~ [4]; //array is now [3, 6, 4]</code></pre>
-		<p>Please note that you must include the item you are going to add as an array - in essence, you are combining to arrays. Here is another example, this time showing how to include the value of a variable in an array:</p>
+		<p>Please note that you must include the item you are going to add as an array - in essence, you are combining to arrays. Also, you can use <code>concatenate(array1, array2)</code> in order to concatenate two arrays, although the method with the ~ is much simpler. Here is another example, this time showing how to include the value of a variable in an array:</p>
                 <pre><code>let array = []; //Declare an empty array
 let string = "Test";
 array = array ~ [string]; //array is now [string], where the value of string is "Test"</code></pre>
@@ -216,16 +216,16 @@ let scripter3 = dnh[lengthdnh]; //Brings up an error because the fourth index do
 		<p>Once you get over the fact that it starts from 0, it's not too bad. Also, note the two dots for obtaining a subarray of the initial array. We will be seeing this later with ascent loops. Now, consider the following array:</p>
                 <pre><code>let array = [3,6,9,12,9,9,12];</code></pre>
 		<p>We are going to perform operations on this array above!</p>
-                <pre><code>let array = [3,6,9,12,9,9,12];
+                <pre><code>array = [3,6,9,12,9,9,12];
 array[4]--;</code></pre>
 		<p>Now the array looks like this:</p>
-                <pre><code>let array = [3,6,9,12,8,9,12];</code></pre>
+                <pre><code>array = [3,6,9,12,8,9,12];</code></pre>
 		<p>What we have done is the following: We indexed an array, obtaining a reference to the value contained in that index, and then performed an operation (--, or -1) to it. This is how you perform operations on the contents of arrays.</p>
 		<p>There are, of course, other operations (many significantly more complicated), but for now, we will close with removal of indices. It is actually very simple.</p>
-                <pre><code>let array = [3,6,9,12,8,9,12];
-erase(array, 5); //Erase the fifth index of array 'array'</code></pre>
+                <pre><code>array = [3,6,9,12,8,9,12];
+array = erase(array, 5); //Erase fifth index of array 'array'</code></pre>
 		<p>After executing the function erase on the array, we are left with the following array</p>
-                <pre><code>let array = [3,6,9,12,8,12];</code></pre>
+                <pre><code>array = [3,6,9,12,8,12];</code></pre>
 		<p>As a final note, since strings are arrays of characters, you can also index strings the same way you index arrays. CK Crash's tutorial (see Part 1 for link) also includes the boolean trick, but we will discuss booleans in the next lesson. There are also 2D and 3D arrays (etc), but we will not deal with those now - there is limited use for them until you are trying to organize CommonData or spawn bullets in a shape, etc.</p>
               <h2 style="color:yellow" id="quiz3">Quiz: Strings and Arrays</h2>
 	        <!--Quiz start.-->
