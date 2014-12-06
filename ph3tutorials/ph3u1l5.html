@@ -64,12 +64,12 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
                 <pre><code>if(count>30){count==0;}</code></pre>
               <p>Above is an example of an if statement. If statements have a condition, which is a boolean or boolean expression, and if that expression is true, the code in the braces following the statement will be executed. In the above situation, the variable count will be set to 0 if its value is greater than 30. If its value is not greater than 30, the code within the braces will not be executed.</p>
               <p>If you want to do something else instead, you can use if-else statements.</p>
-                <pre><code>if(count>30){count==0;}else{count++;}</code></pre>
+                <pre><code>if(count>30){count=0;}else{count++;}</code></pre>
               <p>Now, if the count is not greater than 30, it will increment by 1! You can also nest if else statements and have multiple else statements.</p>
                 <pre><code>if(count>30){
-	count==0;
+	count=0;
 }else if(count<0){
-	count==0;
+	count=0;
 }else{
 	count++;
 	if(count%3==0){
