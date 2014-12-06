@@ -44,7 +44,20 @@
               <p>A boolean is, simply put, either true or false.</p>
                 <pre><code>let bool = true;
 let bool2 = false;</code></pre>
-              <p>Simple, right? We use booleans in boolean expressions and logic in danmakufu, which we will be discussing when we go over logic in Danmakufu later on.</p>
+              <p>Simple, right? Now we will discuss boolean expressions, which are expressions that are either true or false.</p>
+                <pre><code>let test = (5>6); //false, since 5 is not greater than 6
+let test2 = (4 == 6); //False because 4 is not equal to 6.
+let test3 = (1<=3); //true because 1 is less than or equal to 3.
+let test4 = (6 != 3); //true because 6 is not equal to 3.</code></pre>
+              <p>The first thing to note is the double equal sign ==. This is used for logic in Danmakufu in place of the single equal sign =, which is used for setting values to variables and constants. The next thing to note is the use of the !, which functions as 'not' and is used in negation. Please note that characters, strings, and booleans obviously cannot use things such as < (less than) or >= (greater than or equal to) for obvious reasons. You can only test for equality and inequality for these.</p>
+              <p>Now we will discuss boolean expressions involving multiple booleans.</p>
+              <p>Behold: || and &&</p>
+                <pre><code>let bool = true;
+let bool2 = false;
+let test = (bool || bool2); //test is true if either bool OR bool2 is true, else false
+let test2 = (bool && bool2); //test2 is true if bool AND bool2 are true, else false
+let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE if bool2 is false.</code></pre>
+              <p>As seen above, || denotes OR and && denotes AND. When we discuss if and if-else statements, we will be returning to this, as it is the foundation of script control and flow in danmakufu</p>
               <h2 style="color:yellow" id="sub3">Part 3: What are Loops and How do I Use Them?</h2>
               <h2 style="color:yellow" id="quiz1">Quiz: </h2>
 	        <!--Quiz start.-->
@@ -63,5 +76,5 @@ let bool2 = false;</code></pre>
               <h2 style="color:yellow" id="sub5">Part 5: </h2>
 
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Dec 4, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
+        <p style="text-align: center;">Last Update to Page: Dec 5, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>  </body></html>
