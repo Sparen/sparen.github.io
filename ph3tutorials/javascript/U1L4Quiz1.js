@@ -19,11 +19,5 @@ function checkAnswerA1(quizForm, theAnswer){
     alert("'"+s+"' is incorrect. Please review Part 5.");
   }
 
-  // return "false" to indicate not to
-  // submit the form.
-  // change this to "true" if the form
-  // "action" is valid,
-  // i.e. points to a valid CGI script
-  //
   return false;
 }

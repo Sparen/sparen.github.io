@@ -15,7 +15,7 @@
 	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
 	          <li><a href="#sub2">Part 2: What are Booleans?</a></li>
 	          <li><a href="#sub3">Part 3: What are Loops and How do I Use Them?</a></li>
-	          <li><a href="#quiz1">Quiz: </a></li>
+	          <li><a href="#quiz1">Quiz: Loops and Booleans</a></li>
 	          <li><a href="#sub4">Part 4: What are Functions?</a></li>
 	          <li><a href="#sub5">Part 5: </a></li>
 	        </ul>
@@ -57,19 +57,125 @@ let bool2 = false;
 let test = (bool || bool2); //test is true if either bool OR bool2 is true, else false
 let test2 = (bool && bool2); //test2 is true if bool AND bool2 are true, else false
 let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE if bool2 is false.</code></pre>
-              <p>As seen above, || denotes OR and && denotes AND. When we discuss if and if-else statements, we will be returning to this, as it is the foundation of script control and flow in danmakufu</p>
+              <p>As seen above, || denotes OR and && denotes AND. When we discuss if and if-else statements, we will be returning to this, as it is the foundation of script control and flow in danmakufu.</p>
               <h2 style="color:yellow" id="sub3">Part 3: What are Loops and How do I Use Them?</h2>
-              <h2 style="color:yellow" id="quiz1">Quiz: </h2>
+              <p>So you want to repeatedly do something without having to state it again? Well, loops are the solution to those problems! There are a few types of loops in Danmakufu.</p>
+              <p>The first type of loop is the generic loop. It is a structure that takes an integer parameter (you can't repeat something 3.5 times, after all). An example is probably the best way to show this.</p>
+                <pre><code>let x = 5;
+loop(20){
+    x++;
+}</code></pre>
+              <p>Let's discuss the above code. First, we declare the variable x, which is then assigned the numerical value 5. After this, x+= is called in a loop(20). What the loop does is repeat the code contained within the {} the number of times given in the parenthesis. Therefore, x will equal 25 after this code has been executed.</p>
+              <p>Now is a good time to talk about infinite loops. I.E. how to freeze Danmakufu. An infinite loop occurs when a section of code keeps on looping forever, and the only way to stop it is to terminate the program altogether. Later on in this lesson, we will discuss yield; (the best way to make an infinite loop not actually infinite but achieve similar functions), but as a brief note, loop alone or with nothing in the parenthesis (e.g. <code>loop(){blah;}</code> will trigger infinite loops.</p>
+              <p>Next are while loops. Basically, while a certain condition is true (booleans!), the code in the braces after it will be executed.</p>
+                <pre><code>let x = 5;
+while(x<20){
+    x++;
+}</code></pre>
+              <p>In the code above, we declare x and then run a while loop where, while x is less than 20, x is incremented by 1. The code in question will loop itself and x will be 20 after the code has executed.</p>
+                <pre><code>let x = 5;
+while(x>20){
+    x++;
+}</code></pre>
+              <p>In the above scenario, x is less than 20, so the condition for the while loop is never fulfilled. Therefore, the while loop never executes and x is left as 5 afterwards.</p>
+                <pre><code>let x = 5;
+while(x>0){
+    x++;
+}</code></pre>
+              <p>To close our study of the while loop, we will consider the above code, where x is declared to be 5 and while x>0, x increments by 1. As is easily observable, x will never actually become less than 0. Therefore, this code will cause an infinite loop and Danmakufu will freeze.</p>
+              <p>Now we will discuss the last type of loop in Danmakufu - the for loop. In Danmakufu, the for loop comes in two varieties, ascent and descent.</p>
+              <p>For a video tutorial, please consult the following: <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K">Sparen's Danmakufu Tutorials - Using Ascent Loops and More</a>. However, please be aware that this tutorial assumes prior knowledge of bullet spawning functions.</p>
+              <p>A generic ascent loop is structured as follows:</p>
+                <pre><code>let x = 5;
+ascent(i in 0..8){
+    x++;
+}</code></pre>
+              <p>What this code does is actually a little hard to understand. You can think of it like this: a local variable called i, with a variable 0, is declared. After this, the block of code inside the braces {} is executed. After that, i is incremented by 1 as long as it is less than 8. If it is less than 8 after having been incremented, the code loops again. Once the variable i is equal to 8, the loop ends. This means that i will never actually equal 8 in a run through the loop.</p>
+                <pre><code>let x = 5;
+ascent(i in 0..8){
+    x=i;
+}</code></pre>
+              <p>If you do the above, x will start at 0, but it will be set to the value of i, which is 0. As the loop continues, x will be set to 1, 2, 3, and eventually, 7. After it is set to 7, the local variable i is set to 8, and the loop ends, leaving x as 7. In total, the code loops 8 times, and i has values from 0 to 7.</p>
+              <p>Drake once wrote the following equivalent code for an ascent loop:</p>
+                <pre><code>ascent(var in 0..10){
+    bla(var);
+}
+
+//Above is equivalent to below
+
+local{
+    let var = 0;
+    while(var<10){
+        bla(var);
+        var++;
+    }
+}</code></pre>
+              <p>Please note that by convention, the values used in ascent/descent/for loops go as follows: i, j, k, l, etc. Regarding descent loops, the local variable decrements instead of incrementing. You will need descent loops for certain things but you will be using ascent loops most of the time.</p>
+              <p>If you don't understand ascent loops, that's perfectly fine - they're harder to understand than some of the other things in Danmakufu.</p>
+              <h2 style="color:yellow" id="quiz1">Quiz: Loops and Booleans</h2>
 	        <!--Quiz start.-->
-		<p>stuff</p>
-                <pre><code>code</code></pre>
-                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'C');">
+		<p>Consider the following code for Questions 1 and 2.</p>
+                <pre><code>let x = 5;
+let y = 10;
+while(x < y){
+    y--;
+}
+let z = x+y;</code></pre>
+		<p>1) What is the value of z?</p>
+                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
                 <input type="RADIO" value="A" name="cc">
-                A. lol<br>
+                A. 5<br>
                 <input type="RADIO" value="B" name="cc">
-                B. lel<br>
+                B. 10<br>
                 <input type="RADIO" value="C" name="cc">
-                C. rofl<br>
+                C. 0<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+                <br>
+		<p>2) <code>let bool = (z%2==0);</code></p>
+		<p>What is the value of bool?</p>
+                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
+                <input type="RADIO" value="A" name="cc">
+                A. true<br>
+                <input type="RADIO" value="B" name="cc">
+                B. false<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+                <br>
+		<p>3) <code>let bool = ((true||false)&&!true);</code></p>
+		<p>What is the value of bool?</p>
+                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
+                <input type="RADIO" value="A" name="cc">
+                A. true<br>
+                <input type="RADIO" value="B" name="cc">
+                B. false<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+                <br>
+		<p>4)</p> 
+		<pre><code>let bool = (true&&!false);
+let bool2 = (false||(true&&!true));
+let bool3 = (bool1==bool2);</code></pre>
+		<p>What is the value of bool?</p>
+                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
+                <input type="RADIO" value="A" name="cc">
+                A. true<br>
+                <input type="RADIO" value="B" name="cc">
+                B. false<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+                <br>
+		<p>5) Momiji wants to make some pretty danmaku. However, Danmaku keeps on freezing! The following is her code:</p> 
+		<pre><code>let x = 5;
+while(x<6){
+    x--;
+}</code></pre></p>
+		<p>What can you replace line 2 with for the code to not freeze?</p>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'B', '3');">
+                <input type="RADIO" value="A" name="cc">
+                A. <code>loop{</code><br>
+                <input type="RADIO" value="B" name="cc">
+                B. <code>ascent(i in 0..6){</code><br>
                 <input type="SUBMIT" value="Submit">
                 </form>
               <h2 style="color:yellow" id="sub4">Part 4: What are Functions?</h2>
@@ -77,4 +183,5 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
 
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
         <p style="text-align: center;">Last Update to Page: Dec 5, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
-    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>  </body></html>
+    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>  </body></html>

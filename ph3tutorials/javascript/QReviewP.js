@@ -1,4 +1,4 @@
-function checkAnswerA3(quizForm, theAnswer){
+function checkAnswerP(quizForm, theAnswer, parttoreview){
   var s = "?";
 
   var i = 0;
@@ -16,7 +16,7 @@ function checkAnswerA3(quizForm, theAnswer){
   if(s == theAnswer){
     alert("'"+s+"' is correct!");
   }else{
-    alert("'"+s+"' is incorrect. Please review Part 9.");
+    alert("'"+s+"' is incorrect. Please review Part "+parttoreview+".");
   }
 
   return false;
