@@ -18,7 +18,9 @@
 	          <li><a href="#sub4">Part 4: What are Loops and How do I Use Them?</a></li>
 	          <li><a href="#quiz1">Quiz: Loops and Booleans</a></li>
 	          <li><a href="#sub5">Part 5: What are Functions?</a></li>
-	          <li><a href="#sub6">Part 6: </a></li>
+	          <li><a href="#sub6">Part 6: What are Tasks?</a></li>
+	          <li><a href="#sub7">Part 7: How do I Use yield;?</a></li>
+	          <li><a href="#sub8">Part 8: What Should I Know About Danmakufu Syntax?</a></li>
 	        </ul>
 	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
               <p>In this lesson, I will cover the following:</p>
@@ -244,9 +246,35 @@ if(x==(23/2)){x = 25;}else{x = 23;}</code></pre>
 }
 
 let y = math(6);//y will be equal to 11</code></pre>
-              <p>Simple, right? A function takes its parameters in the form (a, b, c, d) and returns whatever is in the return statement. A function does not have to return anything and does not require parameters. Note that you can only return one thing - alternatively, you can return an array of different things as long as they are of the same type. However, this gets clunky and can be confusing, so it's best not to. Functions are very useful for quick things such as returning the angle from the player to the boss, getting the player movement direction, etc. You can also use yield; in a function and where the function was called, nothing else will execute until the function has completed its run (things not in the script, such as the bgm, background, and system will still work), but we'll get into that later when we discuss yield;.</p>
-              <h2 style="color:yellow" id="sub6">Part 6: </h2>
-
+              <p>Simple, right? A function takes its parameters in the form (a, b, c, d) and returns whatever is in the return statement. A function does not have to return anything and does not require parameters. Note that you can only return one thing - alternatively, you can return an array of different things as long as they are of the same type. However, this gets clunky and can be confusing, so it's best not to. Functions are very useful for quick things such as returning the angle from the player to the boss, getting the player movement direction, etc. You can also use yield; in a function and where the function was called, nothing else will execute until the function has completed its run (things not in the script, such as the bgm, background, and system will still work), but we'll get into that later when we discuss yield;. Please note that when referring to a function, people usually refer to the function as functionname(). The parenthesis indicate parameters, which is the primary feature of functions.</p>
+              <h2 style="color:yellow" id="sub6">Part 6: What are Tasks?</h2>
+              <p>Now that we have functions out of the way, it's time to explain tasks, also known as coroutines. You can send parameters to a task as well, and the main difference between tasks and functions is that tasks are made to run alongside your other scripts. For example, you could create a task that creates a bullet and then makes it do something every frame for 60 frames before disappearing only for it to reappear elsewhere and split into other bullets. Tasks give Danmakufu flexibility and are excellent at organizing code. For example, I use code similar to the following to close a Single script:</p>
+		<pre><code>    task TFinalize {
+        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
+        DeleteShotAll(TYPE_ALL,TYPE_ITEM); //All shots become point items
+	Obj_Delete(objBoss);
+	SetAutoDeleteObject(true);
+	CloseScript(GetOwnScriptID());
+	return;
+    }</code></pre>
+              <p>The alternative to this is to have an if statement in @MainLoop checking each frame if <code>ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0</code> is true. Obviously, that would cause unnecessary clutter in @MainLoop, especially considering that there are other things going in there. Tasks provide a reliable way to reduce clutter. All that needs to be done is to call TFinalize once in @Initialize. Do note that by convention, you do not put parenthesis after a task unless there are parameters, unlike the case with functions.</p>
+              <p>Tasks are also amazing at script flow. For example, if you want a sound effect to play thirty frames after a bullet is spawned, you can just call a task that waits 30 frames and then plays a sound effect. Very helpful for timing things in a script.</p>
+              <p>When I discuss various scripting styles, I will discuss the tasking style, which is very popular due to Helepolis's video tutorials. I personally use a hybrid of the @MainLoop and the tasking style due to a year of coding in NetLogo (where my script flow was based off of taking the modulus of a counter). Please do note, however, that in ph3, unlike in 0.12m, the standard @MainLoop style requires externalizing commands to tasks anyways because you must manually control when bullets spawn and using return; in a routine such as @MainLoop has the potential to crash Danmakufu. That being said, using return; in a coroutine/task will stop execution of the rest of the task and will ignore everything after the return; statement, ending the task entirely. You cannot make a task return a value. If you want to... well, we'll get to that eventually. Hopefully.</p>
+              <p>However, now that we have so much stuff about tasks and script control, we should probably go over yield;</p>
+              <h2 style="color:yellow" id="sub7">Part 7: How do I use yield;?</h2>
+              <p>The function of yield; is to pause execution of a routine, subroutine, function, or task by one frame.</p>
+              <p>That is literally the simplest way to explain what yield; does.</p>
+              <p>Please note the following, however:</p>
+                <ol>
+	          <li>yield;ing in @Initialize should never be done, and calling a function or subroutine in @Initialize that uses yield;, by extension, is a bad idea. It may do nothing, but Danmakufu may crash. Please do not try this.</li>
+	          <li>You <b>MUST</b> yield; once in @MainLoop in order for tasks to run at all. Only once. Don't do more, don't do less. Always have a yield; at the end of @MainLoop regardless of whether or not you task.</li>
+	          <li>If you have an infinite loop, you MUST have a yield; inside it or Danmakufu will freeze. If Danmakufu freezes, it is 99.9999% of the time an issue where you forgot to yield; in a loop{} or while(true){}.</li>
+	        </ol>
+              <p>Now that the basics are out of the way, it's time to create our first function.</p>
+		<pre><code>function wait(n){loop(n){yield;}}</code></pre>
+              <p>This function is a must-have for everyone's function library. It yields n frames. wait(60); is the equivalent of loop(60){yield;}, but one is longer than the other, so people just use wait().</p>
+              <p>As this tutorial progresses, you will learn more ways to use yield; as well as other techniques in which yield; is a key component. But now... the semicolon.</p>
+              <h2 style="color:yellow" id="sub8">Part 8: What Should I Know About Danmakufu Syntax?</h2>
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
         <p style="text-align: center;">Last Update to Page: Dec 6, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
