@@ -233,6 +233,18 @@ if(x==(23/2)){x = 25;}else{x = 23;}</code></pre>
                 <input type="SUBMIT" value="Submit">
                 </form>
               <h2 style="color:yellow" id="sub5">Part 5: What are Functions?</h2>
+              <p>We have referenced functions before, but now is the time to go in depth about what a function is and how to use them.</p>
+              <p>Firstly, a function is able to take and return parameters, also known as arguments or inputs. For example, you can have a function f(x)=x+5 that takes a value x, and returns that value incremented by 5. In Danmakufu, it looks like this:</p>
+		<pre><code>function math(var){//using 'let var' is also acceptable but nobody really does it.
+    return var + 5;
+}</code></pre>
+              <p>In this code, the name of the function is math, the parameter inside the parenthesis is var, and the return value is var + 5. As for how to use it, here's a code snippet.</p>
+		<pre><code>function math(var){//using 'let var' is also acceptable but nobody really does it.
+    return var + 5;
+}
+
+let y = math(6);//y will be equal to 11</code></pre>
+              <p>Simple, right? A function takes its parameters in the form (a, b, c, d) and returns whatever is in the return statement. A function does not have to return anything and does not require parameters. Note that you can only return one thing - alternatively, you can return an array of different things as long as they are of the same type. However, this gets clunky and can be confusing, so it's best not to. Functions are very useful for quick things such as returning the angle from the player to the boss, getting the player movement direction, etc. You can also use yield; in a function and where the function was called, nothing else will execute until the function has completed its run (things not in the script, such as the bgm, background, and system will still work), but we'll get into that later when we discuss yield;.</p>
               <h2 style="color:yellow" id="sub6">Part 6: </h2>
 
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
