@@ -21,6 +21,7 @@
 	          <li><a href="#sub6">Part 6: What are Tasks?</a></li>
 	          <li><a href="#sub7">Part 7: How do I Use yield;?</a></li>
 	          <li><a href="#sub8">Part 8: What Should I Know About Danmakufu Syntax?</a></li>
+	          <li><a href="#quiz2">Quiz: Script Flow and Syntax</a></li>
 	        </ul>
 	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
               <p>In this lesson, I will cover the following:</p>
@@ -275,7 +276,62 @@ let y = math(6);//y will be equal to 11</code></pre>
               <p>This function is a must-have for everyone's function library. It yields n frames. wait(60); is the equivalent of loop(60){yield;}, but one is longer than the other, so people just use wait().</p>
               <p>As this tutorial progresses, you will learn more ways to use yield; as well as other techniques in which yield; is a key component. But now... the semicolon.</p>
               <h2 style="color:yellow" id="sub8">Part 8: What Should I Know About Danmakufu Syntax?</h2>
+              <p>To close this very long lesson, we will have a brief discussion about Danmakufu syntax. As you all know, Danmakufu is a scripting language and, like programming languages, has both conventions and rules. Like other programming languages, all function, task, variable, and routine names are case sensitive. In other words, @mainloop will not be recognized because Danmakufu only recognizes @MainLoop. Calling a function Wait(n) when you have a function wait(n) will bring up a function not defined error.</p>
+              <p>Additionally, please, please, PLEASE remember to close all of your (, [, and {. Before running a script, use a ctrl-F test to make sure that the number of { is equal to the number of }. Otherwise, <i>something</i> is going to error. Guaranteed.</p>
+              <p>Please make use of tabbing. I cannot emphasize this enough. In this tutorial, I use 2, 4, or 8 spaces for tabs. However, the spacing is not what matters - having white space in the first place is what's important. Having unreadable code means that others will be less likely to help you.</p>
+              <p>And finally... the bane of all existence. THE SEMICOLON.</p>
+              <p>In all honesty, the semicolon isn't that much of a pain. It's just that the error will reference the line afterwards and not the line with the error. Always have a semicolon after each statement. If you call a function or task, have a ; after the closing parenthesis. If you declare a variable, put a ; after you have declared the variable. This is how Danmakufu (and other languages) determine when you have ended a statement, and without it, Danmakufu will be confused. There are exceptions, usually only for headers and includes, but that's something you'll notice more and more as time goes on.</p>
+              <p>Note that you do not need a semicolon if a statement is followed immediately by a closing brace }. However, always put the semicolon - I don't care how mkm wants you to code; This is better procedure and more relevant for computer science as a whole.</p>
+              <p>That's all for now. The quizzes below should be enough to review the information.</p>
+              <h2 style="color:yellow" id="quiz2">Quiz: Script Flow and Syntax</h2>
+	        <!--Quiz start.-->
+		<p>1) Why does Danmakufu freeze when the below code is executed?</p>
+                <pre><code>while(!Obj_IsDeleted(obj)){//Obj_IsDeleted() returns a boolean
+}</code></pre>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'B', 7);">
+                <input type="RADIO" value="A" name="cc">
+                A. There is no code between the braces<br>
+                <input type="RADIO" value="B" name="cc">
+                B. There is no yield;<br>
+                <input type="RADIO" value="C" name="cc">
+                C. The object has already been deleted<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+                <br>
+		<p>2) Marisa is testing a new laser of doom. However, her code freezes. How can she stop the freezing and also have the object delete after 300 frames? Please choose the best answer. Assume that the object does not automatically delete.</p>
+                <pre><code>task MasterSparkEX(x, y, ang, length, width, dt, graph, delay){
+    let obj = CreateStraightLaserA1(x, y, ang, length, width, dt, graph, delay);
+    let objcount = 0;
+    while(objcount<300&&Obj_IsDeleted(obj)==false){
+        //Laser control functions
+    }
+    Obj_Delete(obj);
+}</code></pre>
+                <form method="POST" onSubmit="return checkAnswerA1(this, 'D');">
+                <input type="RADIO" value="A" name="cc">
+                A. Add a yield; in her while loop<br>
+                <input type="RADIO" value="B" name="cc">
+                B. Increment objcount inside the while loop<br>
+                <input type="RADIO" value="C" name="cc">
+                C. Increment objcount before the while loop<br>
+                <input type="RADIO" value="D" name="cc">
+                D. Both A and B<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+                <br>
+		<p>3) This code brings up an error. Why?</p>
+                <pre><code>function wait(n){loop(n){yield;}}
+Wait(5);
+</code></pre>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'A', 8);">
+                <input type="RADIO" value="A" name="cc">
+                A. Wait(n) has not been defined<br>
+                <input type="RADIO" value="B" name="cc">
+                B. There should be no semicolon after yield<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Dec 6, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
+        <p style="text-align: center;">Last Update to Page: Dec 9, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
-    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>  </body></html>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L5Quiz1.js"></script>  </body></html>
