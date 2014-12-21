@@ -16,7 +16,7 @@
 	          <li><a href="#sub2">Part 2: How Do I Fill the Danmakufu Header?</a></li>
 	          <li><a href="#sub3">Part 3: How Do I Set the Boss Life, Spell Bonus and Timer?</a></li>
 	          <li><a href="#sub4">Part 4: How Do I Create and Register the Boss?</a></li>
-	          <li><a href="#sub5">Part 5: How Do I Move the Boss and Create a Boss Hitbox?</a></li>
+	          <li><a href="#sub5">Part 5: How Do I Move the Boss?</a></li>
 	          <li><a href="#sub6">Part 6: How Do I Create a Boss Hitbox?</a></li>
 	          <li><a href="#sub7">Part 7: How Do I Close the Script?</a></li>
 	          <li><a href="#quiz1">Quiz: </a></li>
@@ -104,6 +104,7 @@
               <pre><code>ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);</code></pre>
               <p>This code will tell the boss object to move to the location (GetCenterX(), 60) in 60 frames, which is pretty close to the top of the screen. Either way, this should look significantly better than teleporting the boss.</p>
               <p>And of course, now we want to leave @Initialize for what lies beyond...</p>
+              <h2 style="color:yellow" id="cp1">Checkpoint</h2>
               <p>This is our script as of right now, for future reference:</p>
               <pre><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
@@ -149,6 +150,11 @@ function GetCenterY{
 function wait(n){
      loop(n){yield;}
 }</code></pre>
+              <h2 style="color:yellow" id="sub6">Part 6: How Do I Create a Boss Hitbox?</h2>
+              <p>So now we have quite a bit of code! However, our @MainLoop is empty - we will now begin to fill it, first by giving the boss a hitbox.</p>
+              <p>In Danmakufu, there are two types of enemy hitboxes - one registers collision with the player, and the other registers collisions with player shots. You can also manually create hitboxes for other types of collisions. The primary two functions you will use are the following: <code>ObjEnemy_SetIntersectionCircleToShot()</code> and <code>ObjEnemy_SetIntersectionCircleToPlayer()</code>. Their names basically describe what they do. They require 4 arguments each - the first is the object ID of the enemy to damage. The next two are the x and y positions to set the hitbox - yes, this means you can have a hitbox somewhere other than directly on top of the boss. If you want to use the boss's position, use <code>ObjMove_GetX(objBoss)</code> and <code>ObjMove_GetY(objBoss)</code>. The final argument is the radius of the hitbox, measured in pixels. 32 and 24 for shot and player respectively are the hitbox sizes shown in the sample scripts. You can do whatever you want, but just keep in mind that you will usually want the player collision hitbox to be smaller than the shot collision hitbox.</p>
+              <p>Simply put these two functions inside @MainLoop - enemy collision hotboxes will reset after each frame, and by putting this in @MainLoop, it will automatically set itself to the enemy's position as long as you are using the <code>ObjMove_GetX()</code> and <code>ObjMove_GetY()</code> functions.</p>
+              <p>As a last note, put a yield; at the end of your @MainLoop. Tasks will not run if you do not have a yield; in @MainLoop.</p>
               <h2 style="color:yellow" id="quiz1">Quiz: </h2>
 	        <!--Quiz start.-->
 		<p>text.</p>
@@ -164,6 +170,6 @@ function wait(n){
                 <input type="SUBMIT" value="Submit">
                 </form>
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Dec 13, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
+        <p style="text-align: center;">Last Update to Page: Dec 21, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>  </body></html>
