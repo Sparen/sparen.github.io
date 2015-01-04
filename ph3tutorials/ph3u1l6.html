@@ -19,7 +19,7 @@
 	          <li><a href="#sub5">Part 5: How Do I Move the Boss?</a></li>
 	          <li><a href="#sub6">Part 6: How Do I Create a Boss Hitbox?</a></li>
 	          <li><a href="#sub7">Part 7: How Do I Close the Script?</a></li>
-	          <li><a href="#quiz1">Quiz: </a></li>
+	          <li><a href="#quiz1">Quiz: Script Structure and Coordinate Systems</a></li>
 	          <li><a href="#sub8">Part 8: How Do I Create a Bullet?</a></li>
 	        </ul>
 	      </div>              <h2 style="color:yellow" id="sub1">Part 1: How Do I Create a Blank Script?</h2>
@@ -80,7 +80,7 @@
                 <pre><code>@Initialize{
 	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
 	ObjEnemy_Regist(objBoss);</code></pre>
-              <p>The first line assigns the variable objBoss with a vale - an object ID belonging to a brand new Enemy object, more specifically a boss. The next line registers the Enemy object. You must register certain objects, such as enemies.</p>
+              <p>The first line assigns the variable objBoss with a value - an object ID belonging to a brand new Enemy object, more specifically a boss. The next line registers the Enemy object. You must register certain objects, such as enemies.</p>
               <p>However, we do not have any graphic for the boss! From the sample folder, copy ExRumia.png to the current folder. Below the Enemy Register code, place the following:</p>
               <pre><code>	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
 	ObjPrim_SetTexture(objBoss, imgExRumia);
@@ -155,20 +155,327 @@ function wait(n){
               <p>In Danmakufu, there are two types of enemy hitboxes - one registers collision with the player, and the other registers collisions with player shots. You can also manually create hitboxes for other types of collisions. The primary two functions you will use are the following: <code>ObjEnemy_SetIntersectionCircleToShot()</code> and <code>ObjEnemy_SetIntersectionCircleToPlayer()</code>. Their names basically describe what they do. They require 4 arguments each - the first is the object ID of the enemy to damage. The next two are the x and y positions to set the hitbox - yes, this means you can have a hitbox somewhere other than directly on top of the boss. If you want to use the boss's position, use <code>ObjMove_GetX(objBoss)</code> and <code>ObjMove_GetY(objBoss)</code>. The final argument is the radius of the hitbox, measured in pixels. 32 and 24 for shot and player respectively are the hitbox sizes shown in the sample scripts. You can do whatever you want, but just keep in mind that you will usually want the player collision hitbox to be smaller than the shot collision hitbox.</p>
               <p>Simply put these two functions inside @MainLoop - enemy collision hotboxes will reset after each frame, and by putting this in @MainLoop, it will automatically set itself to the enemy's position as long as you are using the <code>ObjMove_GetX()</code> and <code>ObjMove_GetY()</code> functions.</p>
               <p>As a last note, put a yield; at the end of your @MainLoop. Tasks will not run if you do not have a yield; in @MainLoop.</p>
-              <h2 style="color:yellow" id="quiz1">Quiz: </h2>
+              <h2 style="color:yellow" id="sub7">Part 7: How Do I Close the Script?</h2>
+              <p>Right now our script does practically nothing since all it does is create a boss and move it to a location (and then allow it to be shot down). However, we need to be able to close the script in order to complete a solid complete framework for our script.</p>
+              <p>In the sample scripts that come with Danmakufu, there is a portion of @MainLoop that basically runs only when the boss's life falls below or equal to 0. However, that adds clutter to @MainLoop. Therefore, we will call a task TFinalize; at the end of @Initialize.</p>
+              <pre><code>    task TFinalize {
+        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
+	Obj_Delete(objBoss);
+	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
+	SetAutoDeleteObject(true);
+	CloseScript(GetOwnScriptID());
+	return;
+    }</pre></code>
+              <p>While the boss's life is greater than 0, this task will do nothing. However, the moment the boss's HP drops to 0 or below, the boss object will delete, every enemy shot on screen will be deleted, and the script will close. The use of return; at the end does nothing and is not needed, although it is in the sample scripts.</p>
+              <p>There is also SetAutoDeleteObject();, which defaults to false. When true, all objects spawned in the script will be deleted. Since many function libraries assume that it is set to true (and indeed, most scripters in the western Danmakufu community set it to true), I recommend that you use it. It clears up a number of things. There are issues with it, of course, but we will get into that when we discuss items.</p>
+              <p>With this, our script can end. So now... it's time to shoot our bullets!</p>
+              <h2 style="color:yellow" id="quiz1">Quiz: Script Structure and Coordinate Systems</h2>
 	        <!--Quiz start.-->
-		<p>text.</p>
-                <pre><code>code</code></pre>
-		<p>1) What is the value of z?</p>
-                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
+		<p>Raiko tries to move her drum down towards the middle of the screen. However, it flies from (0,0) upwards.</p>
+                <pre><code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, -60, 60);</code></pre>
+		<p>1) Why does the drum fly upwards?</p>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'B', 5);">
                 <input type="RADIO" value="A" name="cc">
-                A. lol<br>
+                A. By moving to GetCenterX, the drum moves up<br>
                 <input type="RADIO" value="B" name="cc">
-                B. rofl<br>
+                B. In Danmakufu, the negative y direction is upwards rather than downwards<br>
                 <input type="RADIO" value="C" name="cc">
-                C. lel<br>
+                C. The drum takes 60 frames to move<br>
                 <input type="SUBMIT" value="Submit">
                 </form>
+                <br>
+		<p>2) What code will fix the issue?</p>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'A', 5);">
+                <input type="RADIO" value="A" name="cc">
+                A. <code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, 60, 60);</code><br>
+                <input type="RADIO" value="B" name="cc">
+                B. <code>ObjMove_SetDestAtFrame(objDrum, 0, -60, 60);</code><br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+                <br>
+		<p>Now Raiko cannot seem to get her hitbox to work.</p>
+                <pre><code>@Initialize{
+	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+	ObjEnemy_Regist(objBoss);
+	let imgRaiko = GetCurrentScriptDirectory ~ "Raiko.png";
+	ObjPrim_SetTexture(objBoss, imgRaiko);
+	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+	ObjSprite2D_SetDestCenter(objBoss);
+        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+	ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+}
+
+@MainLoop{
+}</code></pre>
+		<p>3) Why does the hitbox not spawn?</p>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'C', 6);">
+                <input type="RADIO" value="A" name="cc">
+                A. There is no yield; in @MainLoop<br>
+                <input type="RADIO" value="B" name="cc">
+                B. The boss hitbox has not been declared at all<br>
+                <input type="RADIO" value="C" name="cc">
+                C. <code>ObjEnemy_SetIntersectionCircleToShot()</code> and <code>ObjEnemy_SetIntersectionCircleToPlayer()</code> need to be called each frame<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+              <h2 style="color:yellow" id="sub8">Part 8: How Do I Create a Bullet?</h2>
+              <p>It's what you've all been waiting for! Creating bullets! However... we are now entering an area where coding style comes into play.</p>
+              <p>There are multiple ways to do what we want to do here. There is a tasking style, a @MainLoop style, and countless others. I will show the tasking style, the @MainLoop style, and my own style, the last of the three simply because I will be using my own style for the rest of the tutorials and it is best if you are able to read it.</p>
+              <p>We will begin with the most generic bullet function, <code>CreateShotA1(x, y, speed, angle, graphic, delay);</code>. The x and y positions are the starting coordinates for the bullet. You may also use <code>let obj = CreateShotA1();</code> to transform the bullet later, but that will be covered later. For now, we will discuss spawning a bullet every thirty frames, first in tasking style. But first, add the following below your Danmakufu Header:</p>
+              <pre><code>#include"script/default_system/Default_ShotConst.txt"</code></pre>
+              <p>This will include the default shotsheet with the script so that we can have bullet graphics. Don't worry about the include now - just be aware that the file contains a list of shot constants that will make it easier to figure out which bullet we are firing. I personally do not use shot constants, preferring to simply load a shotsheet and use numbers, but for this lesson, I will demonstrate with the shot constants.</p>
+              <p>Remember TFinalize? Now we will create a task called MainTask; and call it in @Initialize. In MainTask, we will first insert a <code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+}</code></p>
+              <p>Inside the braces we will do the following:</p>
+              <pre><code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+    let angleT = GetAngleToPlayer(objBoss);
+    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+    wait(30);
+}</code></pre>
+              <p>In this while loop, we first declare a variable angleT to hold the angle from the boss to the player, given by the function <code>GetAngleToPlayer();</code>. After this, we fire a shot from the boss's position with speed 2, angle towards the player. Its graphic is DS_BALL_S_RED, a small red ball, and there are 5 delay frames before the bullet materializes and can damage the player. After this, the task waits 30 frames before checking the boss's life and looping through this again.</p>
+              <p>Now I will show the @MainLoop style. First, you will want to define a global variable count (or frame, but I prefer count) after the shotsheet include, and set it to 0. Then, in @MainLoop, you will add the following after the hitbox declaration and before the yield;:</p>
+              <pre><code>  if(count == 30){
+    let angleT = GetAngleToPlayer(objBoss);
+    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+    count = 0;
+  }
+  count++;</code></pre>
+              <p>Basically, you increment your counter until it hits 30, then execute the bullet spawning and reset the counter</p>
+              <p>Note that in plural scripts and the like, this will need to be changed slightly to account for the fact that the bullets will still shoot if the boss is dead. I will describe a countermeasure below.</p>
+              <p>Finally, I will discuss my coding method, which is similar to the @MainLoop method. The main difference is that I do not reset the counter and instead use a modulus. The @MainLoop code I insert between the hitboxes and yield; is similar to the following:</p>
+              <pre><code>  if(count%30==0){
+    let angleT = GetAngleToPlayer(objBoss);
+    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+  }
+  count++;</code></pre>
+              <p>When the count is a multiple of 30, the code inside the braces will execute. All three methods are functionally similar. However, I will now describe good habits and how to robustify the code. For the tasking code, there is a check after the wait for whether or not the boss is alive, but this is not the case for the other two methods. Therefore, we will do the following:</p>
+              <p>First, we will create a task called fire;. It will contain the following:</p>
+              <pre><code>  task fire{
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}//Default kill to prevent (0,0) spawning
+    let angleT = GetAngleToPlayer(objBoss);
+    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+  }</code></pre>
+              <p>We will call fire; instead of the two lines defining the angleT local variable and calling the bullet. Now, the bullets will not spawn if the boss happens to be dead and the script is still running due to the return; following a check for the boss's life. You will see this line of code plastered everywhere in my scripts - it is very much my most often copy-pasted line of code in ph3.</p>
+              <p>Well, now we have a boss that fires a bullet. To conclude this lesson, I will show the scripts we have devised in their entirety.</p>
+              <h2 style="color:yellow" id="cp2">Checkpoint - Tasking</h2>
+              <p>Tasking style</p>
+              <pre><code>#TouhouDanmakufu[Single]
+#ScriptVersion[3]
+#Title["My First Danmakufu Script!"]
+#Text["Code by Sparen[r]My First Bullet!"]
+#BGM["./necrofantasia.ogg"]
+
+#include"script/default_system/Default_ShotConst.txt"
+
+let objBoss;
+
+@Event{
+	alternative(GetEventType())
+	case(EV_REQUEST_LIFE){
+		SetScriptResult(500);
+        }
+	case(EV_REQUEST_TIMER){
+		SetScriptResult(60);
+	}
+	case(EV_REQUEST_SPELL_SCORE){
+		SetScriptResult(1000000);
+	}
+}
+
+@Initialize{
+	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+	ObjEnemy_Regist(objBoss);
+	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+	ObjPrim_SetTexture(objBoss, imgExRumia);
+	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+	ObjSprite2D_SetDestCenter(objBoss);
+        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+
+        TFinalize;
+	MainTask;
+}
+
+@MainLoop{
+        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+        yield;
+}
+
+task MainTask{
+    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+        let angleT = GetAngleToPlayer(objBoss);
+        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+        wait(30);
+    }
+}
+
+task TFinalize {
+        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
+	Obj_Delete(objBoss);
+	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
+	SetAutoDeleteObject(true);
+	CloseScript(GetOwnScriptID());
+	return;
+}
+
+function GetCenterX{
+     return GetStgFrameWidth/2;
+}
+function GetCenterY{
+     return GetStgFrameHeight/2;
+}
+
+function wait(n){
+     loop(n){yield;}
+}</code></pre>
+              <h2 style="color:yellow" id="cp3">Checkpoint - @MainLoop</h2>
+              <p>@MainLoop style</p>
+              <pre><code>#TouhouDanmakufu[Single]
+#ScriptVersion[3]
+#Title["My First Danmakufu Script!"]
+#Text["Code by Sparen[r]My First Bullet!"]
+#BGM["./necrofantasia.ogg"]
+
+#include"script/default_system/Default_ShotConst.txt"
+
+let objBoss;
+let count = 0;
+
+@Event{
+	alternative(GetEventType())
+	case(EV_REQUEST_LIFE){
+		SetScriptResult(500);
+        }
+	case(EV_REQUEST_TIMER){
+		SetScriptResult(60);
+	}
+	case(EV_REQUEST_SPELL_SCORE){
+		SetScriptResult(1000000);
+	}
+}
+
+@Initialize{
+	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+	ObjEnemy_Regist(objBoss);
+	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+	ObjPrim_SetTexture(objBoss, imgExRumia);
+	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+	ObjSprite2D_SetDestCenter(objBoss);
+        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+
+        TFinalize;
+}
+
+@MainLoop{
+        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+        if(count == 30){
+            fire;
+            count = 0;
+        }
+        count++;
+        yield;
+}
+
+task fire{
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}//Default kill to prevent (0,0) spawning
+    let angleT = GetAngleToPlayer(objBoss);
+    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+}
+
+task TFinalize {
+        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
+	Obj_Delete(objBoss);
+	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
+	SetAutoDeleteObject(true);
+	CloseScript(GetOwnScriptID());
+	return;
+}
+
+function GetCenterX{
+     return GetStgFrameWidth/2;
+}
+function GetCenterY{
+     return GetStgFrameHeight/2;
+}
+
+function wait(n){
+     loop(n){yield;}
+}</code></pre>
+              <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
+              <p>Sparen style</p>
+              <pre><code>#TouhouDanmakufu[Single]
+#ScriptVersion[3]
+#Title["My First Danmakufu Script!"]
+#Text["Code by Sparen[r]My First Bullet!"]
+#BGM["./necrofantasia.ogg"]
+
+#include"script/default_system/Default_ShotConst.txt"
+
+let objBoss;
+let count = 0;
+
+@Event{
+	alternative(GetEventType())
+	case(EV_REQUEST_LIFE){
+		SetScriptResult(500);
+        }
+	case(EV_REQUEST_TIMER){
+		SetScriptResult(60);
+	}
+	case(EV_REQUEST_SPELL_SCORE){
+		SetScriptResult(1000000);
+	}
+}
+
+@Initialize{
+	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+	ObjEnemy_Regist(objBoss);
+	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+	ObjPrim_SetTexture(objBoss, imgExRumia);
+	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+	ObjSprite2D_SetDestCenter(objBoss);
+        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+
+        TFinalize;
+}
+
+@MainLoop{
+        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+        if(count%30==0){
+            fire;
+        }
+        count++;
+        yield;
+}
+
+task fire{
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}//Default kill to prevent (0,0) spawning
+    let angleT = GetAngleToPlayer(objBoss);
+    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+}
+
+task TFinalize {
+        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
+	Obj_Delete(objBoss);
+	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
+	SetAutoDeleteObject(true);
+	CloseScript(GetOwnScriptID());
+	return;
+}
+
+function GetCenterX{
+     return GetStgFrameWidth/2;
+}
+function GetCenterY{
+     return GetStgFrameHeight/2;
+}
+
+function wait(n){
+     loop(n){yield;}
+}</code></pre>
+
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
         <p style="text-align: center;">Last Update to Page: Jan 3, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
