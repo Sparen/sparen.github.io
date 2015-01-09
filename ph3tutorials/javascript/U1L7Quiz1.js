@@ -14,7 +14,7 @@ function checkAnswerA1(quizForm, theAnswer){
   }
 
   if(s == theAnswer){
-    alert("'"+s+"' is correct! By reaching the destination at a certain speed, it is guaranteed that everything will sync!");
+    alert("'"+s+"' is correct! By reaching the destination at a certain time, it is guaranteed that everything will sync!");
   }else if(s == "A"){
     alert("'"+s+"' is incorrect. This function would most likely teleport the boss onto the player, resulting in a very cheap autokill unless the player was notified of the teleportation beforehand.");
   }else if(s == "B"){
