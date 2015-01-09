@@ -58,18 +58,8 @@
 	      <p>Now that our boss is moving, it is time for a short quiz, after which we will learn to do things more complex that firing a single bullet at the player.</p>
               <h2 style="color:yellow" id="quiz1">Quiz: Frames, Speed, and yield;</h2>
 	        <!--Quiz start.-->
-		<p>1) What is the optimal FPS for Danmakufu?</p>
-                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
-                <input type="RADIO" value="A" name="cc">
-                A. 30 FPS<br>
-                <input type="RADIO" value="B" name="cc">
-                B. 60 FPS<br>
-                <input type="RADIO" value="C" name="cc">
-                C. 120 FPS<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
 		<br>
-		<p>2) How long does it take for a bullet traveling at speed 4 (pixels/second) to travel from the left side of the default playing field to the right side (same y coordinate)?</p>
+		<p>1) How long does it take for a bullet traveling at speed 4 (pixels/second) to travel from the left side of the default playing field to the right side (same y coordinate)?</p>
                 <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
                 <input type="RADIO" value="A" name="cc">
                 A. 96 frames<br>
@@ -80,7 +70,7 @@
                 <input type="SUBMIT" value="Submit">
                 </form>
 		<br>
-		<p>3) Minoriko wants her boss to move to the player's position every 180 frames. Which functions should she use?</p>
+		<p>2) Minoriko wants her boss to move to the player's position every 180 frames. Which functions should she use?</p>
                 <form method="POST" onSubmit="return checkAnswerA1(this, 'C');">
                 <input type="RADIO" value="A" name="cc">
                 A. <code>ObjMove_SetPosition()</code><br>
@@ -93,7 +83,7 @@
                 <input type="SUBMIT" value="Submit">
                 </form>
 		<br>
-		<p>4) Shizuha wants to move the boss to a position every 45 frames, and she is syncing the spawning of bullets to this. Which function should she NOT use?</p>
+		<p>3) Shizuha wants to move the boss to a position every 45 frames, and she is syncing the spawning of bullets to this. Which function should she NOT use?</p>
                 <form method="POST" onSubmit="return checkAnswerP(this, 'B', 2);">
                 <input type="RADIO" value="A" name="cc">
                 A. <code>ObjMove_SetPosition()</code><br>
