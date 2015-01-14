@@ -1,8 +1,10 @@
+<!-- Notice that the links to the homepage link via the web and not using a relative link. This is to boost the google page rank. However, it is not in place for everything in the menus because moving to a new domain would become a chore. -->
+
 <!-- Root Directory Menubar. Edit here and copy elsewhere for quick reference. -->
 
       <div id="menubar">
         <ul>
-          <li><a class="mhome" href="./index.html">Home</a></li>
+          <li><a class="mhome" href="http://sparen.github.io">Home</a></li>
           <li><a class="mabout" href="./aboutme.html">About Me</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials/ph3tutorials.html">ph3 Tutorials</a></li>
           <li><a class="mprojects" href="./projects/projects.html">Projects</a></li>
@@ -14,7 +16,7 @@
 
       <div id="menubar">
         <ul>
-          <li><a class="mhome" href="../index.html">Home</a></li>
+          <li><a class="mhome" href="http://sparen.github.io">Home</a></li>
           <li><a class="mabout" href="../aboutme.html">About Me</a></li>
           <li><a class="mph3tutorials" href="../ph3tutorials/ph3tutorials.html">ph3 Tutorials</a></li>
           <li><a class="mprojects" href="../projects/projects.html">Projects</a></li>
@@ -26,7 +28,7 @@
 
       <div id="menubar">
         <ul>
-          <li><a class="mhome" href="../index.html">Return to Home</a></li>
+          <li><a class="mhome" href="http://sparen.github.io">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html">ph3 Tutorial Index</a></li>
           <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
           <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
@@ -37,7 +39,7 @@
 
       <div id="menubar">
         <ul>
-          <li><a class="mhome" href="../index.html">Return to Home</a></li>
+          <li><a class="mhome" href="http://sparen.github.io">Return to Home</a></li>
           <li><a class="mprojects" href="./projects.html">Projects</a></li>
           <li><a class="mreleasethread" target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,13738.0.html">My Release Thread</a></li>
           <li><a class="mbulletforge" target="_blank" href="http://www.bulletforge.org">BulletForge</a></li>
