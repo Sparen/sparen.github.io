@@ -29,14 +29,14 @@
 	      <p>To begin, a note. I will not be involving the @MainLoop style from now on - I will show the task method and my own method, because the former is commonly used and because the latter is good for understanding alternate ways in which you can script Danmakufu.</p>
 	      <p>So first, we will begin by starting off with our code from last time. We will now begin the transformation from a nonspell to a spell! We will also be adding an number of things that will greatly assist us.</p>
 	      <p>First, the section with global variables. Currently, we only have <code>let objBoss;</code>. Right after that, we will want to add the following:</p>
-                <pre><code>    let objScene=GetEnemyBossSceneObjectID();</code></pre>
+                <pre class="prettyprint"><code>    let objScene=GetEnemyBossSceneObjectID();</code></pre>
 	      <p>This will allow us to access the Enemy Boss Scene Object. We will not usually do anything with this object, but it should find a comfortable place in your global variable section and we will directly use it in all spellcards.</p>
 	      <p>Now we will look at @Initialize. Please note that there is no default cutin function in ph3. I suggest using GTbot's or Helepolis's, which can be found on MotK or Bulletforge. Additionally, you can make your own, but we will need understanding of text objects and render objects before we can go into that.</p>
 	      <p>The most important line we will add to @Initialize is <code>ObjEnemyBossScene_StartSpell(objScene);</code>. Add it before TFinalize. This code will tell Danmakufu that we are now starting a spellcard. Additionally, we will begin cleaning up @Initialize. I suggest taking all the boss drawing code (the imgRumia stuff) and placing it in a task TDrawLoop and calling that in @Initialize. This will allow us to animate the boss later on and will make @Initialize look cleaner. <b>Do not move the movement code into TDrawLoop.</b> While it is not detrimental, you may end up not being able to find the movement code if you end up looking for it.</p>
 	      <p>Now we will move to @Event. Thankfully, we already have EV_REQUEST_SPELL_SCORE, which is the spellcard bonus! So we don't have to do anything here. However, I will cover the three events we have. As a refresher, EV_REQUEST_LIFE sets the boss's life, EV_REQUEST_TIMER sets the timeout counter (in seconds), and EV_REQUEST_SPELL_SCORE sets the spellcard bonus.</p>
 	      <p>Finally, to complete the transformation into a spellcard, there is an optional but highly recommended procedure that will go in TFinalize. What is it, you ask? Well, adding the spellcard bonus!</p>
 	      <p>Danmakufu does not do it automatically: you must manually add the spellcard bonus. I know, it's a pain. But it's not hard to implement. Right after the while loop in TFinalize, add the following:</p>
-                <pre><code>	if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
+                <pre class="prettyprint"><code>	if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
               +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
 	  AddScore(ObjEnemyBossScene_GetInfo(objScene,INFO_SPELL_SCORE));
 	}</code></pre>
@@ -49,7 +49,7 @@
 	      <p>Firstly, we will not be using <code>ObjMove_SetX()</code>, <code>ObjMove_SetY()</code>, <code>ObjMove_SetPosition()</code>, <code>ObjMove_SetSpeed()</code>, or <code>ObjMove_SetAngle()</code>. Generally speaking, teleporting the boss halfway across the screen does not work well in playing, and using a speed/angle approach can be a royal pain to control. We will use these functions for positioning of things like bullets, but not for the boss. Instead, we will use the following: <code>ObjMove_SetDestAtSpeed()</code>, <code>ObjMove_SetDestAtFrame()</code>, and <code>ObjMove_SetDestAtWeight()</code>. You specify the object and the destination, and then specify either the speed to go at (constant for the entire journey), how many frames to take, or the weight and max speed. Personally, I never use <code>ObjMove_SetDestAtSpeed()</code> because it is hard to sync anything else with it. <code>ObjMove_SetDestAtFrame()</code> is the best for syncing firing with movement. <code>ObjMove_SetDestAtWeight()</code> looks the most natural, although it requires more experience to control. We will use <code>ObjMove_SetDestAtFrame()</code> in this tutorial.</p>
 	      <p>In the task movement, we will now add a while loop just like the one in MainTask (It is also possible to put movement; inside the while loop of MainTask; and not include the while loop in movement;). And then, we will add <code>	  ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-60,GetCenterY-120), 60);</code> inside, as well as a <code>wait(240);</code>. This will move the boss to a random point within the bounds set every 240 frames. Note that the movement works parallel to what called it - that is, the boss will start moving when the function is called, and will finish moving 60 frames later, leaving 180 frames before the boss begins moving again.</p>
 	      <p>Our movement task now looks like this:</p>
-              <pre><code>    task movement{
+              <pre class="prettyprint"><code>    task movement{
         while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
             ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-60,GetCenterY-120), 60);
             wait(240);
@@ -96,7 +96,7 @@
               <p>NOTE: Below is for reference when I write the tutorial. That way I can easily copy-paste the skeleton.</p>
               <h2 style="color:yellow" id="cp2">Checkpoint - Tasking</h2>
               <p>Tasking style</p>
-              <pre><code>#TouhouDanmakufu[Single]
+              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -167,7 +167,7 @@ function wait(n){
 }</code></pre>
               <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
               <p>Sparen style</p>
-              <pre><code>#TouhouDanmakufu[Single]
+              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -240,7 +240,7 @@ function wait(n){
 }</code></pre>
 
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Jan 9, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Jan 16, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
@@ -248,4 +248,5 @@ function wait(n){
         </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
-    <script language="JavaScript" type="text/javascript" src="javascript/U1L7Quiz1.js"></script>  </body></html>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L7Quiz1.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c&skin=desert"></script>  </body></html>

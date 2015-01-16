@@ -35,12 +35,12 @@
 	      <p>Please note that the contents of this page are partially based off of <a target="_blank" href="ph3u1l3code1.html">the sample script first shown in Lesson 3</a>. However, it is to be used as a reference - all of the actual code construction will be done here in the tutorial. Helepolis also has a <a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc">video tutorial</a> that covers roughly the same material as this tutorial.</p>
               <p>So now let's begin! First, enter your Danmakufu's script directory and create a folder - it's up to you what the name will be, but something along the lines of 'Tutorial' is best for now. Inside, create a blank text file (or .dnh file if you're using the Sublime Text syntax highlighter). Name it whatever you want as long as there is only English in the title - no accent marks, other diacritics, etc. In your Text Editor (Notepad/TextEdit/Gedit/Whatever), make sure that smart quotes are OFF. Also, turn autocorrect OFF (this is such a pain). However, you will want your text editor to catch spelling mistakes - in TextEdit (mac), it will catch things like CreaateShotA1 by giving you the red line underneath since 'Creaate' does not exist in its dictionary. As long as your text editor does not automatically correct the 'errors', it is fine and potentially helpful.</p>
               <p>Now we will want to write our script! First, paste a near-blank header into your file.</p>
-                <pre><code>#TouhouDanmakufu[Single]
+                <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title[]
 #Text[] </code></pre>
               <p>After this, put the following below the header:</p>
-                <pre><code>@Event{
+                <pre class="prettyprint"><code>@Event{
 }
 
 @Initialize{
@@ -49,7 +49,7 @@
 @MainLoop{
 }</code></pre>
               <p>Look familiar? Make sure there are some line breaks between the header and @Event - we will be putting stuff there. However, note that since Danmakufu is based on C++, mkm uses C++ style braces: in other words, he does the following:</p>
-                <pre><code>@Event
+                <pre class="prettyprint"><code>@Event
 {
 }
 
@@ -69,7 +69,7 @@
               <p>Now that the header is out of the way, it is time to begin filling our script with things that will allow it to run.</p>
               <h2 style="color:yellow" id="sub3">Part 3: How Do I Set the Boss Life, Spell Bonus and Timer?</h2>
               <p>At this stage, a complete explanation of @Event will most likely fly straight over your heads, but it is important to know that when certain processes happen, @Event is automatically called by Danmakufu, and depending on the arguments there when it is called, it will do various things such as spawning the boss magic circle, etc. Below is a sample @Event.</p>
-                <pre><code>@Event{
+                <pre class="prettyprint"><code>@Event{
 	alternative(GetEventType())
 	case(EV_REQUEST_LIFE){
 		SetScriptResult(500);
@@ -86,12 +86,12 @@
               <p>As of now, we have no boss! Therefore, we must remedy this.</p>
               <p>Firstly, between the header and @Event, we will want to create a global variable called objBoss. basically, write <code>let objBoss;</code> on a line between the header and @Event. After this, we will turn to @Initialize.</p>
               <p>Remember that @Initialize runs only once at the start of a script. Also recall that anything declared as a global variable can be accessed by anything in the script. Therefore, at the top of @Initialize, we will write the following:</p>
-                <pre><code>@Initialize{
+                <pre class="prettyprint"><code>@Initialize{
 	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
 	ObjEnemy_Regist(objBoss);</code></pre>
               <p>The first line assigns the variable objBoss with a value - an object ID belonging to a brand new Enemy object, more specifically a boss. The next line registers the Enemy object. You must register certain objects, such as enemies.</p>
               <p>However, we do not have any graphic for the boss! From the sample folder, copy ExRumia.png to the current folder. Below the Enemy Register code, place the following:</p>
-              <pre><code>	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+              <pre class="prettyprint"><code>	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
 	ObjPrim_SetTexture(objBoss, imgExRumia);
 	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
 	ObjSprite2D_SetDestCenter(objBoss);</code></pre>
@@ -101,7 +101,7 @@
               <p>In Danmakufu, an important thing to note is that objects can be acted upon by multiple object functions. For example, an enemy object can be acted upon by ObjMove, ObjRender, etc. functions. As such, we are not limited to only one set of functions, and we will be using ObjMove functions to move the boss. The boss graphic will automatically stay on the boss object's location, although you can move the graphic without moving the boss.</p>
               <p>In the end, it will be up to you to learn the various ObjMove functions. There are, of course, a few important things to note. Firstly, the default playing screen is 384 by 448 pixels, the values returned by GetStgFrameWidth and GetStgFrameHeight, respectively. Also, the origin is the top left corner of the playing field for objects whose render priorities are between 0.20 and 0.80, not including 0.80. And then, the ugly reality that as you go down the screen, the y value increases. Just keep that in mind, because it is a common source of infuriation for newer scripters.</p>
               <p>Please add these two functions to your function library, or place them somewhere in your script, preferably after @MainLoop. Also add wait(), because it will be helpful.</p>
-              <pre><code> function GetCenterX{
+              <pre class="prettyprint"><code> function GetCenterX{
      return GetStgFrameWidth/2;
  }
  function GetCenterY{
@@ -110,12 +110,12 @@
               <p>These two functions are very helpful for maintaining sanity. Now we will move the boss.</p>
               <p>While it is possible to simply use ObjMove_SetX() or ObjMove_SetY(), be aware that this will effectively teleport the boss, and the player will have to move to the new location. And no. Warping every 30 frames is annoying, not fun. Thankfully, there is ObjMove_SetDestAtFrame(), which I will be showcasing now.</p>
               <p>After setting the starting graphic for your boss but before the end of @Initialize, include the following:</p>
-              <pre><code>ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);</code></pre>
+              <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);</code></pre>
               <p>This code will tell the boss object to move to the location (GetCenterX(), 60) in 60 frames, which is pretty close to the top of the screen. Either way, this should look significantly better than teleporting the boss.</p>
               <p>And of course, now we want to leave @Initialize for what lies beyond...</p>
               <h2 style="color:yellow" id="cp1">Checkpoint</h2>
               <p>This is our script as of right now, for future reference:</p>
-              <pre><code>#TouhouDanmakufu[Single]
+              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -167,7 +167,7 @@ function wait(n){
               <h2 style="color:yellow" id="sub7">Part 7: How Do I Close the Script?</h2>
               <p>Right now our script does practically nothing since all it does is create a boss and move it to a location (and then allow it to be shot down). However, we need to be able to close the script in order to complete a solid complete framework for our script.</p>
               <p>In the sample scripts that come with Danmakufu, there is a portion of @MainLoop that basically runs only when the boss's life falls below or equal to 0. However, that adds clutter to @MainLoop. Therefore, we will call a task TFinalize; at the end of @Initialize.</p>
-              <pre><code>    task TFinalize {
+              <pre class="prettyprint"><code>    task TFinalize {
         while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
 	Obj_Delete(objBoss);
 	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
@@ -181,7 +181,7 @@ function wait(n){
               <h2 style="color:yellow" id="quiz1">Quiz: Script Structure and Coordinate Systems</h2>
 	        <!--Quiz start.-->
 		<p>Raiko tries to move her drum down towards the middle of the screen. However, it flies from (0,0) upwards.</p>
-                <pre><code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, -60, 60);</code></pre>
+                <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, -60, 60);</code></pre>
 		<p>1) Why does the drum fly upwards?</p>
                 <form method="POST" onSubmit="return checkAnswerP(this, 'B', 5);">
                 <input type="RADIO" value="A" name="cc">
@@ -203,7 +203,7 @@ function wait(n){
                 </form>
                 <br>
 		<p>Now Raiko cannot seem to get her hitbox to work.</p>
-                <pre><code>@Initialize{
+                <pre class="prettyprint"><code>@Initialize{
 	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
 	ObjEnemy_Regist(objBoss);
 	let imgRaiko = GetCurrentScriptDirectory ~ "Raiko.png";
@@ -231,19 +231,19 @@ function wait(n){
               <p>It's what you've all been waiting for! Creating bullets! However... we are now entering an area where coding style comes into play.</p>
               <p>There are multiple ways to do what we want to do here. There is a tasking style, a @MainLoop style, and countless others. I will show the tasking style, the @MainLoop style, and my own style, the last of the three simply because I will be using my own style for the rest of the tutorials and it is best if you are able to read it.</p>
               <p>We will begin with the most generic bullet function, <code>CreateShotA1(x, y, speed, angle, graphic, delay);</code>. The x and y positions are the starting coordinates for the bullet. You may also use <code>let obj = CreateShotA1();</code> to transform the bullet later, but that will be covered later. For now, we will discuss spawning a bullet every thirty frames, first in tasking style. But first, add the following below your Danmakufu Header:</p>
-              <pre><code>#include"script/default_system/Default_ShotConst.txt"</code></pre>
+              <pre class="prettyprint"><code>#include"script/default_system/Default_ShotConst.txt"</code></pre>
               <p>This will include the default shotsheet with the script so that we can have bullet graphics. Don't worry about the include now - just be aware that the file contains a list of shot constants that will make it easier to figure out which bullet we are firing. I personally do not use shot constants, preferring to simply load a shotsheet and use numbers, but for this lesson, I will demonstrate with the shot constants.</p>
               <p>Remember TFinalize? Now we will create a task called MainTask; and call it in @Initialize. In MainTask, we will first insert a <code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
 }</code></p>
               <p>Inside the braces we will do the following:</p>
-              <pre><code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+              <pre class="prettyprint"><code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
     wait(30);
 }</code></pre>
               <p>In this while loop, we first declare a variable angleT to hold the angle from the boss to the player, given by the function <code>GetAngleToPlayer();</code>. After this, we fire a shot from the boss's position with speed 2, angle towards the player. Its graphic is DS_BALL_S_RED, a small red ball, and there are 5 delay frames before the bullet materializes and can damage the player. After this, the task waits 30 frames before checking the boss's life and looping through this again.</p>
               <p>Now I will show the @MainLoop style. First, you will want to define a global variable count (or frame, but I prefer count) after the shotsheet include, and set it to 0. Then, in @MainLoop, you will add the following after the hitbox declaration and before the yield;:</p>
-              <pre><code>  if(count == 30){
+              <pre class="prettyprint"><code>  if(count == 30){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
     count = 0;
@@ -252,14 +252,14 @@ function wait(n){
               <p>Basically, you increment your counter until it hits 30, then execute the bullet spawning and reset the counter</p>
               <p>Note that in plural scripts and the like, this will need to be changed slightly to account for the fact that the bullets will still shoot if the boss is dead. I will describe a countermeasure below.</p>
               <p>Finally, I will discuss my coding method, which is similar to the @MainLoop method. The main difference is that I do not reset the counter and instead use a modulus. The @MainLoop code I insert between the hitboxes and yield; is similar to the following:</p>
-              <pre><code>  if(count%30==0){
+              <pre class="prettyprint"><code>  if(count%30==0){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
   }
   count++;</code></pre>
               <p>When the count is a multiple of 30, the code inside the braces will execute. All three methods are functionally similar. However, I will now describe good habits and how to robustify the code. For the tasking code, there is a check after the wait for whether or not the boss is alive, but this is not the case for the other two methods. Therefore, we will do the following:</p>
               <p>First, we will create a task called fire;. It will contain the following:</p>
-              <pre><code>  task fire{
+              <pre class="prettyprint"><code>  task fire{
     if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}//Default kill to prevent (0,0) spawning
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
@@ -268,7 +268,7 @@ function wait(n){
               <p>Well, now we have a boss that fires a bullet. To conclude this lesson, I will show the scripts we have devised in their entirety.</p>
               <h2 style="color:yellow" id="cp2">Checkpoint - Tasking</h2>
               <p>Tasking style</p>
-              <pre><code>#TouhouDanmakufu[Single]
+              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -339,7 +339,7 @@ function wait(n){
 }</code></pre>
               <h2 style="color:yellow" id="cp3">Checkpoint - @MainLoop</h2>
               <p>@MainLoop style</p>
-              <pre><code>#TouhouDanmakufu[Single]
+              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -413,7 +413,7 @@ function wait(n){
 }</code></pre>
               <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
               <p>Sparen style</p>
-              <pre><code>#TouhouDanmakufu[Single]
+              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -486,11 +486,12 @@ function wait(n){
 }</code></pre>
 
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Jan 3, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Jan 16, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
           <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
         </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
-    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>  </body></html>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c&skin=desert"></script>  </body></html>

@@ -15,7 +15,7 @@
           <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
         </ul>
       </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <!--Embedded code below. Whitespace actually matters for this because it is in a pre block-->
-              <pre><code>#TouhouDanmakufu[Single]
+              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3] //This is required for ph3 scripts
 #Title["SampleA01"]
 #Text["SampleA01：Shooting Bullets Straight Down"] 
@@ -25,7 +25,8 @@
 //----------------------------------------------------
 //Declaring Global Variables
 //The variables declared here can be used throughout the entire script.
-//However, the variables declared here are static. (They can be changed, but not by themselves as they are not in the main loop)
+//However, the variables declared here are static. 
+//(They can be changed, but not by themselves as they are not in the main loop)
 //(As execution order cannot be guaranteed, random numbers cannot be used(?))
 //----------------------------------------------------
 let objEnemy; //Enemy object
@@ -52,12 +53,17 @@ let frame = 0; //Counter for timing enemy movements.(Will keep increasing by one
 
 	//Setting the enemy's image
 	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png"; //file path to enemy image
-	ObjPrim_SetTexture(objEnemy, imgExRumia); //Setting the above image file as a texture to the enemy object(objEnemy)
-	ObjSprite2D_SetSourceRect(objEnemy, 64, 1, 127, 64); //Setting the rectangle coordinates in the enemy image to use(Left, Top, Right, Bottom).
-	ObjSprite2D_SetDestCenter(objEnemy); //Positioning the center of the rectangle(w/texture) at (0, 0) on the stage(top left corner).
+	ObjPrim_SetTexture(objEnemy, imgExRumia); 
+        //Setting the above image file as a texture to the enemy object(objEnemy)
+	ObjSprite2D_SetSourceRect(objEnemy, 64, 1, 127, 64); 
+        //Setting the rectangle coordinates in the enemy image to use(Left, Top, Right, Bottom).
+	ObjSprite2D_SetDestCenter(objEnemy); 
+        //Positioning the center of the rectangle(w/texture) at (0, 0) on the stage(top left corner).
 
 	//Moving to the coordinate (cx, 60) in 60 frames
-	let cx = GetStgFrameWidth() / 2;//defines the variable cx as the horizontal middle of the stage. (Stage width / 2)
+	let cx = GetStgFrameWidth() / 2;
+        //defines the variable cx as the horizontal middle of the stage. (Stage width / 2)
+
 	ObjMove_SetDestAtFrame(objEnemy, cx, 60, 60);
 }
 
@@ -76,7 +82,8 @@ let frame = 0; //Counter for timing enemy movements.(Will keep increasing by one
 		//・delay: 30 frames 
 		CreateShotA1(ex, ey, 3, 90, DS_BALL_S_RED, 30);
 
-		frame = 0;//after the bullet is shot, frame is returned to 0 to build up to 60 again and fire another bullet.
+		frame = 0;
+        	//after the bullet is shot, frame is returned to 0 to build up to 60 again and fire another bullet.
 
 	}
 
@@ -99,10 +106,10 @@ let frame = 0; //Counter for timing enemy movements.(Will keep increasing by one
 	}
 }</code></pre>
               <br>            </div>          </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Dec 2, 2014</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Jan 16, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
           <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
         </div>      </div>    </div>
-    <script language="JavaScript" type="text/javascript" src="javascript/U1L3Quiz1.js"></script>  </body></html>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c&skin=desert"></script>  </body></html>
