@@ -80,6 +80,16 @@
 <priority>0.7</priority>
 </url>
 <url>
+<loc>http://sparen.github.io/ph3tutorials/ph3u1l7code1.html</loc>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+<url>
+<loc>http://sparen.github.io/ph3tutorials/ph3u1l7code2.html</loc>
+<changefreq>yearly</changefreq>
+<priority>0.3</priority>
+</url>
+<url>
 <loc>http://sparen.github.io/ph3tutorials/ph3uXl1.html</loc>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>

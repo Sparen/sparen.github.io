@@ -31,6 +31,8 @@
 	          <li><a href="#sub1">Part 1: How Do I Designate a Single as a Spellcard?</a></li>
 	          <li><a href="#sub2">Part 2: What are the Movement Functions?</a></li>
 	          <li><a href="#quiz1">Quiz: Frames, Speed, and yield;</a></li>
+	          <li><a href="#sub3">Part 3: How do I Use Loops?</a></li>
+	          <li><a href="#sub4">Part 4: How do I Sync Spawning to the Boss's Movement?</a></li>
 	        </ul>
 	      </div>              <h2 style="color:yellow" id="sub1">Part 1: How Do I Designate a Single as a Spellcard?</h2>
 	      <p>To begin, a note. I will not be involving the @MainLoop style from now on - I will show the task method and my own method, because the former is commonly used and because the latter is good for understanding alternate ways in which you can script Danmakufu.</p>
@@ -51,10 +53,10 @@
               <p>As a final note, it is also possible to <code>ObjEnemyBossScene_StartSpell(GetEnemyBossSceneObjectID)</code> instead of having a global variable to store the EnemyBossSceneObject's ID, but you will have to use the Get ID function multiple times in the spellcard bonus code.</p>
               <h2 style="color:yellow" id="sub2">Part 2: What are the Movement Functions?</h2>
 	      <p>In our old script, all the boss did was sit there and shoot a bullet at the player every half second (30 frames). Now the boss will move!</p>
-	      <p>For the tasking style, we will create a task called movement; and call it right before the while loop in  MainTask. And then we will do something that will make many people relieved: add a wait(120) before the while loop in MainTask. This will delay the task 120 frames before beginning to fire. The boss will be able to move into position, etc. For my style, set counter to -120 to start, and in the if statement controlling firing, add <code>&& count>=0</code>. As for movement, we can use the same movement task (I personally do this differently) as with the tasking style, which we will make below.</p>
+	      <p>For the tasking style, we will create a task called movement; and call it right before the while loop in  MainTask. And then we will do something that will make many people relieved: add a wait(120); before calling movement in MainTask. This will delay the task 120 frames before beginning to fire or move. The boss will be able to move into position, etc. For my style, set counter to -120 to start, and in the if statement controlling firing, add <code>&& count>=0</code>. As for movement, we can use the same movement task (I personally do this differently) as with the tasking style, which we will make below.</p>
 	      <p>So, movement. For objects on which ObjMove functions apply, there are all kinds of ways to move the enemy. Documentation <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Move_Object_Functions">here</a>.</p>
 	      <p>Firstly, we will not be using <code>ObjMove_SetX()</code>, <code>ObjMove_SetY()</code>, <code>ObjMove_SetPosition()</code>, <code>ObjMove_SetSpeed()</code>, or <code>ObjMove_SetAngle()</code>. Generally speaking, teleporting the boss halfway across the screen does not work well in playing, and using a speed/angle approach can be a royal pain to control. We will use these functions for positioning of things like bullets, but not for the boss. Instead, we will use the following: <code>ObjMove_SetDestAtSpeed()</code>, <code>ObjMove_SetDestAtFrame()</code>, and <code>ObjMove_SetDestAtWeight()</code>. You specify the object and the destination, and then specify either the speed to go at (constant for the entire journey), how many frames to take, or the weight and max speed. Personally, I never use <code>ObjMove_SetDestAtSpeed()</code> because it is hard to sync anything else with it. <code>ObjMove_SetDestAtFrame()</code> is the best for syncing firing with movement. <code>ObjMove_SetDestAtWeight()</code> looks the most natural, although it requires more experience to control. We will use <code>ObjMove_SetDestAtFrame()</code> in this tutorial.</p>
-	      <p>In the task movement, we will now add a while loop just like the one in MainTask (It is also possible to put movement; inside the while loop of MainTask; and not include the while loop in movement;). And then, we will add <code>	  ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-60,GetCenterY-120), 60);</code> inside, as well as a <code>wait(240);</code>. This will move the boss to a random point within the bounds set every 240 frames. Note that the movement works parallel to what called it - that is, the boss will start moving when the function is called, and will finish moving 60 frames later, leaving 180 frames before the boss begins moving again.</p>
+	      <p>In the task movement, we will now add a while loop just like the one in MainTask (It is also possible to put movement; inside the while loop of MainTask; and not include the while loop in movement; if using the tasking style). And then, we will add <code>	  ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-60,GetCenterY-120), 60);</code> inside, as well as a <code>wait(240);</code>. This will move the boss to a random point within the bounds set every 240 frames. Note that the movement works parallel to what called it - that is, the boss will start moving when the function is called, and will finish moving 60 frames later, leaving 180 frames before the boss begins moving again.</p>
 	      <p>Our movement task now looks like this:</p>
               <pre class="prettyprint"><code>    task movement{
         while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
@@ -62,6 +64,7 @@
             wait(240);
         }
     }</code></pre>
+	      <p>If using my style, then please make sure to include <code>if(count==0){movement;}</code> in @Initialize to actually call the task.</p>
 	      <p>Now that our boss is moving, it is time for a short quiz, after which we will learn to do things more complex that firing a single bullet at the player.</p>
               <h2 style="color:yellow" id="quiz1">Quiz: Frames, Speed, and yield;</h2>
 	        <!--Quiz start.-->
@@ -100,152 +103,62 @@
                 C. <code>ObjMove_SetDestAtFrame()</code><br>
                 <input type="SUBMIT" value="Submit">
                 </form>
-              <p>NOTE: Below is for reference when I write the tutorial. That way I can easily copy-paste the skeleton.</p>
-              <h2 style="color:yellow" id="cp2">Checkpoint - Tasking</h2>
-              <p>Tasking style</p>
-              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
-#ScriptVersion[3]
-#Title["My First Danmakufu Script!"]
-#Text["Code by Sparen[r]My First Bullet!"]
-#BGM["./necrofantasia.ogg"]
-
-#include"script/default_system/Default_ShotConst.txt"
-
-let objBoss;
-
-@Event{
-	alternative(GetEventType())
-	case(EV_REQUEST_LIFE){
-		SetScriptResult(500);
-        }
-	case(EV_REQUEST_TIMER){
-		SetScriptResult(60);
-	}
-	case(EV_REQUEST_SPELL_SCORE){
-		SetScriptResult(1000000);
-	}
-}
-
-@Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
-
-        TFinalize;
-	MainTask;
-}
-
-@MainLoop{
-        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
-        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
-        yield;
-}
-
-task MainTask{
-    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
-        let angleT = GetAngleToPlayer(objBoss);
-        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
-        wait(30);
-    }
-}
-
-task TFinalize {
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
-	Obj_Delete(objBoss);
-	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
-	SetAutoDeleteObject(true);
-	CloseScript(GetOwnScriptID());
-	return;
-}
-
-function GetCenterX{
-     return GetStgFrameWidth/2;
-}
-function GetCenterY{
-     return GetStgFrameHeight/2;
-}
-
-function wait(n){
-     loop(n){yield;}
-}</code></pre>
-              <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
-              <p>Sparen style</p>
-              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
-#ScriptVersion[3]
-#Title["My First Danmakufu Script!"]
-#Text["Code by Sparen[r]My First Bullet!"]
-#BGM["./necrofantasia.ogg"]
-
-#include"script/default_system/Default_ShotConst.txt"
-
-let objBoss;
-let count = 0;
-
-@Event{
-	alternative(GetEventType())
-	case(EV_REQUEST_LIFE){
-		SetScriptResult(500);
-        }
-	case(EV_REQUEST_TIMER){
-		SetScriptResult(60);
-	}
-	case(EV_REQUEST_SPELL_SCORE){
-		SetScriptResult(1000000);
-	}
-}
-
-@Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
-
-        TFinalize;
-}
-
-@MainLoop{
-        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
-        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
-        if(count%30==0){
-            fire;
-        }
-        count++;
-        yield;
-}
-
-task fire{
-    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}//Default kill to prevent (0,0) spawning
-    let angleT = GetAngleToPlayer(objBoss);
-    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
-}
-
-task TFinalize {
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
-	Obj_Delete(objBoss);
-	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
-	SetAutoDeleteObject(true);
-	CloseScript(GetOwnScriptID());
-	return;
-}
-
-function GetCenterX{
-     return GetStgFrameWidth/2;
-}
-function GetCenterY{
-     return GetStgFrameHeight/2;
-}
-
-function wait(n){
-     loop(n){yield;}
-}</code></pre>
-
+              <h2 style="color:yellow" id="sub3">Part 3: How do I Use Loops?</h2>
+              <p>Now we will begin making our code significantly more interesting.</p>
+              <p>For our current code, please check <a target="_blank" href="./ph3u1l7code1.html">here</a>.</p>
+              <p>Please note that for this part, we will focus on the MainTask; task for the tasking style and the fire; task for my style - we will not be touching any other parts of the script, although we will reference other parts.</p>
+              <p>For a refresher on loops, please refer to <a target="_blank" href="ph3u1l5.html#sub4" title="Sparen's Danmakufu Tutorials - Danmakufu Syntax, Structures, and Operations Part 2">Unit 1 Lesson 5</a>.</p>
+              <p>OK. So our current firing code is as follows:</p>
+              <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
+        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);</code></pre>
+              <p>It's simple enough. We declare the variable angleT and set it equal to the output of the function <code>GetAngleToPlayer(obj);</code>, which is the angle from the boss object to the player in this case. Then we fire a single bullet using <code>CreateShotA1</code>. To start off, we will begin with rings, which are very simple.</p>
+              <p>To understand our approach, we have to consider some things. Firstly, what defines a ring? How many bullets do we want in the ring? Knowing that there are 360 degrees in a complete circle, how can we apply this to Danmakufu?</p>
+              <p>It may seem obvious that if there are n bullets in the ring and we want to make a complete circle, we should have 360/n degrees in between bullets. However, more complicated patterns are not so intuitive, and you will have to carefully figure out an approach to creating the pattern you wish to make.</p>
+              <p>Let's say we want 13 bullets in the ring. I am using 13 because it is a prime number - you'll see why shortly. Therefore, we would increment our angle by 360/13. We will want to do this 13 times, spawning a bullet each time. So, how do we do this? Loops, of course! As a side note, you can technically use while loops and ascent/descent loops for this, but using ordinary loops is easier.</p>
+              <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
+	loop(13){
+            CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+	    angleT+=360/13;
+	}</code></pre>
+              <p>The above code does exactly what we want. It will execute the code inside the loop block 13 times and will change angleT accordingly. As a result, we will end up with a ring of 13 bullets spawning from the boss!</p>
+              <p>However, do you find this to be somewhat... boring? Just one ring every 30 frames? Let's use ascent loops to make this code more interesting.</p>
+              <p>Remember that an ascent loop creates a temporary variable and that variable's value increments each time the loop executes. Using this, we can manipulate the speed and/or the delay of the bullet with ease.</p>
+              <p>Our current code is below. Let's say we want to have three rings, where the inner ones are slower than the outer ones, and where there are different bullet graphics.</p>
+              <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
+	loop(13){
+            CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+	    angleT+=360/13;
+	}</code></pre>
+              <p>For speed, an ascent loop is an excellent way to create stacked rings. For graphics, remember that we have imported a constant sheet that declares a number of final constants. However, these are just more descriptive ways of referring to a bullet's ID - the IDs you call bullet graphics by are still numbers.</p>
+              <p>If you look in default_system/Default_ShotConst.txt, it is clear that DS_BALL_S_RED is equal to 9 - this means that if we increment the graphic by one, we will get DS_BALL_S_ORANGE, which is 10, and then YELLOW, GREEN, SKY, etc. We will take advantage of this in our ascent loop.</p>
+              <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
+	loop(13){
+	    ascent(i in 0..3){
+                CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2.5-i/3, angleT, DS_BALL_S_RED+i, 5);
+	    }
+	    angleT+=360/13;
+	}</code></pre>
+              <p>Please note that since I am decrementing the speed, I added 0.5 to the highest speed. Above is the code with the ascent loop. i will start at 0, and will have values of 1 and 2 inside the code block. For the speed, I have taken a base speed 2.5, and I decrement it by i/3. Since I has values of 0, 1/3, and 2/3, there will be three rings with different speeds. Additionally, I add i to DS_BALL_S_RED in the graphic section, resulting in each ring having a different graphic.</p>
+              <p>Of course, you can tweak this code however you want. Want less space between rings? Lower the difference in the speed. You can use i/6 for example to halve the distance between rings. Just beware of negative speed values - the bullet will go in the opposite direction, and when you have an odd number of bullets in a ring spawning from the boss, it will be noticeable since it's not in line with the rest of the bullets.</p>
+              <h2 style="color:yellow" id="sub4">Part 4: How do I Sync Spawning to the Boss's Movement?</h2>
+              <p>For reference, my video tutorial on ascent loops can be found <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K" title="Sparen's Danmakufu ph3 Video Tutorials - Using Ascent Loops and More (Youtube)">here</a></p>
+              <p>Now we will add another attack to the boss's pattern. However, this pattern will look weird if spawned when the boss is moving.</p>
+              <p>For the tasking method, we will first create a task fireA, and will move the entire while loop in MainTask to fireA. In MainTask, where the while loop was located, call fireA; instead. I say this because we will be creating a fireB. For the Sparen method, rename fire; to fireA. Remember to change it in @MainLoop as well. If your text editor supports find-replace all, you will quickly find it to be a godsend.</p>
+              <p>Now, we will create a task fireB. You may want to copy fireA for now and rename it.</p>
+              <p>The pattern we are about to make (lines of bullets in a fan shape - I call them waves), looks significantly uglier when fired while the boss is moving (at least I personally think so). Therefore, we will sync it to the boss's movement. Recall that the boss moves every 240 frames and is moving for the first 60 of those 240.</p>
+              <p>Therefore, we can spawn it the frame it begins moving and 120 frames after, when it is stationary.</p>
+              <p>For the tasking method, we will call fireB in MainTask; and replace the <code>wait(30);</code> with <code>wait(120);</code>. For the Sparen method, add the following to @MainLoop: <code>if(count%120==0 && count>=0){fireB;}</code>.</p>
+              <p>At this point, it is important to realize that this pattern will indefinitely spawn at the same time as the other pattern. Therefore, we will want to give it graphics that are different as well as a different speed. Additionally, if you wanted to spawn this pattern when the boss <i>stops</i> moving and 120 frames after, you can, for the tasking method, add a <code>wait(60);</code> before the while loop and, in the Sparen method, use <code>count%120==60</code> instead of <code>count%120==0</code>.</p>
+              <p>Now for the pattern. We will be using a nested ascent loop for this, since we will have a fan of lines of bullets. Let's examine the following:</p>
+              <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
+	ascent(i in -1..2){
+	    ascent(j in 0..3){
+                CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3-j/6, angleT+i*15, DS_RICE_M_SKY, 5);
+	    }
+	}</code></pre>
+              <p>This is the code that we will, for the tasking style, place inside the while loop instead of the ring spawning code and, for the Sparen style, place after the boss health check in fireB. As you can see, we are using an ascent loop inside an ascent loop. The first ascent loop uses the variable i, which increments from -1 to 2. This one controls the angle. By using angleT+i*15, when i will be -1, 0, and 1, we effectively create bullets aimed at the player as well as bullets 15 degrees to either side that are not aimed at the player. Next we will look at the inner ascent loop, which uses the same technique as before to control the speed of the bullets. It serves the same function, and effectively grants three lines of bullets. It's a pretty common technique that can be adapted to tricky situations.</p>
+              <p>This concludes the lesson. As of now, you now have the ability to do quite a few things in Danmakufu. I suggest practicing with the techniques you already have at this point so that you can better understand the techniques by experimenting with them yourself. However, I advise that you do not upload your scripts to Bulletforge at this point in the tutorial. Criticism can be harsh, and it's best that you wait until you have significantly more knowledge about Danmakufu. For information about Bulletforge, please read <a href="./ph3uXl2.html" title="How to Use Bulletforge - Sparen's Danmakufu Tutorials">How to Use Bulletforge</a>.</p>
+              <p>For the final versions of the scripts we have made in this tutorial, please check <a target="_blank" href="./ph3u1l7code2.html">here</a>.</p>
               <br>            </div>          </div>
           <div class="tutnavbar">
 	    <ul>
@@ -255,7 +168,7 @@ function wait(n){
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Jan 16, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Jan 22, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
