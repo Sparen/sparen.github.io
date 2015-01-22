@@ -194,16 +194,6 @@ input[type="text"], input[type="password"], textarea {
 }
 
 /*MENUS BY SPAREN. PLACED AT BOTTOM IN ORDER TO OVERRIDE ALL DEFAULTS*/
-.mhome, .mabout, .mph3tutorials, .mprojects, .mdnhart, .mprojects, .mdnhwiki, .mph3functionlist, .mreleasethread, .mbulletforge{
-  /*To revert to old menu, comment out this entire section.*/
-  /*
-    display: block;
-    width: 146px;
-    background-color: #002914;
-    padding: 4px;
-    list-style-type: none;/*Disable the bullets. Or at least try to*/
-
-}
 #menubar{/*code taken from w3schools. Used to move and position the menubar.*/
   width: 154px;
   float: left;
