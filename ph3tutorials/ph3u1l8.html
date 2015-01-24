@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Unit 1 Lesson 8</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="AFCDTech - Sparen's Danmakufu ph3 Tutorials Unit 1 Lesson 8 - Introduction to Shotsheets and Bullet Properties. A guide to understanding what is in a shotsheet, as well as the properties of bullets."      name="description">    <meta content="BlueGriffon wysiwyg editor" name="generator">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Bullet, Shot, Shotsheet, Property">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="http://sparen.github.io"><img alt="&quot;Site Logo&quot;" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l7.html" title="Sparen's Danmakufu ph3 Tutorials - Attack Flow and Our First Spellcard">Unit 1 Lesson 7</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Lesson 8 - Introduction to Shotsheets and Bullet Properties</h1>              <p>The video for this lesson is Infinite Ultima Wave's Christmas Letty script, one of the scripts I remember very fondly. It's quite good and despite all the red and yellow bullets, the bullet graphics chosen seem to fit Letty very well.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/mF1NHOKhUoc">
+	      <div style="width: 450px;" class="tutorialnav">
+                <h2 style="color:aqua">Table of Contents</h2>
+                <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are Shotsheets and Shot Constant Sheets?</a></li>
+	          <li><a href="#sub3">Part 3: What are the Blend Types Supported by Danmakufu?</a></li>
+	          <li><a href="#sub4">Part 4: How Do I Control a Bullet?</a></li>
+	          <li><a href="#quiz1">Quiz: </a></li>
+	        </ul>
+	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>With such an ambiguous lesson title, you are probably wondering what I will be covering in this lesson. Put simply, I will introduce shotsheets as well as blend types, and will be explaining in detail the properties of bullets, including many of the ObjMove and ObjRender functions for bullets.</p>
+	      <p>Although seemingly disjoint from the rest of the tutorials, I will be providing basic information on graphics in Danmakufu, and will also explain how I (and quite a few other) danmakufu scripters choose to load our shotsheets.</p>
+	      <p>--UNDER CONSTRUCTION BELOW THIS LINE--</p>
+
+                <pre class="prettyprint"><code>//code here</code></pre>
+              <h2 style="color:yellow" id="quiz1">Quiz: </h2>
+	        <!--Quiz start.-->
+		<br>
+		<p>1) How long does it take for a bullet traveling at speed 4 (pixels/second) to travel from the left side of the default playing field to the right side (same y coordinate)?</p>
+                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
+                <input type="RADIO" value="A" name="cc">
+                A. 96 frames<br>
+                <input type="RADIO" value="B" name="cc">
+                B. 160 frames<br>
+                <input type="RADIO" value="C" name="cc">
+                C. 112 frames<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+		<br>
+		<p>2) Minoriko wants her boss to move to the player's position every 180 frames. Which functions should she use?</p>
+                <form method="POST" onSubmit="return checkAnswerA1(this, 'C');">
+                <input type="RADIO" value="A" name="cc">
+                A. <code>ObjMove_SetPosition()</code><br>
+                <input type="RADIO" value="B" name="cc">
+                B. <code>ObjMove_SetDestAtSpeed()</code><br>
+                <input type="RADIO" value="C" name="cc">
+                C. <code>ObjMove_SetDestAtFrame()</code><br>
+                <input type="RADIO" value="D" name="cc">
+                D. <code>ObjMove_SetDestAtWeight()</code><br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+              <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l7.html" title="Sparen's Danmakufu ph3 Tutorials - Attack Flow and Our First Spellcard">Unit 1 Lesson 7</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: Jan 24, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </div>    </div>
+    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L7Quiz1.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>

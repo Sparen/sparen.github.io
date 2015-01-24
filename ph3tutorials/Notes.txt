@@ -7,6 +7,7 @@ L4-DNHArt 77 (Celestial Showdown - AJS)
 L5-DNHArt 27 (Gensei Ruri - Talos)
 L6-DNHArt 59 (Death Match in the Skies - Sparen)
 L7-DNHArt 80 (AllSpellCirno - Lunarethic)
+L8-DNHArt 57 (Christmas Letty - Infinite Ultima Wave)
 
 UX
 
