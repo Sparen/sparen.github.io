@@ -32,9 +32,10 @@
 	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
 	          <li><a href="#sub2">Part 2: What are Shotsheets and Shot Constant Sheets?</a></li>
 	          <li><a href="#sub3">Part 3: What are the Properties of a Shot in a Shotsheet?</a></li>
-	          <li><a href="#sub4">Part 4: What are the Properties of a Bullet?</a></li>
+	          <li><a href="#sub4">Part 4: What are the Properties of a Bullet? (ObjMove)</a></li>
 	          <li><a href="#sub5">Part 5: How Do I Control a Bullet?</a></li>
-	          <li><a href="#sub6">Part 6: What is the Difference Between ObjMove and ObjRender?</a></li>
+	          <li><a href="#sub6">Part 6: What are the Properties of a Bullet? (ObjShot, ObjRender)</a></li>
+	          <li><a href="#sub7">Part 7: What is the Difference Between ObjMove and ObjRender?</a></li>
 	          <li><a href="#quiz1">Quiz: Bullet Properties</a></li>
 	        </ul>
 	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
@@ -60,10 +61,44 @@
 	      <p>Next is fixed_angle, which takes a boolean. True means that the bullet will always take the shape in the shotsheet and will never rotate. Default is false.</p>
 	      <p>Finally, we have collision, which is the hitbox. By default, the hitbox is a percentage of the bullet graphic (in a circle), but by setting a value to collision (in pixels), you can specify a different radius for the hitbox, which originates from the center of the LTRB rectangle.</p>
 	      <p>With that out of the way, let's begin our discussion on actual shots and their properties.</p>
-              <h2 style="color:yellow" id="sub4">Part 4: What are the Properties of a Bullet?</h2>
+              <h2 style="color:yellow" id="sub4">Part 4: What are the Properties of a Bullet? (ObjMove)</h2>
+	      <p>Touhou Danmakufu ph3, unlike its predecessor 0.12m, is an object oriented scripting language. You may have noticed a lot of ObjType functions, and this is in part due to the nature of ph3. While not a true object oriented language, it shares many of the characteristics of one, including inheritance. We will have a long and lengthy discussion about this later on in this tutorial, but for now, I will try to make it as simple as possible.</p>
+	      <p>Earlier we discussed the properties of the bullet graphic. Now we will discuss the properties of the bullet itself. Remember <code>CreateShotA1()</code>? It had a number of arguments, such as its x and y location, its angle, speed, graphic, and delay time. These are properties of the bullet that are set when the object is created (all of the ones perviously mentioned default to 0). Additionally, with <code>CreateShotA2()</code>, there is also acceleration and maximum/minimum speed.</p>
+	      <p>Let's say that you want to create a shot starting at the boss that accelerates at the player from a speed of 3 pix/frames to 6 pix/frames. To do this, you would do the following:</p>
+              <pre class="prettyprint"><code>CreateShotA2(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, GetAngleToPlayer(objBoss), 0.05, 6, 5, 0);</code></pre>
+	      <p>To best explain acceleration and maximum/minimum speed, it is important to note that without a max/min speed set prior, acceleration will not occur at all. When creating shots that take acceleration and min/max speed as parameters, this is not a problem, but it may be a problem later on. Additionally, the min/max speed is a minimum or a maximum depending on the initial speed, as well as the direction of the acceleration (whether it is positive or negative). If you have a starting speed of 5 and a min/max of 0, and your acceleration is negative, the bullet will start at a speed of 5 and decrease to 0, which is normal behavior - Danmakufu treats the min/max speed as a minimum. However, if the acceleration is positive, the bullet will not move at all and will have a speed of 0 to begin with. Take note of this, because Danmakufu is treating the min/max speed as a maximum. !!!FACT CHECK THIS PLEASE!!!</p>
+	      <p>Besides <code>CreateShotA1()</code> and <code>CreateShotA2()</code>, there are also <code>CreateShotB1()</code> and <code>CreateShotB2</code>, which use x and y velocities rather than angle and speed. If you want gravity bullets, you may end up using these. Do be aware, however - you cannot apply any angle/speed changing functions to these and vice versa.</p>
+	      <p>Now it is time to take a look at the <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Move_Object_Functions" title="Move Object Functions on the Danmakufu Wiki">Move Object Functions</a>.</p>
+	      <p>Using ObjMove_SetXXX(), you can set the x, y, position (which is both x and y at once), speed, angle, acceleration, and max/min speed. You can also use the movement functions we used for the boss, as well as set angular velocity.</p>
+	      <p>Angular velocity changes the angle of the bullet. The angle is incremented by the amount specified in the function every frame. However, how do we use <code>ObjMove_SetAngularVelocity()</code>? Or any of the AddPattern functions, which we will soon discuss?</p>
+              <h2 style="color:yellow" id="sub5">Part 5: How Do I Control a Bullet?</h2>
+	      <p>Bullet control in ph3 is significantly easier than in 0.12m. You don't need to create an object bullet, per se. Instead, you can do this!</p>
+              <pre class="prettyprint"><code>let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 5, 10);
+ObjMove_SetAngularVelocity(obj, 0.1);
+BulletCommands(obj);
+
+//...
+
+task BulletCommands(obj){
+    wait(60);
+    ObjMove_SetAngularVelocity(obj, 0);
+}</code></pre>
+	      <p>The portion before the <code>//...</code> is how to obtain the <b>Object ID</b> of a bullet, and then perform a function with that ID as an input parameter. After this, I call <code>BulletComamnds(obj)</code>, a task that I have created that will reset the angular velocity of the bullet to 0 after 60 frames. This is a powerful tool that, when used in conjunction with the AddPattern functions, can allow you to do all kinds of things with bullets, giving you immense control over what a bullet does. For example, I oftentimes have BulletCommands change the angular velocity and speed of the bullet, with while loops and wait times to denote when to actually begin execution. For example:</p>
+              <pre class="prettyprint"><code>while(ObjMove_GetSpeed(obj)>0){yield;}
+wait(30);
+let angleT = rand(0,360);
+loop(12){
+    CreateShotA2(ObjMove_GetX(obj), ObjMove_GetY(obj), 0, angleT, 3, 0);
+    angleT+=360/12;
+}
+Obj_Delete(obj);</code></pre>
+	      <p>The above code waits for the bullet to have a speed of 0 (assume that it was accelerating in the negative direction beforehand), then waits 30 frames before spawning a ring of bullets at the bullet's location and deleting the bullet, giving the appearance of the bullet having exploded into other bullets.</p>
+	      <p>Yes, this is very powerful. But with ObjMove_AddPattern, you can do so much more!</p>
+	      <p>There are 7 ObjMove_AddPattern functions - 4 for angle/speed bullets and 3 for xspeed/yspeed bullets. Remember that you cannot use angle/speed functions on xspeed/yspeed bullets, and vice versa. Remember when I had that <code>wait(30);</code> in the code above? Well, the 'frame' argument does the same thing, except that the function presets the behavior of the bullet. When the allotted frames have passed, the bullet's properties will change to match those assigned in ObjMove_AddPattern when the function was called. In other words, if you set angle to be <code>GetAngleToPlayer(objBoss)</code> in ObjMove_AddPattern, the angle when the frames have passed will be that angle, not the current angle to the player. Alternatively, you could use the BulletCommands method, where you have the actual angle to the player. However, firing at where the player used to be also has its uses, so keep that in mind - ObjMove_AddPattern is a powerful and useful tool. If you do not want to change one of the options, use NO_CHANGE for the value - this is a final constant that will tell Danmakufu to not change anything.</p>
+	      <p>However, do be aware that ObjMove_AddPattern has the tendency to do weird and unexpected things that you don't expect, especially in regards to the acceleration and max/min speeds. Additionally, be warned that if there is no acceleration and there is angular velocity, the bullet will form a circle and return to its spawning location. This can cheapshot players, break patterns, or be an amazing tool for beautiful patterns that require unique methods of dodging.</p>
 	      <p>--UNDER CONSTRUCTION BELOW THIS LINE--</p>
 
-                <pre class="prettyprint"><code>//code here</code></pre>
+              <pre class="prettyprint"><code>//code here</code></pre>
               <h2 style="color:yellow" id="quiz1">Quiz: </h2>
 	        <!--Quiz start.-->
 		<br>
@@ -99,7 +134,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Jan 26, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Feb 1, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
