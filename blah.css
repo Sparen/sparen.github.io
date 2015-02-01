@@ -56,10 +56,10 @@ legend{
 del,ins{
   text-decoration:none;
 }
-body{
-  font:13px/1.231 arial,helvetica,clean,sans-serif;
+body{/*Font size: The /1.25 refers to the spacing between lines*/
+  font:13px/1.25 arial,helvetica,clean,sans-serif;
   font-size:small;
-  font:x-small;
+  /*font:x-small;*/
 }
 select,input,button,textarea{
   font:99% arial,helvetica,clean,sans-serif;
