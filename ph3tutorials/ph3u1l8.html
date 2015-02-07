@@ -99,7 +99,7 @@ Obj_Delete(obj);</code></pre>
               <h2 style="color:yellow" id="sub6">Part 6: What are the Properties of a Bullet? (ObjShot, ObjRender)</h2>
 	      <p>Of course, ObjMove commands are not the only functions that can be used on bullets. Shot objects not only inherit all move and render functions - they have functions of their own.</p>
 	      <p>Of these, there are a two that really stand out: <code>ObjShot_SetAutoDelete(obj)</code> and <code>ObjShot_SetSpellResist(obj)</code></p>
-	      <p>The former, <code>ObjRender_SetAutoDelete(obj)</code>, controls auto-deletion of a bullet when the player dies and when the bullet goes offscreen. !!!FACT CHECKERS PLEASE MAKE SURE THAT I GOT THIS RIGHT!!! The latter, <code>ObjShot_SetSpellResist(obj)</code>, controls whether or not a shot will be deleted when the player bombs. By using these two functions, it is possible to control when a bullet will be deleted, etc. Very useful.</p>
+	      <p>The former, <code>ObjRender_SetAutoDelete(obj)</code>, controls auto-deletion of a bullet when the bullet goes offscreen. The latter, <code>ObjShot_SetSpellResist(obj)</code>, controls whether or not a shot will be deleted when the player bombs and/or when the player dies. By using these two functions, it is possible to control when a bullet will be deleted, etc. Very useful.</p>
 	      <p>Something to note: not all of the functions under ObjShot can be used by enemy bullets - these functions are sometimes meant for use only by player shots, such as <code>ObjShot_SetPenetration(obj)</code>. Be aware of this - all damage, penetration, erase shot, spell factor, etc. functions are only for player shots.</p>
 	      <p>Now I will discuss ObjRender functions.</p>
 	      <p>--UNDER CONSTRUCTION BELOW THIS LINE--</p>
