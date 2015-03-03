@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Unit 1 Lesson 9</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Unit 1 Lesson 8 - Introduction to Lasers. A guide to understanding loose and straight lasers in Touhou Danmakufu ph3."      name="description">    <meta content="BlueGriffon wysiwyg editor" name="generator">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Bullet, Shot, Laser, Loose, Straight, ADD, Render">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="http://sparen.github.io"><img alt="&quot;Site Logo&quot;" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l8.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Shotsheets and Bullet Properties">Unit 1 Lesson 8</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 9 - Introduction to Lasers</h1>              <p>The video for this lesson is my Artifact 2 Contest Entry. And yes, Master Sparks are lasers - if you decide that you're going to deny that... Marisa would like to have a word with you.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/pN0pSrhuo98">
+	      <div style="width: 450px;" class="tutorialnav">
+                <h2 style="color:aqua">Table of Contents</h2>
+                <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are Linear Hitboxes?</a></li>
+	          <li><a href="#sub3">Part 3: How do I Create and Use Loose Lasers?</a></li>
+	          <li><a href="#sub4">Part 4: What are Straight Lasers?</a></li>
+	          <li><a href="#sub5">Part 5: How do I Control the Properties of a Laser?</a></li>
+	          <li><a href="#sub6">Part 6: What are Delay Lasers and How Can I Use Them?</a></li>
+	          <li><a href="#quiz1">Quiz: Loose and Straight Lasers</a></li>
+	          <li><a href="#sub7">Part 7: How do I Create Non-Directional Lasers?</a></li>
+	        </ul>
+	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>If you haven't realized by now, this lesson is about non-curvy lasers, which are reserved for the next lesson, where I will also discuss angular velocity in further detail. Here I will be discussing both loose lasers and straight lasers, as well as delay lasers.</p>
+	      <p>Overall, this lesson will end up covering linear hitboxes and render width vs. hitbox width, among other things, and should provide adequate information for using lasers in Touhou Danmakufu ph3.</p>
+              <h2 style="color:yellow" id="sub2">Part 2: What are Linear Hitboxes?</h2>
+	      <p>Up to now, all the bullets we have discussed have had radial hitboxes - the hitbox of the bullet is calculated using the center of the bullet and a radius from that center. If the player's hitbox happens to overlap with the bullet's hitbox (or boss's hitbox, which is usually radial/circular), then the player enters a state where there is the option of deathbombing (depending on the player) before dying.</p>
+	      <p>Unlike normal shots, lasers (of the loose and straight variety) use linear hitboxes. In these cases, there is a width to the hitbox, and it is calculated from the center axis of the laser. The overall shape of the hitbox is rectangular.</p>
+	      <p>There are thing to watch out for, such as when the render width is very close to the hitbox width, which can result in narrow scrapes or accidental deaths. Be aware of this when playing with lasers.</p>
+              <h2 style="color:yellow" id="sub2">Part 3: How do I Create and Use Loose Lasers?</h2>
+	      <p>The first thing you will notice is that creating loose lasers is very easy, and is very similar to controlling shots. For all practical purposes, they are elongated shots with linear/rectangular hitboxes. There is one main function for creating them: <code>CreateLooseLaserA1()</code>. Its arguments are virtually the same as those of shots, except that it has length and width parameters. (length does not necessarily have to be greater than width, but that's sort of... well, up to the scripter). Note that for all lasers, the default blend is ADD - regardless of which graphic you choose, it will be rendered shiny. <b><span style="color:magenta">!!!FACT CHECK NEEDED - ADD_RGB or ADD_ARGB!!!</span></b></p>
+	      <p>Below is an example that creates a loose laser. Note that for the graphic, it is best to choose a circular bullet as your base or a graphic meant specifically for lasers. Avoid using things such as fireballs (unless you are using the loose laser as a large bullet, in which case just make sure to scale the bullet correctly) and heart bullets for lasers.</p>
+              <pre class="prettyprint"><code>    let obj = CreateLooseLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, GetAngleToPlayer(objBoss), 
+        75, 18, 1025, 0);
+    //The graphic I used, 1025, represents an ADD rendered round bullet from ExPorygon's AllStarShot shotsheet</code></pre>
+	      <p>I explained above that you can use loose lasers for large bullets. In fact, this is a very popular technique for those who don't want to deal with manually setting the hitbox and scale of large custom bullets. All you need to do is create a loose laser whose dimensions are scaled properly from the actual bullet graphic. Do be aware though - the hitbox is rectangular and not circular, so it may have unwanted results with very large bullets.</p>
+	      <p>UNDER CONSTRUCTION BELOW THIS LINE </p>
+              <h2 style="color:yellow" id="quiz1">Quiz: TBA</h2>
+	        <!--Quiz start.-->
+		<p>1) In a shotsheet, a bullet graphic is 16x16 pixels. Later on, <code>ObjRender_SetScaleXYZ(obj, 0.5, 0.5, 1)</code> is called on the bullet. What should be done to make the hitbox of the bullet fair?</p>
+                <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+                <input type="RADIO" value="A" name="cc">
+                A. Change the size of the hitbox in the shotsheet<br>
+                <input type="RADIO" value="B" name="cc">
+                B. Change the size of the hitbox in the script<br>
+                <input type="RADIO" value="C" name="cc">
+                C. Don't change anything.<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+		<br>
+              <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l8.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Shotsheets and Bullet Properties">Unit 1 Lesson 8</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: Mar 2, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </div>    </div>
+    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>

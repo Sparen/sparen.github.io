@@ -20,7 +20,7 @@
 	    <ul>
 	      <li><a href="./ph3u1l7.html" title="Sparen's Danmakufu ph3 Tutorials - Attack Flow and Our First Spellcard">Unit 1 Lesson 7</a></li>
 	      <li>Navigation Bar</li>
-	      <li>---</li>
+	      <li><a href="./ph3u1l9.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Lasers">Unit 1 Lesson 9</a></li>
 	    </ul>
           </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 8 - Introduction to Shotsheets and Bullet Properties</h1>              <p>The video for this lesson is Infinite Ultima Wave's Christmas Letty script, one of the scripts I remember very fondly. It's quite good and despite all the red and yellow bullets, the bullet graphics chosen seem to fit Letty very well.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
@@ -100,7 +100,13 @@ Obj_Delete(obj);</code></pre>
               <h2 style="color:yellow" id="sub6">Part 6: What are the Properties of a Bullet? (ObjShot, ObjRender)</h2>
 	      <p>Of course, ObjMove commands are not the only functions that can be used on bullets. Shot objects not only inherit all move and render functions - they have functions of their own.</p>
 	      <p>Of these, there are a two that really stand out: <code>ObjShot_SetAutoDelete(obj)</code> and <code>ObjShot_SetSpellResist(obj)</code></p>
-	      <p>The former, <code>ObjShot_SetAutoDelete(obj)</code>, controls auto-deletion of a bullet when the bullet goes offscreen. The latter, <code>ObjShot_SetSpellResist(obj)</code>, controls whether or not a shot will be deleted when the player bombs and/or when the player dies. By using these two functions, it is possible to control when a bullet will be deleted, etc. Very useful.</p>
+	      <p>The former, <code>ObjShot_SetAutoDelete(obj)</code>, controls auto-deletion of a bullet when the bullet goes offscreen (out of the shot autodelete clip, to be more accurate). The latter, <code>ObjShot_SetSpellResist(obj)</code>, controls whether or not a shot will be deleted when the player bombs and/or when the player dies. By using these two functions, it is possible to control when a bullet will be deleted, etc. Very useful.</p>
+              <pre class="prettyprint"><code>    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 1, 5);
+    ObjShot_SetAutoDelete(obj, false);//Bullet will not be autodeleted past the shot autodelete clip
+    ObjShot_SetSpellResist(obj, true);//Bullet will not be deleted by bombs or player death
+    wait(360);
+    Obj_Delete(obj);//Since the bullet would not be deleted until the end of the script, 
+    //it is important to delete the bullet manually if it is not meant to stay on-screen</code></pre>
 	      <p>Something to note: not all of the functions under ObjShot can be used by enemy bullets - these functions are sometimes meant for use only by player shots, such as <code>ObjShot_SetPenetration(obj)</code>. Be aware of this - all damage, penetration, erase shot, spell factor, etc. functions are only for player shots.</p>
 	      <p>Now I will discuss ObjRender functions.</p>
 	      <p>ObjRender functions can be used on any object that has a graphic, whether it be a shot, enemy, or a background image. For the purposes of this lesson, I will only cover the ways to manipulate the graphic of a shot bullet.</p>
@@ -174,7 +180,7 @@ Obj_Delete(obj);</code></pre>
 	    <ul>
 	      <li><a href="./ph3u1l7.html" title="Sparen's Danmakufu ph3 Tutorials - Attack Flow and Our First Spellcard">Unit 1 Lesson 7</a></li>
 	      <li>Navigation Bar</li>
-	      <li>---</li>
+	      <li><a href="./ph3u1l9.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Lasers">Unit 1 Lesson 9</a></li>
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">

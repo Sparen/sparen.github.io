@@ -8,6 +8,8 @@ L5-DNHArt 27 (Gensei Ruri - Talos)
 L6-DNHArt 59 (Death Match in the Skies - Sparen)
 L7-DNHArt 80 (AllSpellCirno - Lunarethic)
 L8-DNHArt 57 (Christmas Letty - Infinite Ultima Wave)
+L9-DNHArt 66 (Artifact 2 - Sparen)
+L10-DNHArt 51 (Mini Shou Stage - Talos)
 
 UX
 
