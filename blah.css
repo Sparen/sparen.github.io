@@ -273,3 +273,15 @@ input[type="text"], input[type="password"], textarea {
   text-decoration: none;
 }
 /*END MENUS BY SPAREN*/
+
+/*Today's Updates - Prettyfication*/
+.indexupdsp2015{
+  border:2px solid; 
+  border-radius: 5px; 
+  border-color: #ffddcc; 
+  background-color: #004444;
+}
+
+.indexupdsp2015title{
+  padding: 5px;
+}
