@@ -210,12 +210,14 @@ input[type="text"], input[type="password"], textarea {
     color: #00FFCC;
     border-style: double;
     border-width: 1px;
+    padding: 2px;
 }
 .tut_checkpoint{
     background-color: #400000;
     color: #FF99FF;
     border-style: double;
     border-width: 1px;
+    padding: 2px;
 }
 
 /*MENUS BY SPAREN. PLACED AT BOTTOM IN ORDER TO OVERRIDE ALL DEFAULTS*/
@@ -283,5 +285,16 @@ input[type="text"], input[type="password"], textarea {
 }
 
 .indexupdsp2015title{
+  padding: 5px;
+}
+
+.indexdevlogA{
+  border:2px solid; 
+  border-radius: 5px; 
+  border-color: rgb(59,248,80);
+  background-color: #004444;
+}
+
+.indexdevlogtitleA{
   padding: 5px;
 }

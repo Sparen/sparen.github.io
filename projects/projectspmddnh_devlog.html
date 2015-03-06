@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Projects - Devlog for Pok&eacute;mon Mystery Dungeon - Danmakufu</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="AFCDTECH - Project page for PokeDigiDanmaku"      name="description">    <meta content="BlueGriffon wysiwyg editor" name="generator">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Project, Script, Pokemon, Mystery, Dungeon">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="http://sparen.github.io"><img alt="&quot;Site Logo&quot;" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Home</a></li>
+          <li><a class="mabout" href="../aboutme.html">About Me</a></li>
+          <li><a class="mph3tutorials" href="../ph3tutorials/ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorials</a></li>
+          <li><a class="mprojects" href="../projects/projects.html" title="Sparen's Danmakufu Projects">Projects</a></li>
+          <li><a class="mdnhart" href="../dnhart.html">DNHArt</a></li>
+          <li><a class="mfaq" href="../faq.html">FAQ</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:rgb(59,248,80)">Pok&eacute;mon Mystery Dungeon - Explorers of Danmakufu (DEVLOG)</h1>
+              <p>Welcome to my DevLog for my collaboration project with FrenticPony!</p>
+	      <div style="width: 450px;" class="tutorialnav">
+                <h2 style="color:aqua">Table of Contents</h2>
+                <ul>
+	          <li><a href="#submar052015">March 5, 2015</a></li>
+	        </ul>
+	      </div>
+              <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+              <h2 style="color:rgb(59,248,80)">March 5, 2015</h2>
+              <div class="indexdevlogA" id="submar052015">
+	      <p class="indexdevlogtitleA">So today was the day when I first saw Frentic's beautiful and amazing work. Although it was a proof-of-concept, it was amazingly well done, with animations, bgm, correct text formatting, collision detection, and more. I was awed, especially after my failures in Java and the realization from other members of LOCAA that this project <i>might actually be possible.</i> So Frentic reached out, and voila. I accepted.</p>
+	      <p class="indexdevlogtitleA">This devlog is here because it NEEDS to be here. If I don't keep a devlog, I don't know how I will be able to vent my rage and joy. We're not using Github or Dropbox (yet) since I have to get to sumer break first, so I'm preparing all of the function libraries in advance of implementation. I made lib_ObjAttack three days ago as a proof of concept (for creating our own classes and data structures in Danmakufu - it's way more clunky than in C and nowhere near as convenient as Java), but now it seems I may be using it...</p>
+	      <p class="indexdevlogtitleA">I expanded my paltry lib_ObjAttack with elemental types, more attack types, Power Points, crit rate, accuracy, and names, among other things. I also set up a create w/ name which may be of use in the development phase, as well as our main ObjAttack creator - ObjAttack_CreateEXB(ID), which takes a numerical ID (each attack will have its own ID) and will load literally everything by using a switch statement. Granted, I may have some issues with this later (I will. It's programming.), but I've got to give it my best shot.</p>
+	      <p class="indexdevlogtitleA">As for const_Item, which I began work on immediately after deciding that I was going to go along with making this project in Danmakufu, it became a slugfest as I drudged my way through Serebii.net and Bulbapedia. It currently stands at 11 kB of sheer text (all of it constants so that we can identify items by a single number in the future), and is only going to grow as we implement more things. Granted, I can probably remove most of the items, although I have provisions for a couple thousand left in the list.</p>
+	      <p class="indexdevlogtitleA">So, do you want to watch this project? If you do, here will be the place. Not on MotK - this isn't a Touhou project. Everything will link here to the devlog until we have some measure of completion done. Hopefully this project will live... and overcome its hurdles.</p>
+	      <p class="indexdevlogtitleA">It will be a lot of work. A LOT of work. But it will pay off, both for ourselves and for those who love Pok&eacute;mon Mystery Dungeon. We'll have to make most of the tilesets and all of the bgm at the very least, and hopefully... one day... we will be able to play the game we made ourselves...</p>
+	      </div>              <br>            </div>          </div>        </div>      </div>      <div id="ft">        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>  </body></html>
