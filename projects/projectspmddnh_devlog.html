@@ -17,17 +17,30 @@
           <li><a class="mdnhart" href="../dnhart.html">DNHArt</a></li>
           <li><a class="mfaq" href="../faq.html">FAQ</a></li>
         </ul>
-      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:rgb(59,248,80)">Pok&eacute;mon Mystery Dungeon - Explorers of Danmakufu (DEVLOG)</h1>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">
+	      <center>              <h1 style="color:rgb(59,248,80)">Pok&eacute;mon Mystery Dungeon - Explorers of Danmakufu (DEVLOG)</h1>
+	      <img alt="PMD Explorers of Danmakufu" src="./img/PMD.png" width="240" height="192"><br><br>
               <p>Welcome to my DevLog for my collaboration project with FrenticPony!</p>
+	      </center>
 	      <div style="width: 450px;" class="tutorialnav">
                 <h2 style="color:aqua">Table of Contents</h2>
                 <ul>
-	          <li><a href="#submar052015">March 5, 2015</a></li>
+	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a></li>
 	        </ul>
 	      </div>
               <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
-              <h2 style="color:rgb(59,248,80)">March 5, 2015</h2>
-              <div class="indexdevlogA" id="submar052015">
+              <h2 style="color:rgb(59,248,80)" id="submar062015">March 6, 2015</h2>
+              <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Today began with relatively no fanfare. Another snow day. But that meant that I had, of course, time to make function libraries!</p>
+	      <p class="indexdevlogtitleA">I began with lib_ObjPokemon, which was to hold everything about a Pokemon that could possibly exist (yeah, I know). Turns out it was a harder endeavor than I thought. Implementing HP and types and stats was fine. I made lib_ObjStatusEffect while I was at it, which became a nightmare, so I moved all of the constants to a constant file instead - the actual library just includes the constant sheet, which is sort of sad and sort of relieving at the same time.</p>
+	      <p class="indexdevlogtitleA">lib_ObjPokemon was fine. I added terrain, a way to initialize from dex no like I had set up for ObjAttack, and also added stuff for size and specie. But then I wanted to fill in the data in ObjPokemon_LoadSpecieFromID(obj, ID). So I decided to write a C program to do it for me since I knew I was fully capable of it.</p>
+	      <p class="indexdevlogtitleA">A while later, I had my Makefile and my C file, and I gagged when it spit out 344 kB of code. And this was the<i>SKELETON</i> - none of the actual fields were filled with meaningful information. In the future, I'll be rerunning this program with even more functions...</p>
+	      <p class="indexdevlogtitleA">Regardless, AchySolrock volunteered to make Tilesets, which is going to be helpful, although the time for that is in the future - I haven't implement a basic const_ObjAbility yet, and ObjTile is going to be one of the biggest endeavors in the library creation phase. And mind you, I haven't actually tested ANY of this code - I have to hope it works as expected.</p>
+	      <p class="indexdevlogtitleA">Still, the pride of making my first C program that wasn't for a class... it was amazing. I'd dump it here on the website, but putting it in a pre block is about as close to disaster as I could ever get, so I will hold off on that - especially since it is still in development.</p>
+	      <p class="indexdevlogtitleA">As for BGM, I got the dungeon tracks for Gates to Infinity, and it'll be nice to have more sacrificial testing bgms to choose from.</p>
+	      </div>
+              <h2 style="color:rgb(59,248,80)" id="submar052015">March 5, 2015</h2>
+              <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">So today was the day when I first saw Frentic's beautiful and amazing work. Although it was a proof-of-concept, it was amazingly well done, with animations, bgm, correct text formatting, collision detection, and more. I was awed, especially after my failures in Java and the realization from other members of LOCAA that this project <i>might actually be possible.</i> So Frentic reached out, and voila. I accepted.</p>
 	      <p class="indexdevlogtitleA">This devlog is here because it NEEDS to be here. If I don't keep a devlog, I don't know how I will be able to vent my rage and joy. We're not using Github or Dropbox (yet) since I have to get to sumer break first, so I'm preparing all of the function libraries in advance of implementation. I made lib_ObjAttack three days ago as a proof of concept (for creating our own classes and data structures in Danmakufu - it's way more clunky than in C and nowhere near as convenient as Java), but now it seems I may be using it...</p>
 	      <p class="indexdevlogtitleA">I expanded my paltry lib_ObjAttack with elemental types, more attack types, Power Points, crit rate, accuracy, and names, among other things. I also set up a create w/ name which may be of use in the development phase, as well as our main ObjAttack creator - ObjAttack_CreateEXB(ID), which takes a numerical ID (each attack will have its own ID) and will load literally everything by using a switch statement. Granted, I may have some issues with this later (I will. It's programming.), but I've got to give it my best shot.</p>
