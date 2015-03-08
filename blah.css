@@ -280,6 +280,11 @@ input[type="text"], input[type="password"], textarea {
 }
 /*END MENUS BY SPAREN*/
 
+@font-face{
+  font-family: pmdfont;
+  src: url(PKMN-Mystery-Dungeon.ttf);
+}
+
 /*Today's Updates - Prettyfication*/
 .indexupdsp2015{
   border:2px solid; 
@@ -302,3 +307,4 @@ input[type="text"], input[type="password"], textarea {
 .indexdevlogtitleA{
   padding: 5px;
 }
+
