@@ -25,10 +25,23 @@
 	      <div style="width: 450px;" class="tutorialnav">
                 <h2 style="color:aqua">Table of Contents</h2>
                 <ul>
-	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a></li>
+	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a></li>
 	        </ul>
 	      </div>
               <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+              <h2 style="color:rgb(59,248,80)" id="submar072015">March 7, 2015</h2>
+              <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Today began with even less fanfare than yesterday. I did a few things here and there, and wrote some ObjTile, although it was basically limited to x and y positioning. I had a talk with Frentic about various things, and then decided to go and actually implement my tests!</p>
+	      <p class="indexdevlogtitleA">(What I am leaving out here is the four or so hours I spent trying to decrypt and rip the base graphics of Explorers of Sky, as well as the playtime I had, where I soon realized that we would need a new set of virtual keys to make up for the A, B, X, Y, L, R, start, and select buttons. Horrifying.)</p>
+	      <p class="indexdevlogtitleA">Over the course of a few long hours, I moved and ported existing libraries, purged code, and made a STG_Frame using Frentic's graphics. And then came the beautiful part - actually making the tests.</p>
+	      <p class="indexdevlogtitleA">I decided on the name Runesvale Plain for my testing dungeon. I made a stage file with bare minimum, and made a plural to load individual stages. Stages will function as dungeon dives, plurals will serve as locations (dungeons, boss rooms), and singles will serve as individual floors. I made a new set of libraries in lib_dungeon for these, such as a common file and my first item spawn percentage sheet. I guess I'll have an enemy spawn sheet as well in the future.</p>
+	      <p class="indexdevlogtitleA">At this point, I wanted to make a location opener, but... I didn't have the font. I searched and search to no avail.</p>
+	      <p class="indexdevlogtitleA">...but thankfully, Miransu recognized it immediately - it was Tekton Bold, and coding began... only for Danmakufu to freeze. I'll leave out the pain and suffering, but let's just say that I forgot a ", and that screwed up <i>everything</i>. At the same time, all of my libraries were run through the syntax checker and I had to fix literally every include statement and Obj_SetValueD call in all of my libraries. A pain.</p>
+	      <p class="indexdevlogtitleA">In the end though... all worked out. I managed to get everything I wanted to get working working, and I'm really glad. Because now... I feel like I've really accomplished something, even if what I have done is miniscule in reality. Basically, I never planned to be writing the GUI and dungeon spawning code after what, 5 days? It's a fulfilling feeling, especially when listening to the Gates to Infinity BGM (which is better than the game).</p>
+	      <p class="indexdevlogtitleA">Below is the first DevLog video!</p>
+              <embed width="420" height="315"
+		src="https://www.youtube.com/v/ax2G6UD7uJ0">
+	      </div>
               <h2 style="color:rgb(59,248,80)" id="submar062015">March 6, 2015</h2>
               <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today began with relatively no fanfare. Another snow day. But that meant that I had, of course, time to make function libraries!</p>
