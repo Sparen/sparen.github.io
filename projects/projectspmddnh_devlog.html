@@ -23,14 +23,22 @@
               <p>Welcome to my DevLog for my collaboration project with FrenticPony!</p>
               <h2 style="color:rgb(59,248,80)">What is this Project?</h2>
               <p style="font-family: pmdfont;font-size:150%;">This project is our own Pokémon Mystery Dungeon game, made in Touhou Danmakufu ph3!<br>We are making the story from scratch, and we aim to have as much original material as possible while still maintaining the feel for the game (i.e. many fonts, sprites, sfx, and other graphical resources will be taken from Pokémon Mystery Dungeon Red, Blue, Time, Darkness, and Sky, partially due to our limitations and partially for authenticity).<br>As per doujin guidelines and due to the Pokémon Company's copyrights, this game will be distributed for free and we will assume all costs associated with commissions.<br>I plan to update this devlog every day I have done something for the project. As the person who has declared responsibility for the entirety of dungeon creation, I will try to make the game as authentic and fun to play as possible, and of course... it wouldn't do if we didn't have new items, right?<br>-snicker-</p>
+	      <!-- Apparently, Frentic's original graphics for this project are dated 11/3/2012... o_O -->
 	      </center>
 	      <div style="width: 450px;" class="tutorialnav">
                 <h2 style="color:aqua">Table of Contents</h2>
                 <ul>
-	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a></li>
+	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a> <a href="#submar082015">08</a></li>
 	        </ul>
 	      </div>
               <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+              <h2 style="color:rgb(59,248,80)" id="submar082015">March 8, 2015</h2>
+              <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Today was as uneventful as could be in terms of development - I had a lot of work to do, so I had no time to develop. In the end, all I did was make a folder for future tilesets, rename lib to lib_Sparen because we'll have separate overworld and dungeon libraries, and create files for ObjPEnemy and ObjPPlayer, which will be used for dungeon enemies and dungeon players, respectively. They haven't been tested (almost nothing has been...), but they will be in due time, though I will need to give them something other than a constructor...</p>
+	      <p class="indexdevlogtitleA">I did a bit of experimenting with tiles and dungeon floors, and I soon came to the realization that a 100x80 tile floor was too large, so I shrunk it to 75x60. Then I did the math and realized that I would need a whopping <b>4500</b> tile objects, which is far too many for Danmakufu to ever possibly handle, as well as the fact that indexing the 2D array would be a major problem.</p>
+	      <p class="indexdevlogtitleA">I eventually shrunk it down to 60x48, which I will use for testing as it is a good size. At this point, I also learned that each tile is represented in the Minimap by four pixels - effectively the dungeon is a 6:1 scale to the Minimap. The space I had set aside for the Minimap in the STG_Frame was only big enough to handle a 36x31 (or 34x29, to give padding with the edge) floor, so I was forced to ditch it entirely. In the game, the mini map, if implemented, will most likely be rendered over the actual dungeon like in the actual games simply because there is no place to cram it that is big enough.</p>
+	      <p class="indexdevlogtitleA">Wow... this devlog was far longer than I expected given that I have done literally nothing today for this project except for a few lines of code and 0 testing.</p>
+	      </div>
               <h2 style="color:rgb(59,248,80)" id="submar072015">March 7, 2015</h2>
               <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today began with even less fanfare than yesterday. I did a few things here and there, and wrote some ObjTile, although it was basically limited to x and y positioning. I had a talk with Frentic about various things, and then decided to go and actually implement my tests!</p>
