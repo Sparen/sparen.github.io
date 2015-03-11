@@ -43,7 +43,25 @@
                 <pre class="prettyprint"><code>    let objScene=GetEnemyBossSceneObjectID();</code></pre>
 	      <p>This will allow us to access the Enemy Boss Scene Object. We will not usually do anything with this object, but it should find a comfortable place in your global variable section and we will directly use it in all spellcards.</p>
 	      <p>Now we will look at @Initialize. Please note that there is no default cutin function in ph3. I suggest using GTbot's or Helepolis's, which can be found on MotK or Bulletforge. Additionally, you can make your own, but we will need understanding of text objects and render objects before we can go into that.</p>
-	      <p>The most important line we will add to @Initialize is <code>ObjEnemyBossScene_StartSpell(objScene);</code>. Add it before you call TFinalize. This code will tell Danmakufu that we are now starting a spellcard. Additionally, we will begin cleaning up @Initialize. I suggest taking all the boss drawing code (the imgRumia stuff) and placing it in a task TDrawLoop and calling that in @Initialize. This will allow us to animate the boss later on and will make @Initialize look cleaner. <b>Do not move the movement code into TDrawLoop.</b> While it is not detrimental, you may end up not being able to find the movement code if you end up looking for it.</p>
+	      <p>The most important line we will add to @Initialize is <code>ObjEnemyBossScene_StartSpell(objScene);</code>. Add it before you call TFinalize. This code will tell Danmakufu that we are now starting a spellcard. Additionally, we will begin cleaning up @Initialize. I suggest taking all the boss drawing code (the imgRumia stuff) and placing it in a task TDrawLoop and calling that in @Initialize. More specifically, we will create a task TDrawLoop defined outside of all routines, and in place of it in @Initialize, we will use <code>TDrawLoop;</code> to call it. This will allow us to animate the boss later on and will make @Initialize look cleaner. <b>Do not move the movement code into TDrawLoop.</b> While it is not detrimental, you may end up not being able to find the movement code if you end up looking for it. Below is an example of what @Initialize should now look like:</p>
+              <pre class="prettyprint"><code>@Initialize{
+	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+	ObjEnemy_Regist(objBoss);
+        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);//Move the boss to the specified position
+
+	ObjEnemyBossScene_StartSpell(objScene);
+
+	TDrawLoop; //Call TDrawLoop, which is defined outside of this block.
+        TFinalize;
+	MainTask;
+}
+
+task TDrawLoop {
+	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+	ObjPrim_SetTexture(objBoss, imgExRumia);
+	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+	ObjSprite2D_SetDestCenter(objBoss);
+}</code></pre>
 	      <p>Now we will move to @Event. Thankfully, we already have EV_REQUEST_SPELL_SCORE, which is the spellcard bonus! So we don't have to do anything here. However, I will cover the three events we have. As a refresher, EV_REQUEST_LIFE sets the boss's life, EV_REQUEST_TIMER sets the timeout counter (in seconds), and EV_REQUEST_SPELL_SCORE sets the spellcard bonus.</p>
 	      <p>Finally, to complete the transformation into a spellcard, there is an optional but highly recommended procedure that will go in TFinalize. What is it, you ask? Well, adding the spellcard bonus!</p>
 	      <p>Danmakufu does not do it automatically: you must manually add the spellcard bonus. I know, it's a pain. But it's not hard to implement. Right after the while loop in TFinalize, add the following:</p>
@@ -177,7 +195,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 3, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 11, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
