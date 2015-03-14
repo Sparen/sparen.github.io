@@ -36,8 +36,8 @@
 	          <li><a href="#sub5">Part 5: How do I Control the Properties of a Laser?</a></li>
 	          <li><a href="#quiz1">Quiz: Loose and Straight Lasers</a></li>
 	          <li><a href="#sub6">Part 6: What are Delay Lasers and How Can I Use Them?</a></li>
-	          <li><a href="#quiz2">Quiz: Delay Lasers</a></li>
 	          <li><a href="#sub7">Part 7: How do I Create Non-Directional Lasers?</a></li>
+	          <li><a href="#quiz2">Quiz: Delay and Non-Directional Lasers</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
@@ -129,7 +129,90 @@
                 D. She is imagining things<br>
                 <input type="SUBMIT" value="Submit">
                 </form>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+              <h2 style="color:yellow" id="sub6">Part 6: What are Delay Lasers and How Can I Use Them?</h2>
+	      <p>Now I will discuss delay lasers, which have many uses.</p>
+	      <p>Delay lasers are, basically, the hitboxless lasers formed when you create a straight laser. Most often, they are created in order to show the paths of fast bullets or bullet streams. Good uses include Shadow's RaNGE 10 Reimu script, where bullets coming from the bottom of the screen had delay lasers so that the player could know the path the talismans would take before they spawned.</p>
+	      <p>To form a delay laser in ph3, you must create a straight laser with <code>ObjStLaser_SetSource(obj)</code> set to false. Additionally, it should have delete time of 0, although I will discuss this in more detail in a moment. The delay is how long the delay laser should exist for, and optimally, you should use a rectangular bullet with a width of at least 18 so that the render width of the delay laser will be enough for it to be visible.</p>
+	      <p>Now, if you set delete time to 0 and create this laser, you will find that it does not work as you expected - the laser graphic will actually expand to its final width while fade deleting. This did not happen in 0.12m, but it happens in ph3. The workaround is as follows: Manually kill the object before it enlarges. Below is my code, which you are free to use (citing would be nice).</p>
+              <pre class="prettyprint"><code>    task DelayLaser(x, y, ang, l, w, dt, graph, delay){ 
+	let objlaser = CreateStraightLaserA1(x, y, ang, l, w, dt, graph, delay);
+	ObjStLaser_SetSource(objlaser, false);
+	loop(delay-1){//So that the graphic never enlarges. 
+	  if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){Obj_Delete(objlaser); return;}//Default kill to prevent (0,0) spawning
+	  yield;
+	}
+	Obj_Delete(objlaser);
+    }</code></pre>
+	      <p>Now, as for what this task actually does, it creates a delay laser as a straight laser with no source, then waits for the frame directly before the one it is supposed to be deleted at. At this moment, it kills the laser, automatically deleting the associated graphic and preventing the laser from rendering at full width.</p>
+	      <p>Delay lasers are useful tools, and I highly suggest that you explore and see what you can do with them.</p>
+	      <div class="tut_exercise">EXERCISE: Experiment with Delay Lasers. See where they are useful and which widths and graphics work best.</div>
+	      <div class="tut_checkpoint">CHECKPOINT: What are the practical applications of a laser without a hitbox?</div>
+              <h2 style="color:yellow" id="sub7">Part 7: How do I Create Non-Directional Lasers?</h2>
+	      <p>I will close this lesson with a discussion on Non-directional lasers as well as applications of tasks that obtain and ID via an ascent loop, a technique that is extremely useful for controlling more complex patterns of bullets.</p>
+	      <p>To begin, it is important to develop a framework for understanding what exactly we are doing when we create Non-Directional Lasers. For the purposes of this lesson, we will be limiting ourselves to a single ring of 12 straight lasers.</p>
+	      <p>By definition (as far as Patchouli and Embodiment of Scarlet Devil are concerned), a Non-Directional Laser is a laser spawned at a location away from the boss that rotates around the location of the boss with a set radius. The angle of the laser is always pointing away from the boss.</p>
+	      <p>In 0.12m, there was a specific function to create a Non-Directional Laser. However, this is ph3, and no such function exists. We will be creating a task called SpawnNDLaser in this part.</p>
+	      <p>The first thing to do is to call this task. Each task will be responsible for a single laser. For the purposes of this tutorial, the lasers will be spawned 60 pixels from the boss and will point outwards.</p>
+              <pre class="prettyprint"><code>    ascent(i in 0..12){
+        SpawnNDLaser(i);
+    }</code></pre>
+	      <p>Notice that I have used an ascent loop, and have passed the value (in this case, an identifier) into the task.</p>
+	      <p>As for the task, let's begin with the basics.</p>
+              <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
+        let objcount = 0;
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss)+60*cos(ID*30), ObjMove_GetY(objBoss)+60*sin(ID*30), ID*30, 
+		512, 24, 300, 1001, 60);
+    }</code></pre>
+	      <p>In the above code, I declare the task and begin with a declaration of the variable objcount, the counter for this task. Then I create a straight laser 60 pixels from the boss's location, with angle equals to ID*30. Since ID can go from 0 to 11 due to our ascent loop, multiplying by 30 (i.e. 360/12, 12 being the total number of lasers) will give the angle we want the laser to start at. The 60*cos(ID*30) and 60*sin(ID*30) is the trigonometry used to spawn the lasers in a circle of radius 60 around the boss.</p>
+	      <p>At this point, we can create the lasers but they will stay put. They will not rotate, and if the boss moves, they will not move with the boss. We will use a while loop to combat this.</p>
+              <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
+        let objcount = 0;
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss)+60*cos(ID*30), ObjMove_GetY(objBoss)+60*sin(ID*30), ID*30, 
+		512, 24, 300, 1001, 60);
+        while(!Obj_IsDeleted(obj)){
+            ObjMove_SetPosition(obj, ObjMove_GetX(objBoss)+60*cos(ID*30+objcount), ObjMove_GetY(objBoss)+60*sin(ID*30+ objcount));
+	    ObjStLaser_SetAngle(obj, ID+objcount);
+	    objcount++;
+            yield;
+        }
+    }</code></pre>
+	      <p>The code above adds a while loop. While the laser has not been deleted, first change its position, and then change its angle. In this loop, objcount increments by one, therefore moving the lasers along the circle and changing their angles accordingly. If you want to make the lasers move faster/slower, increment objcount by a different value.</p>
+	      <p>The key thing to note about Non-Directional Lasers and danmakufu in general is that in order to do something you have never done before, you must first break it down into components that you know how to implement. You then consider ways in which you can implement what you are trying to do - there are always multiple ways to do the same thing. If you find a method that suits you better, go ahead and use it.</p>
+              <h2 style="color:yellow" id="quiz2">Quiz: Delay and Non-Directional Lasers</h2>
+	        <!--Quiz start.-->
+		<p>1) Marisa has stolen Patchouli's Non-Directional Lasers and wants to have them move from the boss's location to a radius of 60, one pixel increase per frame. How would she implement this? Her code is below. There may be multiple correct answers.</p>
+                <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
+        let objcount = 0;
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss)+60*cos(ID*30), ObjMove_GetY(objBoss)+60*sin(ID*30), ID*30, 
+		512, 24, 300, 1001, 60);
+        while(!Obj_IsDeleted(obj)){
+            ObjMove_SetPosition(obj, ObjMove_GetX(objBoss)+60*cos(ID*30+objcount), ObjMove_GetY(objBoss)+60*sin(ID*30+ objcount));
+	    ObjStLaser_SetAngle(obj, ID+objcount);
+	    objcount++;
+            yield;
+        }
+    }</code></pre>
+                <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+                <input type="RADIO" value="A" name="cc">
+                A. Create a variable called <code>radius</code> that increments by one unit each frame while less than 60, and is added to the x and y parameters of <code>ObjMove_SetPosition()</code><br>
+                <input type="RADIO" value="B" name="cc">
+                B. Create a variable called <code>radius</code> that increments by one unit each frame while less than 60, and replace the 60* with <code>radius*</code><br>
+                <input type="RADIO" value="C" name="cc">
+                C. Create a variable called <code>radiusmult</code> that increments 1/60 each frame while less than 60, and multiply the radial portion (the sine/cosine portion) of each ObjMove parameter by <code>radiusmult</code>.<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+	        <br>
+		<p>2) Now that the lasers are working, she wants to create a master spark whose delay laser is created 120 frames before the laser spawns. Which of the following is an appropriate length of time for the lifetime of the laser? The spark will last for 120 frames.</p>
+                <form method="POST" onSubmit="return checkAnswerA2(this, 'C');">
+                <input type="RADIO" value="A" name="cc">
+                A. 300<br>
+                <input type="RADIO" value="B" name="cc">
+                B. 90<br>
+                <input type="RADIO" value="C" name="cc">
+                C. 150<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+	        <br>
               <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
               <br>            </div>          </div>
@@ -141,7 +224,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 5, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 14, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
@@ -149,5 +232,6 @@
         </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L9Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
