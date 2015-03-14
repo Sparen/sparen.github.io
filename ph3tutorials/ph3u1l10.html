@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Unit 1 Lesson 10</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Unit 1 Lesson 10 - Angular Velocity and Curved Lasers. A guide to understanding curved lasers and angular velocity in Touhou Danmakufu ph3."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Bullet, Shot, Laser, Curve, Angular, Velocity">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="http://sparen.github.io"><img alt="&quot;Site Logo&quot;" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l9.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Lasers">Unit 1 Lesson 9</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 10 - Angular Velocity and Curved Lasers</h1>              <p>The video for this lesson is Talos's Mini Shou Stage! Of course we couldn't have a less on curvy lasers without mentioning the Lord Shou! (Seiga, I'm sorry)</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/17GGCvV2hrk">
+	      <div style="width: 450px;" class="tutorialnav">
+                <h2 style="color:aqua">Table of Contents</h2>
+                <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What is Angular Velocity?</a></li>
+	          <li><a href="#quiz1">Quiz: </a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>BLAH BLAH BLAH</p>
+	      <p>Overall, this lesson will end up covering blah</p>
+	      <p>INCOMPLETE BELOW THIS LINE</p>
+              <h2 style="color:yellow" id="sub2">Part 2: What is Angular Velocity?</h2>
+
+              <pre class="prettyprint"><code>    I am code. Fear me.</code></pre>
+	      <p>Blah? Blah!</p>
+	      <div class="tut_exercise">EXERCISE: Experiment with ObjLaser_SetInvalidLength and ObjLaser_SetIntersectionWidth. What works best with which graphic type?</div>
+              <h2 style="color:yellow" id="quiz1">Quiz: Loose and Straight Lasers</h2>
+	        <!--Quiz start.-->
+		<p>1) Marisa wants to create a straight laser that points straight at Reimu's donation box. However, she has a problem - in all of the test runs, the laser appeared without warning and destroyed something. How can she fix this?</p>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'B', 4);">
+                <input type="RADIO" value="A" name="cc">
+                A. Increase the delete time of the laser<br>
+                <input type="RADIO" value="B" name="cc">
+                B. Increase the delay time of the laser<br>
+                <input type="RADIO" value="C" name="cc">
+                C. Show Reimu the power of LOVE!<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+	        <br>
+		<p>2) Marisa successfully got the laser to fire. However, now she wants to make sure that the lasers never delete. How should she do this?</p>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'A', 4);">
+                <input type="RADIO" value="A" name="cc">
+                A. Set delete time to be greater than the value in EV_REQUEST_TIMER*60<br>
+                <input type="RADIO" value="B" name="cc">
+                B. Set delay to be greater than the value in EV_REQUEST_TIMER*60<br>
+                <input type="RADIO" value="C" name="cc">
+                C. Repeatedly fire lasers until everything is burned<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+	        <br>
+		<p>3) Meanwhile, Nitori is upset at the destruction of her home by Marisa's spellcards. She wishes to fire loose lasers at Marisa's house. What graphic is most suitable for this task?</p>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'C', 3);">
+                <input type="RADIO" value="A" name="cc">
+                A. A rectangular bullet<br>
+                <input type="RADIO" value="B" name="cc">
+                B. A gear shaped bullet<br>
+                <input type="RADIO" value="C" name="cc">
+                C. A round bullet<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+	        <br>
+		<p>4) Patchouli is experimenting with Fireball Lasers (yes this is a reference to my contest entry video at the top of the page). However, it seems that it is possible to die a little to the left or right of the front of the bullet but it is safe to go in at the side and stay in the white part of the bullet without dying. What is the issue here?</p>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'B', 3);">
+                <input type="RADIO" value="A" name="cc">
+                A. The hitbox of the bullet was not defined correctly<br>
+                <input type="RADIO" value="B" name="cc">
+                B. It is a circular bullet with a rectangular hitbox<br>
+                <input type="RADIO" value="C" name="cc">
+                C. There's a bug in Danmakufu<br>
+                <input type="RADIO" value="D" name="cc">
+                D. She is imagining things<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+              <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l9.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Lasers">Unit 1 Lesson 9</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: Mar 14, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </div>    </div>
+    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L9Quiz1.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
