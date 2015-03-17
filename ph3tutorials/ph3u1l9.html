@@ -41,7 +41,7 @@
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
-	      <p>If you haven't realized by now, this lesson is about non-curvy lasers, which are reserved for the next lesson, where I will also discuss angular velocity in further detail. Here I will be discussing both loose lasers and straight lasers, as well as delay lasers.</p>
+	      <p>If you haven't realized by now, this lesson is about non-curvy lasers, which are reserved for the next lesson, where I will also discuss angular velocity in further detail. Here I will be discussing both loose lasers and straight lasers, as well as delay lasers. Later on, I will also Non-Directional Lasers as well as how to rotate straight lasers. Finally, creating passing IDs with an ascent loop will be covered, and there will be an example of trigonometry usage, although that will be covered in more detail in a later tutorial.</p>
 	      <p>Overall, this lesson will end up covering linear hitboxes and render width vs. hitbox width, among other things, and should provide adequate information for using lasers in Touhou Danmakufu ph3.</p>
               <h2 style="color:yellow" id="sub2">Part 2: What are Linear Hitboxes?</h2>
 	      <p>Up to now, all the bullets we have discussed have had radial hitboxes - the hitbox of the bullet is calculated using the center of the bullet and a radius from that center. If the player's hitbox happens to overlap with the bullet's hitbox (or boss's hitbox, which is usually radial/circular), then the player enters a state where there is the option of deathbombing (depending on the player) before dying.</p>
@@ -54,6 +54,7 @@
         75, 18, 1025, 0);
     //The graphic I used, 1025, represents an ADD rendered round bullet from ExPorygon's AllStarShot shotsheet</code></pre>
 	      <p>I explained above that you can use loose lasers for large bullets. In fact, this is a very popular technique for those who don't want to deal with manually setting the hitbox and scale of large custom bullets. All you need to do is create a loose laser whose dimensions are scaled properly from the actual bullet graphic. Do be aware though - the hitbox is rectangular and not circular, so it may have unwanted results with very large bullets.</p>
+	      <p>As a final note, keep in mind that loose lasers, when spawned, expand from 0 to their full length before the back end of the laser begins to move. The rate is determined by laser length and the speed of the laser.</p>
 	      <div class="tut_exercise">EXERCISE: Create a script that fires rings of loose lasers every 30 frames</div>
 	      <div class="tut_checkpoint">CHECKPOINT: How does a rectangular/linear hitbox work?</div>
               <h2 style="color:yellow" id="sub4">Part 4: What are Straight Lasers?</h2>
@@ -127,6 +128,21 @@
                 C. There's a bug in Danmakufu<br>
                 <input type="RADIO" value="D" name="cc">
                 D. She is imagining things<br>
+                <input type="SUBMIT" value="Submit">
+                </form>
+	        <br>
+		<p>5) Alice decides that she must create some loose lasers. She uses the following code:</p>
+                <pre class="prettyprint"><code>    CreateLooseLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 0, GetAngleToPlayer(objBoss), 60, 18, 1017, 0);</code></pre>
+		<p>However... the laser graphics never spawn. Why?</p>
+                <form method="POST" onSubmit="return checkAnswerP(this, 'D', 3);">
+                <input type="RADIO" value="A" name="cc">
+                A. The laser is not wide enough<br>
+                <input type="RADIO" value="B" name="cc">
+                B. There is no delay<br>
+                <input type="RADIO" value="C" name="cc">
+                C. The length:width ratio is not appropriate<br>
+                <input type="RADIO" value="D" name="cc">
+                D. The speed is 0, so the loose laser will never extend in length.<br>
                 <input type="SUBMIT" value="Submit">
                 </form>
               <h2 style="color:yellow" id="sub6">Part 6: What are Delay Lasers and How Can I Use Them?</h2>
@@ -224,7 +240,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 16, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 17, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
