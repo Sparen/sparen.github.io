@@ -57,8 +57,8 @@ del,ins{
   text-decoration:none;
 }
 body{/*Font size: The /1.25 refers to the spacing between lines*/
-  font:13px/1.25 arial,helvetica,clean,sans-serif;
-  font-size:small;
+  font:14px/1.25 arial,helvetica,clean,sans-serif;
+  /*font-size:small;*/
   /*font:x-small;*/
 }
 select,input,button,textarea{
@@ -70,7 +70,7 @@ table{
 }
 pre,code,kbd,samp,tt{
   font-family:monospace;
-  font-size:108%;
+  font-size:94%;
   line-height:100%;
 }
 body{
