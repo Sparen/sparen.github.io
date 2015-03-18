@@ -57,7 +57,7 @@ del,ins{
   text-decoration:none;
 }
 body{/*Font size: The /1.25 refers to the spacing between lines*/
-  font:14px/1.25 arial,helvetica,clean,sans-serif;
+  font:13.5px/1.25 arial,helvetica,clean,sans-serif;
   /*font-size:small;*/
   /*font:x-small;*/
 }
