@@ -1,0 +1,308 @@
+html{color:#29293D;background:#DDEEEE;}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
+  margin:0;
+  padding:0;
+}
+table{
+  border-collapse:collapse;
+  border-spacing:0;
+}
+fieldset,img{
+  border:0;
+}
+address,caption,cite,code,dfn,em,strong,th,var{
+  font-style:normal;
+  font-weight:normal;
+}
+li{
+  list-style:none;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+caption,th{
+  text-align:left;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size:100%;
+  font-weight:normal;
+}
+q:before,q:after{
+  content:'';
+}
+abbr,acronym{
+  border:0;
+  font-variant:normal;
+}
+sup{
+  vertical-align:text-top;
+}
+sub{
+  vertical-align:text-bottom;
+}
+input,textarea,select{
+  font-family:inherit;
+  font-size:inherit;
+  font-weight:inherit;
+}
+input,textarea,select{
+  font-size:100%;
+}
+legend{
+  color:#000;
+}
+del,ins{
+  text-decoration:none;
+}
+body{/*Font size: The /1.25 refers to the spacing between lines*/
+  font:13.5px/1.25 arial,helvetica,clean,sans-serif;
+  /*font-size:small;*/
+  /*font:x-small;*/
+}
+select,input,button,textarea{
+  font:99% arial,helvetica,clean,sans-serif;
+}
+table{
+  font-size:inherit;
+  font:100%;
+}
+pre,code,kbd,samp,tt{
+  font-family:monospace;
+  font-size:94%;
+  line-height:100%;
+}
+body{
+  text-align:center;
+}
+
+/* START animated spoiler CSS by Bloggersentral.com */
+.spoilerbutton {display:block;margin:5px 0;}
+.spoiler {overflow:hidden;background: #222222;}
+.spoiler > div {-webkit-transition: all 0.2s ease;-moz-transition: margin 0.2s ease;-o-transition: all 0.2s ease;transition: margin 0.2s ease;}
+.spoilerbutton[value="Show"] + .spoiler > div {margin-top:-100%;}
+.spoilerbutton[value="Hide"] + .spoiler {padding:0px;}
+/* END animated spoiler CSS by Bloggersentral.com */
+
+/*unvisited link*/
+a:link{
+  color:rgb(24,48,64);
+}
+/* visited link */
+a:visited {
+  color:rgb(32,64,128);
+}
+/* mouse over link */
+a:hover {
+  color:rgb(64,128,192);
+}
+
+#ft{
+  clear:both;
+}#top{
+  margin:auto;
+  text-align:left;
+  width:57.69em;
+  min-width:750px;
+}#top{
+  margin:auto 10px;
+  width:auto;
+}
+
+.yui-t1{
+  margin:auto;
+  text-align:left;
+  width:57.69em;
+  min-width:750px;
+}
+.yui-b{position:relative;}#yui-main .yui-b{position:static;}#yui-main,.yui-g{width:100%;}.yui-t1 #yui-main{float:right;margin-left:-25em;}.yui-t1 .yui-b{float:left;width:12.30769em;}.yui-t1 #yui-main .yui-b{margin-left:13.30769em;}#yui-main .yui-b{float:none;width:auto;}.yui-g div.first{float:left;}#bd:after,.yui-g:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+/*Allows word wrapping for non-top, non-footer non-sidebar content (AKA just .yui-b). Code from w3schools.*/
+.yui-b{
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
+    display: flex;   
+    flex-wrap: wrap;
+}
+
+h1 {  
+  font-size: 138.5%;
+}
+h2 {  
+  font-size: 123.1%;
+}
+h3 {  
+  font-size: 108%;
+}
+h1, h2, h3 {  
+  margin-top: 1em;  
+  margin-right: 0px;  
+  margin-bottom: 1em;  
+  margin-left: 0px;
+}
+h1, h2, h3, h4, h5, h6, strong {  
+  font-weight: bold;
+}
+abbr, acronym {  
+  border-bottom-width: 1px;  
+  border-bottom-style: dotted;  
+  border-bottom-color: black;  
+  cursor: help;
+}
+em {  
+  font-style: italic;
+}
+blockquote, ul, ol, dl {  
+  margin-top: 1em;  
+  margin-right: 1em;  
+  margin-bottom: 1em;  
+  margin-left: 1em;
+}
+ol, ul, dl {  
+  margin-left: 2em;
+}
+ol li {  
+  list-style-type: decimal;  
+  list-style-position: outside;  
+  list-style-image: none;
+}
+ul li {  
+  list-style-type: disc;  
+  list-style-position: outside;  
+  list-style-image: none;
+}
+dl dd {  
+  margin-left: 1em;
+}
+th, td {  
+  border-top-width: 1px;  
+  border-right-width: 1px;  
+  border-bottom-width: 1px;  
+  border-left-width: 1px;  
+  border-top-style: solid;  
+  border-right-style: solid;  
+  border-bottom-style: solid;  
+  border-left-style: solid;  
+  border-top-color: black;  
+  border-right-color: black;  
+  border-bottom-color: black;  
+  border-left-color: black;  
+  padding-top: 0.5em;  
+  padding-right: 0.5em;  
+  padding-bottom: 0.5em;  
+  padding-left: 0.5em;
+}
+th {  
+  font-weight: bold;  
+  text-align: center;
+}
+caption {  
+  margin-bottom: 0.5em;  
+  text-align: center;
+}
+p, fieldset, table, pre {  
+  margin-bottom: 1em;
+}
+input[type="text"], input[type="password"], textarea {  
+  width: 12.25em; 
+}
+
+/*CSS OVERRIDES FOR SEITENTOUJI*/
+.yui-t1 #yui-main{float:center;margin-left:8.5%;}/*When width is 80% for =yui-main, this aligns it center. FLoat left and center act the same...*/
+
+#yui-main{
+  border-style: double;
+  border-radius: 25px;
+  border-width: 5px;
+  padding: 12px;
+  width: 80%;
+  border-color: #A3A3C2;
+}
+
+.yui-t1 #yui-main .yui-b{
+  margin-left:1%;
+}
+
+/*SeitenTouji stuff*/
+
+.sttjnavbar{
+  text-align:center;
+}
+.sttjnavbar ul{
+  text-align:center;
+  list-style-type: none;
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden;
+}
+.sttjnavbar li{
+  float: center;
+  list-style-type: none;
+  display:inline-block;
+  width: 120px;
+  font-weight: bold;
+  background-color: #00BBBB;
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+}
+
+.sttjheader1 {
+    background-image: url(img/sttj.png);/*32x32*/
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    background-position: left 75%;
+    padding-left: 32px;
+    padding-top: 20px;
+    padding-bottom: 8px;
+}
+
+.sttjheader2 {
+    background-image: url(img/sttj.png);/*32x32*/
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+    background-position: left 75%;
+    padding-left: 28px;
+    padding-top: 17px;
+    padding-bottom: 7px;
+}
+
+.sttjheader3 {
+    background-image: url(img/sttj.png);/*32x32*/
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+    background-position: left 75%;
+    padding-left: 24px;
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+/*END MENUS BY SPAREN*/
+
+.sttjbiotable{/*Div*/
+
+}
+
+.sttjbiotablename{/*Table*/
+  border: 1px solid #AAAAAA;
+  background-color: #f9f9f9;
+  color: black;/*Color of the text*/
+  margin: 0.5em 0 0.5em 1em;
+  padding: 0.5em;
+  float: right;
+  clear: right;
+
+  text-align:left; 
+  font-size:88%; 
+  line-height:1.5em;
+  width: 300px;
+}
+
+.sttjbiotablenameheader{/*th*/
+  text-align:center; 
+  font-size:125%; 
+  font-weight:bold;
+  color: red;/*Color of the text*/
+  background: #DDEEFF;
+  border-radius: 3px 3px 0px 0px;
+}

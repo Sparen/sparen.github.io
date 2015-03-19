@@ -39,6 +39,7 @@
 <changefreq>weekly</changefreq>
 <priority>0.5</priority>
 </url>
+
 <url>
 <loc>http://sparen.github.io/ph3tutorials/ph3tutorials.html</loc>
 <changefreq>daily</changefreq>
@@ -119,6 +120,7 @@
 <changefreq>monthly</changefreq>
 <priority>0.8</priority>
 </url>
+
 <url>
 <loc>http://sparen.github.io/projects/projects.html</loc>
 <changefreq>monthly</changefreq>
@@ -162,6 +164,17 @@
 <url>
 <loc>http://sparen.github.io/projects/projectspmddnh_devlog.html</loc>
 <changefreq>daily</changefreq>
-<priority>0.4</priority>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://sparen.github.io/projects/seitentouji/index.html</loc>
+<changefreq>weekly</changefreq>
+<priority>0.1</priority>
+</url>
+<url>
+<loc>http://sparen.github.io/projects/seitentouji/bio_teiki.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.1</priority>
 </url>
 </urlset>
