@@ -22,13 +22,13 @@
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u1l7.html" title="Sparen's Danmakufu ph3 Tutorials - Attack Flow and Our First Spellcard">Unit 1 Lesson 7</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 6 - Firing our First Bullet</h1>              <p>The video for this lesson is my first ph3 script, Death Match in the Skies, chosen simply because it makes use of many very basic techniques combined with others.</p>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 6 - Firing our First Bullet</h1>	      <p>The video for this lesson is my first ph3 script, Death Match in the Skies, chosen simply because it makes use of many very basic techniques combined with others.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/TaJTB4qaaEc">
 	      <div style="width: 600px;" class="tutorialnav">
-                <h2 style="color:aqua">Table of Contents</h2>
-                <ul>
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
 	          <li><a href="#sub1">Part 1: How Do I Create a Blank Script?</a></li>
 	          <li><a href="#sub2">Part 2: How Do I Fill the Danmakufu Header?</a></li>
 	          <li><a href="#sub3">Part 3: How Do I Set the Boss Life, Spell Bonus and Timer?</a></li>
@@ -40,16 +40,16 @@
 	          <li><a href="#sub8">Part 8: How Do I Create a Bullet?</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>              <h2 style="color:yellow" id="sub1">Part 1: How Do I Create a Blank Script?</h2>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: How Do I Create a Blank Script?</h2>
 	      <p>Please note that the contents of this page are partially based off of <a target="_blank" href="ph3u1l3code1.html">the sample script first shown in Lesson 3</a>. However, it is to be used as a reference - all of the actual code construction will be done here in the tutorial. Helepolis also has a <a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc">video tutorial</a> that covers roughly the same material as this tutorial.</p>
-              <p>So now let's begin! First, enter your Danmakufu's script directory and create a folder - it's up to you what the name will be, but something along the lines of 'Tutorial' is best for now. Inside, create a blank text file (or .dnh file if you're using the Sublime Text syntax highlighter). Name it whatever you want as long as there is only English in the title - no accent marks, other diacritics, etc. In your Text Editor (Notepad/TextEdit/Gedit/Whatever), make sure that smart quotes are OFF. Also, turn autocorrect OFF (this is such a pain). However, you will want your text editor to catch spelling mistakes - in TextEdit (mac), it will catch things like CreaateShotA1 by giving you the red line underneath since 'Creaate' does not exist in its dictionary. As long as your text editor does not automatically correct the 'errors', it is fine and potentially helpful.</p>
-              <p>Now we will want to write our script! First, paste a near-blank header into your file.</p>
-                <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
+	      <p>So now let's begin! First, enter your Danmakufu's script directory and create a folder - it's up to you what the name will be, but something along the lines of 'Tutorial' is best for now. Inside, create a blank text file (or .dnh file if you're using the Sublime Text syntax highlighter). Name it whatever you want as long as there is only English in the title - no accent marks, other diacritics, etc. In your Text Editor (Notepad/TextEdit/Gedit/Whatever), make sure that smart quotes are OFF. Also, turn autocorrect OFF (this is such a pain). However, you will want your text editor to catch spelling mistakes - in TextEdit (mac), it will catch things like CreaateShotA1 by giving you the red line underneath since 'Creaate' does not exist in its dictionary. As long as your text editor does not automatically correct the 'errors', it is fine and potentially helpful.</p>
+	      <p>Now we will want to write our script! First, paste a near-blank header into your file.</p>
+	        <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title[]
 #Text[] </code></pre>
-              <p>After this, put the following below the header:</p>
-                <pre class="prettyprint"><code>@Event{
+	      <p>After this, put the following below the header:</p>
+	        <pre class="prettyprint"><code>@Event{
 }
 
 @Initialize{
@@ -57,8 +57,8 @@
 
 @MainLoop{
 }</code></pre>
-              <p>Look familiar? Make sure there are some line breaks between the header and @Event - we will be putting stuff there. However, note that since Danmakufu is based on C++, mkm uses C++ style braces: in other words, he does the following:</p>
-                <pre class="prettyprint"><code>@Event
+	      <p>Look familiar? Make sure there are some line breaks between the header and @Event - we will be putting stuff there. However, note that since Danmakufu is based on C++, mkm uses C++ style braces: in other words, he does the following:</p>
+	        <pre class="prettyprint"><code>@Event
 {
 }
 
@@ -69,16 +69,16 @@
 @MainLoop
 {
 }</code></pre>
-              <p>It's not very important to make this distinction this early, but do be aware that if you go into Java, you will use the former style and if you go into C++, you will use the latter (there are also conventions for whether you put spacing before braces, but few people in the Danmakufu community pay attention to that particular detail). Danmakufu does not see a difference.</p>
-              <p>Right now, our script looks pretty empty, right? But now we will fill it in.</p>
-              <h2 style="color:yellow" id="sub2">Part 2: How Do I Fill the Danmakufu Header?</h2>
-              <p>OK. So we already have the fact that this is a single down, as well as the script version. Now, for #Title and #Text.</p>
-              <p>It's really up to you what to put here. However, remember that they take strings, so everything needs to be in double quotes. For now, let's put the following in #Title: <code>"My First Danmakufu Script!"</code> and the following in #Text: <code>"Code by &lt; Your Name Here &gt;[r]My First Bullet!"</code></p>
-              <p>Now we can do stuff with the other header items if we want to. #Image and #BGM are the easiest to use, as they require a filepath and not much else. I will explain #BGM because it will make testing your script far more pleasant than with no bgm at all. Take a music file (.mp3 or .ogg) and dump it in the same directory as the script, and then in #BGM, put the following: "./nameofbgm.ogg" or "./nameofbgm.mp3", whichever you are using. If you do not know about OGG Vorbis sound files now, that is fine. Just be aware that as more people choose to loop music in Danmakufu, .ogg is quickly becoming the standard not only for intermediate and advanced scripters, but also newer scripters. I highly recommend using .ogg for all bgm in Danmakufu. I will go over how to use Audacity to export a .mp3 to an .ogg in a much later tutorial.</p>
-              <p>Now that the header is out of the way, it is time to begin filling our script with things that will allow it to run.</p>
-              <h2 style="color:yellow" id="sub3">Part 3: How Do I Set the Boss Life, Spell Bonus and Timer?</h2>
-              <p>At this stage, a complete explanation of @Event will most likely fly straight over your heads, but it is important to know that when certain processes happen, @Event is automatically called by Danmakufu, and depending on the arguments there when it is called, it will do various things such as spawning the boss magic circle, etc. Below is a sample @Event.</p>
-                <pre class="prettyprint"><code>@Event{
+	      <p>It's not very important to make this distinction this early, but do be aware that if you go into Java, you will use the former style and if you go into C++, you will use the latter (there are also conventions for whether you put spacing before braces, but few people in the Danmakufu community pay attention to that particular detail). Danmakufu does not see a difference.</p>
+	      <p>Right now, our script looks pretty empty, right? But now we will fill it in.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: How Do I Fill the Danmakufu Header?</h2>
+	      <p>OK. So we already have the fact that this is a single down, as well as the script version. Now, for #Title and #Text.</p>
+	      <p>It's really up to you what to put here. However, remember that they take strings, so everything needs to be in double quotes. For now, let's put the following in #Title: <code>"My First Danmakufu Script!"</code> and the following in #Text: <code>"Code by &lt; Your Name Here &gt;[r]My First Bullet!"</code></p>
+	      <p>Now we can do stuff with the other header items if we want to. #Image and #BGM are the easiest to use, as they require a filepath and not much else. I will explain #BGM because it will make testing your script far more pleasant than with no bgm at all. Take a music file (.mp3 or .ogg) and dump it in the same directory as the script, and then in #BGM, put the following: "./nameofbgm.ogg" or "./nameofbgm.mp3", whichever you are using. If you do not know about OGG Vorbis sound files now, that is fine. Just be aware that as more people choose to loop music in Danmakufu, .ogg is quickly becoming the standard not only for intermediate and advanced scripters, but also newer scripters. I highly recommend using .ogg for all bgm in Danmakufu. I will go over how to use Audacity to export a .mp3 to an .ogg in a much later tutorial.</p>
+	      <p>Now that the header is out of the way, it is time to begin filling our script with things that will allow it to run.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Set the Boss Life, Spell Bonus and Timer?</h2>
+	      <p>At this stage, a complete explanation of @Event will most likely fly straight over your heads, but it is important to know that when certain processes happen, @Event is automatically called by Danmakufu, and depending on the arguments there when it is called, it will do various things such as spawning the boss magic circle, etc. Below is a sample @Event.</p>
+	        <pre class="prettyprint"><code>@Event{
 	alternative(GetEventType())
 	case(EV_REQUEST_LIFE){
 		SetScriptResult(500);
@@ -90,42 +90,42 @@
 		SetScriptResult(1000000);
 	}
 }</code></pre>
-              <p>EV_REQUEST_LIFE is the boss's life - this event is called once at the start of the Single, and will set the boss's life to 500. EV_REQUEST_TIMER is the timer for how long the attack will run for, and EV_REQUEST_SPELL_SCORE is called when you declare a spellcard (we will get into this later). It sets the starting Spellcard Bonus.</p>
-              <h2 style="color:yellow" id="sub4">Part 4: How Do I Create and Register the Boss?</h2>
-              <p>As of now, we have no boss! Therefore, we must remedy this.</p>
-              <p>Firstly, between the header and @Event, we will want to create a global variable called objBoss. basically, write <code>let objBoss;</code> on a line between the header and @Event. After this, we will turn to @Initialize.</p>
-              <p>Remember that @Initialize runs only once at the start of a script. Also recall that anything declared as a global variable can be accessed by anything in the script. Therefore, at the top of @Initialize, we will write the following:</p>
-                <pre class="prettyprint"><code>@Initialize{
+	      <p>EV_REQUEST_LIFE is the boss's life - this event is called once at the start of the Single, and will set the boss's life to 500. EV_REQUEST_TIMER is the timer for how long the attack will run for, and EV_REQUEST_SPELL_SCORE is called when you declare a spellcard (we will get into this later). It sets the starting Spellcard Bonus.</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Create and Register the Boss?</h2>
+	      <p>As of now, we have no boss! Therefore, we must remedy this.</p>
+	      <p>Firstly, between the header and @Event, we will want to create a global variable called objBoss. basically, write <code>let objBoss;</code> on a line between the header and @Event. After this, we will turn to @Initialize.</p>
+	      <p>Remember that @Initialize runs only once at the start of a script. Also recall that anything declared as a global variable can be accessed by anything in the script. Therefore, at the top of @Initialize, we will write the following:</p>
+	        <pre class="prettyprint"><code>@Initialize{
 	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
 	ObjEnemy_Regist(objBoss);</code></pre>
-              <p>The first line assigns the variable objBoss with a value - an object ID belonging to a brand new Enemy object, more specifically a boss. The next line registers the Enemy object. You must register certain objects, such as enemies.</p>
-              <p>However, we do not have any graphic for the boss! From the sample folder, copy ExRumia.png to the current folder. Below the Enemy Register code, place the following:</p>
-              <pre class="prettyprint"><code>	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+	      <p>The first line assigns the variable objBoss with a value - an object ID belonging to a brand new Enemy object, more specifically a boss. The next line registers the Enemy object. You must register certain objects, such as enemies.</p>
+	      <p>However, we do not have any graphic for the boss! From the sample folder, copy ExRumia.png to the current folder. Below the Enemy Register code, place the following:</p>
+	      <pre class="prettyprint"><code>	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
 	ObjPrim_SetTexture(objBoss, imgExRumia);
 	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
 	ObjSprite2D_SetDestCenter(objBoss);</code></pre>
-              <p>We will go into animations later, but for now, we will use a default image. The first line assigns  new variable imgExRumia the path to the graphic. GetCurrentScriptDirectory() is a function that returns a string containing the path to the current directory, and it is concatenated to whatever comes after the ~, as discussed in an earlier lesson. After this, ObjPrim_SetTexture() assigns the image in that path to the Boss object, essentially giving it a graphic. ObjSprite2D_SetSourceRect() states which part of the texture to use (note that it is not 64, 0, 128, 64 - this is one of the most infuriating things in Danmakufu, and you have to deal with it. The top and right edges behave differently from the other two. We will eventually get into this when we deal with animations and image rendering). Finally, ObjSprite2D_SetDestRect() tells Danmakufu to center the graphic for the Boss object.</p>
-              <p>However, our boss has been spawned at (0,0), the top left corner of the screen. Now, how do we move it?</p>
-              <h2 style="color:yellow" id="sub5">Part 5: How Do I Move the Boss?</h2>
-              <p>In Danmakufu, an important thing to note is that objects can be acted upon by multiple object functions. For example, an enemy object can be acted upon by ObjMove, ObjRender, etc. functions. As such, we are not limited to only one set of functions, and we will be using ObjMove functions to move the boss. The boss graphic will automatically stay on the boss object's location, although you can move the graphic without moving the boss.</p>
-              <p>In the end, it will be up to you to learn the various ObjMove functions. There are, of course, a few important things to note. Firstly, the default playing screen is 384 by 448 pixels, the values returned by GetStgFrameWidth and GetStgFrameHeight, respectively. Also, the origin is the top left corner of the playing field for objects whose render priorities are between 0.20 and 0.80, not including 0.80. And then, the ugly reality that as you go down the screen, the y value increases. Just keep that in mind, because it is a common source of infuriation for newer scripters.</p>
-              <p>Please add these two functions to your function library, or place them somewhere in your script, preferably after @MainLoop. Also add wait(), because it will be helpful.</p>
-              <pre class="prettyprint"><code> function GetCenterX{
+	      <p>We will go into animations later, but for now, we will use a default image. The first line assigns  new variable imgExRumia the path to the graphic. GetCurrentScriptDirectory() is a function that returns a string containing the path to the current directory, and it is concatenated to whatever comes after the ~, as discussed in an earlier lesson. After this, ObjPrim_SetTexture() assigns the image in that path to the Boss object, essentially giving it a graphic. ObjSprite2D_SetSourceRect() states which part of the texture to use (note that it is not 64, 0, 128, 64 - this is one of the most infuriating things in Danmakufu, and you have to deal with it. The top and right edges behave differently from the other two. We will eventually get into this when we deal with animations and image rendering). Finally, ObjSprite2D_SetDestRect() tells Danmakufu to center the graphic for the Boss object.</p>
+	      <p>However, our boss has been spawned at (0,0), the top left corner of the screen. Now, how do we move it?</p>
+	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Move the Boss?</h2>
+	      <p>In Danmakufu, an important thing to note is that objects can be acted upon by multiple object functions. For example, an enemy object can be acted upon by ObjMove, ObjRender, etc. functions. As such, we are not limited to only one set of functions, and we will be using ObjMove functions to move the boss. The boss graphic will automatically stay on the boss object's location, although you can move the graphic without moving the boss.</p>
+	      <p>In the end, it will be up to you to learn the various ObjMove functions. There are, of course, a few important things to note. Firstly, the default playing screen is 384 by 448 pixels, the values returned by GetStgFrameWidth and GetStgFrameHeight, respectively. Also, the origin is the top left corner of the playing field for objects whose render priorities are between 0.20 and 0.80, not including 0.80. And then, the ugly reality that as you go down the screen, the y value increases. Just keep that in mind, because it is a common source of infuriation for newer scripters.</p>
+	      <p>Please add these two functions to your function library, or place them somewhere in your script, preferably after @MainLoop. Also add wait(), because it will be helpful.</p>
+	      <pre class="prettyprint"><code> function GetCenterX{
      return GetStgFrameWidth/2;
  }
  function GetCenterY{
      return GetStgFrameHeight/2;
  }</code></pre>
-              <p>These two functions are very helpful for maintaining sanity. Now we will move the boss.</p>
-              <p>While it is possible to simply use ObjMove_SetX() or ObjMove_SetY(), be aware that this will effectively teleport the boss, and the player will have to move to the new location. And no. Warping every 30 frames is annoying, not fun. Thankfully, there is ObjMove_SetDestAtFrame(), which I will be showcasing now.</p>
-              <p>After setting the starting graphic for your boss but before the end of @Initialize, include the following:</p>
-              <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);</code></pre>
-              <p>This code will tell the boss object to move to the location (GetCenterX(), 60) in 60 frames, which is pretty close to the top of the screen. Either way, this should look significantly better than teleporting the boss.</p>
-              <p>And of course, now we want to leave @Initialize for what lies beyond...</p>
+	      <p>These two functions are very helpful for maintaining sanity. Now we will move the boss.</p>
+	      <p>While it is possible to simply use ObjMove_SetX() or ObjMove_SetY(), be aware that this will effectively teleport the boss, and the player will have to move to the new location. And no. Warping every 30 frames is annoying, not fun. Thankfully, there is ObjMove_SetDestAtFrame(), which I will be showcasing now.</p>
+	      <p>After setting the starting graphic for your boss but before the end of @Initialize, include the following:</p>
+	      <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);</code></pre>
+	      <p>This code will tell the boss object to move to the location (GetCenterX(), 60) in 60 frames, which is pretty close to the top of the screen. Either way, this should look significantly better than teleporting the boss.</p>
+	      <p>And of course, now we want to leave @Initialize for what lies beyond...</p>
 	      <div class="tut_checkpoint">CHECKPOINT: What are the default dimensions of the playing field?</div>
-              <h2 style="color:yellow" id="cp1">Checkpoint</h2>
-              <p>This is our script as of right now, for future reference:</p>
-              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
+	      <h2 style="color:yellow" id="cp1">Checkpoint</h2>
+	      <p>This is our script as of right now, for future reference:</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -169,16 +169,16 @@ function GetCenterY{
 function wait(n){
      loop(n){yield;}
 }</code></pre>
-              <h2 style="color:yellow" id="sub6">Part 6: How Do I Create a Boss Hitbox?</h2>
-              <p>So now we have quite a bit of code! However, our @MainLoop is empty - we will now begin to fill it, first by giving the boss a hitbox.</p>
-              <p>In Danmakufu, there are two types of enemy hitboxes - one registers collision with the player, and the other registers collisions with player shots. You can also manually create hitboxes for other types of collisions. The primary two functions you will use are the following: <code>ObjEnemy_SetIntersectionCircleToShot()</code> and <code>ObjEnemy_SetIntersectionCircleToPlayer()</code>. Their names basically describe what they do. They require 4 arguments each - the first is the object ID of the enemy to damage. The next two are the x and y positions to set the hitbox - yes, this means you can have a hitbox somewhere other than directly on top of the boss. If you want to use the boss's position, use <code>ObjMove_GetX(objBoss)</code> and <code>ObjMove_GetY(objBoss)</code>. The final argument is the radius of the hitbox, measured in pixels. 32 and 24 for shot and player respectively are the hitbox sizes shown in the sample scripts. You can do whatever you want, but just keep in mind that you will usually want the player collision hitbox to be smaller than the shot collision hitbox.</p>
-              <p>Simply put these two functions inside @MainLoop - enemy collision hotboxes will reset after each frame, and by putting this in @MainLoop, it will automatically set itself to the enemy's position as long as you are using the <code>ObjMove_GetX()</code> and <code>ObjMove_GetY()</code> functions.</p>
-              <p>As a last note, put a yield; at the end of your @MainLoop. Tasks will not run if you do not have a yield; in @MainLoop.</p>
+	      <h2 style="color:yellow" id="sub6">Part 6: How Do I Create a Boss Hitbox?</h2>
+	      <p>So now we have quite a bit of code! However, our @MainLoop is empty - we will now begin to fill it, first by giving the boss a hitbox.</p>
+	      <p>In Danmakufu, there are two types of enemy hitboxes - one registers collision with the player, and the other registers collisions with player shots. You can also manually create hitboxes for other types of collisions. The primary two functions you will use are the following: <code>ObjEnemy_SetIntersectionCircleToShot()</code> and <code>ObjEnemy_SetIntersectionCircleToPlayer()</code>. Their names basically describe what they do. They require 4 arguments each - the first is the object ID of the enemy to damage. The next two are the x and y positions to set the hitbox - yes, this means you can have a hitbox somewhere other than directly on top of the boss. If you want to use the boss's position, use <code>ObjMove_GetX(objBoss)</code> and <code>ObjMove_GetY(objBoss)</code>. The final argument is the radius of the hitbox, measured in pixels. 32 and 24 for shot and player respectively are the hitbox sizes shown in the sample scripts. You can do whatever you want, but just keep in mind that you will usually want the player collision hitbox to be smaller than the shot collision hitbox.</p>
+	      <p>Simply put these two functions inside @MainLoop - enemy collision hotboxes will reset after each frame, and by putting this in @MainLoop, it will automatically set itself to the enemy's position as long as you are using the <code>ObjMove_GetX()</code> and <code>ObjMove_GetY()</code> functions.</p>
+	      <p>As a last note, put a yield; at the end of your @MainLoop. Tasks will not run if you do not have a yield; in @MainLoop.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: What is the shape of the hitbox created by <code>ObjEnemy_SetIntersectionCircleToShot()</code>?</div>
-              <h2 style="color:yellow" id="sub7">Part 7: How Do I Close the Script?</h2>
-              <p>Right now our script does practically nothing since all it does is create a boss and move it to a location (and then allow it to be shot down). However, we need to be able to close the script in order to complete a solid complete framework for our script.</p>
-              <p>In the sample scripts that come with Danmakufu, there is a portion of @MainLoop that basically runs only when the boss's life falls below or equal to 0. However, that adds clutter to @MainLoop. Therefore, we will call a task TFinalize; at the end of @Initialize.</p>
-              <pre class="prettyprint"><code>    task TFinalize {
+	      <h2 style="color:yellow" id="sub7">Part 7: How Do I Close the Script?</h2>
+	      <p>Right now our script does practically nothing since all it does is create a boss and move it to a location (and then allow it to be shot down). However, we need to be able to close the script in order to complete a solid complete framework for our script.</p>
+	      <p>In the sample scripts that come with Danmakufu, there is a portion of @MainLoop that basically runs only when the boss's life falls below or equal to 0. However, that adds clutter to @MainLoop. Therefore, we will call a task TFinalize; at the end of @Initialize.</p>
+	      <pre class="prettyprint"><code>    task TFinalize {
         while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
 	Obj_Delete(objBoss);
 	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
@@ -186,36 +186,36 @@ function wait(n){
 	CloseScript(GetOwnScriptID());
 	return;
     }</pre></code>
-              <p>While the boss's life is greater than 0, this task will do nothing. However, the moment the boss's HP drops to 0 or below, the boss object will delete, every enemy shot on screen will be deleted, and the script will close. The use of return; at the end does nothing and is not needed, although it is in the sample scripts.</p>
-              <p>There is also <code>SetAutoDeleteObject();</code>, which defaults to false. When true, all objects spawned in the script will be deleted at the very end. Since many function libraries assume that it is set to true (and indeed, most scripters in the western Danmakufu community set it to true), I recommend that you use it. It clears up a number of things. There are issues with it, of course, but we will get into that when we discuss items in a much later tutorial.</p>
-              <p>With this, our script can end. So now... it's time to shoot our bullets!</p>
+	      <p>While the boss's life is greater than 0, this task will do nothing. However, the moment the boss's HP drops to 0 or below, the boss object will delete, every enemy shot on screen will be deleted, and the script will close. The use of return; at the end does nothing and is not needed, although it is in the sample scripts.</p>
+	      <p>There is also <code>SetAutoDeleteObject();</code>, which defaults to false. When true, all objects spawned in the script will be deleted at the very end. Since many function libraries assume that it is set to true (and indeed, most scripters in the western Danmakufu community set it to true), I recommend that you use it. It clears up a number of things. There are issues with it, of course, but we will get into that when we discuss items in a much later tutorial.</p>
+	      <p>With this, our script can end. So now... it's time to shoot our bullets!</p>
 	      <div class="tut_exercise">EXERCISE: Write out the code that has been covered above. Don't copy and paste - write it out yourself. Use this to practice tabbing and make sure to add your semicolons;</div>
-              <h2 style="color:yellow" id="quiz1">Quiz: Script Structure and Coordinate Systems</h2>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Script Structure and Coordinate Systems</h2>
 	        <!--Quiz start.-->
 		<p>Raiko tries to move her drum down towards the middle of the screen. However, it flies from (0,0) upwards.</p>
-                <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, -60, 60);</code></pre>
+	        <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, -60, 60);</code></pre>
 		<p>1) Why does the drum fly upwards?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'B', 5);">
-                <input type="RADIO" value="A" name="cc">
-                A. By moving to GetCenterX, the drum moves up<br>
-                <input type="RADIO" value="B" name="cc">
-                B. In Danmakufu, the negative y direction is upwards rather than downwards<br>
-                <input type="RADIO" value="C" name="cc">
-                C. The drum takes 60 frames to move<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 5);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. By moving to GetCenterX, the drum moves up<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. In Danmakufu, the negative y direction is upwards rather than downwards<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. The drum takes 60 frames to move<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>2) What code will fix the issue?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'A', 5);">
-                <input type="RADIO" value="A" name="cc">
-                A. <code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, 60, 60);</code><br>
-                <input type="RADIO" value="B" name="cc">
-                B. <code>ObjMove_SetDestAtFrame(objDrum, 0, -60, 60);</code><br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 5);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, 60, 60);</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. <code>ObjMove_SetDestAtFrame(objDrum, 0, -60, 60);</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>Now Raiko cannot seem to get her hitbox to work.</p>
-                <pre class="prettyprint"><code>@Initialize{
+	        <pre class="prettyprint"><code>@Initialize{
 	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
 	ObjEnemy_Regist(objBoss);
 	let imgRaiko = GetCurrentScriptDirectory ~ "Raiko.png";
@@ -230,58 +230,58 @@ function wait(n){
 @MainLoop{
 }</code></pre>
 		<p>3) Why does the hitbox not spawn?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'C', 6);">
-                <input type="RADIO" value="A" name="cc">
-                A. There is no yield; in @MainLoop<br>
-                <input type="RADIO" value="B" name="cc">
-                B. The boss hitbox has not been declared at all<br>
-                <input type="RADIO" value="C" name="cc">
-                C. <code>ObjEnemy_SetIntersectionCircleToShot()</code> and <code>ObjEnemy_SetIntersectionCircleToPlayer()</code> need to be called each frame<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <h2 style="color:yellow" id="sub8">Part 8: How Do I Create a Bullet?</h2>
-              <p>It's what you've all been waiting for! Creating bullets! However... we are now entering an area where coding style comes into play.</p>
-              <p>There are multiple ways to do what we want to do here. There is a tasking style (very commonly used), a @MainLoop style (less commonly used), and countless others. I will show the tasking style, the @MainLoop style, and my own style, the last of the three simply because I will be using my own style and/or the tasking style for the rest of the tutorials so it is best if you are able to read both.</p>
-              <p>We will begin with the most generic bullet function, <code>CreateShotA1(x, y, speed, angle, graphic, delay);</code>. The x and y positions are the starting coordinates for the bullet. You may also use <code>let obj = CreateShotA1();</code> to transform the bullet later, but that will be covered later. For now, we will discuss spawning a bullet every thirty frames, first in tasking style. But first, add the following below your Danmakufu Header:</p>
-              <pre class="prettyprint"><code>#include"script/default_system/Default_ShotConst.txt"</code></pre>
-              <p>This will include the default shotsheet with the script so that we can have bullet graphics. Don't worry about the include now - just be aware that the file contains a list of shot constants that will make it easier to figure out which bullet we are firing. I personally do not use shot constants, preferring to simply load a shotsheet and use numbers, but for this lesson, I will demonstrate with the shot constants.</p>
-              <p>Remember TFinalize? Now we will create a task called MainTask; and call it in @Initialize. In MainTask, we will first insert a <code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 6);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. There is no yield; in @MainLoop<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. The boss hitbox has not been declared at all<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. <code>ObjEnemy_SetIntersectionCircleToShot()</code> and <code>ObjEnemy_SetIntersectionCircleToPlayer()</code> need to be called each frame<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="sub8">Part 8: How Do I Create a Bullet?</h2>
+	      <p>It's what you've all been waiting for! Creating bullets! However... we are now entering an area where coding style comes into play.</p>
+	      <p>There are multiple ways to do what we want to do here. There is a tasking style (very commonly used), a @MainLoop style (less commonly used), and countless others. I will show the tasking style, the @MainLoop style, and my own style, the last of the three simply because I will be using my own style and/or the tasking style for the rest of the tutorials so it is best if you are able to read both.</p>
+	      <p>We will begin with the most generic bullet function, <code>CreateShotA1(x, y, speed, angle, graphic, delay);</code>. The x and y positions are the starting coordinates for the bullet. You may also use <code>let obj = CreateShotA1();</code> to transform the bullet later, but that will be covered later. For now, we will discuss spawning a bullet every thirty frames, first in tasking style. But first, add the following below your Danmakufu Header:</p>
+	      <pre class="prettyprint"><code>#include"script/default_system/Default_ShotConst.txt"</code></pre>
+	      <p>This will include the default shotsheet with the script so that we can have bullet graphics. Don't worry about the include now - just be aware that the file contains a list of shot constants that will make it easier to figure out which bullet we are firing. I personally do not use shot constants, preferring to simply load a shotsheet and use numbers, but for this lesson, I will demonstrate with the shot constants.</p>
+	      <p>Remember TFinalize? Now we will create a task called MainTask; and call it in @Initialize. In MainTask, we will first insert a <code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
 }</code></p>
-              <p>Inside the braces we will do the following:</p>
-              <pre class="prettyprint"><code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+	      <p>Inside the braces we will do the following:</p>
+	      <pre class="prettyprint"><code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
     wait(30);
 }</code></pre>
-              <p>In this while loop, we first declare a variable angleT to hold the angle from the boss to the player, given by the function <code>GetAngleToPlayer();</code>. After this, we fire a shot from the boss's position with speed 2, angle towards the player. Its graphic is DS_BALL_S_RED, a small red ball, and there are 5 delay frames before the bullet materializes and can damage the player. After this, the task waits 30 frames before checking the boss's life and looping through this again.</p>
-              <p>Now I will show the @MainLoop style. First, you will want to define a global variable count (or frame, but I prefer count) after the shotsheet include, and set it to 0. Then, in @MainLoop, you will add the following after the hitbox declaration and before the yield;:</p>
-              <pre class="prettyprint"><code>  if(count == 30){
+	      <p>In this while loop, we first declare a variable angleT to hold the angle from the boss to the player, given by the function <code>GetAngleToPlayer();</code>. After this, we fire a shot from the boss's position with speed 2, angle towards the player. Its graphic is DS_BALL_S_RED, a small red ball, and there are 5 delay frames before the bullet materializes and can damage the player. After this, the task waits 30 frames before checking the boss's life and looping through this again.</p>
+	      <p>Now I will show the @MainLoop style. First, you will want to define a global variable count (or frame, but I prefer count) after the shotsheet include, and set it to 0. Then, in @MainLoop, you will add the following after the hitbox declaration and before the yield;:</p>
+	      <pre class="prettyprint"><code>  if(count == 30){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
     count = 0;
   }
   count++;</code></pre>
-              <p>Basically, you increment your counter until it hits 30, then execute the bullet spawning and reset the counter</p>
-              <p>Note that in plural scripts and the like, this will need to be changed slightly to account for the fact that the bullets will still shoot if the boss is dead. I will describe a countermeasure below.</p>
-              <p>Finally, I will discuss my coding method, which is similar to the @MainLoop method. The main difference is that I do not reset the counter and instead use a modulus. The @MainLoop code I insert between the hitboxes and yield; is similar to the following:</p>
-              <pre class="prettyprint"><code>  if(count%30==0){
+	      <p>Basically, you increment your counter until it hits 30, then execute the bullet spawning and reset the counter</p>
+	      <p>Note that in plural scripts and the like, this will need to be changed slightly to account for the fact that the bullets will still shoot if the boss is dead. I will describe a countermeasure below.</p>
+	      <p>Finally, I will discuss my coding method, which is similar to the @MainLoop method. The main difference is that I do not reset the counter and instead use a modulus. The @MainLoop code I insert between the hitboxes and yield; is similar to the following:</p>
+	      <pre class="prettyprint"><code>  if(count%30==0){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
   }
   count++;</code></pre>
-              <p>When the count is a multiple of 30, the code inside the braces will execute. All three methods are functionally similar. However, I will now describe good habits and how to robustify the code. For the tasking code, there is a check after the wait for whether or not the boss is alive, but this is not the case for the other two methods. Therefore, we will do the following:</p>
-              <p>First, we will create a task called fire;. It will contain the following:</p>
-              <pre class="prettyprint"><code>  task fire{
+	      <p>When the count is a multiple of 30, the code inside the braces will execute. All three methods are functionally similar. However, I will now describe good habits and how to robustify the code. For the tasking code, there is a check after the wait for whether or not the boss is alive, but this is not the case for the other two methods. Therefore, we will do the following:</p>
+	      <p>First, we will create a task called fire;. It will contain the following:</p>
+	      <pre class="prettyprint"><code>  task fire{
     if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}//Default kill to prevent (0,0) spawning
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
   }</code></pre>
-              <p>We will call fire; instead of the two lines defining the angleT local variable and calling the bullet. Now, the bullets will not spawn if the boss happens to be dead and the script is still running due to the return; following a check for the boss's life. You will see this line of code plastered everywhere in my scripts - it is very much my most often copy-pasted line of code in ph3.</p>
-              <p>Well, now we have a boss that fires a bullet. To conclude this lesson, I will show the scripts we have devised in their entirety.</p>
+	      <p>We will call fire; instead of the two lines defining the angleT local variable and calling the bullet. Now, the bullets will not spawn if the boss happens to be dead and the script is still running due to the return; following a check for the boss's life. You will see this line of code plastered everywhere in my scripts - it is very much my most often copy-pasted line of code in ph3.</p>
+	      <p>Well, now we have a boss that fires a bullet. To conclude this lesson, I will show the scripts we have devised in their entirety.</p>
 	      <div class="tut_exercise">EXERCISE: Once again, write out the code that has been covered above. Experiment with the bullet graphics (see default_system/Default_ShotConst.txt for a list of predetermined ones), as well as speeds and angles.</div>
-              <h2 style="color:yellow" id="cp2">Checkpoint - Tasking</h2>
-              <p>Tasking style</p>
-              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
+	      <h2 style="color:yellow" id="cp2">Checkpoint - Tasking</h2>
+	      <p>Tasking style</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -350,9 +350,9 @@ function GetCenterY{
 function wait(n){
      loop(n){yield;}
 }</code></pre>
-              <h2 style="color:yellow" id="cp3">Checkpoint - @MainLoop</h2>
-              <p>@MainLoop style</p>
-              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
+	      <h2 style="color:yellow" id="cp3">Checkpoint - @MainLoop</h2>
+	      <p>@MainLoop style</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -424,9 +424,9 @@ function GetCenterY{
 function wait(n){
      loop(n){yield;}
 }</code></pre>
-              <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
-              <p>Sparen style</p>
-              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
+	      <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
+	      <p>Sparen style</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -497,10 +497,10 @@ function GetCenterY{
 function wait(n){
      loop(n){yield;}
 }</code></pre>
-              <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Highly recommended if you have not yet watched it</p>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=IAJTT0zOepw" title="Helepolis's Improving our boss and danmaku">[ 弾幕風 PH3 Tutorial ] Improving our boss and danmaku</a> (Helepolis)<br>--&gt;Covers things that were also covered in this tutorial.</p>
-              <br>            </div>          </div>
+	      <br>            </div>          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l5.html" title="Sparen's Danmakufu ph3 Tutorials - Danmakufu Syntax, Structures, and Operations Part 2">Unit 1 Lesson 5</a></li>
@@ -509,7 +509,7 @@ function wait(n){
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

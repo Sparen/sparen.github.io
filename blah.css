@@ -7,59 +7,39 @@ table{
   border-collapse:collapse;
   border-spacing:0;
 }
-fieldset,img{
-  border:0;
-}
+fieldset,img{border:0;}
 address,caption,cite,code,dfn,em,strong,th,var{
   font-style:normal;
   font-weight:normal;
 }
-li{
-  list-style:none;
-}
+li{list-style:none;}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
-caption,th{
-  text-align:left;
-}
+caption,th{text-align:left;}
 h1,h2,h3,h4,h5,h6{
   font-size:100%;
   font-weight:normal;
 }
-q:before,q:after{
-  content:'';
-}
+q:before,q:after{content:'';}
 abbr,acronym{
   border:0;
   font-variant:normal;
 }
-sup{
-  vertical-align:text-top;
-}
-sub{
-  vertical-align:text-bottom;
-}
+sup{vertical-align:text-top;}
+sub{vertical-align:text-bottom;}
 input,textarea,select{
   font-family:inherit;
   font-size:inherit;
   font-weight:inherit;
 }
-input,textarea,select{
-  font-size:100%;
-}
-legend{
-  color:#000;
-}
-del,ins{
-  text-decoration:none;
-}
+input,textarea,select{font-size:100%;}
+legend{color:#000;}
+del,ins{text-decoration:none;}
 body{/*Font size: The /1.25 refers to the spacing between lines*/
   font:13.5px/1.25 arial,helvetica,clean,sans-serif;
-  /*font-size:small;*/
-  /*font:x-small;*/
 }
 select,input,button,textarea{
   font:99% arial,helvetica,clean,sans-serif;
@@ -73,9 +53,7 @@ pre,code,kbd,samp,tt{
   font-size:94%;
   line-height:100%;
 }
-body{
-  text-align:center;
-}
+body{text-align:center;}
 
 /* START animated spoiler CSS by Bloggersentral.com */
 .spoilerbutton {display:block;margin:5px 0;}
@@ -85,22 +63,12 @@ body{
 .spoilerbutton[value="Hide"] + .spoiler {padding:0px;}
 /* END animated spoiler CSS by Bloggersentral.com */
 
-/*unvisited link*/
-a:link{
-  color:rgb(192,255,255);
-}
-/* visited link */
-a:visited {
-  color:rgb(50,200,200);
-}
-/* mouse over link */
-a:hover {
-  color:rgb(82,235,251);
-}
+a:link{color:rgb(192,255,255);}
+a:visited {color:rgb(50,200,200);}
+a:hover {color:rgb(82,235,251);}
 
-#ft{
-  clear:both;
-}#top{
+#ft{clear:both;}
+#top{
   margin:auto;
   text-align:left;
   width:57.69em;
@@ -126,42 +94,30 @@ a:hover {
     flex-wrap: wrap;
 }
 
-h1 {  
-  font-size: 138.5%;
-}
-h2 {  
-  font-size: 123.1%;
-}
-h3 {  
-  font-size: 108%;
-}
+h1 {font-size: 138.5%;}
+h2 {font-size: 123.1%;}
+h3 {font-size: 108%;}
 h1, h2, h3 {  
   margin-top: 1em;  
   margin-right: 0px;  
   margin-bottom: 1em;  
   margin-left: 0px;
 }
-h1, h2, h3, h4, h5, h6, strong {  
-  font-weight: bold;
-}
+h1, h2, h3, h4, h5, h6, strong {font-weight: bold;}
 abbr, acronym {  
   border-bottom-width: 1px;  
   border-bottom-style: dotted;  
   border-bottom-color: black;  
   cursor: help;
 }
-em {  
-  font-style: italic;
-}
+em {font-style: italic;}
 blockquote, ul, ol, dl {  
   margin-top: 1em;  
   margin-right: 1em;  
   margin-bottom: 1em;  
   margin-left: 1em;
 }
-ol, ul, dl {  
-  margin-left: 2em;
-}
+ol, ul, dl {margin-left: 2em;}
 ol li {  
   list-style-type: decimal;  
   list-style-position: outside;  
@@ -172,9 +128,7 @@ ul li {
   list-style-position: outside;  
   list-style-image: none;
 }
-dl dd {  
-  margin-left: 1em;
-}
+dl dd {margin-left: 1em;}
 th, td {  
   border-top-width: 1px;  
   border-right-width: 1px;  
@@ -201,12 +155,8 @@ caption {
   margin-bottom: 0.5em;  
   text-align: center;
 }
-p, fieldset, table, pre {  
-  margin-bottom: 1em;
-}
-input[type="text"], input[type="password"], textarea {  
-  width: 12.25em; 
-}
+p, fieldset, table, pre {margin-bottom: 1em;}
+input[type="text"], input[type="password"], textarea {width: 12.25em; }
 
 /*TUTORIAL ASSIST BY SPAREN*/
 .tut_exercise{
@@ -225,14 +175,14 @@ input[type="text"], input[type="password"], textarea {
 }
 
 /*MENUS BY SPAREN. PLACED AT BOTTOM IN ORDER TO OVERRIDE ALL DEFAULTS*/
-#menubar{/*code taken from w3schools. Used to move and position the menubar.*/
+#menubar{/*Move and position the menubar.*/
   width: 154px;
   float: left;
   content:".";
   display:block;
   height:0;
   clear:both;
-  position:relative;/*This and the Z index line I assume move this div above the div that is covering it?*/
+  position:relative;/*This and the Z index line move this div above the div that is covering it*/
   z-index:100;
 }
 #menubar ul{

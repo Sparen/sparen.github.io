@@ -22,13 +22,13 @@
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u1l9.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Lasers">Unit 1 Lesson 9</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 8 - Introduction to Shotsheets and Bullet Properties</h1>              <p>The video for this lesson is Infinite Ultima Wave's Christmas Letty script, one of the scripts I remember very fondly. It's quite good and despite all the red and yellow bullets, the bullet graphics chosen seem to fit Letty very well.</p>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 8 - Introduction to Shotsheets and Bullet Properties</h1>	      <p>The video for this lesson is Infinite Ultima Wave's Christmas Letty script, one of the scripts I remember very fondly. It's quite good and despite all the red and yellow bullets, the bullet graphics chosen seem to fit Letty very well.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/mF1NHOKhUoc">
 	      <div style="width: 600px;" class="tutorialnav">
-                <h2 style="color:aqua">Table of Contents</h2>
-                <ul>
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
 	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
 	          <li><a href="#sub2">Part 2: What are Shotsheets and Shot Constant Sheets?</a></li>
 	          <li><a href="#sub3">Part 3: What are the Properties of a Shot in a Shotsheet?</a></li>
@@ -39,10 +39,10 @@
 	          <li><a href="#quiz1">Quiz: Bullet Properties</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>With such an ambiguous lesson title, you are probably wondering what I will be covering in this lesson. Put simply, I will introduce shotsheets as well as blend types, and will be explaining in detail the properties of bullets, including many of the ObjMove and ObjRender functions for bullets.</p>
 	      <p>Although seemingly disjoint from the rest of the tutorials, I will be providing basic information on graphics in Danmakufu, and will also explain how I (and quite a few other) danmakufu scripters choose to load our shotsheets.</p>
-              <h2 style="color:yellow" id="sub2">Part 2: What are Shotsheets and Shot Constant Sheets?</h2>
+	      <h2 style="color:yellow" id="sub2">Part 2: What are Shotsheets and Shot Constant Sheets?</h2>
 	      <p>By now, you should be familiar with the presence of <code>#include"script/default_system/Default_ShotConst.txt"</code> at the top of our Single scripts. If you remove this while firing shots in the script, you will get errors stating that some final constant in all caps has not been defined. Here I will provide a brief explanation for how this works, as well as shotsheets themselves.</p>
 	      <p>In Touhou Danmakufu 0.12m, there were these things called 'shot replace' images that would override the default shotsheets, or you could use your own shotsheet. However, ph3 came along, and shot replace images are now outdated and there is no reason to use them. If you do in fact do a shot replace by replacing the image in the default system, that's perfectly fine - you just can't force someone else to do the same because you are overriding the defaults. And in fact, there is no need to because shotsheets in ph3 are significantly better than in 0.12m and should be used regardless.</p>
 	      <p>First we will observe the Default_ShotConst.txt file in the default system, which is a shot constant file we have included. An include basically takes the contents of the included file and spills them into the script calling #include,  specifically at the place where the #include was. If we look inside this file, it states a path to Default_ShotData.txt and then loads the enemy shot data using <code>LoadEnemyShotData()</code>. This is how to load a shotsheet in a script. After this, a large number of final constants is declared, each referring to a number. So, what are those numbers? Well, we will discuss them in the next part when we discuss shot graphic IDs.</p>
@@ -50,7 +50,7 @@
 	      <p>The file we will now observe is Default_ShotData.txt in the default system. Inside this file is something that looks absolutely obscure. What is going on here? No semicolons? Huh? This is a shotsheet. To begin a shotsheet, <code>#UserShotData</code> is used, and shot_image points to the path of the image file containing the bullet graphics. <strong>shot_image is NOT a variable.</strong> delay_rect is the part of the image that contains the delay cloud for the bullet.</p>
 	      <p>Of particular note are the four parameters for delay_rect. They are left, top, right, and bottom, and refer to the pixels on the image file, and this left--top-right-bottom (LTRB) system is followed throughout all of Danmakufu. The numbers form a rectangle around the graphic, and 0 refers to the left or top of the image for x values (left, right) and y values (top, bottom) respectively. Please keep in mind that for top and right, the pixels that will be taken include one pixel to the top and right of the pixels represented by the numbers. It's annoying, but deal with it. Later on, when discussing ADD blending, I will briefly talk about white line syndrome, which is an unwanted side effect of this. <b><span style="color:magenta">!!!FACT CHECK NEEDED!!!</span></b></p>
 	      <p>Now we will discuss the properties that can be assigned to shots in a shotsheet.</p>
-              <h2 style="color:yellow" id="sub3">Part 3: What are the Properties of a Shot in a Shotsheet?</h2>
+	      <h2 style="color:yellow" id="sub3">Part 3: What are the Properties of a Shot in a Shotsheet?</h2>
 	      <p>Inside ShotData{} are a number of properties that can be assigned to shots. Of particular note are id, rect, and delay_color, which are required for proper functioning of the shot</p>
 	      <p>id is the number that distinguishes the bullet graphic. It is what is referenced by the graphic parameter of most shot creation functions, and is also referenced in the shot constant sheet. It should be unique for the bullet.</p>
 	      <p>rect, like in the delay_rect, determines the location of the shot on the image referenced in shot_image and controls what the shot will look like.</p>
@@ -65,20 +65,20 @@
 	      <p>With that out of the way, let's begin our discussion on actual shots and their properties.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: What properties are required to define a shot in a shotsheet?</div>
 	      <div class="tut_exercise">EXERCISE: Look at a shotsheet and examine the rects. Look at the image stated in shot_image. See how the rects correspond to the pixels of the image.</div>
-              <h2 style="color:yellow" id="sub4">Part 4: What are the Properties of a Bullet? (ObjMove)</h2>
+	      <h2 style="color:yellow" id="sub4">Part 4: What are the Properties of a Bullet? (ObjMove)</h2>
 	      <p>Touhou Danmakufu ph3, unlike its predecessor 0.12m, is an object oriented scripting language. You may have noticed a lot of ObjType functions, and this is in part due to the nature of ph3. While not a true object oriented language, it shares many of the characteristics of one, including inheritance. We will have a long and lengthy discussion about this later on in this tutorial, but for now, I will try to make it as simple as possible.</p>
 	      <p>Earlier we discussed the properties of the bullet graphic. Now we will discuss the properties of the bullet itself. Remember <code>CreateShotA1()</code>? It had a number of arguments, such as its x and y location, its angle, speed, graphic, and delay time. These are properties of the bullet that are set when the object is created (all of the ones perviously mentioned default to 0). Additionally, with <code>CreateShotA2()</code>, there is also acceleration and maximum/minimum speed.</p>
 	      <p>Let's say that you want to create a shot starting at the boss that accelerates at the player from a speed of 3 pix/frames to 6 pix/frames. To do this, you would do the following:</p>
-              <pre class="prettyprint"><code>CreateShotA2(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, GetAngleToPlayer(objBoss), 0.05, 6, 5, 0);</code></pre>
+	      <pre class="prettyprint"><code>CreateShotA2(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, GetAngleToPlayer(objBoss), 0.05, 6, 5, 0);</code></pre>
 	      <p>To best explain acceleration and maximum/minimum speed, it is important to note that without a max/min speed set prior, acceleration will not occur at all. When creating shots that take acceleration and min/max speed as parameters, this is not a problem, but it may be a problem later on. Additionally, the min/max speed is a minimum or a maximum depending on the initial speed, as well as the direction of the acceleration (whether it is positive or negative). If you have a starting speed of 5 and a min/max of 0, and your acceleration is negative, the bullet will start at a speed of 5 and decrease to 0, which is normal behavior - Danmakufu treats the min/max speed as a minimum. However, if the acceleration is positive, the bullet will not move at all and will have a speed of 0 to begin with. Take note of this, because Danmakufu is treating the min/max speed as a maximum. <b><span style="color:magenta">!!!FACT CHECK NEEDED!!!</span></b></p>
 	      <p>Besides <code>CreateShotA1()</code> and <code>CreateShotA2()</code>, there are also <code>CreateShotB1()</code> and <code>CreateShotB2</code>, which use x and y velocities rather than angle and speed. If you want gravity bullets, you may end up using these. Do be aware, however - you cannot apply any angle/speed changing functions to these and vice versa.</p>
 	      <p>Now it is time to take a look at the <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Move_Object_Functions" title="Move Object Functions on the Danmakufu Wiki">Move Object Functions</a>.</p>
 	      <p>Using ObjMove_SetXXX(), you can set the x, y, position (which is both x and y at once), speed, angle, acceleration, and max/min speed. You can also use the movement functions we used for the boss, as well as set angular velocity.</p>
 	      <p>Angular velocity changes the angle of the bullet. The angle is incremented by the amount specified in the function every frame. However, how do we use <code>ObjMove_SetAngularVelocity()</code>? Or any of the AddPattern functions, which we will soon discuss?</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How quickly does speed change with acceleration? How quickly does it reach its min/max value?</div>
-              <h2 style="color:yellow" id="sub5">Part 5: How Do I Control a Bullet?</h2>
+	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Control a Bullet?</h2>
 	      <p>Bullet control in ph3 is significantly easier than in 0.12m. You don't need to create an object bullet, per se. Instead, you can do this!</p>
-              <pre class="prettyprint"><code>let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 5, 10);
+	      <pre class="prettyprint"><code>let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 5, 10);
 ObjMove_SetAngularVelocity(obj, 0.1);
 BulletCommands(obj);
 
@@ -89,7 +89,7 @@ task BulletCommands(obj){
     ObjMove_SetAngularVelocity(obj, 0);
 }</code></pre>
 	      <p>The portion before the <code>//...</code> is how to obtain the <b>Object ID</b> of a bullet, and then perform a function with that ID as an input parameter. After this, I call <code>BulletComamnds(obj)</code>, a task that I have created that will reset the angular velocity of the bullet to 0 after 60 frames. This is a powerful tool that, when used in conjunction with the AddPattern functions, can allow you to do all kinds of things with bullets, giving you immense control over what a bullet does. For example, I oftentimes have BulletCommands change the angular velocity and speed of the bullet, with while loops and wait times to denote when to actually begin execution. For example:</p>
-              <pre class="prettyprint"><code>task BulletCommands(obj){
+	      <pre class="prettyprint"><code>task BulletCommands(obj){
     while(ObjMove_GetSpeed(obj)>0){yield;}
     wait(30);
     let angleT = rand(0,360);
@@ -105,11 +105,11 @@ task BulletCommands(obj){
 	      <p>However, do be aware that ObjMove_AddPattern has the tendency to do weird and unexpected things that you don't expect, especially in regards to the acceleration and max/min speeds. Additionally, be warned that if there is no acceleration and there is angular velocity, the bullet will form a circle and return to its spawning location. This can cheapshot players, break patterns, or be an amazing tool for beautiful patterns that require unique methods of dodging.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How do you execute functions on an object using its Object ID?</div>
 	      <div class="tut_exercise">EXERCISE: Use ObjMove_AddPattern functions in your own script. Experiment with it and see what you can do. I suggest using rings of bullets, as the changes are more apparent that way.</div>
-              <h2 style="color:yellow" id="sub6">Part 6: What are the Properties of a Bullet? (ObjShot, ObjRender)</h2>
+	      <h2 style="color:yellow" id="sub6">Part 6: What are the Properties of a Bullet? (ObjShot, ObjRender)</h2>
 	      <p>Of course, ObjMove commands are not the only functions that can be used on bullets. Shot objects not only inherit all move and render functions - they have functions of their own.</p>
 	      <p>Of these, there are a two that really stand out: <code>ObjShot_SetAutoDelete(obj)</code> and <code>ObjShot_SetSpellResist(obj)</code></p>
 	      <p>The former, <code>ObjShot_SetAutoDelete(obj)</code>, controls auto-deletion of a bullet when the bullet goes past a certain boundary offscreen (out of the shot autodelete clip, to be more accurate). The latter, <code>ObjShot_SetSpellResist(obj)</code>, controls whether or not a shot will be deleted when the player bombs and/or when the player dies. By using these two functions, it is possible to control when a bullet will be deleted, etc. Very useful.</p>
-              <pre class="prettyprint"><code>    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 1, 5);
+	      <pre class="prettyprint"><code>    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 1, 5);
     ObjShot_SetAutoDelete(obj, false);//Bullet will not be autodeleted past the shot autodelete clip
     ObjShot_SetSpellResist(obj, true);//Bullet will not be deleted by bombs or player death
     wait(360);
@@ -123,68 +123,68 @@ task BulletCommands(obj){
 	      <p>There is no function to make an object's graphic rotate (IE there is no ObjRender_SetAngularVelocity). You will have to set angular_velocity in the shotsheet or place <code>ObjRender_SetAngleZ(obj)</code> in a while loop. Additionally, you will most likely not be using SetAngleX, SetAngleY, or SetAngleXYZ for bullets - there simply isn't much of a need to use them. As for scale, you can throw SetScaleX in a while loop and change it based on a sine wave to get the effect that Yuke had in Unreasonable Mechanism (which I duplicated for use in some of my scripts). Experiment with SetScale as much as you want, but always remember that the size of the bullet's hitbox does not change with the scale, so be wary when setting the scale to something smaller than the hitbox of the bullet.</p>
 	      <p><code>ObjRender_SetColor(obj, r, g, b)</code> and <code>ObjRender_SetAlpha(obj, a)</code> are two of the most amazing functions ever to exist. In 0.12m, they existed as a single function that was a pain to write out, but in ph3, you can use them to change the color and alpha (transparency) of an object. By default, <code>ObjRender_SetColor(obj, 255, 255, 255);</code> is the graphic as-is, but you can darken it/do stuff with it. It's really helpful for auras and the like, because when you have a white graphic, any <code>ObjRender_SetColor(obj, r, g, b);</code> you apply to it will change the color of the graphic when displayed to the given rgb values. As for Alpha, the default is 255, and by lowering it, you can change the transparency of the graphic. Really amazing and helpful for non-damaging bullets and graphical effects.</p>
 	      <p><code>ObjRender_SetBlendType</code> is the last function I will discuss in this lesson. As stated earlier, you can use this function to set the blend type of an object (See Part 3 for the blend types). Be aware that your processor may have a hard time if you abuse this, and excessive use of ADD rendering may be hard on the eyes. Use ADD blending with dark backgrounds for good auras and contrast.</p>
-              <h2 style="color:yellow" id="sub7">Part 7: What is the Difference Between ObjMove and ObjRender?</h2>
+	      <h2 style="color:yellow" id="sub7">Part 7: What is the Difference Between ObjMove and ObjRender?</h2>
 	      <p>To close this lesson, I will provide a brief but hopefully informative guide to the differences between ObjMove and ObjRender. For reference, we will be using <a target="_blank" title="Object Inheritance in Touhou Danmakufu ph3" href="http://www.geocities.co.jp/SiliconValley-Oakland/9951/pre/th_dnh_help_v3_data/other_spec.html#Object">this image</a>, which is from the official documentation for Touhou Danmakufu ph3. This image shows object inheritance in Touhou Danmakufu ph3. For example, ObjEnemy can use ObjSprite2D, ObjPrim, ObjRender, ObjShader, Obj, and ObjMove functions, because it is a subclass of all of those. By this same logic, only ObjEnemy, ObjShot and its subclasses, and ObjItem can use ObjMove functions. This is very important, because if you try to use ObjMove functions on a spell objects (there is a reason why you should not begin Danmakufu with a player script), you will find that it does not work.</p>
 	      <p>The chart is self-explanatory, but remember that for shots, enemies, and items, ObjRender functions control the graphic and ObjMove functions control the actual object.</p>
 	      <p>What you do with the functions is, in the end, up to you. But use them in a proper manner.</p>
 	      <div class="tut_exercise">EXERCISE: Use ObjRender_SetColor() and ObjRender_SetAlpha() on some bullets after a set time. See what effect it has on the bullets.</div>
-              <h2 style="color:yellow" id="quiz1">Quiz: Bullet Properties</h2>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Bullet Properties</h2>
 	        <!--Quiz start.-->
 		<p>1) In a shotsheet, a bullet graphic is 16x16 pixels. Later on, <code>ObjRender_SetScaleXYZ(obj, 0.5, 0.5, 1)</code> is called on the bullet. What should be done to make the hitbox of the bullet fair?</p>
-                <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
-                <input type="RADIO" value="A" name="cc">
-                A. Change the size of the hitbox in the shotsheet<br>
-                <input type="RADIO" value="B" name="cc">
-                B. Change the size of the hitbox in the script<br>
-                <input type="RADIO" value="C" name="cc">
-                C. Don't change anything.<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. Change the size of the hitbox in the shotsheet<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Change the size of the hitbox in the script<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. Don't change anything.<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 		<br>
 		<p>2) Keine is trying to make a bullet change its movement angle after 60 frames. How can she do this? (there are multiple correct answers)</p>
-                <form method="POST" onSubmit="return checkAnswerA2(this, 'D');">
-                <input type="RADIO" value="A" name="cc">
-                A. <code>ObjMove_AddPatternA1()</code><br>
-                <input type="RADIO" value="B" name="cc">
-                B. <code>task BulletCommands(obj, n){wait(60); ObjRender_SetAngleZ(obj, n);}</code><br>
-                <input type="RADIO" value="C" name="cc">
-                C. <code>ObjMove_SetDestAtFrame()</code><br>
-                <input type="RADIO" value="D" name="cc">
-                D. <code>task BulletCommands(obj, n){wait(60); ObjMove_SetAngle(obj, n);}</code><br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerA2(this, 'D');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>ObjMove_AddPatternA1()</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. <code>task BulletCommands(obj, n){wait(60); ObjRender_SetAngleZ(obj, n);}</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. <code>ObjMove_SetDestAtFrame()</code><br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. <code>task BulletCommands(obj, n){wait(60); ObjMove_SetAngle(obj, n);}</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 		<br>
 		<p>3) True or False? You can use ObjMove functions on Spell Objects.</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'B', 7);">
-                <input type="RADIO" value="A" name="cc">
-                A. true<br>
-                <input type="RADIO" value="B" name="cc">
-                B. false<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 7);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. true<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. false<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 		<br>
 		<p>4) Which of the following controls deletion of bullets when the player dies?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'A', 6);">
-                <input type="RADIO" value="A" name="cc">
-                A. ObjShot_SetSpellResist()<br>
-                <input type="RADIO" value="B" name="cc">
-                B. ObjShot_SetAutoDelete()<br>
-                <input type="RADIO" value="B" name="cc">
-                C. Obj_SetVisible()<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 6);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. ObjShot_SetSpellResist()<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. ObjShot_SetAutoDelete()<br>
+	        <input type="RADIO" value="B" name="cc">
+	        C. Obj_SetVisible()<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 		<br>
 		<p>5) True or False? ALPHA is the default Blend Type.</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'A', 3);">
-                <input type="RADIO" value="A" name="cc">
-                A. true<br>
-                <input type="RADIO" value="B" name="cc">
-                B. false<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 3);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. true<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. false<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
-              <br>            </div>          </div>
+	      <br>            </div>          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l7.html" title="Sparen's Danmakufu ph3 Tutorials - Attack Flow and Our First Spellcard">Unit 1 Lesson 7</a></li>
@@ -193,7 +193,7 @@ task BulletCommands(obj){
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

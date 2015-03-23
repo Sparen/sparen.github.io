@@ -22,28 +22,28 @@
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u1l3.html" title="Sparen's Danmakufu ph3 Tutorials - Danmakufu Framework">Unit 1 Lesson 3</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 2 - Running and Using Danmakufu</h1>              <p>Another video to feast your eyes on, this time Arby26's Mima! #FREEMIMA</p>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 2 - Running and Using Danmakufu</h1>	      <p>Another video to feast your eyes on, this time Arby26's Mima! #FREEMIMA</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/8Z5E044boxM">
 	      <div style="width: 600px;" class="tutorialnav">
-                <h2 style="color:aqua">Table of Contents</h2>
-                <ul>
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
 	          <li><a href="#sub1">Part 1: How do I Open Danmakufu?</a></li>
 	          <li><a href="#sub2">Part 2: How do I Navigate through Danmakufu's Menus?</a></li>
 	          <li><a href="#sub3">Part 3: How do I Play Scripts in Danmakufu?</a></li>
 	          <li><a href="#quiz1">Quiz: Running Danmakufu</a></li>
 	        </ul>
-	      </div>              <h2 style="color:yellow" id="sub1">Part 1: How do I Open Danmakufu?</h2>
-              <p>So, let's begin the next lesson! First, opening Danmakufu. For versions of Danmakufu before ph3 [.1 pre2], you needed to use Japanese Locale to open Danmakufu (th_dnh.exe) or it wouldn't work correctly (0.12m would crash, ph3 would not load any of the scripts). However, there are plenty of resources for that on Rika and Nitori's Garage Experiments (RaNGE), so I won't cover that. (Current releases of ph3 just require clicking the exe)</p>
-              <p>If you use Wine on a mac, you should probably do the following anyways:</p>	      <!--Embedded code below. Whitespace actually matters for this because it is in a pre block-->
-              <pre class="prettyprint"><code>LANG="ja_JP" wine th_dnh.exe</code></pre>
-              <p>This will run it under Japanese Locale (the equivalent of using AppLocale on Windows)</p>
-              <p>In Danmakufu's folder is also a DnhViewer.exe. This is sort of like the main exe except that some debug keys (such as I for invincibility) are available. I personally never use this, but it's up to you whether or not you wish to use it. There is also a config.exe for configuration options.</p>
-              <h2 style="color:yellow" id="sub2">Part 2: How do I Navigate through Danmakufu's Menus?</h2>
-              <p>Danmakufu opens with its title stating the version of Danmakufu being run. There are 7 options in ph3 and a FPS meter in the bottom right - this FPS meter is very important, so please take note of it when scripting. It's not a big deal in the Danmakufu menus, but in game, it matters quite a bit.</p>
-              <p>The options are as follows:</p>
-              <ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: How do I Open Danmakufu?</h2>
+	      <p>So, let's begin the next lesson! First, opening Danmakufu. For versions of Danmakufu before ph3 [.1 pre2], you needed to use Japanese Locale to open Danmakufu (th_dnh.exe) or it wouldn't work correctly (0.12m would crash, ph3 would not load any of the scripts). However, there are plenty of resources for that on Rika and Nitori's Garage Experiments (RaNGE), so I won't cover that. (Current releases of ph3 just require clicking the exe)</p>
+	      <p>If you use Wine on a mac, you should probably do the following anyways:</p>	      <!--Embedded code below. Whitespace actually matters for this because it is in a pre block-->
+	      <pre class="prettyprint"><code>LANG="ja_JP" wine th_dnh.exe</code></pre>
+	      <p>This will run it under Japanese Locale (the equivalent of using AppLocale on Windows)</p>
+	      <p>In Danmakufu's folder is also a DnhViewer.exe. This is sort of like the main exe except that some debug keys (such as I for invincibility) are available. I personally never use this, but it's up to you whether or not you wish to use it. There is also a config.exe for configuration options.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: How do I Navigate through Danmakufu's Menus?</h2>
+	      <p>Danmakufu opens with its title stating the version of Danmakufu being run. There are 7 options in ph3 and a FPS meter in the bottom right - this FPS meter is very important, so please take note of it when scripting. It's not a big deal in the Danmakufu menus, but in game, it matters quite a bit.</p>
+	      <p>The options are as follows:</p>
+	      <ul>
 	          <li>All: Displays every executable file Danmakufu can find in the 'script' directory - this is rarely a good option to click, and can actually stack overflow if you have a lot of scripts and not much RAM.</li>
 	          <li>Single: Displays every single Danmakufu can find in the 'script' directory</li>
 	          <li>Plural: Displays every plural Danmakufu can find in the 'script' directory</li>
@@ -52,34 +52,34 @@
 	          <li>Directory: Enters the script directory via Danmakufu, and allows you to navigate around. You should be using this option.</li>
 	          <li>Quit: Quit Danmakufu</li>
 	      </ul>
-              <p>In Danmakufu's menus, use Z to select and X to cancel. Use the arrow keys to navigate.</p>
-              <p>Regardless of the option (except for Quit), you will be taken to a new menu listing your scripts. In the bottom half will be the relative path from inside the script directory to the executable file (in red), the type of file (in purple), text (will be covered in a later tutorial), and perhaps an image (also covered in a later tutorial). Hit X to select. You will be given options to play and to run replays if you have them. Replays are stored in the 'replay' directory inside a script folder.</p>
-              <p>If in Directory, there will be a path to the directory you are currently in on the top, and you select a directory (marked red) to enter it. Note that only scripts recognized by Danmakufu will show up as blue executables.</p>
-              <p>After selecting 'Play' you will be brought to a player selection scene. Select your player and you're off!</p>
-              <p>Note that if you add a file to a script folder, Danmakufu will load it once you reenter the directory. However, if you remove a player script after loading Danmakufu, the option for that player script will still be there, and it will bring up an error when selected (tested ph3 [.1 pre4a]). As a result, you must quit and restart Danmakufu in order to refresh the list of players.</p>
-              <h2 style="color:yellow" id="sub3">Part 3: How do I Play Scripts in Danmakufu?</h2>
-              <p>In Danmakufu, like standard Touhou, you can shoot, bomb, focus, and pause, among other things. However, ph3 allows scripters to add custom virtual keys, and there are two user-defined keys, C and D. However, the most commonly used keys are as follows:</p>
-              <ul>
+	      <p>In Danmakufu's menus, use Z to select and X to cancel. Use the arrow keys to navigate.</p>
+	      <p>Regardless of the option (except for Quit), you will be taken to a new menu listing your scripts. In the bottom half will be the relative path from inside the script directory to the executable file (in red), the type of file (in purple), text (will be covered in a later tutorial), and perhaps an image (also covered in a later tutorial). Hit X to select. You will be given options to play and to run replays if you have them. Replays are stored in the 'replay' directory inside a script folder.</p>
+	      <p>If in Directory, there will be a path to the directory you are currently in on the top, and you select a directory (marked red) to enter it. Note that only scripts recognized by Danmakufu will show up as blue executables.</p>
+	      <p>After selecting 'Play' you will be brought to a player selection scene. Select your player and you're off!</p>
+	      <p>Note that if you add a file to a script folder, Danmakufu will load it once you reenter the directory. However, if you remove a player script after loading Danmakufu, the option for that player script will still be there, and it will bring up an error when selected (tested ph3 [.1 pre4a]). As a result, you must quit and restart Danmakufu in order to refresh the list of players.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: How do I Play Scripts in Danmakufu?</h2>
+	      <p>In Danmakufu, like standard Touhou, you can shoot, bomb, focus, and pause, among other things. However, ph3 allows scripters to add custom virtual keys, and there are two user-defined keys, C and D. However, the most commonly used keys are as follows:</p>
+	      <ul>
 	          <li>Z: Press this to shoot (if enabled), select</li>
 	          <li>X: Press this to bomb (if enabled), cancel</li>
 	          <li>Shift: Press this to focus</li>
 	          <li>Ctrl: Press this to fast forward - helpful in testing and in replays</li>
 	          <li>Esc: Press this to pause</li>
 	      </ul>
-              <p>Note that in user-made menus such as those in packages, it is possible for a scripter to assign completely different keys to select/cancel and the like. However, the standards are Z for select and X for cancel, so there would technically be no problems with that unless the scripter is trying to purposefully troll the player.</p>
-              <h2 style="color:yellow" id="quiz1">Quiz: Running Danmakufu</h2>
+	      <p>Note that in user-made menus such as those in packages, it is possible for a scripter to assign completely different keys to select/cancel and the like. However, the standards are Z for select and X for cancel, so there would technically be no problems with that unless the scripter is trying to purposefully troll the player.</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Running Danmakufu</h2>
 	        <!--Quiz start.-->
 		<p>Remilia wants to play a Danmakufu script. However, she only knows the name of the directory - "MeowMeowVampire," and she has at least 60 folders in her 'script' directory. Which option should she choose to find the script she wants?</p>
-                <form method="POST" onSubmit="return checkAnswer(this, 'C');">
-                <input type="RADIO" value="A" name="cc">
-                A. All<br>
-                <input type="RADIO" value="B" name="cc">
-                B. Quit<br>
-                <input type="RADIO" value="C" name="cc">
-                C. Directory<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <br>            </div>          </div>
+	        <form method="POST" onSubmit="return checkAnswer(this, 'C');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. All<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Quit<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. Directory<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <br>            </div>          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l1.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction, Downloading Danmakufu">Unit 1 Lesson 1</a></li>
@@ -88,7 +88,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Jan 22, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Jan 22, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

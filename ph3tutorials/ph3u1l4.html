@@ -22,13 +22,13 @@
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u1l5.html" title="Sparen's Danmakufu ph3 Tutorials - Danmakufu Syntax and Structures Part 2">Unit 1 Lesson 5</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 4 - Danmakufu Syntax and Structures Part 1</h1>              <p>The video for this lesson is AJS's entry for the LOCAA 5 contest. It won first place for reasons obvious in the video. In my opinion, this is one of the best dual-boss scripts ever made in Danmakufu ph3, especially considering that although AJS has had a significant amount of experience in Danmakufu, this is his very first ph3 script.</p>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 4 - Danmakufu Syntax and Structures Part 1</h1>	      <p>The video for this lesson is AJS's entry for the LOCAA 5 contest. It won first place for reasons obvious in the video. In my opinion, this is one of the best dual-boss scripts ever made in Danmakufu ph3, especially considering that although AJS has had a significant amount of experience in Danmakufu, this is his very first ph3 script.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/buqjGcXLBjE">
 	      <div style="width: 600px;" class="tutorialnav">
-                <h2 style="color:aqua">Table of Contents</h2>
-                <ul>
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
 	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
 	          <li><a href="#sub2">Part 2: What are Comments and How do I Use Them?</a></li>
 	          <li><a href="#sub3">Part 3: What is a Variable?</a></li>
@@ -43,9 +43,9 @@
 	          <li><a href="#quiz3">Quiz: Strings and Arrays</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
-              <p>In this lesson, I will cover the following:</p>
-              <ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will cover the following:</p>
+	      <ul>
 	          <li>Comments</li>
 	          <li>Variables and Variable Declaration</li>
 	          <li>Constants</li>
@@ -54,8 +54,8 @@
 	          <li>Strings</li>
 	          <li>One-Dimensional Arrays</li>
 	      </ul>
-              <p>In the next lesson, I will cover the following:</p>
-              <ul>
+	      <p>In the next lesson, I will cover the following:</p>
+	      <ul>
 	          <li>Booleans and Boolean Operations</li>
 	          <li>Loops</li>
 	          <li>Functions</li>
@@ -64,8 +64,8 @@
 	          <li>Usage of the Semicolon</li>
 	      </ul>
 	      <p>Please note that the contents of this page are partially based off of <a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs">CK Crash's Danmakufu ph3 tutorial</a> and that it may be a more suitable option for learning about how Danmakufu treats variables and the like.</p>
-              <h2 style="color:yellow" id="sub2">Part 2: What are Comments and How do I Use Them?</h2>
-              <pre class="prettyprint"><code>//This is a comment.
+	      <h2 style="color:yellow" id="sub2">Part 2: What are Comments and How do I Use Them?</h2>
+	      <pre class="prettyprint"><code>//This is a comment.
 //Anything in Danmakufu that is preceded with two slashes (//) is a line comment.
 //Therefore, anything past a // on a line is not treated as code by Danmakufu and will be ignored.
 /*This is also a comment*/
@@ -81,29 +81,29 @@ lines*/
 /*Block Comments are useful for cutting out large chunks of code from execution 
 in order to test one part of a script.*/
 /*Block comments are also used to hold descriptive information about functions and the like*/</code></pre>
-              <p>Note that in code within these tutorials, comments will often be used to note certain important concepts or the functions of certain lines of code, as well as a plethora of other things. This is the same in other tutorials.</p>
-              <h2 style="color:yellow" id="sub3">Part 3: What is a Variable?</h2>
-              <p>A variable in computer science is not exactly the same as in mathematics. In computer science, it is possible for a variable to change its value. A variable stores information, whether it is a constant, a string, or an ID. There are global variables and there are local variables, both of which will be covered shortly. You can think of a variable as a container for some type of information.</p>
-              <pre class="prettyprint"><code>let x; //This code declares a variable called x.
+	      <p>Note that in code within these tutorials, comments will often be used to note certain important concepts or the functions of certain lines of code, as well as a plethora of other things. This is the same in other tutorials.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: What is a Variable?</h2>
+	      <p>A variable in computer science is not exactly the same as in mathematics. In computer science, it is possible for a variable to change its value. A variable stores information, whether it is a constant, a string, or an ID. There are global variables and there are local variables, both of which will be covered shortly. You can think of a variable as a container for some type of information.</p>
+	      <pre class="prettyprint"><code>let x; //This code declares a variable called x.
 x = 5; //Now the value of x has been set to 5.
 x = 3; //The value of x has been overridden and is now 3.
 let y = x; //We have created a new variable y, whose current value is that of x, which is 3.
 x = 4; //x is currently 4, but y maintains its value as 3.</code></pre>
-              <p>For future reference, a single instruction, such as <code>let x;</code>, is called a statement, and statements should end with a semicolon.</p>
-              <p>Now lets consider the following code.</p>
-              <pre class="prettyprint"><code>let x; //This code declares a variable called x.
+	      <p>For future reference, a single instruction, such as <code>let x;</code>, is called a statement, and statements should end with a semicolon.</p>
+	      <p>Now lets consider the following code.</p>
+	      <pre class="prettyprint"><code>let x; //This code declares a variable called x.
 let x = 5; //Attempt to declare a variable x storing the value 5.</code></pre>
-              <p>The above code, unfortunately, will bring up an error because a variable x already exists! You cannot declare something that already exists (there are exceptions, which we will refer to when we talk about local and global variables).</p>
-              <p>Now lets consider the following code.</p>
-              <pre class="prettyprint"><code>x = 5; //This code tells the variable x to store the value 5.
+	      <p>The above code, unfortunately, will bring up an error because a variable x already exists! You cannot declare something that already exists (there are exceptions, which we will refer to when we talk about local and global variables).</p>
+	      <p>Now lets consider the following code.</p>
+	      <pre class="prettyprint"><code>x = 5; //This code tells the variable x to store the value 5.
 let x = 3; //Declare a variable x storing the value 3.</code></pre>
-              <p>The above code, unfortunately, also brings up an error. This time, you get an error for trying to use a variable that has not been declared. In this case, the line <code>x = 5;</code> refers to a variable x that, at that point in time, does not exist. You must declare a variable before you can use it.</p>
-              <p>As a final note about variables, you can use 'real' instead of 'let' to declare a variable, although let is much much more commonly used. They are functionally the same.</p>
-              <h2 style="color:yellow" id="sub4">Part 4: What are Constants?</h2>
-              <p>Constants are identifiers that do not change while a program is running, as opposed to variables. Names for constants are all uppercase by convention. For example, built-in constants in Danmakufu include BLEND_ADD_ARGB and EV_GRAZE, among other things. Most of these are built in or used in shotsheets.</p>
-              <p>If you decide to use your own constants, make sure that the name is UPPERCASE and that you do not edit the value at all. For example, <code>let CIRNO = 9;</code></p>
-              <h2 style="color:yellow" id="sub5">Part 5: What Mathematical Operations Can I Perform in Danmakufu?</h2>
-              <pre class="prettyprint"><code>let x;
+	      <p>The above code, unfortunately, also brings up an error. This time, you get an error for trying to use a variable that has not been declared. In this case, the line <code>x = 5;</code> refers to a variable x that, at that point in time, does not exist. You must declare a variable before you can use it.</p>
+	      <p>As a final note about variables, you can use 'real' instead of 'let' to declare a variable, although let is much much more commonly used. They are functionally the same.</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: What are Constants?</h2>
+	      <p>Constants are identifiers that do not change while a program is running, as opposed to variables. Names for constants are all uppercase by convention. For example, built-in constants in Danmakufu include BLEND_ADD_ARGB and EV_GRAZE, among other things. Most of these are built in or used in shotsheets.</p>
+	      <p>If you decide to use your own constants, make sure that the name is UPPERCASE and that you do not edit the value at all. For example, <code>let CIRNO = 9;</code></p>
+	      <h2 style="color:yellow" id="sub5">Part 5: What Mathematical Operations Can I Perform in Danmakufu?</h2>
+	      <pre class="prettyprint"><code>let x;
 x = 3 + 5; //x now holds the value 8
 x=x+3; //x now holds the value 11. Note that white space doesn't matter.
 x++; //This is equivalent to x = x + 1. It increments x by 1. Very helpful for counters.
@@ -113,198 +113,198 @@ y = y*2; //y is now equal to 12.
 y = y/3; //y is now equal to 4.
 y = y^2; //y is raised to the second power and is now 16.
 y = y%2; //Since the remainder/modulus when y/2 = 0, y is now 0.</code></pre>
-              <p>Keep in mind that Danmakufu uses the Order of Operations and that the square root is the equivalent of raising to the 1/2 power. Below are some more examples and notes on the angle system used by Danmakufu, as well as some more shortcuts.</p>
-              <pre class="prettyprint"><code>let angleT = 30; //Danmakufu uses degrees
+	      <p>Keep in mind that Danmakufu uses the Order of Operations and that the square root is the equivalent of raising to the 1/2 power. Below are some more examples and notes on the angle system used by Danmakufu, as well as some more shortcuts.</p>
+	      <pre class="prettyprint"><code>let angleT = 30; //Danmakufu uses degrees
 angleT+=360/5; //angleT incremented by 72 and is now 102. 'var += n' is a shortcut for 'var = var + n'
 angleT*=-1; //angleT is now -102, using the same process as the line above. 
 //Mathematical shortcuts also exist in the form of -=, and /=
 let x = (30+angleT)*3; //Use parentheses for order of operations. x now equals 396.</code></pre>
-              <p>However, please pay attention to the following</p>
-               <pre class="prettyprint"><code>let y = (55)(33); //This will not work. 
+	      <p>However, please pay attention to the following</p>
+	       <pre class="prettyprint"><code>let y = (55)(33); //This will not work. 
 let y = 55*33; //This is the correct way to multiply the two numbers. </code></pre>
-              <p>Also, note that you cannot perform operations on variables that do not exist.</p>
-               <pre class="prettyprint"><code>let y = 30; 
+	      <p>Also, note that you cannot perform operations on variables that do not exist.</p>
+	       <pre class="prettyprint"><code>let y = 30; 
 let z = x*y; //Will bring up an error since x has not been declared.</code></pre>
-              <p>And finally, one of the more obnoxious things that will bring up an error.</p>
-               <pre class="prettyprint"><code>let y = 30; 
+	      <p>And finally, one of the more obnoxious things that will bring up an error.</p>
+	       <pre class="prettyprint"><code>let y = 30; 
 y+=.5;</code></pre>
-              <p>The error? Well, Danmakufu doesn't understand what the period means. You need to use 0.5 instead of .5 in order for Danmakufu to recognize it and not error at you.</p>
+	      <p>The error? Well, Danmakufu doesn't understand what the period means. You need to use 0.5 instead of .5 in order for Danmakufu to recognize it and not error at you.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How do you multiply and divide in Touhou Danmakufu?</div>
-              <h2 style="color:yellow" id="sub6">Part 6: What are Local and Global Variables?</h2>
+	      <h2 style="color:yellow" id="sub6">Part 6: What are Local and Global Variables?</h2>
 	      <p>So now, for our discussion on Local and Global Variables, we will refer back to the code used in the previous lesson.</p>
 	      <p><a target="_blank" href="ph3u1l3code1.html">Click this link to open massive wall of code in a seperate window</a></p>
 	      <p>Global Variables are variables declared outside of tasks, functions, and routines. They are usually declared bewtween the Danmakufu Header and @Event. A variable declared here can be referenced and changed from any other part of the script. For example, in the code provided, objEnemy and frame are declared as global variables. In @MainLoop, frame is referenced and changed multiple times. Just remember that changes made to a global variable used in multiple locations will affect all locations it is used, so it is recommended that you only change a global variable in one routine/function/task and nowhere else. For counters, I suggest using @MainLoop.</p>
 	      <p>In @MainLoop, the loop starts with the declaration of ex and ey. These are local variables - they only exist in @MainLoop, and once @MainLoop finishes one round, they are reset. This means that they are updated each frame due to @MainLoop's nature.</p>
 	      <p>Local Variables are also created in ascent and descent loops, and parameters of functions and tasks are also local variables, except that these local variables have a special quality - they will override global variables with the same name when called within the given loop, function, or task. This will be explained in the sections for the given concepts.</p>
 	      <p>Finally, you can declare local variables in the following manner:</p>
-              <pre class="prettyprint"><code>local{
+	      <pre class="prettyprint"><code>local{
      let x;
 }</code></pre>
 	      <p>However, very few scripters use it, and you do not need to know this at all unless you are trying to decode someone else's code.</p>
-              <h2 style="color:yellow" id="quiz1">Quiz: Mathematical Operations</h2>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Mathematical Operations</h2>
 	        <!--Quiz start.-->
 		<p>1) What is the value of x after the following code has been executed?</p>
-                <pre class="prettyprint"><code>let x = 8;
+	        <pre class="prettyprint"><code>let x = 8;
 x+=5;
 x = x^2;
 x-=3;</code></pre>
-                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'C');">
-                <input type="RADIO" value="A" name="cc">
-                A. 26<br>
-                <input type="RADIO" value="B" name="cc">
-                B. 23<br>
-                <input type="RADIO" value="C" name="cc">
-                C. 166<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'C');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 26<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 23<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 166<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>2) What is the value of x after the following code has been executed?</p>
-                <pre class="prettyprint"><code>let x = 8;
+	        <pre class="prettyprint"><code>let x = 8;
 let y = 6;
 x = x*(y-3);
 x+=9;</code></pre>
-                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
-                <input type="RADIO" value="A" name="cc">
-                A. 33<br>
-                <input type="RADIO" value="B" name="cc">
-                B. 23<br>
-                <input type="RADIO" value="C" name="cc">
-                C. 54<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <h2 style="color:yellow" id="quiz2">Quiz: Decimals</h2>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 33<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 23<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 54<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="quiz2">Quiz: Decimals</h2>
 	        <!--Quiz start.-->
 		<p>Nitori is sharing her love of decimals when she receives the following error:</p>
-                <img alt="Error" src="tutimg/u1l4img1.png" height="145" width="440">
+	        <img alt="Error" src="tutimg/u1l4img1.png" height="145" width="440">
 		<p>Why is this error showing up?</p>
-                <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
-                <input type="RADIO" value="A" name="cc">
-                A. She did not declare the variable x<br>
-                <input type="RADIO" value="B" name="cc">
-                B. Decimals in Danmakufu cannot start with a period<br>
-                <input type="RADIO" value="C" name="cc">
-                C. She forgot a semicolon<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <h2 style="color:yellow" id="sub7">Part 7: What are Characters and Can I Change the Type of a Variable?</h2>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. She did not declare the variable x<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Decimals in Danmakufu cannot start with a period<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. She forgot a semicolon<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="sub7">Part 7: What are Characters and Can I Change the Type of a Variable?</h2>
 		<p>In Computer Science, a character is a single letter, number, or symbol. Characters are denoted using single quotes, like such: <code>let x = 'a';</code></p>
 		<p>In Danmakufu, you will most likely not use characters - rather, you will use strings, the topic of the next part. However, now is a good time to showcase one of the more important concepts in Danmakufu (and Computer Science in general) - variable types.</p>
-                <pre class="prettyprint"><code>let x = 6; //x is a container holding an integer 6
+	        <pre class="prettyprint"><code>let x = 6; //x is a container holding an integer 6
 let y = '$'; //y is a container holding the character $
 let z = '3'; //z is a container holding the character 3
 x = '3'; //This code will bring up an error</code></pre>
 		<p>So, why can't you set the variable x's value from 6 to '3'? Well, that's because when you first assign a value to x, it is holding an integer. Later on, you are trying to set its value to a character. This is not allowed, since x has been set to only accept numbers. '3' is not a number in Danmakufu - it is a character. In other languages, characters may have integer equivalents and addition may be possible, but I suggest that you simply don't try to do this as it may have unwanted results.</p>
 		<p>But what if you want to define <code>x = '33';</code>? Well... that's not going to work, and we'll see that in the next part.</p>
-              <h2 style="color:yellow" id="sub8">Part 8: What are Strings?</h2>
+	      <h2 style="color:yellow" id="sub8">Part 8: What are Strings?</h2>
 		<p>Strings have much more use than characters. Strings can be used to hold phrases, filepaths, and more, and are denoted using double quotes. Please note that if you use smart quotes, Danmakufu will get angry and not work. Below are examples of strings.</p>
-                <pre class="prettyprint"><code>let randomstring = "This is a random string.";
+	        <pre class="prettyprint"><code>let randomstring = "This is a random string.";
 let spellname = "Fire and Water Sign \"Geysers of the Deep\"";
 let imgRumia = GetCurrentScriptDirectory()~"img/imgrumia.png";
 let desc = "This is a spellcard made by an unknown scripter.[r]Please play at your own risk.";</code></pre>
 		<p>Obviously, strings hold much more information than a character and are far more useful. You can include numbers in strings, such as "3 + 6 = Cirno" as well as other things. In the four examples above, we have three special scenarios that deserve extra attention - spellname's escape character, imgRumia's string concatenation, and desc's [r].</p>
 		<p>Firstly, the escape character \. In most languages, \ is used as the escape character, and if followed by certain symbols, will perform a specific function. For example, in most languages, \n denotes a new line (not in ph3 - we will discuss this later), \t denotes a tab, and, more specific to this scenario, \" denotes a ". Since strings begin and end with double quotes, having double quotes inside a string requires some workarounds, and that workaround is provided by \", which will not be read as closing the string but rather as a symbol that, when the string is printed, will use a double quote instead of \". This is the simplest way to include a double quote within a string. Very helpful for spell names, depending on your format for spellcard names.</p>
 		<p>Next is string concatenation. For the purposes of this tutorial, be advised that GetCurrentScriptDirectory returns a string.</p>
-                <pre><code>let imgRumia = GetCurrentScriptDirectory()~"img/imgrumia.png";</code></pre>
+	        <pre><code>let imgRumia = GetCurrentScriptDirectory()~"img/imgrumia.png";</code></pre>
 		<p>Here we have a string ~ string. So what does this do? This is known as string concatenation, and merges the two strings. For example:</p>
-                <pre class="prettyprint"><code>let string = "String1"~"String2"; //string is now "String1String2"</code></pre>
+	        <pre class="prettyprint"><code>let string = "String1"~"String2"; //string is now "String1String2"</code></pre>
 		<p>You will almost always use this for paths being assigned to variables. It also comes in handy in a number of other situations.</p>
 		<p>And finally, [r]. [r] is new in ph3 (0.12m used \n). [r] denotes a new line and functions as a line break. Therefore, <code>let string = "one[r]two";</code>, if printed, would show the following:</p>
-                <pre><code>one
+	        <pre><code>one
 two</code></pre>
 		<p>Very helpful in #Text, with dialogue, and numerous other things.</p>
-              <h2 style="color:yellow" id="sub9">Part 9: What are Arrays?</h2>
+	      <h2 style="color:yellow" id="sub9">Part 9: What are Arrays?</h2>
 		<p>The final thing we will discuss in this lesson are arrays, which are essentially containers that hold other things of the same type. For example, you can consider a string to be an array of characters. In Danmakufu, you declare arrays as the following:</p>
-                <pre class="prettyprint"><code>let array = []; //Declare an empty array
+	        <pre class="prettyprint"><code>let array = []; //Declare an empty array
 let array2 = [3, 4, 6, 8]; //Declare an array of numbers of length 4
 let array3 = GetAllEnemyID(); //Declare an array containing the IDs of every enemy currently existing</code></pre>
 		<p>Note that once you declare an array, the variable name you use cannot be used for anything other than an array. You cannot do the following:</p>
-                <pre class="prettyprint"><code>let array = []; //Declare an empty array
+	        <pre class="prettyprint"><code>let array = []; //Declare an empty array
 array = "CIRNO STRIKES BACK";</code></pre>
 		<p>The variable 'array' has been used for an array and cannot be used for anything else.</p>
 		<p>Arrays are very useful, but of course, you will need to add and retrieve data from them. As such, there are ways to add things to arrays, remove things from arrays, and get the values held in arrays.</p>
 		<p>First we will discuss adding things to arrays. Using the concatenation ~, you can do the following:</p>
-                <pre class="prettyprint"><code>let array = [3, 6]; //Declare an empty array
+	        <pre class="prettyprint"><code>let array = [3, 6]; //Declare an empty array
 array = array ~ [4]; //array is now [3, 6, 4]</code></pre>
 		<p>Please note that you must include the item you are going to add as an array - in essence, you are combining to arrays. Also, you can use <code>concatenate(array1, array2)</code> in order to concatenate two arrays, although the method with the ~ is much simpler. Here is another example, this time showing how to include the value of a variable in an array:</p>
-                <pre class="prettyprint"><code>let array = []; //Declare an empty array
+	        <pre class="prettyprint"><code>let array = []; //Declare an empty array
 let string = "Test";
 array = array ~ [string]; //array is now [string], where the value of string is "Test"</code></pre>
 		<p>Next we will discuss indexing. You can obtain the length of an array using length(nameofarray);. First thing's first though - the first item in an array is indexed 0, not 1. You index an array as follows:</p>
-                <pre class="prettyprint"><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of Danmakufu Scripters
+	        <pre class="prettyprint"><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of Danmakufu Scripters
 let lengthdnh = length(dnh); //4
 let scripter = dnh[2]; //Find the item with index 2 - "Trickysticks"
 let scripter2 = dnh[2..4]; //Obtain an array with the 2 through 3rd indices of dnh - ["Trickysticks", "AJS"]
 let scripter3 = dnh[lengthdnh]; //Brings up an error because the fourth index does not exist
 </code></pre>
 		<p>Once you get over the fact that it starts from 0, it's not too bad. Also, note the two dots for obtaining a subarray of the initial array. The new array includes the index before the two dots but not the one after. We will be seeing this later with ascent loops, and the function slice (See the Danmakufu Wiki) also performs the same function. Now, consider the following array:</p>
-                <pre class="prettyprint"><code>let array = [3,6,9,12,9,9,12];</code></pre>
+	        <pre class="prettyprint"><code>let array = [3,6,9,12,9,9,12];</code></pre>
 		<p>We are going to perform operations on this array above!</p>
-                <pre class="prettyprint"><code>array = [3,6,9,12,9,9,12];
+	        <pre class="prettyprint"><code>array = [3,6,9,12,9,9,12];
 array[4]--;</code></pre>
 		<p>Now the array looks like this:</p>
-                <pre class="prettyprint"><code>array = [3,6,9,12,8,9,12];</code></pre>
+	        <pre class="prettyprint"><code>array = [3,6,9,12,8,9,12];</code></pre>
 		<p>What we have done is the following: We indexed an array, obtaining a reference to the value contained in that index, and then performed an operation (--, or -1) to it. This is how you perform operations on the contents of arrays.</p>
 		<p>There are, of course, other operations (many significantly more complicated), but for now, we will close with removal of indices. It is actually very simple.</p>
-                <pre class="prettyprint"><code>array = [3,6,9,12,8,9,12];
+	        <pre class="prettyprint"><code>array = [3,6,9,12,8,9,12];
 array = erase(array, 5); //Erase fifth index of array 'array'</code></pre>
 		<p>After executing the function erase on the array, we are left with the following array</p>
-                <pre class="prettyprint"><code>array = [3,6,9,12,8,12];</code></pre>
+	        <pre class="prettyprint"><code>array = [3,6,9,12,8,12];</code></pre>
 		<p>As a final note, since strings are arrays of characters, you can also index strings the same way you index arrays. CK Crash's tutorial (see Part 1 for link) also includes the boolean trick, but we will discuss booleans in the next lesson. There are also 2D and 3D arrays (etc), but we will not deal with those now - there is limited use for them until you are trying to organize CommonData or spawn bullets in a shape, etc.</p>
-              <h2 style="color:yellow" id="quiz3">Quiz: Strings and Arrays</h2>
+	      <h2 style="color:yellow" id="quiz3">Quiz: Strings and Arrays</h2>
 	        <!--Quiz start.-->
-                <pre class="prettyprint"><code>let spellsigns = ["Fire Sign", "Water Sign", "Moon Sign"];</code></pre>
+	        <pre class="prettyprint"><code>let spellsigns = ["Fire Sign", "Water Sign", "Moon Sign"];</code></pre>
 		<p>1) What is the value of spellsigns[1]?</p>
-                <form method="POST" onSubmit="return checkAnswerA2(this, 'C');">
-                <input type="RADIO" value="A" name="cc">
-                A. "Fire Sign"<br>
-                <input type="RADIO" value="B" name="cc">
-                B. "Moon Sign"<br>
-                <input type="RADIO" value="C" name="cc">
-                C. "Water Sign"<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <br>
+	        <form method="POST" onSubmit="return checkAnswerA2(this, 'C');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. "Fire Sign"<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. "Moon Sign"<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. "Water Sign"<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <br>
 		<p>Now we do the following:</p>
-                <pre class="prettyprint"><code>spellsigns = spellsigns ~ ["Magical Storm"];</code></pre>
+	        <pre class="prettyprint"><code>spellsigns = spellsigns ~ ["Magical Storm"];</code></pre>
 		<p>2) What is the value of length(spellsigns) after the code has been executed?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'A', '9');">
-                <input type="RADIO" value="A" name="cc">
-                A. 4<br>
-                <input type="RADIO" value="B" name="cc">
-                B. 3<br>
-                <input type="RADIO" value="C" name="cc">
-                C. "4"<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <br>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', '9');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 4<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 3<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. "4"<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <br>
 		<p>Now we do the following:</p>
-                <pre class="prettyprint"><code>erase(spellsigns, 0);</code></pre>
+	        <pre class="prettyprint"><code>erase(spellsigns, 0);</code></pre>
 		<p>3) What is the value of spellsigns[0] after the code has been executed?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'B', '9');">
-                <input type="RADIO" value="A" name="cc">
-                A. "Magical Storm"<br>
-                <input type="RADIO" value="B" name="cc">
-                B. "Water Sign"<br>
-                <input type="RADIO" value="C" name="cc">
-                C. "Fire Sign"<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <br>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '9');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. "Magical Storm"<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. "Water Sign"<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. "Fire Sign"<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <br>
 		<p>We will now <code>let str = spellsigns[2]; //"Magical Storm"</code></p>
 		<p>4) Which of the following will result in the value of str being <b>printed</b> as <code>Magical Storm "Flurry of Stars"</code>?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'B', '8');">
-                <input type="RADIO" value="A" name="cc">
-                A. <code>str = str + "Flurry of Stars";</code><br>
-                <input type="RADIO" value="B" name="cc">
-                B. <code>str = str ~ " \"Flurry of Stars\"";</code><br>
-                <input type="RADIO" value="C" name="cc">
-                C. <code>str = str ~ " "Flurry of Stars"";</code><br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '8');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>str = str + "Flurry of Stars";</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. <code>str = str ~ " \"Flurry of Stars\"";</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. <code>str = str ~ " "Flurry of Stars"";</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Should give an alternative, visual example to the contents of this lesson</p>
 	      <p><a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs" title="Danmakufu for Easy Modos by CK Crash">Danmakufu for Easy Modos by CK Crash</a> (CK Crash)<br>--&gt;Since this tutorial was used as a source for mine, I highly suggest that you read it if you haven't already.</p>
-              <br>            </div>          </div>
+	      <br>            </div>          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l3.html" title="Sparen's Danmakufu ph3 Tutorials - Danmakufu Framework">Unit 1 Lesson 3</a></li>
@@ -313,7 +313,7 @@ array = erase(array, 5); //Erase fifth index of array 'array'</code></pre>
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

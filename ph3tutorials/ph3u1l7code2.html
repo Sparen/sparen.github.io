@@ -15,9 +15,9 @@
           <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
         </ul>
       </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <!--Embedded code below. Whitespace actually matters for this because it is in a pre block-->
-                            <h2 style="color:yellow" id="cp2">Checkpoint - Tasking</h2>
-              <p>Tasking style</p>
-              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
+	      <h2 style="color:yellow" id="cp2">Checkpoint - Tasking</h2>
+	      <p>Tasking style</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -78,7 +78,7 @@ task fireA{
         let angleT = GetAngleToPlayer(objBoss);
 	ascent(i in -1..2){
 	    ascent(j in 0..3){
-                CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3-j/6, angleT+i*15, DS_RICE_M_SKY, 5);
+	        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3-j/6, angleT+i*15, DS_RICE_M_SKY, 5);
 	    }
 	}
         wait(120);
@@ -90,7 +90,7 @@ task fireB{
         let angleT = GetAngleToPlayer(objBoss);
 	loop(13){
 	    ascent(i in 0..3){
-                CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2.5-i/3, angleT, DS_BALL_S_RED+i, 5);
+	        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2.5-i/3, angleT, DS_BALL_S_RED+i, 5);
 	    }
 	    angleT+=360/13;
 	}
@@ -108,7 +108,7 @@ task TDrawLoop {
 task TFinalize {
         while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
 	if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
-              +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
+	      +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
 	  AddScore(ObjEnemyBossScene_GetInfo(objScene,INFO_SPELL_SCORE));
 	}
 	Obj_Delete(objBoss);
@@ -128,9 +128,9 @@ function GetCenterY{
 function wait(n){
      loop(n){yield;}
 }</code></pre>
-              <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
-              <p>Sparen style</p>
-              <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
+	      <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
+	      <p>Sparen style</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Single]
 #ScriptVersion[3]
 #Title["My First Danmakufu Script!"]
 #Text["Code by Sparen[r]My First Bullet!"]
@@ -188,7 +188,7 @@ task fireA{
         let angleT = GetAngleToPlayer(objBoss);
 	loop(13){
 	    ascent(i in 0..3){
-                CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2.5-i/3, angleT, DS_BALL_S_RED+i, 5);
+	        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2.5-i/3, angleT, DS_BALL_S_RED+i, 5);
 	    }
 	    angleT+=360/13;
 	}
@@ -199,7 +199,7 @@ task fireB{
         let angleT = GetAngleToPlayer(objBoss);
 	ascent(i in -1..2){
 	    ascent(j in 0..3){
-                CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3-j/6, angleT+i*15, DS_RICE_M_SKY, 5);
+	        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3-j/6, angleT+i*15, DS_RICE_M_SKY, 5);
 	    }
 	}
 }
@@ -221,7 +221,7 @@ task TDrawLoop {
 task TFinalize {
         while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
 	if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
-              +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
+	      +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
 	  AddScore(ObjEnemyBossScene_GetInfo(objScene,INFO_SPELL_SCORE));
 	}
 	Obj_Delete(objBoss);
@@ -241,8 +241,8 @@ function GetCenterY{
 function wait(n){
      loop(n){yield;}
 }</code></pre>
-              <br>            </div>          </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Jan 22, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+	      <br>            </div>          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: Jan 22, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

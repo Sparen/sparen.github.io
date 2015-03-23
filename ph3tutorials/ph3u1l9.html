@@ -22,13 +22,13 @@
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u1l10.html" title="Sparen's Danmakufu ph3 Tutorials - Angular Velocity and Curved Lasers">Unit 1 Lesson 10</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 9 - Introduction to Lasers</h1>              <p>The video for this lesson is my Artifact 2 Contest Entry. And yes, Master Sparks are lasers - if you decide that you're going to deny that... Marisa would like to have a word with you.</p>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 9 - Introduction to Lasers</h1>	      <p>The video for this lesson is my Artifact 2 Contest Entry. And yes, Master Sparks are lasers - if you decide that you're going to deny that... Marisa would like to have a word with you.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/pN0pSrhuo98">
 	      <div style="width: 600px;" class="tutorialnav">
-                <h2 style="color:aqua">Table of Contents</h2>
-                <ul>
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
 	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
 	          <li><a href="#sub2">Part 2: What are Linear Hitboxes?</a></li>
 	          <li><a href="#sub3">Part 3: How do I Create and Use Loose Lasers?</a></li>
@@ -40,40 +40,40 @@
 	          <li><a href="#quiz2">Quiz: Delay and Non-Directional Lasers</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>If you haven't realized by now, this lesson is about non-curvy lasers, which are reserved for the next lesson, where I will also discuss angular velocity in further detail. Here I will be discussing both loose lasers and straight lasers, as well as delay lasers. Later on, I will also Non-Directional Lasers as well as how to rotate straight lasers. Finally, creating passing IDs with an ascent loop will be covered, and there will be an example of trigonometry usage, although that will be covered in more detail in a later tutorial.</p>
 	      <p>Overall, this lesson will end up covering linear hitboxes and render width vs. hitbox width, among other things, and should provide adequate information for using lasers in Touhou Danmakufu ph3.</p>
-              <h2 style="color:yellow" id="sub2">Part 2: What are Linear Hitboxes?</h2>
+	      <h2 style="color:yellow" id="sub2">Part 2: What are Linear Hitboxes?</h2>
 	      <p>Up to now, all the bullets we have discussed have had radial hitboxes - the hitbox of the bullet is calculated using the center of the bullet and a radius from that center. If the player's hitbox happens to overlap with the bullet's hitbox (or boss's hitbox, which is usually radial/circular), then the player enters a state where there is the option of deathbombing (depending on the player) before dying.</p>
 	      <p>Unlike normal shots, lasers (of the loose and straight variety) use linear hitboxes. In these cases, there is a width to the hitbox, and it is calculated from the center axis of the laser. The overall shape of the hitbox is rectangular.</p>
 	      <p>There are thing to watch out for, such as when the render width is very close to the hitbox width, which can result in narrow scrapes or accidental deaths. Be aware of this when playing with lasers.</p>
-              <h2 style="color:yellow" id="sub3">Part 3: How do I Create and Use Loose Lasers?</h2>
+	      <h2 style="color:yellow" id="sub3">Part 3: How do I Create and Use Loose Lasers?</h2>
 	      <p>The first thing you will notice is that creating loose lasers is very easy, and is very similar to controlling shots. For all practical purposes, they are elongated shots with linear/rectangular hitboxes. There is one main function for creating them: <code>CreateLooseLaserA1()</code>. Its arguments are virtually the same as those of shots, except that it has length and width parameters. (length does not necessarily have to be greater than width, but that's sort of... well, up to the scripter). Note that for all lasers, the default blend is ADD - regardless of which graphic you choose, it will be rendered shiny. <b><span style="color:magenta">!!!FACT CHECK NEEDED - ADD_RGB or ADD_ARGB!!!</span></b></p>
 	      <p>Below is an example that creates a loose laser. Note that for the graphic, it is best to choose a circular bullet as your base or a graphic meant specifically for lasers. Avoid using things such as fireballs (unless you are using the loose laser as a large bullet, in which case just make sure to scale the bullet correctly) and heart bullets for lasers.</p>
-              <pre class="prettyprint"><code>    let obj = CreateLooseLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, GetAngleToPlayer(objBoss), 
+	      <pre class="prettyprint"><code>    let obj = CreateLooseLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, GetAngleToPlayer(objBoss), 
         75, 18, 1025, 0);
     //The graphic I used, 1025, represents an ADD rendered round bullet from ExPorygon's AllStarShot shotsheet</code></pre>
 	      <p>I explained above that you can use loose lasers for large bullets. In fact, this is a very popular technique for those who don't want to deal with manually setting the hitbox and scale of large custom bullets. All you need to do is create a loose laser whose dimensions are scaled properly from the actual bullet graphic. Do be aware though - the hitbox is rectangular and not circular, so it may have unwanted results with very large bullets.</p>
 	      <p>As a final note, keep in mind that loose lasers, when spawned, expand from 0 to their full length before the back end of the laser begins to move. The rate is determined by laser length and the speed of the laser.</p>
 	      <div class="tut_exercise">EXERCISE: Create a script that fires rings of loose lasers every 30 frames</div>
 	      <div class="tut_checkpoint">CHECKPOINT: How does a rectangular/linear hitbox work?</div>
-              <h2 style="color:yellow" id="sub4">Part 4: What are Straight Lasers?</h2>
+	      <h2 style="color:yellow" id="sub4">Part 4: What are Straight Lasers?</h2>
 	      <p>So I heard you want to create straight lasers! Great! First thing's first though - what exactly <i>is</i> a straight laser?</p>
 	      <p>Above, I discussed loose lasers, which act as elongated bullets with linear/rectangular hitboxes as opposed to radial/circular ones. Straight Lasers, on the other hand, are stationary by default and have two interesting features to keep in mind - first, they are meant to delete at a certain time and second, they have delay, where a laser with no hitbox is spawned with a smaller width to show where the laser will spawn - this is important because when the delay time has run out, the laser will appear at full length.</p>
 	      <p>Straight lasers can be created using the following code:</p>
-              <pre class="prettyprint"><code>    let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), GetAngleToPlayer(objBoss), 
+	      <pre class="prettyprint"><code>    let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), GetAngleToPlayer(objBoss), 
         512, 20, 60, 1002, 60);
     //The graphic I used, 1002, represents an ADD rendered rectangular bullet from ExPorygon's AllStarShot shotsheet</code></pre>
 	      <p>The arguments are as follows: <code>CreateStraightLaserA1(x, y, angle, length, width, delete time, graphic, delay);</code>, where delete time is how long the laser will last before automatically deleting - this timer begins after the delay period has finished. Note that for the length and width, I used 512 and 20, respectively, and used a rectangular bullet for the graphic. Generally speaking, it doesn't matter what graphic type you use, although it is best to use one that's as rectangular and undecorated as possible. I say rectangular because if you use a round bullet, the bullet graphic is stretched to the length and width, and there may be parts of the laser where there is a hitbox but the graphic is stretched in such a way where it seems like the location is safe (remember! Rectangular hitboxes! The hitbox of the laser does NOT match the graphic!). I say undecorated because the laser will be stretched, and any decorations will also be stretched, which is usually bound to result in something hideous.</p>
 	      <p>As for the length and width, 512 is, being a power of 2, a standard number for laser length, assuring that the laser will stretch the entire length/width of the screen (technically speaking, from the top right to bottom left corner, you would want a laser of length &gt;= 590, but there are limited uses for that). I used 20 for width because anything under 18 has a high chance of having an invisible or near-invisible delay laser, which is always a bad thing. This is due to the render width of the delay laser being so thin that it may not correctly render. Of course, the laser will still spawn, often shocking the player. Keep this in mind if you are using purely horizontal or purely vertical lasers with widths &lt;= 20, as that is the scenario with the highest occurence of the render issue.</p>
-              <h2 style="color:yellow" id="sub5">Part 5: How do I Control the Properties of a Laser?</h2>
+	      <h2 style="color:yellow" id="sub5">Part 5: How do I Control the Properties of a Laser?</h2>
 	      <p>Just like with shots, there are plenty of functions to control lasers. First and foremost, you can use all ObjMove and ObjRender functions on Loose Lasers. All lasers have spell resist (but not autodelete) by default, which you should keep in mind. However, be aware that <code>ObjMove_SetAngle()</code> should never be used on Straight Lasers - you must use the specific ObjLaser functions to manipulate angle of straight lasers. And speaking of ObjLaser functions, let's go over them.</p>
 	      <p>Many of the ObjLaser functions are self-explanatory. SetLength, SetRenderWidth, and SetIntersectionWidth are standard functions that can reset the length and width of the laser. SetIntersectionWidth controls the hitbox - the distance from the central axis of the laser where the player can get hit. If you are trying to graze a laser but die doing so, you may want to consider resizing the hitbox using <code>ObjLaser_SetIntersectionWidth()</code>.</p>
 	      <p>By default, trying to graze a laser will result in one graze every 20 frames. You can change this using <code>ObjLaser_SetGrazeInvalidFrame()</code>, although this would only be of use with specific custom lasers - you will never use this function unless you are doing something along the lines of specifying a gimmick around graze or making a relatively complicated project with different score/graze mechanics.</p>
 	      <p><code>ObjLaser_SetInvalidLength()</code>, however, is really important, especially when using lasers made from round bullets. What it basically does is chop the hitbox on the ends of the laser so that the tips of the lasers (which are probably near-invisible) don't actually shoot down the player. It defaults to 10% on each side, but you may want to increase it if you are getting complaints about cheapshots.</p>
 	      <p>For straight lasers, you have some interesting functions. <code>ObjMove_SetAngle()</code> is replaced by <code>ObjStLaser_SetAngle()</code>, which you should be using instead. What this function does is set the angle which the laser is pointing. This is different from <code>ObjMove_SetAngle()</code>, which is the direction of movement. And that being said, having moving straight lasers is usually done manually with a while loop, where you set the laser's position and angle each frame using a counter and some trigonometry. So basically, you have no use for <code>ObjMove_SetAngle()</code> when using straight lasers.</p>
 	      <p>The last function I will discuss in this section is <code>ObjStLaser_SetSource()</code>. Basically, what this does is determine whether to draw the shiny ball at the base of the laser. The base of the laser is the position of the laser (accessed and mutated by ObjMove_SetX/Y/Position), for future reference - this is the only part of the laser whose coordinates can be obtained without trigonometry. If you want the shiny glowing ball, don't change anything, because it appears by default. If you want to turn it off, set <code>ObjStLaser_SetSource(obj, false);</code>. Below is sample code showing how to use some of these functions.</p>
-              <pre class="prettyprint"><code>    let angleT = 0;//Base angle faces directly right
+	      <pre class="prettyprint"><code>    let angleT = 0;//Base angle faces directly right
     loop(6){//A ring of 6 lasers
         let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), angleT, 512, 24, 20, 1003, 60);
         ObjStLaser_SetSource(obj, false);//Do not show the laser source
@@ -83,74 +83,74 @@
     }</code></pre>
 	      <p>Note that although obj is a local variable that only exists inside the block, we can still access the laser object's ID in Danmakufu using various functions. This is not possible in many other languages.</p>
 	      <div class="tut_exercise">EXERCISE: Experiment with ObjLaser_SetInvalidLength and ObjLaser_SetIntersectionWidth. What works best with which graphic type?</div>
-              <h2 style="color:yellow" id="quiz1">Quiz: Loose and Straight Lasers</h2>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Loose and Straight Lasers</h2>
 	        <!--Quiz start.-->
 		<p>1) Marisa wants to create a straight laser that points straight at Reimu's donation box. However, she has a problem - in all of the test runs, the laser appeared without warning and destroyed something. How can she fix this?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'B', 4);">
-                <input type="RADIO" value="A" name="cc">
-                A. Increase the delete time of the laser<br>
-                <input type="RADIO" value="B" name="cc">
-                B. Increase the delay time of the laser<br>
-                <input type="RADIO" value="C" name="cc">
-                C. Show Reimu the power of LOVE!<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 4);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. Increase the delete time of the laser<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Increase the delay time of the laser<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. Show Reimu the power of LOVE!<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 	        <br>
 		<p>2) Marisa successfully got the laser to fire. However, now she wants to make sure that the lasers never delete. How should she do this?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'A', 4);">
-                <input type="RADIO" value="A" name="cc">
-                A. Set delete time to be greater than the value in EV_REQUEST_TIMER*60<br>
-                <input type="RADIO" value="B" name="cc">
-                B. Set delay to be greater than the value in EV_REQUEST_TIMER*60<br>
-                <input type="RADIO" value="C" name="cc">
-                C. Repeatedly fire lasers until everything is burned<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 4);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. Set delete time to be greater than the value in EV_REQUEST_TIMER*60<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Set delay to be greater than the value in EV_REQUEST_TIMER*60<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. Repeatedly fire lasers until everything is burned<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 	        <br>
 		<p>3) Meanwhile, Nitori is upset at the destruction of her home by Marisa's spellcards. She wishes to fire loose lasers at Marisa's house. What graphic is most suitable for this task?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'C', 3);">
-                <input type="RADIO" value="A" name="cc">
-                A. A rectangular bullet<br>
-                <input type="RADIO" value="B" name="cc">
-                B. A gear shaped bullet<br>
-                <input type="RADIO" value="C" name="cc">
-                C. A round bullet<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 3);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. A rectangular bullet<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. A gear shaped bullet<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. A round bullet<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 	        <br>
 		<p>4) Patchouli is experimenting with Fireball Lasers (yes this is a reference to my contest entry video at the top of the page). However, it seems that it is possible to die a little to the left or right of the front of the bullet but it is safe to go in at the side and stay in the white part of the bullet without dying. What is the issue here?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'B', 3);">
-                <input type="RADIO" value="A" name="cc">
-                A. The hitbox of the bullet was not defined correctly<br>
-                <input type="RADIO" value="B" name="cc">
-                B. It is a circular bullet with a rectangular hitbox<br>
-                <input type="RADIO" value="C" name="cc">
-                C. There's a bug in Danmakufu<br>
-                <input type="RADIO" value="D" name="cc">
-                D. She is imagining things<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 3);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. The hitbox of the bullet was not defined correctly<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. It is a circular bullet with a rectangular hitbox<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. There's a bug in Danmakufu<br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. She is imagining things<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 	        <br>
 		<p>5) Alice decides that she must create some loose lasers. She uses the following code:</p>
-                <pre class="prettyprint"><code>    CreateLooseLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 0, GetAngleToPlayer(objBoss), 60, 18, 1017, 0);</code></pre>
+	        <pre class="prettyprint"><code>    CreateLooseLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 0, GetAngleToPlayer(objBoss), 60, 18, 1017, 0);</code></pre>
 		<p>However... the laser graphics never spawn. Why?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'D', 3);">
-                <input type="RADIO" value="A" name="cc">
-                A. The laser is not wide enough<br>
-                <input type="RADIO" value="B" name="cc">
-                B. There is no delay<br>
-                <input type="RADIO" value="C" name="cc">
-                C. The length:width ratio is not appropriate<br>
-                <input type="RADIO" value="D" name="cc">
-                D. The speed is 0, so the loose laser will never extend in length.<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <h2 style="color:yellow" id="sub6">Part 6: What are Delay Lasers and How Can I Use Them?</h2>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'D', 3);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. The laser is not wide enough<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. There is no delay<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. The length:width ratio is not appropriate<br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. The speed is 0, so the loose laser will never extend in length.<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="sub6">Part 6: What are Delay Lasers and How Can I Use Them?</h2>
 	      <p>Now I will discuss delay lasers, which have many uses.</p>
 	      <p>Delay lasers are, basically, the hitboxless lasers formed when you create a straight laser. Most often, they are created in order to show the paths of fast bullets or bullet streams. Good uses include Shadow's RaNGE 10 Reimu script, where bullets coming from the bottom of the screen had delay lasers so that the player could know the path the talismans would take before they spawned.</p>
 	      <p>To form a delay laser in ph3, you must create a straight laser with <code>ObjStLaser_SetSource(obj)</code> set to false. Additionally, it should have delete time of 0, although I will discuss this in more detail in a moment. The delay is how long the delay laser should exist for, and optimally, you should use a rectangular bullet with a width of at least 18 so that the render width of the delay laser will be enough for it to be visible.</p>
 	      <p>Now, if you set delete time to 0 and create this laser, you will find that it does not work as you expected - the laser graphic will actually expand to its final width while fade deleting. This did not happen in 0.12m, but it happens in ph3. The workaround is as follows: Manually kill the object before it enlarges. Below is my code, which you are free to use (citing would be nice).</p>
-              <pre class="prettyprint"><code>    task DelayLaser(x, y, ang, l, w, dt, graph, delay){ 
+	      <pre class="prettyprint"><code>    task DelayLaser(x, y, ang, l, w, dt, graph, delay){ 
 	let objlaser = CreateStraightLaserA1(x, y, ang, l, w, dt, graph, delay);
 	ObjStLaser_SetSource(objlaser, false);
 	loop(delay-1){//So that the graphic never enlarges. 
@@ -163,25 +163,25 @@
 	      <p>Delay lasers are useful tools, and I highly suggest that you explore and see what you can do with them.</p>
 	      <div class="tut_exercise">EXERCISE: Experiment with Delay Lasers. See where they are useful and which widths and graphics work best.</div>
 	      <div class="tut_checkpoint">CHECKPOINT: What are the practical applications of a laser without a hitbox?</div>
-              <h2 style="color:yellow" id="sub7">Part 7: How do I Create Non-Directional Lasers?</h2>
+	      <h2 style="color:yellow" id="sub7">Part 7: How do I Create Non-Directional Lasers?</h2>
 	      <p>I will close this lesson with a discussion on Non-directional lasers as well as applications of tasks that obtain and ID via an ascent loop, a technique that is extremely useful for controlling more complex patterns of bullets.</p>
 	      <p>To begin, it is important to develop a framework for understanding what exactly we are doing when we create Non-Directional Lasers. For the purposes of this lesson, we will be limiting ourselves to a single ring of 12 straight lasers.</p>
 	      <p>By definition (as far as Patchouli and Embodiment of Scarlet Devil are concerned), a Non-Directional Laser is a laser spawned at a location away from the boss that rotates around the location of the boss with a set radius. The angle of the laser is always pointing away from the boss.</p>
 	      <p>In 0.12m, there was a specific function to create a Non-Directional Laser. However, this is ph3, and no such function exists. We will be creating a task called SpawnNDLaser in this part.</p>
 	      <p>The first thing to do is to call this task. Each task will be responsible for a single laser. For the purposes of this tutorial, the lasers will be spawned 60 pixels from the boss and will point outwards.</p>
-              <pre class="prettyprint"><code>    ascent(i in 0..12){
+	      <pre class="prettyprint"><code>    ascent(i in 0..12){
         SpawnNDLaser(i);
     }</code></pre>
 	      <p>Notice that I have used an ascent loop, and have passed the value (in this case, an identifier) into the task.</p>
 	      <p>As for the task, let's begin with the basics.</p>
-              <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
+	      <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
         let objcount = 0;
         let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss)+60*cos(ID*30), ObjMove_GetY(objBoss)+60*sin(ID*30), ID*30, 
 		512, 24, 300, 1001, 60);
     }</code></pre>
 	      <p>In the above code, I declare the task and begin with a declaration of the variable objcount, the counter for this task. Then I create a straight laser 60 pixels from the boss's location, with angle equals to ID*30. Since ID can go from 0 to 11 due to our ascent loop, multiplying by 30 (i.e. 360/12, 12 being the total number of lasers) will give the angle we want the laser to start at. The 60*cos(ID*30) and 60*sin(ID*30) is the trigonometry used to spawn the lasers in a circle of radius 60 around the boss. Trigonometry and Parametrics will receive a much more thorough explanation in Lesson 11.</p>
 	      <p>At this point, we can create the lasers but they will stay put. They will not rotate, and if the boss moves, they will not move with the boss. We will use a while loop to combat this.</p>
-              <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
+	      <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
         let objcount = 0;
         let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss)+60*cos(ID*30), ObjMove_GetY(objBoss)+60*sin(ID*30), ID*30, 
 		512, 24, 300, 1001, 60);
@@ -194,10 +194,10 @@
     }</code></pre>
 	      <p>The code above adds a while loop. While the laser has not been deleted, first change its position, and then change its angle. In this loop, objcount increments by one, therefore moving the lasers along the circle and changing their angles accordingly. If you want to make the lasers move faster/slower, increment objcount by a different value.</p>
 	      <p>The key thing to note about Non-Directional Lasers and danmakufu in general is that in order to do something you have never done before, you must first break it down into components that you know how to implement. You then consider ways in which you can implement what you are trying to do - there are always multiple ways to do the same thing. If you find a method that suits you better, go ahead and use it.</p>
-              <h2 style="color:yellow" id="quiz2">Quiz: Delay and Non-Directional Lasers</h2>
+	      <h2 style="color:yellow" id="quiz2">Quiz: Delay and Non-Directional Lasers</h2>
 	        <!--Quiz start.-->
 		<p>1) Marisa has stolen Patchouli's Non-Directional Lasers and wants to have them move from the boss's location to a radius of 60, one pixel increase per frame. How would she implement this? Her code is below. There may be multiple correct answers.</p>
-                <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
+	        <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
         let objcount = 0;
         let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss)+60*cos(ID*30), ObjMove_GetY(objBoss)+60*sin(ID*30), ID*30, 
 		512, 24, 300, 1001, 60);
@@ -208,30 +208,30 @@
             yield;
         }
     }</code></pre>
-                <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
-                <input type="RADIO" value="A" name="cc">
-                A. Create a variable called <code>radius</code> that increments by one unit each frame while less than 60, and is added to the x and y parameters of <code>ObjMove_SetPosition()</code><br>
-                <input type="RADIO" value="B" name="cc">
-                B. Create a variable called <code>radius</code> that increments by one unit each frame while less than 60, and replace the 60* with <code>radius*</code><br>
-                <input type="RADIO" value="C" name="cc">
-                C. Create a variable called <code>radiusmult</code> that increments 1/60 each frame while less than 60, and multiply the radial portion (the sine/cosine portion) of each ObjMove parameter by <code>radiusmult</code>.<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. Create a variable called <code>radius</code> that increments by one unit each frame while less than 60, and is added to the x and y parameters of <code>ObjMove_SetPosition()</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Create a variable called <code>radius</code> that increments by one unit each frame while less than 60, and replace the 60* with <code>radius*</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. Create a variable called <code>radiusmult</code> that increments 1/60 each frame while less than 60, and multiply the radial portion (the sine/cosine portion) of each ObjMove parameter by <code>radiusmult</code>.<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 	        <br>
 		<p>2) Now that the lasers are working, she wants to create a master spark whose delay laser is created 120 frames before the laser spawns. Which of the following is an appropriate length of time for the lifetime of the laser? The spark will last for 120 frames.</p>
-                <form method="POST" onSubmit="return checkAnswerA2(this, 'C');">
-                <input type="RADIO" value="A" name="cc">
-                A. 300<br>
-                <input type="RADIO" value="B" name="cc">
-                B. 90<br>
-                <input type="RADIO" value="C" name="cc">
-                C. 150<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
+	        <form method="POST" onSubmit="return checkAnswerA2(this, 'C');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 300<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 90<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 150<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 	        <br>
-              <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
-              <br>            </div>          </div>
+	      <br>            </div>          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l8.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Shotsheets and Bullet Properties">Unit 1 Lesson 8</a></li>
@@ -240,7 +240,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 17, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 17, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

@@ -1,5 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Projects - Devlog for Pok&eacute;mon Mystery Dungeon - Danmakufu</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="AFCDTECH - Project page for PMD DNH"      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Project, Script, Pokemon, Mystery, Dungeon">
+    <meta name="viewport" content="initial-scale=1">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -18,22 +19,22 @@
           <li><a class="mfaq" href="../faq.html">FAQ</a></li>
         </ul>
       </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">
-	      <center>              <h1 style="color:rgb(59,248,80)">Pok&eacute;mon Mystery Dungeon - Explorers of Danmakufu (DEVLOG)</h1>
+	      <center>	      <h1 style="color:rgb(59,248,80)">Pok&eacute;mon Mystery Dungeon - Explorers of Danmakufu (DEVLOG)</h1>
 	      <img alt="PMD Explorers of Danmakufu" src="./img/PMD.png" width="240" height="192"><br><br>
-              <p>Welcome to my DevLog for my collaboration project with FrenticPony!</p>
-              <h2 style="color:rgb(59,248,80)">What is this Project?</h2>
-              <p style="font-family: pmdfont;font-size:150%;">This project is our own Pokémon Mystery Dungeon game, made in Touhou Danmakufu ph3!<br>We are making the story from scratch, and we aim to have as much original material as possible while still maintaining the feel for the game (i.e. many fonts, sprites, sfx, and other graphical resources will be taken from Pokémon Mystery Dungeon Red, Blue, Time, Darkness, and Sky, partially due to our limitations and partially for authenticity).<br>As per doujin guidelines and due to the Pokémon Company's copyrights, this game will be distributed for free and we will assume all costs associated with commissions.<br>I plan to update this devlog every day I have done something for the project. As the person who has declared responsibility for the entirety of dungeon creation, I will try to make the game as authentic and fun to play as possible, and of course... it wouldn't do if we didn't have new items, right?<br>-snicker-</p>
+	      <p>Welcome to my DevLog for my collaboration project with FrenticPony!</p>
+	      <h2 style="color:rgb(59,248,80)">What is this Project?</h2>
+	      <p style="font-family: pmdfont;font-size:150%;">This project is our own Pokémon Mystery Dungeon game, made in Touhou Danmakufu ph3!<br>We are making the story from scratch, and we aim to have as much original material as possible while still maintaining the feel for the game (i.e. many fonts, sprites, sfx, and other graphical resources will be taken from Pokémon Mystery Dungeon Red, Blue, Time, Darkness, and Sky, partially due to our limitations and partially for authenticity).<br>As per doujin guidelines and due to the Pokémon Company's copyrights, this game will be distributed for free and we will assume all costs associated with commissions.<br>I plan to update this devlog every day I have done something for the project. As the person who has declared responsibility for the entirety of dungeon creation, I will try to make the game as authentic and fun to play as possible, and of course... it wouldn't do if we didn't have new items, right?<br>-snicker-</p>
 	      <!-- Apparently, Frentic's original graphics for this project are dated 11/3/2012... o_O -->
 	      </center>
 	      <div style="width: 600px;" class="tutorialnav">
-                <h2 style="color:aqua">Table of Contents</h2>
-                <ul>
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
 	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a> <a href="#submar082015">08</a> <a href="#submar122015">12</a> <a href="#submar142015">14</a> <a href="#submar172015">17</a> <a href="#submar182015">18</a> <a href="#submar202015">20</a></li>
 	        </ul>
 	      </div>
-              <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
-              <h2 style="color:rgb(59,248,80)" id="submar202015">March 20, 2015</h2>
-              <div class="indexdevlogA">
+	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="submar202015">March 20, 2015</h2>
+	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today was pretty productive as far as this devlog goes. I began by writing an enemy creation function skeleton. Basically, each enemy has a certain range of floors, and I just see if the current floor is acceptable. If so, I dump the Dex No. of that enemy into the array of possible Pokémon, and one of them will be chosen randomly when the function if called.</p>
 	      <p class="indexdevlogtitleA">After this, I began preparations for loading a map from file. I already had a map, so I had to turn it into a 2D array of tiles. I began by looking at the ObjFile functions. Unfortunately, there was no way to get an individual character. Regardless, I added some type functions to ObjTile and then Drake and GTBot gave me the wisdom to move forwards. GT had a ridiculously simple solution that involved getting each line and indexing the string, and it worked! I implemented it, and it didn't crash!</p>
 	      <p class="indexdevlogtitleA">With the map loading function done, it was time to move forwards with the coding. So I began writing my function to load Tileset graphics. There was a lot to do, and as I went on, I ditched the constants for their respective numbers because I could save space. It took a long time, and I began with the edges of the map and tiles that had no different bordering tiles. Of course... my function was saying that the state was -1, and I facedesked (not actually) when I saw the ObjTile_SetType commented out.</p>
@@ -46,35 +47,35 @@
 	      <div class="spoiler"><div><img src="http://i1164.photobucket.com/albums/q570/SparenofIria/DevLog%20Image%202_zpsccjchjv3.png" border="0" alt="Devlog Image"/ width="640" height="480"></div></div></center>
 	      <p class="indexdevlogtitleA">Anyways, I need to implement the rest of the walls as well as rooms in order to complete the first tileset. And then... time to test creating a player, timing turns, and testing collision and camera movement!</p>
 	      <p class="indexdevlogtitleA">Below is the second DevLog video!</p>
-              <center><embed width="420" height="315" class="indexdevlogtitleA"
+	      <center><embed width="420" height="315" class="indexdevlogtitleA"
 		src="https://www.youtube.com/v/Z1-qnt2kWvg"></center>
 	      </div>
-              <h2 style="color:rgb(59,248,80)" id="submar182015">March 18, 2015</h2>
-              <div class="indexdevlogA">
+	      <h2 style="color:rgb(59,248,80)" id="submar182015">March 18, 2015</h2>
+	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">While playing more Explorers of Sky, I realized some more issues... especially with how level ups and evolution (in terms of stat changes) will work. And it was utterly horrifying at the thought, because then dealing with permanant power-ups becomes an issue. Regardless, I assembled a Tileset and plan to get the dungeon graphics working. Hopefully it'll go well.</p>
 	      </div>
-              <h2 style="color:rgb(59,248,80)" id="submar172015">March 17, 2015</h2>
-              <div class="indexdevlogA">
+	      <h2 style="color:rgb(59,248,80)" id="submar172015">March 17, 2015</h2>
+	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">More playing Explorers of Sky, more wondering about how the dungeon creation algorithm works, and actual doubt as to whether or not they used premade maps... Regardless, I made a sample map which I hope to implement for testing, and I've been looking at things such as tilesets and the like. I wonder how I will approach stat buffs and debuffs, especially, since those may be better handled using non-Obj_SetValue parameters... Hmm... (Though wonder tiles are not a priority at the moment)</p>
 	      </div>
-              <h2 style="color:rgb(59,248,80)" id="submar142015">March 14, 2015</h2>
-              <div class="indexdevlogA">
+	      <h2 style="color:rgb(59,248,80)" id="submar142015">March 14, 2015</h2>
+	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Another day of no real programming for the project. But I managed to do a slight few error fixes. A lot of stuff happened today, including some playtime of Explorers of Sky. I am seriously considering using the space allocated for the mini map and using it for the player's moves and PP, with keyboard shortcuts for activating each attack.</p>
 	      </div>
-              <h2 style="color:rgb(59,248,80)" id="submar122015">March 12, 2015</h2>
-              <div class="indexdevlogA">
+	      <h2 style="color:rgb(59,248,80)" id="submar122015">March 12, 2015</h2>
+	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today was the definition of not getting anything done. All I did was fix some function names in ObjPokemon, play around with the Tiny Woods tileset, and write some skeleton stuff in my floor script, where I basically just created the player object and nothing else.</p>
 	      <p class="indexdevlogtitleA">Still, I need to finish DEC, so that will take priority over this project until DEC is complete.</p>
 	      </div>
-              <h2 style="color:rgb(59,248,80)" id="submar082015">March 8, 2015</h2>
-              <div class="indexdevlogA">
+	      <h2 style="color:rgb(59,248,80)" id="submar082015">March 8, 2015</h2>
+	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today was as uneventful as could be in terms of development - I had a lot of work to do, so I had no time to develop. In the end, all I did was make a folder for future tilesets, rename lib to lib_Sparen because we'll have separate overworld and dungeon libraries, and create files for ObjPEnemy and ObjPPlayer, which will be used for dungeon enemies and dungeon players, respectively. They haven't been tested (almost nothing has been...), but they will be in due time, though I will need to give them something other than a constructor...</p>
 	      <p class="indexdevlogtitleA">I did a bit of experimenting with tiles and dungeon floors, and I soon came to the realization that a 100x80 tile floor was too large, so I shrunk it to 75x60. Then I did the math and realized that I would need a whopping <b>4500</b> tile objects, which is far too many for Danmakufu to ever possibly handle, as well as the fact that indexing the 2D array would be a major problem.</p>
 	      <p class="indexdevlogtitleA">I eventually shrunk it down to 60x48, which I will use for testing as it is a good size. At this point, I also learned that each tile is represented in the Minimap by four pixels - effectively the dungeon is a 6:1 scale to the Minimap. The space I had set aside for the Minimap in the STG_Frame was only big enough to handle a 36x31 (or 34x29, to give padding with the edge) floor, so I was forced to ditch it entirely. In the game, the mini map, if implemented, will most likely be rendered over the actual dungeon like in the actual games simply because there is no place to cram it that is big enough.</p>
 	      <p class="indexdevlogtitleA">Wow... this devlog was far longer than I expected given that I have done literally nothing today for this project except for a few lines of code and 0 testing.</p>
 	      </div>
-              <h2 style="color:rgb(59,248,80)" id="submar072015">March 7, 2015</h2>
-              <div class="indexdevlogA">
+	      <h2 style="color:rgb(59,248,80)" id="submar072015">March 7, 2015</h2>
+	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today began with even less fanfare than yesterday. I did a few things here and there, and wrote some ObjTile, although it was basically limited to x and y positioning. I had a talk with Frentic about various things, and then decided to go and actually implement my tests!</p>
 	      <p class="indexdevlogtitleA">(What I am leaving out here is the four or so hours I spent trying to decrypt and rip the base graphics of Explorers of Sky, as well as the playtime I had, where I soon realized that we would need a new set of virtual keys to make up for the A, B, X, Y, L, R, start, and select buttons. Horrifying.)</p>
 	      <p class="indexdevlogtitleA">Over the course of a few long hours, I moved and ported existing libraries, purged code, and made a STG_Frame using Frentic's graphics. And then came the beautiful part - actually making the tests.</p>
@@ -83,11 +84,11 @@
 	      <p class="indexdevlogtitleA">...but thankfully, Miransu recognized it immediately - it was Tekton Bold, and coding began... only for Danmakufu to freeze. I'll leave out the pain and suffering, but let's just say that I forgot a ", and that screwed up <i>everything</i>. At the same time, all of my libraries were run through the syntax checker and I had to fix literally every include statement and Obj_SetValueD call in all of my libraries. A pain.</p>
 	      <p class="indexdevlogtitleA">In the end though... all worked out. I managed to get everything I wanted to get working working, and I'm really glad. Because now... I feel like I've really accomplished something, even if what I have done is miniscule in reality. Basically, I never planned to be writing the GUI and dungeon spawning code after what, 5 days? It's a fulfilling feeling, especially when listening to the Gates to Infinity BGM (which is better than the game).</p>
 	      <p class="indexdevlogtitleA">Below is the first DevLog video!</p>
-              <center><embed width="420" height="315" class="indexdevlogtitleA"
+	      <center><embed width="420" height="315" class="indexdevlogtitleA"
 		src="https://www.youtube.com/v/ax2G6UD7uJ0"></center>
 	      </div>
-              <h2 style="color:rgb(59,248,80)" id="submar062015">March 6, 2015</h2>
-              <div class="indexdevlogA">
+	      <h2 style="color:rgb(59,248,80)" id="submar062015">March 6, 2015</h2>
+	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today began with relatively no fanfare. Another snow day. But that meant that I had, of course, time to make function libraries!</p>
 	      <p class="indexdevlogtitleA">I began with lib_ObjPokemon, which was to hold everything about a Pokemon that could possibly exist (yeah, I know). Turns out it was a harder endeavor than I thought. Implementing HP and types and stats was fine. I made lib_ObjStatusEffect while I was at it, which became a nightmare, so I moved all of the constants to a constant file instead - the actual library just includes the constant sheet, which is sort of sad and sort of relieving at the same time.</p>
 	      <p class="indexdevlogtitleA">lib_ObjPokemon was fine. I added terrain, a way to initialize from Dex No. like I had set up for ObjAttack, and also added stuff for size and specie. But then I wanted to fill in the data in ObjPokemon_LoadSpecieFromID(obj, ID). So I decided to write a C program to do it for me since I knew I was fully capable of it.</p>
@@ -96,8 +97,8 @@
 	      <p class="indexdevlogtitleA">Still, the pride of making my first C program that wasn't for a class... it was amazing. I'd dump it here on the website, but putting it in a pre block is about as close to disaster as I could ever get, so I will hold off on that - especially since it is still in development.</p>
 	      <p class="indexdevlogtitleA">As for BGM, I got the dungeon tracks for Gates to Infinity, and it'll be nice to have more sacrificial testing bgms to choose from.</p>
 	      </div>
-              <h2 style="color:rgb(59,248,80)" id="submar052015">March 5, 2015</h2>
-              <div class="indexdevlogA">
+	      <h2 style="color:rgb(59,248,80)" id="submar052015">March 5, 2015</h2>
+	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">So today was the day when I first saw Frentic's beautiful and amazing work. Although it was a proof-of-concept, it was amazingly well done, with animations, bgm, correct text formatting, collision detection, and more. I was awed, especially after my failures in Java and the realization from other members of LOCAA that this project <i>might actually be possible.</i> So Frentic reached out, and voila. I accepted.</p>
 	      <p class="indexdevlogtitleA">This devlog is here because it NEEDS to be here. If I don't keep a devlog, I don't know how I will be able to vent my rage and joy. We're not using Github or Dropbox (yet) since I have to get to sumer break first, so I'm preparing all of the function libraries in advance of implementation. I made lib_ObjAttack three days ago as a proof of concept (for creating our own classes and data structures in Danmakufu - it's way more clunky than in C and nowhere near as convenient as Java), but now it seems I may be using it...</p>
 	      <p class="indexdevlogtitleA">I expanded my paltry lib_ObjAttack with elemental types, more attack types, Power Points, crit rate, accuracy, and names, among other things. I also set up a create w/ name which may be of use in the development phase, as well as our main ObjAttack creator - ObjAttack_CreateEXB(ID), which takes a numerical ID (each attack will have its own ID) and will load literally everything by using a switch statement. Granted, I may have some issues with this later (I will. It's programming.), but I've got to give it my best shot.</p>
@@ -111,4 +112,4 @@
 Summer will be great~
 (Now... as for tile set replacement, figuring out the animations, and obtaining all of our bgm... that's a different story...)
 I guess I'll have to choose a sacrificial bgm for my testing dungeon, because I'll be listening to it until I'm sick of it.</blockquote>
-	      </div>              <br>            </div>          </div>        </div>      </div>      <div id="ft">        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>  </body></html>
+	      </div>	      <br>            </div>          </div>        </div>      </div>      <div id="ft">        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>      </div>    </div>  </body></html>

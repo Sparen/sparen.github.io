@@ -22,13 +22,13 @@
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u1l6.html" title="Sparen's Danmakufu ph3 Tutorials - Firing our First Bullet">Unit 1 Lesson 6</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">              <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 5 - Danmakufu Syntax and Structures Part 2</h1>              <p>The video for this lesson is TalosMistake's Gensei Ruri, an unreleased script with some of the most beautiful patterns ever made in Danmakufu ph3 (in my opinion).</p>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 5 - Danmakufu Syntax and Structures Part 2</h1>	      <p>The video for this lesson is TalosMistake's Gensei Ruri, an unreleased script with some of the most beautiful patterns ever made in Danmakufu ph3 (in my opinion).</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/g92BLspLfdc">
 	      <div style="width: 600px;" class="tutorialnav">
-                <h2 style="color:aqua">Table of Contents</h2>
-                <ul>
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
 	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
 	          <li><a href="#sub2">Part 2: What are Booleans?</a></li>
 	          <li><a href="#sub3">Part 3: What are If and If-Else Statements?</a></li>
@@ -42,9 +42,9 @@
 	          <li><a href="#sub9">Part 9: What are the Reserved Keywords?</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>              <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
-              <p>In this lesson, I will cover the following:</p>
-              <ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will cover the following:</p>
+	      <ul>
 	          <li>Booleans and Boolean Operations</li>
 	          <li>Loops</li>
 	          <li>Functions</li>
@@ -52,8 +52,8 @@
 	          <li>Tasks and yield;</li>
 	          <li>Usage of the Semicolon</li>
 	      </ul>
-              <p>In the previous lesson, I covered the following:</p>
-              <ul>
+	      <p>In the previous lesson, I covered the following:</p>
+	      <ul>
 	          <li>Comments</li>
 	          <li>Variables and Variable Declaration</li>
 	          <li>Constants</li>
@@ -63,34 +63,34 @@
 	          <li>One-Dimensional Arrays</li>
 	      </ul>
 	      <p>Please note that the contents of this page are partially based off of <a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs">CK Crash's Danmakufu ph3 tutorial</a> and that it may be a more suitable option for learning about how Danmakufu treats variables and the like.</p>
-              <h2 style="color:yellow" id="sub2">Part 2: What are Booleans?</h2>
-              <p>A boolean is, simply put, either true or false.</p>
-                <pre class="prettyprint"><code>let bool = true;
+	      <h2 style="color:yellow" id="sub2">Part 2: What are Booleans?</h2>
+	      <p>A boolean is, simply put, either true or false.</p>
+	        <pre class="prettyprint"><code>let bool = true;
 let bool2 = false;</code></pre>
-              <p>Simple, right? Now we will discuss boolean expressions, which are expressions that are either true or false and will be very useful when we discuss if and if-else statements in Part 3.</p>
-                <pre class="prettyprint"><code>let test = (5>6); //false, since 5 is not greater than 6
+	      <p>Simple, right? Now we will discuss boolean expressions, which are expressions that are either true or false and will be very useful when we discuss if and if-else statements in Part 3.</p>
+	        <pre class="prettyprint"><code>let test = (5>6); //false, since 5 is not greater than 6
 let test2 = (4 == 6); //False because 4 is not equal to 6.
 let test3 = (1<=3); //true because 1 is less than or equal to 3.
 let test4 = (6 != 3); //true because 6 is not equal to 3.</code></pre>
-              <p>The first thing to note is the double equal sign ==. This is used for logic in Danmakufu in place of the single equal sign =, which is used for setting values to variables and constants. The next thing to note is the use of the !, which functions as 'not' and is used in negation. Please note that characters, strings, and booleans obviously cannot use things such as < (less than) or >= (greater than or equal to) for obvious reasons. You can only test for equality and inequality for these.</p>
-              <p>Now we will discuss boolean expressions involving multiple booleans.</p>
-              <p>Behold: || and &&</p>
-                <pre class="prettyprint"><code>let bool = true;
+	      <p>The first thing to note is the double equal sign ==. This is used for logic in Danmakufu in place of the single equal sign =, which is used for setting values to variables and constants. The next thing to note is the use of the !, which functions as 'not' and is used in negation. Please note that characters, strings, and booleans obviously cannot use things such as < (less than) or >= (greater than or equal to) for obvious reasons. You can only test for equality and inequality for these.</p>
+	      <p>Now we will discuss boolean expressions involving multiple booleans.</p>
+	      <p>Behold: || and &&</p>
+	        <pre class="prettyprint"><code>let bool = true;
 let bool2 = false;
 let test = (bool || bool2); //test is true if either bool OR bool2 is true, else false
 let test2 = (bool && bool2); //test2 is true if bool AND bool2 are true, else false
 let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE if bool2 is false.</code></pre>
-              <p>As seen above, || denotes OR and && denotes AND. When we discuss if and if-else statements in the next part, we will be returning to this, as it is the foundation of script control and flow in danmakufu.</p>
-              <p>To close, be aware that the boolean true = 1 and the boolean false = 0. This is good to know for general Computer Science, and it can be manipulated for various purposes.</p>
-              <h2 style="color:yellow" id="sub3">Part 3: What are If and If-Else Statements?</h2>
-              <p>So now we have all this knowledge of booleans and boolean expressions. So what will we do with it? Well, if you want to only execute certain code under certain conditions, you can use booleans and boolean expressions in if, if-else, and alternative-case statements!</p>
-                <pre class="prettyprint"><code>if(count>30){count==0;}</code></pre>
-              <p>Above is an example of an if statement. If statements have a condition, which is a boolean or boolean expression, and if that expression is true, the code in the braces following the statement will be executed. In the above situation, the variable count will be set to 0 if its value is greater than 30. If its value is not greater than 30, the code within the braces will not be executed.</p>
-              <p>For future reference, code within {braces} is considered a block. You can have multiple statements (a single instruction) inside a block - just remember to end each statement with a semicolon.</p>
-              <p>If you want to do something else instead, you can use if-else statements.</p>
-                <pre class="prettyprint"><code>if(count>30){count=0;}else{count++;}</code></pre>
-              <p>Now, if the count is not greater than 30, it will increment by 1! You can also nest if else statements and have multiple else statements.</p>
-                <pre class="prettyprint"><code>if(count>30){
+	      <p>As seen above, || denotes OR and && denotes AND. When we discuss if and if-else statements in the next part, we will be returning to this, as it is the foundation of script control and flow in danmakufu.</p>
+	      <p>To close, be aware that the boolean true = 1 and the boolean false = 0. This is good to know for general Computer Science, and it can be manipulated for various purposes.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: What are If and If-Else Statements?</h2>
+	      <p>So now we have all this knowledge of booleans and boolean expressions. So what will we do with it? Well, if you want to only execute certain code under certain conditions, you can use booleans and boolean expressions in if, if-else, and alternative-case statements!</p>
+	        <pre class="prettyprint"><code>if(count>30){count==0;}</code></pre>
+	      <p>Above is an example of an if statement. If statements have a condition, which is a boolean or boolean expression, and if that expression is true, the code in the braces following the statement will be executed. In the above situation, the variable count will be set to 0 if its value is greater than 30. If its value is not greater than 30, the code within the braces will not be executed.</p>
+	      <p>For future reference, code within {braces} is considered a block. You can have multiple statements (a single instruction) inside a block - just remember to end each statement with a semicolon.</p>
+	      <p>If you want to do something else instead, you can use if-else statements.</p>
+	        <pre class="prettyprint"><code>if(count>30){count=0;}else{count++;}</code></pre>
+	      <p>Now, if the count is not greater than 30, it will increment by 1! You can also nest if else statements and have multiple else statements.</p>
+	        <pre class="prettyprint"><code>if(count>30){
 	count=0;
 }else if(count<0){
 	count=0;
@@ -100,10 +100,10 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
 	  //Do something
 	}
 }</code></pre>
-              <p>In the above example, there is another case - if count is less than 0. In this manner, you can set the code to do a variety of things. In the last part, the case where count greater than or equal to 0 AND less than or equal to 30, there is also another if statement allowing the code to do yet another thing.</p>
-              <p>However, if you have a lot of different cases using the same variable, a wall of if else statements gets clunky and hard to read. As a result, there are switch statements, known as alternative-case statements in Danmakufu. They are basically shorthand for if-else statements.</p>
-              <p>But wait! Haven't we seen these before in @Event? Why yes. That's one of the places where you will be using them.</p>
-                <pre class="prettyprint"><code>    alternative(x)
+	      <p>In the above example, there is another case - if count is less than 0. In this manner, you can set the code to do a variety of things. In the last part, the case where count greater than or equal to 0 AND less than or equal to 30, there is also another if statement allowing the code to do yet another thing.</p>
+	      <p>However, if you have a lot of different cases using the same variable, a wall of if else statements gets clunky and hard to read. As a result, there are switch statements, known as alternative-case statements in Danmakufu. They are basically shorthand for if-else statements.</p>
+	      <p>But wait! Haven't we seen these before in @Event? Why yes. That's one of the places where you will be using them.</p>
+	        <pre class="prettyprint"><code>    alternative(x)
     case(-3){
 	//Do stuff
     }
@@ -116,47 +116,47 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
     others{
 	//Do various stuff
     }</code></pre>
-              <p>The way an alternative-case statement works is as follows: The variable inside alternative() is the variable that is being tested. The first case asks whether x == -3. If true, it will execute the stuff inside the braces for case(-3) and ignore everything else. If x is not -3, it will move on to the next case and so on. Finally, if it has exhausted its options, it will do whatever is in others{} or, if others{} is not there, simply exit the statement and do nothing. Very helpful.</p>
-              <h2 style="color:yellow" id="sub4">Part 4: What are Loops and How do I Use Them?</h2>
-              <p>So you want to repeatedly do something without having to state it again? Well, loops are the solution to those problems! There are a few types of loops in Danmakufu.</p>
-              <p>The first type of loop is the generic loop. It is a structure that takes a parameter and will run code multiple times. The parameter must be an integer because it you can't repeat something 3.5 times. An example is probably the best way to show this.</p>
-                <pre class="prettyprint"><code>let x = 5;
+	      <p>The way an alternative-case statement works is as follows: The variable inside alternative() is the variable that is being tested. The first case asks whether x == -3. If true, it will execute the stuff inside the braces for case(-3) and ignore everything else. If x is not -3, it will move on to the next case and so on. Finally, if it has exhausted its options, it will do whatever is in others{} or, if others{} is not there, simply exit the statement and do nothing. Very helpful.</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: What are Loops and How do I Use Them?</h2>
+	      <p>So you want to repeatedly do something without having to state it again? Well, loops are the solution to those problems! There are a few types of loops in Danmakufu.</p>
+	      <p>The first type of loop is the generic loop. It is a structure that takes a parameter and will run code multiple times. The parameter must be an integer because it you can't repeat something 3.5 times. An example is probably the best way to show this.</p>
+	        <pre class="prettyprint"><code>let x = 5;
 loop(20){
     x++;
 }</code></pre>
-              <p>Let's discuss the above code. First, we declare the variable x, which is then assigned the numerical value 5. After this, x+= is called in a loop(20). What the loop does is repeat the code contained within the {} the number of times given in the parenthesis. Therefore, x will equal 25 after this code has been executed. If you had a variable x, you could also loop(x), which would loop the code in the following braces x time. </p>
-              <p>Now is a good time to talk about infinite loops. I.E. how to freeze Danmakufu. An infinite loop occurs when a section of code keeps on looping forever, and the only way to stop it is to terminate the program altogether. Later on in this lesson, we will discuss yield; (the best way to make an infinite loop not actually infinite but achieve similar functions until the script terminates), but as a brief note, loop alone or with nothing in the parenthesis (e.g. <code>loop(){blah;}</code> will trigger infinite loops and using them should be avoided until knowledge of yield; is sufficient.</p>
-              <p>Next are while loops. Basically, while a certain condition is true (booleans!), the code in the braces after it will be executed, just like an if statement except automatically repeated.</p>
-                <pre class="prettyprint"><code>let x = 5;
+	      <p>Let's discuss the above code. First, we declare the variable x, which is then assigned the numerical value 5. After this, x+= is called in a loop(20). What the loop does is repeat the code contained within the {} the number of times given in the parenthesis. Therefore, x will equal 25 after this code has been executed. If you had a variable x, you could also loop(x), which would loop the code in the following braces x time. </p>
+	      <p>Now is a good time to talk about infinite loops. I.E. how to freeze Danmakufu. An infinite loop occurs when a section of code keeps on looping forever, and the only way to stop it is to terminate the program altogether. Later on in this lesson, we will discuss yield; (the best way to make an infinite loop not actually infinite but achieve similar functions until the script terminates), but as a brief note, loop alone or with nothing in the parenthesis (e.g. <code>loop(){blah;}</code> will trigger infinite loops and using them should be avoided until knowledge of yield; is sufficient.</p>
+	      <p>Next are while loops. Basically, while a certain condition is true (booleans!), the code in the braces after it will be executed, just like an if statement except automatically repeated.</p>
+	        <pre class="prettyprint"><code>let x = 5;
 while(x<20){
     x++;
 }</code></pre>
-              <p>In the code above, we declare x and then run a while loop where, while x is less than 20, x is incremented by 1. The code in question will loop itself and x will be 20 after the code has executed.</p>
-                <pre class="prettyprint"><code>let x = 5;
+	      <p>In the code above, we declare x and then run a while loop where, while x is less than 20, x is incremented by 1. The code in question will loop itself and x will be 20 after the code has executed.</p>
+	        <pre class="prettyprint"><code>let x = 5;
 while(x>20){
     x++;
 }</code></pre>
-              <p>In the above scenario, x is less than 20, so the condition for the while loop is never fulfilled. Therefore, the while loop never executes and x is left as 5 afterwards.</p>
-                <pre class="prettyprint"><code>let x = 5;
+	      <p>In the above scenario, x is less than 20, so the condition for the while loop is never fulfilled. Therefore, the while loop never executes and x is left as 5 afterwards.</p>
+	        <pre class="prettyprint"><code>let x = 5;
 while(x>0){
     x++;
 }</code></pre>
-              <p>To close our study of the while loop, we will consider the above code, where x is declared to be 5 and while x>0, x increments by 1. As is easily observable, x will never actually become less than 0. Therefore, this code will cause an infinite loop and Danmakufu will freeze.</p>
-              <p>Now we will discuss the last type of loop in Danmakufu - the for loop. In Danmakufu, the for loop comes in two varieties, ascent and descent.</p>
-              <p>For a video tutorial, please consult the following: <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K">Sparen's Danmakufu Tutorials - Using Ascent Loops and More</a>. However, please be aware that this tutorial assumes prior knowledge of bullet spawning functions.</p>
-              <p>A generic ascent loop is structured as follows:</p>
-                <pre class="prettyprint"><code>let x = 5;
+	      <p>To close our study of the while loop, we will consider the above code, where x is declared to be 5 and while x>0, x increments by 1. As is easily observable, x will never actually become less than 0. Therefore, this code will cause an infinite loop and Danmakufu will freeze.</p>
+	      <p>Now we will discuss the last type of loop in Danmakufu - the for loop. In Danmakufu, the for loop comes in two varieties, ascent and descent.</p>
+	      <p>For a video tutorial, please consult the following: <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K">Sparen's Danmakufu Tutorials - Using Ascent Loops and More</a>. However, please be aware that this tutorial assumes prior knowledge of bullet spawning functions.</p>
+	      <p>A generic ascent loop is structured as follows:</p>
+	        <pre class="prettyprint"><code>let x = 5;
 ascent(i in 0..8){
     x++;
 }</code></pre>
-              <p>What this code does is actually a little hard to understand. You can think of it like this: a local variable called i, with a variable 0, is declared. After this, the block of code inside the braces {} is executed. After that, i is incremented by 1 as long as it is less than 8. If it is less than 8 after having been incremented, the code loops again. Once the variable i is equal to 8, the loop ends. This means that i will never actually equal 8 in a run through the loop.</p>
-                <pre class="prettyprint"><code>let x = 5;
+	      <p>What this code does is actually a little hard to understand. You can think of it like this: a local variable called i, with a variable 0, is declared. After this, the block of code inside the braces {} is executed. After that, i is incremented by 1 as long as it is less than 8. If it is less than 8 after having been incremented, the code loops again. Once the variable i is equal to 8, the loop ends. This means that i will never actually equal 8 in a run through the loop.</p>
+	        <pre class="prettyprint"><code>let x = 5;
 ascent(i in 0..8){
     x=i;
 }</code></pre>
-              <p>If you do the above, x will start at 0, but it will be set to the value of i, which is 0. As the loop continues, x will be set to 1, 2, 3, and eventually, 7. After it is set to 7, the local variable i is set to 8, and the loop ends, leaving x as 7. In total, the code loops 8 times, and i has values from 0 to 7.</p>
-              <p>Drake once wrote the following equivalent code for an ascent loop:</p>
-                <pre class="prettyprint"><code>ascent(var in 0..10){
+	      <p>If you do the above, x will start at 0, but it will be set to the value of i, which is 0. As the loop continues, x will be set to 1, 2, 3, and eventually, 7. After it is set to 7, the local variable i is set to 8, and the loop ends, leaving x as 7. In total, the code loops 8 times, and i has values from 0 to 7.</p>
+	      <p>Drake once wrote the following equivalent code for an ascent loop:</p>
+	        <pre class="prettyprint"><code>ascent(var in 0..10){
     bla(var);
 }
 
@@ -169,78 +169,78 @@ local{
         var++;
     }
 }</code></pre>
-              <p>Please note that by convention, the values used in ascent/descent/for loops go as follows: i, j, k, l, etc. Regarding descent loops, the local variable decrements instead of incrementing. You will need descent loops for certain things but you will be using ascent loops most of the time.</p>
-              <p>If you don't understand ascent loops, that's perfectly fine - they're harder to understand than some of the other things in Danmakufu.</p>
-              <p>Finally, on an important note, please remember break; - this will break you out of the innermost loop. This has a variety of uses, which will be useful later on.</p>
+	      <p>Please note that by convention, the values used in ascent/descent/for loops go as follows: i, j, k, l, etc. Regarding descent loops, the local variable decrements instead of incrementing. You will need descent loops for certain things but you will be using ascent loops most of the time.</p>
+	      <p>If you don't understand ascent loops, that's perfectly fine - they're harder to understand than some of the other things in Danmakufu.</p>
+	      <p>Finally, on an important note, please remember break; - this will break you out of the innermost loop. This has a variety of uses, which will be useful later on.</p>
 	      <div class="tut_exercise">EXERCISE: Write various things using while loops, and then write them using ascent loops. Compare how your implemented them.</div>
 	      <!-- The loop will execute all code from break; to the closing brace, and will then exit. - this may or may not be true, so I have removed it from the preceeding paragraph -->
-              <h2 style="color:yellow" id="quiz1">Quiz: Loops and Booleans</h2>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Loops and Booleans</h2>
 	        <!--Quiz start.-->
 		<p>Consider the following code for Questions 1 and 2.</p>
-                <pre class="prettyprint"><code>let x = 5;
+	        <pre class="prettyprint"><code>let x = 5;
 let y = 10;
 while(x < y){
     y--;
 }
 let z = x+y;</code></pre>
 		<p>1) What is the value of z?</p>
-                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
-                <input type="RADIO" value="A" name="cc">
-                A. 5<br>
-                <input type="RADIO" value="B" name="cc">
-                B. 10<br>
-                <input type="RADIO" value="C" name="cc">
-                C. 0<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 5<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 10<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 0<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>2) <code>let bool = (z%2==0);</code></p>
 		<p>What is the value of bool?</p>
-                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
-                <input type="RADIO" value="A" name="cc">
-                A. true<br>
-                <input type="RADIO" value="B" name="cc">
-                B. false<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. true<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. false<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>3) <code>let bool = ((true||false)&&!true);</code></p>
 		<p>What is the value of bool?</p>
-                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
-                <input type="RADIO" value="A" name="cc">
-                A. true<br>
-                <input type="RADIO" value="B" name="cc">
-                B. false<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. true<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. false<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>4)</p> 
 		<pre class="prettyprint"><code>let bool = (true&&!false);
 let bool2 = (false||(true&&!true));
 let bool3 = (bool1==bool2);</code></pre>
 		<p>What is the value of bool?</p>
-                <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
-                <input type="RADIO" value="A" name="cc">
-                A. true<br>
-                <input type="RADIO" value="B" name="cc">
-                B. false<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. true<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. false<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>5) Momiji wants to make some pretty danmaku. However, Danmaku keeps on freezing! The following is her code:</p> 
 		<pre class="prettyprint"><code>let x = 5;
 while(x<6){
     x--;
 }</code></pre></p>
 		<p>What can you replace line 2 with for the code to not freeze?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'B', '4');">
-                <input type="RADIO" value="A" name="cc">
-                A. <code>loop{</code><br>
-                <input type="RADIO" value="B" name="cc">
-                B. <code>ascent(i in 0..6){</code><br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '4');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>loop{</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. <code>ascent(i in 0..6){</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>6) </p>
 		<pre class="prettyprint"><code>let x = 5;
 while(x<10){x++;}
@@ -249,70 +249,70 @@ ascent(i in 6..23){
 }
 if(x==(23/2)){x = 25;}else{x = 23;}</code></pre>
 		<p>What is the value of x after this code has been executed?</p>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'B', '3');">
-                <input type="RADIO" value="A" name="cc">
-                A. 25<br>
-                <input type="RADIO" value="B" name="cc">
-                B. 23<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <h2 style="color:yellow" id="sub5">Part 5: What are Functions?</h2>
-              <p>We have referenced functions before, but now is the time to go in depth about what a function is and how to use them.</p>
-              <p>Firstly, a function is able to take and return parameters, also known as arguments or inputs. For example, you can have a function f(x)=x+5 that takes a value x, and returns that value incremented by 5. In Danmakufu, it looks like this:</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '3');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 25<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 23<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="sub5">Part 5: What are Functions?</h2>
+	      <p>We have referenced functions before, but now is the time to go in depth about what a function is and how to use them.</p>
+	      <p>Firstly, a function is able to take and return parameters, also known as arguments or inputs. For example, you can have a function f(x)=x+5 that takes a value x, and returns that value incremented by 5. In Danmakufu, it looks like this:</p>
 		<pre class="prettyprint"><code>function math(var){//using 'let var' is also acceptable but nobody really does it.
     return var + 5;
 }</code></pre>
-              <p>In this code, the name of the function is math, the parameter inside the parenthesis is var, and the return value is var + 5. As for how to use it, here's a code snippet.</p>
+	      <p>In this code, the name of the function is math, the parameter inside the parenthesis is var, and the return value is var + 5. As for how to use it, here's a code snippet.</p>
 		<pre class="prettyprint"><code>function math(var){//using 'let var' is also acceptable but nobody really does it.
     return var + 5;
 }
 
 let y = math(6);//y will be equal to 11</code></pre>
-              <p>Simple, right? A function takes its parameters in the form (a, b, c, d) and returns whatever is in the return statement. A function does not have to return anything and does not require parameters. Note that you can only return one thing - alternatively, you can return an array of different things as long as they are of the same type. However, this gets clunky and can be confusing, so it's best not to. Functions are very useful for quick things such as returning the angle from the player to the boss, getting the player movement direction, etc. All built-in functions are executed immediately when called and will finish execution immediately. You can also use yield; in a function and where the function was called, nothing else will execute until the function has completed its run (things not in the script, such as the bgm, background, and system will still work), but we'll get into that later when we discuss yield;. Please note that when referring to a function, people usually refer to the function as functionname(). The parenthesis indicate parameters, which is the primary feature of functions.</p>
-              <h2 style="color:yellow" id="sub6">Part 6: What are Tasks?</h2>
-              <p>Now that we have functions out of the way, it's time to explain tasks, also known as coroutines. You can send parameters to a task as well, and the main difference between tasks and functions is that tasks are made to run alongside your other scripts. For example, you could create a task that creates a bullet and then makes it do something every frame for 60 frames before disappearing only for it to reappear elsewhere and split into other bullets. Tasks give Danmakufu flexibility and are excellent at organizing code. Do note that by convention, you do not put parenthesis after a task unless there are parameters, unlike the case with functions.</p>
-              <p>Tasks are also amazing at script flow. For example, if you want a sound effect to play thirty frames after a bullet is spawned, you can just call a task that waits 30 frames and then plays a sound effect. Very helpful for timing things in a script.</p>
-              <p>When I discuss various scripting styles, I will discuss the tasking style, which is very popular due to Helepolis's video tutorials. Please do note, however, that in ph3, unlike in 0.12m, the standard @MainLoop style requires externalizing commands to tasks anyways because you must manually control when bullets spawn and using return; in a routine such as @MainLoop has the potential to crash Danmakufu. That being said, using return; in a coroutine/task will stop execution of the rest of the task and will ignore everything after the return; statement, ending the task entirely. You cannot make a task return a value.</p>
-              <p>However, now that we have so much stuff about tasks and script control, we should probably go over yield;</p>
+	      <p>Simple, right? A function takes its parameters in the form (a, b, c, d) and returns whatever is in the return statement. A function does not have to return anything and does not require parameters. Note that you can only return one thing - alternatively, you can return an array of different things as long as they are of the same type. However, this gets clunky and can be confusing, so it's best not to. Functions are very useful for quick things such as returning the angle from the player to the boss, getting the player movement direction, etc. All built-in functions are executed immediately when called and will finish execution immediately. You can also use yield; in a function and where the function was called, nothing else will execute until the function has completed its run (things not in the script, such as the bgm, background, and system will still work), but we'll get into that later when we discuss yield;. Please note that when referring to a function, people usually refer to the function as functionname(). The parenthesis indicate parameters, which is the primary feature of functions.</p>
+	      <h2 style="color:yellow" id="sub6">Part 6: What are Tasks?</h2>
+	      <p>Now that we have functions out of the way, it's time to explain tasks, also known as coroutines. You can send parameters to a task as well, and the main difference between tasks and functions is that tasks are made to run alongside your other scripts. For example, you could create a task that creates a bullet and then makes it do something every frame for 60 frames before disappearing only for it to reappear elsewhere and split into other bullets. Tasks give Danmakufu flexibility and are excellent at organizing code. Do note that by convention, you do not put parenthesis after a task unless there are parameters, unlike the case with functions.</p>
+	      <p>Tasks are also amazing at script flow. For example, if you want a sound effect to play thirty frames after a bullet is spawned, you can just call a task that waits 30 frames and then plays a sound effect. Very helpful for timing things in a script.</p>
+	      <p>When I discuss various scripting styles, I will discuss the tasking style, which is very popular due to Helepolis's video tutorials. Please do note, however, that in ph3, unlike in 0.12m, the standard @MainLoop style requires externalizing commands to tasks anyways because you must manually control when bullets spawn and using return; in a routine such as @MainLoop has the potential to crash Danmakufu. That being said, using return; in a coroutine/task will stop execution of the rest of the task and will ignore everything after the return; statement, ending the task entirely. You cannot make a task return a value.</p>
+	      <p>However, now that we have so much stuff about tasks and script control, we should probably go over yield;</p>
 	      <div class="tut_checkpoint">CHECKPOINT: Can you return a value using a task?</div>
-              <h2 style="color:yellow" id="sub7">Part 7: How do I use yield;?</h2>
-              <p>The function of yield; is to pause execution of a routine, subroutine, function, or task by one frame.</p>
-              <p>That is literally the simplest way to explain what yield; does.</p>
-              <p>Please note the following, however:</p>
-                <ol>
+	      <h2 style="color:yellow" id="sub7">Part 7: How do I use yield;?</h2>
+	      <p>The function of yield; is to pause execution of a routine, subroutine, function, or task by one frame.</p>
+	      <p>That is literally the simplest way to explain what yield; does.</p>
+	      <p>Please note the following, however:</p>
+	        <ol>
 	          <li>yield;ing in @Initialize should never be done, and calling a function or subroutine in @Initialize that uses yield;, by extension, is a bad idea. It may do nothing, but Danmakufu may crash. Please do not try this.</li>
 	          <li>You <b>MUST</b> yield; once in @MainLoop in order for tasks to run at all. Only once. Don't do more, don't do less. Always have a yield; at the end of @MainLoop regardless of whether or not you task.</li>
 	          <li>If you have an infinite loop, you MUST have a yield; inside it or Danmakufu will freeze. If Danmakufu freezes, it is 99.9999% of the time an issue where you forgot to yield; in a loop{} or while(true){}.</li>
 	        </ol>
-              <p>Now that the basics are out of the way, it's time to create our first function.</p>
+	      <p>Now that the basics are out of the way, it's time to create our first function.</p>
 		<pre class="prettyprint"><code>function wait(n){loop(n){yield;}}</code></pre>
-              <p>This function is a must-have for everyone's function library. It yields n frames. wait(60); is the equivalent of loop(60){yield;}, but one is longer than the other, so people just use wait().</p>
-              <p>As this tutorial progresses, you will learn more ways to use yield; as well as other techniques in which yield; is a key component. But now... the semicolon.</p>
-              <h2 style="color:yellow" id="sub8">Part 8: What Should I Know About Danmakufu Syntax?</h2>
-              <p>To close this very long lesson, we will have a brief discussion about Danmakufu syntax. As you all know, Danmakufu is a scripting language and, like programming languages, has both conventions and rules. Like other programming languages, all function, task, variable, and routine names are case sensitive. In other words, @mainloop will not be recognized because Danmakufu only recognizes @MainLoop. Calling a function Wait(n) when you have a function wait(n) will bring up a function not defined error.</p>
-              <p>Additionally, please, please, PLEASE remember to close all of your (, [, and {. Before running a script, use a ctrl-F test to make sure that the number of { is equal to the number of }. Otherwise, <i>something</i> is going to error. Guaranteed.</p>
-              <p>Please make use of tabbing. I cannot emphasize this enough. In this tutorial, I use 2, 4, or 8 spaces for tabs. However, the spacing is not what matters - having white space in the first place is what's important. Having unreadable code means that others will be less likely to help you.</p>
-              <p>And finally... the bane of all existence. THE SEMICOLON.</p>
-              <p>In all honesty, the semicolon isn't that much of a pain. It's just that the error will reference the line afterwards and not the line with the error. Always have a semicolon after each statement. If you call a function or task, have a ; after the closing parenthesis. If you declare a variable, put a ; after you have declared the variable. This is how Danmakufu (and other languages) determine when you have ended a statement, and without it, Danmakufu will be confused. There are exceptions, usually only for headers and includes, but that's something you'll notice more and more as time goes on.</p>
-              <p>Note that you do not need a semicolon in a block if a statement is followed immediately by a closing brace } and the statement is the only statement in the block. However, always put the semicolon - I don't care how mkm wants you to code; This is better procedure and more relevant for computer science as a whole.</p>
-              <p>That's all for now. The quizzes below should be enough to review the information.</p>
-              <h2 style="color:yellow" id="quiz2">Quiz: Script Flow and Syntax</h2>
+	      <p>This function is a must-have for everyone's function library. It yields n frames. wait(60); is the equivalent of loop(60){yield;}, but one is longer than the other, so people just use wait().</p>
+	      <p>As this tutorial progresses, you will learn more ways to use yield; as well as other techniques in which yield; is a key component. But now... the semicolon.</p>
+	      <h2 style="color:yellow" id="sub8">Part 8: What Should I Know About Danmakufu Syntax?</h2>
+	      <p>To close this very long lesson, we will have a brief discussion about Danmakufu syntax. As you all know, Danmakufu is a scripting language and, like programming languages, has both conventions and rules. Like other programming languages, all function, task, variable, and routine names are case sensitive. In other words, @mainloop will not be recognized because Danmakufu only recognizes @MainLoop. Calling a function Wait(n) when you have a function wait(n) will bring up a function not defined error.</p>
+	      <p>Additionally, please, please, PLEASE remember to close all of your (, [, and {. Before running a script, use a ctrl-F test to make sure that the number of { is equal to the number of }. Otherwise, <i>something</i> is going to error. Guaranteed.</p>
+	      <p>Please make use of tabbing. I cannot emphasize this enough. In this tutorial, I use 2, 4, or 8 spaces for tabs. However, the spacing is not what matters - having white space in the first place is what's important. Having unreadable code means that others will be less likely to help you.</p>
+	      <p>And finally... the bane of all existence. THE SEMICOLON.</p>
+	      <p>In all honesty, the semicolon isn't that much of a pain. It's just that the error will reference the line afterwards and not the line with the error. Always have a semicolon after each statement. If you call a function or task, have a ; after the closing parenthesis. If you declare a variable, put a ; after you have declared the variable. This is how Danmakufu (and other languages) determine when you have ended a statement, and without it, Danmakufu will be confused. There are exceptions, usually only for headers and includes, but that's something you'll notice more and more as time goes on.</p>
+	      <p>Note that you do not need a semicolon in a block if a statement is followed immediately by a closing brace } and the statement is the only statement in the block. However, always put the semicolon - I don't care how mkm wants you to code; This is better procedure and more relevant for computer science as a whole.</p>
+	      <p>That's all for now. The quizzes below should be enough to review the information.</p>
+	      <h2 style="color:yellow" id="quiz2">Quiz: Script Flow and Syntax</h2>
 	        <!--Quiz start.-->
 		<p>1) Why does Danmakufu freeze when the below code is executed?</p>
-                <pre class="prettyprint"><code>while(!Obj_IsDeleted(obj)){//Obj_IsDeleted() returns a boolean
+	        <pre class="prettyprint"><code>while(!Obj_IsDeleted(obj)){//Obj_IsDeleted() returns a boolean
 }</code></pre>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'B', 7);">
-                <input type="RADIO" value="A" name="cc">
-                A. There is no code between the braces<br>
-                <input type="RADIO" value="B" name="cc">
-                B. There is no yield;<br>
-                <input type="RADIO" value="C" name="cc">
-                C. The object has already been deleted<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 7);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. There is no code between the braces<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. There is no yield;<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. The object has already been deleted<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>2) Marisa is testing a new laser of doom. However, her code freezes. How can she stop the freezing and also have the object delete after 300 frames? Please choose the best answer. Assume that the object does not automatically delete.</p>
-                <pre class="prettyprint"><code>task MasterSparkEX(x, y, ang, length, width, dt, graph, delay){
+	        <pre class="prettyprint"><code>task MasterSparkEX(x, y, ang, length, width, dt, graph, delay){
     let obj = CreateStraightLaserA1(x, y, ang, length, width, dt, graph, delay);
     let objcount = 0;
     while(objcount<300&&Obj_IsDeleted(obj)==false){
@@ -320,41 +320,41 @@ let y = math(6);//y will be equal to 11</code></pre>
     }
     Obj_Delete(obj);
 }</code></pre>
-                <form method="POST" onSubmit="return checkAnswerA1(this, 'D');">
-                <input type="RADIO" value="A" name="cc">
-                A. Add a yield; in her while loop<br>
-                <input type="RADIO" value="B" name="cc">
-                B. Increment objcount inside the while loop<br>
-                <input type="RADIO" value="C" name="cc">
-                C. Increment objcount before the while loop<br>
-                <input type="RADIO" value="D" name="cc">
-                D. Both A and B<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-                <br>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'D');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. Add a yield; in her while loop<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Increment objcount inside the while loop<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. Increment objcount before the while loop<br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. Both A and B<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
 		<p>3) This code brings up an error. Why?</p>
-                <pre class="prettyprint"><code>function wait(n){loop(n){yield;}}
+	        <pre class="prettyprint"><code>function wait(n){loop(n){yield;}}
 Wait(5);
 </code></pre>
-                <form method="POST" onSubmit="return checkAnswerP(this, 'A', 8);">
-                <input type="RADIO" value="A" name="cc">
-                A. Wait(n) has not been defined<br>
-                <input type="RADIO" value="B" name="cc">
-                B. There should be no semicolon after yield<br>
-                <input type="SUBMIT" value="Submit">
-                </form>
-              <h2 style="color:yellow" id="sub9">Part 9: What are the Reserved Keywords?</h2>
-              <p>I will close this lesson with some notes on Reserved Keywords. Note that I obtained this information from the tutorials at <a target="_blank" href="http://www.fragmentedskies.com/danmakufu-ph3-tutorials/reserved-keywords/">Fragmented Skies</a>, so there may be some that are missing or some that are not in fact reserved keywords.</p>
-              <p>In a programming language, a reserved keyword is a name that cannot be used for your own variables, functions, etc. For example, you cannot have a task named 'function', because 'function' is a reserved keyword in that it has a specific usage preprogrammed into the language.</p>
-              <p>The following are examples of reserved keywords:</p>
-              <p><code>alternative ascent break case descent else function if in let local loop others real return sub task times while yield</code></p>
-              <p>There are also function names built into Danmakufu that are reserved and cannot be overridden (if you try to override these with a function, you will get an error where a function with the same name is already defined. If you name a variable as one of these, it will freeze rather than erroring.</p>
-              <p><code>add append compare concatenate divide false index length multiply negative not pi power predecessor remainder result slice successor subtract true</code></p>
-              <p>On that note, please just use the mathematical operator if it is available. <code>add(3,5);</code> is utterly pointless when <code>3+5</code> is significantly easier and less of a pain to write.</p>
-              <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 8);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. Wait(n) has not been defined<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. There should be no semicolon after yield<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="sub9">Part 9: What are the Reserved Keywords?</h2>
+	      <p>I will close this lesson with some notes on Reserved Keywords. Note that I obtained this information from the tutorials at <a target="_blank" href="http://www.fragmentedskies.com/danmakufu-ph3-tutorials/reserved-keywords/">Fragmented Skies</a>, so there may be some that are missing or some that are not in fact reserved keywords.</p>
+	      <p>In a programming language, a reserved keyword is a name that cannot be used for your own variables, functions, etc. For example, you cannot have a task named 'function', because 'function' is a reserved keyword in that it has a specific usage preprogrammed into the language.</p>
+	      <p>The following are examples of reserved keywords:</p>
+	      <p><code>alternative ascent break case descent else function if in let local loop others real return sub task times while yield</code></p>
+	      <p>There are also function names built into Danmakufu that are reserved and cannot be overridden (if you try to override these with a function, you will get an error where a function with the same name is already defined. If you name a variable as one of these, it will freeze rather than erroring.</p>
+	      <p><code>add append compare concatenate divide false index length multiply negative not pi power predecessor remainder result slice successor subtract true</code></p>
+	      <p>On that note, please just use the mathematical operator if it is available. <code>add(3,5);</code> is utterly pointless when <code>3+5</code> is significantly easier and less of a pain to write.</p>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Should give an alternative, visual example to the contents of this lesson</p>
 	      <p><a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs" title="Danmakufu for Easy Modos by CK Crash">Danmakufu for Easy Modos by CK Crash</a> (CK Crash)<br>--&gt;Since this tutorial was used as a source for mine, I highly suggest that you read it if you haven't already.</p>
-              <br>            </div>          </div>
+	      <br>            </div>          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l4.html" title="Sparen's Danmakufu ph3 Tutorials - Danmakufu Syntax, Structures, and Operations Part 1">Unit 1 Lesson 4</a></li>
@@ -363,7 +363,7 @@ Wait(5);
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 11, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img              alt="&quot;Wine HQ&quot;"              src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img              alt="&quot;Maidens of the Kaleidoscope&quot;"              src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"              src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img              alt="&quot;Moriya Shrine&quot;"              src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 11, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
