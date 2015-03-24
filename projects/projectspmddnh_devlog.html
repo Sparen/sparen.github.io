@@ -29,10 +29,26 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a> <a href="#submar082015">08</a> <a href="#submar122015">12</a> <a href="#submar142015">14</a> <a href="#submar172015">17</a> <a href="#submar182015">18</a> <a href="#submar202015">20</a></li>
+	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a> <a href="#submar082015">08</a> <a href="#submar122015">12</a> <a href="#submar142015">14</a> <a href="#submar172015">17</a> <a href="#submar182015">18</a> <a href="#submar202015">20</a> <a href="#submar222015">22</a> <a href="#submar232015">23</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="submar232015">March 23, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">I was productive today. After talking with Frentic about getting the SFX for the game, I considered making my own tileset. And then I figures, why not. So I began.</p>
+	      <p class="indexdevlogtitleA">Over the course of about 12-14 hours, I worked on my own tileset, which was meant to cover every single possible combination of tiles in existence while at the same time providing a template on which Achy could impose his own tilesets so that one function would work for loading all tilesets. I began with walls, then moved on to rooms, then went back to walls. So much editing. So much copy paste. So much horror. And then I made Map 2. This was the map meant to test non-square dungeon floors and have every seeming combination of tiles I could throw in (it is missing quite a few).</p>
+	      <p class="indexdevlogtitleA">I ended up being smashed in the face by DirectX9's *2 image issue. I did lots of things to alleviate it but I was only partially successful. Oh well. Anyways, stuff happened, and I spent a few hours having Map 2 render correctly.</p>
+	      <p class="indexdevlogtitleA">'A few' hours is probably a bad estimate, because it took like 6 hours at the very least. On the way, I made some water tiles and failed to make lava tiles. In the end, I got Map 2 to work for all wall/room/hall combinations present in the map using case by case fixes. Good god the FPS with my camera debug code is bad for the 48x36 grid. Anyways, turns out implementing water fully will have to wait - I am tired, and I forgot to make a large number of tiles for water, so I need to do that before I can continue implementation of that and float.</p>
+	      <p class="indexdevlogtitleA">To conclude, have an image of my beautiful new tileset (custom made by me - please do not steal or I WILL find you) as well as (hopefully) no rendering issues.</p>
+	      <center><input class="spoilerbutton indexdevlogtitleA" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+	      <div class="spoiler"><div><img src="http://i1164.photobucket.com/albums/q570/SparenofIria/DevLog%20Image%204%20Mar%2023%202015_zpsdqkigz6b.png" border="0" alt="Devlog Image"/ width="640" height="480"></div></div></center>
+	      </div>
+	      <h2 style="color:rgb(59,248,80)" id="submar222015">March 22, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Today was a day of discovering limits. I did a lot more wall stuff only to learn that the tileset couldn't handle it, which really sucked. So many tiles missing. Anyways, I ended up changing the map, and I did a lot of reorganizing - mainly making a function for tileset loading because Room, Room edges, and Halls all have the same loading mechanism.</p>
+	      <p class="indexdevlogtitleA">It took a long time, but I ended up finishing the entire tileset function list! Hooray!</p>
+	      <p class="indexdevlogtitleA">P.S. This was supposed to be written on the day of the devlog, but I completely forgot to write one, so I'm writing this the day after while looking at the changelog. There's a devlog photo which I don't feel the need to share.</p>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="submar202015">March 20, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today was pretty productive as far as this devlog goes. I began by writing an enemy creation function skeleton. Basically, each enemy has a certain range of floors, and I just see if the current floor is acceptable. If so, I dump the Dex No. of that enemy into the array of possible Pokémon, and one of them will be chosen randomly when the function if called.</p>
