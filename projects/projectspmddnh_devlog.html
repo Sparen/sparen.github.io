@@ -29,10 +29,18 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a> <a href="#submar082015">08</a> <a href="#submar122015">12</a> <a href="#submar142015">14</a> <a href="#submar172015">17</a> <a href="#submar182015">18</a> <a href="#submar202015">20</a> <a href="#submar222015">22</a> <a href="#submar232015">23</a>  <a href="#submar242015">24</a></li>
+	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a> <a href="#submar082015">08</a> <a href="#submar122015">12</a> <a href="#submar142015">14</a> <a href="#submar172015">17</a> <a href="#submar182015">18</a> <a href="#submar202015">20</a> <a href="#submar222015">22</a> <a href="#submar232015">23</a>  <a href="#submar242015">24</a>  <a href="#submar262015">26</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="submar262015">March 26, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Today I didn't really do much in terms of programming. Mainly, I organized stuff and thought about item spawning.</p>
+	      <p class="indexdevlogtitleA">In the game, I think it's best to have each treasure chest correspond to a specific set of items of a set rarity. This is something that would make implementation much easier. Additionally, to make dungeons even more unique, there should be a rare chance to find low-level species-specific items in dungeons (most likely in walls). The ones that would be available would correspond to the Pok&eacute;mon living in the particular dungeon. In preparation for this, I consolidated some small include files and officially began assigning dungeons their own IDs (currently there is only one dungeon though, so lol).</p>
+	      <p class="indexdevlogtitleA">As for ammo and money, I can define them as PItem objects and give them settings for value and amount. So practically, it shouldn't actually be as horrifying as I initially thought in terms of implementation.</p>
+	      <p class="indexdevlogtitleA">I've also begun writing a database for locations of Pok&eacute;mon. Under my system (if we ever get this far), it would not be possible to recruit evolved Pok&eacute;mon at all, or there would be a very low chance. Regardless, this is a story for another time.</p>
+	      <p class="indexdevlogtitleA">In my current plans, I have space for infinite dungeons. On that note, I have decided that it might be a good idea to standardize my tileset choices to the ones put forth in Explorers of Sky - this will make tiles less random and more boring, but it is necessary for standardization. Regardless, it shouldn't be a problem.</p>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="submar242015">March 24, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">I was productive today, unlike usual. I added a bunch of new water and wall tiles to take care of obnoxious cases, and finished Map 2's implementation! Whoohoo!</p>
