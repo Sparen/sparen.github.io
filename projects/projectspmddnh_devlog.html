@@ -29,10 +29,18 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a> <a href="#submar082015">08</a> <a href="#submar122015">12</a> <a href="#submar142015">14</a> <a href="#submar172015">17</a> <a href="#submar182015">18</a> <a href="#submar202015">20</a> <a href="#submar222015">22</a> <a href="#submar232015">23</a>  <a href="#submar242015">24</a>  <a href="#submar262015">26</a> <a href="#submar272015">27</a></li>
+	          <li>March 2015: <a href="#submar052015">05</a> <a href="#submar062015">06</a> <a href="#submar072015">07</a> <a href="#submar082015">08</a> <a href="#submar122015">12</a> <a href="#submar142015">14</a> <a href="#submar172015">17</a> <a href="#submar182015">18</a> <a href="#submar202015">20</a> <a href="#submar222015">22</a> <a href="#submar232015">23</a>  <a href="#submar242015">24</a>  <a href="#submar262015">26</a> <a href="#submar272015">27</a> <a href="#submar282015">28</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="submar282015">March 28, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Today was another day of semi-productivity. I started out today by formatting the PMDItem image will all kinds of stuff into an image for the trap/stair/etc images and another file with all of the item graphics - sorted and arranged into a proper spritesheet.</p>
+	      <p class="indexdevlogtitleA">Achy finished his map as well, and that worked well - it found some minor glitches as well as two cases of the remaining 9?, which I took care of.</p>
+	      <p class="indexdevlogtitleA">However, this was concluded with a sour but true truth about the game - it's running at 40 FPS with none of the battle system and with debug controls turned off. That means that the single 48x36 2D array is dropping the FPS by THAT MUCH. Not to mention that I haven't completely addressed the issue of the padding.</p>
+	      <p class="indexdevlogtitleA">I will likely create a single gigantic render object underneath the tiles, and it will just contain the most generic wall graphic I have. This way, all future maps will be maximum 50x26 with one tile padding on the edges, and it will be rendered over a tiled graphic on which the player cannot move but one that looks like normal walls.</p>
+	      <p class="indexdevlogtitleA">...There's so much to do... But each step gives me experience as well if I ever decide that I will actually implement this in C++... (which remains to be seen, since if I can't get the proof of concept done, I can forget about implementing this all in a language where I have to implement my own GUI, camera, and graphics manipulation. AKA make my own engine)</p>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="submar272015">March 27, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Once again, my eyes burn. Today, I made about 25 new tiles that were missing, as well as other stuff. I did mainly standardization to Explorers of Sky tileset standards - such as the presence of gravel literally everywhere. I cleaned things, did Map 5 (which was really full of issues of which I fixed all), and overall had a miserable time.</p>
