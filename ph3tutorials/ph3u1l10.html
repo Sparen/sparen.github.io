@@ -70,55 +70,159 @@
 	      <p>Aside from the ridiculous amount of ADD rendering, the answer lies in the hitbox. So far, we have learned about linear and radial hitboxes. However, a curved laser's hitbox is of a certain width but is not straight or in a circle. As a result, Danmakufu takes each individual piece of the curved laser (based on length) and assigns a hitbox to each part. The longer the curved laser, the more expensive it is to use.</p>
 	      <p>The obvious solution now is to decrease the length of the curved laser. However, to do this means shortening the laser itself. To have a longer laser with a small base length, increase the speed of the laser. Of course, don't go too overboard with this or the laser will be too fast to dodge.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How is the hitbox of a curved laser different from that of a loose laser?</div>
-	      <p>INCOMPLETE BELOW THIS LINE</p>
-	      <pre class="prettyprint"><code>    I am code. Fear me.</code></pre>
-	      <p>Blah? Blah!</p>
-	      <div class="tut_exercise">EXERCISE: Experiment with ObjLaser_SetInvalidLength and ObjLaser_SetIntersectionWidth. What works best with which graphic type?</div>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Loose and Straight Lasers</h2>
+	      <h2 style="color:yellow" id="sub7">Part 7: How Can I Use Acceleration With Angular Velocity?</h2>
+	      <p>One of the features of curvy lasers is their ability to not only curve, but also accelerate and change speeds. By giving them acceleration, they will expand and contract. When combined with angular velocity, this allows the curvy lasers to twist and turn with varying speeds.</p>
+	      <p>When you have a curvy laser that has no acceleration, it will always return to its starting point due to the nature of angular velocity. By changing the speed, this will no longer occur, allowing you to use high angular velocities without needing high speeds. The best way to do this is to use <code>ObjMove_AddPatternA2</code>, which allows you to change both angular velocity, max speed, and speed at the same time. Alternatively, you can set Max Speed, Acceleration, and Angular Velocity separately. For example, look at the below code:</p>
+	      <pre class="prettyprint"><code>    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, GetAngleToPlayer(objBoss),
+        60, 18, 1018, 10);
+    ObjMove_AddPatternA2(obj, 0, 4, GetAngleToPlayer(objBoss), 0, 2, 5);
+    ObjMove_AddPatternA2(obj, 60, NO_CHANGE, NO_CHANGE, -0.2, 0, 2.5);
+    ObjMove_AddPatternA2(obj, 120, NO_CHANGE, NO_CHANGE, 0.2, -0.2, 4);</code></pre>
+	      <p>In this code, we first set angular velocity, and then at 60 frames, turn it off and have the laser start decelerating, which will compress it. Finally, at 120 frames, we turn on acceleration again and give it a slight angular velocity as it leaves the screen. This is but one example of how you can use acceleration in conjunction with curvy lasers.</p>
+	      <div class="tut_exercise">EXERCISE: Experiment with acceleration and angular velocity when using curved lasers. What do you notice about lasers that return from offscreen?</div>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Angular Velocity and Curved Lasers</h2>
 	        <!--Quiz start.-->
-		<p>1) Marisa wants to create a straight laser that points straight at Reimu's donation box. However, she has a problem - in all of the test runs, the laser appeared without warning and destroyed something. How can she fix this?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 4);">
+		<p>1) How many frames does it take for a curvy laser with angular velocity 2 to make a full 360 degree rotation back to its starting point?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 2);">
 	        <input type="RADIO" value="A" name="cc">
-	        A. Increase the delete time of the laser<br>
+	        A. 60<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. Increase the delay time of the laser<br>
+	        B. 120<br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. Show Reimu the power of LOVE!<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
-	        <br>
-		<p>2) Marisa successfully got the laser to fire. However, now she wants to make sure that the lasers never delete. How should she do this?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 4);">
-	        <input type="RADIO" value="A" name="cc">
-	        A. Set delete time to be greater than the value in EV_REQUEST_TIMER*60<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. Set delay to be greater than the value in EV_REQUEST_TIMER*60<br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. Repeatedly fire lasers until everything is burned<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
-	        <br>
-		<p>3) Meanwhile, Nitori is upset at the destruction of her home by Marisa's spellcards. She wishes to fire loose lasers at Marisa's house. What graphic is most suitable for this task?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 3);">
-	        <input type="RADIO" value="A" name="cc">
-	        A. A rectangular bullet<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. A gear shaped bullet<br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. A round bullet<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
-	        <br>
-		<p>4) Patchouli is experimenting with Fireball Lasers (yes this is a reference to my contest entry video at the top of the page). However, it seems that it is possible to die a little to the left or right of the front of the bullet but it is safe to go in at the side and stay in the white part of the bullet without dying. What is the issue here?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 3);">
-	        <input type="RADIO" value="A" name="cc">
-	        A. The hitbox of the bullet was not defined correctly<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. It is a circular bullet with a rectangular hitbox<br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. There's a bug in Danmakufu<br>
+	        C. 180<br>
 	        <input type="RADIO" value="D" name="cc">
-	        D. She is imagining things<br>
+	        D. 240<br>
+	        <input type="RADIO" value="E" name="cc">
+	        E. 360<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	        <br>
+		<p>2) Nazrin is experimenting with the Pagoda and tries to make a curvy laser. However, there is no angular velocity. Why?</p>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'A');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. She did not call ObjMove_SetAngularVelocity() or ObjMove_AddPattern<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. When using ObjMove_SetAngularVelocity() or ObjMove_AddPattern, she set Angular Velocity to 0.<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. Wrong Pagoda - find a new one<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="sub8">Part 8: How Can I Create Curving Bullet Lines?</h2>
+	      <p>We now leave the land of Shou and Seiga and now enter the land of Tewi.</p>
+	      <p>Fundamentally, lines of bullets that all do the same thing are what curvy lasers are, albeit in a significantly less precise way. Think about it this way - if a curvy laser is just a lot of hitboxes with a stretched graphic, then wouldn't a long string of bullets (with hitboxes) be the same? The answer is yes, and as a result, we can approach them the same way.</p>
+	      <p>To create curving bullet lines (which, btw, are significantly less lag-inducing than curvy lasers), you just need to keep the bullet's actions the same, preferably via a BulletCommands task or by giving them all the same code. The only change is when they are spawned. So there are two ways to do this, really. The first is using delay and the second is by using yield; The first method is shown below</p>
+	      <pre class="prettyprint"><code>    task SpawnBulletLine{
+        ascent(i in 0..12){
+	    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), DS_RICE_M_SKY, i*3); 
+	    //create your shot above. There will be 12 of them, with delays of 0, 3, ..., 33
+	    BulletCommands(obj);
+	}
+    }
+
+    task BulletCommands(obj){
+	//stuff
+    }</code></pre>
+	      <p>In the above code, we use an ascent loop to set the delay (see <a href="./ph3u1l7.html">Lesson 7</a> if you are unsure of how this works). This will effectively stagger our bullet creation times over half a second, and each bullet will start from the same position and move in the same way. If we were to include acceleration an angular velocity in BulletCommands, this string of bullets would act very similarly to a curvy laser.</p>
+	      <p>The alternate method, which uses yield, is clunkier and is more prone to error.</p>
+	      <pre class="prettyprint"><code>    task SpawnBulletLine{
+	let startx = ObjMove_GetX(objBoss);
+	let starty = ObjMove_GetY(objBoss);
+	let startang = GetAngleToPlayer(objBoss);
+        loop(12){
+	    let obj = CreateShotA1(startx, starty, 2, startang, DS_RICE_M_SKY, 3); 
+	    BulletCommands(obj);
+	    wait(3);
+	}
+    }
+
+    task BulletCommands(obj){
+	//stuff
+    }</code></pre>
+	      <p>Note that now we are storing the x, y, and angle variables in exchange for a constant delay time (which has its benefits, of course). This must be done in case the boss moves. If the spawning position and angle change *at all*, the bullets will no longer be a string, and their movement will change based on their new position and angle. Just be aware of this if you decide that you want to use this method.</p>
+	      <div class="tut_checkpoint">CHECKPOINT: Why do we store the position and angle of the boss outside of the loop?</div>
+	      <h2 style="color:yellow" id="sub9">Part 9: How Do I Create Snaking Lasers and Bullet Lines?</h2>
+	      <p>Now we will discuss snake lasers and snaking bullet lines.</p>
+	      <p>First thing's first - what exactly are we doing? Well, we are going to create a laser/bullet string that changes its angular velocity every set number of frames to -1 * its original value. This creates a snaking laser, which has its applications.</p>
+	      <p>To do this, we will want to use ObjMove_AddPattern with a variable, which I will name wvel (for omega, angular velocity).</p>
+	      <pre class="prettyprint"><code>    task SnakePattern(obj){
+	let wvel = 1;
+    }</code></pre>
+	      <p>Now, we *could* write out every line. But that would be a pain, wouldn't it? So instead of copy-pasting ObjMove_AddPattern a bunch of times (and have the possibility of the bullet stopping its snaking halfway down the screen), we can automate this procedure with a for loop.</p>
+	      <pre class="prettyprint"><code>    task SnakePattern(obj){
+	let wvel = 1;
+	ascent(i in 0..12){
+	    ObjMove_AddPatternA2(obj, i*30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
+	    wvel*=-1;
+	}
+    }</code></pre>
+	      <p>Above, I have set it up so that every 30 frames, the angular velocity will be set to -1 * its value at the time. This will control the snaking.</p>
+	      <p>But what if the snaking laser stops snaking halfway down the screen like I mentioned earlier? Simply change the 12 to a higher number! If you were to not use an ascent loop and decided to manually add ObjMove_AddPattern copy-pasted like 12 times with different values, you would need to copy-paste again and then test, repeat.</p>
+	      <p>The process above will work for both curvy lasers and bullet strings. However, be sure that your attack is fair, and that you aren't running the ascent loop way more than you need to - otherwise, your script may lag. If your laser only changes the direction of its angular velocity 4 times, you don't need to ascent(i in 0..30) - just do ascent(i in 0..6) or something similar.</p>
+	      <h2 style="color:yellow" id="sub10">Part 10: What are the Uses of Passing Direction Multipliers Into Tasks?</h2>
+	      <p>I will close this lesson with another automation technique - passing directions into tasks.</p>
+	      <p>Let's say we have our SnakePattern task from Part 9. Now, it always starts with wvel = 1 every time it is run. But what if we want it to start curving in the opposite direction at the start instead? We could always copy the task, and do some slight changes. However, it is far more effective to pass a direction multiplier into the task.</p>
+	      <p>Let's say that this is the code that calls SnakePattern.</p>
+	      <pre class="prettyprint"><code>    task CreateLaserRing{
+	ascent(i in 0..12){
+	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
+		GetAngleToPlayer(objBoss)+i*360/12, 60, 18, 1018, 10);
+	    SnakeLaser(obj);
+	}
+    }</code></pre>
+	      <p>Now, let's say that after 60 frames, we want to create another ring starting with a different graphic and a different angular velocity. Instead of making a SnakeLaser2 with wvel set to -1 at the start, we can simply do this:</p>
+	      <pre class="prettyprint"><code>    task CreateLaserRing{
+	ascent(i in 0..12){
+	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
+		GetAngleToPlayer(objBoss)+i*360/12, 60, 18, 1018, 10);
+	    SnakeLaser(obj, 1);
+	}
+	wait(60);
+	ascent(i in 0..12){
+	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
+		GetAngleToPlayer(objBoss)+i*360/12, 60, 18, 1022, 10);
+	    SnakeLaser(obj, -1);
+	}
+    }
+
+    task SnakePattern(obj, dir){
+	let wvel = 1*dir;
+	ascent(i in 0..12){
+	    ObjMove_AddPatternA2(obj, i*30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
+	    wvel*=-1;
+	}
+    }</code></pre>
+	      <p>So what did we do? We set up SnakePattern so that it takes a direction parameter (which can also be used as a multiplier, should we want an angular velocity of -2.3 or something). Now, instead of duplicating the task with a different number, we have allowed our code to run more effectively, and by calling SnakeLaser with -1 and 1 in the task CreateLaserRing, we achieve our desired effect.</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Snaking Paths and Direction Multipliers</h2>
+	        <!--Quiz start.-->
+	      <pre class="prettyprint"><code>
+    task SnakePattern(obj, dir){
+	let wvel = 1*dir;
+	ascent(i in 0..12){
+	    ObjMove_AddPatternA2(obj, i*30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
+	    wvel*=-1;
+	}
+    }</code></pre>
+		<p>1) Given the above and below code, what will the angular velocity be at a time of 80 frames?</p>
+	        <pre class="prettyprint"><code>    SnakePattern(obj, -1.8);</code></pre>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 9);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 1.8<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. -1.8<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 0<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) Given the code at the start of the quiz and the below code, what will the angular velocity be at a time of 40 frames?</p>
+	        <pre class="prettyprint"><code>    SnakePattern(obj, 1.8);</code></pre>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 9);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 1.8<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. -1.8<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 0<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 	      <br>            </div>          </div>
@@ -130,7 +234,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 22, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: April 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
@@ -138,6 +242,6 @@
         </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
-    <script language="JavaScript" type="text/javascript" src="javascript/U1L9Quiz1.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L10Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
