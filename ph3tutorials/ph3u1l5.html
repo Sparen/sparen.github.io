@@ -124,14 +124,14 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
 loop(20){
     x++;
 }</code></pre>
-	      <p>Let's discuss the above code. First, we declare the variable x, which is then assigned the numerical value 5. After this, x+= is called in a loop(20). What the loop does is repeat the code contained within the {} the number of times given in the parenthesis. Therefore, x will equal 25 after this code has been executed. If you had a variable x, you could also loop(x), which would loop the code in the following braces x time. </p>
+	      <p>Let's discuss the above code. First, we declare the variable x, which is then assigned the numerical value 5. After this, x++ is called in a loop(20). What the loop does is repeat the code contained within the {} the number of times given in the parenthesis. Therefore, x will equal 25 after this code has been executed. If you had a variable x, you could also loop(x), which would loop the code in the following braces x time. </p>
 	      <p>Now is a good time to talk about infinite loops. I.E. how to freeze Danmakufu. An infinite loop occurs when a section of code keeps on looping forever, and the only way to stop it is to terminate the program altogether. Later on in this lesson, we will discuss yield; (the best way to make an infinite loop not actually infinite but achieve similar functions until the script terminates), but as a brief note, loop alone or with nothing in the parenthesis (e.g. <code>loop(){blah;}</code> will trigger infinite loops and using them should be avoided until knowledge of yield; is sufficient.</p>
 	      <p>Next are while loops. Basically, while a certain condition is true (booleans!), the code in the braces after it will be executed, just like an if statement except automatically repeated.</p>
 	        <pre class="prettyprint"><code>let x = 5;
 while(x<20){
     x++;
 }</code></pre>
-	      <p>In the code above, we declare x and then run a while loop where, while x is less than 20, x is incremented by 1. The code in question will loop itself and x will be 20 after the code has executed.</p>
+	      <p>In the code above, we declare x and then run a while loop where, while x is less than 20, x is incremented by 1. The code in question will loop itself and x will be 20 after the code has executed. More specifically, x will continue to increment by one until it is 20, at which point the loop will end.</p>
 	        <pre class="prettyprint"><code>let x = 5;
 while(x>20){
     x++;
@@ -363,7 +363,7 @@ Wait(5);
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 11, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Apr 7, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
