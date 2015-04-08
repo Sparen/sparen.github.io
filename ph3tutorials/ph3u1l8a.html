@@ -22,7 +22,7 @@
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u1l9.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Lasers">Unit 1 Lesson 9</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Extra Lesson 1 - Recollection: Eternal Meek</h1>	      <p>The video for this lesson (and all extra lessons) is a video if the spell we will be replicating. In this case, it is, as you have probably realized by now, Eternal Meek, Sakuya's <s>signature spell</s>.</p>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Extra Lesson 1 - Recollection: Eternal Meek</h1>	      <p>The video for this lesson (and all extra lessons) is a video of the spell we will be replicating. In this case, it is, as you have probably realized by now, Eternal Meek, Sakuya's <s>signature spell</s>.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/sErv3ZH6AcQ">
@@ -30,14 +30,66 @@
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
 	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
-	          <li><a href="#quiz1">Quiz: </a></li>
+	          <li><a href="#sub2">Part 2: How do I use rand?</a></li>
+	          <li><a href="#sub3">Part 3: What Functions Can I Use to Truncate Floats?</a></li>
+	          <li><a href="#sub4">Part 4: How do I Write My Own rand_int?</a></li>
+	          <li><a href="#sub5">Part 5: What are the Uses of rand_int?</a></li>
+	          <li><a href="#quiz1">Quiz: rand_int</a></li>
+	          <li><a href="#sub6">Part 6: How do I Replicate Eternal Meek?</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will be explaining the usage of rand in greater detail, how to recreate rand_int, how to index arrays using rand, and will show, step by step, the components of Eternal Meek and how we can replicate it.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: How do I use rand?</h2>
+	      <p>We've used rand before. You give rand two numbers - these are your bounds. rand() will generate a floating point number between these (it will, for practical purposes, never be an integer). Note that regardless of whether or not the bounds are included, it is nearly impossible to get exactly those bounds, so always use rand() assuming that the result will have a multitude of numbers after a decimal point.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: What Functions Can I Use to Truncate Floats?</h2>
+	      <p>We will be creating a function called rand_int shortly, but before we do this, we must discuss the various built-in ways to truncate floating point numbers (anything with a decimal point) to integers in Touhou Danmakufu ph3. Our main reference will be <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Math_Functions" title="Math Functions for Touhou Danmakufu ph3">Math Functions</a>.</p>
+	      <p>The first function we will look at is <code>round()</code>. This function will round the decimal to the nearest integer using standard rules. Anything .5 or greater will round up, anything less than .5 will round down.</p>
+	      <pre class="prettyprint"><code>round(0.006);     //0
+round(3.500);     //4
+round(4.566);     //5
+round(6.246);     //6
+round(-1.836);    //-2
+round(-9.496);    //-9</code></pre>
+	      <p>The second function we will look at is <code>truncate()</code>. This function will slice off the decimal place, leaving the integer component only. It can also be referred to as <code>trunc()</code></p>
+	      <pre class="prettyprint"><code>truncate(0.006);     //0
+truncate(3.500);     //3
+trunc(4.566);        //4
+trunc(6.246);        //6
+truncate(-1.836);    //-1
+round(-9.496);       //-9</code></pre>
+	      <p>The third function we will look at is <code>ceil()</code>, short for ceiling. This function will always round up. Think of a number line - ceil will return the next integer to the right.</p>
+	      <pre class="prettyprint"><code>ceil(0.006);     //1
+ceil(3.500);     //4
+ceil(4.566);     //5
+ceil(6.246);     //7
+ceil(-1.836);    //-1
+ceil(-9.496);    //-9</code></pre>
+	      <p>The last function we will look at is <code>floor()</code>, which is similar to ceiling. This function will always round down. Think of a number line - ceil will return the next integer to the left.</p>
+	      <pre class="prettyprint"><code>floor(0.006);     //0
+floor(3.500);     //3
+floor(4.566);     //4
+floor(6.246);     //6
+floor(-1.836);    //-2
+floor(-9.496);    //-10</code></pre>
+	      <p>Now that we have these, we will create <code>rand_int()</code>.</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: How do I Write My Own rand_int?</h2>
+	      <p>The function of rand_int() is to return a random integer in between two bounds, inclusive. To do this, which of the four functions should we use?</p>
+	      <p>Of the four, trunc, ceil, and floor all exclude one or both of the bounds. Therefore, the only option here is to use round(). So how exactly would we go about making this function?</p>
+	      <p>Let's start with the skeleton. We have a function that takes in two integer parameters and returns an integer. So let's write an empty function.</p>
+	      <pre class="prettyprint"><code>function rand_int(min, max){
+
+}</code></pre>
+	      <p>Of course, nothing will happen if we run this function, and using it assuming it will return something will result in an error. So we need the contents of the function.</p>
+	      <p>Our aim is to use round with the two bounds to obtain a random integer between the two bounds, inclusive. And of course... we can use rand! A completed <code>rand_int()</code> is presented below.</p>
+	      <pre class="prettyprint"><code>function rand_int(min, max){
+  return round(rand(min, max))
+}</code></pre>
+	      <p>This works by first running rand(). This obtains a floating point value between the two bounds, and then runs round() on it, turning it into an integer.</p>
+	      <p>Of course, what are the uses of rand_int?</p>
+	      <h2 style="color:yellow" id="sub5">Part 5: What are the Uses of rand_int?</h2>
 	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
-	      <pre class="prettyprint"><code>code</code></pre>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Angular Velocity and Curved Lasers</h2>
+	      <h2 style="color:yellow" id="quiz1">Quiz: rand_int</h2>
 	        <!--Quiz start.-->
 		<p>1) How many frames does it take for a curvy laser with angular velocity 2 to make a full 360 degree rotation back to its starting point?</p>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 2);">
@@ -62,7 +114,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: April 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: April 8, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
