@@ -112,10 +112,10 @@
 	      <h2 style="color:yellow" id="sub8">Part 8: How Can I Create Curving Bullet Lines?</h2>
 	      <p>We now leave the land of Shou and Seiga and now enter the land of Tewi.</p>
 	      <p>Fundamentally, lines of bullets that all do the same thing are what curvy lasers are, albeit in a significantly less precise way. Think about it this way - if a curvy laser is just a lot of hitboxes with a stretched graphic, then wouldn't a long string of bullets (with hitboxes) be the same? The answer is yes, and as a result, we can approach them the same way.</p>
-	      <p>To create curving bullet lines (which, btw, are significantly less lag-inducing than curvy lasers), you just need to keep the bullet's actions the same, preferably via a BulletCommands task or by giving them all the same code. The only change is when they are spawned. So there are two ways to do this, really. The first is using delay and the second is by using yield; The first method is shown below</p>
+	      <p>To create curving bullet lines (which, btw, are significantly less lag-inducing than curvy lasers), you just need to keep the bullet's actions the same, preferably via a BulletCommands task or by giving them all the same code. The only change is when they are spawned. So there are two ways to do this, really. The first is using delay and the second is by using yield; The first method is shown below. <strong>Note that ObjMove_AddPatternA2 should be used on CreateShotA2 and that using it on CreateShotA1 may have unwanted consequences</strong></p>
 	      <pre class="prettyprint"><code>    task SpawnBulletLine{
         ascent(i in 0..12){
-	    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), DS_RICE_M_SKY, i*3); 
+	    let obj = CreateShotA2(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 0, 0, DS_RICE_M_SKY, i*3); 
 	    //create your shot above. There will be 12 of them, with delays of 0, 3, ..., 33
 	    BulletCommands(obj);
 	}
@@ -131,7 +131,7 @@
 	let starty = ObjMove_GetY(objBoss);
 	let startang = GetAngleToPlayer(objBoss);
         loop(12){
-	    let obj = CreateShotA1(startx, starty, 2, startang, DS_RICE_M_SKY, 3); 
+	    let obj = CreateShotA2(startx, starty, 2, startang, 0, 0, DS_RICE_M_SKY, 3); 
 	    BulletCommands(obj);
 	    wait(3);
 	}
@@ -236,7 +236,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: April 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: April 8, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
