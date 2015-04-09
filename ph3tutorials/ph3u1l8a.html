@@ -88,23 +88,42 @@ floor(-9.496);    //-10</code></pre>
 	      <p>This works by first running rand(). This obtains a floating point value between the two bounds, and then runs round() on it, turning it into an integer.</p>
 	      <p>Of course, what are the uses of rand_int?</p>
 	      <h2 style="color:yellow" id="sub5">Part 5: What are the Uses of rand_int?</h2>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+	      <p>rand_int is used whenever you need a random integer. This often happens when you want a specific graphic in a range - you can use <code>rand_int(min, max)</code> to obtain a random integer between min and max inclusive.</p>
+	      <p>But let's say you don't want the one in the middle. For example, you want 30-36, but not 33. How could you do this? Well, rand_int provides a solution. Remember that you index arrays starting from 0 and then incrementing from there. So we can do the following!</p>
+	      <pre class="prettyprint"><code>let graphic = [30, 31, 32, 34, 35, 36][rand_int(0, 5)];</code></pre>
+	      <p>The above code will create an array with [30, 31, 32, 34, 35, 36], and will then index that array using the [rand_int(0, 5)]. The rand_int will spit out an integer between 0 (corresponding to 30) and 5 (corresponding to 36). This is a nifty trick that you may consider using. (Credits to Infinite Ultima Wave for teaching me that this exists)</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: rand_int</h2>
 	        <!--Quiz start.-->
-		<p>1) How many frames does it take for a curvy laser with angular velocity 2 to make a full 360 degree rotation back to its starting point?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 2);">
+		<p>1) Let's say we run <code>rand_int(0,50)</code>. Which of the following is not a possible result?</p>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. 60<br>
+	        A. 50<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. 120<br>
+	        B. 4.5<br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. 180<br>
+	        C. 30<br>
 	        <input type="RADIO" value="D" name="cc">
-	        D. 240<br>
+	        D. 0<br>
 	        <input type="RADIO" value="E" name="cc">
-	        E. 360<br>
+	        E. 12<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
+		<br>
+		<p>2) What is a possible output of <code>trunc(absolute(rand(-60,60)));<code></p>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'C');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. -30<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 60<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 59<br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. 0.5<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="sub6">Part 6: How do I Replicate Eternal Meek?</h2>
+	      <p>So it's finally time for the main show - Eternal Meek! We will begin with an analysis of the spellcard.</p>
+	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
 	    <ul>
@@ -122,6 +141,5 @@ floor(-9.496);    //-10</code></pre>
         </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
-    <script language="JavaScript" type="text/javascript" src="javascript/U1L10Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
