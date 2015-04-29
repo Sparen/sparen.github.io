@@ -28,19 +28,11 @@ function checkAnswerGENERIC(quizForm, theAnswer){
   return false;
 }
 
-function checkAnswerCA(quizForm, theAnswer, correctAnswer){
+/*function checkAnswerCA(quizForm, correctAnswer){//For comparing text box result with actual
   var s = "?";
 
-  var i = 0;
-  for(;i<quizForm.elements.length;i++){
-    if(("cc" == quizForm.elements[i].name) && (quizForm.elements[i].checked)){
+  if("cc" == quizForm.elements[i].name){
       s = quizForm.elements[i].value;
-    }
-  }
-
-  if(s == "?"){
-    alert("Please make a selection.");
-    return false;
   }
 
   if(s == theAnswer){
@@ -56,4 +48,4 @@ function checkAnswerCA(quizForm, theAnswer, correctAnswer){
   // i.e. points to a valid CGI script
   //
   return false;
-}
+}*/

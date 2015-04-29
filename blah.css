@@ -156,7 +156,6 @@ caption {
   text-align: center;
 }
 p, fieldset, table, pre {margin-bottom: 1em;}
-input[type="text"], input[type="password"], textarea {width: 12.25em; }
 
 /*TUTORIAL ASSIST BY SPAREN*/
 .tut_exercise{
