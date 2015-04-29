@@ -193,4 +193,9 @@
 <changefreq>weekly</changefreq>
 <priority>0.1</priority>
 </url>
+<url>
+<loc>http://sparen.github.io/classresources/jhu_378116/kanji1.html</loc>
+<changefreq>weekly</changefreq>
+<priority>0.1</priority>
+</url>
 </urlset>
