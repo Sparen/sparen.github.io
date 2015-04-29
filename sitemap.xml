@@ -185,7 +185,7 @@
 
 <url>
 <loc>http://sparen.github.io/classresources/index.html</loc>
-<changefreq>weekly</changefreq>
+<changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
 <url>
@@ -195,7 +195,12 @@
 </url>
 <url>
 <loc>http://sparen.github.io/classresources/jhu_378116/kanji1.html</loc>
-<changefreq>weekly</changefreq>
+<changefreq>yearly</changefreq>
+<priority>0.1</priority>
+</url>
+<url>
+<loc>http://sparen.github.io/classresources/jhu_378116/vocab1.html</loc>
+<changefreq>yearly</changefreq>
 <priority>0.1</priority>
 </url>
 </urlset>
