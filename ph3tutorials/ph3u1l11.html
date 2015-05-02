@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 11</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 11 - Using Trigonometry and Parametrics. A guide to understanding the coordinate system of Touhou Danmakufu ph3."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Bullet, Shot, Laser, Curve, Angular, Velocity">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="http://sparen.github.io"><img alt="&quot;Site Logo&quot;" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l10a.html" title="Sparen's Danmakufu ph3 Tutorials - Recollection: Moonlight Ray">Extra Lesson 2</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 11 - Using Trigonometry and Parametrics</h1>	      <p>The video for this lesson is Ultima's Sanae. Sanae Stars have a variety of spawn methods, but all require knowledge of Danmakufu's coordinate system and how to manipulate it.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/TY2HuKvigPM">
+	      <div style="width: 600px;" class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: How Does Touhou Danmakufu ph3's Coordinate System Work?</a></li>
+	          <li><a href="#quiz1">Quiz: Danmakufu ph3's Coordinate System</a></li>
+	          <li><a href="#sub3">Part 3: How Can I Use Trigonometry to Create a Ring of Bullets?</a></li>
+	          <li><a href="#sub4">Part 4: How Can I Use Trigonometry to Create an Ellipse of Bullets?</a></li>
+	          <li><a href="#sub5">Part 5: How Can I Use a Rotation Matrix to Create Rotated Ellipses?</a></li>
+	          <li><a href="#quiz2">Quiz: Circles and Ellipses in Danmakufu ph3</a></li>
+	          <li><a href="#sub6">Part 6: What are Parametric Equations?</a></li>
+	          <li><a href="#sub7">Part 7: How Can I Use Parametric Equations in Danmakufu?</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will be explaining Danmakufu's coordinate system in greater detail, and will explain how you can use trigonometry and parametric equations (based off of the angle theta, primarily) to create bullets at points relative to an object such as a boss or relative to coordinates. This lesson will supplement existing tutorials, such as my <a target="_blank" href="https://www.youtube.com/watch?v=6c54DO4gjos">Spawning Danmaku in Circles and Ellipses</a> tutorial.</p>
+	      <p>The main focus of this lesson will be on utilizing trigonometry in Danmakufu and using it to create simple shapes such as circles and ellipses. There is a secondary focus on the general coordinate system, and I will also be covering basic Rotation Matrices and Parametric Equations. As much as I would love to cover Polar Equations, it's not meant for this tutorial and if you would like to implement those, you can find information on Polar Equations in Danmakufu in my old tutorials for 0.12m.</p>
+	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: What is Blah?</h2>
+	      <div class="tut_checkpoint">CHECKPOINT: How is the X?</div>
+	      <pre class="prettyprint"><code></code></pre>
+	      <p></p>
+	      <pre class="prettyprint"><code></code></pre>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Nyaaao</h2>
+	        <!--Quiz start.-->
+		<p>1) Nya</p>
+	        <pre class="prettyprint"><code>    SnakePattern(obj, -1.8);</code></pre>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 9);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 1.8<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. -1.8<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 0<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) Awooo?</p>
+	        <pre class="prettyprint"><code>    SnakePattern(obj, 1.8);</code></pre>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 9);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 1.8<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. -1.8<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 0<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <p><a target="_blank" href="https://www.youtube.com/watch?v=6c54DO4gjos" title="Sparen's Spawning Danmaku in Circles and Ellipses Tutorial">[1] Touhou Danmakufu ph3 Tutorial - Spawning Danmaku in Circles and Ellipses </a> (Sparen)<br>--&gt;This tutorial is a video supplement to this lesson - it doesn't cover the same things but both lessons depends on each other.</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l10a.html" title="Sparen's Danmakufu ph3 Tutorials - Recollection: Moonlight Ray">Extra Lesson 2</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: May 2, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </div>    </div>
+    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L10Quiz1.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
