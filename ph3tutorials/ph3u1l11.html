@@ -31,11 +31,10 @@
 	        <ul>
 	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
 	          <li><a href="#sub2">Part 2: How Does Touhou Danmakufu ph3's Coordinate System Work?</a></li>
-	          <li><a href="#quiz1">Quiz: Danmakufu ph3's Coordinate System</a></li>
 	          <li><a href="#sub3">Part 3: How Can I Use Trigonometry to Create a Ring of Bullets?</a></li>
 	          <li><a href="#sub4">Part 4: How Can I Use Trigonometry to Create an Ellipse of Bullets?</a></li>
 	          <li><a href="#sub5">Part 5: How Can I Use a Rotation Matrix to Create Rotated Ellipses?</a></li>
-	          <li><a href="#quiz2">Quiz: Circles and Ellipses in Danmakufu ph3</a></li>
+	          <li><a href="#quiz1">Quiz: Circles and Ellipses in Danmakufu ph3</a></li>
 	          <li><a href="#sub6">Part 6: What are Parametric Equations?</a></li>
 	          <li><a href="#sub7">Part 7: How Can I Use Parametric Equations in Danmakufu?</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
@@ -43,9 +42,64 @@
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will be explaining Danmakufu's coordinate system in greater detail, and will explain how you can use trigonometry and parametric equations (based off of the angle theta, primarily) to create bullets at points relative to an object such as a boss or relative to coordinates. This lesson will supplement existing tutorials, such as my <a target="_blank" href="https://www.youtube.com/watch?v=6c54DO4gjos">Spawning Danmaku in Circles and Ellipses</a> tutorial.</p>
 	      <p>The main focus of this lesson will be on utilizing trigonometry in Danmakufu and using it to create simple shapes such as circles and ellipses. There is a secondary focus on the general coordinate system, and I will also be covering basic Rotation Matrices and Parametric Equations. As much as I would love to cover Polar Equations, it's not meant for this tutorial and if you would like to implement those, you can find information on Polar Equations in Danmakufu in my old tutorials for 0.12m.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: How Does Touhou Danmakufu ph3's Coordinate System Work?</h2>
+	      <p>As stated back in <a href="./ph3u1l6.html">Lesson 6</a>, Danmakufu's coordinate system is not the same as taught in most schools. Since the origin (for render priorities between 0.20 and 0.80) is in the top left corner, the x direction increases as you move to the right but the y direction increases as you move downwards. Using the same system, angles increase from 0 to 360 starting directly right and increasing in a clockwise direction so that 90 degrees is directly down, 180 degrees is directly left, and 270 degrees is straight up.</p>
+	      <p>For this lesson, we will need to take all three factors into consideration when we deal with angles and coordinate systems.</p>
+	      <p>As shown in previous lessons, we can create a bullet 10 pixels to the left of the boss and 5 pixels above the boss by setting the x parameter of CreateShot to <code>ObjMove_GetX(objBoss)-10</code> and by setting the y parameter to <code>ObjMove_GetY(objBoss)-5</code>. We will use this in the next part.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: How Can I Use Trigonometry to Create a Ring of Bullets?</h2>
+	      <p>Now we will aim to write a script that will spawn bullets in a circle of radius 90 around the boss, and another circle of radius 60 around the player. We saw this earlier in Lesson 9, when I described a method of creating Non-Directional Lasers.</p>
+	      <p>To begin, we will need to understand the Unit Circle, as well as sine and cosine.</p>
+	      <img alt="Unit Circle" src="tutimg/unitcircle.png" height="359" width="291"><br><br>
+	      <p>Above is an image of the unit circle - a circle of radius (L in diagram) 1. All of the angles are the angles used in Danmakufu.</p>
+	      <p>To understand how we will be using the unit circle in Danmakufu, we will look at the angle theta (A in diagram), X, and Y, where X and Y are the X and Y components of radius L.</p>
+	      <p>In trigonometry involving right angles, sine refers to the opposite side of the angle divided by the hypotenuse, while cosine refers to the adjacent side of the angle divided by the hypotenuse. Therefore, X = L*cos(A) and Y = L*sin(A) as shown in the diagram. These are the X and Y components of the radius 1 for a given angle A.</p>
+	      <p>Our first goal is to create bullets in a ring of radius 90 around the boss. To accomplish this, we will let our radius be 90, relative to the Boss's current location.</p>
+	      <p>So let's say we want our ring to have 30 bullets in it, since it's going to be pretty far from the boss. Now, we know that we will use a loop like the following:</p>
+	      <pre class="prettyprint"><code>    let angleT = 0;
+    loop(30){
+	//Create bullet
+	angleT+=360/30;
+    }</code></pre>
+	      <p>The question now is how we will spawn the bullets. We want the bullets to be spawned exactly in a circle, and we can't manually set the x and y coordinates to do that. We will therefore use sine and cosine.</p>
+	      <p>Danmakufu's coordinate systems basically use parametric equations, where the x, y, and z (if using render objects) coordinates are defined separately. As we loop through the code above, we want x and y to be written in terms of angleT, with is our theta (A in the diagram). Let's take the rightmost point, spawned when angleT = 0. We want it to be located at (90, 0) with respect to the boss.</p>
+	      <img alt="Sine and Cosine Waves" src="https://www.mathsisfun.com/algebra/images/sine-cosine-graph.gif" height="188" width="394"><br><br>
+	      <p>Above I have the graphs of sine and cosine. Our angle is 0, which is smack in the middle of the diagram. At this point, cos(x) is 1 and sin(x) is 0. So how can we use this?</p>
+	      <p>Well, we want our bullet at (90, 0), right? And the y coordinate is 0, just as sin(0) = 0. And our x coordinate is 90, when cos(0) is 1. Therefore, our code becomes the following:</p>
+	      <pre class="prettyprint"><code>    let angleT = 0;
+    loop(30){
+	CreateShotA1(ObjMove_GetX(objBoss)+90*cos(angleT), ObjMove_GetY(objBoss)+90*sin(angleT), 2, angleT, 1, 0);
+	angleT+=360/30;
+    }</code></pre>
+	      <p>This will work correctly for all points in the circle. What the 90* does is basically scale the graph. Therefore, we essentially scale the unit circle so that instead of having a radius of 1, we have a radius of 90. And in the above graph, we scale the vertical axis to go from 90 to -90.</p>
+	      <p>The end result is a ring of bullets of radius 90 centered around the boss.</p>
+	      <p>How about the player? Well, the only real difference is that we will multiply by 60 instead of 90, and will change the base coordinate (currently (ObjMove_GetX(objBoss), ObjMove_GetY(objBoss)) to (GetPlayerX, GetPlayerY)</p>
+	      <p>And with that, we have made what we planned to make! To see a gif representation of what we are doing, click <a target="_blank" href="http://i.imgur.com/O0b3H2S.gif" title="Sine and Cosine">here</a>.</p>
+	      <div class="tut_checkpoint">CHECKPOINT: How do sine and cosine change as theta goes from 0 to 360? Using the unit circle, how does this translate into the circle of bullets?</div>
+	      <div class="tut_exercise">EXERCISE: Experiment with the provided code. Create rings of bullets, or even rings of rings of bullets. You can also do rings of rings of bullets - if you can pull this off, you are all set!</div>
+	      <h2 style="color:yellow" id="sub4">Part 4: How Can I Use Trigonometry to Create an Ellipse of Bullets?</h2>
+	      <p>An ellipse, as static as generically as possible, is a circle stretched in a direction. Technically, it is a conic where the sum of the distances from two foci on the major axis is always equal, but that gets lost when you make ellipses using parametric equations because you don't need to know about the foci to create the ellipse. If you really want to know, here's a <a target="_blank" href="http://giphy.com/gifs/educational-ellipse-Qk5fIr8LRYACI" title="Ellipse GIF">link</a> to a good gif.</p>
+	      <p>Now that that's out of the way, we can move on to what we actually want to do!</p>
+	      <p>Let's say that we want to have an ellipse where half the length of the major axis (we will use the x axis) is 75, and half the length of the minor axis (we will use the y axis) is 30. We will begin by examining our code from earlier, where we created a circle.</p>
+	      <pre class="prettyprint"><code>    let angleT = 0;
+    loop(30){
+	CreateShotA1(ObjMove_GetX(objBoss)+90*cos(angleT), ObjMove_GetY(objBoss)+90*sin(angleT), 2, angleT, 1, 0);
+	angleT+=360/30;
+    }</code></pre>
+	      <p>We can think of this as follows: In the X direction, the maximum distance you can go is 90, and the same goes for the Y axis. Now we want 75 and 30 instead of 90 and 90.</p>
+	      <p>And yes, it's not that complicated.</p>
+	      <pre class="prettyprint"><code>    let angleT = 0;
+    loop(30){
+	CreateShotA1(ObjMove_GetX(objBoss)+75*cos(angleT), ObjMove_GetY(objBoss)+30*sin(angleT), 2, angleT, 1, 0);
+	angleT+=360/30;
+    }</code></pre>
+	      <p>Hooray! We now have an ellipse in Danmakufu! It works the same way as with the circle - it's just that the bullets will be more bunched up towards the sides and more spread out at the top. You can bend and contort this ellipse as much as you want, and you can do lots of stretching in the x and y directions. However, if you want to rotate it... well... you're getting into some pretty ugly territory now.</p>
+	      <h2 style="color:yellow" id="sub5">Part 5: How Can I Use a Rotation Matrix to Create Rotated Ellipses?</h2>
+	      <p>Simply put, rotation matrices are hard. I have proved them on my own and it was hell. But I will spare you the proof and simply tell you how to implement them.</p>
 	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: What is Blah?</h2>
-	      <div class="tut_checkpoint">CHECKPOINT: How is the X?</div>
+	      <p>Our goal here is simple - rotate an ellipse. For reference, this is what we will do for the x and y coordinates:<br>x' = xcos(angleT)-ysin(angleT)<br>y' = xsin(angleT)+ycos(angleT)<br>where x is the </p>
+	      <p></p>
+	      <p></p>
+	      <p></p>
 	      <pre class="prettyprint"><code></code></pre>
 	      <p></p>
 	      <pre class="prettyprint"><code></code></pre>
@@ -85,7 +139,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: May 2, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: May 3, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
