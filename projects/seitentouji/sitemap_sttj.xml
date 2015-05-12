@@ -1,11 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://sparen.github.io/projects/seitentouji/index.html</loc>
-<changefreq>weekly</changefreq>
+<changefreq>monthly</changefreq>
+<priority>0.1</priority>
+</url>
+<url>
+<loc>http://sparen.github.io/projects/seitentouji/chara.html</loc>
+<changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
 <url>
 <loc>http://sparen.github.io/projects/seitentouji/bio_teiki.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.1</priority>
+</url>
+<url>
+<loc>http://sparen.github.io/projects/seitentouji/bio_koro.html</loc>
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
