@@ -33,15 +33,14 @@
 	          <li><a href="#sub2">Part 2: How Does Touhou Danmakufu ph3's Coordinate System Work?</a></li>
 	          <li><a href="#sub3">Part 3: How Can I Use Trigonometry to Create a Ring of Bullets?</a></li>
 	          <li><a href="#sub4">Part 4: How Can I Use Trigonometry to Create an Ellipse of Bullets?</a></li>
-	          <li><a href="#sub5">Part 5: How Can I Use a Rotation Matrix to Create Rotated Ellipses?</a></li>
 	          <li><a href="#quiz1">Quiz: Circles and Ellipses in Danmakufu ph3</a></li>
-	          <li><a href="#sub6">Part 6: What are Parametric Equations?</a></li>
-	          <li><a href="#sub7">Part 7: How Can I Use Parametric Equations in Danmakufu?</a></li>
+	          <li><a href="#sub5">Part 5: What are Parametric Equations?</a></li>
+	          <li><a href="#sub6">Part 6: How Can I Use Parametric Equations in Danmakufu?</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will be explaining Danmakufu's coordinate system in greater detail, and will explain how you can use trigonometry and parametric equations (based off of the angle theta, primarily) to create bullets at points relative to an object such as a boss or relative to coordinates. This lesson will supplement existing tutorials, such as my <a target="_blank" href="https://www.youtube.com/watch?v=6c54DO4gjos">Spawning Danmaku in Circles and Ellipses</a> tutorial.</p>
-	      <p>The main focus of this lesson will be on utilizing trigonometry in Danmakufu and using it to create simple shapes such as circles and ellipses. There is a secondary focus on the general coordinate system, and I will also be covering basic Rotation Matrices and Parametric Equations. As much as I would love to cover Polar Equations, it's not meant for this tutorial and if you would like to implement those, you can find information on Polar Equations in Danmakufu in my old tutorials for 0.12m.</p>
+	      <p>The main focus of this lesson will be on utilizing trigonometry in Danmakufu and using it to create simple shapes such as circles and ellipses. There is a secondary focus on the general coordinate system, and I will also be covering basic Rotation Matrices (in the future) and Parametric Equations. As much as I would love to cover Polar Equations, it's not meant for this tutorial and if you would like to implement those, you can find information on Polar Equations in Danmakufu in my old tutorials for 0.12m.</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: How Does Touhou Danmakufu ph3's Coordinate System Work?</h2>
 	      <p>As stated back in <a href="./ph3u1l6.html">Lesson 6</a>, Danmakufu's coordinate system is not the same as taught in most schools. Since the origin (for render priorities between 0.20 and 0.80) is in the top left corner, the x direction increases as you move to the right but the y direction increases as you move downwards. Using the same system, angles increase from 0 to 360 starting directly right and increasing in a clockwise direction so that 90 degrees is directly down, 180 degrees is directly left, and 270 degrees is straight up.</p>
 	      <p>For this lesson, we will need to take all three factors into consideration when we deal with angles and coordinate systems.</p>
@@ -92,42 +91,85 @@
 	CreateShotA1(ObjMove_GetX(objBoss)+75*cos(angleT), ObjMove_GetY(objBoss)+30*sin(angleT), 2, angleT, 1, 0);
 	angleT+=360/30;
     }</code></pre>
-	      <p>Hooray! We now have an ellipse in Danmakufu! It works the same way as with the circle - it's just that the bullets will be more bunched up towards the sides and more spread out at the top. You can bend and contort this ellipse as much as you want, and you can do lots of stretching in the x and y directions. However, if you want to rotate it... well... you're getting into some pretty ugly territory now.</p>
-	      <h2 style="color:yellow" id="sub5">Part 5: How Can I Use a Rotation Matrix to Create Rotated Ellipses?</h2>
-	      <p>Simply put, rotation matrices are hard. I have proved them on my own and it was hell. But I will spare you the proof and simply tell you how to implement them.</p>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
-	      <p>Our goal here is simple - rotate an ellipse. For reference, this is what we will do for the x and y coordinates:<br>x' = xcos(angleT)-ysin(angleT)<br>y' = xsin(angleT)+ycos(angleT)<br>where x is the </p>
-	      <p></p>
-	      <p></p>
-	      <p></p>
-	      <pre class="prettyprint"><code></code></pre>
-	      <p></p>
-	      <pre class="prettyprint"><code></code></pre>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Nyaaao</h2>
+	      <p>Hooray! We now have an ellipse in Danmakufu! It works the same way as with the circle - it's just that the bullets will be more bunched up towards the sides and more spread out at the top. You can bend and contort this ellipse as much as you want, and you can do lots of stretching in the x and y directions. However, if you want to rotate it... well... you're getting into some pretty ugly territory now - specifically, you will need to use rotation matrices. Since I am not yet able to use them effectively myself and therefore cannot write a tutorial for them, I encourage you to study them if you ever decide that you want to use rotated ellipses or other rotated graphs.</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Circles and Ellipses in Danmakufu ph3</h2>
 	        <!--Quiz start.-->
-		<p>1) Nya</p>
-	        <pre class="prettyprint"><code>    SnakePattern(obj, -1.8);</code></pre>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 9);">
+		<p>1) As part of her daily routine, Suwako is retaliating against Cirno using Mishaguji-sama. To do this, she must employ circles. Which of the following will spawn a circle?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 3);">
 	        <input type="RADIO" value="A" name="cc">
-	        A. 1.8<br>
+	        A. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 1, i*10, 5, 5);}</code><br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. -1.8<br>
+	        B. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+30*sin(i*10), 1, i*10, 5, 5);}</code><br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. 0<br>
+	        C. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+30*sin(i*10), 1, i*10, 5, 5);}</code><br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+45*sin(i*10), 1, i*10, 5, 5);}</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
-		<p>2) Awooo?</p>
-	        <pre class="prettyprint"><code>    SnakePattern(obj, 1.8);</code></pre>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 9);">
+		<p>2) We create an ellipse with the following code. What is the farthest distance from the boss that bullets will spawn?</p>
+	        <pre class="prettyprint"><code>    ascent(i in 0..30){
+	CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*12), ObjMove_GetY(objBoss)+75*sin(i*12), 1, i*10, 5, 5);
+    }</code></pre>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 4);">
 	        <input type="RADIO" value="A" name="cc">
-	        A. 1.8<br>
+	        A. 75 pixels<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. -1.8<br>
+	        B. 30 pixels<br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. 0<br>
+	        C. 80.8 pixels<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
+	      <h2 style="color:yellow" id="sub5">Part 5: What are Parametric Equations?</h2>
+	      <p>Sometimes you can't describe things in math with simple coordinates. And so, you express them in terms of other systems, such as polar coordinates. These are parameterizations, and although the usage of parameterized functions, curves, and surfaces have a significant application in mathematics, we will stick with simple 2D curves. Specifically, we will talk about parameterizing in terms of a single variable t (or the angle theta, for basically everything).</p>
+	      <p>Let's take Danmakufu's coordinate system for Move Objects. You can set the x and y coordinates of an object like so:</p>
+	      <pre class="prettyprint"><code>    ObjMove_SetPosition(obj, 384/2, 448/2); //place object at center of screen</code></pre>
+	      <p>So, what does this have to do with parametric equations? Aren't we going to spawn ridiculous shapes with lots of curves and stuff?</p>
+	      <p>Well, simply put, we can take the function's second and third (x and y) arguments and display them as two functions:</p>
+	      <p>\(x = 384/2 + 0t\)<br><br>\(y = 448/2 + 0t\)</p>
+	      <p>If you believe the +0t is redundant, that is because it is - we can write the equations without them, but I am putting them here to show that this is actually a parametric equation. In fact, since Danmakufu separates X, Y, and Z coordinates, you can basically plug in any parametric equation and it will work. Let's start by examining the following:</p>
+	      <pre class="prettyprint"><code>    let angleT = 0;
+    loop(30){
+	CreateShotA1(ObjMove_GetX(objBoss)+75*cos(angleT), ObjMove_GetY(objBoss)+30*sin(angleT), 2, angleT, 1, 0);
+	angleT+=360/30;
+    }</code></pre>
+	      <p>This is the ellipse we spawned at the end of Part 4 earlier in this lesson. Now, if we treat the x and y parameters to the function as parametric equations... We get this:</p>
+	      <p>\(x = 75\times cos(t)\)<br><br>\(y = 30\times sin(t)\)</p>
+	      <p>Note that I am treating the boss's position as the origin for the purposes of these equations. Above is the parametric equation for an ellipse.</p>
+	      <p>So how exactly does it work? Well, we have our angleT variable, which we initialized to 0 at the start of the code. We then looped through, changing its value. As we changed the parameter angleT, the values of x and y in both equations changed, resulting in bullet placement that formed an ellipse. This is actually quite powerful, because you can use virtually any 2D parametric equation in Danmakufu by simply plugging the equations into a function.</p>
+	      <h2 style="color:yellow" id="sub6">Part 6: How Can I Use Parametric Equations in Danmakufu?</h2>
+	      <p>Let's take some ridiculous equation and spawn it in Danmakufu.</p>
+	      <pre class="prettyprint"><code>    task ParametricRing(){
+	let angleT = rand(0,360);
+	loop(120){
+	  loop(3){
+	    let obj = CreateShotA2(GetEnemyX(objBoss)+120*cos(angleT*3), GetEnemyY(objBoss)+90*sin(angleT*5), 
+		0, angleT*3, 0.001, 2, 25, 10);
+	    angleT+=360/3;
+	  }
+	  angleT+=7;
+	  yield;
+	}
+    }</code></pre>
+	      <p>This is code from my Veemon midboss in Digital Earth: Conquest, where he spawns a wall of danmaku. For the sake of this tutorial, I have stripped all of the non-essential code from the above task.</p>
+	      <p>If we look at this code, we first declare a variable angleT and assign a random angle to it. Then we loop 120 times. Inside the outer loop, we have an inner loop and some bullet spawn code that creates what would normally be a ring of three bullets if we were creating a circle. But instead of a circle, we have some strange equation with angleT*5 and the like. What could this be? Well, there's a name for it but we won't get into that. Below are the parametric equations that create this thing.</p>
+	      <p>\(x = 120\times cos(3\times t)\)<br><br>\(y = 90\times sin(5\times t)\)</p>
+	      <p>As you can see, we can take a complicated curve and make Danmakufu act like a really inefficient graphing calculator.</p>
+	      <p>Anyways, what's the point of this lesson? What kind of parametric curves would I ever want to use in Danmakufu?</p>
+	      <p>Well, polar equations aside, there are a few that you may want...</p>
+	      <p>Generally speaking, people don't appreciate math in Danmakufu, and math for math's sake is generally not fun if you're not into that kind of thing. But you can do some interesting things. We will use the Astroid as our focus for the remainder of the lesson.</p>
+	      <p>So, an Astroid is the following:</p>
+	      <img alt="Astroid" src="http://www.daviddarling.info/images/astroid.gif" height="300" width="298"><br><br>
+	      <p>This curve could result in some pretty nice Danmaku if used correctly, don't you think? Well, let's first begin with its parametric equation!</p>
+	      <p>\(x(t) = a\times cos^{3}(t)\)<br><br>\(y(t) = a\times sin^{3}(t)\)</p>
+	      <p>It's not too bad. Let's spawn bullets in an astroid!</p>
+	      <pre class="prettyprint"><code>    let angleT = 0;
+    loop(30){
+	CreateShotA1(ObjMove_GetX(objBoss)+120*cos(angleT)^3, ObjMove_GetY(objBoss)+120*sin(angleT)^3, 2, angleT, 1, 0);
+	angleT+=360/30;
+    }</code></pre>
+	      <p>And that's that. We have an astroid. Of course, with these types of curves, you don't usually want the bullets to just go outwards with the same speed, because it will just look like a square, then a circle as it gets farther from its spawn point. You could do some complex speed alteration, or you could just change the angle and do interesting things with the angle. It's up to you.</p>
+	      <p>That concludes the lesson!</p>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=6c54DO4gjos" title="Sparen's Spawning Danmaku in Circles and Ellipses Tutorial">[1] Touhou Danmakufu ph3 Tutorial - Spawning Danmaku in Circles and Ellipses </a> (Sparen)<br>--&gt;This tutorial is a video supplement to this lesson - it doesn't cover the same things but both lessons depends on each other.</p>
 	      <br>            </div>          </div>
@@ -139,7 +181,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: May 3, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: May 16, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
@@ -149,4 +191,5 @@
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/U1L10Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>  </body></html>
