@@ -1,0 +1,114 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Extra Lesson 3</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Extra Lesson 3 - Recollection: Border of Wave and Particle. A guide to understanding the famous BoWaP in Touhou Danmakufu ph3."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Bullet, Shot, Random">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="http://sparen.github.io"><img alt="&quot;Site Logo&quot;" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l11.html" title="Sparen's Danmakufu ph3 Tutorials - Angular Velocity and Curved Lasers">Unit 1 Lesson 11</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Extra Lesson 3 - Recollection: Border of Wave and Particle</h1>	      <p>The video for this lesson (and all extra lessons) is a video of the spell we will be replicating. In this case, it is, as you have probably realized by now, Border of Wave and Particle (BoWaP).</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/-KYbkrLGKTI">
+	      <div style="width: 600px;" class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What is Border of Wave and Particle?</a></li>
+	          <li><a href="#sub3">Part 3: How do I Replicate Border of Wave and Particle?</a></li>
+	          <li><a href="#sub4">Part 4: What are the Applications of BoWaP?</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will be explaining how to recreate Border of Wave and Particle, one of the most well-known, most abused, and most infamous patterns in all of Touhou history. We will begin with a brief introduction on what the pattern is, as well as how you can manipulate sine and cosine waves, and will them proceed to replicate it before I explain potential applications (and pitfalls) of this technique.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: What is Border of Wave and Particle?</h2>
+	      <p>In the history of Touhou, there has been no other pattern so reused, repurposed, and spammed as BoWaP. Unlike standard patterns such as circles and rings that act as components of attacks, BoWaP is often standalone, resulting in repetitive and iconic attacks such as Satori's blindspot.</p>
+	      <p>However, we will put that aside until the end of this lesson and focus on how the pattern actually works.</p>
+	      <p>Basically, we will take advantage of the oscillatory nature of sine and cosine to make a pattern that will oscillate back and forth while providing ample coverage of the screen as well as fair, somewhat easy to dodge gaps. There are multiple ways to implement the pattern. The way I will cover will only involve changing the angle.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: How do I Replicate Border of Wave and Particle?</h2>
+	      <p>Time to replicate!</p>
+	      <pre class="prettyprint"><code>    task BoWaP{	
+	let angleT = rand(0,360);
+	let objcount = 0;
+	loop{	
+	  loop(5){
+	    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, 610, 5);
+	    angleT+=360/5;
+	  }
+	  //increment angle here
+	  objcount++;
+	  yield;
+	}
+    }</code></pre>
+	      <p>Above is our starting code. We'll create an angle variable, and then have an infinite loop where we have a ring of five bullets spawning. As is, our code just belches five lines of bullets from the boss's location. So we need to do some upgrades. Since we know that we want our thing to oscillate, all we need to do is add something that naturally oscillates - sine! We'll add this to our angle</p>
+	      <pre class="prettyprint"><code>    task BoWaP{	
+	let angleT = rand(0,360);
+	let objcount = 0;
+	loop{	
+	  loop(5){
+	    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, 610, 5);
+	    angleT+=360/5;
+	  }
+	  angleT+=sin(objcount)*6;//BOWAP
+	  objcount++;
+	  yield;
+	}
+    }</code></pre>
+	      <p>Congratulations. You have just replicated Border of Wave and Particle. The *6 is to make sure that the gaps are large enough to dodge through. Experiment with the values!</p>
+	      <p>Since you can add sines and cosines and do all kinds of other stuff, why stop here? Let's add other things onto the pattern!</p>
+	      <pre class="prettyprint"><code>    task BoWaP2{	
+	let angleT = rand(0,360);
+	let objcount = 0;
+	loop{	
+	  loop(5){
+	    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, 610, 5);
+	    angleT+=360/5;
+	  }
+	  angleT+=sin(objcount)*cos(objcount)*12;//BOWAP
+	  objcount++;
+	  yield;
+	}
+    }</code></pre>
+	      <p>Combining multiple oscillatory functions will do all kinds of interesting things. And now, the sorrowful conclusion of this lesson.</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: What are the Applications of BoWaP?</h2>
+	      <p>It is now time to bring this lesson to a close, and I will describe the applications and pitfalls of BoWaP. First and foremost, this pattern is immediately recognizable, and people can and will tell you that you're being extremely unoriginal. Yes, ZUN has used BoWaP before and we've all rolled our eyes at some point during Subterranean Animism (notable appearances include Satori and the final death fairies of the game). And truth be told, using this pattern on its own will result in you being docked points for originality.</p>
+	      <p>But it's important to note that this pattern is still immensely useful. For example, Ringo's nonspells use BoWaP, and people immediately recognized that the same pattern was used in Futo's nonspells. This is an excellent case of BoWaP being used in a fashion where it was not immediately noticeable but where one of the characteristics of the pattern, in this case the clumping and spread of bullets, was used in a fashion where it was both interesting from a gameplay perspective and surprisingly creative.</p>
+	      <p>Rule of thumb: Avoid using BoWaP on its own - blend it into something more complex.</p>
+	      <p>That's all for this tutorial. Experiment and see what you can do!</p>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>	    </div>	  </div>
+	  <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l11.html" title="Sparen's Danmakufu ph3 Tutorials - Angular Velocity and Curved Lasers">Unit 1 Lesson 11</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: May 16, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </div>    </div>
+    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
