@@ -74,7 +74,7 @@
 	      <p>How about the player? Well, the only real difference is that we will multiply by 60 instead of 90, and will change the base coordinate (currently (ObjMove_GetX(objBoss), ObjMove_GetY(objBoss)) to (GetPlayerX, GetPlayerY)</p>
 	      <p>And with that, we have made what we planned to make! To see a gif representation of what we are doing, click <a target="_blank" href="http://i.imgur.com/O0b3H2S.gif" title="Sine and Cosine">here</a>.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How do sine and cosine change as theta goes from 0 to 360? Using the unit circle, how does this translate into the circle of bullets?</div>
-	      <div class="tut_exercise">EXERCISE: Experiment with the provided code. Create rings of bullets, or even rings of rings of bullets. You can also do rings of rings of bullets - if you can pull this off, you are all set!</div>
+	      <div class="tut_exercise">EXERCISE: Experiment with the provided code. Create rings of bullets, or even rings of rings of bullets. You can also do rings of rings of rings of bullets - if you can pull this off, you are all set!</div>
 	      <h2 style="color:yellow" id="sub4">Part 4: How Can I Use Trigonometry to Create an Ellipse of Bullets?</h2>
 	      <p>An ellipse, as static as generically as possible, is a circle stretched in a direction. Technically, it is a conic where the sum of the distances from two foci on the major axis is always equal, but that gets lost when you make ellipses using parametric equations because you don't need to know about the foci to create the ellipse. If you really want to know, here's a <a target="_blank" href="http://giphy.com/gifs/educational-ellipse-Qk5fIr8LRYACI" title="Ellipse GIF">link</a> to a good gif.</p>
 	      <p>Now that that's out of the way, we can move on to what we actually want to do!</p>
@@ -101,7 +101,7 @@
 	        <input type="RADIO" value="B" name="cc">
 	        B. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+30*sin(i*10), 1, i*10, 5, 5);}</code><br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+30*sin(i*10), 1, i*10, 5, 5);}</code><br>
+	        C. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+30*cos(i*10), 1, i*10, 5, 5);}</code><br>
 	        <input type="RADIO" value="D" name="cc">
 	        D. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+45*sin(i*10), 1, i*10, 5, 5);}</code><br>
 	        <input type="SUBMIT" value="Submit">
