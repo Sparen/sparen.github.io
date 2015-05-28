@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 12</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 12 - Creating and Utilizing Plural Scripts. A guide to creating and using plural scripts and boss scenes."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Scene, Event">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="http://sparen.github.io"><img alt="&quot;Site Logo&quot;" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l11a.html" title="Sparen's Danmakufu ph3 Tutorials - Recollection: Border of Wave and Particle">Extra Lesson 3</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 12 - Creating and Using Plural Scripts</h1>	      <p>The video for this lesson is Experiment 354 by Miransu Uwabami. A legacy script no longer compatible with the current versions of ph3, it is nevertheless one of the best danmakufu ph3 scripts ever made. As for its relation to our lesson, we'll be getting to that later.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/tzoxeiqoQHw">
+	      <div style="width: 600px;" class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: How Do I Create a Plural Script?</a></li>
+	          <li><a href="#sub3">Part 3: How Do I Create a Boss Scene Object?</a></li>
+	          <li><a href="#sub4">Part 4: What does Registering a Boss Scene Object Do?</a></li>
+	          <li><a href="#quiz1">Quiz: Plural Scripts</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>So tested your danmaku abilities. You've created a number of scripts that you may or may not like. But they're all solo spells! What to do now but make a boss with multiple attacks!</p>
+	      <p>Back in <a href="ph3u1l2.html">Lesson 2</a> and <a href="ph3u1l3.html">Lesson 3</a>, I alluded to multiple types of scripts. For this unit, we will examine the plural, or boss. Although all functionality of a plural can be handled (perhaps more efficiently) in a stage, I will discuss bosses in the context of plural scripts.</p>
+	      <p>In this lesson, we will focus on the creation of plural scripts and Enemy Boss Scene Objects, objects which store relevant data about a boss and are used for chaining attacks together. Later in this unit, we will discuss boss graphics and animation, sound effects, and text. We will culminate in a discussion of System, Pause, EndScene, Replay Save, and Background files, as we will need to understand these before releasing a plural to the public.</p>
+	      <p>So without further ado, Plurals!</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: How Do I Create a Plural Script</h2>
+	      <p>Way back when in <a href="ph3u1l6.html">Lesson 6</a>, we made our first single script. It had a header with #TouhouDanmakufu and the like. Let's paste that here, with a minor change - we will switch 'Single' with 'Plural' in the header.</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Plural]
+#ScriptVersion[3]
+#Title[]
+#Text[] 
+
+@Event{
+}
+
+@Initialize{
+}
+
+@MainLoop{
+}</code></pre>
+	      <p>This should look very familiar. Paste this into a text file. Name it something. We're going to do some work!</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Create a Boss Scene Object?</h2>
+	      <p>Let's first place a <code>yield;</code> in @MainLoop, as we will be using tasks. Now, let's create an empty task called TPlural. This will handle the creation of our boss scene.</p>
+	      <p>We will call this TPlural in @Initialize. Now let's fill it in.</p>
+	      <p>Firstly, we will declare a variable dir to be equal to <code>GetCurrentScriptDirectory()</code>. This is because we may be calling multiple singles, and the long <code>GetCurrentScriptDirectory()</code> function name is both tedious to write and very long.</p>
+	      <p>Now let's declare a variable obj. We will assign <code>ObjEnemyBossScene_Create()</code> to it. This function creates a boss scene object and returns the ID of given object.</p>
+	      <p>As of now, our code should look like this:</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Plural]
+#ScriptVersion[3]
+#Title["My First Boss Script"]
+#Text[] 
+
+@Event{
+}
+
+@Initialize{
+    TPlural;
+}
+
+@MainLoop{
+    yield;
+}
+
+task TPlural{
+    let dir=GetCurrentScriptDirectory();
+    let obj=ObjEnemyBossScene_Create();
+}</code></pre>
+	      <p>Now, we will begin adding singles to link on. For you, you will most likely have a bunch of singles you want to link. As long as you like at least one, the plural has a purpose.</p>
+	      <p>Let's add the single script 'Nonspell1.txt' to the boss scene. We will use the function <code>ObjEnemyBossScene_Add()</code>. It takes three parameters: the boss scene object to add to, the lifebar segment (starting from 0) to attach the attack to, and the path to the single script.</p>
+	      <pre class="prettyprint"><code>ObjEnemyBossScene_Add(obj, 0, dir~"./Nonspell1.txt");</code></pre>
+	      <p>Now that we have added Nonspell1.txt to the first lifebar segment, we will load and register the boss scene. To load the boss scene into memory, we will use <code>ObjEnemyBossScene_LoadInThread(obj)</code>, and to register it, we will use <code>ObjEnemyBossScene_Regist(obj)</code>.</p>
+	      <p>Now, what exactly do these do? Well, loading it basically loads the plural into memory so that it can be accessed. And as for registering, it does a number of things which we will get into shortly.</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: What does Registering a Boss Scene Object Do?</h2>
+	      <p>First and foremost, Registering a boss scene object will immediately run it. As in, <b>immediately.</b>. You will need the following right after registering, within the TPlural task:</p>
+	      <pre class="prettyprint"><code>    while(!Obj_IsDeleted(obj)){
+        yield;
+    }</code></pre>
+	      <p>This will wait for the Boss Scene to delete itself (it will delete once it has gone through every single that has been added on). After this, use <code>CloseScript(GetOwnScriptID());</code> to close the plural script.</p>
+	      <p>So here's our completed sample plural script.</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Plural]
+#ScriptVersion[3]
+#Title["My First Boss Script"]
+#Text[] 
+
+@Event{
+}
+
+@Initialize{
+    TPlural;
+}
+
+@MainLoop{
+    yield;
+}
+
+task TPlural{
+    let dir=GetCurrentScriptDirectory();
+    let obj=ObjEnemyBossScene_Create();
+    ObjEnemyBossScene_Add(obj,0,dir~"./Nonspell1.txt");
+    ObjEnemyBossScene_Add(obj,0,dir~"./Spell1.txt");
+    ObjEnemyBossScene_Add(obj,1,dir~"./Nonspell2.txt");
+    ObjEnemyBossScene_Add(obj,1,dir~"./Spell2.txt");
+    ObjEnemyBossScene_Add(obj,2,dir~"./Nonspell3.txt");
+    ObjEnemyBossScene_Add(obj,2,dir~"./Spell3.txt");
+    ObjEnemyBossScene_Add(obj,3,dir~"./Spell4.txt");
+    ObjEnemyBossScene_LoadInThread(obj);
+    ObjEnemyBossScene_Regist(obj);
+    while(!Obj_IsDeleted(obj)){
+        yield;
+    }
+    CloseScript(GetOwnScriptID());
+}</code></pre>
+	      <p>It's a boss with three nonspells and four spells, assuming that all the singles are in the same directory as the plural. But... there are some minor things to keep in mind. When you register a boss scene, it will check through all the single scripts and you will be notified of all errors. But all CommonData values changed or assigned outside of a @ block will be overridden by the one that appears in a later script. Right now this shouldn't be an issue because we have not gone over CommonData yet, but it will become an issue later on.</p>
+	      <p>Anyways, we have our first plural script! Try it out, see how it works, etc. A few things to note are that the headers of all single scripts are <b>completely ignored</b>. This means that if you have a bgm or specific player assigned in a single script and you run the plural script that has added that single, the plural script's header will be used. Always. This goes for all danmakufu scripts, whether they be stages, plurals, etc.</p>
+	      <p>Well, that was a short lesson. Let's bring it to a close.</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Plural Scripts</h2>
+	        <!--Quiz start.-->
+		<p>Use the following code for questions 1-3</p>
+		<style>
+	        .prettyprint ol.linenums > li { list-style-type: decimal; background-color: black;}
+    		</style>
+	      <pre class="prettyprint class=linenums"><code>#TouhouDanmakufu[Plural]
+#ScriptVersion[3]
+#Title["My First Boss Script"]
+#Text[] 
+
+@Event{
+}
+
+@Initialize{
+    TPlural;
+}
+
+@MainLoop{
+    //Question 1
+}
+
+task TPlural{
+    let dir=GetCurrentScriptDirectory();
+    //Question 2
+    ObjEnemyBossScene_Add(obj,0,dir~"./Nonspell1.txt");
+    ObjEnemyBossScene_LoadInThread(obj);
+    //Question 3
+    while(!Obj_IsDeleted(obj)){
+        yield;
+    }
+    CloseScript(GetOwnScriptID());
+}</code></pre>
+		<p>1) What code should be added to line 14 to allow the task to work properly (assume Lines 19 and 22 are filled correctly)?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 3);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>yield;</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Nothing should be added - the task will run.<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. <code>RaiseError(":3");</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) What code should be added to line 19 to correctly instantiate the Enemy Boss Scene Object?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 3);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>let obj=ObjBossScene_Create();</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. <code>let obj=ObjEnemyBossScene_Create(SCENE_BOSS);</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. <code>let obj=ObjEnemyBossScene_Create();</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>3) What code should be added to line 22 to correctly run the Boss Scene?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 4);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>ObjEnemyBossScene_Register(obj);</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. <code>ObjEnemyBossScene_Regist(obj);</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. <code>ObjEnemyBossScene_Run(obj);</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u1l11a.html" title="Sparen's Danmakufu ph3 Tutorials - Recollection: Border of Wave and Particle">Extra Lesson 3</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: May 27, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </div>    </div>
+    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L10Quiz1.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>  </body></html>
