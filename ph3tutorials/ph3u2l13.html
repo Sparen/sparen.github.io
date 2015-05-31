@@ -87,37 +87,6 @@
 	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: 2D Sprites</h2>
 	        <!--Quiz start.-->
-		<p>Use the following code for questions 1-3</p>
-		<style>
-	        .prettyprint ol.linenums > li { list-style-type: decimal; background-color: black;}
-    		</style>
-	      <pre class="prettyprint class=linenums"><code>#TouhouDanmakufu[Plural]
-#ScriptVersion[3]
-#Title["My First Boss Script"]
-#Text[] 
-
-@Event{
-}
-
-@Initialize{
-    TPlural;
-}
-
-@MainLoop{
-    //Question 1
-}
-
-task TPlural{
-    let dir=GetCurrentScriptDirectory();
-    //Question 2
-    ObjEnemyBossScene_Add(obj,0,dir~"./Nonspell1.txt");
-    ObjEnemyBossScene_LoadInThread(obj);
-    //Question 3
-    while(!Obj_IsDeleted(obj)){
-        yield;
-    }
-    CloseScript(GetOwnScriptID());
-}</code></pre>
 		<p>1) What code should be added to line 14 to allow the task to work properly (assume Lines 19 and 22 are filled correctly)?</p>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 3);">
 	        <input type="RADIO" value="A" name="cc">
@@ -161,7 +130,7 @@ task TPlural{
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: May 27, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: May 31, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
