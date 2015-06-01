@@ -22,7 +22,7 @@
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u2l13.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to 2D Sprites">Unit 2 Lesson 13</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 12 - Creating and Using Plural Scripts</h1>	      <p>The video for this lesson is Experiment 354 by Miransu Uwabami. A legacy script no longer compatible with the current versions of ph3, it is nevertheless one of the best danmakufu ph3 scripts ever made. As for its relation to our lesson... there really isn't one?</p>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 12 - Creating and Using Plural Scripts</h1>	      <p>The video for this lesson is Experiment 354 by Miransu Uwabami. A legacy script no longer compatible with the current versions of ph3, it is nevertheless one of the best danmakufu ph3 scripts ever made.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/tzoxeiqoQHw">
@@ -89,7 +89,7 @@ task TPlural{
 	      <p>Now that we have added Nonspell1.txt to the first lifebar segment, we will load and register the boss scene. To load the boss scene into memory, we will use <code>ObjEnemyBossScene_LoadInThread(obj)</code>, and to register it, we will use <code>ObjEnemyBossScene_Regist(obj)</code>.</p>
 	      <p>Now, what exactly do these do? Well, loading it basically loads the plural into memory so that it can be accessed. And as for registering, it does a number of things which we will get into shortly.</p>
 	      <h2 style="color:yellow" id="sub4">Part 4: What does Registering a Boss Scene Object Do?</h2>
-	      <p>First and foremost, Registering a boss scene object will immediately run it. As in, <b>immediately.</b>. You will need the following right after registering, within the TPlural task:</p>
+	      <p>First and foremost, registering a boss scene object will run it <b>immediately</b>. You will need the following after registering, within the TPlural task:</p>
 	      <pre class="prettyprint"><code>    while(!Obj_IsDeleted(obj)){
         yield;
     }</code></pre>
@@ -128,7 +128,7 @@ task TPlural{
     }
     CloseScript(GetOwnScriptID());
 }</code></pre>
-	      <p>It's a boss with three nonspells and four spells, assuming that all the singles are in the same directory as the plural. But... there are some minor things to keep in mind. When you register a boss scene, it will check through all the single scripts and you will be notified of all errors. But all CommonData values changed or assigned outside of a @ block will be overridden by the one that appears in a later script. Right now this shouldn't be an issue because we have not gone over CommonData yet, but it will become an issue later on.</p>
+	      <p>It's a boss with three nonspells and four spells, assuming that all the singles are in the same directory as the plural. But... there are some minor things to keep in mind. When you register a boss scene, it will check through all the single scripts and you will be notified of all errors.</p>
 	      <p>Anyways, we have our first plural script! Try it out, see how it works, etc. A few things to note are that the headers of all single scripts are <b>completely ignored</b>. This means that if you have a bgm or specific player assigned in a single script and you run the plural script that has added that single, the plural script's header will be used. Always. This goes for all danmakufu scripts, whether they be stages, plurals, etc.</p>
 	      <p>Well, that was a short lesson. Let's bring it to a close.</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: Plural Scripts</h2>
@@ -207,7 +207,7 @@ task TPlural{
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: May 27, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: May 31, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
