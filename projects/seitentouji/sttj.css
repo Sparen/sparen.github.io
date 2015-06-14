@@ -260,7 +260,6 @@ p, fieldset, table, pre {
   text-align:center; 
   font-size:125%; 
   font-weight:bold;
-  color: red;/*Color of the text*/
   background: #DDEEFF;
   border-radius: 3px 3px 0px 0px;
 }
