@@ -80,46 +80,73 @@
 	      <p>And there we have it! In regards to positioning, passing a 0 into SetDestRect will basically place that  side of the image at the location of the object. In other words, if you have a 64x96 image, its position is (384/2, 448/2), and its DestRect is (0, 0, 64, 96), the left side of the image will be on the horizontal center axis, the top side will be on the vertical center axis, and the other two sides will be offset from given axes by 64 and 96 pixels, respectively. SetDestRect can be used to scale the graphic, although <code>ObjRender_SetScaleXYZ()</code> is far more flexible at doing this.</p>
 	      <div class="tut_exercise">EXERCISE: Find a seamless texture online. Experiment with Source and Dest rects. Tile the graphic with SourceRect and scale it with DestRect. Get a feel for how you can manipulate the images.</div>
 	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Animate a Boss?</h2>
-	      <p></p>
-	      <p></p>
-	      <pre class="prettyprint"><code></code></pre>
-	      <p></p>
-	      <pre class="prettyprint"><code></code></pre>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+	      <p>Now that we have covered source rects, destination rects, and positioning, it is time for us to animate our sprites. For reference, we will use Sanae, as before.</p>
+	      <p>In this tutorial, I will not cover the movement or cast animations - it is better for you to figure out how to do those by yourself. However, I will be showing the idle sprites.</p>
+	      <p>OK. So for the idle animation, we have 4 64x64 sprites. Every 8 frames (you can change the number if you want to), we will change to the next image, and after the fourth, it will go back to the first. Let's begin coding.</p>
+	      <p>Firstly, we will need to set our texture, etc.</p>
+	      <pre class="prettyprint"><code>    task TDrawLoop{
+      let BossImage = GetCurrentScriptDirectory~"./stg5enm.png"; //assumes that image is in same directory
+      let animframe = 0;
+      ObjPrim_SetTexture(objBoss, BossImage);
+      ObjRender_SetScaleXYZ(objBoss, 1, 1, 1);
+      ObjSprite2D_SetSourceRect(objBoss, 0, 0, 64, 64);
+      ObjSprite2D_SetDestCenter(objBoss);
+      while(!Obj_IsDeleted(objBoss)){
+
+	yield;
+      }
+    }</code></pre>
+	      <p>In the above code, we set our texture, assign it to the boss, and do some source and dest rect manipulations. The graphic will automatically move when the boss moves because it is attached to the boss object. I also have an additional variable - animframe. We will use this to animate the boss.</p>
+	      <p>First, let's consider our approach. We have four images to render, and we want each to show for 8 frames. Therefore, after 32 frames, the animation will reset. Using this, an acceptable way to animate the boss involves incrementing animframe once per frame, and then resetting it before it hits 32. But how do we get this into the rects? There are multiple ways - you can manually use if statements to set the source rects, or you can automate it, which I will show below.</p>
+	      <p>Going back to <a href="./ph3u1l8a.html">Extra Lesson 1</a>, we know that <code>floor()</code> will truncate positive numbers. Therefore, we can use this to change the source rects, since the spritesheet has been formatted correctly.</p>
+	      <pre class="prettyprint"><code>    task TDrawLoop{
+      let BossImage = GetCurrentScriptDirectory~"./stg5enm.png"; //assumes that image is in same directory
+      let animframe = 0;
+      ObjPrim_SetTexture(objBoss, BossImage);
+      ObjRender_SetScaleXYZ(objBoss, 1, 1, 1);
+      ObjSprite2D_SetSourceRect(objBoss, 0, 0, 64, 64);
+      ObjSprite2D_SetDestCenter(objBoss);
+      while(!Obj_IsDeleted(objBoss)){
+        ObjSprite2D_SetSourceRect(objBoss, 0+64*floor(animframe/8), 0, 64+64*floor(animframe/8), 64);
+	animframe++;
+	if(animframe>=32){animframe = 0;}//reset if too high
+	yield;
+      }
+    }</code></pre>
+	      <p>Above, all I did was implement the animframe changing code, as well as the resetting the source rect based on the animframe. In the current case, animframe/8 will always be between 0 and 3, which corresponds to the four sprites in the animation as they are located on the spritesheet. Using this, we can successfully render and animate Sanae.</p>
+	      <p>Of course, to implement movement, etc. you would need movement angle and speed, and you can include if statements that will take care of that.</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: 2D Sprites</h2>
 	        <!--Quiz start.-->
-		<p>1) What code should be added to line 14 to allow the task to work properly (assume Lines 19 and 22 are filled correctly)?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 3);">
+		<p>1) We have a 32x32 image with a 24x24 sprite. Which of the following will render the sprite as a 48x48 image? There are multiple correct answers.</p>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. <code>yield;</code><br>
+	        A. <code>ObjSprite2D_SetSourceRect(obj, 0, 0, 24, 24); ObjSprite2D_SetDestRect(obj, 0, 0, 48, 48);</code><br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. Nothing should be added - the task will run.<br>
+	        B. <code>ObjSprite2D_SetSourceRect(obj, 0, 0, 24, 24); ObjRender_SetScaleXYZ(obj, 2, 2, 1);</code><br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. <code>RaiseError(":3");</code><br>
+	        C. <code>ObjSprite2D_SetSourceRect(obj, 0, 0, 24, 24); ObjSprite2D_SetDestCenter(obj);</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
-		<p>2) What code should be added to line 19 to correctly instantiate the Enemy Boss Scene Object?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 3);">
+		<p>2) Kanako is trying to render a graphic. However, it is completely off center! How can she rectify the situation? Her code is below. There are multiple correct answers.</p>
+	      <pre class="prettyprint"><code>ObjSprite2D_SetSourceRect(obj, 0, 0, 512, 512); ObjSprite2D_SetDestRect(obj, 0, 0, 512, 512);</code></pre>
+	        <form method="POST" onSubmit="return checkAnswerA2(this, 'C');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. <code>let obj=ObjBossScene_Create();</code><br>
+	        A. Use <code>ObjSprite2D_SetSourceRect(obj, -256, -256, 256, 256)</code> instead of <code>ObjSprite2D_SetSourceRect(obj, 0, 0, 512, 512)</code><br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. <code>let obj=ObjEnemyBossScene_Create(SCENE_BOSS);</code><br>
+	        B. Use <code>ObjSprite2D_SetDestRect(obj, -256, -256, 256, 256)</code> instead of <code>ObjSprite2D_SetDestRect(obj, 0, 0, 512, 512)</code><br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. <code>let obj=ObjEnemyBossScene_Create();</code><br>
+	        C. Use <code>ObjSprite2D_SetDestCenter(obj)</code> instead of <code>ObjSprite2D_SetDestRect(obj, 0, 0, 512, 512)</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-		<br>
-		<p>3) What code should be added to line 22 to correctly run the Boss Scene?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 4);">
-	        <input type="RADIO" value="A" name="cc">
-	        A. <code>ObjEnemyBossScene_Register(obj);</code><br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. <code>ObjEnemyBossScene_Regist(obj);</code><br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. <code>ObjEnemyBossScene_Run(obj);</code><br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
+	      <h2 style="color:yellow" id="sub6">Part 6: What Are Render Priorities?</h2>
+	      <p>To close this lesson, we will have a brief discussion about render priorities, which are how Danmakufu (and programs in general) render images on top of each other.</p>
+	      <p>In Danmakufu, there are render priorities from 0 to 100, and something rendered with a render priority of 40 will render above 39, for example. When rendering multiple images with the same render priority, whichever is created later will render above the one created earlier.</p>
+	      <p>By default, render priorities of 20 and below, as well as 80 and above, use the top left of the window as their origin (0,0), while those in between use the top left of the playing field as their origin. Everything rendered in a standard plural or stage should be in the 20-80 range, while things rendered in packages should be rendered in the other ranges.</p>
+	      <p>By default, the player is rendered at 30, 2D sprites for enemy objects are rendered at 40, 2D sprites for bullets are rendered at 50, 2D sprites for items are rendered at 60, and 69 is the limit for some camera focus priorities (don't worry about this last one until you work on backgrounds).</p>
+	      <p>Pretty much all of these defaults can be changed using various functions, so don't worry if you want to change them, though they should be adequate for all practical purposes.</p>
+	      <p>Anyways, there are two ways to set the render priority of a graphic: <code>Obj_SetRenderPriority</code> and <code>Obj_SetRenderPriority1</code>. The first uses a 0.0 to 1.0 scale, and the latter uses the 0 to 100 scale I've been discussion. Decimal values do not work for the latter and will truncate - IE, you only have so many render priority slots.</p>
+	      <p>For now, keep render priorities in mind, as they will prove important later on. That concludes the lesson.</p>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
@@ -131,7 +158,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: May 31, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: June 21, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
@@ -139,7 +166,7 @@
         </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
-    <script language="JavaScript" type="text/javascript" src="javascript/U1L10Quiz1.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U2L13Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>
     <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>  </body></html>
