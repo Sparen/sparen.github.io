@@ -56,9 +56,9 @@
 	      <p>Note that when using <code>ObjRender_SetAlpha</code>, ADD_RGB ignores it and will always display the image the same way, while with ADD_ARGB, the alpha of the image in Danmakufu will change the level of shininess of the image.</p>
 	      <div class="tut_exercise">EXERCISE: Render some images with Additive Blending. What kind of images work best? Does ADD_ARGB work better? Worse?</div>
 	      <h2 style="color:yellow" id="sub5">Part 5: What is Subtractive Blending and How is it Used?</h2>
-	      <p>In contrast to Additive Blending, Subtractive blending sees little to no use in Danmakufu. It does the exact opposite, always darkening the image. If the values end up being negative, black is displayed instead.</p>
+	      <p>In contrast to Additive Blending, Subtractive blending sees limited in Danmakufu, being used mainly for graphical effect. It does the exact opposite, always darkening the image. If the values end up being negative, black is displayed instead.</p>
 	      <h2 style="color:yellow" id="sub6">Part 6: What is Multiplicative Blending and How is it Used?</h2>
-	      <p>Multiplicative blending is great for darkening images, but has limited use in Danmakufu. It multiplies the pixel value of the top layer with that of the bottom layer, darkening the image.</p>
+	      <p>Multiplicative blending is great for darkening images, but has limited use in Danmakufu - mainly for graphical effect. It multiplies the pixel value of the top layer with that of the bottom layer, darkening the image. Note that Multiply Blend in Danmakufu does not work correctly with regards to opaque/partially or wholly transparent pixels.</p>
 	      <h2 style="color:yellow" id="sub7">Part 7: What is Invert and How is it Used?</h2>
 	      <p>To close off the list of blend types in Danmakufu, we will discuss Invert, which is technically not a blend type. Black turns to white, white turns to black. Usually, this is done using a shader. But in Danmakufu, we use a specific method to control invert.</p>
 	      <p>Most of the time, we use a pure white circle or square on a transparent background. We set the blend type of this circle or square to BLEND_INV_DESTRGB. Now, anything rendered below this circle will have its color inverted. Applying two objects with invert, one on top of the other, will negate the effect.</p>
