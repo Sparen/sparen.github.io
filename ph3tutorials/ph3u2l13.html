@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 13</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 13 - Introduction to 2D Sprites. A guide to understand and using 2D Sprites in Touhou Danmakufu ph3."      name="description">
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 13</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 13 - Introduction to 2D Sprites. A guide to understanding and using 2D Sprites in Touhou Danmakufu ph3."      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Sprite, Primitive">
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -20,7 +20,7 @@
 	    <ul>
 	      <li><a href="./ph3u2l12.html" title="Sparen's Danmakufu ph3 Tutorials - Creating and Utilizing Plural Scripts">Unit 2 Lesson 12</a></li>
 	      <li>Navigation Bar</li>
-	      <li>---</li>
+	      <li><a href="./ph3u2l14.html" title="Sparen's Danmakufu ph3 Tutorials - Utilizing Blend Types in Danmakufu">Unit 2 Lesson 14</a></li>
 	    </ul>
           </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 13 - Introduction to 2D Sprites</h1>	      <p>The video for this lesson is Koishi Adventure by Darkness1, chosen due to its usage of images and the like.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
@@ -145,7 +145,7 @@
 	      <p>By default, render priorities of 20 and below, as well as 80 and above, use the top left of the window as their origin (0,0), while those in between use the top left of the playing field as their origin. Everything rendered in a standard plural or stage should be in the 20-80 range, while things rendered in packages should be rendered in the other ranges.</p>
 	      <p>By default, the player is rendered at 30, 2D sprites for enemy objects are rendered at 40, 2D sprites for bullets are rendered at 50, 2D sprites for items are rendered at 60, and 69 is the limit for some camera focus priorities (don't worry about this last one until you work on backgrounds).</p>
 	      <p>Pretty much all of these defaults can be changed using various functions, so don't worry if you want to change them, though they should be adequate for all practical purposes.</p>
-	      <p>Anyways, there are two ways to set the render priority of a graphic: <code>Obj_SetRenderPriority</code> and <code>Obj_SetRenderPriority1</code>. The first uses a 0.0 to 1.0 scale, and the latter uses the 0 to 100 scale I've been discussion. Decimal values do not work for the latter and will truncate - IE, you only have so many render priority slots.</p>
+	      <p>Anyways, there are two ways to set the render priority of a graphic: <code>Obj_SetRenderPriority</code> and <code>Obj_SetRenderPriorityI</code>. The first uses a 0.0 to 1.0 scale, and the latter uses the 0 to 100 scale I've been using. Decimal values do not work for the latter and will truncate - IE, you only have so many render priority slots.</p>
 	      <p>For now, keep render priorities in mind, as they will prove important later on. That concludes the lesson.</p>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
@@ -154,7 +154,7 @@
 	    <ul>
 	      <li><a href="./ph3u2l12.html" title="Sparen's Danmakufu ph3 Tutorials - Creating and Utilizing Plural Scripts">Unit 2 Lesson 12</a></li>
 	      <li>Navigation Bar</li>
-	      <li>---</li>
+	      <li><a href="./ph3u2l14.html" title="Sparen's Danmakufu ph3 Tutorials - Utilizing Blend Types in Danmakufu">Unit 2 Lesson 14</a></li>
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
@@ -168,5 +168,4 @@
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/U2L13Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>
-    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>  </body></html>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
