@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en-us">  <head>    <meta content="text/html; charset=utf-8" http-equiv="content-type">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 15</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 15 - Using Danmakufu's Sound Functions. A guide to understanding and using Touhou Danmakufu ph3's built-in sound capabilities."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Sprite, Primitive">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u2l14.html" title="Sparen's Danmakufu ph3 Tutorials - Utilizing Blend Types in Danmakufu">Unit 2 Lesson 14</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 15 - Using Danmakufu's Sound Functions</h1>	      <p>The video for this lesson is Trickysticks's Youmu, Half Ghost Gardener, chosen due to its exceptional quality and effective sound and music choices.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/WL-EsFi0rqw">
+	      <div style="width: 600px;" class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: How do I Use Danmakufu's Audio Functions?</a></li>
+	          <li><a href="#sub3">Part 3: Which File Types should I Use?</a></li>
+	          <li><a href="#sub4">Part 4: How do I Create Sound Objects?</a></li>
+	          <li><a href="#sub5">Part 5: How do I Use and Manipulate Sound Objects?</a></li>
+	          <li><a href="#quiz1">Quiz: Blend Types</a></li>
+	          <li><a href="#sub6">Part 6: How do I Use Audacity to Export as .ogg?</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>Sound is very important in any form of modern video game. Using sound effects and background music effectively make the experience significantly better, and they provide mood, ambience, and style. Of course, there are multiple ways to implement sound in Danmakufu, and we will go into these shortly.</p>
+	      <p>Before reading this guide, I expect that you already understand what .mp3 and .wav files are. I will cover .ogg files (OGG Vorbis) briefly, as they are the preferred option for BGM tracks in Danmakufu, but I will not cover .mp3 and .wav files. This guide will also cover exporting using Audacity.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: How do I Use Danmakufu's Audio Functions?</h2>
+	      <p>To begin the lesson, I will explain the beginner-level audio functions that come prepackaged with Danmakufu. These <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Audio_Functions">Audio Functions</a> require little to no effort to use, and are easier to understand and utilize than Sound Objects. But of course, they have their limitations.</p>
+	      <p>Now, there are a number of Audio Functions. <code>LoadSound()</code> MUST be called prior to using <code>PlayBGM()</code> or <code>PlaySE</code>, as Danmakufu must load the audio files into memory. Additionally, LoadSound must be used in the same script as the Play functions. If you LoadSound in a System script, you cannot PlaySE with the same path in a Single script and expect the sound to play. You must load the files in the same script where you play them.</p>
+	      <p>Of course, looking at the function list, there is also a <code>RemoveSound()</code>. If you do use <code>LoadSound()</code>, please use <code>RemoveSound()</code> in @Finalize. Removing loaded sounds is one of the only  uses of @Finalize in ph3.</p>
+	      <p>There are two Play functions and one Stop function, and their usage should be clear from the documentation on the Wiki. You give a path to the loaded sound effect or bgm track, and for BGM, you also give loops points. Anyways, it's about time I elaborated on what is acceptable for a BGM track and what is acceptable for a Sound Effect.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: Which File Types should I Use?</h2>
+	      <p>Most people don't really know any better when it comes to audio files. I mean, they all hold sound, right? Well, yes. But each file type has its own strengths and weaknesses.</p>
+	      <p>First, .mp3, which is undeniably the most popular way to share music due to its relatively small size, since it doesn't keep track of the parts of the music inaudible to most humans. In essence, it's meant for keeping audio tracks small. Unfortunately, it is not so great when looping. .mp3 tracks are used as BGM tracks but never for Sound Effects.</p>
+	      <p>Next is .wav, which is uncompressed. In other words, they are gigantic. Some scripters find it convenient to use .wav files as BGM. <strong>This is not acceptable.</strong> A 50 MB .wav can easily be exported to a 10 MB .ogg, saving the user a lot in download time and disk space. However, for sound effects, .wav files are the preferred option because they are very small in file size and high-quality.</p>
+	      <p>Then of course, there is OGG Vorbis. OGG Vorbis is Open Source and completely free, and works excellently as BGM in Danmakufu due to the support for looping. If you are going to loop your BGM, <strong>please do not open the track in Audacity and copy-paste the looped section 10 times or download a super extended version from Youtube.</strong> All you are doing is providing the player of your script with music files that are probably 5-10x as big as they should be. Simply export as .ogg using Audacity. Anyways, .ogg are rarely if ever seen as Sound Effects. So don't bother.</p>
+	      <p>In conclusion, use .ogg for BGM and .wav for Sound Effects.</p>
+	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Blend Types</h2>
+	        <!--Quiz start.-->
+		<p>1) For a shiny image, which blend type would we use?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 4);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. BLEND_ADD_ARGB<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. BLEND_SHADOW <br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. BLEND_SUBTRACT <br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u2l14.html" title="Sparen's Danmakufu ph3 Tutorials - Utilizing Blend Types in Danmakufu">Unit 2 Lesson 14</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: July 25, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </div>    </div>
+    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>

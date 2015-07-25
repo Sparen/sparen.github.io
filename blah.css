@@ -249,6 +249,13 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   background-color: #993355;
 }
 
+.indexupdsum2015{
+  border:2px solid; 
+  border-radius: 5px; 
+  border-color: #ff8822; 
+  background-color: #cc3311;
+}
+
 .indexupdsp2015title{
   padding: 5px;
 }
