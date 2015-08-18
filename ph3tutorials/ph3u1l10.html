@@ -144,12 +144,12 @@
 	      <div class="tut_checkpoint">CHECKPOINT: Why do we store the position and angle of the boss outside of the loop?</div>
 	      <h2 style="color:yellow" id="sub9">Part 9: How Do I Create Snaking Lasers and Bullet Lines?</h2>
 	      <p>Now we will discuss snake lasers and snaking bullet lines.</p>
-	      <p>First thing's first - what exactly are we doing? Well, we are going to create a laser/bullet string that changes its angular velocity every set number of frames to -1 * its original value. This creates a snaking laser, which has its applications.</p>
+	      <p>First thing's first - what exactly are we doing? Well, we are going to create a laser/bullet string that changes its angular velocity every set number of frames to -1 * its original value. This creates a snaking bullet string, which has its applications.</p>
 	      <p>To do this, we will want to use ObjMove_AddPattern with a variable, which I will name wvel (for omega, angular velocity).</p>
 	      <pre class="prettyprint"><code>    task SnakePattern(obj){
 	let wvel = 1;
     }</code></pre>
-	      <p>Now, we *could* write out every line. But that would be a pain, wouldn't it? So instead of copy-pasting ObjMove_AddPattern a bunch of times (and have the possibility of the bullet stopping its snaking halfway down the screen), we can automate this procedure with a for loop.</p>
+	      <p>Now, we *could* write out every line. But that would be a pain, wouldn't it? So instead of copy-pasting ObjMove_AddPattern a bunch of times (and have the possibility of the bullet stopping its snaking halfway down the screen), we can automate this procedure with a for loop (in this case, an ascent loop).</p>
 	      <pre class="prettyprint"><code>    task SnakePattern(obj){
 	let wvel = 1;
 	ascent(i in 0..12){
@@ -158,31 +158,31 @@
 	}
     }</code></pre>
 	      <p>Above, I have set it up so that every 30 frames, the angular velocity will be set to -1 * its value at the time. This will control the snaking.</p>
-	      <p>But what if the snaking laser stops snaking halfway down the screen like I mentioned earlier? Simply change the 12 to a higher number! If you were to not use an ascent loop and decided to manually add ObjMove_AddPattern copy-pasted like 12 times with different values, you would need to copy-paste again and then test, repeat.</p>
-	      <p>The process above will work for both curvy lasers and bullet strings. However, be sure that your attack is fair, and that you aren't running the ascent loop way more than you need to - otherwise, your script may lag. If your laser only changes the direction of its angular velocity 4 times, you don't need to ascent(i in 0..30) - just do ascent(i in 0..6) or something similar.</p>
+	      <p>But what if the snaking bullet stream stops snaking halfway down the screen like I mentioned earlier? Simply change the 12 to a higher number! If you were to not use an ascent loop and decided to manually add ObjMove_AddPattern copy-pasted like 12 times with different values, you would need to copy-paste again and then test, repeat.</p>
+	      <p>The process above will work for both curvy lasers and bullet strings. However, be sure that your attack is fair, and that you aren't running the ascent loop way more than you need to - otherwise, your script may lag. If your laser only changes the direction of its angular velocity 4 times, you don't need to ascent(i in 0..30) - just do ascent(i in 0..4) or something similar.</p>
 	      <h2 style="color:yellow" id="sub10">Part 10: What are the Uses of Passing Direction Multipliers Into Tasks?</h2>
 	      <p>I will close this lesson with another automation technique - passing directions into tasks.</p>
 	      <p>Let's say we have our SnakePattern task from Part 9. Now, it always starts with wvel = 1 every time it is run. But what if we want it to start curving in the opposite direction at the start instead? We could always copy the task, and do some slight changes. However, it is far more effective to pass a direction multiplier into the task.</p>
-	      <p>Let's say that this is the code that calls SnakePattern.</p>
+	      <p>Let's say that this is the code that calls SnakePattern. Please note that this example uses curvy lasers and not bullet strings.</p>
 	      <pre class="prettyprint"><code>    task CreateLaserRing{
 	ascent(i in 0..12){
 	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
 		GetAngleToPlayer(objBoss)+i*360/12, 60, 18, 1018, 10);
-	    SnakeLaser(obj);
+	    SnakePattern(obj);
 	}
     }</code></pre>
-	      <p>Now, let's say that after 60 frames, we want to create another ring starting with a different graphic and a different angular velocity. Instead of making a SnakeLaser2 with wvel set to -1 at the start, we can simply do this:</p>
+	      <p>Now, let's say that after 60 frames, we want to create another laser ring starting with a different graphic and a different angular velocity. Instead of making a SnakePattern2 with wvel set to -1 at the start, we can do this:</p>
 	      <pre class="prettyprint"><code>    task CreateLaserRing{
 	ascent(i in 0..12){
 	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
 		GetAngleToPlayer(objBoss)+i*360/12, 60, 18, 1018, 10);
-	    SnakeLaser(obj, 1);
+	    SnakePattern(obj, 1);
 	}
 	wait(60);
 	ascent(i in 0..12){
 	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
 		GetAngleToPlayer(objBoss)+i*360/12, 60, 18, 1022, 10);
-	    SnakeLaser(obj, -1);
+	    SnakePattern(obj, -1);
 	}
     }
 
@@ -193,7 +193,7 @@
 	    wvel*=-1;
 	}
     }</code></pre>
-	      <p>So what did we do? We set up SnakePattern so that it takes a direction parameter (which can also be used as a multiplier, should we want an angular velocity of -2.3 or something). Now, instead of duplicating the task with a different number, we have allowed our code to run more effectively, and by calling SnakeLaser with -1 and 1 in the task CreateLaserRing, we achieve our desired effect.</p>
+	      <p>So what did we do? We set up SnakePattern so that it takes a direction parameter (which can also be used as a multiplier, should we want an angular velocity of -2.3 or something). Now, instead of duplicating the task with a different number, we have allowed our code to run more effectively, and by calling SnakePattern with -1 and 1 in the task CreateLaserRing, we achieve our desired effect.</p>
 	      <h2 style="color:yellow" id="quiz2">Quiz: Snaking Paths and Direction Multipliers</h2>
 	        <!--Quiz start.-->
 	      <pre class="prettyprint"><code>
@@ -238,7 +238,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: April 8, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Aug 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
