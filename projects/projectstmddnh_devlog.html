@@ -28,10 +28,21 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li>August 2015: <a href="#subaug212015">21</a></li>
+	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="subaug222015">August 22, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Simply put, Randomly Generated Dungeons.</p>
+	      <p class="indexdevlogtitleA">YES! We have randomly generated dungeons now, after about 6 hours of intense coding and bugfixing. I had to make a new object (ObjRoom), which took a long time to fix up. I was, by the way, using <a target="_blank" href="http://gamedevelopment.tutsplus.com/tutorials/create-a-procedurally-generated-dungeon-cave-system--gamedev-10099">this link</a> to learn what to do for starters - after the test dungeon, I will try to implement BSP, as that seems to be how the actual creators of PMD made some of their dungeons.</p>
+	      <p class="indexdevlogtitleA">But wow. The fact that the map is a 2D array that is like, rows, then columns (when you view the actual map) was sort of painful. The player movement went flawlessly though, so I was able to test things. But in the end, everything went well until I found my first 2 hour long problem. Basically, my map was no longer a 2D array of tiles, so it wasn't a real object anymore. And so... passing it to a function and editing it in that function meant that the original didn't change. It took me a long time to realize this, but the solution was just saving the map as CommonData. Thank goodness for CommonData.</p>
+	      <p class="indexdevlogtitleA">After the four or so hours it took me to get rooms working, came corridors. And here was where I basically died. 2D arrays, incorrect indexing, Array Index Out of Bounds, error, crash, weird mishaps in code, reflected...</p>
+	      <p class="indexdevlogtitleA">...Basically, it was hell. Anyways, hell passed, and I was able to revel in the fact that I had corridors. HOORAY! There were (and still are) a few minor glitches, but you can actually make it to the stairs. As for moving to the next floor...</p>
+	      <p class="indexdevlogtitleA">Today I would like to thank Infinite Ultima Wave the Great, for his powerful and intelligent discovery of the fact that Danmakufu will not consider a single script in a plural having ended (it can be closed but not ended) unless the Boss's HP is less than 0. And yes, this is a thing. Deleting the boss does not work. You must actually delete the boss with no or negative HP in order for it to work. Of course, this was a time of great suffering. But I persevered (Ultima got pissed too, for good reason), and today I present a DevLog Video!</p>
+	      <center><embed width="420" height="315" class="indexdevlogtitleA"
+		src="https://www.youtube.com/v/7DH4jwso93k"></center>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subaug212015">August 21, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today I revived the project and WHOOHOO SO MUCH PROGRESS!!!!!</p>
