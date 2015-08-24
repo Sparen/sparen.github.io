@@ -28,10 +28,16 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a></li>
+	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a> <a href="#subaug232015">23</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="subaug232015">August 23, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">After yesterday's major success, it was time to fix the lagging threads and work on items. I ended up doing a terrible job of spriting, so we'll be using the official item sprites until we have suitable replacements. Anyways...</p>
+	      <p class="indexdevlogtitleA">I ended up fixing a typo in the Random Dungeon Generator which basically fixed all the remaining problems with the existing framework (except for room edge issues, which may or may not exist because I have not yet tested them). But regardless, I did a lot of work with items. Specifically, I made ObjItem, prepared the framework for three types of items (single use, money, and stackables). Hopefully this will last. Anyways, I prepared a lot of render and position framework and also generated the code used to randomly generate and place them in the floor. Unfortunately, all I could really do was money, which I also ended up displaying on the HUD. We'll need a menu with accessible pages of inventory (and probably basic text) in order to have items really work.</p>
+	      <p class="indexdevlogtitleA">All of this being said, we will be replacing orbs with single-use spellcards, and the first to be implemented will most likely be the equivalent of the One-Room Orb (super easy), and maybe Drought Orb and Mobile Orb (will require the Status Effect Object to get somewhere). And those are our short-term plans. AKA might do tomorrow.</p>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subaug222015">August 22, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Simply put, Randomly Generated Dungeons.</p>
