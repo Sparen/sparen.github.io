@@ -28,10 +28,18 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a> <a href="#subaug232015">23</a></li>
+	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a> <a href="#subaug232015">23</a> <a href="#subaug242015">24</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="subaug242015">August 24, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">WHOOHOO! Today there was progress!</p>
+	      <p class="indexdevlogtitleA">Basically, I took Frentic's old text code (from the image from the games, not the font), and adapted it to work for my current system. I also wrote code for dynamically shaped text boxes and the like, which was surprisingly easy to do. But of course, I ran into problems.</p>
+	      <p class="indexdevlogtitleA">Actually getting the main menu to work was a problem because the built-in pause system pauses the stage entirely, preventing anything from happening. Additionally, I had no idea what to do with the render target. So in the end, I implemented the main menu completely independently of the pause menu.</p>
+	      <p class="indexdevlogtitleA">However, actually getting items to work... not so easy. Once the main menu was done, I took care of getting the items to render and enter the inventory, where they could be displayed. There's no way to use them yet, however, and they delete when you move to the next floor due to the AutoDelete settings. There is no easy way to fix this, so I will most likely end up turning the AutoDelete... off. It might be a little problematic, but in the end, there's not much I can do. Saving inventory will probably be a hassle as well, though that comes later.</p>
+	      <p class="indexdevlogtitleA">Anyways, got a lot done today. Menus and inventory are on their way to completion, and I will hopefully have a usable, droppable, throwable, and swappable item ready tomorrow!</p>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subaug232015">August 23, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">After yesterday's major success, it was time to fix the lagging threads and work on items. I ended up doing a terrible job of spriting, so we'll be using the official item sprites until we have suitable replacements. Anyways...</p>
