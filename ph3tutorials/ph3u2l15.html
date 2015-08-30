@@ -34,8 +34,7 @@
 	          <li><a href="#sub3">Part 3: Which File Types should I Use?</a></li>
 	          <li><a href="#sub4">Part 4: How do I Create Sound Objects?</a></li>
 	          <li><a href="#sub5">Part 5: How do I Use and Manipulate Sound Objects?</a></li>
-	          <li><a href="#quiz1">Quiz: Blend Types</a></li>
-	          <li><a href="#sub6">Part 6: How do I Use Audacity to Export as .ogg?</a></li>
+	          <li><a href="#quiz1">Quiz: Sounds in Danmakufu</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
@@ -52,17 +51,53 @@
 	      <p>Next is .wav, which is uncompressed. In other words, they are gigantic. Some scripters find it convenient to use .wav files as BGM. <strong>This is not acceptable.</strong> A 50 MB .wav can easily be exported to a 10 MB .ogg, saving the user a lot in download time and disk space. However, for sound effects, .wav files are the preferred option because they are very small in file size and high-quality.</p>
 	      <p>Then of course, there is OGG Vorbis. OGG Vorbis is Open Source and completely free, and works excellently as BGM in Danmakufu due to the support for looping. If you are going to loop your BGM, <strong>please do not open the track in Audacity and copy-paste the looped section 10 times or download a super extended version from Youtube.</strong> All you are doing is providing the player of your script with music files that are probably 5-10x as big as they should be. Simply export as .ogg using Audacity. Anyways, .ogg are rarely if ever seen as Sound Effects. So don't bother.</p>
 	      <p>In conclusion, use .ogg for BGM and .wav for Sound Effects.</p>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Blend Types</h2>
+	      <h2 style="color:yellow" id="sub4">Part 4: How do I Create Sound Objects?</h2>
+	      <p>Now, I've already discussed the uses of Danmakufu's defaults. But what if you want to loop your tracks at a certain point? What if you want to control the volume? Now we're getting into Sound Object territory.</p>
+	      <p>First, let's begin with creating Sound Objects. The <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Sound_Object_Functions">Sound Object Functions</a> are pretty confusing for those who are unfamiliar with dealing with music, so we'll go through them.</p>
+	      <p>To create a Sound Object, we use <code>ObjSound_Create()</code>, which returns the ID of your sound object. A single sound object can be played multiple times.</p>
+	      <p>Once you have created a sound object, you must give it a file path to the sound you want it to play, whether it is a bgm or a sound effect. You use <code>ObjSound_Load(obj, filepath)</code> to load a given sound file to the object. You can override this by loading a different sound at any time. After this, it is recommended to use <code>ObjSound_SetSoundDivision()</code> to state whether your sound object refers to a BGM or a sound effect. This function is completely optional.</p>
+	      <p>Now of course, the goodies that I mentioned earlier, such as volume and looping. Let's take a look.</p>
+	      <h2 style="color:yellow" id="sub5">Part 5: How do I Use and Manipulate Sound Objects?</h2>
+	      <p>First we will discuss how to play sound objects. You use <code>ObjSound_Play()</code>, <code>ObjSound_Stop()</code>, and <code>ObjSound_IsPlaying()</code> to control sound objects. <code>ObjSound_SetFade</code></p>
+	      <p>If you want to play a sound object with a given volume, then use <code>ObjSound_SetVolumeRate()</code>. The volume goes from 0 to 100 linearly. It used to be exponential but this was changed. It is highly recommended that all your sound effects be around the same volume, as you will most likely want to use the same function for creating all of them. As for Pan Rate, controlled by <code>ObjSound_SetPanRate()</code>, you can control which earbud/side you want the sound to go to, with -100 being all to the left side and 100 to all on the right side. This is used in cases such as the warp sound effects in Subterranean Animism, where all of the sound effect goes to one ear and not the other. For most cases, you will never use this function.</p>
+	      <p>Now it is time to talk about looping. Sound objects by default do not loop. You must use <code>ObjSound_SetLoopEnable()</code> to allow a track to loop. After this, there are two main methods for how to loop - by time, and by sample.</p>
+	      <p>To loop by time, use <code>ObjSound_SetLoopTime()</code>. For example, let's say that I have a music track where the loop starts at 5.43 seconds and the loop ends at 85.43 seconds. I will use the following to loop it:</p>
+	      <pre class="prettyprint"><code>    task Track{
+	let obj = ObjSound_Create();
+	ObjSound_Load(obj, GetCurrentScriptDirectory~"./bgm/clownpiece.ogg");
+	ObjSound_SetSoundDivision(obj, SOUND_BGM);
+	ObjSound_SetLoopEnable(obj, true);
+	ObjSound_SetLoopTime(obj, 5.43, 85.43);
+    }</code></pre>
+	      <p>When it plays, it will play from the beginning, and once it hits the 85.43 second mark, it will go to the 5.43 second mark and continue playing from there. Any parts of the BGM after 85.43 seconds will not be played unless the loop time is changed. If the end loop time is greater than the length of the song, the song will return to the 5.43 second mark as soon as the entire track finishes - there will not be a period with no sound.</p>
+	      <p>Samples are another way to loop tracks. For getting the sample counts, you must ask the composer or you must manually find them yourself using a tool such as Audacity. Loops work in a similar way, except that you use <code>ObjSound_SetLoopSampleCount()</code> instead.</p>
+	      <p>To end this lesson, I will discuss restarting tracks using <code>ObjSound_SetRestartEnable()</code>. Easily the most frustrating function in the entire sound object section, it will, if set to true, restart the song from the very start if the sound object is stopped and restarted later. Otherwise the song will continue from where it left off when <code>ObjSound_Play()</code> is called. Combined with looping and stopping and playing and restarting, this function can be a royal pain to figure out, but it's quite useful if you need it. It is, however, an optional function. Don't use it unless you need it.</p>
+	      <p>For future reference, I will be providing a sound effect library for public use here: <a target="_blank" href="https://github.com/TheLandOfCodesAndApertures/Sparen_Sound_Library">Sparen's Sound Library</a>. I suggest that you look at the tasks used to create the sound objects, and perhaps use them as a reference when creating your own.</p>
+	      <div class="tut_exercise">EXERCISE: Implement your own sound object for bgm. Experiment with the various functions. What happens when you play two sound objects that are both set to bgm at the same time? SFX?</div>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Sounds in Danmakufu</h2>
 	        <!--Quiz start.-->
-		<p>1) For a shiny image, which blend type would we use?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 4);">
+		<p>1) Junko wants her music to be as pure as possible. To ensure this, she wants her bgm to be recognized by Danmakufu as a BGM. How should she do this?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 4);">
 	        <input type="RADIO" value="A" name="cc">
-	        A. BLEND_ADD_ARGB<br>
+	        A. ObjSound_SetSoundDivision(SOUND_BGM);<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. BLEND_SHADOW <br>
+	        B. ObjSound_SetSoundDivision(SOUND_SE);<br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. BLEND_SUBTRACT <br>
+	        C. ObjSound_SetSoundDivision(obj, SOUND_BGM);<br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. ObjSound_SetSoundDivision(obj, SOUND_MUSIC);<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) Ringo is busy eating dango when she realizes that the music playing in Danmakufu suddenly stopped playing before suddenly starting from a point in the middle of the song. What could have happened? Her code is below:</p>
+	      <pre class="prettyprint"><code>    ObjSound_SetLoopTime(obj, 27, 85);//not the actual loop points of Pumpkin of September, sorry</code></pre>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 5);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. Her start point in the loop (27) is incorrect and should be lower<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Her end point in the loop (85) is incorrect and should be higher<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. The bgm is shorter than one minute and 25 seconds<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
@@ -76,7 +111,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: July 25, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: August 30, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
