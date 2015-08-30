@@ -28,10 +28,18 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a> <a href="#subaug232015">23</a> <a href="#subaug242015">24</a> <a href="#subaug252015">25</a> <a href="#subaug262015">26</a> <a href="#subaug272015">27</a></li>
+	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a> <a href="#subaug232015">23</a> <a href="#subaug242015">24</a> <a href="#subaug252015">25</a> <a href="#subaug262015">26</a> <a href="#subaug272015">27</a> <a href="#subaug292015">29</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="subaug292015">August 29, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">As usual, I started the day with no inspiration and ended up doing a lof of work. In LOCAA, I ended up in a discussion about whether a hunger system would be present. I said no, but carefully considered the benefits of such a system - it forces the player to leave the dungeon floor and, as with the wind and lack of Power Points, gives an incentive to only explore so much, and adds a risk/benefit layer to the game. So I implemented a Fatigue system working the same way. Currently, 20 steps gives you one fatigue, so 2000 steps will empty your meter. I have not yet implemented health loss and have not yet capped the fatigue meter, but those things will be done soon. Probably.</p>
+	      <p class="indexdevlogtitleA">I also went back to the inventory menu and decided to fix it up. Instead of 15 items per page, there are now 10, which gives space for the "Inventory" label (not yet implemented) as well as a 2 line box for description text. I set it up, and after some tweaking, it worked pretty well! I had to fix some more inventory bugs, of course, and I also prepared some functions to hold item descriptions.</p>
+	      <p class="indexdevlogtitleA">I rewrote the item determination code from a wall of if/else statements to a random indexed array system as well, which saves a lot of space and in general makes things easier. But by doing this, I felt the urge to make more items. And so I did. I implemented description text for all the herbs I had already planned, and began rolling out new items, although implementation will come much later. First came the herbs and orbs, and then a few new spells which are analogues of the Mobile and Escape orbs, respectively. And of course, I wanted to show off everything I had done, so... DEVLOG VIDEO!</p>
+	      <center><embed width="420" height="315" class="indexdevlogtitleA"
+		src="https://www.youtube.com/v/NWouE2TMVhY"></center>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subaug272015">August 27, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Today was devoted mainly to the message box and getting things to work correctly. When I began, the main problem was that I couldn't move Sprite Lists without redrawing them. To keep my existing system, I had to make a task that would redraw them. And then the positioning had to be fixed, and then I had to prevent the "PICKED UP XYZ YEN" text from moving out of the box and into the playing field.</p>
