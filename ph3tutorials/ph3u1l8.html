@@ -99,7 +99,18 @@ task BulletCommands(obj){
     Obj_Delete(obj);
 }</code></pre>
 	      <p>The above code waits for the bullet to have a speed of 0 (assume that it was accelerating in the negative direction beforehand), then waits 30 frames before spawning a ring of bullets at the bullet's location and deleting the bullet, giving the appearance of the bullet having exploded into other bullets.</p>
-	      <p>Yes, this is very powerful. But with ObjMove_AddPattern, you can do so much more!</p>
+	      <p>To provide another example, let's say we want to spawn a ring of bullets that aims at the player after 30 frames. First, we create the bullets:</p>
+	      <pre class="prettyprint"><code>let angle = rand(0,360);
+loop(15){
+    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angle, 1, 0);
+    BulletCommands(obj);
+}</code></pre>
+	      <p>Inside our BulletCommands task, we will first want to wait 30 frames. After that, the bullet will change direction.</p>
+	      <pre class="prettyprint"><code>task BulletCommands(obj){
+    wait(30);
+    ObjMove_SetAngle(obj, GetAngleToPlayer(obj));
+}</code></pre>
+	      <p>And that's that. Note that although getting bullets to change properties or do something after a certain number of frames is difficult without a task to handle it, it is possible without a separate task if you use ObjMove_AddPattern. Of course, ObjMove_AddPattern allows for you to do so much more as long as you know exactly when the bullet's properties should change.</p>
 	      <p>There are 7 ObjMove_AddPattern functions - 4 for angle/speed bullets and 3 for xspeed/yspeed bullets. Remember that you cannot use angle/speed functions on xspeed/yspeed bullets, and vice versa. Remember when I had that <code>wait(30);</code> in the code above? Well, the 'frame' argument does the same thing, except that the function presets the behavior of the bullet. When the allotted frames have passed, the bullet's properties will change to match those assigned in ObjMove_AddPattern when the function was called. In other words, if you set angle to be <code>GetAngleToPlayer(objBoss)</code> in ObjMove_AddPattern, the angle when the frames have passed will be that angle, not the current angle to the player. Alternatively, you could use the BulletCommands method, where you have the actual angle to the player. However, firing at where the player used to be also has its uses, so keep that in mind - ObjMove_AddPattern is a powerful and useful tool. If you do not want to change one of the options, use NO_CHANGE for the value - this is a final constant that will tell Danmakufu to not change anything.</p>
 	      <p>However, do be aware that ObjMove_AddPattern has the tendency to do weird and unexpected things that you don't expect, especially in regards to the acceleration and max/min speeds. Additionally, be warned that if there is no acceleration and there is angular velocity, the bullet will form a circle and return to its spawning location. This can cheapshot players, break patterns, or be an amazing tool for beautiful patterns that require unique methods of dodging.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How do you execute functions on an object using its Object ID?</div>
@@ -192,7 +203,7 @@ task BulletCommands(obj){
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: June 21, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Aug 30, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
