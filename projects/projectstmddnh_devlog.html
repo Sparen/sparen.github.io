@@ -28,10 +28,17 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
+	          <li>September 2015: <a href="#subaug12015">1</a></li>
 	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a> <a href="#subaug232015">23</a> <a href="#subaug242015">24</a> <a href="#subaug252015">25</a> <a href="#subaug262015">26</a> <a href="#subaug272015">27</a> <a href="#subaug292015">29</a> <a href="#subaug312015">31</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="subsept12015">September 1, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Today I actually implemented item usage. HOORAY!</p>
+	      <p class="indexdevlogtitleA">To be exact, I implemented the Demolition Orb and realized that there are severe limits on 2D Sprite Lists for drawing the tiles because redrawing changes the graphics occasionally. IE there are two types of blank floor graphics, and a random one is chosen at draw time. So redrawing may change the graphic. To counteract this, I may have to create separate sprite lists simply to draw fixed tiles over the existing sprite list in order to not alter the other unchanged tiles.</p>
+	      <p class="indexdevlogtitleA">I also implemented the Rejuvenation Sphere. Hooray. That's all I can do for now except for maybe the Bail Spell, since Status Effects and the basic battle and level/stat systems have not yet been implemented.</p>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subaug312015">August 31, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Another day of not implementing item usage.</p>
