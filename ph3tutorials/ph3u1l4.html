@@ -196,13 +196,13 @@ x = '3'; //This code will bring up an error</code></pre>
 		<p>So, why can't you set the variable x's value from 6 to '3'? Well, that's because when you first assign a value to x, it is holding an integer. Later on, you are trying to set its value to a character. This is not allowed, since x has been set to only accept numbers. '3' is not a number in Danmakufu - it is a character. In other languages, characters may have integer equivalents and addition may be possible, but I suggest that you simply don't try to do this as it may have unwanted results.</p>
 		<p>But what if you want to define <code>x = '33';</code>? Well... that's not going to work, and we'll see that in the next part.</p>
 	      <h2 style="color:yellow" id="sub8">Part 8: What are Strings?</h2>
-		<p>Strings have much more use than characters. Strings can be used to hold phrases, filepaths, and more, and are denoted using double quotes. Please note that if you use smart quotes, Danmakufu will get angry and not work. Below are examples of strings.</p>
+		<p>Strings have much more use than characters. Strings can be used to hold phrases, filepaths, and more, and are denoted using double quotes. Please note that if you use smart quotes, Danmakufu will not work. Below are examples of strings.</p>
 	        <pre class="prettyprint"><code>let randomstring = "This is a random string.";
 let spellname = "Fire and Water Sign \"Geysers of the Deep\"";
 let imgRumia = GetCurrentScriptDirectory()~"img/imgrumia.png";
 let desc = "This is a spellcard made by an unknown scripter.[r]Please play at your own risk.";</code></pre>
 		<p>Obviously, strings hold much more information than a character and are far more useful. You can include numbers in strings, such as "3 + 6 = Cirno" as well as other things. In the four examples above, we have three special scenarios that deserve extra attention - spellname's escape character, imgRumia's string concatenation, and desc's [r].</p>
-		<p>Firstly, the escape character \. In most languages, \ is used as the escape character, and if followed by certain symbols, will perform a specific function. For example, in most languages, \n denotes a new line (not in ph3 - we will discuss this later), \t denotes a tab, and, more specific to this scenario, \" denotes a ". Since strings begin and end with double quotes, having double quotes inside a string requires some workarounds, and that workaround is provided by \", which will not be read as closing the string but rather as a symbol that, when the string is printed, will use a double quote instead of \". This is the simplest way to include a double quote within a string. Very helpful for spell names, depending on your format for spellcard names.</p>
+		<p>Firstly, the escape character \. In most programming/scripting languages, \ is used as the escape character, and if followed by certain symbols, will perform a specific function. For example, in most languages, \n denotes a new line (not in ph3 - we will discuss this later), \t denotes a tab, and, more specific to this scenario, \" denotes a ". Since strings begin and end with double quotes, having double quotes inside a string requires some workarounds, and that workaround is provided by \", which will not be read as closing the string but rather as a symbol that, when the string is printed, will use a double quote instead of \". This is the simplest way to include a double quote within a string. Very helpful for spell names, depending on your format for spellcard names.</p>
 		<p>Next is string concatenation. For the purposes of this tutorial, be advised that GetCurrentScriptDirectory returns a string.</p>
 	        <pre><code>let imgRumia = GetCurrentScriptDirectory()~"img/imgrumia.png";</code></pre>
 		<p>Here we have a string ~ string. So what does this do? This is known as string concatenation, and merges the two strings. For example:</p>
@@ -213,10 +213,10 @@ let desc = "This is a spellcard made by an unknown scripter.[r]Please play at yo
 two</code></pre>
 		<p>Very helpful in #Text, with dialogue, and numerous other things.</p>
 	      <h2 style="color:yellow" id="sub9">Part 9: What are Arrays?</h2>
-		<p>The final thing we will discuss in this lesson are arrays, which are essentially containers that hold other things of the same type. For example, you can consider a string to be an array of characters. In Danmakufu, you declare arrays as the following:</p>
+		<p>The final thing we will discuss in this lesson are arrays, which are essentially containers that hold multiple things of the same type. For example, a string is an array of characters. In Danmakufu, you declare arrays as the following:</p>
 	        <pre class="prettyprint"><code>let array = []; //Declare an empty array
-let array2 = [3, 4, 6, 8]; //Declare an array of numbers of length 4
-let array3 = GetAllEnemyID(); //Declare an array containing the IDs of every enemy currently existing</code></pre>
+let array2 = [3, 4, 6, 8]; //Declare an array of numbers of length 4 containing 3, 4, 6, and 8
+let array3 = GetAllEnemyID(); //Declare an array containing the IDs of every enemy object currently existing</code></pre>
 		<p>Note that once you declare an array, the variable name you use cannot be used for anything other than an array. You cannot do the following:</p>
 	        <pre class="prettyprint"><code>let array = []; //Declare an empty array
 array = "CIRNO STRIKES BACK";</code></pre>
@@ -225,12 +225,12 @@ array = "CIRNO STRIKES BACK";</code></pre>
 		<p>First we will discuss adding things to arrays. Using the concatenation ~, you can do the following:</p>
 	        <pre class="prettyprint"><code>let array = [3, 6]; //Declare an empty array
 array = array ~ [4]; //array is now [3, 6, 4]</code></pre>
-		<p>Please note that you must include the item you are going to add as an array - in essence, you are combining to arrays. Also, you can use <code>concatenate(array1, array2)</code> in order to concatenate two arrays, although the method with the ~ is much simpler. Here is another example, this time showing how to include the value of a variable in an array:</p>
+		<p>Please note that you must include the item you are going to add as an array - in essence, you are combining two arrays. Also, you can use <code>concatenate(array1, array2)</code> in order to concatenate two arrays, although the method with the ~ is much simpler. Here is another example, this time showing how to include the value of a variable in an array:</p>
 	        <pre class="prettyprint"><code>let array = []; //Declare an empty array
 let string = "Test";
 array = array ~ [string]; //array is now [string], where the value of string is "Test"</code></pre>
 		<p>Next we will discuss indexing. You can obtain the length of an array using length(nameofarray);. First thing's first though - the first item in an array is indexed 0, not 1. You index an array as follows:</p>
-	        <pre class="prettyprint"><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of Danmakufu Scripters
+	        <pre class="prettyprint"><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of length 4 containing the names of Danmakufu Scripters
 let lengthdnh = length(dnh); //4
 let scripter = dnh[2]; //Find the item with index 2 - "Trickysticks"
 let scripter2 = dnh[2..4]; //Obtain an array with the 2 through 3rd indices of dnh - ["Trickysticks", "AJS"]
@@ -313,7 +313,7 @@ array = erase(array, 5); //Erase fifth index of array 'array'</code></pre>
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Mar 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Sept 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
