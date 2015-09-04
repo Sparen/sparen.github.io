@@ -28,11 +28,20 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li>September 2015: <a href="#subaug12015">1</a> <a href="#subaug22015">2</a></li>
+	          <li>September 2015: <a href="#subaug12015">1</a> <a href="#subaug22015">2</a> <a href="#subaug32015">3</a></li>
 	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a> <a href="#subaug232015">23</a> <a href="#subaug242015">24</a> <a href="#subaug252015">25</a> <a href="#subaug262015">26</a> <a href="#subaug272015">27</a> <a href="#subaug292015">29</a> <a href="#subaug312015">31</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="subsept32015">September 3, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Today there was more progress! I prepared some new Notify Events because I decided that I could just add new vertices to the tileset spritelist to patch over tiles that changed via Demolition Spell or whatever else may happen in the future. It took a while to work out, but afterwards, I ended up with a perfectly working (hopefully) Demolition Spell that maintains the existing room floor patterns. 2D arrays are not fun.</p>
+	      <p class="indexdevlogtitleA">I made a basic framework for status effects after considering my options - it's going to be part of each Touhoumon, whether they have status problems or not. This way it is easy to manage, we don't need extra objects, and the values are easy to access and change. All changes will be done externally, of course. I am also considering renaming ObjTouhoumon to ObjCharacter but I doubt that will happen anytime soon.</p>
+	      <p class="indexdevlogtitleA">After this, I worked on the item database - an HTML file that will hold information on the items. Will be helpful in the future. And that was when I decided to dump the Rejuvenation Orb. Its purpose was to test the fatigue system and to be an easy-to-implement item. Well, Achy made tea graphics, and those are replacing Apples and Vitamins (most likely). I basically ended up implementing four new items in a matter of like 10 minutes. Hooray!</p>
+	      <p class="indexdevlogtitleA">To close, I have a new devlog video. Enjoy!</p>
+	      <center><embed width="420" height="315" class="indexdevlogtitleA"
+		src="https://www.youtube.com/v/LNxuEcR_31M"></center>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subsept22015">September 2, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">Progress happened today! Lifebar graphic was made, the provisional leveling system was added, and then I made level and HP displays since the information was actually available. Next was implementing the Healing Herb, which was easy to test because the default starting HP is still 1 out of 30. It was nice to see the HP system actually working on a really generic scale!</p>
