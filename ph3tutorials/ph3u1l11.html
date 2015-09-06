@@ -36,17 +36,18 @@
 	          <li><a href="#quiz1">Quiz: Circles and Ellipses in Danmakufu ph3</a></li>
 	          <li><a href="#sub5">Part 5: What are Parametric Equations?</a></li>
 	          <li><a href="#sub6">Part 6: How Can I Use Parametric Equations in Danmakufu?</a></li>
+	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will be explaining Danmakufu's coordinate system in greater detail, and will explain how you can use trigonometry and parametric equations (based off of the angle theta, primarily) to create bullets at points relative to an object such as a boss or relative to coordinates. This lesson will supplement existing tutorials, such as my <a target="_blank" href="https://www.youtube.com/watch?v=6c54DO4gjos">Spawning Danmaku in Circles and Ellipses</a> tutorial.</p>
 	      <p>The main focus of this lesson will be on utilizing trigonometry in Danmakufu and using it to create simple shapes such as circles and ellipses. There is a secondary focus on the general coordinate system, and I will also be covering basic Rotation Matrices (in the future) and Parametric Equations. As much as I would love to cover Polar Equations, it's not meant for this tutorial and if you would like to implement those, you can find information on Polar Equations in Danmakufu in my old tutorials for 0.12m.</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: How Does Touhou Danmakufu ph3's Coordinate System Work?</h2>
-	      <p>As stated back in <a href="./ph3u1l6.html">Lesson 6</a>, Danmakufu's coordinate system is not the same as taught in most schools. Since the origin (for render priorities between 0.20 and 0.80) is in the top left corner, the x direction increases as you move to the right but the y direction increases as you move downwards. Using the same system, angles increase from 0 to 360 starting directly right and increasing in a clockwise direction so that 90 degrees is directly down, 180 degrees is directly left, and 270 degrees is straight up.</p>
+	      <p>As stated back in <a href="./ph3u1l6.html">Lesson 6</a>, Danmakufu's coordinate system is not the same as taught in most mathematics courses. Since the origin (for render priorities between 0.20 and 0.80) is in the top left corner, the x direction increases as you move to the right but the y direction increases as you move downwards. Using the same system, angles increase from 0 to 360 starting directly right and increasing in a clockwise direction so that 90 degrees is directly down, 180 degrees is directly left, and 270 degrees is straight up.</p>
 	      <p>For this lesson, we will need to take all three factors into consideration when we deal with angles and coordinate systems.</p>
 	      <p>As shown in previous lessons, we can create a bullet 10 pixels to the left of the boss and 5 pixels above the boss by setting the x parameter of CreateShot to <code>ObjMove_GetX(objBoss)-10</code> and by setting the y parameter to <code>ObjMove_GetY(objBoss)-5</code>. We will use this in the next part.</p>
 	      <h2 style="color:yellow" id="sub3">Part 3: How Can I Use Trigonometry to Create a Ring of Bullets?</h2>
-	      <p>Now we will aim to write a script that will spawn bullets in a circle of radius 90 around the boss, and another circle of radius 60 around the player. We saw this earlier in Lesson 9, when I described a method of creating Non-Directional Lasers.</p>
+	      <p>Now we will aim to write a script that will spawn bullets in a circle of radius 90 around the boss, and another circle of radius 60 around the player. We saw this earlier in <a href="./ph3u1l9.html">Lesson 9</a>, when I described a method of creating Non-Directional Lasers.</p>
 	      <p>To begin, we will need to understand the Unit Circle, as well as sine and cosine.</p>
 	      <img alt="Unit Circle" src="tutimg/unitcircle.png" height="359" width="291"><br><br>
 	      <p>Above is an image of the unit circle - a circle of radius (L in diagram) 1. All of the angles are the angles used in Danmakufu.</p>
@@ -95,7 +96,7 @@
 	      <h2 style="color:yellow" id="quiz1">Quiz: Circles and Ellipses in Danmakufu ph3</h2>
 	        <!--Quiz start.-->
 		<p>1) As part of her daily routine, Suwako is retaliating against Cirno using Mishaguji-sama. To do this, she must employ circles. Which of the following will spawn a circle?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 3);">
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
 	        <input type="RADIO" value="A" name="cc">
 	        A. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 1, i*10, 5, 5);}</code><br>
 	        <input type="RADIO" value="B" name="cc">
@@ -170,6 +171,13 @@
     }</code></pre>
 	      <p>And that's that. We have an astroid. Of course, with these types of curves, you don't usually want the bullets to just go outwards with the same speed, because it will just look like a square, then a circle as it gets farther from its spawn point. You could do some complex speed alteration, or you could just change the angle and do interesting things with the angle. It's up to you.</p>
 	      <p>That concludes the lesson!</p>
+	      <div class="tut_exercise">EXERCISE: Try to recreate some parametric equations in Danmakufu. Try incrementing the angle at which the bullets are fired as you go around, or experiment with different speeds.</div>
+	      <h2 style="color:yellow" id="subs">Summary</h2>
+	        <ul>
+	          <li>Angles in danmakufu increase in clockwise order, and the origin is the top left of the playing field for render priorities between 0.20 and 0.80</li>
+	          <li>Using sine and cosine, it is possible to create circles and ellipses using danmakufu</li>
+	          <li>You can use Parametric Equations in Danmakufu for advanced mathematical patterns</li>
+	        </ul>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=6c54DO4gjos" title="Sparen's Spawning Danmaku in Circles and Ellipses Tutorial">[1] Touhou Danmakufu ph3 Tutorial - Spawning Danmaku in Circles and Ellipses </a> (Sparen)<br>--&gt;This tutorial is a video supplement to this lesson - it doesn't cover the same things but both lessons depends on each other.</p>
 	      <br>            </div>          </div>
@@ -181,7 +189,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: May 16, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Sept 5, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
@@ -189,6 +197,7 @@
         </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U1L11Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>
     <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>  </body></html>
