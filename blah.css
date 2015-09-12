@@ -68,6 +68,7 @@ a:visited {color:rgb(50,200,200);}
 a:hover {color:rgb(82,235,251);}
 
 #ft{clear:both;}
+footer{clear:both;}
 #top{
   margin:auto;
   text-align:left;
@@ -254,6 +255,12 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   border-radius: 5px; 
   border-color: #ff8822; 
   background-color: #cc3311;
+}
+
+.indexupdcode2015{
+  border:2px solid; 
+  border-color:rgb(59,248,80); 
+  background-color:rgb(0,60,60);
 }
 
 .indexupdsp2015title{
