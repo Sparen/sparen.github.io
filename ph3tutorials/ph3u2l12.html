@@ -33,12 +33,14 @@
 	          <li><a href="#sub2">Part 2: How Do I Create a Plural Script?</a></li>
 	          <li><a href="#sub3">Part 3: How Do I Create a Boss Scene Object?</a></li>
 	          <li><a href="#sub4">Part 4: What does Registering a Boss Scene Object Do?</a></li>
+	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#quiz1">Quiz: Plural Scripts</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>So tested your danmaku abilities. You've created a number of scripts that you may or may not like. But they're all solo spells! What to do now but make a boss with multiple attacks!</p>
 	      <p>Back in <a href="ph3u1l2.html">Lesson 2</a> and <a href="ph3u1l3.html">Lesson 3</a>, I alluded to multiple types of scripts. For this unit, we will examine the plural, or boss. Although all functionality of a plural can be handled (perhaps more efficiently) in a stage, I will discuss bosses in the context of plural scripts.</p>
+	      <p><strong>It should go without saying, but you should not continue beyond this lesson if you have yet to make a few single scripts. Going farther than this without experience with Danmakufu's syntax, style, and general logic control and script and execution flow is not recommended.</strong></p>
 	      <p>In this lesson, we will focus on the creation of plural scripts and Enemy Boss Scene Objects, objects which store relevant data about a boss and are used for chaining attacks together. Later in this unit, we will discuss boss graphics and animation, sound effects, and text. We will culminate in a discussion of System, Pause, EndScene, Replay Save, and Background files, as we will need to understand these before releasing a plural to the public.</p>
 	      <p>So without further ado, Plurals!</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: How Do I Create a Plural Script</h2>
@@ -131,6 +133,7 @@ task TPlural{
 	      <p>It's a boss with three nonspells and four spells, assuming that all the singles are in the same directory as the plural. But... there are some minor things to keep in mind. When you register a boss scene, it will check through all the single scripts and you will be notified of all errors.</p>
 	      <p>Anyways, we have our first plural script! Try it out, see how it works, etc. A few things to note are that the headers of all single scripts are <b>completely ignored</b>. This means that if you have a bgm or specific player assigned in a single script and you run the plural script that has added that single, the plural script's header will be used. Always. This goes for all danmakufu scripts, whether they be stages, plurals, etc.</p>
 	      <p>Well, that was a short lesson. Let's bring it to a close.</p>
+	      <div class="tut_exercise">EXERCISE: Take a bunch of your singles and try running them as a plural script. Note the boss's position at the start of each attack. Which things are constant between singles and plurals? If you see bullets spawning from (0,0), that will be addressed in Lesson 16.</div>
 	      <h2 style="color:yellow" id="quiz1">Quiz: Plural Scripts</h2>
 	        <!--Quiz start.-->
 		<p>Use the following code for questions 1-3</p>
@@ -165,7 +168,7 @@ task TPlural{
     CloseScript(GetOwnScriptID());
 }</code></pre>
 		<p>1) What code should be added to line 14 to allow the task to work properly (assume Lines 19 and 22 are filled correctly)?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 3);">
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'A');">
 	        <input type="RADIO" value="A" name="cc">
 	        A. <code>yield;</code><br>
 	        <input type="RADIO" value="B" name="cc">
@@ -196,6 +199,13 @@ task TPlural{
 	        C. <code>ObjEnemyBossScene_Run(obj);</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
+	      <h2 style="color:yellow" id="subs">Summary</h2>
+	        <ul>
+	          <li>Boss Scene Objects are the foundation of Plural Scripts</li>
+	          <li><code>ObjEnemyBossScene_Add()</code> is used to add single scripts to a plural script</li>
+	          <li><code>ObjEnemyBossScene_LoadInThread(obj)</code> is used to load a boss scene and <code>ObjEnemyBossScene_Regist(obj)</code> is used to register and begin execution</li>
+	          <li>Headers of all Single scripts used in a Plural Script are completely ignored in a Plural Script</li>
+	        </ul>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
@@ -207,7 +217,7 @@ task TPlural{
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: May 31, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Sept 12, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
@@ -215,6 +225,6 @@ task TPlural{
         </div>      </div>    </div>
     <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script language="JavaScript" type="text/javascript" src="javascript/U2L12Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>
-    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>  </body></html>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
