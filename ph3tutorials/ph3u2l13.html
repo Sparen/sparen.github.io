@@ -36,6 +36,7 @@
 	          <li><a href="#sub5">Part 5: How Do I Animate a Boss?</a></li>
 	          <li><a href="#quiz1">Quiz: 2D Sprites</a></li>
 	          <li><a href="#sub6">Part 6: What are Render Priorities?</a></li>
+	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
@@ -56,24 +57,24 @@
 	      <p>As for DestCenter, say you have a 64x96 sprite. Using <code>ObjSprite2D_SetDestCenter(objBoss)</code> is equivalent to using <code>ObjSprite2D_SetDestRect(objBoss, -32, -48, 32, 48);</code></p>
 	      <div class="tut_checkpoint">CHECKPOINT: How do <code>ObjSprite2D_SetSourceRect()</code> and <code>ObjSprite2D_SetDestRect()</code> work? How can you change the scale of an image by altering the Dest Rect?</div>
 	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Display an Image?</h2>
-	      <p>It is now time to display images! For the purposes of this tutorial, I will provide images - Link <a href="./tutimg/u2l13sample.png">here</a></p>
-	      <p>We will begin by examining u2l13sample.png. Our mission in this part is to take this image and display it using Danmakufu. Since we have not yet covered Background scripts, simply make a task called <code>RenderBG</code> in a single and call it in @Initialize.</p>
-	      <p>Now, the components of given task. First, we will declare a variable obj and will assign the returned object ID of <code>ObjPrim_Create(OBJ_SPRITE_2D)</code>. This is the object we will be manipulating in this task.</p>
-	      <p>The next step is <code>ObjPrim_SetTexture()</code>. I am going to assume that you are keeping the image file in the same directory as the single file - in practice this is poor design as it gets very hard to find things - I suggest keeping all of your images in a single folder separate from your code.</p>
-	      <p>There are two ways you can assign the texture to the object. You can either plug the path in directly, or as stated before, create a variable to contain the path. Let's use the variable, as it will make the code cleaner.</p>
+	      <p>It is now time to display images! For the purposes of this tutorial, I will provide a texture and a spritesheet. First, the texture - <a href="./tutimg/u2l13sample.png">u2l13sample.png</a></p>
+	      <p>We will begin by examining u2l13sample.png. Our mission in this part is to take this image and display it using Danmakufu. Since we have not yet covered Background scripts, simply make a task called <code>RenderBG</code> in a Single script and call the task in @Initialize.</p>
+	      <p>Now, the components of given task. First, we will declare a variable <code>obj</code> and will assign it the returned object ID of <code>ObjPrim_Create(OBJ_SPRITE_2D)</code>. This is the object we will be manipulating in this task.</p>
+	      <p>The next step is <code>ObjPrim_SetTexture()</code>. For this tutorial, I am going to assume that you are keeping the image files in the same directory as the Single file. In practice this is poor design as it gets very hard to find things if you mix all your files - I suggest keeping all of your images in a single folder separate from your code.</p>
+	      <p>There are two ways you can assign the texture to the object. You can either plug the path in to <code>ObjPrim_SetTexture()</code> directly, or as stated before, create a variable to contain the path. Let's use the variable, as it will make the code cleaner.</p>
 	      <pre class="prettyprint"><code>    task RenderBG{
 	let obj = ObjPrim_Create(OBJ_SPRITE_2D);
 	let imgpath = GetCurrentScriptDirectory~"./u2l13sample.png"; //assumes image is in same directory
 	ObjPrim_SetTexture(obj, imgpath);
     }</code></pre>
-	      <p>Now we need to assign the rects. Let's open the image.</p>
-	      <p>The first thing you will notice is that there is a lot of transparent space. The part we want is 384x448, the size of the playing field. But the texture is 512x512. This is because Danmakufu scales the dimensions of all textures to powers of two, as it speeds up the texture loading process. However, if you use textures whose dimensions are not powers of two the final result will be blurred due to the scaling of the image during loading. (This is due to a DirectX9 feature - don't worry about the details). To counteract this, use images whose dimensions are powers of two. If you have a 640x512 image, for example, place it on a 1024x512 image. There will be a lot of blank space, but it will render unblurred in Danmakufu.</p>
+	      <p>Now we need to assign the rects via <code>ObjRender_SetSourceRect()</code> and either <code>ObjRender_SetDestRect()</code> or <code>ObjRender-SetDestCenter()</code>. Let's open the image in a graphics editor such as <a target="_blank" href="http://www.adobe.com/products/photoshop.html">Photoshop</a> or <a target="_blank" href="http://www.gimp.org">Gimp</a>.</p>
+	      <p>The first thing you will notice is that there is a lot of transparent space. The part we want is 384x448, the size of the playing field. However, the texture is 512x512. This is because Danmakufu scales the dimensions of all textures to powers of two when loading textures, as it speeds up the process. Therefore, if you use textures whose dimensions are not powers of two, the final result will be blurred due to the scaling of the image during loading. (This is due to a DirectX9 feature - don't worry about the details). To counteract this, use images whose dimensions are powers of two. If you have a 640x512 image, for example, place it on a 1024x512 image. There will be a lot of blank space, but it will render with less blur in Danmakufu.</p>
 	      <p>Anyways, we have our rects - the part we want is from (0,0) to (384,448). Let's put them in.</p>
 	      <pre class="prettyprint"><code>    task RenderBG{
 	let obj = ObjPrim_Create(OBJ_SPRITE_2D);
 	let imgpath = GetCurrentScriptDirectory~"./u2l13sample.png";
 	ObjPrim_SetTexture(obj, imgpath);
-	ObjSprite2D_SetSourceRect(obj, 0, 1, 383, 448);
+	ObjSprite2D_SetSourceRect(obj, 0, 1, 383, 448); //alternatively, 0, 0, 384, 448
 	ObjSprite2D_SetDestCenter(obj);
 	ObjRender_SetPosition(obj, 384/2, 448/2); //move it to the center of the screen
     }</code></pre>
@@ -98,7 +99,7 @@
     }</code></pre>
 	      <p>In the above code, we set our texture, assign it to the boss, and do some source and dest rect manipulations. The graphic will automatically move when the boss moves because it is attached to the boss object. I also have an additional variable - animframe. We will use this to animate the boss.</p>
 	      <p>First, let's consider our approach. We have four images to render, and we want each to show for 8 frames. Therefore, after 32 frames, the animation will reset. Using this, an acceptable way to animate the boss involves incrementing animframe once per frame, and then resetting it before it hits 32. But how do we get this into the rects? There are multiple ways - you can manually use if statements to set the source rects, or you can automate it, which I will show below.</p>
-	      <p>Going back to <a href="./ph3u1l8a.html">Extra Lesson 1</a>, we know that <code>floor()</code> will truncate positive numbers. Therefore, we can use this to change the source rects, since the spritesheet has been formatted correctly.</p>
+	      <p>Going back to <a href="./ph3u1l8a.html">Extra Lesson 1</a>, we know that <code>floor()</code> will truncate positive numbers. Therefore, we can easily use this to change the source rects, since the spritesheet has been formatted in a way where there is a uniform 'grid' that controls the spacing of the sprites.</p>
 	      <pre class="prettyprint"><code>    task TDrawLoop{
       let BossImage = GetCurrentScriptDirectory~"./u2l13spritesheet.png"; //assumes that image is in same directory
       let animframe = 0;
@@ -108,13 +109,14 @@
       ObjSprite2D_SetDestCenter(objBoss);
       while(!Obj_IsDeleted(objBoss)){
         ObjSprite2D_SetSourceRect(objBoss, 0+64*floor(animframe/8), 0, 64+64*floor(animframe/8), 64);
+	//We can do the above because the sprites are organized into a grid of 64x64 squares.
 	animframe++;
 	if(animframe>=32){animframe = 0;}//reset if too high
 	yield;
       }
     }</code></pre>
 	      <p>Above, all I did was implement the animframe changing code, as well as the resetting the source rect based on the animframe. In the current case, animframe/8 will always be between 0 and 3, which corresponds to the four sprites in the animation as they are located on the spritesheet. Using this, we can successfully render and animate the numbers 1-4.</p>
-	      <p>Of course, to implement movement, etc. you would need movement angle and speed, and you can include if statements that will take care of that.</p>
+	      <p>Of course, to implement movement, etc. you would need movement angle and speed, and you can include if statements that will take care of that. Just be aware that if you decide to flip the sprite when the enemy moves in one direction, you may need to flip it back when it moves in the other direction.</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: 2D Sprites</h2>
 	        <!--Quiz start.-->
 		<p>1) We have a 32x32 image with a 24x24 sprite. Which of the following will render the sprite as a 48x48 image? There are multiple correct answers.</p>
@@ -145,8 +147,15 @@
 	      <p>By default, render priorities of 20 and below, as well as 80 and above, use the top left of the window as their origin (0,0), while those in between use the top left of the playing field as their origin. Everything rendered in a standard plural or stage should be in the 20-80 range, while things rendered in packages should be rendered in the other ranges.</p>
 	      <p>By default, the player is rendered at 30, 2D sprites for enemy objects are rendered at 40, 2D sprites for bullets are rendered at 50, 2D sprites for items are rendered at 60, and 69 is the limit for some camera focus priorities (don't worry about this last one until you work on backgrounds).</p>
 	      <p>Pretty much all of these defaults can be changed using various functions, so don't worry if you want to change them, though they should be adequate for all practical purposes.</p>
-	      <p>Anyways, there are two ways to set the render priority of a graphic: <code>Obj_SetRenderPriority</code> and <code>Obj_SetRenderPriorityI</code>. The first uses a 0.0 to 1.0 scale, and the latter uses the 0 to 100 scale I've been using. Decimal values do not work for the latter and will truncate - IE, you only have so many render priority slots.</p>
+	      <p>Anyways, there are two ways to set the render priority of a graphic: <code>Obj_SetRenderPriority()</code> and <code>Obj_SetRenderPriorityI()</code>. The first uses a 0.0 to 1.0 scale, and the latter uses the 0 to 100 scale I've been using. Decimal values do not work for the latter and will truncate to the integer portion - IE, you only have 101 render priority slots.</p>
 	      <p>For now, keep render priorities in mind, as they will prove important later on. That concludes the lesson.</p>
+	      <h2 style="color:yellow" id="subs">Summary</h2>
+	        <ul>
+	          <li>2D Sprites have their own functions for determining their UV (<code>ObjSprite2D_SetSourceRect()</code>) and XY rects (<code>ObjSprite2D_SetDestRect()</code> and <code>ObjSprite2D_SetDestCenter()</code>)</li>
+	          <li><code>ObjSprite2D_SetDestRect()</code> can be used to stretch and scale a 2D Sprite</li>
+	          <li>A boss can be animated using a counter and either if/else/switch statements or by flooring the difference between the animation frame and the number of sprites</li>
+	          <li>Objects with higher render priorities render above those with lower render priorities</li>
+	        </ul>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
@@ -158,7 +167,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: June 21, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Sept 12, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
