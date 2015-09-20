@@ -1,4 +1,4 @@
-<!DOCTYPE html"><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 5</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 5 - Danmakufu Syntax and Structures Part 2. A guide to booleans, boolean expressions, if and if-else statements, functions, tasks, and reserved keywords in Touhou Danmakufu ph3."      name="description">
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 5</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 5 - Danmakufu Syntax and Structures Part 2. A guide to booleans, boolean expressions, if and if-else statements, functions, tasks, and reserved keywords in Touhou Danmakufu ph3."      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Boolean, Function, Task, Coroutine, Subroutine, yield, reserved, keyword">
     <meta name="viewport" content="initial-scale=1">
   <script>
@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <center><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png"></a></center>      <br>      <div id="menubar">
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:90%"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
@@ -147,7 +147,7 @@ while(x &gt; 0){
 }</code></pre>
 	      <p>To close our study of the while loop, we will consider the above code, where x is declared to be 5 and while x > 0, x increments by 1. As is easily observable, x will never actually become less than 0. Therefore, this code will cause an infinite loop and Danmakufu will freeze.</p>
 	      <p>Now we will discuss the last type of loop in Danmakufu - the for loop. In Danmakufu, the for loop comes in two varieties, ascent and descent.</p>
-	      <p>For a video tutorial, please consult the following: <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K">Sparen's Danmakufu Tutorials - Using Ascent Loops and More</a>. However, please be aware that this tutorial assumes prior knowledge of bullet spawning functions.</p>
+	      <p>For a video tutorial, please consult the following: <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&amp;list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K">Sparen's Danmakufu Tutorials - Using Ascent Loops and More</a>. However, please be aware that this tutorial assumes prior knowledge of bullet spawning functions.</p>
 	      <p>A generic ascent loop is structured as follows:</p>
 	        <pre class="prettyprint"><code>let x = 5;
 ascent(i in 0..8){
@@ -231,9 +231,9 @@ let bool3 = (bool == bool2);</code></pre>
 	        <br>
 		<p>5) Momiji wants to make some pretty danmaku. However, Danmaku keeps on freezing! The following is her code:</p> 
 		<pre class="prettyprint"><code>let x = 5;
-while(x < 6){
+while(x &lt; 6){
     x--;
-}</code></pre></p>
+}</code></pre>
 		<p>What can you replace line 2 with for the code to not freeze?</p>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '4');">
 	        <input type="RADIO" value="A" name="cc">
@@ -322,7 +322,7 @@ let y = math(6); //y will be equal to 11</code></pre>
 	        <pre class="prettyprint"><code>task MasterSparkEX(x, y, ang, length, width, dt, graph, delay){
     let obj = CreateStraightLaserA1(x, y, ang, length, width, dt, graph, delay);
     let objcount = 0;
-    while(objcount<300&&Obj_IsDeleted(obj)==false){
+    while(objcount &lt; 300 &amp;&amp; Obj_IsDeleted(obj) == false){
         //Laser control functions
     }
     Obj_Delete(obj);

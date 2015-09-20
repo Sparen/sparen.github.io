@@ -97,7 +97,7 @@ let frame = 0; //Counter for timing enemy movements.(Will keep increasing by one
 	frame++;
 
 	//If the enemy's life is 0
-	if(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) <= 0)
+	if(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) &lt;= 0)
 	{
 		//the enemy is killed immediately when life is 0
 		//As this is a beginner sample script, 
