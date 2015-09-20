@@ -1,4 +1,11 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 6</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 6 - Firing our First Bullet. A guide to making a script in Touhou Danmakufu ph3, including firing bullets at the player."      name="description">
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 6</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 6 - Firing our First Bullet. A guide to making a script in Touhou Danmakufu ph3, including firing bullets at the player."
+      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Bullet, Danmaku, Boss, Header, Register, Create">
     <meta name="viewport" content="initial-scale=1">
   <script>
@@ -9,21 +16,33 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:90%"></a></p>      <br>      <div id="menubar">
+  </script>
+  </head>
+  <body id="mhome">
+    <div class="yui-t1" id="top">
+      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:90%"></a></p>
+      <br>
+      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
           <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
           <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
         </ul>
-      </div>      <div id="bd">        <div id="yui-main">
+      </div>
+      <div id="bd">
+        <div id="yui-main">
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l5.html" title="Sparen's Danmakufu ph3 Tutorials - Danmakufu Syntax and Structures Part 2">Unit 1 Lesson 5</a></li>
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u1l7.html" title="Sparen's Danmakufu ph3 Tutorials - Attack Flow and Our First Spellcard">Unit 1 Lesson 7</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 6 - Firing our First Bullet</h1>	      <p>The video for this lesson is my first ph3 script, Death Match in the Skies, chosen simply because it makes use of many very basic techniques combined with others.</p>
+          </div>
+          <div class="yui-b">
+            <div style="width: 850px;" class="yui-g">
+	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 6 - Firing our First Bullet</h1>
+	      <p>The video for this lesson is my first ph3 script, Death Match in the Skies, chosen simply because it makes use of many very basic techniques combined with others.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/TaJTB4qaaEc">
@@ -42,7 +61,8 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: How Do I Create a Blank Script?</h2>
+	      </div>
+	      <h2 style="color:yellow" id="sub1">Part 1: How Do I Create a Blank Script?</h2>
 	      <p>Please note that the contents of this page are partially based off of <a target="_blank" href="ph3u1l3code1.html">the sample script first shown in Lesson 3</a>. However, it is to be used as a reference - all of the actual code construction will be done here in the tutorial. Helepolis also has a <a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc">video tutorial</a> that covers roughly the same material as this tutorial.</p>
 	      <p>So now let's begin! First, enter your Danmakufu's script directory and create a folder - it's up to you what the name will be, but something along the lines of 'Tutorial' is best for now. Inside, create a blank text file (or .dnh file if you're using the Sublime Text syntax highlighter). Name it whatever you want as long as there is only English in the title - no accent marks, other diacritics, etc. In your Text Editor (e.g. Notepad/TextEdit/Gedit/etc.), make sure that smart quotes are OFF. Also, turn autocorrect OFF if it is enabled, as it gets very annoying very fast. However, you will want your text editor to catch spelling mistakes - things like CreaateShotA1 can and will happen and it is better to see the error before you try to run the code. As long as your text editor does not automatically correct the 'errors', it is fine and potentially helpful.</p>
 	      <p>Now we will want to write our script! First, paste a near-blank header into your file.</p>
@@ -186,7 +206,7 @@ function wait(n){
 	SetAutoDeleteObject(true);
 	CloseScript(GetOwnScriptID());
 	return;
-    }</pre></code>
+    }</code></pre>
 	      <p>While the boss's life is greater than 0, this task will do nothing. However, the moment the boss's HP drops to 0 or below, the boss object will delete, every enemy shot on screen will be deleted, and the script will close. The use of return; at the end does nothing and is not needed, although it is in the sample scripts.</p>
 	      <p>There is also <code>SetAutoDeleteObject();</code>, which defaults to false. When true, all objects spawned in the script will be deleted at the very end. Since many function libraries assume that it is set to true (and indeed, most scripters in the western Danmakufu community set it to true), I recommend that you use it. There are issues with using it, of course, but we will get into that in a much later tutorial.</p>
 	      <p>With this, our script can now end. So now... it's time to shoot our bullets!</p>
@@ -265,7 +285,7 @@ function wait(n){
 	      <p>Basically, you increment your counter until it hits 30, then execute the bullet spawning and reset the counter</p>
 	      <p>Note that in plural scripts and the like, this will need to be changed slightly to account for the fact that the bullets will still shoot if the boss is dead. I will describe a countermeasure below.</p>
 	      <p>Finally, I will discuss my coding method, which is similar to the @MainLoop method. The main difference is that I do not reset the counter and instead use a modulus. The @MainLoop code I insert between the hitboxes and yield; is similar to the following:</p>
-	      <pre class="prettyprint"><code>  if(count%30==0){
+	      <pre class="prettyprint"><code>  if(count % 30 == 0){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
   }
@@ -273,7 +293,7 @@ function wait(n){
 	      <p>When the count is a multiple of 30, the code inside the braces will execute. All three methods are functionally similar. However, I will now describe good habits and how to robustify the code. For the tasking code, there is a check after the wait for whether or not the boss is alive, but this is not the case for the other two methods. Therefore, we will do the following:</p>
 	      <p>First, we will create a task called fire;. It will contain the following:</p>
 	      <pre class="prettyprint"><code>  task fire{
-    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}//Default kill to prevent (0,0) spawning
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}//Default kill to prevent (0,0) spawning
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
   }</code></pre>
@@ -401,7 +421,7 @@ let count = 0;
 }
 
 task fire{
-    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}//Default kill to prevent (0,0) spawning
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}//Default kill to prevent (0,0) spawning
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
 }
@@ -474,7 +494,7 @@ let count = 0;
 }
 
 task fire{
-    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}//Default kill to prevent (0,0) spawning
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}//Default kill to prevent (0,0) spawning
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
 }
@@ -511,7 +531,9 @@ function wait(n){
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Highly recommended if you have not yet watched it</p>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=IAJTT0zOepw" title="Helepolis's Improving our boss and danmaku">[ 弾幕風 PH3 Tutorial ] Improving our boss and danmaku</a> (Helepolis)<br>--&gt;Covers things that were also covered in this tutorial.</p>
-	      <br>            </div>          </div>
+	      <br>
+            </div>
+          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l5.html" title="Sparen's Danmakufu ph3 Tutorials - Danmakufu Syntax, Structures, and Operations Part 2">Unit 1 Lesson 5</a></li>
@@ -519,14 +541,37 @@ function wait(n){
 	      <li><a href="./ph3u1l7.html" title="Sparen's Danmakufu ph3 Tutorials - Attack Flow and Our First Spellcard">Unit 1 Lesson 7</a></li>
 	    </ul>
 	    <br>
-          </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <p style="text-align: center;">Last Update to Page: Sept 4, 2015</p>
+        <p style="text-align: center;"><a href="#top">Top</a></p>
+        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>
+        <p style="text-align: center;"><span style="font-weight: bold;">Other
+            Sites/Affiliates</span></p>
+        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img
+	      alt="&quot;Wine HQ&quot;"
+	      src="../images/afflogowinehq.png"></a>
+          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img
+	      alt="&quot;Maidens of the Kaleidoscope&quot;"
+	      src="../images/afflogomotk.png"></a>
+          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"
+	      src="../images/afflogobulletforge.png"></a>
+          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img
+	      alt="&quot;Moriya Shrine&quot;"
+	      src="../images/afflogomoriyashrine.png"></a>
+        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
           <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
-        </div>      </footer>    </div>
+        </div>
+      </footer>
+    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>
+  </body>
+</html>

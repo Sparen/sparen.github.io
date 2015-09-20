@@ -1,4 +1,11 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 7</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 7 - Attack Flow and Our First Spellcard. A guide to transforming a nonspell into a spell in Touhou Danmakufu ph3. Also includes some generic danmaku patterns as well as attack flow information."      name="description">
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 7</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 7 - Attack Flow and Our First Spellcard. A guide to transforming a nonspell into a spell in Touhou Danmakufu ph3. Also includes some generic danmaku patterns as well as attack flow information."
+      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Attack, Flow, Spellcard, Spell, Card, Boss, Pattern, Danmaku, Movement">
     <meta name="viewport" content="initial-scale=1">
   <script>
@@ -9,21 +16,33 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:90%"></a></p>      <br>      <div id="menubar">
+  </script>
+  </head>
+  <body id="mhome">
+    <div class="yui-t1" id="top">
+      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:90%"></a></p>
+      <br>
+      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
           <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
           <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
         </ul>
-      </div>      <div id="bd">        <div id="yui-main">
+      </div>
+      <div id="bd">
+        <div id="yui-main">
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l6.html" title="Sparen's Danmakufu ph3 Tutorials - Firing our First Bullet">Unit 1 Lesson 6</a></li>
 	      <li>Navigation Bar</li>
 	      <li><a href="./ph3u1l8.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Shotsheets and Bullet Properties">Unit 1 Lesson 8</a></li>
 	    </ul>
-          </div>          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 7 - Attack Flow and Our First Spellcard</h1>	      <p>The video for this lesson is Lunarethic's AllSpell Youmu! Since we're going to be talking about spells (though that's not the focus of the lesson), what better option than this? (And yes, I know that I'm showing some of the best scripts I have played for DNHArt. There will come a time when other scripters will be featured)</p>
+          </div>
+          <div class="yui-b">
+            <div style="width: 850px;" class="yui-g">
+	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 7 - Attack Flow and Our First Spellcard</h1>
+	      <p>The video for this lesson is Lunarethic's AllSpell Youmu! Since we're going to be talking about spells (though that's not the focus of the lesson), what better option than this? (And yes, I know that I'm showing some of the best scripts I have played for DNHArt. There will come a time when other scripters will be featured)</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/s6raKTIzfpM">
@@ -38,7 +57,8 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: How Do I Designate a Single as a Spellcard?</h2>
+	      </div>
+	      <h2 style="color:yellow" id="sub1">Part 1: How Do I Designate a Single as a Spellcard?</h2>
 	      <p>To begin, a note. I will not be involving the @MainLoop style from now on - I will show the task method and my own method, because the former is commonly used and because the latter is good for understanding alternate ways in which you can script Danmakufu. Also, <strong>it is highly recommended that you have read Lessons 3-6 and understand most of the information</strong>.</p>
 	      <p>Let's start off with our code from the end of Lesson 6. We will now begin the transformation from a nonspell to a spell!</p>
 	      <p>First, let's review the top of our code - the part containing global variables. Currently, we only have <code>let objBoss;</code>. Right after that, we will want to add the following:</p>
@@ -164,7 +184,7 @@ task TDrawLoop {
 	}</code></pre>
 	      <p>Please note that since I am decrementing the speed, I added 0.5 to the highest speed. Above is the code with the ascent loop. i will start at 0, and will have values of 1 and 2 inside the code block. For the speed, I have taken a base speed 2.5, and I decrement it by i/3. Since i has values of 0, 1/3, and 2/3, there will be three rings with different speeds. Additionally, I add i to DS_BALL_S_RED in the graphic section, resulting in each ring having a different graphic.</p>
 	      <p>Of course, you can tweak this code however you want. Want less space between rings? Lower the difference in the speed. You can use i/6 for example to halve the distance between rings. Just beware of negative speed values - the bullet will go in the opposite direction.</p>
-	      <p>For reference, my video tutorial on ascent loops can be found <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K" title="Sparen's Danmakufu ph3 Video Tutorials - Using Ascent Loops and More (Youtube)">here</a></p>
+	      <p>For reference, my video tutorial on ascent loops can be found <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&amp;list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K" title="Sparen's Danmakufu ph3 Video Tutorials - Using Ascent Loops and More (Youtube)">here</a></p>
 	      <div class="tut_exercise">EXERCISE: Try spawning bullets in a semicircle - there's a trick to getting it just right! Hint: Use ascent loops</div>
 	      <div class="tut_exercise">EXERCISE: Experiment with bullet speeds and delay in ascent loops - there's more you can do than just lines or waves of bullets.</div>
 	      <h2 style="color:yellow" id="sub4">Part 4: How do I Sync Spawning to the Boss's Movement?</h2>
@@ -173,8 +193,8 @@ task TDrawLoop {
 	      <p>Now, we will create a task fireB. You may want to copy fireA for now and simply rename it.</p>
 	      <p>The pattern we are about to make (lines of bullets in a fan shape - I call them waves), tends to look ugli when fired while the boss is moving. Therefore, we will sync it to the boss's movement. Recall that the boss moves every 240 frames and is moving for the first 60 of those 240.</p>
 	      <p>Therefore, we can spawn it the frame it begins moving and 120 frames after, when it is stationary.</p>
-	      <p>For the tasking method, we will call fireB in MainTask; and replace the <code>wait(30);</code> with <code>wait(120);</code>. For the Sparen method, add the following to @MainLoop: <code>if(count%120==0 && count>=0){fireB;}</code>.</p>
-	      <p>At this point, it is important to realize that this pattern will indefinitely spawn at the same time as the other pattern. Therefore, we will want to give it graphics that are different as well as a different speed. Additionally, if you wanted to spawn this pattern when the boss <i>stops</i> moving and 120 frames after, you can, for the tasking method, add a <code>wait(60);</code> before the while loop and, in the Sparen method, use <code>count%120==60</code> instead of <code>count%120==0</code>.</p>
+	      <p>For the tasking method, we will call fireB in MainTask; and replace the <code>wait(30);</code> with <code>wait(120);</code>. For the Sparen method, add the following to @MainLoop: <code>if(count % 120 == 0 &amp;&amp; count>=0){fireB;}</code>.</p>
+	      <p>At this point, it is important to realize that this pattern will indefinitely spawn at the same time as the other pattern. Therefore, we will want to give it graphics that are different as well as a different speed. Additionally, if you wanted to spawn this pattern when the boss <i>stops</i> moving and 120 frames after, you can, for the tasking method, add a <code>wait(60);</code> before the while loop and, in the Sparen method, use <code>count % 120 == 60</code> instead of <code>count % 120 == 0</code>.</p>
 	      <p>Now for the pattern. We will be using a nested ascent loop for this, since we will have a fan of lines of bullets. Let's examine the following:</p>
 	      <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
 	ascent(i in -1..2){
@@ -196,7 +216,9 @@ task TDrawLoop {
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Not as relevant anymore, but still good if you haven't yet watched it</p>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=IAJTT0zOepw" title="Helepolis's Improving our boss and danmaku">[ 弾幕風 PH3 Tutorial ] Improving our boss and danmaku</a> (Helepolis)<br>--&gt;Covers things that were also covered in this tutorial - a good resource.</p>
-	      <br>            </div>          </div>
+	      <br>
+            </div>
+          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u1l6.html" title="Sparen's Danmakufu ph3 Tutorials - Firing our First Bullet">Unit 1 Lesson 6</a></li>
@@ -204,15 +226,38 @@ task TDrawLoop {
 	      <li><a href="./ph3u1l8.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Shotsheets and Bullet Properties">Unit 1 Lesson 8</a></li>
 	    </ul>
 	    <br>
-          </div>        </div>      </div>      <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Sept 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+          </div>
+        </div>
+      </div>
+      <div id="ft">
+        <p style="text-align: center;">Last Update to Page: Sept 4, 2015</p>
+        <p style="text-align: center;"><a href="#top">Top</a></p>
+        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>
+        <p style="text-align: center;"><span style="font-weight: bold;">Other
+            Sites/Affiliates</span></p>
+        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img
+	      alt="&quot;Wine HQ&quot;"
+	      src="../images/afflogowinehq.png"></a>
+          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img
+	      alt="&quot;Maidens of the Kaleidoscope&quot;"
+	      src="../images/afflogomotk.png"></a>
+          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"
+	      src="../images/afflogobulletforge.png"></a>
+          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img
+	      alt="&quot;Moriya Shrine&quot;"
+	      src="../images/afflogomoriyashrine.png"></a>
+        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
           <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
-        </div>      </div>    </div>
-    <script language="JavaScript" type="text/javascript" src="javascript/GenericQuiz.js"></script>
-    <script language="JavaScript" type="text/javascript" src="javascript/QReviewP.js"></script>
-    <script language="JavaScript" type="text/javascript" src="javascript/U1L7Quiz1.js"></script>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script type="text/javascript" src="javascript/U1L7Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
-    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>
+  </body>
+</html>
