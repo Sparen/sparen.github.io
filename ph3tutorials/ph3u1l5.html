@@ -69,11 +69,11 @@
 	        <pre class="prettyprint"><code>let bool = true;
 let bool2 = false;</code></pre>
 	      <p>Boolean expressions are expressions that are either true or false and will be very useful when we discuss if and if-else statements in Part 3.</p>
-	        <pre class="prettyprint"><code>let test = (5 > 6); //false, since 5 is not greater than 6
+	        <pre class="prettyprint"><code>let test = (5 &gt; 6); //false, since 5 is not greater than 6
 let test2 = (4 == 6); //False because 4 is not equal to 6.
-let test3 = (1 <= 3); //true because 1 is less than or equal to 3.
+let test3 = (1 &lt;= 3); //true because 1 is less than or equal to 3.
 let test4 = (6 != 3); //true because 6 is not equal to 3.</code></pre>
-	      <p>The first thing to note is the double equal sign ==. This is used for logic in Danmakufu in place of the single equal sign =, which is used for assigning values to variables and constants. The next thing to note is the use of the !, which functions as 'not' and is used in negation. Please note that characters, strings, and booleans cannot use things such as < (less than) or >= (greater than or equal to) in Danmakufu. You can, however, test equality and inequality for these.</p>
+	      <p>The first thing to note is the double equal sign ==. This is used for logic in Danmakufu in place of the single equal sign =, which is used for assigning values to variables and constants. The next thing to note is the use of the !, which functions as 'not' and is used in negation. Please note that characters, strings, and booleans cannot use things such as &lt; (less than) or &gt;= (greater than or equal to) in Danmakufu. You can, however, test equality and inequality for these.</p>
 	      <p>Now we will discuss boolean expressions involving multiple booleans using || (logical OR) and && (logical AND)</p>
 	        <pre class="prettyprint"><code>let bool = true;
 let bool2 = false;
@@ -84,23 +84,23 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
 	      <p>To close, be aware that the boolean true is equivalent to 1 and the boolean false is equivalent to 0. This is good to know for Computer Programming in general.</p>
 	      <h2 style="color:yellow" id="sub3">Part 3: What are If and If-Else Statements?</h2>
 	      <p>So now that we have all this knowledge of booleans and boolean expressions, what will we do with it? Well, if you want to only execute certain code under certain conditions, you can use booleans and boolean expressions in if, if-else, and alternative-case (switch) statements!</p>
-	        <pre class="prettyprint"><code>if(count > 30){count = 0;}</code></pre>
+	        <pre class="prettyprint"><code>if(count &gt; 30){count = 0;}</code></pre>
 	      <p>Above is an example of an if statement. If statements have a condition (a boolean or boolean expression) that is true, the code in the braces following the statement will be executed. In the above situation, the variable <code>count</code> will be set to 0 if its value is greater than 30. If its value is not greater than 30, the code within the braces will not be executed.</p>
 	      <p>For future reference, code within {braces} is considered a block. You can have multiple statements (a single instruction) inside a block - just remember to end each statement with a semicolon.</p>
 	      <p>If you want to do something else instead when a given condition is false, you can use if-else statements.</p>
-	        <pre class="prettyprint"><code>if(count>30){
-        count=0;
+	        <pre class="prettyprint"><code>if(count &gt; 30){
+        count = 0;
 }else{
         count++;
 }</code></pre>
 	      <p>Now, if count is not greater than 30, count will increment by 1! You can also nest if else statements and have multiple else statements, like so.</p>
 	        <pre class="prettyprint"><code>if(count>30){
 	count=0;
-}else if(count<0){
+}else if(count &lt; 0){
 	count=0;
 }else{
 	count++;
-	if(count%3==0){
+	if(count % 3 == 0){
 	  //Do something
 	}
 }</code></pre>
@@ -132,17 +132,17 @@ loop(20){
 	      <p>Now is a good time to talk about infinite loops. I.E. how to freeze Danmakufu. An infinite loop occurs when a section of code keeps on looping forever, and the only way to stop it is to terminate the program altogether. Later on in this lesson, we will discuss yield; (the best way to make an infinite loop not actually infinite but achieve similar functions until the script terminates), but as a brief note, <code>loop</code> immediately followed by an opening brace { (e.g. <code>loop{blah;}</code>) will trigger an infinite loop. Using infinite loops should be avoided until you have sufficient knowledge of yield;</p>
 	      <p>Next are while loops. Basically, while a certain condition is true (booleans!), the code in the braces after it will be executed, just like an if statement except automatically repeated.</p>
 	        <pre class="prettyprint"><code>let x = 5;
-while(x<20){
+while(x &lt; 20){
     x++;
 }</code></pre>
 	      <p>In the code above, we declare x and then run a while loop where, while x is less than 20, x is incremented by 1. The code in question will loop itself and x will be 20 after the code has executed. More specifically, x will continue to increment by one until it is 20, at which point the loop will end.</p>
 	        <pre class="prettyprint"><code>let x = 5;
-while(x > 20){
+while(x &gt; 20){
     x++;
 }</code></pre>
 	      <p>In the above scenario, x is less than 20, so the condition for the while loop is never fulfilled. Therefore, the while loop never executes and x is left as 5 afterwards.</p>
 	        <pre class="prettyprint"><code>let x = 5;
-while(x > 0){
+while(x &gt; 0){
     x++;
 }</code></pre>
 	      <p>To close our study of the while loop, we will consider the above code, where x is declared to be 5 and while x > 0, x increments by 1. As is easily observable, x will never actually become less than 0. Therefore, this code will cause an infinite loop and Danmakufu will freeze.</p>
@@ -168,7 +168,7 @@ ascent(i in 0..8){
 
 local{
     let var = 0;
-    while(var<10){
+    while(var &lt; 10){
         bla(var);
         var++;
     }
@@ -181,7 +181,7 @@ local{
 		<p>Consider the following code for Questions 1 and 2.</p>
 	        <pre class="prettyprint"><code>let x = 5;
 let y = 10;
-while(x < y){
+while(x &lt; y){
     y--;
 }
 let z = x+y;</code></pre>
@@ -217,10 +217,10 @@ let z = x+y;</code></pre>
 	        </form>
 	        <br>
 		<p>4)</p> 
-		<pre class="prettyprint"><code>let bool = (true&&!false);
+		<pre class="prettyprint"><code>let bool = (true && !false);
 let bool2 = (false || (true && !true));
-let bool3 = (bool1 == bool2);</code></pre>
-		<p>What is the value of bool?</p>
+let bool3 = (bool == bool2);</code></pre>
+		<p>What is the value of bool3?</p>
 	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
 	        <input type="RADIO" value="A" name="cc">
 	        A. true<br>
@@ -245,7 +245,7 @@ while(x < 6){
 	        <br>
 		<p>6) </p>
 		<pre class="prettyprint"><code>let x = 5;
-while(x<10){
+while(x &lt; 10){
     x++;
 }
 ascent(i in 6..23){
