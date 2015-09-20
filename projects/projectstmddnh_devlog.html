@@ -19,12 +19,12 @@
           <li><a class="mfaq" href="../faq.html">FAQ</a></li>
         </ul>
       </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">
-	      <center>	      <h1 style="color:rgb(59,248,80)">Touhoumon Mystery Dungeon (DEVLOG)</h1>
+	      <div style="text-align:center">	      <h1 style="color:rgb(59,248,80)">Touhoumon Mystery Dungeon (DEVLOG)</h1>
 	      <img alt="TMD Explorers of Danmakufu" src="./img/PMD.png" width="240" height="192"><br><br>
 	      <p>Welcome to my DevLog for my collaboration project with FrenticPony!</p>
 	      <h2 style="color:rgb(59,248,80)">What is this Project?</h2>
 	      <p style="font-family: pmdfont;font-size:150%;">This project is our own Pokémon Mystery Dungeon style Touhou fangame, made in Touhou Danmakufu ph3!<br>This project is the revival of <a href="projectspmddnh_devlog.html">Pokémon Mystery Dungeon: Explorers of Danmakufu</a>.<br>As per doujin guidelines, this game will be distributed for free and we will assume all costs associated with commissions.<br>I plan to update this devlog every day I have done something for the project. As the person who has declared responsibility for the entirety of dungeon creation, I will try to make the game as authentic and fun to play as possible, and of course... lots and lots of strange items and moves.</p>
-	      </center>
+	      </div>
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
@@ -56,8 +56,8 @@
 	      <p class="indexdevlogtitleA">I made a basic framework for status effects after considering my options - it's going to be part of each Touhoumon, whether they have status problems or not. This way it is easy to manage, we don't need extra objects, and the values are easy to access and change. All changes will be done externally, of course. I am also considering renaming ObjTouhoumon to ObjCharacter but I doubt that will happen anytime soon.</p>
 	      <p class="indexdevlogtitleA">After this, I worked on the item database - an HTML file that will hold information on the items. Will be helpful in the future. And that was when I decided to dump the Rejuvenation Orb. Its purpose was to test the fatigue system and to be an easy-to-implement item. Well, Achy made tea graphics, and those are replacing Apples and Vitamins (most likely). I basically ended up implementing four new items in a matter of like 10 minutes. Hooray!</p>
 	      <p class="indexdevlogtitleA">To close, I have a new devlog video. Enjoy!</p>
-	      <center><embed width="420" height="315" class="indexdevlogtitleA"
-		src="https://www.youtube.com/v/LNxuEcR_31M"></center>
+	      <div style="text-align:center"><embed width="420" height="315" class="indexdevlogtitleA"
+		src="https://www.youtube.com/v/LNxuEcR_31M"></div>
 	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subsept22015">September 2, 2015</h2>
 	      <div class="indexdevlogA">
@@ -84,8 +84,8 @@
 	      <p class="indexdevlogtitleA">As usual, I started the day with no inspiration and ended up doing a lof of work. In LOCAA, I ended up in a discussion about whether a hunger system would be present. I said no, but carefully considered the benefits of such a system - it forces the player to leave the dungeon floor and, as with the wind and lack of Power Points, gives an incentive to only explore so much, and adds a risk/benefit layer to the game. So I implemented a Fatigue system working the same way. Currently, 20 steps gives you one fatigue, so 2000 steps will empty your meter. I have not yet implemented health loss and have not yet capped the fatigue meter, but those things will be done soon. Probably.</p>
 	      <p class="indexdevlogtitleA">I also went back to the inventory menu and decided to fix it up. Instead of 15 items per page, there are now 10, which gives space for the "Inventory" label (not yet implemented) as well as a 2 line box for description text. I set it up, and after some tweaking, it worked pretty well! I had to fix some more inventory bugs, of course, and I also prepared some functions to hold item descriptions.</p>
 	      <p class="indexdevlogtitleA">I rewrote the item determination code from a wall of if/else statements to a random indexed array system as well, which saves a lot of space and in general makes things easier. But by doing this, I felt the urge to make more items. And so I did. I implemented description text for all the herbs I had already planned, and began rolling out new items, although implementation will come much later. First came the herbs and orbs, and then a few new spells which are analogues of the Mobile and Escape orbs, respectively. And of course, I wanted to show off everything I had done, so... DEVLOG VIDEO!</p>
-	      <center><embed width="420" height="315" class="indexdevlogtitleA"
-		src="https://www.youtube.com/v/NWouE2TMVhY"></center>
+	      <div style="text-align:center"><embed width="420" height="315" class="indexdevlogtitleA"
+		src="https://www.youtube.com/v/NWouE2TMVhY"></div>
 	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subaug272015">August 27, 2015</h2>
 	      <div class="indexdevlogA">
@@ -101,7 +101,7 @@
 	      <p class="indexdevlogtitleA">Anyways, Achy came out with a yin-yang graphic and a new spellcard graphic, so Yin-Yangs imbued with special powers will most likely be this game's equivalent of seeds. Or something like that. I don't really know at the moment.</p>
 	      <p class="indexdevlogtitleA">Now that my classes have started, all my projects will slow down drastically, this included. It's been like a week only but I feel like I've accomplished a surprising amount. At least if this project goes on hiatus again, it will be in a state where making progress is far easier than before.</p>
 	      <p class="indexdevlogtitleA">(You've got to admit though, the yin-yang orb is absolutely adorable, with the red dot looking like an eye and all)</p>
-	      <center><img alt="YinYang" src="./img/achyyinyang.png" width="16" height="16"><br><br></center>
+	      <div style="text-align:center"><img alt="YinYang" src="./img/achyyinyang.png" width="16" height="16"><br><br></div>
 	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subaug252015">August 25, 2015</h2>
 	      <div class="indexdevlogA">
@@ -130,8 +130,8 @@
 	      <p class="indexdevlogtitleA">After the four or so hours it took me to get rooms working, came corridors. And here was where I basically died. 2D arrays, incorrect indexing, Array Index Out of Bounds, error, crash, weird mishaps in code, reflected...</p>
 	      <p class="indexdevlogtitleA">...Basically, it was hell. Anyways, hell passed, and I was able to revel in the fact that I had corridors. HOORAY! There were (and still are) a few minor glitches, but you can actually make it to the stairs. As for moving to the next floor...</p>
 	      <p class="indexdevlogtitleA">Today I would like to thank Infinite Ultima Wave the Great, for his powerful and intelligent discovery of the fact that Danmakufu will not consider a single script in a plural having ended (it can be closed but not ended) unless the Boss's HP is less than 0. And yes, this is a thing. Deleting the boss does not work. You must actually delete the boss with no or negative HP in order for it to work. Of course, this was a time of great suffering. But I persevered (Ultima got pissed too, for good reason), and today I present a DevLog Video!</p>
-	      <center><embed width="420" height="315" class="indexdevlogtitleA"
-		src="https://www.youtube.com/v/7DH4jwso93k"></center>
+	      <div style="text-align:center"><embed width="420" height="315" class="indexdevlogtitleA"
+		src="https://www.youtube.com/v/7DH4jwso93k"></div>
 	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subaug212015">August 21, 2015</h2>
 	      <div class="indexdevlogA">
@@ -146,7 +146,7 @@
 	      <p class="indexdevlogtitleA">First try. 60 FPS. All collision and graphics working. Perfectly.</p>
 	      <p class="indexdevlogtitleA">Major Success.</p>
 	      <center><input class="spoilerbutton indexdevlogtitleA" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-	      <div class="spoiler"><div><img src="http://i1164.photobucket.com/albums/q570/SparenofIria/DevLog%20Image%206%20Aug%2021%202015_zpsd0fzxvhe.png" border="0" alt="Devlog Image"/ width="640" height="480"></div></div></center>
+	      <div class="spoiler"><div><img src="http://i1164.photobucket.com/albums/q570/SparenofIria/DevLog%20Image%206%20Aug%2021%202015_zpsd0fzxvhe.png" alt="Devlog Image" width="640" height="480"></div></div></center>
 	      <p class="indexdevlogtitleA">In the near future, I hope to be able to obtain new images for the stairs, warp, and shop tiles so that they're all original, and hopefully get Achy to sprite a few characters so that we can get somewhere. The plot and style of the game have yet to be determined, but I think we're ready to implement basic items now. Fingers Crossed!</p>
 	      <p class="indexdevlogtitleA">(btw, we have a Bitbucket repo for this project now. It's Bitbucket because Github is Open Source and I don't want any resources being stolen at this stage of the game)</p>
 	      </div>
