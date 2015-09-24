@@ -247,4 +247,9 @@
 <changefreq>yearly</changefreq>
 <priority>0.1</priority>
 </url>
+<url>
+<loc>http://sparen.github.io/classresources/jhu_378215/index.html</loc>
+<changefreq>weekly</changefreq>
+<priority>0.1</priority>
+</url>
 </urlset>
