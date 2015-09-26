@@ -28,12 +28,19 @@
 	      <div style="width: 600px;" class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li>September 2015: <a href="#subsept12015">01</a> <a href="#subsept22015">02</a> <a href="#subsept32015">03</a> <a href="#subsept52015">05</a> <a href="#subsept72015">07</a> <a href="#subsept82015">08</a> <a href="#subsept112015">11</a> <a href="#subsept232015">23</a></li>
+	          <li>September 2015: <a href="#subsept12015">01</a> <a href="#subsept22015">02</a> <a href="#subsept32015">03</a> <a href="#subsept52015">05</a> <a href="#subsept72015">07</a> <a href="#subsept82015">08</a> <a href="#subsept112015">11</a> <a href="#subsept232015">23</a> <a href="#subsept252015">25</a></li>
 	          <li>August 2015: <a href="#subaug212015">21</a> <a href="#subaug222015">22</a> <a href="#subaug232015">23</a> <a href="#subaug242015">24</a> <a href="#subaug252015">25</a> <a href="#subaug262015">26</a> <a href="#subaug272015">27</a> <a href="#subaug292015">29</a> <a href="#subaug312015">31</a></li>
 	          <li><a href="./projectspmddnh_devlog.html">Earlier</a></li>
 	        </ul>
 	      </div>
 	      <h1 style="color:rgb(59,248,80)">DEVLOG</h1>
+	      <h2 style="color:rgb(59,248,80)" id="subsept252015">September 25, 2015</h2>
+	      <div class="indexdevlogA">
+	      <p class="indexdevlogtitleA">Today I was bored, so I ended up trying to actually throw items that bounce off of other items properly. However, this involved new CommonData, logic fixes, and the like. But in the end, you can't throw an item and expect it to just land on top of another item. They now bounce to the next tile. But I don't have the two-tile buffer yet, so they will just delete. The buffer will soon be expanded to two pixels, but until then, if a space is completely surrounded by items, any more items thrown will just disappear and will be unretrievable.</p>
+	      <p class="indexdevlogtitleA">But anyways! DEVLOG VIDEO!!!!!</p>
+	      <div style="text-align:center"><embed width="420" height="315" class="indexdevlogtitleA"
+		src="https://www.youtube.com/v/LNxuEcR_31M"></div>
+	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="subsept232015">September 23, 2015</h2>
 	      <div class="indexdevlogA">
 	      <p class="indexdevlogtitleA">After quite a long hiatus, I finally got back to the program. Today's main achievement was throwing items. I first had to fix a minor issue (...easy to fix, but actually quite major) with my framework,. Then I worked on animating the throw. So that's all good now, although you can still throw two items to the same location - I'll fix that soon. Hopefully.</p>
