@@ -109,6 +109,7 @@ task TPlural{
 	      <p>Now, we will begin adding singles to link on. For you, you will most likely have a bunch of singles you want to link. As long as you like at least one, the plural has a purpose.</p>
 	      <p>Let's add the single script 'Nonspell1.txt' to the boss scene. We will use the function <code>ObjEnemyBossScene_Add()</code>. It takes three parameters: the boss scene object to add to, the lifebar segment (starting from 0) to attach the attack to, and the path to the single script.</p>
 	      <pre class="prettyprint"><code>ObjEnemyBossScene_Add(obj, 0, dir~"./Nonspell1.txt");</code></pre>
+	      <p>Please note that you should always begin from the 0th lifebar and work your way up from there. Otherwise Danmakufu will complain.</p>
 	      <p>Now that we have added Nonspell1.txt to the first lifebar segment, we will load and register the boss scene. To load the boss scene into memory, we will use <code>ObjEnemyBossScene_LoadInThread(obj)</code>, and to register it, we will use <code>ObjEnemyBossScene_Regist(obj)</code>.</p>
 	      <p>Now, what exactly do these do? Well, loading it basically loads the plural into memory so that it can be accessed. And as for registering, it does a number of things which we will get into shortly.</p>
 	      <h2 style="color:yellow" id="sub4">Part 4: What does Registering a Boss Scene Object Do?</h2>
@@ -240,7 +241,7 @@ task TPlural{
         </div>
       </div>
       <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 12, 2015</p>
+        <p style="text-align: center;">Last Update to Page: Sept 29, 2015</p>
         <p style="text-align: center;"><a href="#top">Top</a></p>
         <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>
         <p style="text-align: center;"><span style="font-weight: bold;">Other
