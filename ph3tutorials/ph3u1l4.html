@@ -110,25 +110,25 @@ x=x+3; //x now holds the value 11. Note that white space doesn't matter.
 x++; //This is equivalent to x = x + 1. It increments x by 1. Very helpful for counters.
 x--; //Like the above. Decrements the value of x by 1.
 let y = 6;
-y = y*2; //y is now equal to 12.
-y = y/3; //y is now equal to 4.
-y = y^2; //y is raised to the second power and is now 16.
-y = y%2; //Since the remainder/modulus when y/2 = 0, y is now 0.</code></pre>
+y = y * 2; //y is now equal to 12.
+y = y / 3; //y is now equal to 4.
+y = y ^ 2; //y is raised to the second power and is now 16.
+y = y % 2; //Since the remainder/modulus when y / 2 = 0, y is now 0.</code></pre>
 	      <p>Keep in mind that Danmakufu uses the Order of Operations and that the square root is the equivalent of raising to the 1/2 power. Below are some more examples and notes on the angle system used by Danmakufu, as well as some more shortcuts.</p>
 	      <pre class="prettyprint"><code>let angleT = 30; //Danmakufu uses degrees
-angleT+=360/5; //angleT incremented by 72 and is now 102. 'var += n' is a shortcut for 'var = var + n'
-angleT*=-1; //angleT is now -102, using the same process as the line above. 
+angleT += 360/5; //angleT incremented by 72 and is now 102. 'var += n' is a shortcut for 'var = var + n'
+angleT *= -1; //angleT is now -102, using the same process as the line above. 
 //Mathematical shortcuts also exist in the form of -=, and /=
-let x = (30+angleT)*3; //Use parentheses for order of operations. x now equals 396.</code></pre>
+let x = (30 + angleT) * 3; //Use parentheses for order of operations. x now equals 396.</code></pre>
 	      <p>However, please pay attention to the following</p>
 	       <pre class="prettyprint"><code>let y = (55)(33); //This will not work. 
-let y = 55*33; //This is the correct way to multiply the two numbers. </code></pre>
+let y = 55 * 33; //This is the correct way to multiply the two numbers. </code></pre>
 	      <p>Also, note that you cannot perform operations on variables that do not exist.</p>
 	       <pre class="prettyprint"><code>let y = 30; 
-let z = x*y; //Will bring up an error since x has not been declared.</code></pre>
+let z = x * y; //Will bring up an error since x has not been declared.</code></pre>
 	      <p>And finally, one of the more obnoxious things that will bring up an error.</p>
 	       <pre class="prettyprint"><code>let y = 30; 
-y+=.5;</code></pre>
+y += .5;</code></pre>
 	      <p>The error? Well, Danmakufu doesn't understand what the period means. You need to use 0.5 instead of .5 in order for Danmakufu to recognize it and not error at you.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How do you multiply and divide in Touhou Danmakufu?</div>
 	      <h2 style="color:yellow" id="sub6">Part 6: What are Local and Global Variables?</h2>
@@ -146,9 +146,9 @@ y+=.5;</code></pre>
 	        <!--Quiz start.-->
 		<p>1) What is the value of x after the following code has been executed?</p>
 	        <pre class="prettyprint"><code>let x = 8;
-x+=5;
-x = x^2;
-x-=3;</code></pre>
+x += 5;
+x = x ^ 2;
+x -= 3;</code></pre>
 	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'C');">
 	        <input type="RADIO" value="A" name="cc">
 	        A. 26<br>
@@ -162,8 +162,8 @@ x-=3;</code></pre>
 		<p>2) What is the value of x after the following code has been executed?</p>
 	        <pre class="prettyprint"><code>let x = 8;
 let y = 6;
-x = x*(y-3);
-x+=9;</code></pre>
+x = x * (y - 3);
+x += 9;</code></pre>
 	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
 	        <input type="RADIO" value="A" name="cc">
 	        A. 33<br>
@@ -200,14 +200,14 @@ x = '3'; //This code will bring up an error</code></pre>
 		<p>Strings have much more use than characters. Strings can be used to hold phrases, filepaths, and more, and are denoted using double quotes. Please note that if you use smart quotes, Danmakufu will not work. Below are examples of strings.</p>
 	        <pre class="prettyprint"><code>let randomstring = "This is a random string.";
 let spellname = "Fire and Water Sign \"Geysers of the Deep\"";
-let imgRumia = GetCurrentScriptDirectory()~"img/imgrumia.png";
+let imgRumia = GetCurrentScriptDirectory() ~ "img/imgrumia.png";
 let desc = "This is a spellcard made by an unknown scripter.[r]Please play at your own risk.";</code></pre>
 		<p>Obviously, strings hold much more information than a character and are far more useful. You can include numbers in strings, such as "3 + 6 = Cirno" as well as other things. In the four examples above, we have three special scenarios that deserve extra attention - spellname's escape character, imgRumia's string concatenation, and desc's [r].</p>
 		<p>Firstly, the escape character \. In most programming/scripting languages, \ is used as the escape character, and if followed by certain symbols, will perform a specific function. For example, in most languages, \n denotes a new line (not in ph3 - we will discuss this later), \t denotes a tab, and, more specific to this scenario, \" denotes a ". Since strings begin and end with double quotes, having double quotes inside a string requires some workarounds, and that workaround is provided by \", which will not be read as closing the string but rather as a symbol that, when the string is printed, will use a double quote instead of \". This is the simplest way to include a double quote within a string. Very helpful for spell names, depending on your format for spellcard names.</p>
 		<p>Next is string concatenation. For the purposes of this tutorial, be advised that GetCurrentScriptDirectory returns a string.</p>
-	        <pre><code>let imgRumia = GetCurrentScriptDirectory()~"img/imgrumia.png";</code></pre>
+	        <pre class="prettyprint"><code>let imgRumia = GetCurrentScriptDirectory() ~ "img/imgrumia.png";</code></pre>
 		<p>Here we have a string ~ string. So what does this do? This is known as string concatenation, and merges the two strings. For example:</p>
-	        <pre class="prettyprint"><code>let string = "String1"~"String2"; //string is now "String1String2"</code></pre>
+	        <pre class="prettyprint"><code>let string = "String1" ~ "String2"; //string is now "String1String2"</code></pre>
 		<p>You will almost always use this for paths being assigned to variables. It also comes in handy in a number of other situations.</p>
 		<p>And finally, [r]. [r] is new in ph3 (0.12m used \n). [r] denotes a new line and functions as a line break. Therefore, <code>let string = "one[r]two";</code>, if printed, would show the following:</p>
 	        <pre><code>one
@@ -238,18 +238,18 @@ let scripter2 = dnh[2..4]; //Obtain an array with the 2 through 3rd indices of d
 let scripter3 = dnh[lengthdnh]; //Brings up an error because the fourth index does not exist
 </code></pre>
 		<p>Once you get over the fact that it starts from 0, it's not too bad. Also, note the two dots for obtaining a subarray of the initial array. The new array includes the index before the two dots but not the one after. We will be seeing this later with ascent loops, and the function slice (See the Danmakufu Wiki) also performs the same function. Now, consider the following array:</p>
-	        <pre class="prettyprint"><code>let array = [3,6,9,12,9,9,12];</code></pre>
+	        <pre class="prettyprint"><code>let array = [3, 6, 9, 12, 9, 9, 12];</code></pre>
 		<p>We are going to perform operations on this array above!</p>
-	        <pre class="prettyprint"><code>array = [3,6,9,12,9,9,12];
+	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 9, 9, 12];
 array[4]--;</code></pre>
 		<p>Now the array looks like this:</p>
-	        <pre class="prettyprint"><code>array = [3,6,9,12,8,9,12];</code></pre>
+	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 8, 9, 12];</code></pre>
 		<p>What we have done is the following: We indexed an array, obtaining a reference to the value contained in that index, and then performed an operation (--, or -1) to it. This is how you perform operations on the contents of arrays.</p>
 		<p>There are, of course, other operations (many significantly more complicated), but for now, we will close with removal of indices. It is actually very simple.</p>
-	        <pre class="prettyprint"><code>array = [3,6,9,12,8,9,12];
+	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 8, 9, 12];
 array = erase(array, 5); //Erase fifth index of array 'array'</code></pre>
 		<p>After executing the function erase on the array, we are left with the following array</p>
-	        <pre class="prettyprint"><code>array = [3,6,9,12,8,12];</code></pre>
+	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 8, 12];</code></pre>
 		<p>As a final note, since strings are arrays of characters, you can also index strings the same way you index arrays. CK Crash's tutorial (see Part 1 for link) also includes the boolean trick, but we will discuss booleans in the next lesson. There are also 2D and 3D arrays (etc), but we will not deal with those now - there is limited use for them until you are trying to organize CommonData or spawn bullets in a shape, etc.</p>
 	      <h2 style="color:yellow" id="quiz3">Quiz: Strings and Arrays</h2>
 	        <!--Quiz start.-->
@@ -314,7 +314,7 @@ array = erase(array, 5); //Erase fifth index of array 'array'</code></pre>
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

@@ -94,10 +94,10 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
         count++;
 }</code></pre>
 	      <p>Now, if count is not greater than 30, count will increment by 1! You can also nest if else statements and have multiple else statements, like so.</p>
-	        <pre class="prettyprint"><code>if(count>30){
-	count=0;
+	        <pre class="prettyprint"><code>if(count &gt; 30){
+	count = 0;
 }else if(count &lt; 0){
-	count=0;
+	count = 0;
 }else{
 	count++;
 	if(count % 3 == 0){
@@ -156,7 +156,7 @@ ascent(i in 0..8){
 	      <p>What this code does is actually a little hard to understand. You can think of it like this: a local variable called i, with a variable 0, is declared. After this, the block of code inside the braces {} is executed. After that, i is incremented by 1 as long as it is less than 8. If it is less than 8 after having been incremented, the code loops again. Once the variable i is equal to 8, the loop ends. This means that i will never actually equal 8 in a run through the loop.</p>
 	        <pre class="prettyprint"><code>let x = 5;
 ascent(i in 0..8){
-    x=i;
+    x = i;
 }</code></pre>
 	      <p>If you do the above, x will start at 0, but it will be set to the value of i, which is 0. As the loop continues, x will be set to 1, 2, 3, and eventually, 7. After it is set to 7, the local variable i is set to 8, and the loop ends, leaving x as 7. In total, the code loops 8 times, and i has values from 0 to 7.</p>
 	      <p>For reference, Drake once wrote the following equivalent code for an ascent loop:</p>
@@ -184,7 +184,7 @@ let y = 10;
 while(x &lt; y){
     y--;
 }
-let z = x+y;</code></pre>
+let z = x + y;</code></pre>
 		<p>1) What is the value of z?</p>
 	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
 	        <input type="RADIO" value="A" name="cc">
@@ -196,7 +196,7 @@ let z = x+y;</code></pre>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 	        <br>
-		<p>2) <code>let bool = (z%2 == 0);</code></p>
+		<p>2) <code>let bool = (z % 2 == 0);</code></p>
 		<p>What is the value of bool?</p>
 	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
 	        <input type="RADIO" value="A" name="cc">
@@ -249,9 +249,9 @@ while(x &lt; 10){
     x++;
 }
 ascent(i in 6..23){
-    x = i/2;
+    x = i / 2;
 }
-if(x == (23/2)){
+if(x == (23 / 2)){
     x = 25;
 }else{
     x = 23;
@@ -267,7 +267,7 @@ if(x == (23/2)){
 	      <h2 style="color:yellow" id="sub5">Part 5: What are Functions?</h2>
 	      <p>We have referenced functions before, but now is the time to go in depth about what a function is and how to use them.</p>
 	      <p>Firstly, a function is able to take and return parameters, also known as arguments or inputs. For example, you can have a function f(x)=x+5 that takes a value x, and returns that value incremented by 5. In Danmakufu, it looks like this:</p>
-		<pre class="prettyprint"><code>function math(var){//using 'let var' is also acceptable but nobody really does it.
+		<pre class="prettyprint"><code>function math(var){  //using 'let var' is also acceptable but nobody really does it.
     return var + 5;
 }</code></pre>
 	      <p>In this code, the name of the function is math, the parameter inside the parenthesis is var, and the return value is var + 5. As for how to use it, here's a code snippet.</p>
@@ -306,7 +306,7 @@ let y = math(6); //y will be equal to 11</code></pre>
 	      <h2 style="color:yellow" id="quiz2">Quiz: Script Flow and Syntax</h2>
 	        <!--Quiz start.-->
 		<p>1) Why does Danmakufu freeze when the below code is executed?</p>
-	        <pre class="prettyprint"><code>while(!Obj_IsDeleted(obj)){//Obj_IsDeleted() returns a boolean
+	        <pre class="prettyprint"><code>while(!Obj_IsDeleted(obj)){ //Obj_IsDeleted() returns a boolean
 }</code></pre>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 7);">
 	        <input type="RADIO" value="A" name="cc">
@@ -357,7 +357,7 @@ Wait(5);
 	      <p><code>alternative ascent break case descent else function if in let local loop others real return sub task times while yield</code></p>
 	      <p>There are also function names built into Danmakufu that are reserved and cannot be overridden (if you try to override these with a function, you will get an error where a function with the same name is already defined. If you name a variable as one of these, it will freeze rather than erroring.</p>
 	      <p><code>add append compare concatenate divide false index length multiply negative not pi power predecessor remainder result slice successor subtract true</code></p>
-	      <p>On that note, please just use the mathematical operator if it is available. <code>add(3,5);</code> is utterly pointless when <code>3+5</code> is significantly easier and less of a pain to write.</p>
+	      <p>On that note, please just use the mathematical operator if it is available. <code>add(3, 5);</code> is utterly pointless when <code>3 + 5</code> is significantly easier and less of a pain to write.</p>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Should give an alternative, visual example to the contents of this lesson</p>
 	      <p><a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs" title="Danmakufu for Easy Modos by CK Crash">Danmakufu for Easy Modos by CK Crash</a> (CK Crash)<br>--&gt;Since this tutorial was used as a source for mine, I highly suggest that you read it if you haven't already.</p>
@@ -370,7 +370,7 @@ Wait(5);
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 4, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

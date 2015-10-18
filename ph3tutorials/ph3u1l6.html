@@ -101,16 +101,16 @@
 	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Set the Boss Life, Spell Bonus and Timer?</h2>
 	      <p>At this stage, a complete explanation of @Event will most likely fly straight over your heads, but it is important to know that when certain processes happen. @Event is automatically called by Danmakufu, and depending on the arguments there when it is called, it will do various things such as spawning the boss magic circle, etc. Below is a sample @Event.</p>
 	        <pre class="prettyprint"><code>@Event{
-	alternative(GetEventType())
-	case(EV_REQUEST_LIFE){
-		SetScriptResult(500);
-        }
-	case(EV_REQUEST_TIMER){
-		SetScriptResult(60);
-	}
-	case(EV_REQUEST_SPELL_SCORE){
-		SetScriptResult(1000000);
-	}
+    alternative(GetEventType())
+    case(EV_REQUEST_LIFE){
+        SetScriptResult(500);
+    }
+    case(EV_REQUEST_TIMER){
+        SetScriptResult(60);
+    }
+    case(EV_REQUEST_SPELL_SCORE){
+        SetScriptResult(1000000);
+    }
 }</code></pre>
 	      <p>EV_REQUEST_LIFE is the boss's life - this event is called once automatically at the start of the Single, and will set the boss's life to 500. EV_REQUEST_TIMER is the timer for how long the attack will run for, and EV_REQUEST_SPELL_SCORE is called when you declare a spellcard (we will get into this later). It sets the starting Spellcard Bonus.</p>
 	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Create and Register the Boss?</h2>
@@ -118,14 +118,14 @@
 	      <p>Firstly, between the header and @Event, we will want to create a global variable called objBoss. Basically, write <code>let objBoss;</code> on a line between the header and @Event. After this, we will turn to @Initialize.</p>
 	      <p>Remember that @Initialize runs only once at the start of a script. Also recall that anything declared as a global variable can be accessed by anything in the script. Therefore, at the top of @Initialize, we will write the following:</p>
 	        <pre class="prettyprint"><code>@Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);</code></pre>
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);</code></pre>
 	      <p>The first line assigns the variable objBoss with a value - an object ID belonging to a brand new Enemy object with type boss. The next line registers the Enemy object. You must register certain objects, such as enemies and custom shots, before they can be used.</p>
 	      <p>However, we do not have any graphic for the boss! From the sample folder that comes with Danmakufu, copy ExRumia.png to the current folder. Below the Enemy Register code, place the following:</p>
-	      <pre class="prettyprint"><code>	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);</code></pre>
+	      <pre class="prettyprint"><code>    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    ObjPrim_SetTexture(objBoss, imgExRumia);
+    ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+    ObjSprite2D_SetDestCenter(objBoss);</code></pre>
 	      <p>We will go into animations later, but for now, we will use a default image. The first line assigns the path to the graphic to a new variable called imgExRumia. <code>GetCurrentScriptDirectory()</code> is a function that returns a string containing the path to the current directory, and it is concatenated to whatever comes after the ~, as discussed in an earlier lesson. After this, <code>ObjPrim_SetTexture()</code> assigns the image in that path to the Boss object, essentially giving it a graphic. <code>ObjSprite2D_SetSourceRect()</code> states which part of the texture to use (note that it is not 64, 0, 128, 64 because the top and right edges behave differently from the other two. We will revisit this problem when we deal with image rendering in <a href="./ph3u2l13.html">Lesson 13</a>). <b><span style="color:magenta">!!!FACT CHECK NEEDED!!!</span></b> Finally, <code>ObjSprite2D_SetDestCenter()</code> tells Danmakufu to center the graphic for the Boss object.</p>
 	      <p>However, our boss has been spawned at (0,0), the top left corner of the playing field. Now, how do we move it?</p>
 	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Move the Boss?</h2>
@@ -133,10 +133,10 @@
 	      <p>In the end, it will be up to you to learn the various ObjMove functions. There are, of course, a few important things to note. Firstly, the default playing screen is 384 by 448 pixels, the values returned by <code>GetStgFrameWidth</code> and <code>GetStgFrameHeight</code> by default, respectively. Also, the origin is the top left corner of the playing field for objects whose render priorities are between 0.20 and 0.80, not including 0.80. Perhaps the hardest thing to get used to is that the y value increases as you go from the top to the bottom of the screen. Just keep that in mind, because it is a common source of infuriation. We will discuss this once more in <a href="./ph3u1l11.html">Lesson 11</a>.</p>
 	      <p>Please put these two functions somewhere in your script, preferably immediately after @MainLoop. Also add wait() from <a href="./ph3u1l5.html">Lesson 5</a>, because it will be helpful.</p>
 	      <pre class="prettyprint"><code> function GetCenterX{
-     return GetStgFrameWidth/2;
+     return GetStgFrameWidth / 2;
  }
  function GetCenterY{
-     return GetStgFrameHeight/2;
+     return GetStgFrameHeight / 2;
  }</code></pre>
 	      <p>These two functions are very useful for positioning objects on the playing field. Now we will move the boss.</p>
 	      <p>While it is possible to simply use <code>ObjMove_SetX()</code> and <code>ObjMove_SetY()</code> (or <code>ObjMove_SetPosition()</code>), be aware that this will effectively teleport the boss, and the player will have to move to a new location in order to continue dealing damage. And no, warping every 30 frames is annoying, not fun. Thankfully, there is ObjMove_SetDestAtFrame().</p>
@@ -155,36 +155,36 @@
 let objBoss;
 
 @Event{
-	alternative(GetEventType())
-	case(EV_REQUEST_LIFE){
-		SetScriptResult(500);
-        }
-	case(EV_REQUEST_TIMER){
-		SetScriptResult(60);
-	}
-	case(EV_REQUEST_SPELL_SCORE){
-		SetScriptResult(1000000);
-	}
+    alternative(GetEventType())
+    case(EV_REQUEST_LIFE){
+        SetScriptResult(500);
+    }
+    case(EV_REQUEST_TIMER){
+        SetScriptResult(60);
+    }
+    case(EV_REQUEST_SPELL_SCORE){
+        SetScriptResult(1000000);
+    }
 }
 
 @Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    ObjPrim_SetTexture(objBoss, imgExRumia);
+    ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+    ObjSprite2D_SetDestCenter(objBoss);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
 }
 
 @MainLoop{
 }
 
 function GetCenterX{
-     return GetStgFrameWidth/2;
+     return GetStgFrameWidth / 2;
 }
 function GetCenterY{
-     return GetStgFrameHeight/2;
+     return GetStgFrameHeight / 2;
 }
 
 function wait(n){
@@ -199,15 +199,15 @@ function wait(n){
 	      <h2 style="color:yellow" id="sub7">Part 7: How Do I Close the Script?</h2>
 	      <p>Right now our script does practically nothing since all it does is create a boss and move it to a location (and then allow it to be shot down). However, we need to be able to close the script in order to finish writing a solid complete framework for our script.</p>
 	      <p>In the sample scripts that come with Danmakufu, there is a portion of @MainLoop that basically runs only when the boss's life falls below or equal to 0. However, that adds clutter to @MainLoop. Therefore, we will call a task TFinalize; at the end of @Initialize.</p>
-	      <pre class="prettyprint"><code>    task TFinalize {
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
-	Obj_Delete(objBoss);
-	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
-	SetAutoDeleteObject(true);
-	CloseScript(GetOwnScriptID());
-	return;
-    }</code></pre>
-	      <p>While the boss's life is greater than 0, this task will do nothing. However, the moment the boss's HP drops to 0 or below, the boss object will delete, every enemy shot on screen will be deleted, and the script will close. The use of return; at the end does nothing and is not needed, although it is in the sample scripts.</p>
+	      <pre class="prettyprint"><code>task TFinalize {
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){yield;}
+    Obj_Delete(objBoss);
+    DeleteShotAll(TYPE_ALL, TYPE_IMMEDIATE);
+    SetAutoDeleteObject(true);
+    CloseScript(GetOwnScriptID());
+    return;
+}</code></pre>
+	      <p>While the boss's life is greater than 0, this task will do nothing. However, the moment the boss's HP drops to 0 or below, the boss object will delete, every enemy shot on screen will be deleted, and the script will close. The use of <code>return;</code> at the end does nothing and is not needed, although it is in the sample scripts.</p>
 	      <p>There is also <code>SetAutoDeleteObject();</code>, which defaults to false. When true, all objects spawned in the script will be deleted at the very end. Since many function libraries assume that it is set to true (and indeed, most scripters in the western Danmakufu community set it to true), I recommend that you use it. There are issues with using it, of course, but we will get into that in a much later tutorial.</p>
 	      <p>With this, our script can now end. So now... it's time to shoot our bullets!</p>
 	      <div class="tut_exercise">EXERCISE: Write out the code that has been covered above. Don't copy and paste - write it out yourself. Use this to practice tabbing and make sure to add your semicolons;</div>
@@ -237,15 +237,15 @@ function wait(n){
 	        <br>
 		<p>Now Raiko cannot seem to get her hitbox to work.</p>
 	        <pre class="prettyprint"><code>@Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-	let imgRaiko = GetCurrentScriptDirectory ~ "Raiko.png";
-	ObjPrim_SetTexture(objBoss, imgRaiko);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
-	ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
-        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    let imgRaiko = GetCurrentScriptDirectory ~ "Raiko.png";
+    ObjPrim_SetTexture(objBoss, imgRaiko);
+    ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+    ObjSprite2D_SetDestCenter(objBoss);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+    ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
 }
 
 @MainLoop{
@@ -264,39 +264,39 @@ function wait(n){
 	      <p>It's what you've all been waiting for! Creating bullets! However... we are now entering an area where coding style comes into play.</p>
 	      <p>There are multiple ways to do what we want to do here. There is a tasking style (very commonly used), a @MainLoop style (less commonly used), and countless others. I will show the tasking style, the @MainLoop style, and my own style. It is important to be able to read and understand how a variety of different styles work to accomplish the same or similar goals.</p>
 	      <p>We will begin with the most generic bullet function, <code>CreateShotA1(x, y, speed, angle, graphic, delay);</code>. The x and y positions are the starting coordinates for the bullet. You may also use <code>let obj = CreateShotA1();</code> to transform the bullet later, but that will be covered later. For now, we will discuss spawning a bullet every thirty frames, first in tasking style. But first, add the following below your Danmakufu Header:</p>
-	      <pre class="prettyprint"><code>#include"script/default_system/Default_ShotConst.txt"</code></pre>
+	      <pre class="prettyprint"><code>#include "script/default_system/Default_ShotConst.txt"</code></pre>
 	      <p>This will include the default shotsheet with the script so that we can have bullet graphics. Don't worry about the include now - just be aware that the file contains a list of shot constants that will make it easier to figure out which bullet we are firing. I personally do not use shot constants, preferring to simply load a shotsheet and use numbers, but for this lesson, I will demonstrate with the shot constants.</p>
-	      <p>Remember TFinalize? Now we will create a task called MainTask; and call it in @Initialize. In MainTask, we will first insert a <code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+	      <p>Remember TFinalize? Now we will create a task called MainTask; and call it in @Initialize. In MainTask, we will first insert a <code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
 }</code></p>
 	      <p>Inside the braces we will do the following:</p>
-	      <pre class="prettyprint"><code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+	      <pre class="prettyprint"><code>while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
     wait(30);
 }</code></pre>
 	      <p>In this while loop, we first declare a variable angleT to hold the angle from the boss to the player, given by the function <code>GetAngleToPlayer();</code>. After this, we fire a shot from the boss's position with speed 2, angle towards the player. Its graphic is DS_BALL_S_RED, a small red ball, and there are 5 delay frames before the bullet materializes and can damage the player. After this, the task waits 30 frames before checking the boss's life and looping through this again.</p>
 	      <p>Now I will show the @MainLoop style. First, you will want to define a global variable count (or frame, but I prefer count) after the shotsheet include, and set it to 0. Then, in @MainLoop, you will add the following after the hitbox declaration and before the <code>yield;</code>:</p>
-	      <pre class="prettyprint"><code>  if(count == 30){
+	      <pre class="prettyprint"><code>if(count == 30){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
     count = 0;
-  }
-  count++;</code></pre>
+}
+count++;</code></pre>
 	      <p>Basically, you increment your counter until it hits 30, then execute the bullet spawning and reset the counter</p>
 	      <p>Note that in plural scripts and the like, this will need to be changed slightly to account for the fact that the bullets will still shoot if the boss is dead. I will describe a countermeasure below.</p>
 	      <p>Finally, I will discuss my coding method, which is similar to the @MainLoop method. The main difference is that I do not reset the counter and instead use a modulus. The @MainLoop code I insert between the hitboxes and yield; is similar to the following:</p>
-	      <pre class="prettyprint"><code>  if(count % 30 == 0){
+	      <pre class="prettyprint"><code>if(count % 30 == 0){
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
-  }
-  count++;</code></pre>
+}
+count++;</code></pre>
 	      <p>When the count is a multiple of 30, the code inside the braces will execute. All three methods are functionally similar. However, I will now describe good habits and how to robustify the code. For the tasking code, there is a check after the wait for whether or not the boss is alive, but this is not the case for the other two methods. Therefore, we will do the following:</p>
 	      <p>First, we will create a task called fire;. It will contain the following:</p>
-	      <pre class="prettyprint"><code>  task fire{
+	      <pre class="prettyprint"><code>task fire{
     if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}//Default kill to prevent (0,0) spawning
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
-  }</code></pre>
+}</code></pre>
 	      <p>We will call fire; instead of the two lines defining the angleT local variable and calling the bullet. Now, the bullets will not spawn if the boss happens to be dead and the script is still running due to the return; following a check for the boss's life. You will see this line of code plastered everywhere in my scripts - it is very much my most often copy-pasted line of code in ph3. We will have an in-depth discussion of this in <a href="./ph3u2l16">Lesson 16</a>.</p>
 	      <p>Well, now we have a boss that fires a bullet. To conclude this lesson, I will show the scripts we have devised in their entirety.</p>
 	      <div class="tut_exercise">EXERCISE: Once again, write out the code that has been covered above. Experiment with the bullet graphics (see default_system/Default_ShotConst.txt for a list of predetermined ones), as well as speeds and angles.</div>
@@ -308,44 +308,44 @@ function wait(n){
 #Text["Code by Sparen[r]My First Bullet!"]
 #BGM["./necrofantasia.ogg"]
 
-#include"script/default_system/Default_ShotConst.txt"
+#include "script/default_system/Default_ShotConst.txt"
 
 let objBoss;
 
 @Event{
-	alternative(GetEventType())
-	case(EV_REQUEST_LIFE){
-		SetScriptResult(500);
-        }
-	case(EV_REQUEST_TIMER){
-		SetScriptResult(60);
-	}
-	case(EV_REQUEST_SPELL_SCORE){
-		SetScriptResult(1000000);
-	}
+    alternative(GetEventType())
+    case(EV_REQUEST_LIFE){
+        SetScriptResult(500);
+    }
+    case(EV_REQUEST_TIMER){
+        SetScriptResult(60);
+    }
+    case(EV_REQUEST_SPELL_SCORE){
+        SetScriptResult(1000000);
+    }
 }
 
 @Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    ObjPrim_SetTexture(objBoss, imgExRumia);
+    ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+    ObjSprite2D_SetDestCenter(objBoss);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
 
-        TFinalize;
-	MainTask;
+    TFinalize;
+    MainTask;
 }
 
 @MainLoop{
-        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
-        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
-        yield;
+    ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+    ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+    yield;
 }
 
 task MainTask{
-    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
         let angleT = GetAngleToPlayer(objBoss);
         CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
         wait(30);
@@ -353,19 +353,19 @@ task MainTask{
 }
 
 task TFinalize {
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
-	Obj_Delete(objBoss);
-	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
-	SetAutoDeleteObject(true);
-	CloseScript(GetOwnScriptID());
-	return;
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){yield;}
+    Obj_Delete(objBoss);
+    DeleteShotAll(TYPE_ALL, TYPE_IMMEDIATE);
+    SetAutoDeleteObject(true);
+    CloseScript(GetOwnScriptID());
+    return;
 }
 
 function GetCenterX{
-     return GetStgFrameWidth/2;
+    return GetStgFrameWidth / 2;
 }
 function GetCenterY{
-     return GetStgFrameHeight/2;
+    return GetStgFrameHeight / 2;
 }
 
 function wait(n){
@@ -379,45 +379,45 @@ function wait(n){
 #Text["Code by Sparen[r]My First Bullet!"]
 #BGM["./necrofantasia.ogg"]
 
-#include"script/default_system/Default_ShotConst.txt"
+#include "script/default_system/Default_ShotConst.txt"
 
 let objBoss;
 let count = 0;
 
 @Event{
-	alternative(GetEventType())
-	case(EV_REQUEST_LIFE){
-		SetScriptResult(500);
-        }
-	case(EV_REQUEST_TIMER){
-		SetScriptResult(60);
-	}
-	case(EV_REQUEST_SPELL_SCORE){
-		SetScriptResult(1000000);
-	}
+    alternative(GetEventType())
+    case(EV_REQUEST_LIFE){
+        SetScriptResult(500);
+    }
+    case(EV_REQUEST_TIMER){
+        SetScriptResult(60);
+    }
+    case(EV_REQUEST_SPELL_SCORE){
+        SetScriptResult(1000000);
+    }
 }
 
 @Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    ObjPrim_SetTexture(objBoss, imgExRumia);
+    ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+    ObjSprite2D_SetDestCenter(objBoss);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
 
-        TFinalize;
+    TFinalize;
 }
 
 @MainLoop{
-        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
-        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
-        if(count == 30){
-            fire;
-            count = 0;
-        }
-        count++;
-        yield;
+    ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+    ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+    if(count == 30){
+        fire;
+        count = 0;
+    }
+    count++;
+    yield;
 }
 
 task fire{
@@ -427,23 +427,23 @@ task fire{
 }
 
 task TFinalize {
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
-	Obj_Delete(objBoss);
-	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
-	SetAutoDeleteObject(true);
-	CloseScript(GetOwnScriptID());
-	return;
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){yield;}
+    Obj_Delete(objBoss);
+    DeleteShotAll(TYPE_ALL, TYPE_IMMEDIATE);
+    SetAutoDeleteObject(true);
+    CloseScript(GetOwnScriptID());
+    return;
 }
 
 function GetCenterX{
-     return GetStgFrameWidth/2;
+    return GetStgFrameWidth / 2;
 }
 function GetCenterY{
-     return GetStgFrameHeight/2;
+    return GetStgFrameHeight / 2;
 }
 
 function wait(n){
-     loop(n){yield;}
+    loop(n){yield;}
 }</code></pre>
 	      <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
 	      <p>Sparen style</p>
@@ -453,44 +453,44 @@ function wait(n){
 #Text["Code by Sparen[r]My First Bullet!"]
 #BGM["./necrofantasia.ogg"]
 
-#include"script/default_system/Default_ShotConst.txt"
+#include "script/default_system/Default_ShotConst.txt"
 
 let objBoss;
 let count = 0;
 
 @Event{
-	alternative(GetEventType())
-	case(EV_REQUEST_LIFE){
-		SetScriptResult(500);
-        }
-	case(EV_REQUEST_TIMER){
-		SetScriptResult(60);
-	}
-	case(EV_REQUEST_SPELL_SCORE){
-		SetScriptResult(1000000);
-	}
+    alternative(GetEventType())
+    case(EV_REQUEST_LIFE){
+        SetScriptResult(500);
+    }
+    case(EV_REQUEST_TIMER){
+        SetScriptResult(60);
+    }
+    case(EV_REQUEST_SPELL_SCORE){
+        SetScriptResult(1000000);
+    }
 }
 
 @Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    ObjPrim_SetTexture(objBoss, imgExRumia);
+    ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+    ObjSprite2D_SetDestCenter(objBoss);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
 
-        TFinalize;
+    TFinalize;
 }
 
 @MainLoop{
-        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
-        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
-        if(count%30==0){
-            fire;
-        }
-        count++;
-        yield;
+    ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+    ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+    if(count % 30 == 0){
+        fire;
+    }
+    count++;
+    yield;
 }
 
 task fire{
@@ -500,23 +500,23 @@ task fire{
 }
 
 task TFinalize {
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
-	Obj_Delete(objBoss);
-	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
-	SetAutoDeleteObject(true);
-	CloseScript(GetOwnScriptID());
-	return;
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){yield;}
+    Obj_Delete(objBoss);
+    DeleteShotAll(TYPE_ALL, TYPE_IMMEDIATE);
+    SetAutoDeleteObject(true);
+    CloseScript(GetOwnScriptID());
+    return;
 }
 
 function GetCenterX{
-     return GetStgFrameWidth/2;
+    return GetStgFrameWidth / 2;
 }
 function GetCenterY{
-     return GetStgFrameHeight/2;
+    return GetStgFrameHeight / 2;
 }
 
 function wait(n){
-     loop(n){yield;}
+    loop(n){yield;}
 }</code></pre>
 	      <h2 style="color:yellow" id="subs">Summary</h2>
 	        <ul>
@@ -545,7 +545,7 @@ function wait(n){
         </div>
       </div>
       <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 4, 2015</p>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>
         <p style="text-align: center;"><a href="#top">Top</a></p>
         <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>
         <p style="text-align: center;"><span style="font-weight: bold;">Other

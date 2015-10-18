@@ -27,36 +27,81 @@
 	          <li><a href="#sub1">White Space</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">White Space</h2>
-		<p>--- Trailing White Space at the end of a line is not allowed.</p>
-		<p>--- Exactly one space is required before a single line comment.</p>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">Trailing White Space at the end of a line is not allowed.</h3>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">Exactly one space is required before a single line comment following a statement.</h3>
 	        <pre class="prettyprint" style="background-color: #400000;"><code>let x;//declare x</code></pre>
 	        <pre class="prettyprint" style="background-color: #004000;"><code>let x; //declare x</code></pre>
-		<p>--- The unit of indentation is four spaces.<br>------ <b>It is also acceptable to use tabs, as long as you ONLY use tabs and do not use spaces for indentation at all.</b></p>
-		<p>--- Blocks must be indented.</b></p>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);"> The unit of indentation is four spaces.</h3>
+		<p><b>It is also acceptable to use tabs, as long as you ONLY use tabs and do not use spaces for indentation at all.</b></p>
+		<p>This is because tab sizes are not standardized. Always maintain a standard indent size for your own code.</p>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">Blocks must be indented.</b></h3>
 	        <pre class="prettyprint" style="background-color: #400000;"><code>sub a{
 function();
 }</code></pre>
 	        <pre class="prettyprint" style="background-color: #004000;"><code>sub a{
     function();
 }</code></pre>
-		<p>--- Exactly one space is required after a comma.</p>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">Exactly one space is required after a comma.</h3>
 	        <pre class="prettyprint" style="background-color: #400000;"><code>let x = [1,2,3];
 ObjSprite2D_SetSourceRect(objEnemy,64,1,127,64);</code></pre>
 	        <pre class="prettyprint" style="background-color: #004000;"><code>let x = [1, 2, 3];
 ObjSprite2D_SetSourceRect(objEnemy, 64, 1, 127, 64);</code></pre>
-		<p>--- Operators must be surrounded by one space (+ - * / % = += -= *= /= %= == != &gt; &lt; &gt;= &lt;= && || ~)<br>------ The negation operator ! is excluded from this guideline.</p>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">Exactly one space is required after an include.</h3>
+	        <pre class="prettyprint" style="background-color: #400000;"><code>#include"file.dnh"</code></pre>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>#include "file.dnh"</code></pre>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">Operators must be surrounded by one space</h3>
+		<p>Affects <code>+ - * / % = += -= *= /= %= == != &gt; &lt; &gt;= &lt;= && || ~</code></p>
+		<p>The negation operator ! is excluded from this guideline.</p>
 	        <pre class="prettyprint" style="background-color: #400000;"><code>let x=5+4;
 let y=x>10;
 x+=3/5;
 if(x>=20&&!y){
     let z = (x!=3)||y;
-}</code></pre>
+}
+let str="danmaku"~"fu";</code></pre>
 	        <pre class="prettyprint" style="background-color: #004000;"><code>let x = 5 + 4;
 let y = x > 10;
 x += 3 / 5;
 if(x >= 20 || !y){
     let z = (x != 3) || y;
+}
+let str="danmaku" ~ "fu";</code></pre>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">White space is not allowed between a function call and its parameters.</h3>
+		<p>Functions are not to be confused with control statements such as if, else, ascent, while, etc.</p>
+	        <pre class="prettyprint" style="background-color: #400000;"><code>myfunc ();</code></pre>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>myfunc();</code></pre>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">White space is not required after control statements.</h3>
+	        <pre class="prettyprint" style="background-color: #400000;"><code>loop(5){}</code></pre>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>loop (5){}</code></pre>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">White space is not required before { in control statements.</h3>
+		<p>Additionally, as stated in <a target="_blank" href="./ph3u1l6.html">Lesson 6</a>, there is no standard in Danmakufu for placing a { on the same line as the control statement or on the next line.</p>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>loop(5){}
+loop (5){}
+loop(5){
+}
+loop (5)
+{
 }</code></pre>
+		</div>
 	      <br>            </div>          </div>        </div>      </div>      <footer>
         <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015 by Andrew Fan</p>      </footer>    </div>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
