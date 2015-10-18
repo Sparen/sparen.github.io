@@ -25,46 +25,46 @@
 #Text["Code by Sparen[r]My First Bullet!"]
 #BGM["./necrofantasia.ogg"]
 
-#include"script/default_system/Default_ShotConst.txt"
+#include "script/default_system/Default_ShotConst.txt"
 
 let objBoss;
 let objScene=GetEnemyBossSceneObjectID();
 
 @Event{
-	alternative(GetEventType())
-	case(EV_REQUEST_LIFE){
-		SetScriptResult(500);
-        }
-	case(EV_REQUEST_TIMER){
-		SetScriptResult(60);
-	}
-	case(EV_REQUEST_SPELL_SCORE){
-		SetScriptResult(1000000);
-	}
+    alternative(GetEventType())
+    case(EV_REQUEST_LIFE){
+        SetScriptResult(500);
+    }
+    case(EV_REQUEST_TIMER){
+        SetScriptResult(60);
+    }
+    case(EV_REQUEST_SPELL_SCORE){
+        SetScriptResult(1000000);
+    }
 }
 
 @Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
 
-	ObjEnemyBossScene_StartSpell(objScene);
+    ObjEnemyBossScene_StartSpell(objScene);
 
-	TDrawLoop;
-        TFinalize;
-	MainTask;
+    TDrawLoop;
+    TFinalize;
+    MainTask;
 }
 
 @MainLoop{
-        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
-        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
-        yield;
+    ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+    ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+    yield;
 }
 
 task MainTask{
     wait(120);
     movement;
-    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
         let angleT = GetAngleToPlayer(objBoss);
         CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
         wait(30);
@@ -72,41 +72,41 @@ task MainTask{
 }
 
 task movement{
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
-            ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-60,GetCenterY-120), 60);
-            wait(240);
-	}
+    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
+        ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90,GetCenterX - 90), rand(GetCenterY - 60,GetCenterY - 120), 60);
+        wait(240);
+    }
 }
 
 task TDrawLoop {
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
+    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    ObjPrim_SetTexture(objBoss, imgExRumia);
+    ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+    ObjSprite2D_SetDestCenter(objBoss);
 }
 
 task TFinalize {
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
-	if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
-	      +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
-	  AddScore(ObjEnemyBossScene_GetInfo(objScene,INFO_SPELL_SCORE));
-	}
-	Obj_Delete(objBoss);
-	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
-	SetAutoDeleteObject(true);
-	CloseScript(GetOwnScriptID());
-	return;
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){yield;}
+    if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
+            +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
+        AddScore(ObjEnemyBossScene_GetInfo(objScene, INFO_SPELL_SCORE));
+    }
+    Obj_Delete(objBoss);
+    DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
+    SetAutoDeleteObject(true);
+    CloseScript(GetOwnScriptID());
+    return;
 }
 
 function GetCenterX{
-     return GetStgFrameWidth/2;
+    return GetStgFrameWidth / 2;
 }
 function GetCenterY{
-     return GetStgFrameHeight/2;
+    return GetStgFrameHeight / 2;
 }
 
 function wait(n){
-     loop(n){yield;}
+    loop(n){yield;}
 }</code></pre>
 	      <h2 style="color:yellow" id="cp4">Checkpoint - Sparen</h2>
 	      <p>Sparen style</p>
@@ -116,46 +116,46 @@ function wait(n){
 #Text["Code by Sparen[r]My First Bullet!"]
 #BGM["./necrofantasia.ogg"]
 
-#include"script/default_system/Default_ShotConst.txt"
+#include "script/default_system/Default_ShotConst.txt"
 
 let objBoss;
 let objScene=GetEnemyBossSceneObjectID();
 let count = -120;
 
 @Event{
-	alternative(GetEventType())
-	case(EV_REQUEST_LIFE){
-		SetScriptResult(500);
-        }
-	case(EV_REQUEST_TIMER){
-		SetScriptResult(60);
-	}
-	case(EV_REQUEST_SPELL_SCORE){
-		SetScriptResult(1000000);
-	}
+    alternative(GetEventType())
+    case(EV_REQUEST_LIFE){
+        SetScriptResult(500);
+    }
+    case(EV_REQUEST_TIMER){
+        SetScriptResult(60);
+    }
+    case(EV_REQUEST_SPELL_SCORE){
+        SetScriptResult(1000000);
+    }
 }
 
 @Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
 
-	ObjEnemyBossScene_StartSpell(objScene);
+    ObjEnemyBossScene_StartSpell(objScene);
 
-	TDrawLoop;
-        TFinalize;
+    TDrawLoop;
+    TFinalize;
 }
 
 @MainLoop{
-        ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
-        ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
-	if(count==0){movement;}
+    ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+    ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
+    if(count == 0){movement;}
 
-        if(count%30==0 && count>=0){
-            fire;
-        }
-        count++;
-        yield;
+    if(count % 30 == 0 && count >= 0){
+        fire;
+    }
+    count++;
+    yield;
 }
 
 task fire{
@@ -165,44 +165,44 @@ task fire{
 }
 
 task movement{
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
-            ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-60,GetCenterY-120), 60);
-            wait(240);
-	}
+    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
+        ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-60,GetCenterY-120), 60);
+        wait(240);
+    }
 }
 
 task TDrawLoop {
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
+    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    ObjPrim_SetTexture(objBoss, imgExRumia);
+    ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+    ObjSprite2D_SetDestCenter(objBoss);
 }
 
 task TFinalize {
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){yield;}
-	if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
-	      +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
-	  AddScore(ObjEnemyBossScene_GetInfo(objScene,INFO_SPELL_SCORE));
-	}
-	Obj_Delete(objBoss);
-	DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
-	SetAutoDeleteObject(true);
-	CloseScript(GetOwnScriptID());
-	return;
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){yield;}
+    if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
+            +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
+        AddScore(ObjEnemyBossScene_GetInfo(objScene, INFO_SPELL_SCORE));
+    }
+    Obj_Delete(objBoss);
+    DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
+    SetAutoDeleteObject(true);
+    CloseScript(GetOwnScriptID());
+    return;
 }
 
 function GetCenterX{
-     return GetStgFrameWidth/2;
+    return GetStgFrameWidth / 2;
 }
 function GetCenterY{
-     return GetStgFrameHeight/2;
+    return GetStgFrameHeight / 2;
 }
 
 function wait(n){
-     loop(n){yield;}
+    loop(n){yield;}
 }</code></pre>
 	      <br>            </div>          </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Jan 22, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

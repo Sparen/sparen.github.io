@@ -67,30 +67,30 @@
 	      <p>Now we will look at @Initialize. Please note that there is no default cutin function in ph3. I suggest using GTbot's or Helepolis's, which can be found on MotK or Bulletforge. Additionally, you can make your own, but we will need understanding of text objects and render objects before we can go into that.</p>
 	      <p>The most important line we will add to @Initialize is <code>ObjEnemyBossScene_StartSpell(objScene);</code>. Add it before you call TFinalize. This code will tell Danmakufu that we are now starting a spellcard. Additionally, we will begin cleaning up @Initialize. I suggest taking all the boss drawing code (the imgRumia stuff) and placing it in a task TDrawLoop and calling that in @Initialize. More specifically, we will create a task TDrawLoop defined outside of all routines and we will use <code>TDrawLoop;</code> in @Initialize to call it. This will allow us to animate the boss later on and will make @Initialize look much cleaner. <b>Please do not move the movement code into TDrawLoop.</b> While it is not detrimental, you may end up not being able to find the movement code if you end up looking for it. Below is an example of what @Initialize should now look like:</p>
 	      <pre class="prettyprint"><code>@Initialize{
-	objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
-	ObjEnemy_Regist(objBoss);
-        ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);//Move the boss to the specified position
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60); //Move the boss to the specified position
 
-	ObjEnemyBossScene_StartSpell(objScene);
+    ObjEnemyBossScene_StartSpell(objScene);
 
-	TDrawLoop; //Call TDrawLoop, which is defined outside of this block.
-        TFinalize;
-	MainTask;
+    TDrawLoop; //Call TDrawLoop, which is defined outside of this block.
+    TFinalize;
+    MainTask;
 }
 
 task TDrawLoop {
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
-	ObjPrim_SetTexture(objBoss, imgExRumia);
-	ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
-	ObjSprite2D_SetDestCenter(objBoss);
+    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    ObjPrim_SetTexture(objBoss, imgExRumia);
+    ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
+    ObjSprite2D_SetDestCenter(objBoss);
 }</code></pre>
 	      <p>Now we will move to @Event. Thankfully, we already have EV_REQUEST_SPELL_SCORE, which is the spellcard bonus! So we don't have to do anything here. As a refresher, EV_REQUEST_LIFE sets the boss's life, EV_REQUEST_TIMER sets the timeout counter (in seconds), and EV_REQUEST_SPELL_SCORE sets the spellcard bonus if there is one. EV_REQUEST_IS_DURABLE_SPELL is optional and will designate the spellcard as a survival card.</p>
 	      <p>Finally, to complete the transformation into a spellcard, there is an optional but highly recommended procedure that will go in TFinalize. What is it, you ask? Well, adding the spellcard bonus!</p>
 	      <p>Danmakufu does not add the Spellcard Bonus automatically - you must add the spellcard bonus to the score manually. Thankfully, it's not hard to implement. Right after the while loop in TFinalize, add the following:</p>
-	        <pre class="prettyprint"><code>	if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
-	      +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
-	  AddScore(ObjEnemyBossScene_GetInfo(objScene,INFO_SPELL_SCORE));
-	}</code></pre>
+	        <pre class="prettyprint"><code>if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
+        +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
+    AddScore(ObjEnemyBossScene_GetInfo(objScene, INFO_SPELL_SCORE));
+}</code></pre>
 	      <p>Basically, this code will check if the spell was captured (no bombs, no deaths). If it was, it will add the spellcard bonus.</p>
 	      <p>As a final note, it is also possible to <code>ObjEnemyBossScene_StartSpell(GetEnemyBossSceneObjectID)</code> instead of having a global variable to store the EnemyBossSceneObject's ID, but you will have to use the Get ID function multiple times in the spellcard bonus code.</p>
 	      <p>And with that, we have our basic spell done! Now to add stuff to it!</p>
@@ -100,15 +100,15 @@ task TDrawLoop {
 	      <p>For the tasking style, we will create a task called <code>movement</code> and call it right before the while loop in MainTask. We will also add a <code>wait(120);</code> before calling movement in MainTask. This will delay the task 120 frames before beginning to fire or move. The boss will be able to move into position, etc. For my style, set counter to -120 to start, and in the if statement controlling firing, add <code>&& count >= 0</code> so that bullets will only fire if count >= 0. As for movement, we can use the same movement task (I personally do this differently) as with the tasking style, which we will make below.</p>
 	      <p>So, movement. For objects on which ObjMove functions apply (this will be discussed in <a href="./ph3u1l8.html">Lesson 8</a>), there are all kinds of ways to move the enemy. Documentation can be found <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Move_Object_Functions">here</a>.</p>
 	      <p>Firstly, we will not be using <code>ObjMove_SetX()</code>, <code>ObjMove_SetY()</code>, <code>ObjMove_SetPosition()</code>, <code>ObjMove_SetSpeed()</code>, or <code>ObjMove_SetAngle()</code>. Generally speaking, teleporting the boss halfway across the screen does not work well in playing, and using a speed/angle approach can be a royal pain to control. We will use these functions for positioning of things like bullets, but not for the boss. Instead similar to the initial movement of the boss, we will use the following: <code>ObjMove_SetDestAtSpeed()</code>, <code>ObjMove_SetDestAtFrame()</code>, and/or <code>ObjMove_SetDestAtWeight()</code>. For the parameters, you specify the object and the destination, and then specify either the speed to go at (constant for the entire journey), how many frames to take, or the weight and max speed, depending on which function you are using. Personally, I never use <code>ObjMove_SetDestAtSpeed()</code> because it is hard to synchronize anything else with it. <code>ObjMove_SetDestAtFrame()</code> is the best for syncing firing with movement. <code>ObjMove_SetDestAtWeight()</code> looks the most natural, although it requires more experience to control. We will use <code>ObjMove_SetDestAtFrame()</code> in this lesson.</p>
-	      <p>In the task movement, we will now add a while loop just like the one in MainTask (it is also possible to put movement; inside the while loop of MainTask; and not include the while loop in movement; if using the tasking style). And then, we will add <code>	  ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-60,GetCenterY-120), 60);</code> inside, as well as a <code>wait(240);</code>. This will move the boss every 240 frames to a random point within the bounds set. Note that the movement works parallel to what called it - that is, the boss will start moving when the function is called, and will finish moving 60 frames later, leaving 180 frames before the boss begins moving again.</p>
+	      <p>In the task movement, we will now add a while loop just like the one in MainTask (it is also possible to put movement; inside the while loop of MainTask; and not include the while loop in movement; if using the tasking style). And then, we will add <code>	  ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90,GetCenterX - 90), rand(GetCenterY - 60,GetCenterY - 120), 60);</code> inside, as well as a <code>wait(240);</code>. This will move the boss every 240 frames to a random point within the bounds set. Note that the movement works parallel to what called it - that is, the boss will start moving when the function is called, and will finish moving 60 frames later, leaving 180 frames before the boss begins moving again.</p>
 	      <p>Our movement task now looks like this:</p>
 	      <pre class="prettyprint"><code>    task movement{
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
-            ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-60,GetCenterY-120), 60);
+        while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
+            ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90,GetCenterX - 90), rand(GetCenterY - 60,GetCenterY - 120), 60);
             wait(240);
         }
     }</code></pre>
-	      <p>If using my style, then please make sure to include <code>if(count==0){movement;}</code> in @Initialize to actually call the task.</p>
+	      <p>If using my style, then please make sure to include <code>if(count == 0){movement;}</code> in @Initialize to actually call the task.</p>
 	      <p>Now that our boss is moving, it is time for a short quiz, after which we will learn to do things more complex that firing a single bullet at the player.</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: Frames, Speed, and yield;</h2>
 	        <!--Quiz start.-->
@@ -153,35 +153,35 @@ task TDrawLoop {
 	      <p>Please note that for this part, we will focus on the MainTask; task for the tasking style and the fire; task for my style - we will not be touching any other parts of the script, although we will reference other parts.</p>
 	      <p>For a refresher on loops, please refer to <a target="_blank" href="ph3u1l5.html#sub4" title="Sparen's Danmakufu Tutorials - Danmakufu Syntax, Structures, and Operations Part 2">Unit 1 Lesson 5</a>.</p>
 	      <p>OK. So our current firing code is as follows:</p>
-	      <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
-        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);</code></pre>
+	      <pre class="prettyprint"><code>    let angleT = GetAngleToPlayer(objBoss);
+    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);</code></pre>
 	      <p>It's simple enough. We declare the variable angleT and set it equal to the output of the function <code>GetAngleToPlayer(obj);</code>, which is the angle from the boss object to the player in this case. Then we fire a single bullet using <code>CreateShotA1</code>. To start off, we will begin with rings, which are very simple.</p>
 	      <p>To understand our approach, we have to consider some things. Firstly, what defines a ring? How many bullets do we want in the ring? Knowing that there are 360 degrees in a complete circle, how can we apply this to Danmakufu?</p>
 	      <p>It may seem obvious that if there are n bullets in the ring and we want to make a complete circle, we should have 360/n degrees in between bullets. However, more complicated patterns are not so intuitive, and you will have to carefully figure out an approach to creating the pattern you wish to make.</p>
 	      <p>Let's say we want 13 bullets in the ring. Therefore, we would increment our angle by 360/13. We will want to do this 13 times, spawning a bullet each time. So, how do we do this? Loops, of course! As a side note, you can technically use while loops and ascent/descent loops for this, but using ordinary loops is simpler.</p>
-	      <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
-	loop(13){
-            CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
-	    angleT+=360/13;
-	}</code></pre>
+	      <pre class="prettyprint"><code>    let angleT = GetAngleToPlayer(objBoss);
+    loop(13){
+        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+        angleT += 360/13;
+    }</code></pre>
 	      <p>The above code does exactly what we want. It will execute the code inside the loop block 13 times and will change angleT accordingly. As a result, we will end up with a ring of 13 bullets spawning from the boss!</p>
 	      <p>However, do you find this to be somewhat... boring? Just one ring every 30 frames? Let's use ascent loops to make this code more interesting.</p>
 	      <p>Remember that an ascent loop creates a temporary variable and that variable's value increments each time the loop executes. Using this, we can manipulate the speed and/or the delay of the bullet with ease.</p>
 	      <p>Our current code is below. Let's say we want to have three rings, where the inner ones are slower than the outer ones, and where there are different bullet graphics.</p>
-	      <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
-	loop(13){
-            CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
-	    angleT+=360/13;
-	}</code></pre>
+	      <pre class="prettyprint"><code>    let angleT = GetAngleToPlayer(objBoss);
+    loop(13){
+        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
+        angleT += 360/13;
+    }</code></pre>
 	      <p>For speed, an ascent loop is an excellent way to create stacked rings. For graphics, remember that we have imported a constant sheet that declares a number of final constants. However, these are simply more descriptive ways of referring to a bullet's ID - the IDs you call bullet graphics by are actually just numbers defined in a shotsheet.</p>
 	      <p>If you look in default_system/Default_ShotConst.txt, it is clear that DS_BALL_S_RED is equal to 9 - this means that if we increment the graphic by one, we will get DS_BALL_S_ORANGE, which is 10, and then YELLOW, GREEN, SKY, etc. We will take advantage of this in our ascent loop.</p>
-	      <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
-	loop(13){
-	    ascent(i in 0..3){
-	        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2.5-i/3, angleT, DS_BALL_S_RED+i, 5);
-	    }
-	    angleT+=360/13;
-	}</code></pre>
+	      <pre class="prettyprint"><code>    let angleT = GetAngleToPlayer(objBoss);
+    loop(13){
+        ascent(i in 0..3){
+            CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2.5 - i/3, angleT, DS_BALL_S_RED + i, 5);
+        }
+        angleT += 360/13;
+    }</code></pre>
 	      <p>Please note that since I am decrementing the speed, I added 0.5 to the highest speed. Above is the code with the ascent loop. i will start at 0, and will have values of 1 and 2 inside the code block. For the speed, I have taken a base speed 2.5, and I decrement it by i/3. Since i has values of 0, 1/3, and 2/3, there will be three rings with different speeds. Additionally, I add i to DS_BALL_S_RED in the graphic section, resulting in each ring having a different graphic.</p>
 	      <p>Of course, you can tweak this code however you want. Want less space between rings? Lower the difference in the speed. You can use i/6 for example to halve the distance between rings. Just beware of negative speed values - the bullet will go in the opposite direction.</p>
 	      <p>For reference, my video tutorial on ascent loops can be found <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&amp;list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K" title="Sparen's Danmakufu ph3 Video Tutorials - Using Ascent Loops and More (Youtube)">here</a></p>
@@ -193,15 +193,15 @@ task TDrawLoop {
 	      <p>Now, we will create a task fireB. You may want to copy fireA for now and simply rename it.</p>
 	      <p>The pattern we are about to make (lines of bullets in a fan shape - I call them waves), tends to look ugli when fired while the boss is moving. Therefore, we will sync it to the boss's movement. Recall that the boss moves every 240 frames and is moving for the first 60 of those 240.</p>
 	      <p>Therefore, we can spawn it the frame it begins moving and 120 frames after, when it is stationary.</p>
-	      <p>For the tasking method, we will call fireB in MainTask; and replace the <code>wait(30);</code> with <code>wait(120);</code>. For the Sparen method, add the following to @MainLoop: <code>if(count % 120 == 0 &amp;&amp; count>=0){fireB;}</code>.</p>
+	      <p>For the tasking method, we will call fireB in MainTask; and replace the <code>wait(30);</code> with <code>wait(120);</code>. For the Sparen method, add the following to @MainLoop: <code>if(count % 120 == 0 &amp;&amp; count >= 0){fireB;}</code>.</p>
 	      <p>At this point, it is important to realize that this pattern will indefinitely spawn at the same time as the other pattern. Therefore, we will want to give it graphics that are different as well as a different speed. Additionally, if you wanted to spawn this pattern when the boss <i>stops</i> moving and 120 frames after, you can, for the tasking method, add a <code>wait(60);</code> before the while loop and, in the Sparen method, use <code>count % 120 == 60</code> instead of <code>count % 120 == 0</code>.</p>
 	      <p>Now for the pattern. We will be using a nested ascent loop for this, since we will have a fan of lines of bullets. Let's examine the following:</p>
-	      <pre class="prettyprint"><code>        let angleT = GetAngleToPlayer(objBoss);
-	ascent(i in -1..2){
-	    ascent(j in 0..3){
-	        CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3-j/6, angleT+i*15, DS_RICE_M_SKY, 5);
-	    }
-	}</code></pre>
+	      <pre class="prettyprint"><code>    let angleT = GetAngleToPlayer(objBoss);
+    ascent(i in -1..2){
+        ascent(j in 0..3){
+            CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3 - j/6, angleT + i*15, DS_RICE_M_SKY, 5);
+            }
+    }</code></pre>
 	      <p>This is the code that we will, for the tasking style, place inside the while loop instead of the ring spawning code and, for the Sparen style, place after the boss health check in fireB. As you can see, we are using an ascent loop inside an ascent loop (this is called 'nesting' loops). The first ascent loop uses the variable i, which increments from -1 to 2 and controls the angle. By using angleT+i*15 with i being -1, 0, and 1, we effectively create bullets aimed at the player as well as bullets 15 degrees to either side that are not aimed at the player. Next we will look at the inner ascent loop, which uses the same technique as before to control the speed of the bullets. It serves the same function, and effectively grants three separate waves of bullets. It's a pretty common technique that can be adapted to various situations.</p>
 	      <p>This concludes the lesson. As of now, you now have the ability to do quite a few things in Danmakufu. I suggest practicing with the techniques you already have at this point so that you can better understand the techniques by experimenting with them yourself. However, I advise that you do not upload your scripts to Bulletforge at this point in the tutorial. Criticism can be harsh, and it's best that you wait until you have significantly more knowledge about Danmakufu. For information about Bulletforge, please read <a href="./ph3uXl2.html" title="How to Use Bulletforge - Sparen's Danmakufu Tutorials">How to Use Bulletforge</a>.</p>
 	      <p>For the final versions of the scripts we have made in this tutorial, please check <a target="_blank" href="./ph3u1l7code2.html">here</a>.</p>
@@ -230,7 +230,7 @@ task TDrawLoop {
         </div>
       </div>
       <div id="ft">
-        <p style="text-align: center;">Last Update to Page: Sept 4, 2015</p>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>
         <p style="text-align: center;"><a href="#top">Top</a></p>
         <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>
         <p style="text-align: center;"><span style="font-weight: bold;">Other
