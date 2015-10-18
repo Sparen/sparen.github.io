@@ -65,7 +65,7 @@ let DS_BALL_SS_BLUE		= 6;
 //...</code></pre>
 	      <p>If we look inside the shot constant file (sample above), it states a path to Default_ShotData.txt (the shotsheet) and then loads the enemy shot data using <code>LoadEnemyShotData()</code>. After this, a large number of final constants are declared, each referring to a number. These are the shot graphic IDs, and we will discuss them again later in this lesson.</p>
 	      <p>If you've been peeking around in other peoples's scripts, you may have noticed that not every scripter chooses to #include a shot constant sheet, instead loading the shotsheet and texture inside a single and using the actual graphic ID numbers defined in the shotsheet. There is little to no benefit to doing this - it is a matter of style. However, some shot constant sheets do not account for every bullet graphic present in the shotsheet, and scripters using shot constant sheets may never use certain bullet graphics because no final constant exists for those particular bullet ids. You can still refer to the bullets by number as well as by their final constant names, but most scripters do not mix and match final constants and numbers for shot graphics, instead sticking to one or the other. It's up to you whether to use a shot constant sheet or not - the benefit is that if you change shotsheets while a script is under development, it is possible that the constant names will be the same between different shot constant sheets. However, there is no universal standard for shot constant names, especially with new bullet types. Below is an example for how you might manually load a shotsheet if you decide to not #include a shot constant sheet.</p>
-	      <pre class="prettyprint"><code>    let ZUNbullet = GetCurrentScriptDirectory~"./AllStarShot.dnh";
+	      <pre class="prettyprint"><code>    let ZUNbullet = GetCurrentScriptDirectory ~ "./AllStarShot.dnh";
 
 @Initialize{
     //...
@@ -149,18 +149,18 @@ task BulletCommands(obj){
 }</code></pre>
 	      <p>The portion before the <code>//...</code> is how to obtain the <b>Object ID</b> of a bullet, and then perform a function with that ID as an input parameter. After this, I call <code>BulletCommands(obj)</code>, a task that I have created that will reset the angular velocity of the bullet to 0 after 60 frames. Using tasks this way is a powerful tool that, when used in conjunction with the AddPattern functions, can allow you to do all kinds of things with bullets, giving you immense control over what a bullet does. For example, I oftentimes have BulletCommands change the angular velocity and speed of the bullet, with while loops and wait times to denote when to actually begin execution. For example:</p>
 	      <pre class="prettyprint"><code>task BulletCommands(obj){
-    while(ObjMove_GetSpeed(obj)>0){yield;}
+    while(ObjMove_GetSpeed(obj) > 0){yield;}
     wait(30);
-    let angleT = rand(0,360);
+    let angleT = rand(0, 360);
     loop(12){
         CreateShotA2(ObjMove_GetX(obj), ObjMove_GetY(obj), 0, angleT, 3, 0);
-        angleT+=360/12;
+        angleT += 360/12;
     }
     Obj_Delete(obj);
 }</code></pre>
 	      <p>The above code waits for the bullet to have a speed of 0 (assume that it was accelerating in the negative direction beforehand), then waits 30 frames before spawning a ring of bullets at the bullet's location and deleting the bullet, giving the appearance of the bullet having exploded into other bullets.</p>
 	      <p>To provide another example, let's say we want to spawn a ring of bullets that aims at the player after 30 frames. First, we create the bullets:</p>
-	      <pre class="prettyprint"><code>let angle = rand(0,360);
+	      <pre class="prettyprint"><code>let angle = rand(0, 360);
 loop(15){
     let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angle, 1, 0);
     BulletCommands(obj);
@@ -180,8 +180,8 @@ loop(15){
 	      <p>Of these, there are a two that really stand out: <code>ObjShot_SetAutoDelete(obj)</code> and <code>ObjShot_SetSpellResist(obj)</code></p>
 	      <p>The former, <code>ObjShot_SetAutoDelete(obj)</code>, controls auto-deletion of a bullet when the bullet goes past a certain boundary offscreen (out of the shot autodelete clip, to be more accurate). The latter, <code>ObjShot_SetSpellResist(obj)</code>, controls whether or not a shot will be deleted when the player bombs and/or when the player dies. By using these two functions, it is possible to control when a bullet will be deleted, etc. Very useful.</p>
 	      <pre class="prettyprint"><code>    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 1, 5);
-    ObjShot_SetAutoDelete(obj, false);//Bullet will not be autodeleted past the shot autodelete clip
-    ObjShot_SetSpellResist(obj, true);//Bullet will not be deleted by bombs or player death
+    ObjShot_SetAutoDelete(obj, false); //Bullet will not be autodeleted past the shot autodelete clip
+    ObjShot_SetSpellResist(obj, true); //Bullet will not be deleted by bombs or player death
     wait(360);
     Obj_Delete(obj);//Since the bullet would not be deleted until the end of the script, 
     //it is important to delete the bullet manually if it is not meant to stay on-screen</code></pre>
@@ -257,29 +257,29 @@ loop(15){
 		<p>6) Write code to rotate a shot graphic such that it makes a full rotation after 37 frames.</p>
 		<p>Hit 'Show' to show possible answers.</p>
 	        <textarea rows="10" cols="75">task RotateShot(obj){
-	//Feel free to write your own local variables here
-	while(!Obj_IsDeleted(obj)){
-		//Insert Code here
-		yield;
-	}
+    //Feel free to write your own local variables here
+    while(!Obj_IsDeleted(obj)){
+        //Insert Code here
+        yield;
+    }
 }</textarea>
 	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
 		<div class="spoiler"><div>
 		<p>One way of doing this is to reset the angle each frame, adding 360/37 (the amount to rotate each frame) to the current angle.</p>
 	      <pre class="prettyprint"><code>task RotateShot(obj){
-	while(!Obj_IsDeleted(obj)){
-		ObjRender_SetAngleZ(obj, ObjRender_GetAngleZ(obj) + 360/37);
-		yield;
-	}
+    while(!Obj_IsDeleted(obj)){
+        ObjRender_SetAngleZ(obj, ObjRender_GetAngleZ(obj) + 360/37);
+        yield;
+    }
 }</code></pre>
 		<p>Another approach uses a counter and does not require obtaining the original value. This code assumes that the starting AngleZ was 0.</p>
 	      <pre class="prettyprint"><code>task RotateShot(obj){
-	let objcount = 0;
-	while(!Obj_IsDeleted(obj)){
-		ObjRender_SetAngleZ(obj, 360/37*objcount);
-		objcount++;
-		yield;
-	}
+    let objcount = 0;
+    while(!Obj_IsDeleted(obj)){
+        ObjRender_SetAngleZ(obj, 360/37 * objcount);
+        objcount++;
+        yield;
+    }
 }</code></pre>
 		<p>There are other ways to do this, of course, but above are two possible ways. You will need to adapt your code for each given situation.</p>
 	        </div></div>
@@ -302,7 +302,7 @@ loop(15){
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 5, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

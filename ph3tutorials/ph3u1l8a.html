@@ -96,7 +96,7 @@ floor(-9.496);    //-10</code></pre>
 	      <p>The above code will create an array with [30, 31, 32, 34, 35, 36], and will then index that array using the [rand_int(0, 5)]. The rand_int will spit out an integer between 0 (corresponding to 30) and 5 (corresponding to 36). This is a nifty trick that you may consider using. (Credits to Infinite Ultima Wave for teaching me that this exists)</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: rand_int</h2>
 	        <!--Quiz start.-->
-		<p>1) Let's say we run <code>rand_int(0,50)</code>. Which of the following is not a possible result?</p>
+		<p>1) Let's say we run <code>rand_int(0, 50)</code>. Which of the following is not a possible result?</p>
 	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
 	        <input type="RADIO" value="A" name="cc">
 	        A. 50<br>
@@ -111,7 +111,7 @@ floor(-9.496);    //-10</code></pre>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
-		<p>2) What is a possible output of <code>trunc(absolute(rand(-60,60)));</code></p>
+		<p>2) What is a possible output of <code>trunc(absolute(rand(-60, 60)));</code></p>
 	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'C');">
 	        <input type="RADIO" value="A" name="cc">
 	        A. -30<br>
@@ -130,7 +130,7 @@ floor(-9.496);    //-10</code></pre>
 	      <pre class="prettyprint"><code>task MainTask{
     ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60)
     wait(120);
-    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
+    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
 	//We will be inserting the bullet spawning here.
 	yield;
     }
@@ -141,8 +141,8 @@ floor(-9.496);    //-10</code></pre>
 	      <pre class="prettyprint"><code>task MainTask{
     ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60)
     wait(120);
-    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
-	CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), rand(3,6), rand(0,360), DS_BALL_S_BLUE, 20);
+    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
+	CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), rand(3, 6), rand(0, 360), DS_BALL_S_BLUE, 20);
 	yield;
     }
 }</code></pre>
@@ -158,7 +158,7 @@ floor(-9.496);    //-10</code></pre>
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: April 11, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

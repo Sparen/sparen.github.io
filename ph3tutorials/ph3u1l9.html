@@ -75,13 +75,13 @@
 	      <p><code>ObjLaser_SetInvalidLength()</code>, however, is really important, especially when using lasers made from round bullets. What it basically does is chop the hitbox on the ends of the laser so that the tips of the lasers (which are probably near-invisible) don't actually shoot down the player. It defaults to 10% on each side, but you may want to increase it if you are getting complaints about cheapshots.</p>
 	      <p>For straight lasers, you have some interesting functions. <code>ObjMove_SetAngle()</code> is replaced by <code>ObjStLaser_SetAngle()</code>, which you should be using instead. What this function does is set the angle which the laser is pointing. This is different from <code>ObjMove_SetAngle()</code>, which is the direction of movement. And that being said, having moving straight lasers is usually done manually with a while loop, where you set the laser's position and angle each frame using a counter and some trigonometry. So basically, you have no use for <code>ObjMove_SetAngle()</code> when using straight lasers.</p>
 	      <p>The last function I will discuss in this section is <code>ObjStLaser_SetSource()</code>. Basically, what this does is determine whether to draw the shiny ball at the base of the laser. The base of the laser is the position of the laser (accessed and mutated by ObjMove_SetX/Y/Position), for future reference - this is the only part of the laser whose coordinates can be obtained without trigonometry. If you want the shiny glowing ball, don't change anything, because it appears by default. If you want to turn it off, set <code>ObjStLaser_SetSource(obj, false);</code>. Below is sample code showing how to use some of these functions.</p>
-	      <pre class="prettyprint"><code>    let angleT = 0;//Base angle faces directly right
-    loop(6){//A ring of 6 lasers
+	      <pre class="prettyprint"><code>    let angleT = 0; //Base angle faces directly right
+    loop(6){ //A ring of 6 lasers
         let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), angleT, 512, 24, 20, 1003, 60);
-        ObjStLaser_SetSource(obj, false);//Do not show the laser source
-        ObjLaser_SetGrazeInvalidFrame(obj, 5);//Allows for up to 1 graze each 5 frames
-	ObjLaser_SetInvalidLength(obj, 5, 5);//5 percent of each end of the laser is safe
-        angleT+=360/6;//Increments by 60 degrees clockwise each time the block is run
+        ObjStLaser_SetSource(obj, false); //Do not show the laser source
+        ObjLaser_SetGrazeInvalidFrame(obj, 5); //Allows for up to 1 graze each 5 frames
+        ObjLaser_SetInvalidLength(obj, 5, 5); //5 percent of each end of the laser is safe
+        angleT += 360/6; //Increments by 60 degrees clockwise each time the block is run
     }</code></pre>
 	      <p>Note that although obj is a local variable that only exists inside the block, we can still access the laser object's ID from outside of the block in Danmakufu using various functions.</p>
 	      <div class="tut_exercise">EXERCISE: Experiment with ObjLaser_SetInvalidLength and ObjLaser_SetIntersectionWidth. What works best with which graphic type?</div>
@@ -153,16 +153,16 @@
 	      <p>To form a delay laser in ph3, you must create a straight laser with <code>ObjStLaser_SetSource(obj)</code> set to false. Additionally, it should have delete time of 0, although I will discuss this in more detail in a moment. The delay is how long the delay laser should exist for, and optimally, you should use a rectangular bullet with a width of at least 20 so that the render width of the delay laser will be enough for it to be visible.</p>
 	      <p>Now, if you set delete time to 0 and create this laser, you will find that it does not work as you expected - the laser graphic will actually expand to its final width while fade deleting. This did not happen in 0.12m, but it happens in ph3. The workaround is as follows: Manually kill the object before it enlarges. Below is my code, which you are free to use (citing would be nice).</p>
 	      <pre class="prettyprint"><code>    task DelayLaser(x, y, ang, l, w, dt, graph, delay){ 
-	let objlaser = CreateStraightLaserA1(x, y, ang, l, w, dt, graph, delay);
-	ObjStLaser_SetSource(objlaser, false);
-	loop(delay-1){//So that the graphic never enlarges. 
-	  if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){
-	    Obj_Delete(objlaser); 
-	    return;
-	  }
-	  yield;
-	}
-	Obj_Delete(objlaser);
+        let objlaser = CreateStraightLaserA1(x, y, ang, l, w, dt, graph, delay);
+        ObjStLaser_SetSource(objlaser, false);
+        loop(delay-1){//So that the graphic never enlarges. 
+            if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){
+                Obj_Delete(objlaser); 
+                return;
+            }
+            yield;
+        }
+        Obj_Delete(objlaser);
     }</code></pre>
 	      <p>Now, as for what this task actually does, it creates a delay laser as a straight laser with no source, then waits for the frame directly before the one it is supposed to be deleted at. At this moment, it kills the laser, automatically deleting the associated graphic and preventing the laser from rendering at full width.</p>
 	      <p>Delay lasers are useful tools, and I highly suggest that you explore and see what you can do with them.</p>
@@ -181,19 +181,19 @@
 	      <p>As for the task, let's begin with the basics.</p>
 	      <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
         let objcount = 0;
-        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss)+60*cos(ID*30), ObjMove_GetY(objBoss)+60*sin(ID*30), ID*30, 
-		512, 24, 300, 1001, 60);
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss) + 60*cos(ID*30), ObjMove_GetY(objBoss) + 60*sin(ID*30),  
+                ID * 30, 512, 24, 300, 1001, 60);
     }</code></pre>
 	      <p>In the above code, I declare the task and begin with a declaration of the variable objcount, the counter for this task. Then I create a straight laser 60 pixels from the boss's location, with angle equals to ID*30. Since ID can go from 0 to 11 due to our ascent loop, multiplying by 30 (i.e. 360/12, 12 being the total number of lasers) will give the angle we want the laser to start at. Each laser has a unique ID and they can therefore all be controlled using the same task. The 60*cos(ID*30) and 60*sin(ID*30) is the trigonometry used to spawn the lasers in a circle of radius 60 around the boss. Trigonometry and Parametrics will receive a much more thorough explanation in <a href="./ph3u1l11.html">Lesson 11</a>.</p>
 	      <p>At this point, we can create the lasers but they will stay put. They will not rotate, and if the boss moves, they will not move with the boss. We will use a while loop to combat this.</p>
 	      <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
         let objcount = 0;
-        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss)+60*cos(ID*30), ObjMove_GetY(objBoss)+60*sin(ID*30), ID*30, 
-		512, 24, 300, 1001, 60);
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss) + 60*cos(ID*30), ObjMove_GetY(objBoss) + 60*sin(ID*30), 
+                ID * 30, 512, 24, 300, 1001, 60);
         while(!Obj_IsDeleted(obj)){
-            ObjMove_SetPosition(obj, ObjMove_GetX(objBoss)+60*cos(ID*30+objcount), ObjMove_GetY(objBoss)+60*sin(ID*30+ objcount));
-	    ObjStLaser_SetAngle(obj, ID*30+objcount);
-	    objcount++;
+            ObjMove_SetPosition(obj, ObjMove_GetX(objBoss) + 60*cos(ID*30 + objcount), ObjMove_GetY(objBoss) + 60*sin(ID*30 + objcount));
+            ObjStLaser_SetAngle(obj, ID*30 + objcount);
+            objcount++;
             yield;
         }
     }</code></pre>
@@ -204,12 +204,12 @@
 		<p>1) Marisa has stolen Patchouli's Non-Directional Lasers and wants to have them move from the boss's location to a radius of 60, one pixel increase per frame. How would she implement this? Her code is below. There may be multiple correct answers.</p>
 	        <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
         let objcount = 0;
-        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss)+60*cos(ID*30), ObjMove_GetY(objBoss)+60*sin(ID*30), ID*30, 
-		512, 24, 300, 1001, 60);
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss) + 60*cos(ID*30), ObjMove_GetY(objBoss) + 60*sin(ID*30), 
+                ID * 30, 512, 24, 300, 1001, 60);
         while(!Obj_IsDeleted(obj)){
-            ObjMove_SetPosition(obj, ObjMove_GetX(objBoss)+60*cos(ID*30+objcount), ObjMove_GetY(objBoss)+60*sin(ID*30+ objcount));
-	    ObjStLaser_SetAngle(obj, ID*30+objcount);
-	    objcount++;
+            ObjMove_SetPosition(obj, ObjMove_GetX(objBoss) + 60*cos(ID*30 + objcount), ObjMove_GetY(objBoss) + 60*sin(ID*30 + objcount));
+            ObjStLaser_SetAngle(obj, ID*30 + objcount);
+            objcount++;
             yield;
         }
     }</code></pre>
@@ -252,7 +252,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 5, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
