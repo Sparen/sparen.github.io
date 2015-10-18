@@ -25,6 +25,7 @@
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
 	          <li><a href="#sub1">White Space</a></li>
+	          <li><a href="#sub2">Functions, Tasks, and Subroutines</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">White Space</h2>
 		<div class="dnhstylediv">
@@ -94,6 +95,7 @@ let q = 1 + 3/2;</code></pre>
 		<h3 style="color:rgb(59,248,80);">White space is not required after control statements.</h3>
 	        <pre class="prettyprint" style="background-color: #004000;"><code>loop(5){}
 loop (5){}</code></pre>
+		<p>We suggest not using white space after control statements.</p>
 		</div>
 		<div class="dnhstylediv">
 		<h3 style="color:rgb(59,248,80);">White space is not required before { in control statements.</h3>
@@ -105,6 +107,41 @@ loop(5){
 loop (5)
 {
 }</code></pre>
+		</div>
+	      <h2 style="color:yellow" id="sub2">Functions, Tasks, and Subroutines</h2>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">All functions must be called with () even if they have no parameters</h3>
+	        <pre class="prettyprint" style="background-color: #400000;"><code>function GetCenterX{
+    return 192;
+}
+GetCenterX;</code></pre>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>function GetCenterX(){
+    return 192;
+}
+GetCenterX();</code></pre>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">Tasks must not be called with () unless they have parameters</h3>
+	        <pre class="prettyprint" style="background-color: #400000;"><code>task CreateBullet(){
+    let obj = CreateShotA1(0, 0, 0, 0, 0, 0);
+}
+BulletCommands();</code></pre>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>task CreateBullet{
+    let obj = CreateShotA1(0, 0, 0, 0, 0, 0);
+}
+BulletCommands;</code></pre>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">There are no case guidelines for function, task, and subroutine names</h3>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>function abc(){}
+function CreateBulletStringA1(){}
+task BulletCommands{}
+task fire1{}
+sub renderObject{}</code></pre>
+		<p>However, we suggest capitalizing all words.</p>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>function GetCenterX(){}
+task CreateParticleA1{}
+sub RenderHitbox{}</code></pre>
 		</div>
 	      <br>            </div>          </div>        </div>      </div>      <footer>
         <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015 by Andrew Fan</p>      </footer>    </div>

@@ -68,7 +68,7 @@
 	      <p>The default is 1, where the tip is not visible at all, and the function allows a range from 0 (no fading) to 1 (full fading). The value is a percentage, so 0.5 will have 50% fading of the laser tips.</p>
 	      <pre class="prettyprint"><code>    let objLaser = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, GetAngleToPlayer(objBoss),
         60, 18, 1018, 10);
-    ObjCrLaser_SetTipDecrement(objLaser, 1);//make the tip of the laser visible</code></pre>
+    ObjCrLaser_SetTipDecrement(objLaser, 1); //make the tip of the laser visible</code></pre>
 	      <div class="tut_exercise">EXERCISE: Experiment with ObjCrLaser_SetTipDecrement. What effect does it have on how curved lasers are displayed?</div>
 	      <h2 style="color:yellow" id="sub6">Part 6: Why Does Using Curved Lasers Lag So Much?</h2>
 	      <p>It's the question you've all been asking - why is there so much lag when using curved lasers?</p>
@@ -156,8 +156,8 @@
 	      <pre class="prettyprint"><code>    task SnakePattern(obj){
 	let wvel = 1;
 	ascent(i in 0..12){
-	    ObjMove_AddPatternA2(obj, i*30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
-	    wvel*=-1;
+	    ObjMove_AddPatternA2(obj, i * 30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
+	    wvel *= -1;
 	}
     }</code></pre>
 	      <p>Above, I have set it up so that every 30 frames, the angular velocity will be set to -1 * its value at the time. This will control the snaking.</p>
@@ -170,7 +170,7 @@
 	      <pre class="prettyprint"><code>    task CreateLaserRing{
 	ascent(i in 0..12){
 	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
-		GetAngleToPlayer(objBoss)+i*360/12, 60, 18, 1018, 10);
+		GetAngleToPlayer(objBoss) + i*360/12, 60, 18, 1018, 10);
 	    SnakePattern(obj);
 	}
     }</code></pre>
@@ -178,22 +178,22 @@
 	      <pre class="prettyprint"><code>    task CreateLaserRing{
 	ascent(i in 0..12){
 	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
-		GetAngleToPlayer(objBoss)+i*360/12, 60, 18, 1018, 10);
+		GetAngleToPlayer(objBoss) + i*360/12, 60, 18, 1018, 10);
 	    SnakePattern(obj, 1);
 	}
 	wait(60);
 	ascent(i in 0..12){
 	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
-		GetAngleToPlayer(objBoss)+i*360/12, 60, 18, 1022, 10);
+		GetAngleToPlayer(objBoss) + i*360/12, 60, 18, 1022, 10);
 	    SnakePattern(obj, -1);
 	}
     }
 
     task SnakePattern(obj, dir){
-	let wvel = 1*dir;
+	let wvel = 1 * dir;
 	ascent(i in 0..12){
-	    ObjMove_AddPatternA2(obj, i*30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
-	    wvel*=-1;
+	    ObjMove_AddPatternA2(obj, i * 30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
+	    wvel *= -1;
 	}
     }</code></pre>
 	      <p>So what did we do? We set up SnakePattern so that it takes a direction parameter (which can also be used as a multiplier, should we want an angular velocity of -2.3 or something). Now, instead of duplicating the task with a different number, we have allowed our code to run more effectively, and by calling SnakePattern with -1 and 1 in the task CreateLaserRing, we achieve our desired effect.</p>
@@ -201,10 +201,10 @@
 	        <!--Quiz start.-->
 	      <pre class="prettyprint"><code>
     task SnakePattern(obj, dir){
-	let wvel = 1*dir;
+	let wvel = 1 * dir;
 	ascent(i in 0..12){
-	    ObjMove_AddPatternA2(obj, i*30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
-	    wvel*=-1;
+	    ObjMove_AddPatternA2(obj, i * 30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
+	    wvel *= -1;
 	}
     }</code></pre>
 		<p>1) Given the above and below code, what will the angular velocity be at a time of 80 frames?</p>
@@ -248,7 +248,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 5, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

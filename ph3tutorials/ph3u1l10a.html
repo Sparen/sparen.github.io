@@ -44,23 +44,23 @@
 	      <p>We will try to use one while loop to control both lasers, since their behavior is similar.</p>
 	      <p>Let us create a task fireLaser that, when called, will create a laser given a parameter passed into the task, in this case a direction - 1 for the right laser and -1 for the left laser. Let's begin with the object itself.</p>
 	      <pre class="prettyprint"><code>    task fireLaser(dir){
-	//As a reminder, I am splitting the lines just so that they fit in the browser window.
-	//You do not need to split the lines in your code.
-	let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 
-		270+105*dir, 512, 36, 240, DS_BEAM_BLUE, 30);
+        //As a reminder, I am splitting the lines just so that they fit in the browser window.
+        //You do not need to split the lines in your code.
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 
+                270 + 105*dir, 512, 36, 240, DS_BEAM_BLUE, 30);
     }</code></pre>
-	      <p>So far, all we have is a task that creates a single laser. Note the angle - 270+105*dir. dir will be -1 or 1, resulting in an initial angle of either 375 or 165, depending on which laser we want.</p>
+	      <p>So far, all we have is a task that creates a single laser. Note the angle - 270 + 105*dir. dir will be -1 or 1, resulting in an initial angle of either 375 or 165, depending on which laser we want.</p>
 	      <p>Now we want to move the laser towards 90 degrees. To accomplish this, we will use an ascent loop and yield.</p>
 	      <p>Using a normal loop, we will first need to observe that we want the laser to move a total of 60 degrees. This will be accomplished over approximately 120 frames. Therefore, we will do the following:</p>
 	      <pre class="prettyprint"><code>    task fireLaser(dir){
-	let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 
-		270+105*dir, 512, 36, 120, DS_BEAM_BLUE, 30);
-	ascent(i in 0..120){
-	    ObjStLaser_SetAngle(obj, 270+105*dir + 60/120*i*dir);
-	    yield;
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 
+                270 + 105*dir, 512, 36, 120, DS_BEAM_BLUE, 30);
+        ascent(i in 0..120){
+            ObjStLaser_SetAngle(obj, 270 + 105*dir + 60/120*i * dir);
+            yield;
 	}
     }</code></pre>
-	      <p>In the code above, the laser will, over the course of 120 frames, set its angle to the original angle (270+105*dir) + a new angle, which is calculated using 60/120*i*dir. The 60/120 is how many degrees to move per frame so that after 120 frames, the laser has moved by 60 degrees. The local variable i, which goes from 0 to 120, will multiply itself against this 60/120 to determine the total number of degrees that the laser needs to be displaced from its original angle. And finally, the dir, like in the initial angle, acts to make sure that the right and left lasers act properly.</p>
+	      <p>In the code above, the laser will, over the course of 120 frames, set its angle to the original angle (270 + 105*dir) + a new angle, which is calculated using 60/120*i*dir. The 60/120 is how many degrees to move per frame so that after 120 frames, the laser has moved by 60 degrees. The local variable i, which goes from 0 to 120, will multiply itself against this 60/120 to determine the total number of degrees that the laser needs to be displaced from its original angle. And finally, the dir, like in the initial angle, acts to make sure that the right and left lasers act properly.</p>
 	      <p>The right laser will move from 15 (375) degrees to 75, and the left one will move from 165 to 105, both over the course of 120 frames. Note that this is not an exact replica of the actual spell and that laser size, delay, and other features are different.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How is the dir parameter used to determine the initial angle and angle increments of the right and left lasers?</div>
 	      <h2 style="color:yellow" id="sub3">Part 3: How do I Replicate Moonlight Ray?</h2>
@@ -68,53 +68,53 @@
 	      <p>The first thing to do is to watch the spell in action, and it is then that you will most likely realize that the rings are spawned every 30 or so frames, and are aimed at the player. As for the number of bullets, I will use 48 because I really can't tell how many there are. The graphics are EoSD dots, perhaps blue.</p>
 	      <p>So, all we really need to do for the rings is spawn a ring of 48 bullets aimed at the player every 30 frames.</p>
 	      <pre class="prettyprint"><code>    task fireRing{
-	let angleT = GetAngleToPlayer(objBoss);
-	loop(48){
-	    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, DS_BALL_SS_BLUE, 10);
-	    angleT+=360/48;
-	}
+        let angleT = GetAngleToPlayer(objBoss);
+        loop(48){
+            CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, DS_BALL_SS_BLUE, 10);
+            angleT += 360/48;
+        }
     }</code></pre>
 	      <p>And that's that! Now, to put everything together!</p>
 	      <p>Below I will post a portion of my sample code. Please note that this is in my own style (it is not tasking style), and that the movement is not necessarily accurate.</p>
 	      <pre class="prettyprint"><code>    @MainLoop{
         ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
         ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
-	if(count==0){movement;}
+        if(count == 0){movement;}
 
-	if(count%30==0 && count>=0){
+        if(count % 30 == 0 && count >= 0){
             fireRing;
-	}
+        }
 
-	if(count%360==90 && count>=0){
+        if(count % 360 == 90 && count >= 0){
             fireLaser(1);
             fireLaser(-1);
-	}
+        }
 
-	count++;
-	yield;
+        count++;
+        yield;
     }
 
     task fireRing{
-	let angleT = GetAngleToPlayer(objBoss);
-	loop(48){
-	    CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, DS_BALL_SS_BLUE, 10);
-	    angleT+=360/48;
-	}
+        let angleT = GetAngleToPlayer(objBoss);
+        loop(48){
+            CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, DS_BALL_SS_BLUE, 10);
+            angleT += 360/48;
+        }
     }
 
     task fireLaser(dir){
-	let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 
-		270+105*dir, 512, 36, 120, DS_BEAM_BLUE, 30);
-	ascent(i in 0..120){
-	    ObjStLaser_SetAngle(obj, 270+105*dir + 60/120*i*dir);
-	    yield;
-	}
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 
+                270 + 105*dir, 512, 36, 120, DS_BEAM_BLUE, 30);
+        ascent(i in 0..120){
+            ObjStLaser_SetAngle(obj, 270 + 105*dir + 60/120*i * dir);
+            yield;
+        }
     }
 
     task movement{
-	while(ObjEnemy_GetInfo(objBoss,INFO_LIFE)>0){
-	    ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX+90,GetCenterX-90), rand(GetCenterY-90,GetCenterY-150), 60);
-	    wait(360);
+        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
+            ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90, GetCenterX - 90), rand(GetCenterY - 90, GetCenterY - 150), 60);
+            wait(360);
         }
     }</code></pre>
 	      <p>And that's that! I hope you learned something about using direction multipliers. If you want to see more examples, you can always refer to <a href="./ph3u1l10.html">Lesson 10</a>, and I will be using direction multipliers in the future as well.</p>
@@ -129,7 +129,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: May 2, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

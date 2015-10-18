@@ -54,7 +54,7 @@ let frame = 0; //Counter for timing enemy movements.(Will keep increasing by one
 	ObjEnemy_Regist(objEnemy);
 
 	//Setting the enemy's image
-	let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png"; //file path to enemy image
+	let imgExRumia = GetCurrentScriptDirectory() ~ "ExRumia.png"; //file path to enemy image
 	ObjPrim_SetTexture(objEnemy, imgExRumia); 
         //Setting the above image file as a texture to the enemy object(objEnemy)
 	ObjSprite2D_SetSourceRect(objEnemy, 64, 1, 127, 64); 

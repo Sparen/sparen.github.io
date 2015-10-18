@@ -79,7 +79,7 @@ task movement{
 }
 
 task TDrawLoop {
-    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    let imgExRumia = GetCurrentScriptDirectory() ~ "ExRumia.png";
     ObjPrim_SetTexture(objBoss, imgExRumia);
     ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
     ObjSprite2D_SetDestCenter(objBoss);
@@ -92,17 +92,17 @@ task TFinalize {
         AddScore(ObjEnemyBossScene_GetInfo(objScene, INFO_SPELL_SCORE));
     }
     Obj_Delete(objBoss);
-    DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
+    DeleteShotAll(TYPE_ALL, TYPE_IMMEDIATE);
     SetAutoDeleteObject(true);
     CloseScript(GetOwnScriptID());
     return;
 }
 
-function GetCenterX{
-    return GetStgFrameWidth / 2;
+function GetCenterX(){
+    return GetStgFrameWidth() / 2;
 }
-function GetCenterY{
-    return GetStgFrameHeight / 2;
+function GetCenterY(){
+    return GetStgFrameHeight() / 2;
 }
 
 function wait(n){
@@ -172,7 +172,7 @@ task movement{
 }
 
 task TDrawLoop {
-    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    let imgExRumia = GetCurrentScriptDirectory() ~ "ExRumia.png";
     ObjPrim_SetTexture(objBoss, imgExRumia);
     ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
     ObjSprite2D_SetDestCenter(objBoss);
@@ -185,17 +185,17 @@ task TFinalize {
         AddScore(ObjEnemyBossScene_GetInfo(objScene, INFO_SPELL_SCORE));
     }
     Obj_Delete(objBoss);
-    DeleteShotAll(TYPE_ALL,TYPE_IMMEDIATE);
+    DeleteShotAll(TYPE_ALL, TYPE_IMMEDIATE);
     SetAutoDeleteObject(true);
     CloseScript(GetOwnScriptID());
     return;
 }
 
-function GetCenterX{
-    return GetStgFrameWidth / 2;
+function GetCenterX(){
+    return GetStgFrameWidth() / 2;
 }
-function GetCenterY{
-    return GetStgFrameHeight / 2;
+function GetCenterY(){
+    return GetStgFrameHeight() / 2;
 }
 
 function wait(n){

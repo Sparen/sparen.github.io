@@ -69,7 +69,7 @@
 	      <pre class="prettyprint"><code>@Initialize{
     objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
     ObjEnemy_Regist(objBoss);
-    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60); //Move the boss to the specified position
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60); //Move the boss to the specified position
 
     ObjEnemyBossScene_StartSpell(objScene);
 
@@ -79,7 +79,7 @@
 }
 
 task TDrawLoop {
-    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    let imgExRumia = GetCurrentScriptDirectory() ~ "ExRumia.png";
     ObjPrim_SetTexture(objBoss, imgExRumia);
     ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
     ObjSprite2D_SetDestCenter(objBoss);
@@ -100,11 +100,11 @@ task TDrawLoop {
 	      <p>For the tasking style, we will create a task called <code>movement</code> and call it right before the while loop in MainTask. We will also add a <code>wait(120);</code> before calling movement in MainTask. This will delay the task 120 frames before beginning to fire or move. The boss will be able to move into position, etc. For my style, set counter to -120 to start, and in the if statement controlling firing, add <code>&& count >= 0</code> so that bullets will only fire if count >= 0. As for movement, we can use the same movement task (I personally do this differently) as with the tasking style, which we will make below.</p>
 	      <p>So, movement. For objects on which ObjMove functions apply (this will be discussed in <a href="./ph3u1l8.html">Lesson 8</a>), there are all kinds of ways to move the enemy. Documentation can be found <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Move_Object_Functions">here</a>.</p>
 	      <p>Firstly, we will not be using <code>ObjMove_SetX()</code>, <code>ObjMove_SetY()</code>, <code>ObjMove_SetPosition()</code>, <code>ObjMove_SetSpeed()</code>, or <code>ObjMove_SetAngle()</code>. Generally speaking, teleporting the boss halfway across the screen does not work well in playing, and using a speed/angle approach can be a royal pain to control. We will use these functions for positioning of things like bullets, but not for the boss. Instead similar to the initial movement of the boss, we will use the following: <code>ObjMove_SetDestAtSpeed()</code>, <code>ObjMove_SetDestAtFrame()</code>, and/or <code>ObjMove_SetDestAtWeight()</code>. For the parameters, you specify the object and the destination, and then specify either the speed to go at (constant for the entire journey), how many frames to take, or the weight and max speed, depending on which function you are using. Personally, I never use <code>ObjMove_SetDestAtSpeed()</code> because it is hard to synchronize anything else with it. <code>ObjMove_SetDestAtFrame()</code> is the best for syncing firing with movement. <code>ObjMove_SetDestAtWeight()</code> looks the most natural, although it requires more experience to control. We will use <code>ObjMove_SetDestAtFrame()</code> in this lesson.</p>
-	      <p>In the task movement, we will now add a while loop just like the one in MainTask (it is also possible to put movement; inside the while loop of MainTask; and not include the while loop in movement; if using the tasking style). And then, we will add <code>	  ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90,GetCenterX - 90), rand(GetCenterY - 60,GetCenterY - 120), 60);</code> inside, as well as a <code>wait(240);</code>. This will move the boss every 240 frames to a random point within the bounds set. Note that the movement works parallel to what called it - that is, the boss will start moving when the function is called, and will finish moving 60 frames later, leaving 180 frames before the boss begins moving again.</p>
+	      <p>In the task movement, we will now add a while loop just like the one in MainTask (it is also possible to put movement; inside the while loop of MainTask; and not include the while loop in movement; if using the tasking style). And then, we will add <code>	  ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX() + 90, GetCenterX() - 90), rand(GetCenterY() - 60, GetCenterY() - 120), 60);</code> inside, as well as a <code>wait(240);</code>. This will move the boss every 240 frames to a random point within the bounds set. Note that the movement works parallel to what called it - that is, the boss will start moving when the function is called, and will finish moving 60 frames later, leaving 180 frames before the boss begins moving again.</p>
 	      <p>Our movement task now looks like this:</p>
 	      <pre class="prettyprint"><code>    task movement{
         while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
-            ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90,GetCenterX - 90), rand(GetCenterY - 60,GetCenterY - 120), 60);
+            ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX() + 90, GetCenterX() - 90), rand(GetCenterY() - 60, GetCenterY() - 120), 60);
             wait(240);
         }
     }</code></pre>

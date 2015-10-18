@@ -58,8 +58,8 @@
 	      <p>So let's say we want our ring to have 30 bullets in it, since it's going to be pretty far from the boss. Now, we know that we will use a loop like the following:</p>
 	      <pre class="prettyprint"><code>    let angleT = 0;
     loop(30){
-	//Create bullet
-	angleT+=360/30;
+        //Create bullet
+        angleT += 360/30;
     }</code></pre>
 	      <p>The question now is how we will spawn the bullets. We want the bullets to be spawned exactly in a circle, and we can't manually set the x and y coordinates to do that. We will therefore use sine and cosine.</p>
 	      <p>Danmakufu's coordinate systems basically use parametric equations, where the x, y, and z (if using render objects) coordinates are defined separately. As we loop through the code above, we want x and y to be written in terms of angleT, with is our theta (A in the diagram). Let's take the rightmost point, spawned when angleT = 0. We want it to be located at (90, 0) with respect to the boss.</p>
@@ -68,8 +68,8 @@
 	      <p>Well, we want our bullet at (90, 0), right? And the y coordinate is 0, just as sin(0) = 0. And our x coordinate is 90, when cos(0) is 1. Therefore, our code becomes the following:</p>
 	      <pre class="prettyprint"><code>    let angleT = 0;
     loop(30){
-	CreateShotA1(ObjMove_GetX(objBoss)+90*cos(angleT), ObjMove_GetY(objBoss)+90*sin(angleT), 2, angleT, 1, 0);
-	angleT+=360/30;
+        CreateShotA1(ObjMove_GetX(objBoss) + 90*cos(angleT), ObjMove_GetY(objBoss) + 90*sin(angleT), 2, angleT, 1, 0);
+        angleT += 360/30;
     }</code></pre>
 	      <p>This will work correctly for all points in the circle. What the 90* does is basically scale the graph. Therefore, we essentially scale the unit circle so that instead of having a radius of 1, we have a radius of 90. And in the above graph, we scale the vertical axis to go from 90 to -90.</p>
 	      <p>The end result is a ring of bullets of radius 90 centered around the boss.</p>
@@ -83,15 +83,15 @@
 	      <p>Let's say that we want to have an ellipse where half the length of the major axis (we will use the x axis) is 75, and half the length of the minor axis (we will use the y axis) is 30. We will begin by examining our code from earlier, where we created a circle.</p>
 	      <pre class="prettyprint"><code>    let angleT = 0;
     loop(30){
-	CreateShotA1(ObjMove_GetX(objBoss)+90*cos(angleT), ObjMove_GetY(objBoss)+90*sin(angleT), 2, angleT, 1, 0);
-	angleT+=360/30;
+        CreateShotA1(ObjMove_GetX(objBoss) + 90*cos(angleT), ObjMove_GetY(objBoss) + 90*sin(angleT), 2, angleT, 1, 0);
+        angleT += 360/30;
     }</code></pre>
 	      <p>We can think of this as follows: In the X direction, the maximum distance you can go is 90, and the same goes for the Y axis. Now we want 75 and 30 instead of 90 and 90.</p>
 	      <p>And yes, it's not that complicated.</p>
 	      <pre class="prettyprint"><code>    let angleT = 0;
     loop(30){
-	CreateShotA1(ObjMove_GetX(objBoss)+75*cos(angleT), ObjMove_GetY(objBoss)+30*sin(angleT), 2, angleT, 1, 0);
-	angleT+=360/30;
+        CreateShotA1(ObjMove_GetX(objBoss) + 75*cos(angleT), ObjMove_GetY(objBoss) + 30*sin(angleT), 2, angleT, 1, 0);
+        angleT += 360/30;
     }</code></pre>
 	      <p>Hooray! We now have an ellipse in Danmakufu! It works the same way as with the circle - it's just that the bullets will be more bunched up towards the sides and more spread out at the top. You can bend and contort this ellipse as much as you want, and you can do lots of stretching in the x and y directions. However, if you want to rotate it... well... you're getting into some pretty ugly territory now - specifically, you will need to use rotation matrices. Since I am not yet able to use them effectively myself and therefore cannot write a tutorial for them, I encourage you to study them if you ever decide that you want to use rotated ellipses or other rotated graphs.</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: Circles and Ellipses in Danmakufu ph3</h2>
@@ -99,19 +99,19 @@
 		<p>1) As part of her daily routine, Suwako is retaliating against Cirno using Mishaguji-sama. To do this, she must employ circles. Which of the following will spawn a circle?</p>
 	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 1, i*10, 5, 5);}</code><br>
+	        A. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 1, i * 10, 5, 5);}</code><br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+30*sin(i*10), 1, i*10, 5, 5);}</code><br>
+	        B. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss) + 30*cos(i * 10), ObjMove_GetY(objBoss) + 30*sin(i * 10), 1, i * 10, 5, 5);}</code><br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+30*cos(i*10), 1, i*10, 5, 5);}</code><br>
+	        C. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss) + 30*cos(i * 10), ObjMove_GetY(objBoss) + 30*cos(i * 10), 1, i * 10, 5, 5);}</code><br>
 	        <input type="RADIO" value="D" name="cc">
-	        D. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*10), ObjMove_GetY(objBoss)+45*sin(i*10), 1, i*10, 5, 5);}</code><br>
+	        D. <code>ascent(i in 0..36){CreateShotA1(ObjMove_GetX(objBoss) + 30*cos(i * 10), ObjMove_GetY(objBoss) + 45*sin(i * 10), 1, i * 10, 5, 5);}</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
 		<p>2) We create an ellipse with the following code. What is the farthest distance from the boss that bullets will spawn?</p>
 	        <pre class="prettyprint"><code>    ascent(i in 0..30){
-	CreateShotA1(ObjMove_GetX(objBoss)+30*cos(i*12), ObjMove_GetY(objBoss)+75*sin(i*12), 1, i*10, 5, 5);
+	CreateShotA1(ObjMove_GetX(objBoss) + 30*cos(i * 12), ObjMove_GetY(objBoss) + 75*sin(i * 12), 1, i * 10, 5, 5);
     }</code></pre>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 4);">
 	        <input type="RADIO" value="A" name="cc">
@@ -125,15 +125,15 @@
 	      <h2 style="color:yellow" id="sub5">Part 5: What are Parametric Equations?</h2>
 	      <p>Sometimes you can't describe things in math with simple coordinates. And so, you express them in terms of other systems, such as polar coordinates. These are parameterizations, and although the usage of parameterized functions, curves, and surfaces have a significant application in mathematics, we will stick with simple 2D curves. Specifically, we will talk about parameterizing in terms of a single variable t (or the angle theta, for basically everything).</p>
 	      <p>Let's take Danmakufu's coordinate system for Move Objects. You can set the x and y coordinates of an object like so:</p>
-	      <pre class="prettyprint"><code>    ObjMove_SetPosition(obj, 384/2, 448/2); //place object at center of screen</code></pre>
+	      <pre class="prettyprint"><code>    ObjMove_SetPosition(obj, 384 / 2, 448 / 2); //place object at center of screen</code></pre>
 	      <p>So, what does this have to do with parametric equations? Aren't we going to spawn ridiculous shapes with lots of curves and stuff?</p>
 	      <p>Well, simply put, we can take the function's second and third (x and y) arguments and display them as two functions:</p>
 	      <p>\(x = 384/2 + 0t\)<br><br>\(y = 448/2 + 0t\)</p>
 	      <p>If you believe the +0t is redundant, that is because it is - we can write the equations without them, but I am putting them here to show that this is actually a parametric equation. In fact, since Danmakufu separates X, Y, and Z coordinates, you can basically plug in any parametric equation and it will work. Let's start by examining the following:</p>
 	      <pre class="prettyprint"><code>    let angleT = 0;
     loop(30){
-	CreateShotA1(ObjMove_GetX(objBoss)+75*cos(angleT), ObjMove_GetY(objBoss)+30*sin(angleT), 2, angleT, 1, 0);
-	angleT+=360/30;
+        CreateShotA1(ObjMove_GetX(objBoss) + 75*cos(angleT), ObjMove_GetY(objBoss) + 30*sin(angleT), 2, angleT, 1, 0);
+        angleT += 360/30;
     }</code></pre>
 	      <p>This is the ellipse we spawned at the end of Part 4 earlier in this lesson. Now, if we treat the x and y parameters to the function as parametric equations... We get this:</p>
 	      <p>\(x = 75\times cos(t)\)<br><br>\(y = 30\times sin(t)\)</p>
@@ -142,16 +142,16 @@
 	      <h2 style="color:yellow" id="sub6">Part 6: How Can I Use Parametric Equations in Danmakufu?</h2>
 	      <p>Let's take some ridiculous equation and spawn it in Danmakufu.</p>
 	      <pre class="prettyprint"><code>    task ParametricRing(){
-	let angleT = rand(0,360);
-	loop(120){
-	  loop(3){
-	    let obj = CreateShotA2(GetEnemyX(objBoss)+120*cos(angleT*3), GetEnemyY(objBoss)+90*sin(angleT*5), 
-		0, angleT*3, 0.001, 2, 25, 10);
-	    angleT+=360/3;
-	  }
-	  angleT+=7;
-	  yield;
-	}
+        let angleT = rand(0, 360);
+        loop(120){
+            loop(3){
+                let obj = CreateShotA2(GetEnemyX(objBoss) + 120*cos(angleT * 3), GetEnemyY(objBoss) + 90*sin(angleT * 5), 
+                        0, angleT * 3, 0.001, 2, 25, 10);
+                angleT += 360/3;
+            }
+            angleT += 7;
+            yield;
+        }
     }</code></pre>
 	      <p>This is code from my Veemon midboss in Digital Earth: Conquest, where he spawns a wall of danmaku. For the sake of this tutorial, I have stripped all of the non-essential code from the above task.</p>
 	      <p>If we look at this code, we first declare a variable angleT and assign a random angle to it. Then we loop 120 times. Inside the outer loop, we have an inner loop and some bullet spawn code that creates what would normally be a ring of three bullets if we were creating a circle. But instead of a circle, we have some strange equation with angleT*5 and the like. What could this be? Well, <a target="_blank" href="https://www.youtube.com/watch?v=DJlFU4_tZ-U">there's a name for it</a> but we won't get into that. Below are the parametric equations that create this thing.</p>
@@ -167,8 +167,8 @@
 	      <p>It's not too bad. Let's spawn bullets in an astroid!</p>
 	      <pre class="prettyprint"><code>    let angleT = 0;
     loop(30){
-	CreateShotA1(ObjMove_GetX(objBoss)+120*cos(angleT)^3, ObjMove_GetY(objBoss)+120*sin(angleT)^3, 2, angleT, 1, 0);
-	angleT+=360/30;
+        CreateShotA1(ObjMove_GetX(objBoss) + 120*cos(angleT) ^ 3, ObjMove_GetY(objBoss) + 120*sin(angleT) ^ 3, 2, angleT, 1, 0);
+        angleT += 360/30;
     }</code></pre>
 	      <p>And that's that. We have an astroid. Of course, with these types of curves, you don't usually want the bullets to just go outwards with the same speed, because it will just look like a square, then a circle as it gets farther from its spawn point. You could do some complex speed alteration, or you could just change the angle and do interesting things with the angle. It's up to you.</p>
 	      <p>That concludes the lesson!</p>
@@ -190,7 +190,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 5, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

@@ -45,46 +45,46 @@
 	      <h2 style="color:yellow" id="sub3">Part 3: How do I Replicate Border of Wave and Particle?</h2>
 	      <p>Time to replicate!</p>
 	      <pre class="prettyprint"><code>    task BoWaP{	
-	let angleT = rand(0,360);
-	let objcount = 0;
-	loop{	
-	  loop(5){
-	    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, 610, 5);
-	    angleT+=360/5;
-	  }
-	  //increment angle here
-	  objcount++;
-	  yield;
-	}
+        let angleT = rand(0, 360);
+        let objcount = 0;
+        loop{	
+            loop(5){
+                let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, 610, 5);
+                angleT += 360/5;
+            }
+            //increment angle here
+            objcount++;
+            yield;
+        }
     }</code></pre>
 	      <p>Above is our starting code. We'll create an angle variable, and then have an infinite loop where we have a ring of five bullets spawning. As is, our code just belches five lines of bullets from the boss's location. So we need to do some upgrades. Since we know that we want our thing to oscillate, all we need to do is add something that naturally oscillates - sine! We'll add this to our angle</p>
 	      <pre class="prettyprint"><code>    task BoWaP{	
-	let angleT = rand(0,360);
-	let objcount = 0;
-	loop{	
-	  loop(5){
-	    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, 610, 5);
-	    angleT+=360/5;
-	  }
-	  angleT+=sin(objcount)*6;//BOWAP
-	  objcount++;
-	  yield;
-	}
+        let angleT = rand(0, 360);
+        let objcount = 0;
+        loop{	
+            loop(5){
+                let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, 610, 5);
+                angleT += 360/5;
+            }
+            angleT += sin(objcount) * 6; //BOWAP
+            objcount++;
+            yield;
+        }
     }</code></pre>
 	      <p>Congratulations. You have just replicated Border of Wave and Particle. The *6 is to make sure that the gaps are large enough to dodge through. Experiment with the values!</p>
 	      <p>Since you can add sines and cosines and do all kinds of other stuff, why stop here? Let's add other things onto the pattern!</p>
 	      <pre class="prettyprint"><code>    task BoWaP2{	
-	let angleT = rand(0,360);
-	let objcount = 0;
-	loop{	
-	  loop(5){
-	    let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, 610, 5);
-	    angleT+=360/5;
-	  }
-	  angleT+=sin(objcount)*cos(objcount)*12;//BOWAP
-	  objcount++;
-	  yield;
-	}
+        let angleT = rand(0, 360);
+        let objcount = 0;
+        loop{	
+            loop(5){
+                let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, 610, 5);
+                angleT += 360/5;
+            }
+            angleT += sin(objcount) * cos(objcount) * 12; //BOWAP
+            objcount++;
+            yield;
+        }
     }</code></pre>
 	      <p>Combining multiple oscillatory functions will do all kinds of interesting things. And now, the sorrowful conclusion of this lesson.</p>
 	      <h2 style="color:yellow" id="sub4">Part 4: What are the Applications of BoWaP?</h2>
@@ -103,7 +103,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: May 16, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

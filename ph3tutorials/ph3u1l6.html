@@ -122,7 +122,7 @@
     ObjEnemy_Regist(objBoss);</code></pre>
 	      <p>The first line assigns the variable objBoss with a value - an object ID belonging to a brand new Enemy object with type boss. The next line registers the Enemy object. You must register certain objects, such as enemies and custom shots, before they can be used.</p>
 	      <p>However, we do not have any graphic for the boss! From the sample folder that comes with Danmakufu, copy ExRumia.png to the current folder. Below the Enemy Register code, place the following:</p>
-	      <pre class="prettyprint"><code>    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+	      <pre class="prettyprint"><code>    let imgExRumia = GetCurrentScriptDirectory() ~ "ExRumia.png";
     ObjPrim_SetTexture(objBoss, imgExRumia);
     ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
     ObjSprite2D_SetDestCenter(objBoss);</code></pre>
@@ -132,16 +132,16 @@
 	      <p>In Danmakufu, an important thing to note is that objects can be acted upon by multiple object functions. For example, an enemy object can be acted upon by ObjMove, ObjRender, etc. functions. As such, we are not limited to only one set of functions, and we will be using ObjMove functions to move the boss. The boss graphic will automatically stay on the boss object's location.</p>
 	      <p>In the end, it will be up to you to learn the various ObjMove functions. There are, of course, a few important things to note. Firstly, the default playing screen is 384 by 448 pixels, the values returned by <code>GetStgFrameWidth</code> and <code>GetStgFrameHeight</code> by default, respectively. Also, the origin is the top left corner of the playing field for objects whose render priorities are between 0.20 and 0.80, not including 0.80. Perhaps the hardest thing to get used to is that the y value increases as you go from the top to the bottom of the screen. Just keep that in mind, because it is a common source of infuriation. We will discuss this once more in <a href="./ph3u1l11.html">Lesson 11</a>.</p>
 	      <p>Please put these two functions somewhere in your script, preferably immediately after @MainLoop. Also add wait() from <a href="./ph3u1l5.html">Lesson 5</a>, because it will be helpful.</p>
-	      <pre class="prettyprint"><code> function GetCenterX{
-     return GetStgFrameWidth / 2;
+	      <pre class="prettyprint"><code> function GetCenterX(){
+     return GetStgFrameWidth() / 2;
  }
- function GetCenterY{
-     return GetStgFrameHeight / 2;
+ function GetCenterY(){
+     return GetStgFrameHeight() / 2;
  }</code></pre>
 	      <p>These two functions are very useful for positioning objects on the playing field. Now we will move the boss.</p>
 	      <p>While it is possible to simply use <code>ObjMove_SetX()</code> and <code>ObjMove_SetY()</code> (or <code>ObjMove_SetPosition()</code>), be aware that this will effectively teleport the boss, and the player will have to move to a new location in order to continue dealing damage. And no, warping every 30 frames is annoying, not fun. Thankfully, there is ObjMove_SetDestAtFrame().</p>
 	      <p>After setting the starting graphic for your boss but before the end of @Initialize, include the following:</p>
-	      <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);</code></pre>
+	      <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60);</code></pre>
 	      <p>This code will tell the boss object to move to the location (GetCenterX(), 60) in 60 frames, which is approximately one second. This should look significantly better than teleporting the boss.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: What are the default dimensions of the playing field?</div>
 	      <h2 style="color:yellow" id="cp1">Checkpoint</h2>
@@ -170,21 +170,21 @@ let objBoss;
 @Initialize{
     objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
     ObjEnemy_Regist(objBoss);
-    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    let imgExRumia = GetCurrentScriptDirectory() ~ "ExRumia.png";
     ObjPrim_SetTexture(objBoss, imgExRumia);
     ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
     ObjSprite2D_SetDestCenter(objBoss);
-    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60);
 }
 
 @MainLoop{
 }
 
-function GetCenterX{
-     return GetStgFrameWidth / 2;
+function GetCenterX(){
+     return GetStgFrameWidth() / 2;
 }
-function GetCenterY{
-     return GetStgFrameHeight / 2;
+function GetCenterY(){
+     return GetStgFrameHeight() / 2;
 }
 
 function wait(n){
@@ -214,11 +214,11 @@ function wait(n){
 	      <h2 style="color:yellow" id="quiz1">Quiz: Script Structure and Coordinate Systems</h2>
 	        <!--Quiz start.-->
 		<p>Raiko tries to move her drum down towards the middle of the screen. However, it flies from (0,0) upwards.</p>
-	        <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, -60, 60);</code></pre>
+	        <pre class="prettyprint"><code>ObjMove_SetDestAtFrame(objDrum, GetCenterX(), -60, 60);</code></pre>
 		<p>1) Why does the drum fly upwards?</p>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', 5);">
 	        <input type="RADIO" value="A" name="cc">
-	        A. By moving to GetCenterX, the drum moves up<br>
+	        A. By moving to GetCenterX(), the drum moves up<br>
 	        <input type="RADIO" value="B" name="cc">
 	        B. In Danmakufu, the negative y direction is upwards rather than downwards<br>
 	        <input type="RADIO" value="C" name="cc">
@@ -229,7 +229,7 @@ function wait(n){
 		<p>2) What code will fix the issue?</p>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 5);">
 	        <input type="RADIO" value="A" name="cc">
-	        A. <code>ObjMove_SetDestAtFrame(objDrum, GetCenterX, 60, 60);</code><br>
+	        A. <code>ObjMove_SetDestAtFrame(objDrum, GetCenterX(), 60, 60);</code><br>
 	        <input type="RADIO" value="B" name="cc">
 	        B. <code>ObjMove_SetDestAtFrame(objDrum, 0, -60, 60);</code><br>
 	        <input type="SUBMIT" value="Submit">
@@ -239,11 +239,11 @@ function wait(n){
 	        <pre class="prettyprint"><code>@Initialize{
     objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
     ObjEnemy_Regist(objBoss);
-    let imgRaiko = GetCurrentScriptDirectory ~ "Raiko.png";
+    let imgRaiko = GetCurrentScriptDirectory() ~ "Raiko.png";
     ObjPrim_SetTexture(objBoss, imgRaiko);
     ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
     ObjSprite2D_SetDestCenter(objBoss);
-    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60);
     ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
     ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
 }
@@ -328,11 +328,11 @@ let objBoss;
 @Initialize{
     objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
     ObjEnemy_Regist(objBoss);
-    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    let imgExRumia = GetCurrentScriptDirectory() ~ "ExRumia.png";
     ObjPrim_SetTexture(objBoss, imgExRumia);
     ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
     ObjSprite2D_SetDestCenter(objBoss);
-    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60);
 
     TFinalize;
     MainTask;
@@ -361,11 +361,11 @@ task TFinalize {
     return;
 }
 
-function GetCenterX{
-    return GetStgFrameWidth / 2;
+function GetCenterX(){
+    return GetStgFrameWidth() / 2;
 }
-function GetCenterY{
-    return GetStgFrameHeight / 2;
+function GetCenterY(){
+    return GetStgFrameHeight() / 2;
 }
 
 function wait(n){
@@ -400,11 +400,11 @@ let count = 0;
 @Initialize{
     objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
     ObjEnemy_Regist(objBoss);
-    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    let imgExRumia = GetCurrentScriptDirectory() ~ "ExRumia.png";
     ObjPrim_SetTexture(objBoss, imgExRumia);
     ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
     ObjSprite2D_SetDestCenter(objBoss);
-    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60);
 
     TFinalize;
 }
@@ -435,11 +435,11 @@ task TFinalize {
     return;
 }
 
-function GetCenterX{
-    return GetStgFrameWidth / 2;
+function GetCenterX(){
+    return GetStgFrameWidth() / 2;
 }
-function GetCenterY{
-    return GetStgFrameHeight / 2;
+function GetCenterY(){
+    return GetStgFrameHeight() / 2;
 }
 
 function wait(n){
@@ -474,11 +474,11 @@ let count = 0;
 @Initialize{
     objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
     ObjEnemy_Regist(objBoss);
-    let imgExRumia = GetCurrentScriptDirectory ~ "ExRumia.png";
+    let imgExRumia = GetCurrentScriptDirectory() ~ "ExRumia.png";
     ObjPrim_SetTexture(objBoss, imgExRumia);
     ObjSprite2D_SetSourceRect(objBoss, 64, 1, 127, 64);
     ObjSprite2D_SetDestCenter(objBoss);
-    ObjMove_SetDestAtFrame(objBoss, GetCenterX, 60, 60);
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60);
 
     TFinalize;
 }
@@ -508,11 +508,11 @@ task TFinalize {
     return;
 }
 
-function GetCenterX{
-    return GetStgFrameWidth / 2;
+function GetCenterX(){
+    return GetStgFrameWidth() / 2;
 }
-function GetCenterY{
-    return GetStgFrameHeight / 2;
+function GetCenterY(){
+    return GetStgFrameHeight() / 2;
 }
 
 function wait(n){
