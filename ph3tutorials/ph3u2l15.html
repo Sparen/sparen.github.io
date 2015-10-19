@@ -67,7 +67,7 @@
 	      <p>To loop by time, use <code>ObjSound_SetLoopTime()</code>. For example, let's say that I have a music track where the loop starts at 5.43 seconds and the loop ends at 85.43 seconds. I will use the following to loop it:</p>
 	      <pre class="prettyprint"><code>    function CreateTrack{
 	let obj = ObjSound_Create();
-	ObjSound_Load(obj, GetCurrentScriptDirectory~"./bgm/clownpiece.ogg");
+	ObjSound_Load(obj, GetCurrentScriptDirectory() ~ "./bgm/clownpiece.ogg");
 	ObjSound_SetSoundDivision(obj, SOUND_BGM);
 	ObjSound_SetLoopEnable(obj, true);
 	ObjSound_SetLoopTime(obj, 5.43, 85.43);
@@ -94,7 +94,7 @@
 	        </form>
 		<br>
 		<p>2) Ringo is busy eating dango when she realizes that the music playing in Danmakufu suddenly jumped to a point in the middle of the song. What could have happened? Her code is below:</p>
-	      <pre class="prettyprint"><code>    ObjSound_SetLoopTime(obj, 27, 85);//not the actual loop points of Pumpkin of September, sorry</code></pre>
+	      <pre class="prettyprint"><code>    ObjSound_SetLoopTime(obj, 27, 85); //not the actual loop points of Pumpkin of September, sorry</code></pre>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 5);">
 	        <input type="RADIO" value="A" name="cc">
 	        A. Her start point in the loop (27) is incorrect and should be lower<br>
@@ -121,7 +121,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: October 2, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 19, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;"><a target="_blank" href="http://www.winehq.org"><img	      alt="&quot;Wine HQ&quot;"	      src="../images/afflogowinehq.png"></a>          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>          <a target="_blank" href="http://moriyashrine.weebly.com/index.html"><img	      alt="&quot;Moriya Shrine&quot;"	      src="../images/afflogomoriyashrine.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

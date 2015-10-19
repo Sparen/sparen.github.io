@@ -103,12 +103,12 @@
 }
 
 task TPlural{
-    let dir=GetCurrentScriptDirectory();
-    let obj=ObjEnemyBossScene_Create();
+    let dir = GetCurrentScriptDirectory();
+    let obj = ObjEnemyBossScene_Create();
 }</code></pre>
 	      <p>Now, we will begin adding singles to link on. For you, you will most likely have a bunch of singles you want to link. As long as you like at least one, the plural has a purpose.</p>
 	      <p>Let's add the single script 'Nonspell1.txt' to the boss scene. We will use the function <code>ObjEnemyBossScene_Add()</code>. It takes three parameters: the boss scene object to add to, the lifebar segment (starting from 0) to attach the attack to, and the path to the single script.</p>
-	      <pre class="prettyprint"><code>ObjEnemyBossScene_Add(obj, 0, dir~"./Nonspell1.txt");</code></pre>
+	      <pre class="prettyprint"><code>ObjEnemyBossScene_Add(obj, 0, dir ~ "./Nonspell1.txt");</code></pre>
 	      <p>Please note that you should always begin from the 0th lifebar and work your way up from there. Otherwise Danmakufu will complain.</p>
 	      <p>Now that we have added Nonspell1.txt to the first lifebar segment, we will load and register the boss scene. To load the boss scene into memory, we will use <code>ObjEnemyBossScene_LoadInThread(obj)</code>, and to register it, we will use <code>ObjEnemyBossScene_Regist(obj)</code>.</p>
 	      <p>Now, what exactly do these do? Well, loading it basically loads the plural into memory so that it can be accessed. And as for registering, it does a number of things which we will get into shortly.</p>
@@ -136,15 +136,15 @@ task TPlural{
 }
 
 task TPlural{
-    let dir=GetCurrentScriptDirectory();
-    let obj=ObjEnemyBossScene_Create();
-    ObjEnemyBossScene_Add(obj,0,dir~"./Nonspell1.txt");
-    ObjEnemyBossScene_Add(obj,0,dir~"./Spell1.txt");
-    ObjEnemyBossScene_Add(obj,1,dir~"./Nonspell2.txt");
-    ObjEnemyBossScene_Add(obj,1,dir~"./Spell2.txt");
-    ObjEnemyBossScene_Add(obj,2,dir~"./Nonspell3.txt");
-    ObjEnemyBossScene_Add(obj,2,dir~"./Spell3.txt");
-    ObjEnemyBossScene_Add(obj,3,dir~"./Spell4.txt");
+    let dir = GetCurrentScriptDirectory();
+    let obj = ObjEnemyBossScene_Create();
+    ObjEnemyBossScene_Add(obj, 0, dir ~ "./Nonspell1.txt");
+    ObjEnemyBossScene_Add(obj, 0, dir ~ "./Spell1.txt");
+    ObjEnemyBossScene_Add(obj, 1, dir ~ "./Nonspell2.txt");
+    ObjEnemyBossScene_Add(obj, 1, dir ~ "./Spell2.txt");
+    ObjEnemyBossScene_Add(obj, 2, dir ~ "./Nonspell3.txt");
+    ObjEnemyBossScene_Add(obj, 2, dir ~ "./Spell3.txt");
+    ObjEnemyBossScene_Add(obj, 3, dir ~ "./Spell4.txt");
     ObjEnemyBossScene_LoadInThread(obj);
     ObjEnemyBossScene_Regist(obj);
     while(!Obj_IsDeleted(obj)){
@@ -176,9 +176,9 @@ task TPlural{
 }
 
 task TPlural{
-    let dir=GetCurrentScriptDirectory();
+    let dir = GetCurrentScriptDirectory();
     //Question 2
-    ObjEnemyBossScene_Add(obj,0,dir~"./Nonspell1.txt");
+    ObjEnemyBossScene_Add(obj, 0, dir ~ "./Nonspell1.txt");
     ObjEnemyBossScene_LoadInThread(obj);
     //Question 3
     while(!Obj_IsDeleted(obj)){
@@ -200,11 +200,11 @@ task TPlural{
 		<p>2) What code should be added to line 19 to correctly instantiate the Enemy Boss Scene Object?</p>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 3);">
 	        <input type="RADIO" value="A" name="cc">
-	        A. <code>let obj=ObjBossScene_Create();</code><br>
+	        A. <code>let obj = ObjBossScene_Create();</code><br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. <code>let obj=ObjEnemyBossScene_Create(SCENE_BOSS);</code><br>
+	        B. <code>let obj = ObjEnemyBossScene_Create(SCENE_BOSS);</code><br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. <code>let obj=ObjEnemyBossScene_Create();</code><br>
+	        C. <code>let obj = ObjEnemyBossScene_Create();</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
@@ -241,7 +241,7 @@ task TPlural{
         </div>
       </div>
       <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 29, 2015</p>
+        <p style="text-align: center;">Last Update to Page: Oct 19, 2015</p>
         <p style="text-align: center;"><a href="#top">Top</a></p>
         <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>
         <p style="text-align: center;"><span style="font-weight: bold;">Other
