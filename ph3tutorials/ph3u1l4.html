@@ -142,6 +142,18 @@ y += .5;</code></pre>
      let x;
 }</code></pre>
 	      <p>However, very few scripters use it, and you do not need to know this at all unless you are trying to decode someone else's code.</p>
+	      <p>To give a more concrete example of local and global variables, observe below. Note that the other structures used here are explained in this lesson and Lesson 5.</p>
+	      <pre class="prettyprint"><code>let x = 1;
+
+@MainLoop {
+    let y = 2 * x;
+    ascent(i in 0..y){
+        let j = i + x/y;
+    }
+    //cannot access i or j
+}
+//cannot access i, j, or y</code></pre>
+	      <p>In the above code, x is a global variable that can be accessed anywhere in the script. As a result, within @MainLoop, we can access x. y however is local to @MainLoop and cannot be accessed outside of @MainLoop. However, it can be accessed within the ascent loop as it is global in scope with respect to the ascent loop. As such, i and j, which are local with respect to the ascent loop, can use both x and y, but cannot be accessed outside of the ascent loop.</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: Mathematical Operations</h2>
 	        <!--Quiz start.-->
 		<p>1) What is the value of x after the following code has been executed?</p>
