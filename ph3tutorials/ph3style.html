@@ -26,6 +26,7 @@
 	        <ul>
 	          <li><a href="#sub1">White Space</a></li>
 	          <li><a href="#sub2">Functions, Tasks, and Subroutines</a></li>
+	          <li><a href="#sub3">Variables</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">White Space</h2>
 		<div class="dnhstylediv">
@@ -148,7 +149,42 @@ sub renderObject{}</code></pre>
 task CreateParticleA1{}
 sub RenderHitbox{}</code></pre>
 		</div>
+	      <h2 style="color:yellow" id="sub3">Variables</h2>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">Final constants must be in ALL CAPS.</h3>
+	        <pre class="prettyprint" style="background-color: #400000;"><code>let bl_small_magenta = 23;</code></pre>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>let BL_SMALL_MAGENTA = 23;</code></pre>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">Variables must not begin with a capital letter</h3>
+	        <pre class="prettyprint" style="background-color: #400000;"><code>let AngleToPlayer = GetAngleToPlayer(objBoss);
+let Angletoplayer = GetAngleToPlayer(objBoss);</code></pre>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>let angletoplayer = GetAngleToPlayer(objBoss);
+let angleToPlayer = GetAngleToPlayer(objBoss);
+let angle_to_player = GetAngleToPlayer(objBoss);</code></pre>
+		</div>
+		<div class="dnhstylediv">
+		<h3 style="color:rgb(59,248,80);">For loop local variables should follow the i, j, k standard</h3>
+	        <pre class="prettyprint" style="background-color: #400000;"><code>ascent(x in 0..5) {
+    ascent(y in -2..3) {
+        descent(z in BALL_MAGENTA.. BALL_AQUA) {
+
+        }
+    }
+}</code></pre>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>ascent(i in 0..5) {
+    ascent(j in -2..3) {
+        descent(k in BALL_MAGENTA.. BALL_AQUA) {
+
+        }
+    }
+}</code></pre>
+		<p>This is a convention where i, j, k, etc. are used for integers in counting loops. This convention does not need to be followed if known integer values are not being counted.</p>
+	        <pre class="prettyprint" style="background-color: #004000;"><code>ascent(obj in 0..length(GetAllEnemyID())) {
+    Obj_Delete(obj);
+}</code></pre>
+		</div>
 	      <br>            </div>          </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 19, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015 by Andrew Fan</p>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Oct 28, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015 by Andrew Fan</p>      </footer>    </div>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
