@@ -293,7 +293,7 @@ count++;</code></pre>
 	      <p>When the count is a multiple of 30, the code inside the braces will execute. All three methods are functionally similar. However, I will now describe good habits and how to robustify the code. For the tasking code, there is a check after the wait for whether or not the boss is alive, but this is not the case for the other two methods. Therefore, we will do the following:</p>
 	      <p>First, we will create a task called fire;. It will contain the following:</p>
 	      <pre class="prettyprint"><code>task fire{
-    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}//Default kill to prevent (0,0) spawning
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;} //Default kill to prevent (0,0) spawning
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
 }</code></pre>
@@ -421,7 +421,7 @@ let count = 0;
 }
 
 task fire{
-    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}//Default kill to prevent (0,0) spawning
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;} //Default kill to prevent (0,0) spawning
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
 }
@@ -494,7 +494,7 @@ let count = 0;
 }
 
 task fire{
-    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}//Default kill to prevent (0,0) spawning
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;} //Default kill to prevent (0,0) spawning
     let angleT = GetAngleToPlayer(objBoss);
     CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, angleT, DS_BALL_S_RED, 5);
 }
