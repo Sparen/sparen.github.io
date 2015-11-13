@@ -17,16 +17,17 @@
           <li><a href="./index.html">AS.378.215-216</a></li>
         </ul>
       </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div style="width: 850px;" class="yui-g">	      <h1 style="color:rgb(59,248,80)">Verb Particles</h1>	      <p>Here you will find automatically generated questions in quiz format. Please select the correct particle.</p>
-	      <p>You may want to consider zooming in if you cannot read the furigana/ruby on top of the kanji.</p>
-	      <p>If you find errors, please inform me via text, Facebook, or e-mail. If you use this website's comment form, I will discover your comment a month after the class has ended. I guarantee it.</p>
+	      <p>You may want to consider zooming in if you cannot read the furigana/ruby on top of the kanji. If you see words you are not familiar with, please use Google Translate or some other software - limiting direct objects based off of the lesson of the verb makes writing the software significantly more complicated than it needs to be for basic functionality.</p>
+	      <p>If you find errors, please inform me via text, Facebook, or e-mail. Chances are that I will have forgotten a scenario in which case a certain particle is acceptable/not acceptable.</p>
 	        <h2 style="color:aqua">Verb Selection</h2>
-		  <input type="button" value="Check All" onclick="qc_checkAll()">
-		  <br><br>
+		  <input type="checkbox" value="Check All" onclick="qc_checkAll(this.checked)"> Check All<br>
 		<table style="width:100%"><tr><td>
-		  <input type="checkbox" name="verb" id="quiz3_iku" defaultChecked="false"> L3 - 行く<br>
-		  <input type="checkbox" name="verb" id="quiz3_kaeru" defaultChecked="false"> L3 - 帰る<br>
-		  <!--<input type="checkbox" name="verb" id="quiz3_kiku" defaultChecked="false">--> L3 - 聞く<br>
-		  <!--<input type="checkbox" name="verb" id="quiz3_nomu" defaultChecked="false">--> L3 - 飲む<br>
+		  <p>
+		  <input type="checkbox" name="verb" id="quiz3_master" onclick="qc_checkL3(this.checked)"> Check L3<br>
+		  <input type="checkbox" name="verb" id="quiz3_iku" defaultChecked="false"> L3 - <ruby lang="ja"><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>く<br>
+		  <input type="checkbox" name="verb" id="quiz3_kaeru" defaultChecked="false"> L3 - <ruby lang="ja"><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>る<br>
+		  <input type="checkbox" name="verb" id="quiz3_kiku" defaultChecked="false"> L3 - <ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>く<br>
+		  <input type="checkbox" name="verb" id="quiz3_nomu" defaultChecked="false"> L3 - <ruby lang="ja"><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>む<br>
 		  <!--<input type="checkbox" name="verb" id="quiz3_hanasu" defaultChecked="false">--> L3 - 話す<br>
 		  <!--<input type="checkbox" name="verb" id="quiz3_yomu" defaultChecked="false">--> L3 - 読む<br>
 		  <!--<input type="checkbox" name="verb" id="quiz3_taberu" defaultChecked="false">--> L3 - 食べる<br>
@@ -35,7 +36,9 @@
 		  <!--<input type="checkbox" name="verb" id="quiz3_kuru" defaultChecked="false">--> L3 - 来る<br>
 		  <!--<input type="checkbox" name="verb" id="quiz3_suru" defaultChecked="false">--> L3 - する<br>
 		  <!--<input type="checkbox" name="verb" id="quiz3_benkyousuru" defaultChecked="false">--> L3 - 勉強する<br>
+		  </p>
 		</td><td>
+		  <p>
 		  <!--<input type="checkbox" name="verb" id="quiz4_au" defaultChecked="false">--> L4 - 会う<br>
 		  <!--<input type="checkbox" name="verb" id="quiz4_aru" defaultChecked="false">--> L4 - ある<br>
 		  <!--<input type="checkbox" name="verb" id="quiz4_kau" defaultChecked="false">--> L4 - 買う<br>
@@ -44,6 +47,7 @@
 		  <!--<input type="checkbox" name="verb" id="quiz4_matsu" defaultChecked="false">--> L4 - 待つ<br>
 		  <!--<input type="checkbox" name="verb" id="quiz4_wakaru" defaultChecked="false">--> L4 - わかる<br>
 		  <!--<input type="checkbox" name="verb" id="quiz4_iru" defaultChecked="false">--> L4 - いる<br>
+		  </p>
 		</td>
 		</tr></table>
 		  <br><br>

@@ -6,7 +6,15 @@ var container_places = ['<ruby lang="ja"><rb>学校</rb><rp>(</rp><rt>がっこ�
     '<ruby lang="ja"><rb>動物園</rb><rp>(</rp><rt>どうぶつえん</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>海</rb><rp>(</rp><rt>うみ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>家</rb><rp>(</rp><rt>うち</rt><rp>)</rp></ruby>',
-    '<ruby lang="ja"><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>'];
+    '<ruby lang="ja"><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>'
+    ];
+var container_hearable = ['<ruby lang="ja"><rb>音楽</rb><rp>(</rp><rt>おんがく</rt><rp>)</rp></ruby>'
+    ];
+var container_drinkable = ['<ruby lang="ja"><rb>水</rb><rp>(</rp><rt>みず</rt><rp>)</rp></ruby>',
+    'お<ruby lang="ja"><rb>酒</rb><rp>(</rp><rt>さけ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>紅茶</rb><rp>(</rp><rt>こうちゃ</rt><rp>)</rp></ruby>',
+    'ジュース'
+    ];
 
 function question_create(){
   //First, determine which verbs to use
@@ -33,13 +41,14 @@ function question_create(){
           '</form>';
 }
 
+//Randomly select one of the checked verbs to create a sentence
 function qc_determineverb(){
   var possible = [];
   if (document.getElementById("quiz3_iku").checked) {possible.push("3_iku");}
   if (document.getElementById("quiz3_kaeru").checked) {possible.push("3_kaeru");}
-  /*if (document.getElementById("quiz3_kiku").checked) {possible.push("3_kiku");}
+  if (document.getElementById("quiz3_kiku").checked) {possible.push("3_kiku");}
   if (document.getElementById("quiz3_nomu").checked) {possible.push("3_nomu");}
-  if (document.getElementById("quiz3_hanasu").checked) {possible.push("3_hanasu");}
+  /*if (document.getElementById("quiz3_hanasu").checked) {possible.push("3_hanasu");}
   if (document.getElementById("quiz3_yomu").checked) {possible.push("3_yomu");}
   if (document.getElementById("quiz3_taberu").checked) {possible.push("3_taberu");}
   if (document.getElementById("quiz3_neru").checked) {possible.push("3_neru");}
@@ -58,6 +67,10 @@ function qc_object(currentverb){
     container = container_places;
   } else if(currentverb == "3_kaeru") {
     container = container_places;
+  } else if(currentverb == "3_kiku") {
+    container = container_hearable;
+  } else if(currentverb == "3_nomu") {
+    container = container_drinkable;
   }
   var randindex = Math.floor((Math.random() * container.length));
   return container[randindex];
@@ -72,6 +85,12 @@ function qc_verb(currentverb){
   } else if(currentverb == "3_kaeru") {
     stem = '<ruby lang="ja"><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>';
     container = ['る', 'ります', 'った', 'りました', 'らない', 'りません', 'らなかった', 'りませんでした', 'ってください', 'っています'];
+  } else if(currentverb == "3_kiku") {
+    stem = '<ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>';
+    container = ['く', 'きます', 'いた', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'いてください', 'いています'];
+  } else if(currentverb == "3_nomu") {
+    stem = '<ruby lang="ja"><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>';
+    container = ['む', 'みます', 'んだ', 'みました', 'まない', 'みません', 'まなかった', 'みませんでした', 'んでください', 'んでいます'];
   }
   var randindex = Math.floor((Math.random() * container.length));
   return stem + container[randindex];
@@ -97,6 +116,8 @@ function qc_checkAnswer(quizForm, verbID){
   //Determine what answers are 
   if (verbID == "3_iku") {theAnswer.push("ni"); theAnswer.push("he");}
   if (verbID == "3_kaeru") {theAnswer.push("ni"); theAnswer.push("he");}
+  if (verbID == "3_kiku") {theAnswer.push("wo");}
+  if (verbID == "3_nomu") {theAnswer.push("wo");}
 
   var feedback = ""; //For notes and feedback
 
@@ -109,20 +130,26 @@ function qc_checkAnswer(quizForm, verbID){
   return false;
 }
 
-function qc_checkAll() {
-  document.getElementById("quiz3_iku").checked = true;
-  document.getElementById("quiz3_kaeru").checked = true;
-  document.getElementById("quiz3_iku").checked = true;
-  document.getElementById("quiz3_kiku").checked = true;
-  document.getElementById("quiz3_nomu").checked = true;
-  document.getElementById("quiz3_hanasu").checked = true;
-  document.getElementById("quiz3_yomu").checked = true;
-  document.getElementById("quiz3_taberu").checked = true;
-  document.getElementById("quiz3_neru").checked = true;
-  document.getElementById("quiz3_miru").checked = true;
-  document.getElementById("quiz3_kuru").checked = true;
-  document.getElementById("quiz3_suru").checked = true;
-  document.getElementById("quiz3_benkyousuru").checked = true;
+function qc_checkAll(newval) {
+  qc_checkL3(newval);
+}
+
+function qc_checkL3(newval) {
+  document.getElementById("quiz3_master").checked = newval;
+
+  document.getElementById("quiz3_iku").checked = newval;
+  document.getElementById("quiz3_kaeru").checked = newval;
+  document.getElementById("quiz3_iku").checked = newval;
+  document.getElementById("quiz3_kiku").checked = newval;
+  document.getElementById("quiz3_nomu").checked = newval;
+  document.getElementById("quiz3_hanasu").checked = newval;
+  document.getElementById("quiz3_yomu").checked = newval;
+  document.getElementById("quiz3_taberu").checked = newval;
+  document.getElementById("quiz3_neru").checked = newval;
+  document.getElementById("quiz3_miru").checked = newval;
+  document.getElementById("quiz3_kuru").checked = newval;
+  document.getElementById("quiz3_suru").checked = newval;
+  document.getElementById("quiz3_benkyousuru").checked = newval;
 }
 
 function contains(a, obj) {
