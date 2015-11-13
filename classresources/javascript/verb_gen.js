@@ -21,6 +21,18 @@ var container_drinkable = ['<ruby lang="ja"><rb>水</rb><rp>(</rp><rt>みず</rt
 var container_languages = ['<ruby lang="ja"><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>英語</rb><rp>(</rp><rt>えいご</rt><rp>)</rp></ruby>'
     ]
+var container_readable = ['<ruby lang="ja"><rb>新聞</rb><rp>(</rp><rt>しんぶん</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>雑誌</rb><rp>(</rp><rt>ざっし</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby>'
+    ]
+var container_edible = ['<ruby lang="ja"><rb>寿司</rb><rp>(</rp><rt>すし</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>刺身</rb><rp>(</rp><rt>さしみ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>弁当</rb><rp>(</rp><rt>べんとう</rt><rp>)</rp></ruby>',
+    'かつ<ruby lang="ja"><rb>丼</rb><rp>(</rp><rt>どん</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>牛丼</rb><rp>(</rp><rt>ぎゅうどん</rt><rp>)</rp></ruby>',
+    'ラーメン',
+    'うどん'
+    ]
 
 function question_create(){
   //First, determine which verbs to use
@@ -55,9 +67,9 @@ function qc_determineverb(){
   if (document.getElementById("quiz3_kiku").checked) {possible.push("3_kiku");}
   if (document.getElementById("quiz3_nomu").checked) {possible.push("3_nomu");}
   if (document.getElementById("quiz3_hanasu").checked) {possible.push("3_hanasu");}
-  /*if (document.getElementById("quiz3_yomu").checked) {possible.push("3_yomu");}
+  if (document.getElementById("quiz3_yomu").checked) {possible.push("3_yomu");}
   if (document.getElementById("quiz3_taberu").checked) {possible.push("3_taberu");}
-  if (document.getElementById("quiz3_neru").checked) {possible.push("3_neru");}
+  /*if (document.getElementById("quiz3_neru").checked) {possible.push("3_neru");}
   if (document.getElementById("quiz3_miru").checked) {possible.push("3_miru");}
   if (document.getElementById("quiz3_kuru").checked) {possible.push("3_kuru");}
   if (document.getElementById("quiz3_suru").checked) {possible.push("3_suru");}
@@ -79,6 +91,10 @@ function qc_object(currentverb){
     container = container_drinkable;
   } else if(currentverb == "3_hanasu") {
     container = container_languages;
+  } else if(currentverb == "3_yomu") {
+    container = container_readable;
+  } else if(currentverb == "3_taberu") {
+    container = container_edible;
   }
   var randindex = Math.floor((Math.random() * container.length));
   return container[randindex];
@@ -102,6 +118,12 @@ function qc_verb(currentverb){
   } else if(currentverb == "3_hanasu") {
     stem = '<ruby lang="ja"><rb>話</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>';
     container = ['す', 'します', 'した', 'しました', 'さない', 'しません', 'さなかった', 'しませんでした', 'してください', 'しています', 'せる', 'せます', 'せない', 'せません'];
+  } else if(currentverb == "3_yomu") {
+    stem = '<ruby lang="ja"><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>';
+    container = ['む', 'みます', 'んだ', 'みました', 'まない', 'みません', 'まなかった', 'みませんでした', 'んでください', 'んでいます', 'める', 'めます', 'めない', 'めません'];
+  } else if(currentverb == "3_taberu") {
+    stem = '<ruby lang="ja"><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>';
+    container = ['べる', 'べます', 'べた', 'べました', 'べない', 'べません', 'べなかった', 'べませんでした', 'べてください', 'べています', 'べられる', 'べられます', 'べられない', 'べられません'];
   }
   var randindex = Math.floor((Math.random() * container.length));
   return stem + container[randindex];
@@ -130,6 +152,8 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "3_kiku") {theAnswer.push("wo");}
   if (verbID == "3_nomu") {theAnswer.push("wo");}
   if (verbID == "3_hanasu") {theAnswer.push("de"); theAnswer.push("wo");}
+  if (verbID == "3_yomu") {theAnswer.push("wo");}
+  if (verbID == "3_taberu") {theAnswer.push("wo");}
 
   var feedback = "Acceptable answers include: " + theAnswer; //For notes and feedback
 
