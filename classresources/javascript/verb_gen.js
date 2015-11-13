@@ -13,8 +13,14 @@ var container_hearable = ['<ruby lang="ja"><rb>音楽</rb><rp>(</rp><rt>おん�
 var container_drinkable = ['<ruby lang="ja"><rb>水</rb><rp>(</rp><rt>みず</rt><rp>)</rp></ruby>',
     'お<ruby lang="ja"><rb>酒</rb><rp>(</rp><rt>さけ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>紅茶</rb><rp>(</rp><rt>こうちゃ</rt><rp>)</rp></ruby>',
-    'ジュース'
+    '<ruby lang="ja"><rb>牛乳</rb><rp>(</rp><rt>ぎゅうにゅう</rt><rp>)</rp></ruby>',
+    'ジュース',
+    'ビール',
+    'コーヒ'
     ];
+var container_languages = ['<ruby lang="ja"><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>英語</rb><rp>(</rp><rt>えいご</rt><rp>)</rp></ruby>'
+    ]
 
 function question_create(){
   //First, determine which verbs to use
@@ -23,12 +29,12 @@ function question_create(){
   var stem = qc_verb(currentverb);
   document.getElementById("quiz_inner").innerHTML = "<p>" + object + "__" + stem + "。</p>" + 
           '<form method="POST" title="' + currentverb + '" onSubmit="return qc_checkAnswer(this, \'' + currentverb + '\');">' + 
-          '<input type="RADIO" value="ha" name="cc">' +
-          '          は<br>' +
           '<input type="RADIO" value="wo" name="cc">' +
           '          を<br>' +
           '<input type="RADIO" value="ga" name="cc">' +
           '          が<br>' +
+          '<input type="RADIO" value="de" name="cc">' +
+          '          で<br>' +
           '<input type="RADIO" value="ni" name="cc">' +
           '          に<br>' +
           '<input type="RADIO" value="he" name="cc">' +
@@ -48,8 +54,8 @@ function qc_determineverb(){
   if (document.getElementById("quiz3_kaeru").checked) {possible.push("3_kaeru");}
   if (document.getElementById("quiz3_kiku").checked) {possible.push("3_kiku");}
   if (document.getElementById("quiz3_nomu").checked) {possible.push("3_nomu");}
-  /*if (document.getElementById("quiz3_hanasu").checked) {possible.push("3_hanasu");}
-  if (document.getElementById("quiz3_yomu").checked) {possible.push("3_yomu");}
+  if (document.getElementById("quiz3_hanasu").checked) {possible.push("3_hanasu");}
+  /*if (document.getElementById("quiz3_yomu").checked) {possible.push("3_yomu");}
   if (document.getElementById("quiz3_taberu").checked) {possible.push("3_taberu");}
   if (document.getElementById("quiz3_neru").checked) {possible.push("3_neru");}
   if (document.getElementById("quiz3_miru").checked) {possible.push("3_miru");}
@@ -71,6 +77,8 @@ function qc_object(currentverb){
     container = container_hearable;
   } else if(currentverb == "3_nomu") {
     container = container_drinkable;
+  } else if(currentverb == "3_hanasu") {
+    container = container_languages;
   }
   var randindex = Math.floor((Math.random() * container.length));
   return container[randindex];
@@ -81,16 +89,19 @@ function qc_verb(currentverb){
   var stem = "";
   if(currentverb == "3_iku") {
     stem = '<ruby lang="ja"><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>';
-    container = ['く', 'きます', 'った', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'ってください', 'っています'];
+    container = ['く', 'きます', 'った', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'ってください', 'っています', 'ける', 'けます', 'けない', 'けません'];
   } else if(currentverb == "3_kaeru") {
     stem = '<ruby lang="ja"><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>';
-    container = ['る', 'ります', 'った', 'りました', 'らない', 'りません', 'らなかった', 'りませんでした', 'ってください', 'っています'];
+    container = ['る', 'ります', 'った', 'りました', 'らない', 'りません', 'らなかった', 'りませんでした', 'ってください', 'っています', 'れる', 'れます', 'れない', 'れません'];
   } else if(currentverb == "3_kiku") {
     stem = '<ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>';
-    container = ['く', 'きます', 'いた', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'いてください', 'いています'];
+    container = ['く', 'きます', 'いた', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'いてください', 'いています', 'ける', 'けます', 'けない', 'けません'];
   } else if(currentverb == "3_nomu") {
     stem = '<ruby lang="ja"><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>';
-    container = ['む', 'みます', 'んだ', 'みました', 'まない', 'みません', 'まなかった', 'みませんでした', 'んでください', 'んでいます'];
+    container = ['む', 'みます', 'んだ', 'みました', 'まない', 'みません', 'まなかった', 'みませんでした', 'んでください', 'んでいます', 'める', 'めます', 'めない', 'めません'];
+  } else if(currentverb == "3_hanasu") {
+    stem = '<ruby lang="ja"><rb>話</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>';
+    container = ['す', 'します', 'した', 'しました', 'さない', 'しません', 'さなかった', 'しませんでした', 'してください', 'しています', 'せる', 'せます', 'せない', 'せません'];
   }
   var randindex = Math.floor((Math.random() * container.length));
   return stem + container[randindex];
@@ -118,13 +129,14 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "3_kaeru") {theAnswer.push("ni"); theAnswer.push("he");}
   if (verbID == "3_kiku") {theAnswer.push("wo");}
   if (verbID == "3_nomu") {theAnswer.push("wo");}
+  if (verbID == "3_hanasu") {theAnswer.push("de"); theAnswer.push("wo");}
 
-  var feedback = ""; //For notes and feedback
+  var feedback = "Acceptable answers include: " + theAnswer; //For notes and feedback
 
   if(contains(theAnswer, s)){
-    alert("'"+s+"' is correct!" + feedback);
+    alert("'"+s+"' is correct! " + feedback);
   }else{
-    alert("'"+s+"' is incorrect." + feedback);
+    alert("'"+s+"' is incorrect. " + feedback);
   }
 
   return false;
