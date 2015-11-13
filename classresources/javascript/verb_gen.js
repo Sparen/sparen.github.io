@@ -97,6 +97,7 @@ function qc_object(currentverb){
     container = container_edible;
   }
   var randindex = Math.floor((Math.random() * container.length));
+  if (container.length == 0) {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
   return container[randindex];
 }
 
@@ -126,6 +127,10 @@ function qc_verb(currentverb){
     container = ['べる', 'べます', 'べた', 'べました', 'べない', 'べません', 'べなかった', 'べませんでした', 'べてください', 'べています', 'べられる', 'べられます', 'べられない', 'べられません'];
   }
   var randindex = Math.floor((Math.random() * container.length));
+  if (container.length == 0) {
+    return '<ruby lang="ja"><rb>契約</rb><rp>(</rp><rt>けいやく</rt><rp>)</rp></ruby>' + "して、" + 
+    '<ruby lang="ja"><rb>魔法少女</rb><rp>(</rp><rt>まほうしょうじょ</rt><rp>)</rp></ruby>' + "になってよ！」__" + 
+    '<ruby lang="ja"><rb>言</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>' + "っていました";}
   return stem + container[randindex];
 }
 
@@ -145,6 +150,7 @@ function qc_checkAnswer(quizForm, verbID){
   }
 
   var theAnswer = [];
+  var kyubey = false;
 
   //Determine what answers are 
   if (verbID == "3_iku") {theAnswer.push("ni"); theAnswer.push("he");}
@@ -155,12 +161,14 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "3_yomu") {theAnswer.push("wo");}
   if (verbID == "3_taberu") {theAnswer.push("wo");}
 
+  if (theAnswer.length == 0) {theAnswer.push("to"); kyubey = true;} //defaults to Kyubey
+
   var feedback = "Acceptable answers include: " + theAnswer; //For notes and feedback
 
   if(contains(theAnswer, s)){
-    alert("'"+s+"' is correct! " + feedback);
+    alert("'"+s+"' is correct! " + feedback + (kyubey ? "\n\nContract complete! You are now a magical girl!" : ""));
   }else{
-    alert("'"+s+"' is incorrect. " + feedback);
+    alert("'"+s+"' is incorrect. " + feedback + (kyubey ? "\n\n／人 ͡° ‿‿  ͡°人＼" : ""));
   }
 
   return false;
