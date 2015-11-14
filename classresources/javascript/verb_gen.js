@@ -8,6 +8,10 @@ var container_places = ['<ruby lang="ja"><rb>学校</rb><rp>(</rp><rt>がっこ�
     '<ruby lang="ja"><rb>家</rb><rp>(</rp><rt>うち</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>'
     ];
+var container_sleepableplaces = ['<ruby lang="ja"><rb>家</rb><rp>(</rp><rt>うち</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>寮</rb><rp>(</rp><rt>りょう</rt><rp>)</rp></ruby>',
+    'ホテル'
+    ];
 var container_hearable = ['<ruby lang="ja"><rb>音楽</rb><rp>(</rp><rt>おんがく</rt><rp>)</rp></ruby>'
     ];
 var container_drinkable = ['<ruby lang="ja"><rb>水</rb><rp>(</rp><rt>みず</rt><rp>)</rp></ruby>',
@@ -55,6 +59,10 @@ function question_create(){
           '          と<br>' +
           '<input type="RADIO" value="mo" name="cc">' +
           '          も<br>' +
+          '<input type="RADIO" value="kara" name="cc">' +
+          '          から<br>' +
+          '<input type="RADIO" value="made" name="cc">' +
+          '          まで<br>' +
           '<input type="SUBMIT" value="Submit">' +
           '</form>';
 }
@@ -69,10 +77,10 @@ function qc_determineverb(){
   if (document.getElementById("quiz3_hanasu").checked) {possible.push("3_hanasu");}
   if (document.getElementById("quiz3_yomu").checked) {possible.push("3_yomu");}
   if (document.getElementById("quiz3_taberu").checked) {possible.push("3_taberu");}
-  /*if (document.getElementById("quiz3_neru").checked) {possible.push("3_neru");}
+  if (document.getElementById("quiz3_neru").checked) {possible.push("3_neru");}
   if (document.getElementById("quiz3_miru").checked) {possible.push("3_miru");}
   if (document.getElementById("quiz3_kuru").checked) {possible.push("3_kuru");}
-  if (document.getElementById("quiz3_suru").checked) {possible.push("3_suru");}
+  /*if (document.getElementById("quiz3_suru").checked) {possible.push("3_suru");}
   if (document.getElementById("quiz3_benkyousuru").checked) {possible.push("3_benkyousuru");}*/
   if (possible.length == 0) {alert("Please check at least one value.");}
   var randindex = Math.floor((Math.random() * possible.length));
@@ -95,6 +103,12 @@ function qc_object(currentverb){
     container = container_readable;
   } else if(currentverb == "3_taberu") {
     container = container_edible;
+  } else if(currentverb == "3_neru") {
+    container = container_sleepableplaces;
+  } else if(currentverb == "3_miru") {
+    container = container_sleepableplaces.concat(container_readable).concat(container_edible);
+  } else if(currentverb == "3_kuru") {
+    container = container_places;
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (container.length == 0) {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -125,6 +139,23 @@ function qc_verb(currentverb){
   } else if(currentverb == "3_taberu") {
     stem = '<ruby lang="ja"><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>';
     container = ['べる', 'べます', 'べた', 'べました', 'べない', 'べません', 'べなかった', 'べませんでした', 'べてください', 'べています', 'べられる', 'べられます', 'べられない', 'べられません'];
+  } else if(currentverb == "3_neru") {
+    stem = '<ruby lang="ja"><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>';
+    container = ['る', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'られる', 'られます', 'られない', 'られません'];
+  } else if(currentverb == "3_miru") {
+    stem = '<ruby lang="ja"><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>';
+    container = ['る', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'られる', 'られます', 'られない', 'られません'];
+  } else if(currentverb == "3_kuru") {
+    if (Math.random() < 0.5) {
+      stem = '<ruby lang="ja"><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>';
+      container = ['ます', 'た', 'ました', 'ません', 'ませんでした', 'てください', 'ています'];
+    } else if (Math.random() < 0.75){
+      stem = '<ruby lang="ja"><rb>来</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>';
+      container = ['ない', 'なかった', 'られる', 'られます', 'られない', 'られません'];
+    } else {
+      stem = '<ruby lang="ja"><rb>来</rb><rp>(</rp><rt>く</rt><rp>)</rp></ruby>';
+      container = ['る'];
+    }
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (container.length == 0) {
@@ -160,6 +191,9 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "3_hanasu") {theAnswer.push("de"); theAnswer.push("wo");}
   if (verbID == "3_yomu") {theAnswer.push("wo");}
   if (verbID == "3_taberu") {theAnswer.push("wo");}
+  if (verbID == "3_neru") {theAnswer.push("de");}
+  if (verbID == "3_miru") {theAnswer.push("wo");}
+  if (verbID == "3_kuru") {theAnswer.push("kara"); theAnswer.push("ni"); theAnswer.push("he");}
 
   if (theAnswer.length == 0) {theAnswer.push("to"); kyubey = true;} //defaults to Kyubey
 
