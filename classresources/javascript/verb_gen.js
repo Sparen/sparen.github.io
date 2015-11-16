@@ -67,6 +67,7 @@ function question_create(){
   var currentverb = qc_determineverb(); //string containing verb ID, for use in creating question
   var object = qc_object(currentverb);
   var stem = qc_verb(currentverb);
+  document.getElementById("quiz_result").innerHTML = "";
   document.getElementById("quiz_quest").innerHTML = "<p>" + object + "<span style=\"color:aqua\">__</span>" + stem + "。</p>";
   document.getElementById("quiz_inner").innerHTML = 
           '<form method="POST" title="' + currentverb + '" onSubmit="return qc_checkAnswer(this, \'' + currentverb + '\');">' + 
@@ -101,6 +102,7 @@ function qc_determineverb(){
   if (document.getElementById("quiz3_nomu").checked) {possible.push("3_nomu");}
   if (document.getElementById("quiz3_hanasu").checked) {possible.push("3_hanasu");}
   if (document.getElementById("quiz3_yomu").checked) {possible.push("3_yomu");}
+  if (document.getElementById("quiz3_okiru").checked) {possible.push("3_okiru");}
   if (document.getElementById("quiz3_taberu").checked) {possible.push("3_taberu");}
   if (document.getElementById("quiz3_neru").checked) {possible.push("3_neru");}
   if (document.getElementById("quiz3_miru").checked) {possible.push("3_miru");}
@@ -134,6 +136,8 @@ function qc_object(currentverb){
     container = container_languages;
   } else if(currentverb == "3_yomu") {
     container = container_readable;
+  } else if(currentverb == "3_okiru") {
+    container = container_sleepableplaces;
   } else if(currentverb == "3_taberu") {
     container = container_edible;
   } else if(currentverb == "3_neru") {
@@ -197,6 +201,9 @@ function qc_verb(currentverb){
   } else if(currentverb == "3_yomu") {
     stem = '<ruby lang="ja"><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>';
     container = verb_u_mu_standard;
+  } else if(currentverb == "3_okiru") {
+    stem = '<ruby lang="ja"><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>き';
+    container = verb_ru_ru_standard;
   } else if(currentverb == "3_taberu") {
     stem = '<ruby lang="ja"><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べ';
     container = verb_ru_ru_standard;
@@ -344,6 +351,7 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "3_nomu") {theAnswer.push("を");}
   if (verbID == "3_hanasu") {theAnswer.push("で"); theAnswer.push("を");}
   if (verbID == "3_yomu") {theAnswer.push("を");}
+  if (verbID == "3_okiru") {theAnswer.push("で");}
   if (verbID == "3_taberu") {theAnswer.push("を");}
   if (verbID == "3_neru") {theAnswer.push("で");}
   if (verbID == "3_miru") {theAnswer.push("を");}
@@ -375,10 +383,68 @@ function qc_checkAnswer(quizForm, verbID){
 function qc_verbinformation(verbID) {
   if (verbID == "3_iku") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>く</span>' + 
-      '<br>Genki (L3): to go (destination <span style="color:springgreen">に・へ</span>)';
+      '<br>Genki (L3): to go (<i>destination</i> <span style="color:springgreen">に・へ</span>)';
   } else if (verbID == "3_kaeru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>る</span>' + 
-      '<br>Genki (L3): to go back; to return (destination <span style="color:springgreen">に・へ</span>)';
+      '<br>Genki (L3): to go back; to return (<i>destination</i> <span style="color:springgreen">に・へ</span>)';
+  } else if (verbID == "3_kiku") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>く</span>' + 
+      '<br>Genki (L3): to listen; to hear (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "3_nomu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>む</span>' + 
+      '<br>Genki (L3): to drink (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "3_hanasu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>話</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>す</span>' + 
+      '<br>Genki (L3): to speak; to talk (<i>language</i> <span style="color:springgreen">を・で</span>)';
+  } else if (verbID == "3_yomu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>む</span>' + 
+      '<br>Genki (L3): to read (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "3_okiru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>き</span>' + 
+      '<br>Genki (L3): to get up';
+  } else if (verbID == "3_taberu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べる</span>' + 
+      '<br>Genki (L3): to eat (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "3_neru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>る</span>' + 
+      '<br>Genki (L3): to sleep; to go to sleep';
+  } else if (verbID == "3_miru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>る</span>' + 
+      '<br>Genki (L3): to see; to look at; to watch (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "3_kuru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>来</rb><rp>(</rp><rt>く</rt><rp>)</rp></ruby>る</span>' + 
+      '<br>Genki (L3): to come (<i>destination</i> <span style="color:springgreen">に・へ</span>)';
+  } else if (verbID == "3_suru") {
+    return '<span style="color:aquamarine">する</span>' + 
+      '<br>Genki (L3): to do (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "3_benkyousuru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>する</span>' + 
+      '<br>Genki (L3): to study (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "4_au") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>会</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>う</span>' + 
+      '<br>Genki (L4): to meet; to see (a person) (<i>person</i> <span style="color:springgreen">に</span>)';
+  } else if (verbID == "4_aru") {
+    return '<span style="color:aquamarine">ある</span>' + 
+      '<br>Genki (L4): there is... (<span style="color:springgreen">〜が</span>)';
+  } else if (verbID == "4_kau") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>う</span>' + 
+      '<br>Genki (L4): to buy (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "4_kaku") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>く</span>' + 
+      '<br>Genki (L4): to write (<i>person</i> <span style="color:springgreen">に</span> <i>thing</i> <span style="color:springgreen">を</span>)';
+  } else if (verbID == "4_toru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>撮</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>る</span>' + 
+      '<br>Genki (L4): to take (pictures) (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "4_matsu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>待</rb><rp>(</rp><rt>ま</rt><rp>)</rp></ruby>つ</span>' + 
+      '<br>Genki (L4): to wait (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "4_wakaru") {
+    return '<span style="color:aquamarine">わかる</span>' + 
+      '<br>Genki (L4): to understand (<span style="color:springgreen">〜が</span>)' +
+      '<br>Note: Intransitive';
+  } else if (verbID == "4_iru") {
+    return '<span style="color:aquamarine">いる</span>' + 
+      '<br>Genki (L4): (a person) is in...; stays at... (<span style="color:springgreen">〜が</span>)';
   }
   return "";
 }
