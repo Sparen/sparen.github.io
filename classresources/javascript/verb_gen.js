@@ -42,6 +42,12 @@ var container_doable = ['<ruby lang="ja"><rb>宿題</rb><rp>(</rp><rt>しゅく�
     'ゲーム',
     'スポーツ'
     ]
+var container_fields = ['<ruby lang="ja"><rb>物理</rb><rp>(</rp><rt>ぶつり</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>科学</rb><rp>(</rp><rt>かがく</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>化学</rb><rp>(</rp><rt>かがく</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>芸術</rb><rp>(</rp><rt>げいじゅつ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>工学</rb><rp>(</rp><rt>こうがく</rt><rp>)</rp></ruby>'
+    ]
 
 function question_create(){
   //First, determine which verbs to use
@@ -86,7 +92,7 @@ function qc_determineverb(){
   if (document.getElementById("quiz3_miru").checked) {possible.push("3_miru");}
   if (document.getElementById("quiz3_kuru").checked) {possible.push("3_kuru");}
   if (document.getElementById("quiz3_suru").checked) {possible.push("3_suru");}
-  /*if (document.getElementById("quiz3_benkyousuru").checked) {possible.push("3_benkyousuru");}*/
+  if (document.getElementById("quiz3_benkyousuru").checked) {possible.push("3_benkyousuru");}
   if (possible.length == 0) {alert("Please check at least one value.");}
   var randindex = Math.floor((Math.random() * possible.length));
   return possible[randindex];
@@ -116,11 +122,15 @@ function qc_object(currentverb){
     container = container_places;
   } else if(currentverb == "3_suru") {
     container = container_doable;
+  } else if(currentverb == "3_benkyousuru") {
+    container = container_languages.concat(container_fields);
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (container.length == 0) {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
   return container[randindex];
 }
+
+var verb_ru_standard = ['る', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'られる', 'られます', 'られない', 'られません', 'なくてもいいです'];
 
 function qc_verb(currentverb){
   var container = [];
@@ -128,38 +138,38 @@ function qc_verb(currentverb){
   var stem = "";
   if(currentverb == "3_iku") {
     stem = '<ruby lang="ja"><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>';
-    container = ['く', 'きます', 'った', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'ってください', 'っています', 'ける', 'けます', 'けない', 'けません'];
+    container = ['く', 'きます', 'った', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'ってください', 'っています', 'ける', 'けます', 'けない', 'けません', 'かなくてもいいです'];
   } else if(currentverb == "3_kaeru") {
     stem = '<ruby lang="ja"><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>';
-    container = ['る', 'ります', 'った', 'りました', 'らない', 'りません', 'らなかった', 'りませんでした', 'ってください', 'っています', 'れる', 'れます', 'れない', 'れません'];
+    container = ['る', 'ります', 'った', 'りました', 'らない', 'りません', 'らなかった', 'りませんでした', 'ってください', 'っています', 'れる', 'れます', 'れない', 'れません', 'らなくてもいいです'];
   } else if(currentverb == "3_kiku") {
     stem = '<ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>';
-    container = ['く', 'きます', 'いた', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'いてください', 'いています', 'ける', 'けます', 'けない', 'けません'];
+    container = ['く', 'きます', 'いた', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'いてください', 'いています', 'ける', 'けます', 'けない', 'けません', 'かなくてもいいです'];
   } else if(currentverb == "3_nomu") {
     stem = '<ruby lang="ja"><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>';
-    container = ['む', 'みます', 'んだ', 'みました', 'まない', 'みません', 'まなかった', 'みませんでした', 'んでください', 'んでいます', 'める', 'めます', 'めない', 'めません'];
+    container = ['む', 'みます', 'んだ', 'みました', 'まない', 'みません', 'まなかった', 'みませんでした', 'んでください', 'んでいます', 'める', 'めます', 'めない', 'めません', 'まなくてもいいです'];
   } else if(currentverb == "3_hanasu") {
     stem = '<ruby lang="ja"><rb>話</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>';
-    container = ['す', 'します', 'した', 'しました', 'さない', 'しません', 'さなかった', 'しませんでした', 'してください', 'しています', 'せる', 'せます', 'せない', 'せません'];
+    container = ['す', 'します', 'した', 'しました', 'さない', 'しません', 'さなかった', 'しませんでした', 'してください', 'しています', 'せる', 'せます', 'せない', 'せません', 'さなくてもいいです'];
   } else if(currentverb == "3_yomu") {
     stem = '<ruby lang="ja"><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>';
-    container = ['む', 'みます', 'んだ', 'みました', 'まない', 'みません', 'まなかった', 'みませんでした', 'んでください', 'んでいます', 'める', 'めます', 'めない', 'めません'];
+    container = ['む', 'みます', 'んだ', 'みました', 'まない', 'みません', 'まなかった', 'みませんでした', 'んでください', 'んでいます', 'める', 'めます', 'めない', 'めません', 'まなくてもいいです'];
   } else if(currentverb == "3_taberu") {
-    stem = '<ruby lang="ja"><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>';
-    container = ['べる', 'べます', 'べた', 'べました', 'べない', 'べません', 'べなかった', 'べませんでした', 'べてください', 'べています', 'べられる', 'べられます', 'べられない', 'べられません'];
+    stem = '<ruby lang="ja"><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べ';
+    container = verb_ru_standard;
   } else if(currentverb == "3_neru") {
     stem = '<ruby lang="ja"><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>';
-    container = ['る', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'られる', 'られます', 'られない', 'られません'];
+    container = verb_ru_standard;
   } else if(currentverb == "3_miru") {
     stem = '<ruby lang="ja"><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>';
-    container = ['る', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'られる', 'られます', 'られない', 'られません'];
+    container = verb_ru_standard;
   } else if(currentverb == "3_kuru") {
     if (Math.random() < 0.5) {
       stem = '<ruby lang="ja"><rb>来</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>';
       container = ['ます', 'た', 'ました', 'ません', 'ませんでした', 'てください', 'ています'];
     } else if (Math.random() < 0.75){
       stem = '<ruby lang="ja"><rb>来</rb><rp>(</rp><rt>こ</rt><rp>)</rp></ruby>';
-      container = ['ない', 'なかった', 'られる', 'られます', 'られない', 'られません'];
+      container = ['ない', 'なかった', 'られる', 'られます', 'られない', 'られません', 'なくてもいいです'];
     } else {
       stem = '<ruby lang="ja"><rb>来</rb><rp>(</rp><rt>く</rt><rp>)</rp></ruby>';
       container = ['る'];
@@ -167,11 +177,18 @@ function qc_verb(currentverb){
   } else if(currentverb == "3_suru") {
     suru_tag = true;
     if (Math.random() < 0.1) {
-      stem = 'す';
-      container = ['る'];
+      stem = 'す'; container = ['る'];
     } else { //Note the た buffer for the present short form and the replacement of potential forms with できる
       stem = 'し';
-      container = ['た', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'できる', 'できます', 'できない', 'できません'];
+      container = ['た', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'できる', 'できます', 'できない', 'できません', 'なくてもいいです'];
+    }
+  } else if(currentverb == "3_benkyousuru") {
+    suru_tag = true;
+    if (Math.random() < 0.1) {
+      stem = '<ruby lang="ja"><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>す'; container = ['る'];
+    } else { //Note the た buffer for the present short form and the replacement of potential forms with できる
+      stem = '<ruby lang="ja"><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>し';
+      container = ['た', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'できる', 'できます', 'できない', 'できません', 'なくてもいいです'];
     }
   }
   
@@ -191,8 +208,10 @@ function qc_verb(currentverb){
   if (container.length == 1 && suru_tag) { //Specifically for forms of する where the short present form was chosen. Other cases are fine.
     endingadded = true;
   }
-  if (suru_tag && randindex >= 10) { //Cheap way to allow forms of できる while allowing endings and doing the 来る route
-    toreturn = container[randindex]; //Basically reset the toreturn by removing stem
+  if (suru_tag && randindex >= 10 && randindex <= 13) { //Cheap way to allow forms of できる while allowing endings and not doing the 来る route
+    var action_suru = "";
+    if(currentverb == "3_benkyousuru") {action_suru = '<ruby lang="ja"><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>';}
+    toreturn = action_suru + container[randindex]; //Basically reset the toreturn by removing stem. If had an action, replaces with appropriate action.
   }
 
   //Add random endings to some sentences
@@ -247,6 +266,7 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "3_miru") {theAnswer.push("wo");}
   if (verbID == "3_kuru") {theAnswer.push("kara"); theAnswer.push("ni"); theAnswer.push("he");}
   if (verbID == "3_suru") {theAnswer.push("wo");}
+  if (verbID == "3_benkyousuru") {theAnswer.push("wo");}
 
   if (theAnswer.length == 0) {theAnswer.push("to"); kyubey = true;} //defaults to Kyubey
 
