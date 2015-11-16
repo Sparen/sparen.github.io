@@ -4,14 +4,16 @@ var container_places = ['<ruby lang="ja"><rb>学校</rb><rp>(</rp><rt>がっこ�
     '<ruby lang="ja"><rb>銀行</rb><rp>(</rp><rt>ぎんこう</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>公園</rb><rp>(</rp><rt>こうえん</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>動物園</rb><rp>(</rp><rt>どうぶつえん</rt><rp>)</rp></ruby>',
-    '<ruby lang="ja"><rb>海</rb><rp>(</rp><rt>うみ</rt><rp>)</rp></ruby>',
-    '<ruby lang="ja"><rb>家</rb><rp>(</rp><rt>うち</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>床屋</rb><rp>(</rp><rt>とこや</rt><rp>)</rp></ruby>'
     ];
 var container_sleepableplaces = ['<ruby lang="ja"><rb>家</rb><rp>(</rp><rt>うち</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>寮</rb><rp>(</rp><rt>りょう</rt><rp>)</rp></ruby>',
     'ホテル'
+    ];
+var container_swimmableplaces = ['<ruby lang="ja"><rb>海</rb><rp>(</rp><rt>うみ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>湖</rb><rp>(</rp><rt>みずうみ</rt><rp>)</rp></ruby>',
+    'プール'
     ];
 var container_hearable = ['<ruby lang="ja"><rb>音楽</rb><rp>(</rp><rt>おんがく</rt><rp>)</rp></ruby>'
     ];
@@ -117,6 +119,8 @@ function qc_determineverb(){
   if (document.getElementById("quiz4_matsu").checked) {possible.push("4_matsu");}
   if (document.getElementById("quiz4_wakaru").checked) {possible.push("4_wakaru");}
   if (document.getElementById("quiz4_iru").checked) {possible.push("4_iru");}
+  if (document.getElementById("quiz5_oyogu").checked) {possible.push("5_oyogu");}
+  if (document.getElementById("quiz5_kiku").checked) {possible.push("5_kiku");}
   if (possible.length == 0) {document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";}
   var randindex = Math.floor((Math.random() * possible.length));
   return possible[randindex];
@@ -125,9 +129,9 @@ function qc_determineverb(){
 function qc_object(currentverb){
   var container = [];
   if(currentverb == "3_iku") {
-    container = container_places;
+    container = container_places.concat(container_swimmableplaces);
   } else if(currentverb == "3_kaeru") {
-    container = container_places;
+    container = container_places.concat(container_swimmableplaces);
   } else if(currentverb == "3_kiku") {
     container = container_hearable;
   } else if(currentverb == "3_nomu") {
@@ -145,7 +149,7 @@ function qc_object(currentverb){
   } else if(currentverb == "3_miru") {
     container = container_sleepableplaces.concat(container_readable).concat(container_edible);
   } else if(currentverb == "3_kuru") {
-    container = container_places;
+    container = container_places.concat(container_swimmableplaces);
   } else if(currentverb == "3_suru") {
     container = container_doable;
   } else if(currentverb == "3_benkyousuru") {
@@ -161,11 +165,15 @@ function qc_object(currentverb){
   } else if(currentverb == "4_toru") {
     container = ['<ruby lang="ja"><rb>写真</rb><rp>(</rp><rt>しゃしん</rt><rp>)</rp></ruby>']
   } else if(currentverb == "4_matsu") {
-    container = container_places;
+    container = container_places.concat(container_swimmableplaces);
   } else if(currentverb == "4_wakaru") {
     container = container_fields.concat(container_languages);
   } else if(currentverb == "4_iru") {
     container = container_pets.concat(container_people);
+  } else if(currentverb == "5_oyogu") {
+    container = container_swimmableplaces;
+  } else if(currentverb == "5_kiku") {
+    container = container_people;
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (container.length == 0) {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -177,6 +185,9 @@ var verb_u_u_standard = ['う', 'います', 'った', 'いました', 'わな�
 var verb_u_ku_standard = ['く', 'きます', 'いた', 'きました', 'かない', 'きません', 'かなかった', 'きませんでした', 'いてください', 'いています', 'ける', 'けます', 'けない', 'けません', 'かなくてもいいです'];
 var verb_u_ru_standard = ['る', 'ります', 'った', 'りました', 'らない', 'りません', 'らなかった', 'りませんでした', 'ってください', 'っています', 'れる', 'れます', 'れない', 'れません', 'らなくてもいいです'];
 var verb_u_mu_standard = ['む', 'みます', 'んだ', 'みました', 'まない', 'みません', 'まなかった', 'みませんでした', 'んでください', 'んでいます', 'める', 'めます', 'めない', 'めません', 'まなくてもいいです'];
+var verb_u_su_standard = ['す', 'します', 'した', 'しました', 'さない', 'しません', 'さなかった', 'しませんでした', 'してください', 'しています', 'せる', 'せます', 'せない', 'せません', 'さなくてもいいです'];
+var verb_u_tsu_standard = ['つ', 'ちます', 'った', 'ちました', 'たない', 'ちません', 'たなかった', 'ちませんでした', 'ってください', 'っています', 'てる', 'てます', 'てない', 'てません', 'たなくてもいいです'];
+var verb_u_gu_standard = ['ぐ', 'ぎます', 'いだ', 'ぎました', 'がない', 'ぎません', 'がなかった', 'ぎませんでした', 'いでください', 'いでいます', 'げる', 'げます', 'げない', 'げません', 'がなくてもいいです'];
 var verb_suru_standard = ['た', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'できる', 'できます', 'できない', 'できません', 'なくてもいいです'];
 
 function qc_verb(currentverb){
@@ -189,7 +200,7 @@ function qc_verb(currentverb){
   } else if(currentverb == "3_kaeru") {
     stem = '<ruby lang="ja"><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>';
     container = verb_u_ru_standard;
-  } else if(currentverb == "3_kiku") {
+  } else if(currentverb == "3_kiku" || currentverb == "5_kiku") {
     stem = '<ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>';
     container = verb_u_ku_standard;
   } else if(currentverb == "3_nomu") {
@@ -197,7 +208,7 @@ function qc_verb(currentverb){
     container = verb_u_mu_standard;
   } else if(currentverb == "3_hanasu") {
     stem = '<ruby lang="ja"><rb>話</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>';
-    container = ['す', 'します', 'した', 'しました', 'さない', 'しません', 'さなかった', 'しませんでした', 'してください', 'しています', 'せる', 'せます', 'せない', 'せません', 'さなくてもいいです'];
+    container = verb_u_su_standard;
   } else if(currentverb == "3_yomu") {
     stem = '<ruby lang="ja"><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>';
     container = verb_u_mu_standard;
@@ -257,14 +268,17 @@ function qc_verb(currentverb){
     container = verb_u_ru_standard;
   } else if(currentverb == "4_matsu") {
     stem = '<ruby lang="ja"><rb>待</rb><rp>(</rp><rt>ま</rt><rp>)</rp></ruby>';
-    container = ['つ', 'ちます', 'った', 'ちました', 'たない', 'ちません', 'たなかった', 'ちませんでした', 'ってください', 'っています', 'てる', 'てます', 'てない', 'てません', 'たなくてもいいです'];
+    container = verb_u_tsu_standard;
   } else if(currentverb == "4_wakaru") {
     stem = 'わか';
     container = verb_u_ru_standard;
   } else if(currentverb == "4_iru") {
     stem = 'い';
     container = ['る', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした'];
-  }
+  } else if(currentverb == "5_oyogu") {
+    stem = '<ruby lang="ja"><rb>泳</rb><rp>(</rp><rt>泳</rt><rp>)</rp></ruby>';
+    container = verb_u_gu_standard;
+  } 
   
   //DEFAULT
   if (container.length == 0) {
@@ -366,6 +380,8 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "4_matsu") {theAnswer.push("で");}
   if (verbID == "4_wakaru") {theAnswer.push("が");}
   if (verbID == "4_iru") {theAnswer.push("が");}
+  if (verbID == "5_oyogu") {theAnswer.push("で");}
+  if (verbID == "5_kiku") {theAnswer.push("に");}
 
   if (theAnswer.length == 0) {theAnswer.push("to"); kyubey = true;} //defaults to Kyubey
 
@@ -387,9 +403,10 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "3_kaeru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>る</span>' + 
       '<br>Genki (L3): to go back; to return (<i>destination</i> <span style="color:springgreen">に・へ</span>)';
-  } else if (verbID == "3_kiku") {
+  } else if (verbID == "3_kiku" || verbID == "5_kiku") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>く</span>' + 
-      '<br>Genki (L3): to listen; to hear (<span style="color:springgreen">〜を</span>)';
+      '<br>Genki (L3): to listen; to hear (<span style="color:springgreen">〜を</span>)' +
+      '<br>Genki (L5): to ask (<i>person</i> <span style="color:springgreen">に</span>)';
   } else if (verbID == "3_nomu") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>む</span>' + 
       '<br>Genki (L3): to drink (<span style="color:springgreen">〜を</span>)';
@@ -445,6 +462,9 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "4_iru") {
     return '<span style="color:aquamarine">いる</span>' + 
       '<br>Genki (L4): (a person) is in...; stays at... (<span style="color:springgreen">〜が</span>)';
+  } else if (verbID == "5_oyogu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>泳</rb><rp>(</rp><rt>およ</rt><rp>)</rp></ruby>ぐ</span>' + 
+      '<br>Genki (L5): to swim';
   }
   return "";
 }
@@ -493,6 +513,12 @@ function qc_checkL4(newval) {
 
 function qc_checkL5(newval) {
   document.getElementById("quiz5_master").checked = newval;
+
+  document.getElementById("quiz5_oyogu").checked = newval;
+  document.getElementById("quiz5_kiku").checked = newval;
+  document.getElementById("quiz5_noru").checked = newval;
+  document.getElementById("quiz5_yaru").checked = newval;
+  document.getElementById("quiz5_dekakeru").checked = newval;
 }
 
 function qc_checkL6(newval) {
