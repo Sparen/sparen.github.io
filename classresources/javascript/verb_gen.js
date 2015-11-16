@@ -37,6 +37,11 @@ var container_edible = ['<ruby lang="ja"><rb>寿司</rb><rp>(</rp><rt>すし</rt
     'ラーメン',
     'うどん'
     ]
+var container_doable = ['<ruby lang="ja"><rb>宿題</rb><rp>(</rp><rt>しゅくだい</rt><rp>)</rp></ruby>',
+    'テニス',
+    'ゲーム',
+    'スポーツ'
+    ]
 
 function question_create(){
   //First, determine which verbs to use
@@ -80,8 +85,8 @@ function qc_determineverb(){
   if (document.getElementById("quiz3_neru").checked) {possible.push("3_neru");}
   if (document.getElementById("quiz3_miru").checked) {possible.push("3_miru");}
   if (document.getElementById("quiz3_kuru").checked) {possible.push("3_kuru");}
-  /*if (document.getElementById("quiz3_suru").checked) {possible.push("3_suru");}
-  if (document.getElementById("quiz3_benkyousuru").checked) {possible.push("3_benkyousuru");}*/
+  if (document.getElementById("quiz3_suru").checked) {possible.push("3_suru");}
+  /*if (document.getElementById("quiz3_benkyousuru").checked) {possible.push("3_benkyousuru");}*/
   if (possible.length == 0) {alert("Please check at least one value.");}
   var randindex = Math.floor((Math.random() * possible.length));
   return possible[randindex];
@@ -109,6 +114,8 @@ function qc_object(currentverb){
     container = container_sleepableplaces.concat(container_readable).concat(container_edible);
   } else if(currentverb == "3_kuru") {
     container = container_places;
+  } else if(currentverb == "3_suru") {
+    container = container_doable;
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (container.length == 0) {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -117,6 +124,7 @@ function qc_object(currentverb){
 
 function qc_verb(currentverb){
   var container = [];
+  var suru_tag = false;
   var stem = "";
   if(currentverb == "3_iku") {
     stem = '<ruby lang="ja"><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>';
@@ -156,13 +164,57 @@ function qc_verb(currentverb){
       stem = '<ruby lang="ja"><rb>来</rb><rp>(</rp><rt>く</rt><rp>)</rp></ruby>';
       container = ['る'];
     }
+  } else if(currentverb == "3_suru") {
+    suru_tag = true;
+    if (Math.random() < 0.1) {
+      stem = 'す';
+      container = ['る'];
+    } else { //Note the た buffer for the present short form and the replacement of potential forms with できる
+      stem = 'し';
+      container = ['た', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'できる', 'できます', 'できない', 'できません'];
+    }
   }
-  var randindex = Math.floor((Math.random() * container.length));
+  
+  //DEFAULT
   if (container.length == 0) {
     return '<ruby lang="ja"><rb>契約</rb><rp>(</rp><rt>けいやく</rt><rp>)</rp></ruby>' + "して、" + 
     '<ruby lang="ja"><rb>魔法少女</rb><rp>(</rp><rt>まほうしょうじょ</rt><rp>)</rp></ruby>' + "になってよ！」__" + 
-    '<ruby lang="ja"><rb>言</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>' + "っていました";}
-  return stem + container[randindex];
+    '<ruby lang="ja"><rb>言</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>' + "っていました";
+  }
+
+  var randindex = Math.floor((Math.random() * container.length));
+  var toreturn = stem + container[randindex];
+
+  var endingadded = false;
+  //Below, disable verbs that cannot use endings
+  if (currentverb == "3_kuru") {endingadded = true;} //because complications with multiple verb stem forms and inconsistent container
+  if (container.length == 1 && suru_tag) { //Specifically for forms of する where the short present form was chosen. Other cases are fine.
+    endingadded = true;
+  }
+  if (suru_tag && randindex >= 10) { //Cheap way to allow forms of できる while allowing endings and doing the 来る route
+    toreturn = container[randindex]; //Basically reset the toreturn by removing stem
+  }
+
+  //Add random endings to some sentences
+  
+  if ((randindex == 0 || randindex == 2 || randindex == 4) && !endingadded) {
+    var thing = Math.random();
+    //Add specific banned words in an if statement here, transform next into else if. e.g. to die, to kill, to get sick, etc.
+    if (thing < 0.25){
+      toreturn += '<ruby lang="ja"><rb>方</rb><rp>(</rp><rt>ほう</rt><rp>)</rp></ruby>がいいです';
+      endingadded = true;
+    }
+  }
+
+  if ((randindex == 0 || randindex == 2 || randindex == 4 || randindex == 6 || randindex == 10 || randindex == 12) && !endingadded) {
+    var thing = Math.random();
+    if (thing < 0.25){
+      toreturn += 'みたいです';
+      endingadded = true;
+    }
+  }
+
+  return toreturn;
 }
 
 function qc_checkAnswer(quizForm, verbID){
@@ -194,6 +246,7 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "3_neru") {theAnswer.push("de");}
   if (verbID == "3_miru") {theAnswer.push("wo");}
   if (verbID == "3_kuru") {theAnswer.push("kara"); theAnswer.push("ni"); theAnswer.push("he");}
+  if (verbID == "3_suru") {theAnswer.push("wo");}
 
   if (theAnswer.length == 0) {theAnswer.push("to"); kyubey = true;} //defaults to Kyubey
 
