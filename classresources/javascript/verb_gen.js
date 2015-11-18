@@ -276,7 +276,7 @@ function qc_verb(currentverb){
     stem = 'い';
     container = ['る', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした'];
   } else if(currentverb == "5_oyogu") {
-    stem = '<ruby lang="ja"><rb>泳</rb><rp>(</rp><rt>泳</rt><rp>)</rp></ruby>';
+    stem = '<ruby lang="ja"><rb>泳</rb><rp>(</rp><rt>およ</rt><rp>)</rp></ruby>';
     container = verb_u_gu_standard;
   } 
   
