@@ -129,6 +129,7 @@ function qc_determineverb(){
   if (document.getElementById("quiz5_noru").checked) {possible.push("5_noru");}
   if (document.getElementById("quiz5_yaru").checked) {possible.push("5_yaru");}
   if (document.getElementById("quiz5_dekakeru").checked) {possible.push("5_dekakeru");}
+  if (document.getElementById("quiz6_asobu").checked) {possible.push("6_asobu");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -191,6 +192,8 @@ function qc_object(currentverb){
     container = container_doable;
   } else if(currentverb == "5_dekakeru") {
     container = container_places;
+  } else if(currentverb == "6_asobu") {
+    container = container_pets;
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -208,6 +211,7 @@ var verb_u_mu_standard = ['む', 'みます', 'んだ', 'みました', 'まな�
 var verb_u_su_standard = ['す', 'します', 'した', 'しました', 'さない', 'しません', 'さなかった', 'しませんでした', 'してください', 'しています', 'せる', 'せます', 'せない', 'せません', 'さなくてもいいです'];
 var verb_u_tsu_standard = ['つ', 'ちます', 'った', 'ちました', 'たない', 'ちません', 'たなかった', 'ちませんでした', 'ってください', 'っています', 'てる', 'てます', 'てない', 'てません', 'たなくてもいいです'];
 var verb_u_gu_standard = ['ぐ', 'ぎます', 'いだ', 'ぎました', 'がない', 'ぎません', 'がなかった', 'ぎませんでした', 'いでください', 'いでいます', 'げる', 'げます', 'げない', 'げません', 'がなくてもいいです'];
+var verb_u_bu_standard = ['ぶ', 'びます', 'んだ', 'びました', 'ばない', 'びません', 'ばなかった', 'びませんでした', 'んでください', 'んでいます', 'べる', 'べます', 'べない', 'べません', 'ばなくてもいいです'];
 var verb_suru_standard = ['た', 'ます', 'た', 'ました', 'ない', 'ません', 'なかった', 'ませんでした', 'てください', 'ています', 'できる', 'できます', 'できない', 'できません', 'なくてもいいです'];
 
 function qc_verb(currentverb){
@@ -307,6 +311,9 @@ function qc_verb(currentverb){
   } else if(currentverb == "5_dekakeru") {
     stem = '<ruby lang="ja"><rb>出</rb><rp>(</rp><rt>で</rt><rp>)</rp></ruby>かけ';
     container = verb_ru_ru_standard;
+  } else if(currentverb == "6_asobu") {
+    stem = '<ruby lang="ja"><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>';
+    container = verb_u_bu_standard;
   }
   
   //DEFAULT
@@ -415,6 +422,7 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "5_noru") {theAnswer.push("に");}
   if (verbID == "5_yaru") {theAnswer.push("を");}
   if (verbID == "5_dekakeru") {theAnswer.push("に");}
+  if (verbID == "6_asobu") {theAnswer.push("と");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -509,6 +517,9 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "5_dekakeru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>出</rb><rp>(</rp><rt>で</rt><rp>)</rp></ruby>かける</span>' + 
       '<br>Genki (L5): to go out';
+  } else if (verbID == "6_asobu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>ぶ</span>' + 
+      '<br>Genki (L6): to play; to spend time pleasantly';
   }
   return "";
 }
@@ -567,6 +578,30 @@ function qc_checkL5(newval) {
 
 function qc_checkL6(newval) {
   document.getElementById("quiz6_master").checked = newval;
+
+  document.getElementById("quiz6_asobu").checked = newval;
+  document.getElementById("quiz6_isogu").checked = newval;
+  document.getElementById("quiz6_kaesu").checked = newval;
+  document.getElementById("quiz6_kesu").checked = newval;
+  document.getElementById("quiz6_shinu").checked = newval;
+  document.getElementById("quiz6_suwaru").checked = newval;
+  document.getElementById("quiz6_tatsu").checked = newval;
+  document.getElementById("quiz6_suu").checked = newval;
+  document.getElementById("quiz6_tsukau").checked = newval;
+  document.getElementById("quiz6_tetsudau").checked = newval;
+  document.getElementById("quiz6_hairu").checked = newval;
+  document.getElementById("quiz6_motsu").checked = newval;
+  document.getElementById("quiz6_yasumu").checked = newval;
+  document.getElementById("quiz6_akeru").checked = newval;
+  document.getElementById("quiz6_oshieru").checked = newval;
+  document.getElementById("quiz6_oriru").checked = newval;
+  document.getElementById("quiz6_kariru").checked = newval;
+  document.getElementById("quiz6_shimeru").checked = newval;
+  document.getElementById("quiz6_tsukeru").checked = newval;
+  document.getElementById("quiz6_kakeru").checked = newval;
+  document.getElementById("quiz6_wasureru").checked = newval;
+  document.getElementById("quiz6_tsuretekuru").checked = newval;
+  document.getElementById("quiz6_mottekuru").checked = newval;
 }
 
 function qc_checkL7(newval) {
