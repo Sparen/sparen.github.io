@@ -5,7 +5,8 @@ var container_places = ['<ruby lang="ja"><rb>学校</rb><rp>(</rp><rt>がっこ�
     '<ruby lang="ja"><rb>公園</rb><rp>(</rp><rt>こうえん</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>動物園</rb><rp>(</rp><rt>どうぶつえん</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>',
-    '<ruby lang="ja"><rb>床屋</rb><rp>(</rp><rt>とこや</rt><rp>)</rp></ruby>'
+    '<ruby lang="ja"><rb>床屋</rb><rp>(</rp><rt>とこや</rt><rp>)</rp></ruby>',
+    'コンサート'
     ];
 var container_sleepableplaces = ['<ruby lang="ja"><rb>家</rb><rp>(</rp><rt>うち</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>寮</rb><rp>(</rp><rt>りょう</rt><rp>)</rp></ruby>',
@@ -63,13 +64,17 @@ var container_pets = ['<ruby lang="ja"><rb>猫</rb><rp>(</rp><rt>ねこ</rt><rp>
 var container_writable = ['<ruby lang="ja"><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>作文</rb><rp>(</rp><rt>さくぶん</rt><rp>)</rp></ruby>'
     ]
+var container_ridable = ['<ruby lang="ja"><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>電車</rb><rp>(</rp><rt>でんしゃ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>'
+    ]
 
 function question_create(){
+  document.getElementById("quiz_result").innerHTML = "";
   //First, determine which verbs to use
   var currentverb = qc_determineverb(); //string containing verb ID, for use in creating question
   var object = qc_object(currentverb);
   var stem = qc_verb(currentverb);
-  document.getElementById("quiz_result").innerHTML = "";
   document.getElementById("quiz_quest").innerHTML = "<p>" + object + "<span style=\"color:aqua\">__</span>" + stem + "。</p>";
   document.getElementById("quiz_inner").innerHTML = 
           '<form method="POST" title="' + currentverb + '" onSubmit="return qc_checkAnswer(this, \'' + currentverb + '\');">' + 
@@ -121,7 +126,13 @@ function qc_determineverb(){
   if (document.getElementById("quiz4_iru").checked) {possible.push("4_iru");}
   if (document.getElementById("quiz5_oyogu").checked) {possible.push("5_oyogu");}
   if (document.getElementById("quiz5_kiku").checked) {possible.push("5_kiku");}
-  if (possible.length == 0) {document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";}
+  if (document.getElementById("quiz5_noru").checked) {possible.push("5_noru");}
+  if (document.getElementById("quiz5_yaru").checked) {possible.push("5_yaru");}
+  if (document.getElementById("quiz5_dekakeru").checked) {possible.push("5_dekakeru");}
+  if (possible.length == 0) {
+    document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
+    possible.push("0_null");
+  }
   var randindex = Math.floor((Math.random() * possible.length));
   return possible[randindex];
 }
@@ -174,9 +185,18 @@ function qc_object(currentverb){
     container = container_swimmableplaces;
   } else if(currentverb == "5_kiku") {
     container = container_people;
+  } else if(currentverb == "5_noru") {
+    container = container_ridable;
+  } else if(currentverb == "5_yaru") {
+    container = container_doable;
+  } else if(currentverb == "5_dekakeru") {
+    container = container_places;
   }
   var randindex = Math.floor((Math.random() * container.length));
-  if (container.length == 0) {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
+  if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
+  if (container.length == 0) { //No object used, or error
+    return "";
+  }
   return container[randindex];
 }
 
@@ -278,10 +298,19 @@ function qc_verb(currentverb){
   } else if(currentverb == "5_oyogu") {
     stem = '<ruby lang="ja"><rb>泳</rb><rp>(</rp><rt>およ</rt><rp>)</rp></ruby>';
     container = verb_u_gu_standard;
-  } 
+  } else if(currentverb == "5_noru") {
+    stem = '<ruby lang="ja"><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>';
+    container = verb_u_ru_standard;
+  } else if(currentverb == "5_yaru") {
+    stem = 'や';
+    container = ['る', 'った', 'らない', 'らなかった', 'っている', 'れる', 'れない', 'れ'];
+  } else if(currentverb == "5_dekakeru") {
+    stem = '<ruby lang="ja"><rb>出</rb><rp>(</rp><rt>で</rt><rp>)</rp></ruby>かけ';
+    container = verb_ru_ru_standard;
+  }
   
   //DEFAULT
-  if (container.length == 0) {
+  if (currentverb == "0_null") {
     return '<ruby lang="ja"><rb>契約</rb><rp>(</rp><rt>けいやく</rt><rp>)</rp></ruby>' + "して、" + 
     '<ruby lang="ja"><rb>魔法少女</rb><rp>(</rp><rt>まほうしょうじょ</rt><rp>)</rp></ruby>' + "になってよ！」<span style=\"color:aqua\">__</span>" + 
     '<ruby lang="ja"><rb>言</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>' + "っていました";
@@ -297,6 +326,7 @@ function qc_verb(currentverb){
   if (container.length == 1 && suru_tag) { //Specifically for forms of する where the short present form was chosen. Other cases are fine.
     endingadded = true;
   }
+  if (currentverb == "5_yaru") {endingadded = true;} //because disabling formal forms screws indexing over
 
   if (suru_tag && randindex >= 10 && randindex <= 13) { //Cheap way to allow forms of できる while allowing endings and not doing the 来る route
     var action_suru = "";
@@ -382,8 +412,11 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "4_iru") {theAnswer.push("が");}
   if (verbID == "5_oyogu") {theAnswer.push("で");}
   if (verbID == "5_kiku") {theAnswer.push("に");}
+  if (verbID == "5_noru") {theAnswer.push("に");}
+  if (verbID == "5_yaru") {theAnswer.push("を");}
+  if (verbID == "5_dekakeru") {theAnswer.push("に");}
 
-  if (theAnswer.length == 0) {theAnswer.push("to"); kyubey = true;} //defaults to Kyubey
+  if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
   var feedback = "Acceptable answers include: " + theAnswer + "<br><br>" + qc_verbinformation(verbID); //For notes and feedback
 
@@ -458,13 +491,24 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "4_wakaru") {
     return '<span style="color:aquamarine">わかる</span>' + 
       '<br>Genki (L4): to understand (<span style="color:springgreen">〜が</span>)' +
-      '<br>Note: Intransitive';
+      '<br><br>Note: Intransitive';
   } else if (verbID == "4_iru") {
     return '<span style="color:aquamarine">いる</span>' + 
       '<br>Genki (L4): (a person) is in...; stays at... (<span style="color:springgreen">〜が</span>)';
   } else if (verbID == "5_oyogu") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>泳</rb><rp>(</rp><rt>およ</rt><rp>)</rp></ruby>ぐ</span>' + 
       '<br>Genki (L5): to swim';
+  } else if (verbID == "5_noru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>る</span>' + 
+      '<br>Genki (L5): to ride; to board (<span style="color:springgreen">〜に</span>)';
+  } else if (verbID == "5_yaru") {
+    return 'やる' + 
+      '<br>Genki (L5): to do; to perform (<span style="color:springgreen">〜を</span>)' +
+      '<br><br>Note: Only use with physical actions' + 
+      '<br>Note: Colloquial';
+  } else if (verbID == "5_dekakeru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>出</rb><rp>(</rp><rt>で</rt><rp>)</rp></ruby>かける</span>' + 
+      '<br>Genki (L5): to go out';
   }
   return "";
 }
