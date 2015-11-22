@@ -68,6 +68,14 @@ var container_ridable = ['<ruby lang="ja"><rb>車</rb><rp>(</rp><rt>くるま</r
     '<ruby lang="ja"><rb>電車</rb><rp>(</rp><rt>でんしゃ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>'
     ]
+var container_objsmall = ['<ruby lang="ja"><rb>鉛筆</rb><rp>(</rp><rt>えんぴつ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>鍵</rb><rp>(</rp><rt>かぎ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>消</rb><rp>(</rp><rt>け</rt><rp>)</rp></ruby>しゴム',
+    'ペン'
+    ]
+var container_extinguishable = ['<ruby lang="ja"><rb>電気</rb><rp>(</rp><rt>でんき</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>火事</rb><rp>(</rp><rt>かじ</rt><rp>)</rp></ruby>'
+    ]
 
 function question_create(){
   document.getElementById("quiz_result").innerHTML = "";
@@ -130,6 +138,9 @@ function qc_determineverb(){
   if (document.getElementById("quiz5_yaru").checked) {possible.push("5_yaru");}
   if (document.getElementById("quiz5_dekakeru").checked) {possible.push("5_dekakeru");}
   if (document.getElementById("quiz6_asobu").checked) {possible.push("6_asobu");}
+  if (document.getElementById("quiz6_isogu").checked) {possible.push("6_isogu");}
+  if (document.getElementById("quiz6_kaesu").checked) {possible.push("6_kaesu");}
+  if (document.getElementById("quiz6_kesu").checked) {possible.push("6_kesu");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -194,6 +205,12 @@ function qc_object(currentverb){
     container = container_places;
   } else if(currentverb == "6_asobu") {
     container = container_pets;
+  } else if(currentverb == "6_isogu") {
+    container = container_places.concat(container_sleepableplaces);
+  } else if(currentverb == "6_kaesu") {
+    container = container_objsmall;
+  } else if(currentverb == "6_kesu") {
+    container = container_extinguishable;
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -314,6 +331,15 @@ function qc_verb(currentverb){
   } else if(currentverb == "6_asobu") {
     stem = '<ruby lang="ja"><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>';
     container = verb_u_bu_standard;
+  } else if(currentverb == "6_isogu") {
+    stem = '<ruby lang="ja"><rb>急</rb><rp>(</rp><rt>いそ</rt><rp>)</rp></ruby>';
+    container = verb_u_gu_standard;
+  } else if(currentverb == "6_kaesu") {
+    stem = '<ruby lang="ja"><rb>返</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>';
+    container = verb_u_su_standard;
+  } else if(currentverb == "6_kesu") {
+    stem = '<ruby lang="ja"><rb>消</rb><rp>(</rp><rt>け</rt><rp>)</rp></ruby>';
+    container = verb_u_su_standard;
   }
   
   //DEFAULT
@@ -423,6 +449,9 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "5_yaru") {theAnswer.push("を");}
   if (verbID == "5_dekakeru") {theAnswer.push("に");}
   if (verbID == "6_asobu") {theAnswer.push("と");}
+  if (verbID == "6_isogu") {theAnswer.push("に"); theAnswer.push("へ");}
+  if (verbID == "6_kaesu") {theAnswer.push("を");}
+  if (verbID == "6_kesu") {theAnswer.push("を");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -520,6 +549,15 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "6_asobu") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>ぶ</span>' + 
       '<br>Genki (L6): to play; to spend time pleasantly';
+  } else if (verbID == "6_isogu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>急</rb><rp>(</rp><rt>いそ</rt><rp>)</rp></ruby>ぐ</span>' + 
+      '<br>Genki (L6): to hurry';
+  } else if (verbID == "6_kaesu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>返</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>す</span>' + 
+      '<br>Genki (L6): to return (things) (<i>person</i> <span style="color:springgreen">に</span> <i>thing</i> <span style="color:springgreen">を</span>)';
+  } else if (verbID == "6_kesu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>消</rb><rp>(</rp><rt>け</rt><rp>)</rp></ruby>す</span>' + 
+      '<br>Genki (L6): to turn off; to erase (<span style="color:springgreen">〜を</span>)';
   }
   return "";
 }
@@ -533,6 +571,8 @@ function qc_checkAll(newval) {
   qc_checkL8(newval);
   qc_checkL9(newval);
   qc_checkL10(newval);
+  qc_checkL11(newval);
+  qc_checkL12(newval);
 }
 
 function qc_checkL3(newval) {
@@ -618,6 +658,14 @@ function qc_checkL9(newval) {
 
 function qc_checkL10(newval) {
   document.getElementById("quiz10_master").checked = newval;
+}
+
+function qc_checkL11(newval) {
+  document.getElementById("quiz11_master").checked = newval;
+}
+
+function qc_checkL12(newval) {
+  document.getElementById("quiz12_master").checked = newval;
 }
 
 function contains(a, obj) {
