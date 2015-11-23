@@ -169,6 +169,9 @@ function qc_determineverb(){
   if (document.getElementById("quiz6_motsu").checked) {possible.push("6_motsu");}
   if (document.getElementById("quiz6_yasumu").checked) {possible.push("6_yasumu");}
   if (document.getElementById("quiz6_akeru").checked) {possible.push("6_akeru");}
+  if (document.getElementById("quiz6_oshieru").checked) {var set = ["6_oshieru_wo", "6_oshieru_de"]; possible.push(set[random%2]);}
+  if (document.getElementById("quiz6_oriru").checked) {possible.push("6_oriru");}
+  if (document.getElementById("quiz6_kariru").checked) {possible.push("6_kariru");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -263,6 +266,14 @@ function qc_object(currentverb){
     container = container_sleepableplaces;
   } else if(currentverb == "6_akeru") {
     container = container_openclosable;
+  } else if(currentverb == "6_oshieru_wo") {
+    container = container_fields.concat(container_languages);
+  } else if(currentverb == "6_oshieru_de") {
+    container = ['<ruby lang="ja"><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>', '<ruby lang="ja"><rb>大学</rb><rp>(</rp><rt>だいがく</rt><rp>)</rp></ruby>', '<ruby lang="ja"><rb>教室</rb><rp>(</rp><rt>きょうしつ</rt><rp>)</rp></ruby>'];
+  } else if(currentverb == "6_oriru") {
+    container = container_ridable;
+  } else if(currentverb == "6_kariru") {
+    container = container_objsmall.concat(container_readable);
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -423,6 +434,15 @@ function qc_verb(currentverb){
   } else if(currentverb == "6_akeru") {
     stem = '<ruby lang="ja"><rb>開</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>け';
     container = verb_ru_ru_standard;
+  } else if(currentverb == "6_oshieru_wo" || currentverb == "6_oshieru_de") {
+    stem = '<ruby lang="ja"><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>え';
+    container = verb_ru_ru_standard;
+  } else if(currentverb == "6_oriru") {
+    stem = '<ruby lang="ja"><rb>降</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>り';
+    container = verb_ru_ru_standard;
+  } else if(currentverb == "6_kariru") {
+    stem = '<ruby lang="ja"><rb>借</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>り';
+    container = verb_ru_ru_standard;
   }
   
   //DEFAULT
@@ -546,6 +566,9 @@ function qc_checkAnswer(quizForm, verbID){
   else if (verbID == "6_motsu") {theAnswer.push("を");}
   else if (verbID == "6_yasumu") {theAnswer.push("で");}
   else if (verbID == "6_akeru") {theAnswer.push("を");}
+  else if (verbID == "6_oshieru_wo") {theAnswer.push("を");} else if (verbID == "6_oshieru_de") {theAnswer.push("で");}
+  else if (verbID == "6_oriru") {theAnswer.push("を");}
+  else if (verbID == "6_kariru") {theAnswer.push("を");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -684,6 +707,15 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "6_akeru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>開</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>ける</span>' + 
       '<br>Genki (L6): to open (something) (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "6_oshieru_wo" || verbID == "6_oshieru_de") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>える</span>' + 
+      '<br>Genki (L6): to teach; to instruct (<i>person</i> <span style="color:springgreen">に</span> <i>thing</i> <span style="color:springgreen">を</span>)';
+  } else if (verbID == "6_oriru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>降</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>りる</span>' + 
+      '<br>Genki (L6): to get off (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "6_kariru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>借</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>りる</span>' + 
+      '<br>Genki (L6): to borrow (<i>person</i> <span style="color:springgreen">に</span> <i>thing</i> <span style="color:springgreen">を</span>)';
   }
   return "";
 }
