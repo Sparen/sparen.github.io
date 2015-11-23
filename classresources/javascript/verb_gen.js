@@ -83,6 +83,12 @@ var container_sittable = ['いす',
     'ベンチ',
     'ソファ'
     ]
+var container_enterable = ['<ruby lang="ja"><rb>箱</rb><rp>(</rp><rt>はこ</rt><rp>)</rp></ruby>',
+    'お<ruby lang="ja"><rb>風呂</rb><rp>(</rp><rt>ふろ</rt><rp>)</rp></ruby>'
+    ]
+var container_openclosable = ['<ruby lang="ja"><rb>窓</rb><rp>(</rp><rt>まど</rt><rp>)</rp></ruby>',
+    'ドア'
+    ]
 
 function question_create(){
   document.getElementById("quiz_result").innerHTML = "";
@@ -152,6 +158,12 @@ function qc_determineverb(){
   if (document.getElementById("quiz6_suwaru").checked) {possible.push("6_suwaru");}
   if (document.getElementById("quiz6_tatsu").checked) {possible.push("6_tatsu");}
   if (document.getElementById("quiz6_tabakowosuu").checked) {possible.push("6_tabakowosuu");}
+  if (document.getElementById("quiz6_tsukau").checked) {possible.push("6_tsukau");}
+  if (document.getElementById("quiz6_tetsudau").checked) {possible.push("6_tetsudau");}
+  if (document.getElementById("quiz6_hairu").checked) {possible.push("6_hairu");}
+  if (document.getElementById("quiz6_motsu").checked) {possible.push("6_motsu");}
+  if (document.getElementById("quiz6_yasumu").checked) {possible.push("6_yasumu");}
+  if (document.getElementById("quiz6_akeru").checked) {possible.push("6_akeru");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -230,6 +242,18 @@ function qc_object(currentverb){
     container = container_places_gen;
   } else if(currentverb == "6_tabakowosuu") {
     container = container_places_gen;
+  } else if(currentverb == "6_tsukau") {
+    container = container_objsmall.concat(container_ridable);
+  } else if(currentverb == "6_tetsudau") {
+    container = container_people;
+  } else if(currentverb == "6_hairu") {
+    container = container_enterable.concat(container_places).concat(container_swimmableplaces);
+  } else if(currentverb == "6_motsu") {
+    container = container_objsmall.concat(container_readable).concat(container_writable);
+  } else if(currentverb == "6_yasumu") {
+    container = container_sleepableplaces;
+  } else if(currentverb == "6_akeru") {
+    container = container_openclosable;
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -372,6 +396,24 @@ function qc_verb(currentverb){
   } else if(currentverb == "6_tabakowosuu") {
     stem = 'たばこを<ruby lang="ja"><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>';
     container = verb_u_u_standard;
+  } else if(currentverb == "6_tsukau") {
+    stem = '<ruby lang="ja"><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>';
+    container = verb_u_u_standard;
+  } else if(currentverb == "6_tetsudau") {
+    stem = '<ruby lang="ja"><rb>手伝</rb><rp>(</rp><rt>てつだ</rt><rp>)</rp></ruby>';
+    container = verb_u_u_standard;
+  } else if(currentverb == "6_hairu") {
+    stem = '<ruby lang="ja"><rb>入</rb><rp>(</rp><rt>はい</rt><rp>)</rp></ruby>';
+    container = verb_u_ru_standard;
+  } else if(currentverb == "6_motsu") {
+    stem = '<ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>';
+    container = verb_u_tsu_standard;
+  } else if(currentverb == "6_yasumu") {
+    stem = '<ruby lang="ja"><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>';
+    container = verb_u_mu_standard;
+  } else if(currentverb == "6_akeru") {
+    stem = '<ruby lang="ja"><rb>開</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>け';
+    container = verb_ru_ru_standard;
   }
   
   //DEFAULT
@@ -489,6 +531,12 @@ function qc_checkAnswer(quizForm, verbID){
   if (verbID == "6_suwaru") {theAnswer.push("に");}
   if (verbID == "6_tatsu") {theAnswer.push("に");}
   if (verbID == "6_tabakowosuu") {theAnswer.push("で");}
+  if (verbID == "6_tsukau") {theAnswer.push("を");}
+  if (verbID == "6_tetsudau") {theAnswer.push("を");}
+  if (verbID == "6_hairu") {theAnswer.push("に");}
+  if (verbID == "6_motsu") {theAnswer.push("を");}
+  if (verbID == "6_yasumu") {theAnswer.push("で");}
+  if (verbID == "6_akeru") {theAnswer.push("を");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -608,6 +656,25 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "6_tabakowosuu") {
     return '<span style="color:aquamarine">たばこを<ruby lang="ja"><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>う</span>' + 
       '<br>Genki (L6): to smoke';
+  } else if (verbID == "6_tsukau") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>う</span>' + 
+      '<br>Genki (L6): to use (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "6_tetsudau") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>手伝</rb><rp>(</rp><rt>てつだ</rt><rp>)</rp></ruby>う</span>' + 
+      '<br>Genki (L6): to help (<i>person/task</i> <span style="color:springgreen">を</span>)';
+  } else if (verbID == "6_hairu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>入</rb><rp>(</rp><rt>はい</rt><rp>)</rp></ruby>る</span>' + 
+      '<br>Genki (L6): to enter (<span style="color:springgreen">〜に</span>)';
+  } else if (verbID == "6_motsu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>つ</span>' + 
+      '<br>Genki (L6): to carry; to hold (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "6_yasumu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>む</span>' + 
+      '<br>Genki (L6): to be absent (from ...) (<span style="color:springgreen">〜を</span>)' +
+      '<br>Genki (L6): to rest';
+  } else if (verbID == "6_akeru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>開</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>ける</span>' + 
+      '<br>Genki (L6): to open (something) (<span style="color:springgreen">〜を</span>)';
   }
   return "";
 }
