@@ -19,6 +19,10 @@ var container_swimmableplaces = ['<ruby lang="ja"><rb>海</rb><rp>(</rp><rt>う�
     '<ruby lang="ja"><rb>湖</rb><rp>(</rp><rt>みずうみ</rt><rp>)</rp></ruby>',
     'プール'
     ];
+var container_foodplaces = ['レストラン',
+    '<ruby lang="ja"><rb>喫茶店</rb><rp>(</rp><rt>きっさてん</rt><rp>)</rp></ruby>',
+    'カフェ'
+    ];
 var container_hearable = ['<ruby lang="ja"><rb>音楽</rb><rp>(</rp><rt>おんがく</rt><rp>)</rp></ruby>'
     ];
 var container_drinkable = ['<ruby lang="ja"><rb>水</rb><rp>(</rp><rt>みず</rt><rp>)</rp></ruby>',
@@ -123,15 +127,16 @@ function question_create(){
 
 //Randomly select one of the checked verbs to create a sentence
 function qc_determineverb(){
+  var random = Math.floor(Math.random() * 720);
   var possible = [];
   if (document.getElementById("quiz3_iku").checked) {possible.push("3_iku");}
   if (document.getElementById("quiz3_kaeru").checked) {possible.push("3_kaeru");}
   if (document.getElementById("quiz3_kiku").checked) {possible.push("3_kiku");}
-  if (document.getElementById("quiz3_nomu").checked) {possible.push("3_nomu");}
+  if (document.getElementById("quiz3_nomu").checked) {var set = ["3_nomu_wo", "3_nomu_de"]; possible.push(set[random%2]);}
   if (document.getElementById("quiz3_hanasu").checked) {possible.push("3_hanasu");}
   if (document.getElementById("quiz3_yomu").checked) {possible.push("3_yomu");}
   if (document.getElementById("quiz3_okiru").checked) {possible.push("3_okiru");}
-  if (document.getElementById("quiz3_taberu").checked) {possible.push("3_taberu");}
+  if (document.getElementById("quiz3_taberu").checked) {var set = ["3_taberu_wo", "3_taberu_de"]; possible.push(set[random%2]);}
   if (document.getElementById("quiz3_neru").checked) {possible.push("3_neru");}
   if (document.getElementById("quiz3_miru").checked) {possible.push("3_miru");}
   if (document.getElementById("quiz3_kuru").checked) {possible.push("3_kuru");}
@@ -180,16 +185,20 @@ function qc_object(currentverb){
     container = container_places.concat(container_swimmableplaces);
   } else if(currentverb == "3_kiku") {
     container = container_hearable;
-  } else if(currentverb == "3_nomu") {
+  } else if(currentverb == "3_nomu_wo") {
     container = container_drinkable;
+  } else if(currentverb == "3_nomu_de") {
+    container = container_foodplaces;
   } else if(currentverb == "3_hanasu") {
     container = container_languages;
   } else if(currentverb == "3_yomu") {
     container = container_readable;
   } else if(currentverb == "3_okiru") {
     container = container_sleepableplaces;
-  } else if(currentverb == "3_taberu") {
+  } else if(currentverb == "3_taberu_wo") {
     container = container_edible;
+  } else if(currentverb == "3_taberu_de") {
+    container = container_foodplaces;
   } else if(currentverb == "3_neru") {
     container = container_sleepableplaces;
   } else if(currentverb == "3_miru") {
@@ -288,7 +297,7 @@ function qc_verb(currentverb){
   } else if(currentverb == "3_kiku" || currentverb == "5_kiku") {
     stem = '<ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>';
     container = verb_u_ku_standard;
-  } else if(currentverb == "3_nomu") {
+  } else if(currentverb == "3_nomu_wo" || currentverb == "3_nomu_de") {
     stem = '<ruby lang="ja"><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>';
     container = verb_u_mu_standard;
   } else if(currentverb == "3_hanasu") {
@@ -300,7 +309,7 @@ function qc_verb(currentverb){
   } else if(currentverb == "3_okiru") {
     stem = '<ruby lang="ja"><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>き';
     container = verb_ru_ru_standard;
-  } else if(currentverb == "3_taberu") {
+  } else if(currentverb == "3_taberu_wo" || currentverb == "3_taberu_de") {
     stem = '<ruby lang="ja"><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べ';
     container = verb_ru_ru_standard;
   } else if(currentverb == "3_neru") {
@@ -496,47 +505,47 @@ function qc_checkAnswer(quizForm, verbID){
   var theAnswer = [];
   var kyubey = false;
 
-  //Determine what answers are 
+  //Determine what answers are.
   if (verbID == "3_iku") {theAnswer.push("に"); theAnswer.push("へ");}
-  if (verbID == "3_kaeru") {theAnswer.push("に"); theAnswer.push("へ");}
-  if (verbID == "3_kiku") {theAnswer.push("を");}
-  if (verbID == "3_nomu") {theAnswer.push("を");}
-  if (verbID == "3_hanasu") {theAnswer.push("で"); theAnswer.push("を");}
-  if (verbID == "3_yomu") {theAnswer.push("を");}
-  if (verbID == "3_okiru") {theAnswer.push("で");}
-  if (verbID == "3_taberu") {theAnswer.push("を");}
-  if (verbID == "3_neru") {theAnswer.push("で");}
-  if (verbID == "3_miru") {theAnswer.push("を");}
-  if (verbID == "3_kuru") {theAnswer.push("から"); theAnswer.push("に"); theAnswer.push("へ");}
-  if (verbID == "3_suru") {theAnswer.push("を");}
-  if (verbID == "3_benkyousuru") {theAnswer.push("を");}
-  if (verbID == "4_au") {theAnswer.push("に");}
-  if (verbID == "4_aru") {theAnswer.push("が");}
-  if (verbID == "4_kau") {theAnswer.push("を");}
-  if (verbID == "4_kaku") {theAnswer.push("を");}
-  if (verbID == "4_toru") {theAnswer.push("を");}
-  if (verbID == "4_matsu") {theAnswer.push("で");}
-  if (verbID == "4_wakaru") {theAnswer.push("が");}
-  if (verbID == "4_iru") {theAnswer.push("が");}
-  if (verbID == "5_oyogu") {theAnswer.push("で");}
-  if (verbID == "5_kiku") {theAnswer.push("に");}
-  if (verbID == "5_noru") {theAnswer.push("に");}
-  if (verbID == "5_yaru") {theAnswer.push("を");}
-  if (verbID == "5_dekakeru") {theAnswer.push("に");}
-  if (verbID == "6_asobu") {theAnswer.push("と");}
-  if (verbID == "6_isogu") {theAnswer.push("に"); theAnswer.push("へ");}
-  if (verbID == "6_kaesu") {theAnswer.push("を");}
-  if (verbID == "6_kesu") {theAnswer.push("を");}
-  if (verbID == "6_shinu") {theAnswer.push("で");}
-  if (verbID == "6_suwaru") {theAnswer.push("に");}
-  if (verbID == "6_tatsu") {theAnswer.push("に");}
-  if (verbID == "6_tabakowosuu") {theAnswer.push("で");}
-  if (verbID == "6_tsukau") {theAnswer.push("を");}
-  if (verbID == "6_tetsudau") {theAnswer.push("を");}
-  if (verbID == "6_hairu") {theAnswer.push("に");}
-  if (verbID == "6_motsu") {theAnswer.push("を");}
-  if (verbID == "6_yasumu") {theAnswer.push("で");}
-  if (verbID == "6_akeru") {theAnswer.push("を");}
+  else if (verbID == "3_kaeru") {theAnswer.push("に"); theAnswer.push("へ");}
+  else if (verbID == "3_kiku") {theAnswer.push("を");}
+  else if (verbID == "3_nomu_wo") {theAnswer.push("を");} else if (verbID == "3_nomu_de") {theAnswer.push("で");}
+  else if (verbID == "3_hanasu") {theAnswer.push("で"); theAnswer.push("を");}
+  else if (verbID == "3_yomu") {theAnswer.push("を");}
+  else if (verbID == "3_okiru") {theAnswer.push("で");}
+  else if (verbID == "3_taberu_wo") {theAnswer.push("を");} else if (verbID == "3_taberu_de") {theAnswer.push("で");}
+  else if (verbID == "3_neru") {theAnswer.push("で");}
+  else if (verbID == "3_miru") {theAnswer.push("を");}
+  else if (verbID == "3_kuru") {theAnswer.push("から"); theAnswer.push("に"); theAnswer.push("へ");}
+  else if (verbID == "3_suru") {theAnswer.push("を");}
+  else if (verbID == "3_benkyousuru") {theAnswer.push("を");}
+  else if (verbID == "4_au") {theAnswer.push("に");}
+  else if (verbID == "4_aru") {theAnswer.push("が");}
+  else if (verbID == "4_kau") {theAnswer.push("を");}
+  else if (verbID == "4_kaku") {theAnswer.push("を");}
+  else if (verbID == "4_toru") {theAnswer.push("を");}
+  else if (verbID == "4_matsu") {theAnswer.push("で");}
+  else if (verbID == "4_wakaru") {theAnswer.push("が");}
+  else if (verbID == "4_iru") {theAnswer.push("が");}
+  else if (verbID == "5_oyogu") {theAnswer.push("で");}
+  else if (verbID == "5_kiku") {theAnswer.push("に");}
+  else if (verbID == "5_noru") {theAnswer.push("に");}
+  else if (verbID == "5_yaru") {theAnswer.push("を");}
+  else if (verbID == "5_dekakeru") {theAnswer.push("に");}
+  else if (verbID == "6_asobu") {theAnswer.push("と");}
+  else if (verbID == "6_isogu") {theAnswer.push("に"); theAnswer.push("へ");}
+  else if (verbID == "6_kaesu") {theAnswer.push("を");}
+  else if (verbID == "6_kesu") {theAnswer.push("を");}
+  else if (verbID == "6_shinu") {theAnswer.push("で");}
+  else if (verbID == "6_suwaru") {theAnswer.push("に");}
+  else if (verbID == "6_tatsu") {theAnswer.push("に");}
+  else if (verbID == "6_tabakowosuu") {theAnswer.push("で");}
+  else if (verbID == "6_tsukau") {theAnswer.push("を");}
+  else if (verbID == "6_tetsudau") {theAnswer.push("を");}
+  else if (verbID == "6_hairu") {theAnswer.push("に");}
+  else if (verbID == "6_motsu") {theAnswer.push("を");}
+  else if (verbID == "6_yasumu") {theAnswer.push("で");}
+  else if (verbID == "6_akeru") {theAnswer.push("を");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -562,7 +571,7 @@ function qc_verbinformation(verbID) {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>く</span>' + 
       '<br>Genki (L3): to listen; to hear (<span style="color:springgreen">〜を</span>)' +
       '<br>Genki (L5): to ask (<i>person</i> <span style="color:springgreen">に</span>)';
-  } else if (verbID == "3_nomu") {
+  } else if (verbID == "3_nomu_wo" || verbID == "3_nomu_de") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>む</span>' + 
       '<br>Genki (L3): to drink (<span style="color:springgreen">〜を</span>)';
   } else if (verbID == "3_hanasu") {
@@ -574,7 +583,7 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "3_okiru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>き</span>' + 
       '<br>Genki (L3): to get up';
-  } else if (verbID == "3_taberu") {
+  } else if (verbID == "3_taberu_wo" || verbID == "3_taberu_de") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べる</span>' + 
       '<br>Genki (L3): to eat (<span style="color:springgreen">〜を</span>)';
   } else if (verbID == "3_neru") {
