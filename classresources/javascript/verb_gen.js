@@ -2,6 +2,19 @@
 var container_places_gen = ['<ruby lang="ja"><rb>外</rb><rp>(</rp><rt>そと</rt><rp>)</rp></ruby>',
     'ここ', 'そこ', 'あそこ'
     ];
+var container_places_proper = ['<ruby lang="ja"><rb>東京</rb><rp>(</rp><rt>とうきょう</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>横浜</rb><rp>(</rp><rt>よこはま</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>京都</rb><rp>(</rp><rt>きょうと</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>奈良</rb><rp>(</rp><rt>なら</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>大阪</rb><rp>(</rp><rt>おおさか</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>名古屋</rb><rp>(</rp><rt>なごや</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>福岡</rb><rp>(</rp><rt>ふくおか</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>広島</rb><rp>(</rp><rt>ひろしま</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>仙台</rb><rp>(</rp><rt>せんだい</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>札幌</rb><rp>(</rp><rt>さっぽろ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>神戸</rb><rp>(</rp><rt>こうべ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>長崎</rb><rp>(</rp><rt>ながさき</rt><rp>)</rp></ruby>'
+    ];
 var container_places = ['<ruby lang="ja"><rb>学校</rb><rp>(</rp><rt>がっこう</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>病院</rb><rp>(</rp><rt>びょういん</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>銀行</rb><rp>(</rp><rt>ぎんこう</rt><rp>)</rp></ruby>',
@@ -198,6 +211,7 @@ function qc_determineverb(){
   if (document.getElementById("quiz7_utau").checked) {possible.push("7_utau");}
   if (document.getElementById("quiz7_kaburu").checked) {possible.push("7_kaburu");}
   if (document.getElementById("quiz7_shiru").checked) {possible.push("7_shiru");}
+  if (document.getElementById("quiz7_sumu").checked) {possible.push("7_sumu");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -209,9 +223,9 @@ function qc_determineverb(){
 function qc_object(currentverb){
   var container = [];
   if(currentverb == "3_iku") {
-    container = container_places.concat(container_swimmableplaces).concat(container_places_gen);
+    container = container_places.concat(container_swimmableplaces).concat(container_places_gen).concat(container_places_proper);
   } else if(currentverb == "3_kaeru") {
-    container = container_places.concat(container_swimmableplaces);
+    container = container_places.concat(container_swimmableplaces).concat(container_places_proper);
   } else if(currentverb == "3_kiku") {
     container = container_hearable;
   } else if(currentverb == "3_nomu_wo") {
@@ -233,7 +247,7 @@ function qc_object(currentverb){
   } else if(currentverb == "3_miru") {
     container = container_sleepableplaces.concat(container_readable).concat(container_edible);
   } else if(currentverb == "3_kuru") {
-    container = container_places.concat(container_swimmableplaces).concat(container_places_gen);
+    container = container_places.concat(container_swimmableplaces).concat(container_places_gen).concat(container_places_proper);
   } else if(currentverb == "3_suru") {
     container = container_doable;
   } else if(currentverb == "3_benkyousuru") {
@@ -318,6 +332,8 @@ function qc_object(currentverb){
     container = ['<ruby lang="ja"><rb>帽子</rb><rp>(</rp><rt>ぼうし</rt><rp>)</rp></ruby>'];
   } else if(currentverb == "7_shiru") {
     container = container_rand_people.concat(container_languages);
+  } else if(currentverb == "7_sumu") {
+    container = container_places_gen.concat(container_sleepableplaces).concat(container_places_proper);
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -530,6 +546,9 @@ function qc_verb(currentverb){
   } else if(currentverb == "7_shiru") {
     stem = '<ruby lang="ja"><rb>知</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>';
     container = ['らない', 'りません', 'っています'];
+  } else if(currentverb == "7_sumu") {
+    stem = '<ruby lang="ja"><rb>住</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>';
+    container = verb_u_mu_standard;
   }
 
   //DEFAULT
@@ -666,6 +685,7 @@ function qc_checkAnswer(quizForm, verbID){
   else if (verbID == "7_utau") {theAnswer.push("を");}
   else if (verbID == "7_kaburu") {theAnswer.push("を");}
   else if (verbID == "7_shiru") {theAnswer.push("を");}
+  else if (verbID == "7_sumu") {theAnswer.push("に");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -840,6 +860,9 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "7_shiru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>知</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>る</span>' + 
       '<br>Genki (L7): to get to know';
+  } else if (verbID == "7_sumu") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>住</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>む</span>' + 
+      '<br>Genki (L7): to live (<span style="color:springgreen">〜にすんでいます</span>)';
   }
   return "";
 }
