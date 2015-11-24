@@ -67,6 +67,14 @@ var container_people = ['<ruby lang="ja"><rb>母</rb><rp>(</rp><rt>はは</rt><r
     '<ruby lang="ja"><rb>友達</rb><rp>(</rp><rt>ともだち</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>先輩</rb><rp>(</rp><rt>せんぱい</rt><rp>)</rp></ruby>'
     ];
+var container_rand_people = ['<ruby lang="ja"><rb>田中</rb><rp>(</rp><rt>たなか</rt><rp>)</rp></ruby>さん',
+    '<ruby lang="ja"><rb>佐藤</rb><rp>(</rp><rt>さとう</rt><rp>)</rp></ruby>さん',
+    '<ruby lang="ja"><rb>鈴木</rb><rp>(</rp><rt>すずき</rt><rp>)</rp></ruby>さん',
+    '<ruby lang="ja"><rb>真田</rb><rp>(</rp><rt>さなだ</rt><rp>)</rp></ruby>さん',
+    '<ruby lang="ja"><rb>川口</rb><rp>(</rp><rt>かわぐち</rt><rp>)</rp></ruby>さん',
+    '<ruby lang="ja"><rb>本田</rb><rp>(</rp><rt>ほんだ</rt><rp>)</rp></ruby>さん',
+    '<ruby lang="ja"><rb>松本</rb><rp>(</rp><rt>まつもと</rt><rp>)</rp></ruby>さん'
+    ];
 var container_pets = ['<ruby lang="ja"><rb>猫</rb><rp>(</rp><rt>ねこ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>犬</rb><rp>(</rp><rt>いぬ</rt><rp>)</rp></ruby>'
     ];
@@ -187,6 +195,9 @@ function qc_determineverb(){
   if (document.getElementById("quiz6_wasureru").checked) {possible.push("6_wasureru");}
   if (document.getElementById("quiz6_tsuretekuru").checked) {possible.push("6_tsuretekuru");}
   if (document.getElementById("quiz6_mottekuru").checked) {possible.push("6_mottekuru");}
+  if (document.getElementById("quiz7_utau").checked) {possible.push("7_utau");}
+  if (document.getElementById("quiz7_kaburu").checked) {possible.push("7_kaburu");}
+  if (document.getElementById("quiz7_shiru").checked) {possible.push("7_shiru");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -228,7 +239,7 @@ function qc_object(currentverb){
   } else if(currentverb == "3_benkyousuru") {
     container = container_languages.concat(container_fields);
   } else if(currentverb == "4_au") {
-    container = container_people;
+    container = container_people.concat(container_rand_people);
   } else if(currentverb == "4_aru") {
     container = container_drinkable.concat(container_edible);
   } else if(currentverb == "4_kau") {
@@ -272,7 +283,7 @@ function qc_object(currentverb){
   } else if(currentverb == "6_tsukau") {
     container = container_objsmall.concat(container_ridable);
   } else if(currentverb == "6_tetsudau") {
-    container = container_people;
+    container = container_people.concat(container_rand_people);
   } else if(currentverb == "6_hairu") {
     container = container_enterable.concat(container_places).concat(container_swimmableplaces);
   } else if(currentverb == "6_motsu") {
@@ -294,13 +305,19 @@ function qc_object(currentverb){
   } else if(currentverb == "6_tsukeru") {
     container = container_turnonable;
   } else if(currentverb == "6_denwawokakeru") {
-    container = container_people;
+    container = container_people.concat(container_rand_people);
   } else if(currentverb == "6_wasureru") {
     container = container_forgettable;
   } else if(currentverb == "6_tsuretekuru") {
-    container = container_people;
+    container = container_people.concat(container_rand_people);
   } else if(currentverb == "6_mottekuru") {
     container = container_objsmall.concat(container_readable).concat(container_writable);
+  } else if(currentverb == "7_utau") {
+    container = ['<ruby lang="ja"><rb>歌</rb><rp>(</rp><rt>うた</rt><rp>)</rp></ruby>'];
+  } else if(currentverb == "7_kaburu") {
+    container = ['<ruby lang="ja"><rb>帽子</rb><rp>(</rp><rt>ぼうし</rt><rp>)</rp></ruby>'];
+  } else if(currentverb == "7_shiru") {
+    container = container_rand_people.concat(container_languages);
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -504,8 +521,17 @@ function qc_verb(currentverb){
       stem = '<ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってく';
       container = ['る'];
     }
+  } else if(currentverb == "7_utau") {
+    stem = '<ruby lang="ja"><rb>歌</rb><rp>(</rp><rt>うた</rt><rp>)</rp></ruby>';
+    container = verb_u_u_standard;
+  } else if(currentverb == "7_kaburu") {
+    stem = 'かぶ';
+    container = verb_u_ru_standard;
+  } else if(currentverb == "7_shiru") {
+    stem = '<ruby lang="ja"><rb>知</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>';
+    container = ['らない', 'りません', 'っています'];
   }
-  
+
   //DEFAULT
   if (currentverb == "0_null") {
     return '<ruby lang="ja"><rb>契約</rb><rp>(</rp><rt>けいやく</rt><rp>)</rp></ruby>' + "して、" + 
@@ -525,6 +551,7 @@ function qc_verb(currentverb){
   }
   if (currentverb == "5_yaru") {endingadded = true;} //because disabling formal forms screws indexing over
   if (currentverb == "6_shinu") {endingadded = true;} //because 死んでください and 方がいいです do not go well together
+  if (currentverb == "7_shiru") {endingadded = true;} //because most conjugations don't work
 
   if (suru_tag && randindex >= 10 && randindex <= 13) { //Cheap way to allow forms of できる while allowing endings and not doing the 来る route
     var action_suru = "";
@@ -636,6 +663,9 @@ function qc_checkAnswer(quizForm, verbID){
   else if (verbID == "6_wasureru") {theAnswer.push("を");}
   else if (verbID == "6_tsuretekuru") {theAnswer.push("を");}
   else if (verbID == "6_mottekuru") {theAnswer.push("を");}
+  else if (verbID == "7_utau") {theAnswer.push("を");}
+  else if (verbID == "7_kaburu") {theAnswer.push("を");}
+  else if (verbID == "7_shiru") {theAnswer.push("を");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -801,6 +831,15 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "6_mottekuru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってくる</span>' + 
       '<br>Genki (L6): to bring (a thing) (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "7_utau") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>歌</rb><rp>(</rp><rt>うた</rt><rp>)</rp></ruby>う</span>' + 
+      '<br>Genki (L7): to sing';
+  } else if (verbID == "7_kaburu") {
+    return '<span style="color:aquamarine">かぶる</span>' + 
+      '<br>Genki (L7): to put on (a hat)';
+  } else if (verbID == "7_shiru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>知</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>る</span>' + 
+      '<br>Genki (L7): to get to know';
   }
   return "";
 }
@@ -889,6 +928,18 @@ function qc_checkL6(newval) {
 
 function qc_checkL7(newval) {
   document.getElementById("quiz7_master").checked = newval;
+
+  document.getElementById("quiz7_utau").checked = newval;
+  document.getElementById("quiz7_kaburu").checked = newval;
+  document.getElementById("quiz7_shiru").checked = newval;
+  document.getElementById("quiz7_sumu").checked = newval;
+  document.getElementById("quiz7_haku").checked = newval;
+  document.getElementById("quiz7_futoru").checked = newval;
+  document.getElementById("quiz7_meganewokakeru").checked = newval;
+  document.getElementById("quiz7_kiru").checked = newval;
+  document.getElementById("quiz7_tsutomeru").checked = newval;
+  document.getElementById("quiz7_yaseru").checked = newval;
+  document.getElementById("quiz7_kekkonsuru").checked = newval;
 }
 
 function qc_checkL8(newval) {
