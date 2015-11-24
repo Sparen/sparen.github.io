@@ -35,11 +35,11 @@ var container_drinkable = ['<ruby lang="ja"><rb>水</rb><rp>(</rp><rt>みず</rt
     ];
 var container_languages = ['<ruby lang="ja"><rb>日本語</rb><rp>(</rp><rt>にほんご</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>英語</rb><rp>(</rp><rt>えいご</rt><rp>)</rp></ruby>'
-    ]
+    ];
 var container_readable = ['<ruby lang="ja"><rb>新聞</rb><rp>(</rp><rt>しんぶん</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>雑誌</rb><rp>(</rp><rt>ざっし</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby>'
-    ]
+    ];
 var container_edible = ['<ruby lang="ja"><rb>寿司</rb><rp>(</rp><rt>すし</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>刺身</rb><rp>(</rp><rt>さしみ</rt><rp>)</rp></ruby>',
     'お<ruby lang="ja"><rb>弁当</rb><rp>(</rp><rt>べんとう</rt><rp>)</rp></ruby>',
@@ -47,52 +47,61 @@ var container_edible = ['<ruby lang="ja"><rb>寿司</rb><rp>(</rp><rt>すし</rt
     '<ruby lang="ja"><rb>牛丼</rb><rp>(</rp><rt>ぎゅうどん</rt><rp>)</rp></ruby>',
     'ラーメン',
     'うどん'
-    ]
+    ];
 var container_doable = ['<ruby lang="ja"><rb>宿題</rb><rp>(</rp><rt>しゅくだい</rt><rp>)</rp></ruby>',
     'テニス',
     'ゲーム',
     'スポーツ'
-    ]
+    ];
 var container_fields = ['<ruby lang="ja"><rb>物理</rb><rp>(</rp><rt>ぶつり</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>科学</rb><rp>(</rp><rt>かがく</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>化学</rb><rp>(</rp><rt>かがく</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>芸術</rb><rp>(</rp><rt>げいじゅつ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>工学</rb><rp>(</rp><rt>こうがく</rt><rp>)</rp></ruby>'
-    ]
+    ];
 var container_people = ['<ruby lang="ja"><rb>母</rb><rp>(</rp><rt>はは</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>父</rb><rp>(</rp><rt>ちち</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>姉</rb><rp>(</rp><rt>あね</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>兄</rb><rp>(</rp><rt>あに</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>先生</rb><rp>(</rp><rt>せんせい</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>友達</rb><rp>(</rp><rt>ともだち</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>先輩</rb><rp>(</rp><rt>せんぱい</rt><rp>)</rp></ruby>'
-    ]
+    ];
 var container_pets = ['<ruby lang="ja"><rb>猫</rb><rp>(</rp><rt>ねこ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>犬</rb><rp>(</rp><rt>いぬ</rt><rp>)</rp></ruby>'
-    ]
+    ];
 var container_writable = ['<ruby lang="ja"><rb>本</rb><rp>(</rp><rt>ほん</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>作文</rb><rp>(</rp><rt>さくぶん</rt><rp>)</rp></ruby>'
-    ]
+    ];
 var container_ridable = ['<ruby lang="ja"><rb>車</rb><rp>(</rp><rt>くるま</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>電車</rb><rp>(</rp><rt>でんしゃ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>自転車</rb><rp>(</rp><rt>じてんしゃ</rt><rp>)</rp></ruby>'
-    ]
+    ];
 var container_objsmall = ['<ruby lang="ja"><rb>鉛筆</rb><rp>(</rp><rt>えんぴつ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>鍵</rb><rp>(</rp><rt>かぎ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>消</rb><rp>(</rp><rt>け</rt><rp>)</rp></ruby>しゴム',
     'ペン'
-    ]
+    ];
 var container_extinguishable = ['<ruby lang="ja"><rb>電気</rb><rp>(</rp><rt>でんき</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>火事</rb><rp>(</rp><rt>かじ</rt><rp>)</rp></ruby>'
-    ]
+    ];
 var container_sittable = ['いす',
     'ベンチ',
     'ソファ'
-    ]
+    ];
 var container_enterable = ['<ruby lang="ja"><rb>箱</rb><rp>(</rp><rt>はこ</rt><rp>)</rp></ruby>',
     'お<ruby lang="ja"><rb>風呂</rb><rp>(</rp><rt>ふろ</rt><rp>)</rp></ruby>'
-    ]
+    ];
 var container_openclosable = ['<ruby lang="ja"><rb>窓</rb><rp>(</rp><rt>まど</rt><rp>)</rp></ruby>',
     'ドア'
-    ]
+    ];
+var container_turnonable = ['<ruby lang="ja"><rb>電気</rb><rp>(</rp><rt>でんき</rt><rp>)</rp></ruby>'
+    ];
+var container_forgettable = ['<ruby lang="ja"><rb>宿題</rb><rp>(</rp><rt>しゅくだい</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>名前</rb><rp>(</rp><rt>なまえ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>単語</rb><rp>(</rp><rt>たんご</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby><ruby lang="ja"><rb>番号</rb><rp>(</rp><rt>ばんごう</rt><rp>)</rp></ruby>'
+    ];
 
 function question_create(){
   document.getElementById("quiz_result").innerHTML = "";
@@ -172,6 +181,10 @@ function qc_determineverb(){
   if (document.getElementById("quiz6_oshieru").checked) {var set = ["6_oshieru_wo", "6_oshieru_de"]; possible.push(set[random%2]);}
   if (document.getElementById("quiz6_oriru").checked) {possible.push("6_oriru");}
   if (document.getElementById("quiz6_kariru").checked) {possible.push("6_kariru");}
+  if (document.getElementById("quiz6_shimeru").checked) {possible.push("6_shimeru");}
+  if (document.getElementById("quiz6_tsukeru").checked) {possible.push("6_tsukeru");}
+  if (document.getElementById("quiz6_denwawokakeru").checked) {possible.push("6_denwawokakeru");}
+  if (document.getElementById("quiz6_wasureru").checked) {possible.push("6_wasureru");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -274,6 +287,14 @@ function qc_object(currentverb){
     container = container_ridable;
   } else if(currentverb == "6_kariru") {
     container = container_objsmall.concat(container_readable);
+  } else if(currentverb == "6_shimeru") {
+    container = container_openclosable;
+  } else if(currentverb == "6_tsukeru") {
+    container = container_turnonable;
+  } else if(currentverb == "6_denwawokakeru") {
+    container = container_people;
+  } else if(currentverb == "6_wasureru") {
+    container = container_forgettable;
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -443,6 +464,18 @@ function qc_verb(currentverb){
   } else if(currentverb == "6_kariru") {
     stem = '<ruby lang="ja"><rb>借</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>り';
     container = verb_ru_ru_standard;
+  } else if(currentverb == "6_shimeru") {
+    stem = '<ruby lang="ja"><rb>閉</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>め';
+    container = verb_ru_ru_standard;
+  } else if(currentverb == "6_tsukeru") {
+    stem = 'つけ';
+    container = verb_ru_ru_standard;
+  } else if(currentverb == "6_denwawokakeru") {
+    stem = '<ruby lang="ja"><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby>をかけ';
+    container = verb_ru_ru_standard;
+  } else if(currentverb == "6_wasureru") {
+    stem = '<ruby lang="ja"><rb>忘</rb><rp>(</rp><rt>わす</rt><rp>)</rp></ruby>れ';
+    container = verb_ru_ru_standard;
   }
   
   //DEFAULT
@@ -569,6 +602,10 @@ function qc_checkAnswer(quizForm, verbID){
   else if (verbID == "6_oshieru_wo") {theAnswer.push("を");} else if (verbID == "6_oshieru_de") {theAnswer.push("で");}
   else if (verbID == "6_oriru") {theAnswer.push("を");}
   else if (verbID == "6_kariru") {theAnswer.push("を");}
+  else if (verbID == "6_shimeru") {theAnswer.push("を");}
+  else if (verbID == "6_tsukeru") {theAnswer.push("を");}
+  else if (verbID == "6_denwawokakeru") {theAnswer.push("に");}
+  else if (verbID == "6_wasureru") {theAnswer.push("を");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -716,6 +753,18 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "6_kariru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>借</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>りる</span>' + 
       '<br>Genki (L6): to borrow (<i>person</i> <span style="color:springgreen">に</span> <i>thing</i> <span style="color:springgreen">を</span>)';
+  } else if (verbID == "6_shimeru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>閉</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>める</span>' + 
+      '<br>Genki (L6): to close (something) (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "6_tsukeru") {
+    return '<span style="color:aquamarine">つける</span>' + 
+      '<br>Genki (L6): to turn on (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "6_denwawokakeru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby>をかける</span>' + 
+      '<br>Genki (L6): to make a phone call (<i>person</i> <span style="color:springgreen">に</span>)';
+  } else if (verbID == "6_wasureru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>忘</rb><rp>(</rp><rt>わす</rt><rp>)</rp></ruby>れる</span>' + 
+      '<br>Genki (L6): to forget; to leave behind (<span style="color:springgreen">〜を</span>)';
   }
   return "";
 }
@@ -796,7 +845,7 @@ function qc_checkL6(newval) {
   document.getElementById("quiz6_kariru").checked = newval;
   document.getElementById("quiz6_shimeru").checked = newval;
   document.getElementById("quiz6_tsukeru").checked = newval;
-  document.getElementById("quiz6_kakeru").checked = newval;
+  document.getElementById("quiz6_denwawokakeru").checked = newval;
   document.getElementById("quiz6_wasureru").checked = newval;
   document.getElementById("quiz6_tsuretekuru").checked = newval;
   document.getElementById("quiz6_mottekuru").checked = newval;
