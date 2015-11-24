@@ -185,6 +185,8 @@ function qc_determineverb(){
   if (document.getElementById("quiz6_tsukeru").checked) {possible.push("6_tsukeru");}
   if (document.getElementById("quiz6_denwawokakeru").checked) {possible.push("6_denwawokakeru");}
   if (document.getElementById("quiz6_wasureru").checked) {possible.push("6_wasureru");}
+  if (document.getElementById("quiz6_tsuretekuru").checked) {possible.push("6_tsuretekuru");}
+  if (document.getElementById("quiz6_mottekuru").checked) {possible.push("6_mottekuru");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -295,6 +297,10 @@ function qc_object(currentverb){
     container = container_people;
   } else if(currentverb == "6_wasureru") {
     container = container_forgettable;
+  } else if(currentverb == "6_tsuretekuru") {
+    container = container_people;
+  } else if(currentverb == "6_mottekuru") {
+    container = container_objsmall.concat(container_readable).concat(container_writable);
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -476,6 +482,28 @@ function qc_verb(currentverb){
   } else if(currentverb == "6_wasureru") {
     stem = '<ruby lang="ja"><rb>忘</rb><rp>(</rp><rt>わす</rt><rp>)</rp></ruby>れ';
     container = verb_ru_ru_standard;
+  } else if(currentverb == "6_tsuretekuru") {
+    if (Math.random() < 0.5) {
+      stem = '<ruby lang="ja"><rb>連</rb><rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れてき';
+      container = ['ます', 'た', 'ました', 'ません', 'ませんでした', 'てください', 'ています'];
+    } else if (Math.random() < 0.75){
+      stem = '<ruby lang="ja"><rb>連</rb><rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れてこ';
+      container = ['ない', 'なかった', 'られる', 'られます', 'られない', 'られません', 'なくてもいいです'];
+    } else {
+      stem = '<ruby lang="ja"><rb>連</rb><rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れてく';
+      container = ['る'];
+    }
+  } else if(currentverb == "6_mottekuru") {
+    if (Math.random() < 0.5) {
+      stem = '<ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってき';
+      container = ['ます', 'た', 'ました', 'ません', 'ませんでした', 'てください', 'ています'];
+    } else if (Math.random() < 0.75){
+      stem = '<ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってこ';
+      container = ['ない', 'なかった', 'られる', 'られます', 'られない', 'られません', 'なくてもいいです'];
+    } else {
+      stem = '<ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってく';
+      container = ['る'];
+    }
   }
   
   //DEFAULT
@@ -490,7 +518,7 @@ function qc_verb(currentverb){
 
   var endingadded = false;
   //Below, disable verbs that cannot use endings
-  if (currentverb == "3_kuru") {endingadded = true;} //because complications with multiple verb stem forms and inconsistent container
+  if (currentverb == "3_kuru" || currentverb == "6_tsuretekuru" || currentverb == "6_mottekuru") {endingadded = true;} //because complications with multiple verb stem forms and inconsistent container
   if (currentverb == "4_aru" || currentverb == "4_iru") {endingadded = true;}
   if (container.length == 1 && suru_tag) { //Specifically for forms of する where the short present form was chosen. Other cases are fine.
     endingadded = true;
@@ -606,6 +634,8 @@ function qc_checkAnswer(quizForm, verbID){
   else if (verbID == "6_tsukeru") {theAnswer.push("を");}
   else if (verbID == "6_denwawokakeru") {theAnswer.push("に");}
   else if (verbID == "6_wasureru") {theAnswer.push("を");}
+  else if (verbID == "6_tsuretekuru") {theAnswer.push("を");}
+  else if (verbID == "6_mottekuru") {theAnswer.push("を");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -765,6 +795,12 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "6_wasureru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>忘</rb><rp>(</rp><rt>わす</rt><rp>)</rp></ruby>れる</span>' + 
       '<br>Genki (L6): to forget; to leave behind (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "6_tsuretekuru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>連</rb><rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れてくる</span>' + 
+      '<br>Genki (L6): to bring (a person) (<span style="color:springgreen">〜を</span>)';
+  } else if (verbID == "6_mottekuru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってくる</span>' + 
+      '<br>Genki (L6): to bring (a thing) (<span style="color:springgreen">〜を</span>)';
   }
   return "";
 }
