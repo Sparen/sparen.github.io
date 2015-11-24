@@ -123,6 +123,15 @@ var container_forgettable = ['<ruby lang="ja"><rb>宿題</rb><rp>(</rp><rt>し�
     '<ruby lang="ja"><rb>単語</rb><rp>(</rp><rt>たんご</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby><ruby lang="ja"><rb>番号</rb><rp>(</rp><rt>ばんごう</rt><rp>)</rp></ruby>'
     ];
+var container_wearable = ['<ruby lang="ja"><rb>着物</rb><rp>(</rp><rt>きもの</rt><rp>)</rp></ruby>',
+    'シャーツ',
+    'Tシャーツ'
+    ];
+var container_companies = ['<ruby lang="ja"><rb>会社</rb><rp>(</rp><rt>かいしゃ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>旅行</rb><rp>(</rp><rt>りょこう</rt><rp>)</rp></ruby><ruby lang="ja"><rb>会社</rb><rp>(</rp><rt>がいしゃ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>新聞社</rb><rp>(</rp><rt>しんぶんしゃ</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>銀行</rb><rp>(</rp><rt>きんこう</rt><rp>)</rp></ruby>'
+    ];
 
 function question_create(){
   document.getElementById("quiz_result").innerHTML = "";
@@ -212,6 +221,11 @@ function qc_determineverb(){
   if (document.getElementById("quiz7_kaburu").checked) {possible.push("7_kaburu");}
   if (document.getElementById("quiz7_shiru").checked) {possible.push("7_shiru");}
   if (document.getElementById("quiz7_sumu").checked) {possible.push("7_sumu");}
+  if (document.getElementById("quiz7_haku").checked) {possible.push("7_haku");}
+  if (document.getElementById("quiz7_meganewokakeru").checked) {possible.push("7_meganewokakeru");}
+  if (document.getElementById("quiz7_kiru").checked) {possible.push("7_kiru");}
+  if (document.getElementById("quiz7_tsutomeru").checked) {possible.push("7_tsutomeru");}
+  if (document.getElementById("quiz7_kekkonsuru").checked) {possible.push("7_kekkonsuru");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -334,6 +348,16 @@ function qc_object(currentverb){
     container = container_rand_people.concat(container_languages);
   } else if(currentverb == "7_sumu") {
     container = container_places_gen.concat(container_sleepableplaces).concat(container_places_proper);
+  } else if(currentverb == "7_haku") {
+    container = ['パンツ'];
+  } else if(currentverb == "7_meganewokakeru") {
+    container = container_sleepableplaces;
+  } else if(currentverb == "7_kiru") {
+    container = container_wearable;
+  } else if(currentverb == "7_tsutomeru") {
+    container = container_companies;
+  } else if(currentverb == "7_kekkonsuru") {
+    container = ['<ruby lang="ja"><rb>婚約者</rb><rp>(</rp><rt>こにゃくしゃ</rt><rp>)</rp></ruby>', '<ruby lang="ja"><rb>彼女</rb><rp>(</rp><rt>かのじょ</rt><rp>)</rp></ruby>', '<ruby lang="ja"><rb>彼氏</rb><rp>(</rp><rt>かれし</rt><rp>)</rp></ruby>'];
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -549,6 +573,26 @@ function qc_verb(currentverb){
   } else if(currentverb == "7_sumu") {
     stem = '<ruby lang="ja"><rb>住</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>';
     container = verb_u_mu_standard;
+  } else if(currentverb == "7_haku") {
+    stem = 'は';
+    container = verb_u_ku_standard;
+  } else if(currentverb == "7_meganewokakeru") {
+    stem = '<ruby lang="ja"><rb>眼鏡</rb><rp>(</rp><rt>めがね</rt><rp>)</rp></ruby>をかけ';
+    container = verb_ru_ru_standard;
+  } else if(currentverb == "7_kiru") {
+    stem = '<ruby lang="ja"><rb>着</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>';
+    container = verb_ru_ru_standard;
+  } else if(currentverb == "7_tsutomeru") {
+    stem = '<ruby lang="ja"><rb>勤</rb><rp>(</rp><rt>つと</rt><rp>)</rp></ruby>め';
+    container = verb_ru_ru_standard;
+  } else if(currentverb == "7_kekkonsuru") {
+    suru_tag = true;
+    if (Math.random() < 0.1) {
+      stem = '<ruby lang="ja"><rb>結婚</rb><rp>(</rp><rt>けっこん</rt><rp>)</rp></ruby>す'; container = ['る'];
+    } else { //Note the た buffer for the present short form and the replacement of potential forms with できる
+      stem = '<ruby lang="ja"><rb>結婚</rb><rp>(</rp><rt>けっこん</rt><rp>)</rp></ruby>し';
+      container = verb_suru_standard;
+    }
   }
 
   //DEFAULT
@@ -575,6 +619,7 @@ function qc_verb(currentverb){
   if (suru_tag && randindex >= 10 && randindex <= 13) { //Cheap way to allow forms of できる while allowing endings and not doing the 来る route
     var action_suru = "";
     if(currentverb == "3_benkyousuru") {action_suru = '<ruby lang="ja"><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>';}
+    if(currentverb == "7_kekkonsuru") {action_suru = '<ruby lang="ja"><rb>結婚</rb><rp>(</rp><rt>けっこん</rt><rp>)</rp></ruby>';}
     toreturn = action_suru + container[randindex]; //Basically reset the toreturn by removing stem. If had an action, replaces with appropriate action.
   }
   if (currentverb == "4_aru" && randindex == 4) { //ない case for ある
@@ -686,6 +731,11 @@ function qc_checkAnswer(quizForm, verbID){
   else if (verbID == "7_kaburu") {theAnswer.push("を");}
   else if (verbID == "7_shiru") {theAnswer.push("を");}
   else if (verbID == "7_sumu") {theAnswer.push("に");}
+  else if (verbID == "7_haku") {theAnswer.push("を");}
+  else if (verbID == "7_meganewokakeru") {theAnswer.push("で");}
+  else if (verbID == "7_kiru") {theAnswer.push("を");}
+  else if (verbID == "7_tsutomeru") {theAnswer.push("に");}
+  else if (verbID == "7_kekkonsuru") {theAnswer.push("と");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -862,7 +912,22 @@ function qc_verbinformation(verbID) {
       '<br>Genki (L7): to get to know';
   } else if (verbID == "7_sumu") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>住</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>む</span>' + 
-      '<br>Genki (L7): to live (<span style="color:springgreen">〜にすんでいます</span>)';
+      '<br>Genki (L7): to live (<span style="color:springgreen">〜に</span>すんでいます)';
+  } else if (verbID == "7_haku") {
+    return '<span style="color:aquamarine">はく</span>' + 
+      '<br>Genki (L7): to put on (items below your waist)';
+  } else if (verbID == "7_meganewokakeru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>眼鏡</rb><rp>(</rp><rt>めがね</rt><rp>)</rp></ruby>をかける</span>' + 
+      '<br>Genki (L7): to put on (glasses)';
+  } else if (verbID == "7_kiru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>着</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>る</span>' + 
+      '<br>Genki (L7): to put on (clothes above your waist)';
+  } else if (verbID == "7_tsutomeru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>勤</rb><rp>(</rp><rt>つと</rt><rp>)</rp></ruby>める</span>' + 
+      '<br>Genki (L7): to work for (<span style="color:springgreen">〜に</span>つとめています)';
+  } else if (verbID == "7_kekkonsuru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>結婚</rb><rp>(</rp><rt>けっこん</rt><rp>)</rp></ruby>する</span>' + 
+      '<br>Genki (L7): to get married (<span style="color:springgreen">〜と</span>)';
   }
   return "";
 }
@@ -957,11 +1022,9 @@ function qc_checkL7(newval) {
   document.getElementById("quiz7_shiru").checked = newval;
   document.getElementById("quiz7_sumu").checked = newval;
   document.getElementById("quiz7_haku").checked = newval;
-  document.getElementById("quiz7_futoru").checked = newval;
   document.getElementById("quiz7_meganewokakeru").checked = newval;
   document.getElementById("quiz7_kiru").checked = newval;
   document.getElementById("quiz7_tsutomeru").checked = newval;
-  document.getElementById("quiz7_yaseru").checked = newval;
   document.getElementById("quiz7_kekkonsuru").checked = newval;
 }
 
