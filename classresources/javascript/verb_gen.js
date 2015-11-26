@@ -132,6 +132,11 @@ var container_companies = ['<ruby lang="ja"><rb>会社</rb><rp>(</rp><rt>かい�
     '<ruby lang="ja"><rb>新聞社</rb><rp>(</rp><rt>しんぶんしゃ</rt><rp>)</rp></ruby>',
     '<ruby lang="ja"><rb>銀行</rb><rp>(</rp><rt>きんこう</rt><rp>)</rp></ruby>'
     ];
+var container_bodyparts = ['<ruby lang="ja"><rb>手</rb><rp>(</rp><rt>て</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>鼻</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>顔</rb><rp>(</rp><rt>かお</rt><rp>)</rp></ruby>',
+    '<ruby lang="ja"><rb>足</rb><rp>(</rp><rt>あし</rt><rp>)</rp></ruby>'
+    ];
 
 function question_create(){
   document.getElementById("quiz_result").innerHTML = "";
@@ -226,6 +231,8 @@ function qc_determineverb(){
   if (document.getElementById("quiz7_kiru").checked) {possible.push("7_kiru");}
   if (document.getElementById("quiz7_tsutomeru").checked) {possible.push("7_tsutomeru");}
   if (document.getElementById("quiz7_kekkonsuru").checked) {possible.push("7_kekkonsuru");}
+  if (document.getElementById("quiz8_amegafuru").checked) {possible.push("8_amegafuru");}
+  if (document.getElementById("quiz8_arau").checked) {possible.push("8_arau");}
   if (possible.length == 0) {
     document.getElementById("quiz_result").innerHTML = "<p>Please check at least one value.</p>";
     possible.push("0_null");
@@ -358,6 +365,10 @@ function qc_object(currentverb){
     container = container_companies;
   } else if(currentverb == "7_kekkonsuru") {
     container = ['<ruby lang="ja"><rb>婚約者</rb><rp>(</rp><rt>こにゃくしゃ</rt><rp>)</rp></ruby>', '<ruby lang="ja"><rb>彼女</rb><rp>(</rp><rt>かのじょ</rt><rp>)</rp></ruby>', '<ruby lang="ja"><rb>彼氏</rb><rp>(</rp><rt>かれし</rt><rp>)</rp></ruby>'];
+  } else if(currentverb == "8_amegafuru") {
+    container = container_places_gen.concat(container_places);
+  } else if(currentverb == "8_arau") {
+    container = container_bodyparts.concat(container_pets);
   }
   var randindex = Math.floor((Math.random() * container.length));
   if (currentverb == "0_null") {return "／人 ◕ ‿‿ ◕ 人＼は「だから" + '<ruby lang="ja"><rb>僕</rb><rp>(</rp><rt>ぼく</rt><rp>)</rp></ruby>';}
@@ -593,6 +604,12 @@ function qc_verb(currentverb){
       stem = '<ruby lang="ja"><rb>結婚</rb><rp>(</rp><rt>けっこん</rt><rp>)</rp></ruby>し';
       container = verb_suru_standard;
     }
+  } else if(currentverb == "8_amegafuru") {
+    stem = '<ruby lang="ja"><rb>雨</rb><rp>(</rp><rt>あめ</rt><rp>)</rp></ruby>が<ruby lang="ja"><rb>降</rb><rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>';
+    container = verb_u_ru_standard;
+  } else if(currentverb == "8_arau") {
+    stem = '<ruby lang="ja"><rb>洗</rb><rp>(</rp><rt>あら</rt><rp>)</rp></ruby>';
+    container = verb_u_u_standard;
   }
 
   //DEFAULT
@@ -736,6 +753,8 @@ function qc_checkAnswer(quizForm, verbID){
   else if (verbID == "7_kiru") {theAnswer.push("を");}
   else if (verbID == "7_tsutomeru") {theAnswer.push("に");}
   else if (verbID == "7_kekkonsuru") {theAnswer.push("と");}
+  else if (verbID == "8_amegafuru") {theAnswer.push("で");}
+  else if (verbID == "8_arau") {theAnswer.push("を");}
 
   if (verbID == "0_null") {theAnswer.push("と"); kyubey = true;} //defaults to Kyubey
 
@@ -928,6 +947,12 @@ function qc_verbinformation(verbID) {
   } else if (verbID == "7_kekkonsuru") {
     return '<span style="color:aquamarine"><ruby lang="ja"><rb>結婚</rb><rp>(</rp><rt>けっこん</rt><rp>)</rp></ruby>する</span>' + 
       '<br>Genki (L7): to get married (<span style="color:springgreen">〜と</span>)';
+  } else if (verbID == "8_amegafuru") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>雨</rb><rp>(</rp><rt>あめ</rt><rp>)</rp></ruby>が<ruby lang="ja"><rb>降</rb><rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>る</span>' + 
+      '<br>Genki (L8): it rains';
+  } else if (verbID == "8_arau") {
+    return '<span style="color:aquamarine"><ruby lang="ja"><rb>洗</rb><rp>(</rp><rt>あら</rt><rp>)</rp></ruby>う</span>' + 
+      '<br>Genki (L8): to wash';
   }
   return "";
 }
@@ -1030,6 +1055,22 @@ function qc_checkL7(newval) {
 
 function qc_checkL8(newval) {
   document.getElementById("quiz8_master").checked = newval;
+
+  document.getElementById("quiz8_amegafuru").checked = newval;
+  document.getElementById("quiz8_arau").checked = newval;
+  document.getElementById("quiz8_iu").checked = newval;
+  document.getElementById("quiz8_iru").checked = newval;
+  document.getElementById("quiz8_osokunaru").checked = newval;
+  document.getElementById("quiz8_omou").checked = newval;
+  document.getElementById("quiz8_kiru").checked = newval;
+  document.getElementById("quiz8_tsukuru").checked = newval;
+  document.getElementById("quiz8_motteiku").checked = newval;
+  document.getElementById("quiz8_jirojiromiru").checked = newval;
+  document.getElementById("quiz8_hajimeru").checked = newval;
+  document.getElementById("quiz8_untensuru").checked = newval;
+  document.getElementById("quiz8_sentakusuru").checked = newval;
+  document.getElementById("quiz8_soujisuru").checked = newval;
+  document.getElementById("quiz8_ryourisuru").checked = newval;
 }
 
 function qc_checkL9(newval) {
