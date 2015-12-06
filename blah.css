@@ -87,6 +87,12 @@ footer{clear:both;}
 }
 .yui-b{position:relative;}#yui-main .yui-b{position:static;}#yui-main{width:100%;}.yui-t1 #yui-main{float:right;margin-left:-25em;}.yui-t1 .yui-b{float:left;width:12.30769em;}.yui-t1 #yui-main .yui-b{margin-left:13.30769em;}#yui-main .yui-b{float:none;width:auto;}
 
+/*Alter things common to all bodies here*/
+.yui-g{
+  max-width: 850px;
+  width: 100%;
+}
+
 /*Allows word wrapping for non-top, non-footer non-sidebar content (AKA just .yui-b). Code from w3schools.*/
 .yui-b{
     display: -webkit-flex; /* Safari */
