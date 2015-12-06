@@ -67,14 +67,10 @@ a:link{color:rgb(24,48,64);}
 a:visited {color:rgb(32,64,128);}
 a:hover {color:rgb(64,128,192);}
 
-#ft{
-  clear:both;
-}#top{
-  margin:auto;
+#ft{clear:both;}
+footer{clear:both;}
+#top{
   text-align:left;
-  width:57.69em;
-  min-width:750px;
-}#top{
   margin:auto 10px;
   width:auto;
 }
@@ -82,10 +78,14 @@ a:hover {color:rgb(64,128,192);}
 .yui-t1{
   margin:auto;
   text-align:left;
-  width:57.69em;
-  min-width:750px;
 }
 .yui-b{position:relative;}#yui-main .yui-b{position:static;}#yui-main,.yui-g{width:100%;}.yui-t1 #yui-main{float:right;margin-left:-25em;}.yui-t1 .yui-b{float:left;width:12.30769em;}.yui-t1 #yui-main .yui-b{margin-left:13.30769em;}#yui-main .yui-b{float:none;width:auto;}.yui-g div.first{float:left;}#bd:after,.yui-g:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+
+/*Alter things common to all bodies here*/
+.yui-g{
+  max-width: 850px;
+  width: 100%;
+}
 
 /*Allows word wrapping for non-top, non-footer non-sidebar content (AKA just .yui-b). Code from w3schools.*/
 .yui-b{
@@ -236,6 +236,19 @@ p, fieldset, table, pre {
     padding-bottom: 5px;
 }
 /*END MENUS BY SPAREN*/
+
+/* CSS @media overrides. 468 is the largest an iPhone can do  */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .yui-t1 #yui-main{
+    margin-left:0em;
+  }
+  .yui-t1 #yui-main .yui-b{
+    margin-left:0em;
+  }
+  .sttjnavbar{
+    position:relative;
+  }
+}
 
 .sttjbiotable{/*Div*/
 
