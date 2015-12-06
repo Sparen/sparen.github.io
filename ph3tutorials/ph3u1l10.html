@@ -16,14 +16,14 @@
           <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
           <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
         </ul>
-      </div>      <div id="bd">        <div id="yui-main">
-          <div class="tutnavbar">
-	    <ul>
-	      <li><a href="./ph3u1l9.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Lasers">Unit 1 Lesson 9</a></li>
-	      <li>Navigation Bar</li>
-	      <li><a href="./ph3u1l10a.html" title="Sparen's Danmakufu ph3 Tutorials - Recollection: Moonlight Ray">Extra Lesson 2</a></li>
-	    </ul>
-          </div>          <div class="yui-b">            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 10 - Angular Velocity and Curved Lasers</h1>	      <p>The video for this lesson is Talos's Mini Shou Stage! Of course we couldn't have a lesson on curvy lasers without mentioning the Lord Shou! (Seiga, I'm sorry)</p>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u1l9.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Lasers">Unit 1 Lesson 9</a></li>
+	        <li>Navigation Bar</li>
+	        <li><a href="./ph3u1l10a.html" title="Sparen's Danmakufu ph3 Tutorials - Recollection: Moonlight Ray">Extra Lesson 2</a></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 10 - Angular Velocity and Curved Lasers</h1>	      <p>The video for this lesson is Talos's Mini Shou Stage! Of course we couldn't have a lesson on curvy lasers without mentioning the Lord Shou! (Seiga, I'm sorry)</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <embed width="420" height="315"
 		src="https://www.youtube.com/v/17GGCvV2hrk">
@@ -118,7 +118,8 @@
 	      <p>To create curving bullet lines (which, btw, are significantly less lag-inducing than curvy lasers), you just need to keep the bullet's actions the same, preferably via a BulletCommands task or by giving them all the same code. The only change is when they are spawned. So there are two ways to do this, really. The first is using delay and the second is by using yield; The first method is shown below. <strong>Note that ObjMove_AddPatternA2 should be used on bullets created with CreateShotA2 and that using it on shots made with CreateShotA1 may have unwanted consequences</strong>.</p>
 	      <pre class="prettyprint"><code>    task SpawnBulletLine{
         ascent(i in 0..12){
-	    let obj = CreateShotA2(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 0, 0, DS_RICE_M_SKY, i*3); 
+	    let obj = CreateShotA2(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 
+                0, 0, DS_RICE_M_SKY, i*3); 
 	    //create your shot above. There will be 12 of them, with delays of 0, 3, ..., 33
 	    BulletCommands(obj);
 	}

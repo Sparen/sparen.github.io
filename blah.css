@@ -70,11 +70,7 @@ a:hover {color:rgb(82,235,251);}
 #ft{clear:both;}
 footer{clear:both;}
 #top{
-  margin:auto;
   text-align:left;
-  width:57.69em;
-  min-width:750px;
-}#top{
   margin:auto 10px;
   width:auto;
 }
@@ -82,8 +78,6 @@ footer{clear:both;}
 .yui-t1{
   margin:auto;
   text-align:left;
-  width:57.69em;
-  min-width:750px;
 }
 .yui-b{position:relative;}#yui-main .yui-b{position:static;}#yui-main{width:100%;}.yui-t1 #yui-main{float:right;margin-left:-25em;}.yui-t1 .yui-b{float:left;width:12.30769em;}.yui-t1 #yui-main .yui-b{margin-left:13.30769em;}#yui-main .yui-b{float:none;width:auto;}
 
@@ -245,6 +239,41 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   text-decoration: none;
 }
 /*END MENUS BY SPAREN*/
+
+/* CSS @media overrides. 468 is the largest an iPhone can do  */
+@media screen and (max-width: 480px) and (orientation: portrait) {
+  .yui-t1 #yui-main{
+    margin-left:0em;
+  }
+  .yui-t1 #yui-main .yui-b{
+    margin-left:0em;
+  }
+  #menubar{/*Move and position the menubar div.*/
+    width: 100%;
+    float: center;
+    position:relative;/*This and the Z index line move this div above the div that is covering it*/
+    z-index:100;
+    display: inline-block;
+    text-align:center;
+    height:100%;
+    padding: 5px 0px; /* Prevent collision with navigation bars in tutorials */
+  }
+  #menubar ul{ 
+    text-align:center;
+    border-style: none;
+  }
+  #menubar li{
+    float: center;
+    display:inline-block;
+    text-align: center;
+  }
+  #menubar a{/*Unlike nav bar, using a instead of li because every item is in fact a link*/
+    float: center;
+  }
+  .tutnavbar{
+    position:relative;
+  }
+}
 
 @font-face{
   font-family: pmdfont;
