@@ -66,7 +66,7 @@
 	      <p>Most of the time, we use a pure white circle or square on a transparent background. We set the blend type of this circle or square to BLEND_INV_DESTRGB. Now, anything rendered below this circle will have its color inverted. Applying two objects with invert, one on top of the other, will negate the effect.</p>
 	      <p>The invert effect is pretty cool, but is also used in situations where it is not optimal. For best usage, a high contrast background or scene should be used to give maximum effect to the invert.</p>
 	      <p>For example:</p>
-	      <pre class="prettyprint"><code>    task Invert{
+	      <pre class="prettyprint linenums"><code>    task Invert{
         let invert = GetCurrentScriptDirectory() ~ "./img/inv_circle.png"; //Define path
         let objInv = ObjPrim_Create(OBJ_SPRITE_2D);
         let objcount = 0;

@@ -152,7 +152,7 @@
 	      <p>Delay lasers are, basically, the hitboxless lasers formed when you create a straight laser. Most often, they are created in order to show the paths of fast bullets or bullet streams. Good uses include Shadow's RaNGE 10 Reimu script, where bullets coming from the bottom of the screen had delay lasers so that the player could know the path the talismans would take before they spawned.</p>
 	      <p>To form a delay laser in ph3, you must create a straight laser with <code>ObjStLaser_SetSource(obj)</code> set to false. Additionally, it should have delete time of 0, although I will discuss this in more detail in a moment. The delay is how long the delay laser should exist for, and optimally, you should use a rectangular bullet with a width of at least 20 so that the render width of the delay laser will be enough for it to be visible.</p>
 	      <p>Now, if you set delete time to 0 and create this laser, you will find that it does not work as you expected - the laser graphic will actually expand to its final width while fade deleting. This did not happen in 0.12m, but it happens in ph3. The workaround is as follows: Manually kill the object before it enlarges. Below is my code, which you are free to use (citing would be nice).</p>
-	      <pre class="prettyprint"><code>    task DelayLaser(x, y, ang, l, w, dt, graph, delay){ 
+	      <pre class="prettyprint linenums"><code>    task DelayLaser(x, y, ang, l, w, dt, graph, delay){ 
         let objlaser = CreateStraightLaserA1(x, y, ang, l, w, dt, graph, delay);
         ObjStLaser_SetSource(objlaser, false);
         loop(delay-1){//So that the graphic never enlarges. 
@@ -181,17 +181,15 @@
 	      <p>As for the task, let's begin with the basics.</p>
 	      <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
         let objcount = 0;
-        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss) + 60*cos(ID*30), ObjMove_GetY(objBoss) + 60*sin(ID*30),  
-                ID * 30, 512, 24, 300, 1001, 60);
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss) + 60*cos(ID*30), ObjMove_GetY(objBoss) + 60*sin(ID*30), ID * 30, 512, 24, 300, 1001, 60);
     }</code></pre>
 	      <p>In the above code, I declare the task and begin with a declaration of the variable objcount, the counter for this task. Then I create a straight laser 60 pixels from the boss's location, with angle equals to ID*30. Since ID can go from 0 to 11 due to our ascent loop, multiplying by 30 (i.e. 360/12, 12 being the total number of lasers) will give the angle we want the laser to start at. Each laser has a unique ID and they can therefore all be controlled using the same task. The 60*cos(ID*30) and 60*sin(ID*30) is the trigonometry used to spawn the lasers in a circle of radius 60 around the boss. Trigonometry and Parametrics will receive a much more thorough explanation in <a href="./ph3u1l11.html">Lesson 11</a>.</p>
 	      <p>At this point, we can create the lasers but they will stay put. They will not rotate, and if the boss moves, they will not move with the boss. We will use a while loop to combat this.</p>
-	      <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
+	      <pre class="prettyprint linenums"><code>    task SpawnNDLaser(ID){
         let objcount = 0;
-        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss) + 60*cos(ID*30), ObjMove_GetY(objBoss) + 60*sin(ID*30), 
-                ID * 30, 512, 24, 300, 1001, 60);
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss) + 60*cos(ID*30), ObjMove_GetY(objBoss) + 60*sin(ID*30), ID * 30, 512, 24, 300, 1001, 60);
         while(!Obj_IsDeleted(obj)){
-            ObjMove_SetPosition(obj, ObjMove_GetX(objBoss) + 60*cos(ID*30 + objcount), ObjMove_GetY(objBoss) + 60*sin(ID*30 + objcount));
+            ObjMove_SetPosition(obj, ObjMove_GetX(objBoss) + 60*cos(ID*30 + objcount), ObjMove_GetY(objBoss) + 60 * sin(ID*30 + objcount));
             ObjStLaser_SetAngle(obj, ID*30 + objcount);
             objcount++;
             yield;
@@ -202,10 +200,9 @@
 	      <h2 style="color:yellow" id="quiz2">Quiz: Delay and Non-Directional Lasers</h2>
 	        <!--Quiz start.-->
 		<p>1) Marisa has stolen Patchouli's Non-Directional Lasers and wants to have them move from the boss's location to a radius of 60, one pixel increase per frame. How would she implement this? Her code is below. There may be multiple correct answers.</p>
-	        <pre class="prettyprint"><code>    task SpawnNDLaser(ID){
+	        <pre class="prettyprint linenums"><code>    task SpawnNDLaser(ID){
         let objcount = 0;
-        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss) + 60*cos(ID*30), ObjMove_GetY(objBoss) + 60*sin(ID*30), 
-                ID * 30, 512, 24, 300, 1001, 60);
+        let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss) + 60*cos(ID*30), ObjMove_GetY(objBoss) + 60*sin(ID*30), ID * 30, 512, 24, 300, 1001, 60);
         while(!Obj_IsDeleted(obj)){
             ObjMove_SetPosition(obj, ObjMove_GetX(objBoss) + 60*cos(ID*30 + objcount), ObjMove_GetY(objBoss) + 60*sin(ID*30 + objcount));
             ObjStLaser_SetAngle(obj, ID*30 + objcount);

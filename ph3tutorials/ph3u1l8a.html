@@ -127,7 +127,7 @@ floor(-9.496);    //-10</code></pre>
 	      <p>So it's finally time for the main show - Eternal Meek! We will begin with an analysis of the spellcard.</p>
 	      <p>The first thing to note is that this 13 second spell has Sakuya stationary in one location. This means that there will be no movement at all during the attacking. The next thing to note is that the bullets are all spawned from directly on top of her position with a high delay. This will inform the player to beware of faster bullets, and indeed, the bullet speeds are fast.</p>
 	      <p>Based on how often the SFX plays, it is safe to assume that there is a bullet every frame, or a bullet every two frames. This allows us to formulate our MainTask, which we will call once at the end of @Initialize. For the purposes of our replica, we will have one bullet per frame.</p>
-	      <pre class="prettyprint"><code>task MainTask{
+	      <pre class="prettyprint linenums"><code>task MainTask{
     ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60)
     wait(120);
     while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
@@ -138,7 +138,7 @@ floor(-9.496);    //-10</code></pre>
 	      <p>In the above code, I have set her position to GetCenterX(), 60. This may not be the actual position, but it should do for now. I have also put in a 60 frame delay from the end of the movement to the start of the actual bullet spawning. Now, for the actual bullet spawning.</p>
 	      <p>Each bullet has the same graphic and has the same starting position, but has a different angle and speed. Therefore, we will use rand(0,360) for the angle and rand(3,6) for the speed. For all practical purposes, speeds of 2 and below are slow, 2-4 are moderate, and anything over 4 usually requires a delay laser or for the speed of the bullet to be obvious. In the case of Eternal Meek, the large delay clouds and the occurrence of the spell late in the game help justify the presence of bullets with such high speeds.</p>
 	      <p>Now that we have our arguments prepared, we can fill in our code.</p>
-	      <pre class="prettyprint"><code>task MainTask{
+	      <pre class="prettyprint linenums"><code>task MainTask{
     ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60)
     wait(120);
     while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){

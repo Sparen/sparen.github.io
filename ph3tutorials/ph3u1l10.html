@@ -116,7 +116,7 @@
 	      <p>We now leave the land of Shou and Seiga and now enter the land of Tewi.</p>
 	      <p>Fundamentally, lines of bullets that all do the same thing are what curvy lasers are, albeit in a significantly less precise way. Think about it this way - if a curvy laser is just a lot of hitboxes with a stretched graphic, then wouldn't a long string of bullets (with hitboxes) be the same? The answer is yes, and as a result, we can approach them the same way.</p>
 	      <p>To create curving bullet lines (which, btw, are significantly less lag-inducing than curvy lasers), you just need to keep the bullet's actions the same, preferably via a BulletCommands task or by giving them all the same code. The only change is when they are spawned. So there are two ways to do this, really. The first is using delay and the second is by using yield; The first method is shown below. <strong>Note that ObjMove_AddPatternA2 should be used on bullets created with CreateShotA2 and that using it on shots made with CreateShotA1 may have unwanted consequences</strong>.</p>
-	      <pre class="prettyprint"><code>    task SpawnBulletLine{
+	      <pre class="prettyprint linenums"><code>    task SpawnBulletLine{
         ascent(i in 0..12){
 	    let obj = CreateShotA2(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 
                 0, 0, DS_RICE_M_SKY, i*3); 
@@ -130,7 +130,7 @@
     }</code></pre>
 	      <p>In the above code, we use an ascent loop to set the delay (see <a href="./ph3u1l7.html">Lesson 7</a> if you are unsure of how this works). This will effectively stagger our bullet creation times over half a second, and each bullet will start from the same position and move in the same way. If we were to include acceleration an angular velocity in BulletCommands, this string of bullets would act very similarly to a curvy laser.</p>
 	      <p>The alternate method, which uses yield, is clunkier and is more prone to error.</p>
-	      <pre class="prettyprint"><code>    task SpawnBulletLine{
+	      <pre class="prettyprint linenums"><code>    task SpawnBulletLine{
 	let startx = ObjMove_GetX(objBoss);
 	let starty = ObjMove_GetY(objBoss);
 	let startang = GetAngleToPlayer(objBoss);
@@ -150,11 +150,11 @@
 	      <p>Now we will discuss snake lasers and snaking bullet lines.</p>
 	      <p>First thing's first - what exactly are we doing? Well, we are going to create a laser/bullet string that changes its angular velocity every set number of frames to -1 * its original value. This creates a snaking bullet string, which has its applications.</p>
 	      <p>To do this, we will want to use ObjMove_AddPattern with a variable, which I will name wvel (for omega, angular velocity).</p>
-	      <pre class="prettyprint"><code>    task SnakePattern(obj){
+	      <pre class="prettyprint linenums"><code>    task SnakePattern(obj){
 	let wvel = 1;
     }</code></pre>
 	      <p>Now, we *could* write out every line. But that would be a pain, wouldn't it? So instead of copy-pasting ObjMove_AddPattern a bunch of times (and have the possibility of the bullet stopping its snaking halfway down the screen), we can automate this procedure with a for loop (in this case, an ascent loop).</p>
-	      <pre class="prettyprint"><code>    task SnakePattern(obj){
+	      <pre class="prettyprint linenums"><code>    task SnakePattern(obj){
 	let wvel = 1;
 	ascent(i in 0..12){
 	    ObjMove_AddPatternA2(obj, i * 30, NO_CHANGE, NO_CHANGE, NO_CHANGE, wvel, NO_CHANGE);
@@ -168,7 +168,7 @@
 	      <p>I will close this lesson with another automation technique - passing directions into tasks.</p>
 	      <p>Let's say we have our SnakePattern task from Part 9. Now, it always starts with wvel = 1 every time it is run. But what if we want it to start curving in the opposite direction at the start instead? We could always copy the task, and do some slight changes. However, it is far more effective to pass a direction multiplier into the task.</p>
 	      <p>Let's say that this is the code that calls SnakePattern. Please note that this example uses curvy lasers and not bullet strings.</p>
-	      <pre class="prettyprint"><code>    task CreateLaserRing{
+	      <pre class="prettyprint linenums"><code>    task CreateLaserRing{
 	ascent(i in 0..12){
 	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
 		GetAngleToPlayer(objBoss) + i*360/12, 60, 18, 1018, 10);
@@ -176,7 +176,7 @@
 	}
     }</code></pre>
 	      <p>Now, let's say that after 60 frames, we want to create another laser ring starting with a different graphic and a different angular velocity. Instead of making a SnakePattern2 with wvel set to -1 at the start, we can do this:</p>
-	      <pre class="prettyprint"><code>    task CreateLaserRing{
+	      <pre class="prettyprint linenums"><code>    task CreateLaserRing{
 	ascent(i in 0..12){
 	    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, 
 		GetAngleToPlayer(objBoss) + i*360/12, 60, 18, 1018, 10);
@@ -200,7 +200,7 @@
 	      <p>So what did we do? We set up SnakePattern so that it takes a direction parameter (which can also be used as a multiplier, should we want an angular velocity of -2.3 or something). Now, instead of duplicating the task with a different number, we have allowed our code to run more effectively, and by calling SnakePattern with -1 and 1 in the task CreateLaserRing, we achieve our desired effect.</p>
 	      <h2 style="color:yellow" id="quiz2">Quiz: Snaking Paths and Direction Multipliers</h2>
 	        <!--Quiz start.-->
-	      <pre class="prettyprint"><code>
+	      <pre class="prettyprint linenums"><code>
     task SnakePattern(obj, dir){
 	let wvel = 1 * dir;
 	ascent(i in 0..12){

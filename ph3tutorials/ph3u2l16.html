@@ -42,7 +42,7 @@
 	      <h2 style="color:yellow" id="sub2">Part 2: Why Upgrade Single Scripts?</h2>
 	      <p>So far, most of my code examples (exception being in <a href="./ph3u1l6.html">Lesson 6</a>) have been written in such a way that assumes they were mere singles, not linked into boss battles. And so, we have, for the most part, been writing code in such a way where, theoretically, bullets can spawn after the conclusion of the single. We will, in this lesson, tackle this problem.</p>
 	      <p>To highlight this problem, let's consider the TFinalize from <a href="./ph3u1l7code2.html">Lesson 7</a>.</p>
-	      <pre class="prettyprint"><code>task TFinalize{
+	      <pre class="prettyprint linenums"><code>task TFinalize{
     while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){yield;}
     if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT)
             +ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
@@ -56,7 +56,7 @@
 }</code></pre>
 	      <p>In the above, we wait for the boss's life to hit 0, and then delete the boss, delete all existing shots, and set Autodelete to true, which will tell Danmakufu to delete all objects created in this script when <code>CloseScript()</code> is run.</p>
 	      <p>Now, let's say that we have a task called Spawn, which is the following:</p>
-	      <pre class="prettyprint"><code>task Spawn {
+	      <pre class="prettyprint linenums"><code>task Spawn {
     while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
         ascent(i in 0..30){
             CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, i*23, 1, 30);

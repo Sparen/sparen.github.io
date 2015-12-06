@@ -66,7 +66,7 @@
 	      <p>So without further ado, Plurals!</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: How Do I Create a Plural Script</h2>
 	      <p>Way back when in <a href="ph3u1l6.html">Lesson 6</a>, we made our first single script. It had a header with #TouhouDanmakufu and the like. Let's paste that here, with a minor change - we will switch 'Single' with 'Plural' in the header.</p>
-	      <pre class="prettyprint"><code>#TouhouDanmakufu[Plural]
+	      <pre class="prettyprint linenums"><code>#TouhouDanmakufu[Plural]
 #ScriptVersion[3]
 #Title[]
 #Text[] 
@@ -86,7 +86,7 @@
 	      <p>Firstly, we will declare a variable dir to be equal to <code>GetCurrentScriptDirectory()</code>. This is because we may be calling multiple singles, and the long <code>GetCurrentScriptDirectory()</code> function name is both tedious to write and very long.</p>
 	      <p>Now let's declare a variable obj. We will assign <code>ObjEnemyBossScene_Create()</code> to it. This function creates a boss scene object and returns the ID of given object.</p>
 	      <p>As of now, our code should look like this:</p>
-	      <pre class="prettyprint"><code>#TouhouDanmakufu[Plural]
+	      <pre class="prettyprint linenums"><code>#TouhouDanmakufu[Plural]
 #ScriptVersion[3]
 #Title["My First Boss Script"]
 #Text[] 
@@ -119,7 +119,7 @@ task TPlural{
     }</code></pre>
 	      <p>This will wait for the Boss Scene to delete itself (it will delete once it has gone through every single that has been added on). After this, use <code>CloseScript(GetOwnScriptID());</code> to close the plural script.</p>
 	      <p>So here's our completed sample plural script.</p>
-	      <pre class="prettyprint"><code>#TouhouDanmakufu[Plural]
+	      <pre class="prettyprint linenums"><code>#TouhouDanmakufu[Plural]
 #ScriptVersion[3]
 #Title["My First Boss Script"]
 #Text[] 
@@ -159,7 +159,7 @@ task TPlural{
 	      <h2 style="color:yellow" id="quiz1">Quiz: Plural Scripts</h2>
 	        <!--Quiz start.-->
 		<p>Use the following code for questions 1-3</p>
-	      <pre class="prettyprint class=linenums"><code>#TouhouDanmakufu[Plural]
+	      <pre class="prettyprint linenums"><code>#TouhouDanmakufu[Plural]
 #ScriptVersion[3]
 #Title["My First Boss Script"]
 #Text[] 
@@ -270,8 +270,5 @@ task TPlural{
     <script type="text/javascript" src="javascript/U2L12Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>
-    <style>
-	        .prettyprint ol.linenums > li { list-style-type: decimal; background-color: black;}
-    </style>
   </body>
 </html>

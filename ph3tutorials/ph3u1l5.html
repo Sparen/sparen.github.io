@@ -319,7 +319,7 @@ let y = math(6); //y will be equal to 11</code></pre>
 	        </form>
 	        <br>
 		<p>2) Marisa is testing a new laser of doom. However, her code freezes. How can she stop the freezing and also have the object delete after 300 frames? Please choose the best answer. Assume that the object does not automatically delete.</p>
-	        <pre class="prettyprint"><code>task MasterSparkEX(x, y, ang, length, width, dt, graph, delay){
+	        <pre class="prettyprint linenums"><code>task MasterSparkEX(x, y, ang, length, width, dt, graph, delay){
     let obj = CreateStraightLaserA1(x, y, ang, length, width, dt, graph, delay);
     let objcount = 0;
     while(objcount &lt; 300 &amp;&amp; Obj_IsDeleted(obj) == false){

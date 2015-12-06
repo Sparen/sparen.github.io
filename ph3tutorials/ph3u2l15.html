@@ -65,7 +65,7 @@
 	      <p>If you want to play a sound object with a given volume, then use <code>ObjSound_SetVolumeRate()</code>. The volume goes from 0 to 100 linearly. It used to be exponential but this was changed. It is highly recommended that all your sound effects be around the same volume, as you will most likely want to use the same function for creating all of them. As for Pan Rate, controlled by <code>ObjSound_SetPanRate()</code>, you can control which earbud/side you want the sound to go to, with -100 being all to the left side and 100 to all on the right side. This is used in cases such as the warp sound effects in Subterranean Animism, where all of the sound effect goes to one ear and not the other. For most cases, you will never use this function, but it exists.</p>
 	      <p>Now it is time to talk about looping. Sound objects by default do not loop. You must use <code>ObjSound_SetLoopEnable()</code> to allow a track to loop. After this, there are two main methods for how to loop - by time, and by sample.</p>
 	      <p>To loop by time, use <code>ObjSound_SetLoopTime()</code>. For example, let's say that I have a music track where the loop starts at 5.43 seconds and the loop ends at 85.43 seconds. I will use the following to loop it:</p>
-	      <pre class="prettyprint"><code>    function CreateTrack{
+	      <pre class="prettyprint linenums"><code>    function CreateTrack{
 	let obj = ObjSound_Create();
 	ObjSound_Load(obj, GetCurrentScriptDirectory() ~ "./bgm/clownpiece.ogg");
 	ObjSound_SetSoundDivision(obj, SOUND_BGM);

@@ -47,7 +47,7 @@
 	      <h2 style="color:yellow" id="sub2">Part 2: What are Shotsheets and Shot Constant Sheets?</h2>
 	      <p>By now, you should be familiar with the presence of <code>#include"script/default_system/Default_ShotConst.txt"</code> at the top of our Single scripts. If you remove this while firing shots in the script, you will get errors stating that some final constant in all caps has not been defined. Here I will provide a brief explanation for how this works, as well as shotsheets themselves.</p>
 	      <p>First we will observe the Default_ShotConst.txt file in the default system, which is a shot constant file we have included. A shot constant sheet is a file that references an image containing shots (which it loads, along with an associated shotsheet), and contains a list of final constants which can be used to reference the numerical IDs of bullets defined in the shotsheet. As for the include, an include basically takes the contents of the included file and spills them into the script calling #include, specifically at the place where the #include was.</p>
-	      <pre class="prettyprint"><code>local
+	      <pre class="prettyprint linenums"><code>local
 {
 	let current = GetCurrentScriptDirectory();
 	let path = current ~ "Default_ShotData.txt";
@@ -75,7 +75,7 @@ let DS_BALL_SS_BLUE		= 6;
 }</code></pre>
 	      <p>The file we will now observe is Default_ShotData.txt in the default system. Inside this file is something that looks completely different to the code we have been writing. What is going on here? No semicolons? This is a shotsheet. To begin a shotsheet, <code>#UserShotData</code> is used, and shot_image points to the path of the image file containing the bullet graphics. <strong>shot_image is NOT a variable.</strong> delay_rect is the part of the image that contains the delay cloud for the bullet.</p>
 	      <p>Below is a sample from the default shotsheet. Here, the graphic with id = 1 corresponds to DS_BALL_SS_RED. If you were to include the shot constant sheet or manually load the shotsheet, you could use either 1 or DS_BALL_SS_RED in order to use the red ball graphic.</p>
-	      <pre class="prettyprint"><code>#UserShotData
+	      <pre class="prettyprint linenums"><code>#UserShotData
 
 shot_image = "./img/Default_Shot.png"
 delay_rect = (209, 474, 240, 505)
@@ -109,7 +109,7 @@ ShotData{
 	      <p>Next is fixed_angle, which takes a boolean. True means that the bullet will always take the shape in the shotsheet and will never rotate. Default is false.</p>
 	      <p>Finally, we have collision, which is the hitbox. By default, the hitbox is a percentage of the bullet graphic (in a circle), but by setting a value to collision (in pixels), you can specify a different radius for the hitbox, which originates from the center of the LTRB rectangle.</p>
 	      <p>Below are more examples of shot definitions.</p>
-	      <pre class="prettyprint"><code>ShotData{ id=335 render=ALPHA  delay_color= (64,255,255) 
+	      <pre class="prettyprint linenums"><code>ShotData{ id=335 render=ALPHA  delay_color= (64,255,255) 
 	AnimationData{ 
 		animation_data=(4,0,448,32,488)
 		animation_data=(4,32,448,64,488)
@@ -137,7 +137,7 @@ ShotData{ id=855 rect=(768,127,831,190) render=ADD_ARGB fixed_angle=true collisi
 	      <div class="tut_checkpoint">CHECKPOINT: How quickly does speed change with acceleration? How quickly does it reach its min/max value?</div>
 	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Control a Bullet?</h2>
 	      <p>Bullet control in ph3 is significantly easier than in 0.12m. You don't need to create an object bullet, per se. Instead, you can do this!</p>
-	      <pre class="prettyprint"><code>let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 5, 10);
+	      <pre class="prettyprint linenums"><code>let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 2, GetAngleToPlayer(objBoss), 5, 10);
 ObjMove_SetAngularVelocity(obj, 0.1);
 BulletCommands(obj);
 
@@ -148,7 +148,7 @@ task BulletCommands(obj){
     ObjMove_SetAngularVelocity(obj, 0);
 }</code></pre>
 	      <p>The portion before the <code>//...</code> is how to obtain the <b>Object ID</b> of a bullet, and then perform a function with that ID as an input parameter. After this, I call <code>BulletCommands(obj)</code>, a task that I have created that will reset the angular velocity of the bullet to 0 after 60 frames. Using tasks this way is a powerful tool that, when used in conjunction with the AddPattern functions, can allow you to do all kinds of things with bullets, giving you immense control over what a bullet does. For example, I oftentimes have BulletCommands change the angular velocity and speed of the bullet, with while loops and wait times to denote when to actually begin execution. For example:</p>
-	      <pre class="prettyprint"><code>task BulletCommands(obj){
+	      <pre class="prettyprint linenums"><code>task BulletCommands(obj){
     while(ObjMove_GetSpeed(obj) > 0){yield;}
     wait(30);
     let angleT = rand(0, 360);
@@ -166,7 +166,7 @@ loop(15){
     BulletCommands(obj);
 }</code></pre>
 	      <p>Inside our BulletCommands task, we will first want to wait 30 frames. After that, the bullet will change direction.</p>
-	      <pre class="prettyprint"><code>task BulletCommands(obj){
+	      <pre class="prettyprint linenums"><code>task BulletCommands(obj){
     wait(30);
     ObjMove_SetAngle(obj, GetAngleToPlayer(obj));
 }</code></pre>

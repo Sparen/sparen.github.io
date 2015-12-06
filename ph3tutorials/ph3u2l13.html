@@ -63,7 +63,7 @@
 	      <p>Now, the components of given task. First, we will declare a variable <code>obj</code> and will assign it the returned object ID of <code>ObjPrim_Create(OBJ_SPRITE_2D)</code>. This is the object we will be manipulating in this task.</p>
 	      <p>The next step is <code>ObjPrim_SetTexture()</code>. For this tutorial, I am going to assume that you are keeping the image files in the same directory as the Single file. In practice this is poor design as it gets very hard to find things if you mix all your files - I suggest keeping all of your images in a single folder separate from your code.</p>
 	      <p>There are two ways you can assign the texture to the object. You can either plug the path in to <code>ObjPrim_SetTexture()</code> directly, or as stated before, create a variable to contain the path. Let's use the variable, as it will make the code cleaner.</p>
-	      <pre class="prettyprint"><code>    task RenderBG{
+	      <pre class="prettyprint linenums"><code>    task RenderBG{
 	let obj = ObjPrim_Create(OBJ_SPRITE_2D);
 	let imgpath = GetCurrentScriptDirectory() ~ "./u2l13sample.png"; //assumes image is in same directory
 	ObjPrim_SetTexture(obj, imgpath);
@@ -71,7 +71,7 @@
 	      <p>Now we need to assign the rects via <code>ObjRender_SetSourceRect()</code> and either <code>ObjRender_SetDestRect()</code> or <code>ObjRender-SetDestCenter()</code>. Let's open the image in a graphics editor such as <a target="_blank" href="http://www.adobe.com/products/photoshop.html">Photoshop</a> or <a target="_blank" href="http://www.gimp.org">Gimp</a>.</p>
 	      <p>The first thing you will notice is that there is a lot of transparent space. The part we want is 384x448, the size of the playing field. However, the texture is 512x512. This is because Danmakufu scales the dimensions of all textures to powers of two when loading textures, as it speeds up the process. Therefore, if you use textures whose dimensions are not powers of two, the final result will be blurred due to the scaling of the image during loading. (This is due to a DirectX9 feature - don't worry about the details). To counteract this, use images whose dimensions are powers of two. If you have a 640x512 image, for example, place it on a 1024x512 image. There will be a lot of blank space, but it will render with less blur in Danmakufu.</p>
 	      <p>Anyways, we have our rects - the part we want is from (0,0) to (384,448). Let's put them in.</p>
-	      <pre class="prettyprint"><code>    task RenderBG{
+	      <pre class="prettyprint linenums"><code>    task RenderBG{
         let obj = ObjPrim_Create(OBJ_SPRITE_2D);
         let imgpath = GetCurrentScriptDirectory() ~ "./u2l13sample.png";
         ObjPrim_SetTexture(obj, imgpath);
@@ -86,7 +86,7 @@
 	      <p>In this tutorial, I will not cover the movement or cast animations - it is better for you to figure out how to do those by yourself. However, I will be showing the idle sprites.</p>
 	      <p>OK. So for the animation (the first row only), we have 4 64x64 sprites. Every 8 frames (you can change the number if you want to), we will change to the next image, and after the fourth, it will go back to the first. Let's begin coding.</p>
 	      <p>Firstly, we will need to set our texture, etc.</p>
-	      <pre class="prettyprint"><code>    task TDrawLoop{
+	      <pre class="prettyprint linenums"><code>    task TDrawLoop{
         let BossImage = GetCurrentScriptDirectory() ~ "./u2l13spritesheet.png"; //assumes that image is in same directory
         let animframe = 0;
         ObjPrim_SetTexture(objBoss, BossImage);
@@ -101,7 +101,7 @@
 	      <p>In the above code, we set our texture, assign it to the boss, and do some source and dest rect manipulations. The graphic will automatically move when the boss moves because it is attached to the boss object. I also have an additional variable - animframe. We will use this to animate the boss.</p>
 	      <p>First, let's consider our approach. We have four images to render, and we want each to show for 8 frames. Therefore, after 32 frames, the animation will reset. Using this, an acceptable way to animate the boss involves incrementing animframe once per frame, and then resetting it before it hits 32. But how do we get this into the rects? There are multiple ways - you can manually use if statements to set the source rects, or you can automate it, which I will show below.</p>
 	      <p>Going back to <a href="./ph3u1l8a.html">Extra Lesson 1</a>, we know that <code>floor()</code> will truncate positive numbers. Therefore, we can easily use this to change the source rects, since the spritesheet has been formatted in a way where there is a uniform 'grid' that controls the spacing of the sprites.</p>
-	      <pre class="prettyprint"><code>    task TDrawLoop{
+	      <pre class="prettyprint linenums"><code>    task TDrawLoop{
         let BossImage = GetCurrentScriptDirectory() ~ "./u2l13spritesheet.png"; //assumes that image is in same directory
         let animframe = 0;
         ObjPrim_SetTexture(objBoss, BossImage);

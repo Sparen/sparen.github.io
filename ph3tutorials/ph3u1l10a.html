@@ -43,7 +43,7 @@
 	      <p>Therefore, given a set initial angle, we can use a while loop to gradually change the angle of the player. In this case, the right laser goes from approximately -15 degrees clockwise to approximately -75 degrees, and the left laser goes from approximately 165 degrees counterclockwise to approximately -105 degrees.</p>
 	      <p>We will try to use one while loop to control both lasers, since their behavior is similar.</p>
 	      <p>Let us create a task fireLaser that, when called, will create a laser given a parameter passed into the task, in this case a direction - 1 for the right laser and -1 for the left laser. Let's begin with the object itself.</p>
-	      <pre class="prettyprint"><code>    task fireLaser(dir){
+	      <pre class="prettyprint linenums"><code>    task fireLaser(dir){
         //As a reminder, I am splitting the lines just so that they fit in the browser window.
         //You do not need to split the lines in your code.
         let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 
@@ -52,7 +52,7 @@
 	      <p>So far, all we have is a task that creates a single laser. Note the angle - 270 + 105*dir. dir will be -1 or 1, resulting in an initial angle of either 375 or 165, depending on which laser we want.</p>
 	      <p>Now we want to move the laser towards 90 degrees. To accomplish this, we will use an ascent loop and yield.</p>
 	      <p>Using a normal loop, we will first need to observe that we want the laser to move a total of 60 degrees. This will be accomplished over approximately 120 frames. Therefore, we will do the following:</p>
-	      <pre class="prettyprint"><code>    task fireLaser(dir){
+	      <pre class="prettyprint linenums"><code>    task fireLaser(dir){
         let obj = CreateStraightLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 
                 270 + 105*dir, 512, 36, 120, DS_BEAM_BLUE, 30);
         ascent(i in 0..120){
@@ -67,7 +67,7 @@
 	      <p>At this point, we have most of the script done. There are two main components left - the movement and the rings. I will be leaving the movement to you, the scripter, but will cover the rings below.</p>
 	      <p>The first thing to do is to watch the spell in action, and it is then that you will most likely realize that the rings are spawned every 30 or so frames, and are aimed at the player. As for the number of bullets, I will use 48 because I really can't tell how many there are. The graphics are EoSD dots, perhaps blue.</p>
 	      <p>So, all we really need to do for the rings is spawn a ring of 48 bullets aimed at the player every 30 frames.</p>
-	      <pre class="prettyprint"><code>    task fireRing{
+	      <pre class="prettyprint linenums"><code>    task fireRing{
         let angleT = GetAngleToPlayer(objBoss);
         loop(48){
             CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3, angleT, DS_BALL_SS_BLUE, 10);
@@ -76,7 +76,7 @@
     }</code></pre>
 	      <p>And that's that! Now, to put everything together!</p>
 	      <p>Below I will post a portion of my sample code. Please note that this is in my own style (it is not tasking style), and that the movement is not necessarily accurate.</p>
-	      <pre class="prettyprint"><code>    @MainLoop{
+	      <pre class="prettyprint linenums"><code>    @MainLoop{
         ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
         ObjEnemy_SetIntersectionCircleToPlayer(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 24);
         if(count == 0){movement;}

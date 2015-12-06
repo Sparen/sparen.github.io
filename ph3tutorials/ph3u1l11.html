@@ -141,12 +141,11 @@
 	      <p>So how exactly does it work? Well, we have our angleT variable, which we initialized to 0 at the start of the code. We then looped through, changing its value. As we changed the parameter angleT, the values of x and y in both equations changed, resulting in bullet placement that formed an ellipse. This is actually quite powerful, because you can use virtually any 2D parametric equation in Danmakufu by simply plugging the equations into a function.</p>
 	      <h2 style="color:yellow" id="sub6">Part 6: How Can I Use Parametric Equations in Danmakufu?</h2>
 	      <p>Let's take some ridiculous equation and spawn it in Danmakufu.</p>
-	      <pre class="prettyprint"><code>    task ParametricRing(){
+	      <pre class="prettyprint linenums"><code>    task ParametricRing(){
         let angleT = rand(0, 360);
         loop(120){
             loop(3){
-                let obj = CreateShotA2(GetEnemyX(objBoss) + 120*cos(angleT * 3), GetEnemyY(objBoss) + 90*sin(angleT * 5), 
-                        0, angleT * 3, 0.001, 2, 25, 10);
+                let obj = CreateShotA2(GetEnemyX(objBoss) + 120*cos(angleT * 3), GetEnemyY(objBoss) + 90*sin(angleT * 5), 0, angleT * 3, 0.001, 2, 25, 10);
                 angleT += 360/3;
             }
             angleT += 7;

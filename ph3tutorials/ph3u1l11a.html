@@ -44,7 +44,7 @@
 	      <p>Basically, we will take advantage of the oscillatory nature of sine and cosine to make a pattern that will oscillate back and forth while providing ample coverage of the screen as well as fair, somewhat easy to dodge gaps. There are multiple ways to implement the pattern. The way I will cover will only involve changing the angle.</p>
 	      <h2 style="color:yellow" id="sub3">Part 3: How do I Replicate Border of Wave and Particle?</h2>
 	      <p>Time to replicate!</p>
-	      <pre class="prettyprint"><code>    task BoWaP{	
+	      <pre class="prettyprint linenums"><code>    task BoWaP{	
         let angleT = rand(0, 360);
         let objcount = 0;
         loop{	
@@ -58,7 +58,7 @@
         }
     }</code></pre>
 	      <p>Above is our starting code. We'll create an angle variable, and then have an infinite loop where we have a ring of five bullets spawning. As is, our code just belches five lines of bullets from the boss's location. So we need to do some upgrades. Since we know that we want our thing to oscillate, all we need to do is add something that naturally oscillates - sine! We'll add this to our angle</p>
-	      <pre class="prettyprint"><code>    task BoWaP{	
+	      <pre class="prettyprint linenums"><code>    task BoWaP{	
         let angleT = rand(0, 360);
         let objcount = 0;
         loop{	
@@ -73,7 +73,7 @@
     }</code></pre>
 	      <p>Congratulations. You have just replicated Border of Wave and Particle. The *6 is to make sure that the gaps are large enough to dodge through. Experiment with the values!</p>
 	      <p>Since you can add sines and cosines and do all kinds of other stuff, why stop here? Let's add other things onto the pattern!</p>
-	      <pre class="prettyprint"><code>    task BoWaP2{	
+	      <pre class="prettyprint linenums"><code>    task BoWaP2{	
         let angleT = rand(0, 360);
         let objcount = 0;
         loop{	
