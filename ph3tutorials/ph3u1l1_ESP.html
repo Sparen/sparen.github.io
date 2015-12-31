@@ -1,0 +1,113 @@
+<!DOCTYPE html><html lang="es">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lección 1</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lección 1 - Introducción, bajando Danmakufu. Un guía de descargar Danmakufu."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Install, Download, Resource, Update">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech" hreflang="en-us">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials" hreflang="en-us">ph3 Tutorial Index</a></li>
+          <li><a class="mph3tutorials" href="../ph3tutorials/ph3tutorials_ESP.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tut. Idx (ESP)</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page" hreflang="en-us">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)" hreflang="en-us">Ph3 Function List</a></li>
+	  <li><a href="./ph3u1l1.html" hreflang="en-us"><img id="Flag_USA" src="https://upload.wikimedia.org/wikipedia/en/a/a4/Flag_of_the_United_States.svg" width="100%" height="auto" style="max-height:24px;"></img></a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li>---</li>
+	        <li>Navigación</li>
+	        <li><a href="./ph3u1l2.html" title="Sparen's Danmakufu ph3 Tutorials - Ejecutando y usando Danmakufu">Unid. 1 Lección 2</a></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 style="color:orange">Tutoriales de Danmakufu ph3 de Sparen Lección 1 – Introducción, bajando Danmakufu</h1>	      <p>Primero lo primero – al comienzo de cada lección incluiré un video de algún trabajo de Danmakufu de diferentes personas. A veces puede estar relacionado al contenido de la lección, pero a veces no. Estos videos son para mostrar las posibilidades que Danmakufu tiene para ofrecer. También pondré checkpoints y otras cosas que puedan ser útiles, como videos describiendo ciertos fenómenos o recursos para Danmakufu y programación en computadoras en general.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/Ui11KgfuYAM">
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Tabla de contenidos</h2>
+	        <ul>
+	          <li><a href="#sub1">Parte 1: ¿Qué es Danmakufu?</a></li>
+	          <li><a href="#sub2">Parte 2: ¿De qué es este tutorial?</a></li>
+	          <li><a href="#sub3">Parte 3: ¿Qué otros recursos puedo usar?</a></li>
+	          <li><a href="#sub4">Parte 4: ¿Cómo descargo Danmakufu?</a></li>
+	          <li><a href="#sub5">Parte 5: ¿Cómo instalo scripts?</a></li>
+	          <li><a href="#sub6">Parte 6: ¿Cómo actualizo Danmakufu?</a></li>
+	          <li><a href="#quiz1">Examen: ¿Puedo jugar scripts de ph3 en 0.12m?</a></li>
+	        </ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Parte 1: ¿Qué es Danmakufu?</h2>
+	      <p>Touhou Danmakufu es un programa para Windows (se puede usar en MacOSX y en distros de Linux utilizando Wine, pero puede que no funcione de la forma esperada) que permite que los llamados "scripters de Danmakufu" creen patrones danmaku similares a los que se pueden encontrar en los juegos de Touhou Project y otros shooters. Incluye una multitud de funciones listas para utilizar y, si bien es bastante limitado para lo que se puede usar (teniendo en cuenta que fue diseñado para hacer shooters parecidos a Touhou), es posible hacer que el Danmakufu haga lo que quieras con límites sorprendentemente flexibles. Juegos al estilo Highly Responsive to Prayers (el primer Touhou) y cosas como novelas visuales son posibles de hacer con Danmakufu.</p>
+	      <p>Para todos los tutoriales, ten en cuenta esto:</p>
+	      <!--Embedded code below. Whitespace actually matters for this because it is in a pre block-->
+	      <pre class="prettyprint"><code>let str = "Esto es un código en Danmakufu.";</code></pre>
+	      <p>Los scripts se hacen escribiendo código en archivos de texto. Tal vez prefieras usar .dnh como extensión para tus archivos para poder resaltar el texto y otras cosas que serán explicadas más adelante en esta lección.</p>
+	      <h2 style="color:yellow" id="sub2">Parte 2: ¿De qué es este tutorial?</h2>
+	        <p>Este tutorial intentará cubrir todo, desde los conceptos más básicos hasta los moderadamente avanzados en Danmakufu y en ciencias de la computación, también pondré recursos sobre edición de gráficos y Audacity. Recomiendo mucho hacer estos tutoriales en orden – En cada unidad, haz las lecciones de a una, y asegúrate de entender los temas tratados en la lección anterior antes de seguir con la siguiente. Al fin y al cabo, el que va a aprender este lenguaje eres tú, y este tutorial solo es uno de los tantos recursos existentes para asistirte en el aprendizaje de lo básico del Danmakufu ph3.</p>
+	        <p>¡Pero espera! ¿No hice tutoriales de Danmakufu antes? ¿Como <a target="_blank" href="https://sites.google.com/site/sparensdanmakufututorials/">estos?</a></p>
+	        <p>La respuesta es que sí. Sin embargo, esos tutoriales son de relativa pobre calidad y están hechos para Danmakufu 0.12m.</p>
+	        <p><b>Para estos tutoriales, asumo que ya sabes lo que es Touhou, las bombas, continues, replays, etc.</b> Si no lo sabes, puedes visitar <a target="_blank" href="https://sites.google.com/site/sparensdanmakufututorials/danmakufu-0-12m-tutorials/002-wat-is-touhou-how-to-play-and-navigate-danmakufu">esta página</a> de tutoriales del antes mencionado 0.12m. Por favor ten en cuenta que hay diferencias significativas entre el 0.12m y el ph3, y que el ph3 no te consiente  haciendo todas las tareas secundarias por ti, tienes que hacerlo tú mismo en el ph3, pero al mismo tiempo es menos limitante y, como dije antes, puedes hacer casi cualquier cosa (razonable) usando el ph3.</p>
+	        <p>Notar que en el menú de la izquierda hay dos links importantes. Uno es un link a la Wiki de Danmakufu – agrega esto a marcadores, es excepcionalmente útil. El otro es un link directo a la documentación en inglés que, aunque incompleta en algunas partes, debería ser increíblemente útil. Unfortunadamente, no hay documentación en español en la Wiki.</p>
+	      <h2 style="color:yellow" id="sub3">Parte 3: ¿Qué otros recursos puedo usar?</h2>
+	        <p>Este es uno de los tantos recursos que puedes usar para aprender Danmakufu. <a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/board,9.0.html" title="Rika and Nitori's Garage Experiments on the Maidens of the Kaleidoscope Forums">Rika and Nitori's Garage Experiments</a> del foro de Maidens of Kaleidoscope tiene threads llenos de información útil (aunque a veces desactualizados). Ten en cuenta que el 0.12m y el ph3 son bastante diferentes, así que ten cuidado cuando usas código del 0.12m, ya que no anda directamente en ph3. Visita <a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,6181.0.html" title="Information thread on Maidens of the Kaleidoscope Forums">este thread</a> para leer la guía de creación para fans de ZUN y la guía de cómo usar AppLocale (para aquellos que quieran usar el 0.12m y versiones del ph3 anteriores al ph3[.1 pre2]).</p>
+	        <p>También ten en cuenta el paquete para resaltar la sintaxis del Danmakufu para Sublime Text. Drake y yo estuvimos trabajando por un tiempo y esta es una de las razones para usar el formato .dnh – Sublime Text reconocerá esta extensión si has instalado el paquete y automáticamente sugerirá funciones, proveerá algo de documentación y más. La versión de prueba de Sublime Text 2 dura para siempre (hasta donde sé), así que usa esta por favor. Las direcciones están indicadas en <a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,16965.0.html" title="Drake's Sublime Text syntax highlighter for Touhou Danmakufu ph3">este</a> thread.</p>
+	        <p>Por supuesto, la Wiki de Danmakufu no solo tiene funciones y cosas como esas – también contiene links a otros tutoriales y guías, a las cuales me voy a referir y enlazar bastante seguido en estos tutoriales, ya que mi estilo puede no ser el más útil para aprendices novatos. Deberías poder encontrarlo por tu cuenta – si no puedes ahora, en algún momento podrás (la misma lógica se aplica a los errores – debes ser capaz de encontrarlos por tu cuenta, usualmente harás un facepalm o alguna otra cosa cuando te des cuenta lo tonto que era el error).</p>
+	        <p>Una nota final para hablar sobre <a target="_blank" href="http://www.bulletforge.org" title="Bulletforge">Bulletforge</a>. Es un sitio al que puedes subir tus propios scripts para que los vea el mundo entero. Pero ten en cuenta algunas cosas:</p>
+	        <ul>
+	          <li>El plagio <b>no es tolerado</b>. No uses código sin permiso ni cita a menos que el creador de dicho código haya dado permiso explícitamente.</li>
+	          <li>Antes de subir a Bulletforge, haz que alguien más pruebe tu script y asegúrate de que funcione, especialmente si estás subiendo algo para una competencia.</li>
+	          <li>Descarga algunos scripts geniales – el código puede que sea un desastre, pero si puedes entender cómo funciona el código de alguien más, eso te dará un mejor entendimiento de cómo hacer tus propios patrones. Sin embargo <i>no uses</i> su código, además de que es plagio, a menudo causa problemas porque el código no funciona como quisieras. Una regla general es no usar código que no entiendas.</li>
+	          <li>¡Juega esos scripts geniales que has bajado y dales feedback!
+	        </ul>
+	        <p>Para más información sobre Bulletforge, chequea <a href="./ph3uXl1.html">esta página</a>.</p>
+	      <h2 style="color:yellow" id="sub4">Parte 4: ¿Cómo descargo Danmakufu?</h2>
+	        <p>El link oficial para descargar el Touhou Danmakufu ph3 está <a target="_blank" href="http://www.geocities.co.jp/SiliconValley-Oakland/9951/pre/th_dnh_ph3.html" title="Official Download Site for Touhou Danmakufu ph3">aquí</a>. Para futuras referencias, también puedes hacer clic en "Download ph3" en la página principal de la Wiki de Danmakufu, que te llevará a este sitio.</p>
+	        <p>Por supuesto, todo está en japonés, pero no dejes que eso te confunda. Simplemente haz clic en la versión más reciente, que debería estar en la parte superior izquierda. La columna de la derecha es el changelog.</p>
+	        <img alt="Download for Touhou Danmakufu ph3" src="tutimg/u1l1img1.png" width="100%" height="auto" style="max-width:284px;"><br><br>
+	        <p style="color:red"><strong>Ten en cuenta que la versión pre4a NO es la última.</strong></p>
+	        <p>Una vez que hagas esto, el Danmakufu empezará a bajar.</p>
+	        <p>A tener en cuenta: Una vez descargado, deberías etiquetar la versión de Danmakufu que tienes – si hay una actualización, quizás tengas que bajar una nueva versión, y poner qué versión tienes en el nombre de la carpeta ayuda a saber si ya tienes la última.</p>
+	      <h2 style="color:yellow" id="sub5">Parte 5: ¿Cómo instalo scripts?</h2>
+	        <p>Para instalar scripts, primero tienes que hacer lo siguiente:</p>
+	        <ul>
+	          <li>Verifica si el script ya viene preempaquetado con Danmakufu. Si es así, simplemente abre el ejecutable con que lo viene</li>
+	          <li>De lo contrario, verifica si el script está hecho para 0.12m o ph3. Los scripts no van a funcionar en la otra versión.</li>
+	          <li>Si es para ph3, fíjate para qué versión está optimizado. Esto debería estar en la descripción de Bulletforge, algo obvio, o sino en el archivo Léeme (ReadMe). No todos los scripters ponen para qué versión están programando – en este caso, simplemente ejecútalo en la última.</li>
+	          <li>Si está hecho para una nueva versión, entonces actualiza. Si es para una versión más vieja, deberías poder jugarlo con la última versión disponible de ph3, con algunas pocas excepciones ("Experiment 354" es el mejor ejemplo de estas excepciones – no funcionará en el ph3[.1] así que tienes que bajar el ph3[.0], mejor conocido como ph3[.0 pre23]. Esto permitirá jugar el script).</li>
+	        </ul>
+	        <p>Para scripts que no vengan empaquetados con Danmakufu, coloca los que no sean de jugadores directamente en la carpeta "script" del directorio principal de tu Danmakufu. En el 0.12m, coloca los scripts de jugadores (player scripts) en la carpeta "player" – en ph3, la carpeta de jugadores está ubicada dentro de tu carpeta "script".</p>
+	      <h2 style="color:yellow" id="sub6">Parte 6: ¿Cómo actualizo Danmakufu?</h2>
+	        <p>Para actualizar Danmakufu ph3, descarga la versión más reciente y haz lo siguiente:</p>
+	        <ol>
+	          <li>Abre la carpeta "script" de ambas versiones, la nueva y la vieja.</li>
+	          <li>Mueve todos los archivos no default (las carpetas default son "sample", "default_system" y "ExRumia". La carpeta "player" también contiene archivos default) a la carpeta "script" de la nueva versión</li>
+	          <li>Ahora entra a la carpeta "player" de ambas versiones. Haz lo mismo que hiciste con la carpeta "script". La carpeta "default_player" es la default aquí.</li>
+	        </ol>
+	        <p>Recomiendo no copiar las carpetas default de la vieja versión a la nueva porque puede haber cosas nuevas que es mejor no sobrescribir, como cuando aparecieron los shaders y de repente la nueva carpeta de ejemplo tenía varios archivos nuevos.</p>
+	      <h2 style="color:yellow" id="quiz1">Examen: ¿Puedo jugar scripts de ph3 en 0.12m?</h2>
+	        <!--Quiz start.-->
+	        <form method="POST" onSubmit="return checkAnswerESP(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. Sí<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. No<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li>---</li>
+	      <li> Navigación </li>
+	      <li><a href="./ph3u1l2.html" title="Sparen's Danmakufu ph3 Tutorials - Ejecutando y usando Danmakufu">Unid. 1 Lección 2</a></li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer>
+        <p style="text-align: center;">Última actualización de la página: Dec 31, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015-2016 by Andrew Fan</p>
+        <p style="text-align: center;">Esta página fue traducido por Paty y Andrew Fan.</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+    <script type="text/javascript" src="javascript/U1L1Quiz1.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
