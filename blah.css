@@ -237,6 +237,9 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   text-align: center;
   padding: 4px;
   text-decoration: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00AADD;
 }
 /*END MENUS BY SPAREN*/
 
