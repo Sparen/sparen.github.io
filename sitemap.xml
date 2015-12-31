@@ -71,6 +71,11 @@
 <priority>0.6</priority>
 </url>
 <url>
+<loc>http://sparen.github.io/ph3tutorials/ph3u1l2_ESP.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
 <loc>http://sparen.github.io/ph3tutorials/ph3u1l3.html</loc>
 <changefreq>monthly</changefreq>
 <priority>0.6</priority>
