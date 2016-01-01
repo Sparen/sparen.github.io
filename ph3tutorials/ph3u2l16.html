@@ -34,7 +34,7 @@
 	          <li><a href="#sub2">Part 2: Why Upgrade Single Scripts?</a></li>
 	          <li><a href="#sub3">Part 3: How Do I Prevent (0,0) Spawning?</a></li>
 	          <li><a href="#sub4">Part 4: How Do I Use SetAutoDeleteObject()?</a></li>
-	          <li><a href="#quiz1">Quiz: ???</a></li>
+	          <li><a href="#quiz1">Quiz: Preventing (0,0) spawning</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
@@ -68,33 +68,191 @@
 	      <p>Now, let's conjure a scenario. Suddenly, the boss just died. In Spawn, i is now equal to 3, and we are in an ascent loop. One frame later, the boss object no longer exists, and all objects created in the script, including all shots on the screen and all delay clouds, are deleted.</p>
 	      <p>However, the task is still running. i is equal to 4. A bullet spawns as the next single in the plural starts. However, objBoss no longer exists. So the bullet spawns at (0,0), in the top left of the screen.</p>
 	      <p>Admittedly, this scenario becomes more likely if you have as much as a single yield in TFinalize. But now we're going to see what exactly we can do to prevent (0,0) spawning.</p>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Sounds in Danmakufu</h2>
+	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Prevent (0,0) Spawning?</h2>
+	      <p>Since (0,0) spawning is caused by positioning objects relative to other objects that no longer exist, we can work appropriately to prevent it. In the above case, we had no way to prevent (0,0) spawning - it would simply occur occasionally. But now we will go over how to stop it.</p>
+	      <p>In Lesson 6, I introduced the following line of code:</p>
+	      <pre class="prettyprint"><code>if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}
+</code></pre>
+	      <p>When placed in a task, the code will check if the life of the boss is greater than 0 (which is the base condition built into Danmakufu used for checking if a single has finished). Alternatively, you can use the following:</p>
+	      <pre class="prettyprint"><code>if(Obj_IsDeleted(objBoss)){return;}
+</code></pre>
+	      <p>It really depends on how your script works, but either should work fine.</p>
+	      <p>As for where to place it, I suggest placing it after every yield or wait statement in a task. This way, it will not be checked every frame, but will only be checked before spawning objects, playing sound effects, etc. For example, let us examine the following code:</p>
+	      <pre class="prettyprint linenums"><code>task Bullets {
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
+        loop(30){
+            let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, rand(0, 360), 4, 0);
+            wait(5);
+        }
+        wait(10);
+    }
+}</code></pre>
+	      <p>There is only one place where bullets are fired. Therefore, we should place the check before that statement. Note that by placing the check before the object creation step, it is not necessary to place a check before or after <code>wait(10);</code> because there is no actual benefit to doing so. As a result, our code is as follows:</p>
+	      <pre class="prettyprint linenums"><code>task Bullets {
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
+        loop(30){
+            if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}
+            let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, rand(0, 360), 4, 0);
+            wait(5);
+        }
+        wait(10);
+    }
+}</code></pre>
+	      <p>Of course, this is only for end-of-single boss lifebar checking. (0,0) spawn errors can occur anywhere in your script where you delete bullets. Let us look at the following example:</p>
+	      <pre class="prettyprint linenums"><code>task Ring {
+    ascent(i in 0..8){
+        let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 8, GetAngleToPlayer(objBoss) + i*360/8, DS_BALL_M_RED, 0);
+        ascent(j in 0..12){
+            Surround(obj, j);
+        }
+        wait(30);
+    }
+}
+
+task Surround(parentobj, id) {
+    let obj = CreateShotA1(ObjMove_GetX(parentobj), ObjMove_GetY(parentobj), 0, 0, DS_BALL_SS_RED, 0);
+    ObjShot_SetAutoDelete(obj, false);
+    let objcount = 0;
+    loop(60){
+        ObjMove_SetPosition(obj, ObjMove_GetX(parentobj) + 30*cos(objcount + id*360/12), ObjMove_GetY(parentobj) + 30*sin(objcount + id*360/12));
+        objcount++;
+        yield;
+    }
+    ObjMove_SetSpeed(obj, rand(0.5, 5));
+    ObjMove_SetAngle(obj, rand(0, 360));
+}</code></pre>
+	      <p>We have multiple problems in this example. Firstly, the Ring task can continue to fire bullets after the boss is gone, because there is no check in the Ring task. Secondly, what happens if one of the objects created from the Ring task leaves the screen? What happens to the objects created in the Surround task? When the parentobj goes off screen before 60 frames have passed, the objects created by Surround are still rotating around the parent. But when it suddenly disappears, the surrounding bullets may try to set their position once more and, in the process, relocate to (30*cos(objcount + id*360/12), 30*sin(objcount + id*360/12)) since <code>ObjMove_GetX(parentobj)</code> and <code>ObjMove_GetY(parentobj)</code> both return 0.</p>
+	      <p>As you can see, we must fix both situations. The Ring task requires a check to see if the boss is still in existence, but the Surround task requires a check to see if the parent object is still in existence. As a result, we have the following:</p>
+	      <pre class="prettyprint linenums"><code>task Ring {
+    ascent(i in 0..8){
+        if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}
+        let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 8, GetAngleToPlayer(objBoss) + i*360/8, DS_BALL_M_RED, 0);
+        ascent(j in 0..12){
+            Surround(obj, j);
+        }
+        wait(30);
+    }
+}
+
+task Surround(parentobj, id) {
+    let obj = CreateShotA1(ObjMove_GetX(parentobj), ObjMove_GetY(parentobj), 0, 0, DS_BALL_SS_RED, 0);
+    ObjShot_SetAutoDelete(obj, false);
+    let objcount = 0;
+    loop(60){
+        if(Obj_IsDeleted(parentobj)){return;}
+        ObjMove_SetPosition(obj, ObjMove_GetX(parentobj) + 30*cos(objcount + id*360/12), ObjMove_GetY(parentobj) + 30*sin(objcount + id*360/12));
+        objcount++;
+        yield;
+    }
+    ObjMove_SetSpeed(obj, rand(0.5, 5));
+    ObjMove_SetAngle(obj, rand(0, 360));
+}</code></pre>
+	      <p>Alternatively, we can use the objcount to write Surround differently.</p>
+	      <pre class="prettyprint linenums"><code>task Surround(parentobj, id) {
+    let obj = CreateShotA1(ObjMove_GetX(parentobj), ObjMove_GetY(parentobj), 0, 0, DS_BALL_SS_RED, 0);
+    ObjShot_SetAutoDelete(obj, false);
+    let objcount = 0;
+    while(objcount < 60 && !Obj_IsDeleted(parentobj)){
+        ObjMove_SetPosition(obj, ObjMove_GetX(parentobj) + 30*cos(objcount + id*360/12), ObjMove_GetY(parentobj) + 30*sin(objcount + id*360/12));
+        objcount++;
+        yield;
+    }
+    ObjMove_SetSpeed(obj, rand(0.5, 5));
+    ObjMove_SetAngle(obj, rand(0, 360));
+}</code></pre>
+	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Use SetAutoDeleteObject()?</h2>
+	      <p>We will close this lesson with a brief discussion on <code>SetAutoDeleteObject()</code></p>
+	      <p>As has been stated before, calling this function with the value true will toggle object deletion upon closure of the script it was called in. For instance, let's say I have a Cutin function that has both graphical and text components. The text, at the very least, must stay until the end of the Single. As a result, we can choose to delete it manually when the boss's HP has dropped below 0. However, this condition assumes that there is a boss to begin with, and hardcoding the case results in the function being useless in any other situation.</p>
+	      <p>The standard (not the default), is to use <code>SetAutoDeleteObject(true)</code> before you close a script. It can be used in any form of script and is commonly used in all standard scripts (we will discuss its usage or the lack thereof in packages in a much later tutorial). By default, <code>SetAutoDeleteObject()</code> is set to false.</p>
+	      <p>By using this function, the graphics and text created by the Cutin function will automatically delete at the termination of the parent script, removing any need to manually delete them and allowing the function to be used in any script that uses <code>SetAutoDeleteObject(true)</code>. This is a great boon in function libraries, which will be discussed in a few tutorials.</p>
+	      <p>We will discuss objects that must persist after a Single script has terminated in later tutorials, specifically when we discuss NotifyEvent and Items.</p>
+	      <p>In the end, by using this function in conjunction with various other means of preventing (0,0) spawning, you can improve the stability of your script while also making sure that all objects are properly deleted when they are no longer needed.</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Preventing (0,0) spawning</h2>
 	        <!--Quiz start.-->
-		<p>1) Junko wants her music to be as pure as possible. To ensure this, she wants her bgm to be recognized by Danmakufu as a BGM. How should she do this?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 4);">
-	        <input type="RADIO" value="A" name="cc">
-	        A. ObjSound_SetSoundDivision(SOUND_BGM);<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. ObjSound_SetSoundDivision(SOUND_SE);<br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. ObjSound_SetSoundDivision(obj, SOUND_BGM);<br>
-	        <input type="RADIO" value="D" name="cc">
-	        D. ObjSound_SetSoundDivision(obj, SOUND_MUSIC);<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
+		<p>1) Add necessary additions to the following code to prevent the 'wave' sound effect from playing if the bullet is is timed with does not exist.</p>
+		<p>Hit 'Show' to show possible answers.</p>
+	        <textarea rows="24" cols="145">task SpawnWave{
+    //feel free to add your own variables
+    ascent(i in -1..2){
+        ascent(j in 0..5){
+            let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3 + j/3, GetAngleToPlayer(objBoss) + i*30, DS_BALL_BS_SKY, 0);
+            let obj2 = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3 + j/3, GetAngleToPlayer(objBoss) + i*30, DS_BALL_BS_BLUE, 0);
+            BulletCommands(obj, -1);
+            BulletCommands(obj2, 1);
+        }
+    }
+    loop(60){yield;}
+    PlaySE(wave); //assume wave is a variable storing the path to a sound effect
+}
+
+task BulletCommands(obj, dir) {
+    loop(60){yield;}
+    ObjMove_SetAngularVelocity(obj, dir*4);
+}</textarea>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+		<p>There are multiple ways to approach this problem. One solution is to play the sound effect in BulletCommands and check if the bullet still exists before playing it, as follows:</p>
+	      <pre class="prettyprint linenums"><code>task SpawnWave{
+    //feel free to add your own variables
+    ascent(i in -1..2){
+        ascent(j in 0..5){
+            let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3 + j/3, GetAngleToPlayer(objBoss) + i*30, DS_BALL_BS_SKY, 0);
+            let obj2 = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3 + j/3, GetAngleToPlayer(objBoss) + i*30, DS_BALL_BS_BLUE, 0);
+            BulletCommands(obj, -1);
+            BulletCommands(obj2, 1);
+        }
+    }
+}
+
+task BulletCommands(obj, dir) {
+    loop(60){yield;}
+    ObjMove_SetAngularVelocity(obj, dir*4);
+    if(!Obj_IsDeleted(obj)){
+        PlaySE(wave); //assume wave is a variable storing the path to a sound effect
+    }
+}</code></pre>
+		<p>However, this method is horribly inefficient, as it attempts to play the sound effect up to 15 times in the same frame. Another less intuitive method is to use an array to store the objects and, if there is at least one bullet in the array after 60 frames have passed, play the sound effect.</p>
+	      <pre class="prettyprint linenums"><code>task SpawnWave{
+    let bullets = [];
+    ascent(i in -1..2){
+        ascent(j in 0..5){
+            let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3 + j/3, GetAngleToPlayer(objBoss) + i*30, DS_BALL_BS_SKY, 0);
+            let obj2 = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 3 + j/3, GetAngleToPlayer(objBoss) + i*30, DS_BALL_BS_BLUE, 0);
+            BulletCommands(obj, -1);
+            BulletCommands(obj2, 1);
+            bullets = bullets ~ [obj];
+            bullets = bullets ~ [obj2];
+        }
+    }
+    loop(60){yield;}
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}
+    let play = false;
+    ascent(i in 0..length(bullets)){
+        if(!Obj_IsDeleted(bullets[i])){ //a bullet exists
+            play = true;
+            break; //break out of the ascent loop
+        }
+    }
+    if(play){
+        PlaySE(wave); //assume wave is a variable storing the path to a sound effect
+    }
+}
+
+task BulletCommands(obj, dir) {
+    loop(60){yield;}
+    ObjMove_SetAngularVelocity(obj, dir*4);
+}</code></pre>
+		<p>There are other methods that can be used to solve this problem, of course.</p>
+	        </div></div>
 		<br>
-		<p>2) Ringo is busy eating dango when she realizes that the music playing in Danmakufu suddenly stopped playing before suddenly starting from a point in the middle of the song. What could have happened? Her code is below:</p>
-	      <pre class="prettyprint"><code>    ObjSound_SetLoopTime(obj, 27, 85);//not the actual loop points of Pumpkin of September, sorry</code></pre>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 5);">
-	        <input type="RADIO" value="A" name="cc">
-	        A. Her start point in the loop (27) is incorrect and should be lower<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. Her end point in the loop (85) is incorrect and should be higher<br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. The bgm is shorter than one minute and 25 seconds<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
+		<p>2) Koishi is playing with cutin functions when suddenly, the Single ends, but the text and graphics from the cutin persist into the next nonspell. What is the problem, and how can she solve it?</p>
+		<form>
+	        <input type="text" size="142" value="Type answer here and click 'Show' to see answer">
+		</form>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+		<p>SetAutoDeleteObject was either not set or was set to false, and the cutin function did not handle deletion of the cutin graphics and text. SetAutoDeleteObject should be set to true in the script for a local but adaptable solution, or the cutin should handle deletion for a global but specific solution.</p>
+	        </div></div>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
@@ -106,7 +264,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 19, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Dec 31, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
