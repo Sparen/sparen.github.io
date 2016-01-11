@@ -50,7 +50,7 @@
 	      <h2 style="color:yellow" id="sub3">Part 3: How Can I Use Trigonometry to Create a Ring of Bullets?</h2>
 	      <p>Now we will aim to write a script that will spawn bullets in a circle of radius 90 around the boss, and another circle of radius 60 around the player. We saw this earlier in <a href="./ph3u1l9.html">Lesson 9</a>, when I described a method of creating Non-Directional Lasers.</p>
 	      <p>To begin, we will need to understand the Unit Circle, as well as sine and cosine.</p>
-	      <img alt="Unit Circle" src="tutimg/unitcircle.png" width="100%" height="auto" style="max-width:359px;"><br><br>
+	      <img alt="Unit Circle" src="tutimg/unitcircle.png" style="max-width:359px;width:100%;height:auto"><br><br>
 	      <p>Above is an image of the unit circle - a circle of radius (L in diagram) 1. All of the angles are the angles used in Danmakufu.</p>
 	      <p>To understand how we will be using the unit circle in Danmakufu, we will look at the angle theta (A in diagram), X, and Y, where X and Y are the X and Y components of radius L.</p>
 	      <p>In trigonometry involving right angles, sine refers to the opposite side of the angle divided by the hypotenuse, while cosine refers to the adjacent side of the angle divided by the hypotenuse. Therefore, X = L*cos(A) and Y = L*sin(A) as shown in the diagram. These are the X and Y components of the radius 1 for a given angle A.</p>
@@ -63,7 +63,7 @@
     }</code></pre>
 	      <p>The question now is how we will spawn the bullets. We want the bullets to be spawned exactly in a circle, and we can't manually set the x and y coordinates to do that. We will therefore use sine and cosine.</p>
 	      <p>Danmakufu's coordinate systems basically use parametric equations, where the x, y, and z (if using render objects) coordinates are defined separately. As we loop through the code above, we want x and y to be written in terms of angleT, with is our theta (A in the diagram). Let's take the rightmost point, spawned when angleT = 0. We want it to be located at (90, 0) with respect to the boss.</p>
-	      <img alt="Sine and Cosine Waves" src="https://www.mathsisfun.com/algebra/images/sine-cosine-graph.gif" width="100%" height="auto" style="max-width:394px;"><br><br>
+	      <img alt="Sine and Cosine Waves" src="https://www.mathsisfun.com/algebra/images/sine-cosine-graph.gif" style="max-width:394px;width:100%;height:auto"><br><br>
 	      <p>Above I have the graphs of sine and cosine. Our angle is 0, which is smack in the middle of the diagram. At this point, cos(x) is 1 and sin(x) is 0. So how can we use this?</p>
 	      <p>Well, we want our bullet at (90, 0), right? And the y coordinate is 0, just as sin(0) = 0. And our x coordinate is 90, when cos(0) is 1. Therefore, our code becomes the following:</p>
 	      <pre class="prettyprint"><code>    let angleT = 0;
@@ -160,7 +160,7 @@
 	      <p>Well, polar equations aside, there are a few that you may want...</p>
 	      <p>Generally speaking, people don't appreciate math in Danmakufu, and math for math's sake is generally not fun if you're not into that kind of thing. But you can do some interesting things. We will use the Astroid as our focus for the remainder of the lesson.</p>
 	      <p>So, an Astroid is the following:</p>
-	      <img alt="Astroid" src="http://www.daviddarling.info/images/astroid.gif" width="100%" height="auto" style="max-width:298px;"><br><br>
+	      <img alt="Astroid" src="http://www.daviddarling.info/images/astroid.gif" style="max-width:298px;width:100%;height:auto"><br><br>
 	      <p>This curve could result in some pretty nice Danmaku if used correctly, don't you think? Well, let's first begin with its parametric equation!</p>
 	      <p>\(x(t) = a\times cos^{3}(t)\)<br><br>\(y(t) = a\times sin^{3}(t)\)</p>
 	      <p>It's not too bad. Let's spawn bullets in an astroid!</p>

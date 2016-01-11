@@ -67,7 +67,7 @@
 	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Prevent (0,0) Spawning?</h2>
 	      <p>Since (0,0) spawning is caused by positioning objects relative to other objects that no longer exist, we can work appropriately to prevent it. In the above case, we had no way to prevent (0,0) spawning - it would simply occur occasionally. But now we will go over how to stop it.</p>
 	      <p>In Lesson 6, I introduced the following line of code:</p>
-	      <pre class="prettyprint"><code>if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}
+	      <pre class="prettyprint"><code>if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}
 </code></pre>
 	      <p>When placed in a task, the code will check if the life of the boss is greater than 0 (which is the base condition built into Danmakufu used for checking if a single has finished). Alternatively, you can use the following:</p>
 	      <pre class="prettyprint"><code>if(Obj_IsDeleted(objBoss)){return;}
@@ -87,7 +87,7 @@
 	      <pre class="prettyprint linenums"><code>task Bullets {
     while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
         loop(30){
-            if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}
+            if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}
             let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, rand(0, 360), 4, 0);
             wait(5);
         }
@@ -121,7 +121,7 @@ task Surround(parentobj, id) {
 	      <p>As you can see, we must fix both situations. The Ring task requires a check to see if the boss is still in existence, but the Surround task requires a check to see if the parent object is still in existence. As a result, we have the following:</p>
 	      <pre class="prettyprint linenums"><code>task Ring {
     ascent(i in 0..8){
-        if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}
+        if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}
         let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 8, GetAngleToPlayer(objBoss) + i*360/8, DS_BALL_M_RED, 0);
         ascent(j in 0..12){
             Surround(obj, j);
@@ -165,7 +165,7 @@ task Surround(parentobj, id) {
 	      <p>In the end, by using this function in conjunction with various other means of preventing (0,0) spawning, you can improve the stability of your script while also making sure that all objects are properly deleted when they are no longer needed.</p>
 	      <h2 style="color:yellow" id="sub5">Part 5: What Other Methods Can I Use?</h2>
 	      <p>In this guide (and for the entire tutorial sequence as a whole), we have assumed that you are using a TFinalize task. However, it is possible to use @MainLoop to handle the same functionality. You can use the following at the end of @MainLoop instead of TFinalize:</p>
-	      <pre class="prettyprint"><code>if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){
+	      <pre class="prettyprint"><code>if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){
     Obj_Delete(objBoss);
     DeleteShotAll(TYPE_ALL, TYPE_IMMEDIATE);
     SetAutoDeleteObject(true);
@@ -234,7 +234,7 @@ task BulletCommands(obj, dir) {
         }
     }
     loop(60){yield;}
-    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0){return;}
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}
     let play = false;
     ascent(i in 0..length(bullets)){
         if(!Obj_IsDeleted(bullets[i])){ //a bullet exists
