@@ -204,6 +204,9 @@ p, fieldset, table, pre {
   text-align: center;
   padding: 4px;
   text-decoration: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00AADD;
 }
 
 .sttjheader1 {
@@ -266,7 +269,7 @@ p, fieldset, table, pre {
   text-align:left; 
   font-size:88%; 
   line-height:1.5em;
-  width: 300px;
+  max-width: 300px;
 }
 
 .sttjbiotablenameheader{/*th*/
