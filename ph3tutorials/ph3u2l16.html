@@ -148,7 +148,7 @@ task Surround(parentobj, id) {
     let obj = CreateShotA1(ObjMove_GetX(parentobj), ObjMove_GetY(parentobj), 0, 0, DS_BALL_SS_RED, 0);
     ObjShot_SetAutoDelete(obj, false);
     let objcount = 0;
-    while(objcount < 60 && !Obj_IsDeleted(parentobj)){
+    while(objcount &lt; 60 && !Obj_IsDeleted(parentobj)){
         ObjMove_SetPosition(obj, ObjMove_GetX(parentobj) + 30*cos(objcount + id*360/12), ObjMove_GetY(parentobj) + 30*sin(objcount + id*360/12));
         objcount++;
         yield;
