@@ -339,3 +339,11 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   border-width: thin;
   border-color: rgb(59,248,80);
 }
+
+.conteststylediv{
+  padding: 10px;
+  border:2px solid; 
+  border-radius: 16px; 
+  border-color: #7FFFD4;
+  background-color: #001122;
+}
