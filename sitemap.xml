@@ -237,6 +237,11 @@
 <priority>0.5</priority>
 </url>
 <url>
+<loc>http://sparen.github.io/projects/projectsphase3_aaa.html</loc>
+<changefreq>yearly</changefreq>
+<priority>0.5</priority>
+</url>
+<url>
 <loc>http://sparen.github.io/projects/projectsphase4.html</loc>
 <changefreq>monthly</changefreq>
 <priority>0.2</priority>
@@ -247,7 +252,12 @@
 <priority>0.5</priority>
 </url>
 <url>
-<loc>http://sparen.github.io/projects/projectsphase4_dnhwars.html</loc>
+<loc>http://sparen.github.io/projects/projectsphase5.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.2</priority>
+</url>
+<url>
+<loc>http://sparen.github.io/projects/projectsphase5_dnhwars.html</loc>
 <changefreq>yearly</changefreq>
 <priority>0.5</priority>
 </url>
