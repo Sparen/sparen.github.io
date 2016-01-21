@@ -25,3 +25,31 @@ function checkAnswerA2(quizForm, theAnswer){
 
   return false;
 }
+
+function checkAnswerA2ESP(quizForm, theAnswer){
+  var s = "?";
+
+  var i = 0;
+  for(;i<quizForm.elements.length;i++){
+    if(("cc" == quizForm.elements[i].name) && (quizForm.elements[i].checked)){
+      s = quizForm.elements[i].value;
+    }
+  }
+
+  if(s == "?"){
+    alert("Por favor haga una selección.");
+    return false;
+  }
+
+  if(s == theAnswer){
+    alert("¡La " + "'"+s+"' es correcta! Olvidó poner la línea #TouhouDanmakufu[Single].");
+  }else if(s == "A"){
+    alert("La " + "'"+s+"' es incorrecta. Por favor revisa la parte 2.");
+  }else if(s == "C"){
+    alert("La " + "'"+s+"' es incorrecta. Por favor vuelve a leer el código.");
+  }else{
+    alert("La " + "'"+s+"' es incorrecta. Bueno... supongo que *podría* ser culpa de Yukari, pero probablemente esto no sea un incidente y no sea una buena idea ir por ahí atacando a alguien por tus propios errores. (Aunque, estamos hablando de Reimu, así que... hmm...). Como sea, ahora elige una respuesta legítima, ¿sí?");
+  }
+
+  return false;
+}
