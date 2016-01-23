@@ -1,0 +1,110 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 17</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 17 - Introduction to Text Functions and Fonts. A guide on how to use Danmakufu's Text functions."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Text, Function, Font">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u2l16.html" title="Sparen's Danmakufu ph3 Tutorials - Upgrading Singles for Usage in Plurals">Unit 2 Lesson 16</a></li>
+	        <li>Navigation Bar</li>
+	        <li>---</li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 17 - Introduction to Text Functions and Fonts</h1>	      <p>The video for this lesson is Pumpkin of the Afterlife by Lunarethic. Lots of different fonts and uses of text here.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <embed width="420" height="315"
+		src="https://www.youtube.com/v/QCAdrLzv7C4">
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are Fonts and How Do I Use them in Danmakufu?</a></li>
+	          <li><a href="#sub3">Part 3: How Do I Create Text Objects in Danmakufu?</a></li>
+	          <li><a href="#sub4">Part 4: How Do I Set the Size and Color of Text Objects?</a></li>
+	          <li><a href="#sub5">Part 5: How Do I Align and Center Text Objects?</a></li>
+	 	  <li><a href="#sub6">Part 6: How do I Use Danmakufu's Bracketed String Characters?</a></li>
+	          <li><a href="#quiz1">Quiz: Creating and Customizing Text Objects</a></li>
+	 	  <li><a href="#sub7">Part 7: Text Objects or Images of Text?</a></li>
+	          <li><a href="#quiz2">Quiz: Text Vs Image Vs Sprite List</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will discuss Text Objects and Fonts, and how to use them in Danmakufu.</p>
+	      <p>We will also have a discussion on when to use text objects rather than images of text, as well as how best to align and manage text displays for maximum player benefit.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: What are Fonts and How Do I Use them in Danmakufu?</h2>
+	      <p><strong><span style="color:salmon">Note: Arial is used as the backup for the following fonts.</span> Depending on whether or not you have the font and what browser you are using, you may see all the fonts rendered properly or you may see a splattering of colored Arial (or in the worse case scenario, <span style="font-family:'Times New Roman'">Times New Roman</span>)</strong></p>
+	      <p>So let's begin with this: what are fonts? You have undoubtedly heard about the ever-present <span style="font-family:helvetica, Arial;color:#FFCCCC">Helvetica</span>, the standard and boring <span style="font-family:arial;color:#CCFFCC">Arial</span>, and the remarkably stupid troll font <span style="font-family:'comic sans ms', Arial;color:#CCCCFF">Comic Sans</span>. <span style="font-family:'comic sans ms', Arial;color:#FFFFAA">Please do not use Comic Sans in a serious script</span> (or anything serious, for that matter). Other unacceptable fonts include <span style="font-family:papyrus, Arial;color:#AAFFFF">Papyrus</span> and <span style="font-family:'wingdings', Arial;color:#CCCCCC">Wingdings</span> (Wingdings).</p>
+	      <p>The default font used by Danmakufu (ph3, after [.1 pre2]) is <span style="font-family:'MS Gothic', arial;color:#FFCCFF">MS Gothic</span>. Other common fonts used in the real world include <span style="font-family:'Verdana', arial;color:#CCFFFF">Verdana</span> and <span style="font-family:'Courier',arial;color:#FFAAFF">Courier</span>. In Computer Science, <span style="font-family:'Andale Mono', monospace;color:rgb(59,248,80)">Andale Mono</span> is commonly used.</p>
+	      <p>For most practical purposes, you will want to <b>avoid</b> Danmakufu's default of MS Gothic. It's not a bad font, but it has a number of quirks. However, Danmakufu grants you the flexibility to use nearly any font in existence, so that should not be a problem.</p>
+	      <p>The <code>InstallFont()</code> function is able to install nearly any font that you might need. By default, Danmakufu will be able to use fonts on your Computer. However, when distributing scripts to others, it is important to include non-standard fonts with your script and use InstallFont on them, since you cannot tell people to install all of the fonts manually. Not everyone will have your font. This being said, InstallFont is neat because it returns true if the loading was a success. You use InstallFont as follows:</p>
+	      <pre class="prettyprint"><code>InstallFont(GetCurrentScriptDirectory() ~ "font/Revue.ttf");</code></pre>
+	      <p>You only need to install a font once per script run - once this is run, <span style="font-family:'Revue',arial;color:#FFCC88">Revue</span> can be used by any text object in your script.. It is a good idea to put it in your System script (we will go over this in a later tutorial) or at the start of your package (if you use one). Put it somewhere where it will be run once at the very start of a script. Note that you give the path to the actual font file - not the name of the font.</p>
+	      <p>We will go over how to actually use the fonts in actual text in the next part.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Create Text Objects in Danmakufu?</h2>
+	      <p>So, text in Danmakufu. First thing to note is that Text Objects are a subset of Render Objects. This means that all of the render functions (including <code>ObjRender_SetPosition()</code>, <code>Obj_SetRenderPriority()</code>, and <code>ObjRender_SetAlpha()</code>) apply to Text Objects. The one real exception is <code>ObjRender_SetColor()</code> since Text Objects have a different and more versatile method of using colors and borders.</p>
+	      <p>Like with all of the standard objects, you need to create the object with <code>ObjText_Create()</code>. Then you use <code>ObjText_SetText()</code> to set the text to display in that object. Note that if you do not use <code>ObjText_SetMaxWidth()</code>, the text will potentially go off the screen and beyond - it does not automatically wrap by default.</p>
+	      <p>If you want to set the font of the text to something other than <span style="font-family:'MS Gothic', arial;color:#FFCCFF">MS Gothic</span>, you must use <code>ObjText_SetFontType()</code>. Now, you do NOT reference the font by its filepath. You must refer to it by its name as a string. For example, if I have a TrueTypeFont (ttf) called Eurosti.ttf (for the <span style="font-family:'Eurostile',arial;color:#88FFCC">Eurostile</span> Typeface), I must use <code>ObjText_SetFontType(objText, "Eurostile")</code>, not <code>ObjText_SetFontType(objText, "Eurosti.ttf")</code>. This is perhaps the biggest pain in Danmakufu when using custom fonts. It's made so that you can type the name of a common font in and it will search your computer's font library, not for custom fonts. It may take a bit of time to figure out what the 'appropriate' name of your font is - it's not always the part of the name before the file extension.</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Set the Size and Color of Text Objects?</h2>
+	      <p>Earlier I discussed that there is no real use for <code>ObjRender_SetColor()</code> when using Text Objects because they have their own functions for that. We'll discuss that in this part.</p>
+	      <p>Before that, though, there are two things I need to mention - boldface and changing the font size. You can use <code>ObjText_SetFontBold()</code> to make a text object display bold. You can use <code>ObjText_SetFontSize()</code> to change the font size. These things change the shape of the text object and may aid or impede clarity, depending on how they are used. At this point, it is important to note that <strong>a single text object can only have one size, one font, can be bold or not, and can only have one border, etc.</strong> This is the biggest weakness of Danmakufu's text functions (you also cannot use underline, overline, strike through, or italics in Danmakufu ph3 [.1 pre6a]). The settings you set for one text object apply for the entire object. We will discuss how to circumvent this at the end of this lesson.</p>
+	      <p>Now, colors. The cool thing about Danmakufu is that it has built-in support for text color gradients - You can use two different colors for <code>ObjText_SetFontColorTop()</code> and <code>ObjText_SetFontColorBottom()</code> and there will be a gradient. If you want the same color, just paste the same color for both.</p>
+	      <p>Then there are borders. <code>ObjText_SetFontBorderType()</code> will set the border that you want - BORDER_NONE, BORDER_FULL, or BORDER_SHADOW. You can change the width of this border with <code>ObjText_SetFontBorderWidth()</code>. BORDER_NONE means that there is no border - this is different from BORDER_FULL or BORDER_SHADOW with a width of 0 - there is still a border in these cases which may result in ugly text. Speaking of ugly text, BORDER_SHADOW always has a one-pixel border around the entire text object, not just on the bottom side. This makes it a relatively poor choice for most cases.</p>
+	      <p>To set the color for a border, use <code>ObjText_SetFontBorderColor()</code>.</p>
+	      <p>Below is an example of a text object using borders.</p>
+	      <pre class="prettyprint linenums"><code>    let objText = ObjText_Create();
+    ObjText_SetText(objText, "--&gt; Russell Square Regular &lt;--");
+    ObjText_SetFontSize(objText, 24);
+    ObjText_SetFontType(objText, "Russell Square Regular");
+    ObjText_SetFontBold(objText, true);
+    ObjText_SetFontColorTop(objText, 255, 255, 255);
+    ObjText_SetFontColorBottom(objText, 255, 255, 255);
+    ObjText_SetFontBorderType(objText, BORDER_FULL);
+    ObjText_SetFontBorderColor(objText, 224, 64, 192);
+    ObjText_SetFontBorderWidth(objText, 1);</code></pre>
+	      <p>Assuming you have the font and your browser is capable, it should render similar to below:</p>
+	      <p><span style="font-family:'Russell Square',arial;color:white;text-shadow: -1px 0 rgb(224, 64, 192), 0 1px rgb(224, 64, 192), 1px 0 rgb(224, 64, 192), 0 -1px rgb(224, 64, 192);text-align:center;font-size:24px">--&gt; Russell Square Regular &lt;--</span></p>
+	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Align and Center Text Objects?</h2>
+	      <h2 style="color:yellow" id="sub6">Part 6: How do I Use Danmakufu's Bracketed String Characters?</h2>
+	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+	      <p>Text</p>
+	      <pre class="prettyprint linenums"><code>task TFinalize{
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){yield;}
+    Obj_Delete(objBoss);
+    DeleteShotAll(TYPE_ALL, TYPE_IMMEDIATE);
+    SetAutoDeleteObject(true);
+    CloseScript(GetOwnScriptID());
+}</code></pre>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u2l16.html" title="Sparen's Danmakufu ph3 Tutorials - Upgrading Singles for Usage in Plurals">Unit 2 Lesson 16</a></li>
+	      <li>Navigation Bar</li>
+	      <li>---</li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer>
+        <p style="text-align: center;">Last Update to Page: Jan 22, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </footer>    </div>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>

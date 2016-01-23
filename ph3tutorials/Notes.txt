@@ -18,6 +18,7 @@ L13-DNHArt 46 (Koishi Adventure - Darkness1)
 L14-DNHArt 107 (Youmu - Conarnar)
 L15-DNHArt 103 (Youmu - Trickysticks)
 L16-DNHArt 110 (Mokou - Python)
+L17-DNHArt 117 (Pumpkin of the Afterlife - Lunarethic)
 
 U3
 
