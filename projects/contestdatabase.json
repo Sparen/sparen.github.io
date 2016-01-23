@@ -3,12 +3,277 @@
         {
             "id": "range1",
             "location": "motk",
+            "loc_category": "range",
             "name": "halloween",
             "year": 2009,
             "host": "CK Crash",
             "judges": ["CK Crash", "Drake", "Naut", "Stuffman"],
             "numparticipants": 15,
-            "result": ["Helepolis", "Stuffman", "Thaws"]
+            "result": [["Helepolis"], ["Stuffman"], ["Thaws"]]
+        },
+        {
+            "id": "range2",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "dead simple",
+            "year": 2009,
+            "host": "Stuffman",
+            "judges": ["Stuffman"],
+            "numparticipants": 14,
+            "result": [["VideoGameCrack"], ["Blargel"], ["Kayorei"]]
+        },
+        {
+            "id": "range3",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "survival card",
+            "year": 2010,
+            "host": "Naut",
+            "judges": ["Naut"],
+            "numparticipants": 20,
+            "result": [["Thaws"], ["Iryan"], ["DgBarca"]]
+        },
+        {
+            "id": "range4",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "laser light show",
+            "year": 2010,
+            "host": "Naut",
+            "judges": ["Naut"],
+            "numparticipants": 14,
+            "result": [["Iryan"], ["Azure"], ["Nimble"]]
+        },
+        {
+            "id": "range5",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "who are these people",
+            "year": 2010,
+            "host": "Helepolis",
+            "judges": ["Helepolis", "Blargel", "Kefit"],
+            "numparticipants": 17,
+            "result": [["Dr Katz", "Nimble"], ["Furienfify", "Johnny Walker"], ["Nobu", "Ravenlock"]]
+        },
+        {
+            "id": "range6",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "blinded by the light",
+            "year": 2010,
+            "host": "Naut",
+            "judges": ["Naut", "Drake"],
+            "numparticipants": 12,
+            "result": [["Stuffman"], ["Foremoster"], ["Bitz"]]
+        },
+        {
+            "id": "range7",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "all hallow's even 2",
+            "year": 2010,
+            "host": "Drake",
+            "judges": ["COMMUNITY"],
+            "numparticipants": 13,
+            "result": [["Sasupoika"], ["Thaws"], ["Kylesky"]]
+        },
+        {
+            "id": "range8",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "this ain't space invaders",
+            "year": 2011,
+            "host": "Drake",
+            "judges": ["COMMUNITY"],
+            "numparticipants": 3,
+            "result": [["Naut"], ["Azure"], ["Stuffman"]]
+        },
+        {
+            "id": "range9",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "perfect memento in self-insert sense",
+            "year": 2011,
+            "host": "Helepolis",
+            "judges": ["Helepolis"],
+            "numparticipants": 4,
+            "result": [["Sasupoika"], ["Kazu"], ["Schezo"]]
+        },
+        {
+            "id": "range10",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "youkai exterminator extermination",
+            "year": 2013,
+            "host": "Drake",
+            "judges": ["Drake", "Erppo"],
+            "numparticipants": 22,
+            "result": [["TalosMistake", "CK Crash"], ["Naut"], ["Sparen"]]
+        },
+        {
+            "id": "range10.5",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "halloween contest",
+            "year": 2013,
+            "host": "PhantomSong",
+            "judges": ["PhantomSong", "GUEST"],
+            "numparticipants": 8,
+            "result": [["Darkness1"], ["TalosMistake"], ["Sparen"]]
+        },
+        {
+            "id": "range11",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "apprehensive adherent abasement",
+            "year": 2014,
+            "host": "PhantomSong",
+            "judges": ["PhantomSong", "GUEST"],
+            "numparticipants": 7,
+            "result": [["Kirbio"], ["Darkness1"], ["Sparen", "Bob the Tanuki"]]
+        },
+        {
+            "id": "range12",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "incident causer mayhem",
+            "year": 2014,
+            "host": "PhantomSong",
+            "judges": ["ExPorygon", "AJS"],
+            "numparticipants": 16,
+            "result": [["Arby26"], ["Darkness1"], ["Trickysticks"]]
+        },
+        {
+            "id": "range13",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "contradictory catastrophe",
+            "year": 2015,
+            "host": "Sparen",
+            "judges": ["Sparen", "AchySolrock", "Trickysticks", "Miransu"],
+            "numparticipants": 8,
+            "result": [["Kirbio"], ["Lunarethic"], ["Lefkada"]]
+        },
+        {
+            "id": "range14",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "popular popularity",
+            "year": 2015,
+            "host": "PhantomSong",
+            "judges": ["TalosMistake", "ExPorygon", "Lunarethic"],
+            "numparticipants": 19,
+            "result": [["AJS"], ["Kirbio", "Miransu"], ["TresserT"]]
+        },
+        {
+            "id": "range15",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "trick or shoot",
+            "year": 2015,
+            "host": "DLS",
+            "judges": ["Trickysticks", "Sparen", "AJS"],
+            "numparticipants": 9,
+            "result": [["Lunarethic"], ["TresserT"], ["Kirbio"]]
+        },
+        {
+            "id": "locaa1",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "locaa1",
+            "year": -1,
+            "host": "",
+            "judges": [],
+            "numparticipants": 6,
+            "result": [["AJS"], ["Miplouf"], ["Miransu"]]
+        },
+        {
+            "id": "locaa2",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "locaa2",
+            "year": 2013,
+            "host": "",
+            "judges": [],
+            "numparticipants": 3,
+            "result": [["Rogus"], ["Miransu"], ["Miplouf"]]
+        },
+        {
+            "id": "locaa3",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "locaa3",
+            "year": 2013,
+            "host": "",
+            "judges": [],
+            "numparticipants": 3,
+            "result": [["Miransu"], ["Sparen"], ["FondueMaster"]]
+        },
+        {
+            "id": "curse1",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "overused all-stars",
+            "year": 2013,
+            "host": "",
+            "judges": ["Sparen", "Trickysticks", "TrollTrain"],
+            "numparticipants": 7,
+            "result": [["Miransu"], ["TalosMistake"], ["Sariel"]]
+        },
+        {
+            "id": "locaa4",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "unlikely pairs",
+            "year": 2014,
+            "host": "Sparen",
+            "judges": ["Trickysticks", "Ultima", "ExPorygon"],
+            "numparticipants": 3,
+            "result": [["Sariel"], ["Sparen"], ["Gusano2314"]]
+        },
+        {
+            "id": "locaa5",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "fury of the rivals",
+            "year": 2014,
+            "host": "Sparen",
+            "judges": ["Sparen", "Ultima"],
+            "numparticipants": 3,
+            "result": [["AJS"], ["PhantomSong"], ["Gusano2314"]]
+        },
+        {
+            "id": "locaa6",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "troll scripts",
+            "year": 2014,
+            "host": "",
+            "judges": [],
+            "numparticipants": 3,
+            "result": [["AJS"], ["Sparen"], ["Kirbio", "Lunarethic"]]
+        },
+        {
+            "id": "artifact1",
+            "location": "motk",
+            "loc_category": "artifact",
+            "name": "the pagoda of bishamonten",
+            "year": 2014,
+            "host": "Trickysticks",
+            "judges": ["Trickysticks", "IHNN"],
+            "numparticipants": 6,
+            "result": [["ExPorygon"], ["PhantomSong", "Kirbio"], ["ShadowNCS"]]
+        },
+        {
+            "id": "artifact2",
+            "location": "locaa",
+            "loc_category": "artifact",
+            "name": "augmented magic",
+            "year": 2014,
+            "host": "Trickysticks",
+            "judges": ["Trickysticks", "ExPorygon", "Miransu"],
+            "numparticipants": 3,
+            "result": [["Kirbio"], ["Sparen"], ["PhantomSong"]]
         }
     ]
 }
