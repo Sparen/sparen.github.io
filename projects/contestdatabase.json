@@ -1,0 +1,14 @@
+{
+    "contests": [
+        {
+            "id": "range1",
+            "location": "motk",
+            "name": "halloween",
+            "year": 2009,
+            "host": "CK Crash",
+            "judges": ["CK Crash", "Drake", "Naut", "Stuffman"],
+            "numparticipants": 15,
+            "result": ["Helepolis", "Stuffman", "Thaws"]
+        }
+    ]
+}

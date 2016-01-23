@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body id="mhome" onload='getFileContents()'>    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Home</a></li>
           <li><a class="mabout" href="../aboutme.html">About Me</a></li>
@@ -54,11 +54,15 @@
 			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="#subARTIFACT_2">Artifact Contest 2: Augmented Magic</a></li>
 	        </ul>
 	      </div>
+	      <h2 style="color:dodgerblue">Query Box</h2>
+	        <p>You can make requests here. Please notify me if there are any errors.</p>
+		<div id="queryselect">Loading...</div>
+	        <div id="displaybox"></div>
 	      <h2 style="color:aqua">Formatting Notes</h2>
 		<p>(This is an alternate name) [This is the name of a script]</p>
 		<p>Contestant 1, Contestant 2 - comma used to separate names</p>	      <h2 style="color:rgb(59,248,80)" id="subRANGE1">Maidens of the Kaleidoscope - RaNGE (Part 1)</h2>
 		<div class="conteststylediv" id="subRANGE1_1">
-	      <h3 style="color:aqua">Danmakufu Contest 1 - Halloween</h2>
+	      <h3 style="color:aqua">Danmakufu Contest 1 - Halloween</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,3276.0.html">Official Thread</a></p>
 		<p>Duration: Oct 23, 2009 - Oct 31, 2009</p>
 		<p>Class: Thematic - Halloween</p>
@@ -69,7 +73,7 @@
 		<p>1st: <a target="_blank" href="http://www.taihou.nl/touhou/Hele_Halloween2009_v1.rar">Helepolis</a> || 2nd: Stuffman [Yamame's Heart-Pounding Danmaku Thrill Ride] || 3rd: <a target="_blank" href="http://www.mediafire.com/download/1mmyqm0ld3k/Thaws_Halloween.zip">Thaws</a></p>
 		</div>
 		<div class="conteststylediv" id="subRANGE1_2">
-	      <h3 style="color:aqua">Danmakufu Contest 2 - Dead Simple</h2>
+	      <h3 style="color:aqua">Danmakufu Contest 2 - Dead Simple</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,3665.0.html">Official Thread</a></p>
 		<p>Duration: Nov 7, 2009 - Nov 15, 2009</p>
 		<p>Class: Restriction - Shotsheet</p>
@@ -80,7 +84,7 @@
 		<p>1st: VideoGameCrack || 2nd: Blargel || 3rd: Kayorei</p>
 		</div>
 		<div class="conteststylediv" id="subRANGE1_3">
-	      <h3 style="color:aqua">Danmakufu Contest 3 - Survival Card</h2>
+	      <h3 style="color:aqua">Danmakufu Contest 3 - Survival Card</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,4630.0.html">Official Thread</a></p>
 		<p>Duration: Jan 12, 2010 - Jan 24, 2010</p>
 		<p>Class: Restriction - Attack Type</p>
@@ -91,7 +95,7 @@
 		<p>1st: Thaws || 2nd: Iryan || 3rd: DgBarca</p>
 		</div>
 		<div class="conteststylediv" id="subRANGE1_4">
-	      <h3 style="color:aqua">Danmakufu Contest 4 - Laser Light Show</h2>
+	      <h3 style="color:aqua">Danmakufu Contest 4 - Laser Light Show</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,5038.0.html">Official Thread</a></p>
 		<p>Duration: Feb 12, 2010 - Feb 21, 2010</p>
 		<p>Class: Restriction - Shotsheet</p>
@@ -102,7 +106,7 @@
 		<p>1st: Iryan || 2nd: Azure || 3rd: Nimble</p>
 		</div>
 		<div class="conteststylediv" id="subRANGE1_5">
-	      <h3 style="color:aqua">Danmakufu Contest 5 - Who are these people?</h2>
+	      <h3 style="color:aqua">Danmakufu Contest 5 - Who are these people?</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,5322.0.html">Official Thread</a></p>
 		<p>Duration: Mar 13, 2010 - Apr 11, 2010</p>
 		<p>Class: Restriction - Characters</p>
@@ -114,7 +118,7 @@
 		<p>LUNATIC - 1st: Nimble || 2nd: Johnny Walker || 3rd: Ravenlock</p>
 		</div>
 		<div class="conteststylediv" id="subRANGE1_6">
-	      <h3 style="color:aqua">Danmakufu Contest 6 - Blinded by the Light!</h2>
+	      <h3 style="color:aqua">Danmakufu Contest 6 - Blinded by the Light!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,6456.0.html">Official Thread</a></p>
 		<p>Duration: June 25, 2010 - July 11, 2010</p>
 		<p>Class: Restriction - Shotsheet</p>
@@ -125,7 +129,7 @@
 		<p>1st: Stuffman || 2nd: Foremoster || 3rd: Bitz</p>
 		</div>
 		<div class="conteststylediv" id="subRANGE1_7">
-	      <h3 style="color:aqua">Danmakufu Contest 7 - All Hallow's Even 2!</h2>
+	      <h3 style="color:aqua">Danmakufu Contest 7 - All Hallow's Even 2!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,7359.0.html">Official Thread</a></p>
 		<p>Duration: Oct 13, 2010 - Nov 7, 2010</p>
 		<p>Class: Thematic - Halloween</p>
@@ -136,7 +140,7 @@
 		<p>1st: Sasupoika || 2nd: Thaws || 3rd: Kylesky</p>
 		</div>
 		<div class="conteststylediv" id="subRANGE1_8">
-	      <h3 style="color:aqua">Danmakufu Contest 8 - This Ain't Space Invaders!</h2>
+	      <h3 style="color:aqua">Danmakufu Contest 8 - This Ain't Space Invaders!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,8772.0.html">Official Thread</a></p>
 		<p>Duration: Mar 26, 2011 - Apr 11, 2011</p>
 		<p>Class: Unique</p>
@@ -147,7 +151,7 @@
 		<p>1st: Naut || 2nd: Azure || 3rd: Stuffman</p>
 		</div>
 		<div class="conteststylediv" id="subRANGE1_9">
-	      <h3 style="color:aqua">Danmakufu Contest 9 - Perfect Memento in Self-insert Sense</h2>
+	      <h3 style="color:aqua">Danmakufu Contest 9 - Perfect Memento in Self-insert Sense</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,10426.0.html">Official Thread</a></p>
 		<p>Duration: Aug 3, 2011 - ??? ???, 2011</p>
 		<p>Class: Restriction - Characters</p>
@@ -159,7 +163,7 @@
 		</div>
 	      <h2 style="color:rgb(59,248,80)" id="subRANGE2">Maidens of the Kaleidoscope - RaNGE (Part 2)</h2>
 		<div class="conteststylediv" id="subRANGE2_10">
-	      <h3 style="color:aqua">RaNGE 10 - Youkai Exterminator Extermination!</h2>
+	      <h3 style="color:aqua">RaNGE 10 - Youkai Exterminator Extermination!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,15432.0.html">Official Thread</a></p>
 		<p>Duration: Aug 26, 2013 - Sept 10, 2013</p>
 		<p>Class: Restriction - Characters</p>
@@ -170,7 +174,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/talosmistake/p/range-contest-entry-10-youmu-boss-fight-by-talosmistake">TalosMistake</a>, <a target="_blank" href="http://www.bulletforge.org/u/ck-crash/p/contest-10-green-reimu">CK Crash</a> [Green Reimu] || 2nd: <a target="_blank" href="http://www.bulletforge.org/u/naut/p/contest-10-hakurei-reimu">Naut</a> || 3rd: <a href="./projectsphase2_range10.html">Sparen</a></p>
 		</div>
 		<div class="conteststylediv" id="subRANGE2_10_1">
-	      <h3 style="color:aqua">Halloween Contest!</h2>
+	      <h3 style="color:aqua">Halloween Contest!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,15734.0.html">Official Thread</a></p>
 		<p>Duration: Oct 17, 2013 - Nov 1, 2013</p>
 		<p>Class: Thematic - Halloween</p>
@@ -181,7 +185,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/darkness1/p/halloween-contest-entry">Darkness1</a> || 2nd: <a target="_blank" href="http://www.bulletforge.org/u/talosmistake/p/seija-boss-fight-by-talos-mistake-halloween-contest">TalosMistake</a> || 3rd: <a href="./projectsphase2_halloween.html">Sparen</a></p>
 		</div>
 		<div class="conteststylediv" id="subRANGE2_11">
-	      <h3 style="color:aqua">RaNGE 11 - Apprehensive Adherent Abasement!</h2>
+	      <h3 style="color:aqua">RaNGE 11 - Apprehensive Adherent Abasement!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,16636.0.html">Official Thread</a></p>
 		<p>Duration: Mar 29, 2014 - May 6, 2014</p>
 		<p>Class: Restriction - Characters</p>
@@ -192,7 +196,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/kirbio/p/apprehensive-adherent-abasement-contest-sakuya-izayoiby-kirbio">Kirbio</a> || 2nd: <a target="_blank" href="http://www.bulletforge.org/u/darkness1/p/aaa-contest-entry-koakuma">Darkness1</a> || 3rd: <a href="projectsphase3_aaa.html">Sparen</a>, <a target="_blank" href="http://www.bulletforge.org/u/bob/p/bobapprehensive-adherent-abasement-murasa/">Bob the Tanuki</a></p>
 		</div>
 		<div class="conteststylediv" id="subRANGE2_12">
-	      <h3 style="color:aqua">RaNGE 12 - Incident Causer Mayhem!</h2>
+	      <h3 style="color:aqua">RaNGE 12 - Incident Causer Mayhem!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,17453.0.html">Official Thread</a></p>
 		<p>Duration: Sept 28, 2014 - Nov 10, 2014</p>
 		<p>Class: Restriction - Characters</p>
@@ -203,7 +207,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/arby26/p/incident-causer-mayhem-mima">Arby26</a> || 2nd: <a target="_blank" href="http://www.bulletforge.org/u/darkness1/p/icm-contest-entry-shinki">Darkness1</a> || 3rd: <a target="_blank" href="http://www.bulletforge.org/u/trickysticks/p/icm-yuuka-by-trickysticks">Trickysticks</a></p>
 		</div>
 		<div class="conteststylediv" id="subRANGE2_13">
-	      <h3 style="color:aqua">RaNGE 13 - Contradictory Catastrophe!</h2>
+	      <h3 style="color:aqua">RaNGE 13 - Contradictory Catastrophe!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,17893.0.html">Official Thread</a></p>
 		<p>Duration: Jan 18, 2015 - Feb 20, 2015</p>
 		<p>Class: Unique</p>
@@ -214,7 +218,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/kirbio/p/contradictory-catastrophe-contest-entry-choujuu-gigaku-everse">Kirbio</a> [Choujuu Gigaku Reverse] || 2nd: <a target="_blank" href="http://www.bulletforge.org/u/lunarhazuki/p/contradictory-catastrophe-by-lunarethic/">Lunarethic (Lunar Hazuki)</a> || 3rd: <a target="_blank" href="http://www.bulletforge.org/u/lefkada/p/range-13-contradictory-catastrophe-entry-lettyxlily/">Ephy (Lefkada)</a></p>
 		</div>
 		<div class="conteststylediv" id="subRANGE2_14">
-	      <h3 style="color:aqua">RaNGE 14 - Popular Popularity!</h2>
+	      <h3 style="color:aqua">RaNGE 14 - Popular Popularity!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,18639.0.html">Official Thread</a></p>
 		<p>Duration: July 9, 2015 - July 31, 2015</p>
 		<p>Class: Restriction - Characters</p>
@@ -225,7 +229,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/ajs/p/koishi-heck">AJS</a> [Koishi Heck] || 2nd: <a target="_blank" href="http://www.bulletforge.org/u/miransu-uwabami/p/everse-the-revered-popular-popularity-range-contest-14-entry/">Fear Chronicle (Kirbio, Miransu Uwabami)</a> [Reverse the Revered] || 3rd: <a target="_blank" href="http://www.bulletforge.org/u/tressert/p/tresserts-popular-popularity/">TresserT</a></p>
 		</div>
 		<div class="conteststylediv" id="subRANGE2_15">
-	      <h3 style="color:aqua">RaNGE 15 - Trick or Shoot!</h2>
+	      <h3 style="color:aqua">RaNGE 15 - Trick or Shoot!</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,18947.0.html">Official Thread</a></p>
 		<p>Duration: Oct 10, 2015 - Oct 31, 2015</p>
 		<p>Class: Thematic - Halloween</p>
@@ -237,7 +241,7 @@
 		</div>
 	      <h2 style="color:rgb(59,248,80)" id="subLOCAA">Land of Codes and Apertures</h2>
 		<div class="conteststylediv" id="subLOCAA_1">
-	      <h3 style="color:aqua">Borderlands Contest 1</h2>
+	      <h3 style="color:aqua">Borderlands Contest 1</h3>
 		<p><a target="_blank" href="http://moriyashrineextend.proboards.com/post/8273/thread">Backup Log</a></p>
 		<p>Duration: N/A</p>
 		<p>Class: Free</p>
@@ -248,7 +252,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/ajs/p/kaguya-houraisans-impossible-script">AJS</a> || 2nd: <a target="_blank" href="http://www.bulletforge.org/u/borderlands/p/contest-1-miplouf-saigyouki">Miplouf</a> || 3rd: <a target="_blank" href="http://www.bulletforge.org/u/borderlands/p/contest-1-byzantheryx">Byzantheryx (Miransu Uwabami)</a></p>
 		</div>
 		<div class="conteststylediv" id="subLOCAA_2">
-	      <h3 style="color:aqua">Borderlands Contest 2</h2>
+	      <h3 style="color:aqua">Borderlands Contest 2</h3>
 		<p><a target="_blank" href="http://moriyashrineextend.proboards.com/post/8274/thread">Backup Log</a></p>
 		<p>Duration: ??? - June 12, 2013</p>
 		<p>Class: Thematic - Touhou</p>
@@ -259,7 +263,7 @@
 		<p>1st: Rogus || 2nd: Calimera (Miransu Uwabami) || 3rd: Miplouf</p>
 		</div>
 		<div class="conteststylediv" id="subLOCAA_3">
-	      <h3 style="color:aqua">LOCAA 3</h2>
+	      <h3 style="color:aqua">LOCAA 3</h3>
 		<p><a target="_blank" href="http://moriyashrineextend.proboards.com/post/8275/thread">Backup Log</a></p>
 		<p>Duration: N/A</p>
 		<p>Class: Restriction - Characters</p>
@@ -270,7 +274,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/miransu-uwabami/p/experiment-354">Miransu Uwabami</a> [Experiment 354] || 2nd: Sparen || 3rd: Fonduemaster</p>
 		</div>
 		<div class="conteststylediv" id="subCURSE_1">
-	      <h3 style="color:aqua">CURSE01 - Overused All-Stars</h2>
+	      <h3 style="color:aqua">CURSE01 - Overused All-Stars</h3>
 		<p><a target="_blank" href="http://moriyashrineextend.proboards.com/post/8276/thread">Official Thread</a></p>
 		<p>Duration: ??? - Oct 25, 2013</p>
 		<p>Class: Restriction - Characters</p>
@@ -281,7 +285,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/miransu-uwabami/p/curse-01-hells-famous-sisters">Miransu Uwabami</a> || 2nd: <a target="_blank" href="http://www.bulletforge.org/u/talosmistake/p/an-ordinary-marisa-script">TalosMistake</a> || 3rd: <a target="_blank" href="http://www.bulletforge.org/u/sariel/p/touhou-miko-rex"> Sariel/Gungnir</a> [Touhou Miko Rex]</p>
 		</div>
 		<div class="conteststylediv" id="subLOCAA_4">
-	      <h3 style="color:aqua">LOCAA 4 - Unlikely Pairs</h2>
+	      <h3 style="color:aqua">LOCAA 4 - Unlikely Pairs</h3>
 		<p><a target="_blank" href="http://moriyashrineextend.proboards.com/post/8476/thread">Official Thread</a></p>
 		<p>Duration: Nov 11, 2013 - Feb 5, 2014</p>
 		<p>Class: Restriction - Dual Boss</p>
@@ -292,7 +296,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/sariel/p/power-vs-wisdom/"> Sariel/Gungnir</a> [Power vs Wisdom] || 2nd: <a href="./projectsphase3_locaa4.html">Sparen</a> [Death Match in the Skies] || 3rd: <a target="_blank" href="http://www.bulletforge.org/u/gusano2314/p/locaa4-entry-by-gusano2314">Gusano2314</a></p>
 		</div>
 		<div class="conteststylediv" id="subLOCAA_5">
-	      <h3 style="color:aqua">LOCAA 5 - Fury of the Rivals</h2>
+	      <h3 style="color:aqua">LOCAA 5 - Fury of the Rivals</h3>
 		<p><a target="_blank" href="http://moriyashrineextend.proboards.com/post/36242/thread">Official Thread</a></p>
 		<p>Duration: May 3, 2014 - July 21, 2014</p>
 		<p>Class: Restriction - Dual Boss, Unique</p>
@@ -303,7 +307,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/ajs/p/celestial-showdown-locaa-5">AJS</a> [Celestial Showdown] || 2nd: <a target="_blank" href="http://www.bulletforge.org/u/phantom-song/p/let-the-religion-war-continue-taoism-vs-shinto-miko-vs-sanae-locaa5">PhantomSong</a> [Let the Religion War Continue] || 3rd: <a target="_blank" href="http://www.bulletforge.org/u/gusano2314/p/idiots-fight-for-no-reasonlocaa5-contest-entry">Gusano2314</a></p>
 		</div>
 		<div class="conteststylediv" id="subLOCAA_6">
-	      <h3 style="color:aqua">LOCAA 6 - Troll Scripts</h2>
+	      <h3 style="color:aqua">LOCAA 6 - Troll Scripts</h3>
 		<p>There is no log for this contest</p>
 		<p>Duration: N/A</p>
 		<p>Class: Thematic - Troll</p>
@@ -315,7 +319,7 @@
 		</div>
 	      <h2 style="color:rgb(59,248,80)" id="subARTIFACT">Artifact Contest</h2>
 		<div class="conteststylediv" id="subARTIFACT_1">
-	      <h3 style="color:aqua">Artifact Contest 1: The Pagoda of Bishamonten</h2>
+	      <h3 style="color:aqua">Artifact Contest 1: The Pagoda of Bishamonten</h3>
 		<p><a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,16046.0.html">Official Thread</a></p>
 		<p>Duration: Dec 18, 2013 - Jan 15, 2014</p>
 		<p>Class: Thematic - Artifact</p>
@@ -326,7 +330,7 @@
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/ozzy/p/the-plundered-pagoda">ExPorygon (Ozzy)</a> [The Plundered Pagoda] || 2nd: PhantomSong, <a target="_blank" href="http://www.bulletforge.org/u/kirbio/p/trickysticks-artifact1-contest-entry-raiko-horikawa">Kirbio</a> || 3rd: ShadowNCS</p>
 		</div>
 		<div class="conteststylediv" id="subARTIFACT_2">
-	      <h3 style="color:aqua">Artifact Contest 2: Augmented Magic</h2>
+	      <h3 style="color:aqua">Artifact Contest 2: Augmented Magic</h3>
 		<p><a target="_blank" href="http://moriyashrineextend.proboards.com/post/30474/thread">Backup Log</a></p>
 		<p>Duration: Mar 8, 2014 - Apr 30, 2014</p>
 		<p>Class: Restriction - Characters, Thematic - Artifact</p>
@@ -336,4 +340,5 @@
 		<p>Number of Judged Participants: 3 (+1 disqualified)</p>
 		<p>1st: <a target="_blank" href="http://www.bulletforge.org/u/kirbio/p/artifact-contest-2-augmented-magic-satori-komeiji-kirbios-entry">Kirbio</a> || 2nd: <a href="./projectsphase3_artifact2.html">Sparen</a> || 3rd: <a target="_blank" href="http://www.bulletforge.org/u/phantom-song/p/artifact2-hakerro-by-phantomsong">PhantomSong</a></p>
 		</div>
-	      <br>            </div>          </div>        </div>      </div>      <footer>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>      </footer>    </div>  </body></html>
+	      <br>            </div>          </div>        </div>      </div>      <footer>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>      </footer>    </div>
+    <script type="text/javascript" src="./contestdatabase.js"></script>  </body></html>
