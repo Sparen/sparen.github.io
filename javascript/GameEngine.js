@@ -115,7 +115,7 @@ function incrementNumInRing(n) {
 
 function incrementSpeed(n) {
     speedtoggle += n;
-    if (speedtoggle < 0) {speedtoggle = 0.1;}
+    if (speedtoggle <= 0) {speedtoggle = 0.1;}
     document.getElementById("speedtoggle").innerHTML = "Bullet&nbsp;&nbsp;Speed: " + speedtoggle.toFixed(1);
 }
 
