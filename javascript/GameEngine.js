@@ -3,6 +3,7 @@ var bullets = [];
 var boss;
 var numdeaths;
 var bowapangle = 0;
+var numinring = 5;
 
 function startGame() {
     console.log("startGame(): Running");
@@ -74,11 +75,11 @@ function updateGame() {
     myGameArea.frameNo += 1;
     if (everyinterval(4)) { //fire stuff here
         //console.log("updateGame: Creating New Bullet");
-        for (i = 0; i < 5; i += 1) {
+        for (i = 0; i < numinring; i += 1) {
             var newshot_bowap_color = "rgb(" + (196 + Math.round(64*Math.cos(myGameArea.frameNo/96))) + ", " + (196 + Math.round(64*Math.sin(myGameArea.frameNo/64))) + ", " + (196 + Math.round(64*Math.sin(myGameArea.frameNo/128))) + ")";
             var newshot_bowap = new objEnemyShot(320, 120, 4, bowapangle, 0, 0, newshot_bowap_color);
             bullets.push(newshot_bowap);
-            bowapangle += Math.PI*2/5;
+            bowapangle += Math.PI*2/numinring;
         }
         bowapangle += Math.sin(myGameArea.frameNo/96);
     }
@@ -108,6 +109,12 @@ function isinbounds(obj) {
 function everyinterval(n) {
     if ((myGameArea.frameNo / n) % 1 == 0) {return true;}
     return false;
+}
+
+function incrementNumInRing(n) {
+    numinring += n;
+    if (numinring < 0) {numinring = 0;}
+    document.getElementById("numinring").innerHTML = "Number in ring: " + numinring;
 }
 
 function inherit(proto) {
