@@ -229,6 +229,12 @@ p, fieldset, table, pre {margin-bottom: 1em;}
 }
 .tutnavbar li{
   float: center;
+  display:inline-block;
+  text-align: center;
+}
+
+.tutnavbar a, .tutnavbar span{
+  float: center;
   list-style-type: none;
   display:inline-block;
   width: 120px;

@@ -198,6 +198,13 @@ p, fieldset, table, pre {
   float: center;
   list-style-type: none;
   display:inline-block;
+  text-align: center;
+}
+
+.sttjnavbar a{
+  float: center;
+  list-style-type: none;
+  display:inline-block;
   width: 120px;
   font-weight: bold;
   background-color: #00BBBB;
