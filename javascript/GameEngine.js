@@ -4,6 +4,9 @@ var numdeaths;
 var bowapangle = 0;
 var numinring = 5;
 var speedtoggle = 4;
+var bulletrad = 6;
+var strokerad = 6;
+var strokewid = 3;
 
 function startGame() {
     console.log("startGame(): Running");
@@ -19,7 +22,7 @@ function objPlayer() {
     }
 }
 
-function objEnemyShot(x, y, speed, angle, accel, maxspeed, color) {
+function objEnemyShot(x, y, speed, angle, accel, maxspeed, color, brad, srad, swid) {
     this.x = x;
     this.y = y;
     this.speed = speed;
@@ -32,12 +35,12 @@ function objEnemyShot(x, y, speed, angle, accel, maxspeed, color) {
         this.y += this.speed*Math.sin(this.angle);
         ctx.fillStyle = "#FFFFFF";
         ctx.beginPath();
-        ctx.arc(this.x, this.y, 6, 0, 2*Math.PI);
+        ctx.arc(this.x, this.y, brad, 0, 2*Math.PI);
         ctx.fill();
         ctx.strokeStyle = color;
         ctx.beginPath();
-        ctx.arc(this.x, this.y, 6, 0, 2*Math.PI);
-        ctx.lineWidth = 3;
+        ctx.arc(this.x, this.y, srad, 0, 2*Math.PI);
+        ctx.lineWidth = swid;
         ctx.stroke();
     }
 }
@@ -69,7 +72,7 @@ function updateGame() {
         //console.log("updateGame: Creating New Bullet");
         for (i = 0; i < numinring; i += 1) {
             var newshot_bowap_color = "rgb(" + (196 + Math.round(64*Math.cos(myGameArea.frameNo/96))) + ", " + (196 + Math.round(64*Math.sin(myGameArea.frameNo/64))) + ", " + (196 + Math.round(64*Math.sin(myGameArea.frameNo/128))) + ")";
-            var newshot_bowap = new objEnemyShot(320, 120, speedtoggle, bowapangle, 0, 0, newshot_bowap_color);
+            var newshot_bowap = new objEnemyShot(320, 120, speedtoggle, bowapangle, 0, 0, newshot_bowap_color, bulletrad, strokerad, strokewid);
             bullets.push(newshot_bowap);
             bowapangle += Math.PI*2/numinring;
         }
@@ -113,5 +116,26 @@ function incrementNumInRing(n) {
 function incrementSpeed(n) {
     speedtoggle += n;
     if (speedtoggle < 0) {speedtoggle = 0.1;}
-    document.getElementById("speedtoggle").innerHTML = "Speed: " + speedtoggle.toFixed(1);
+    document.getElementById("speedtoggle").innerHTML = "Bullet&nbsp;&nbsp;Speed: " + speedtoggle.toFixed(1);
+}
+
+function incrementBulletRad(n) {
+    bulletrad += n;
+    if (bulletrad < 0) {bulletrad = 0;}
+    if (bulletrad > 128) {bulletrad = 128;} //because some people will be stupid
+    document.getElementById("bulletrad").innerHTML = "Bullet&nbsp;Radius: " + bulletrad.toFixed(1);
+}
+
+function incrementStrokeRad(n) {
+    strokerad += n;
+    if (strokerad < 0) {strokerad = 0;}
+    if (strokerad > 128) {strokerad = 128;} //because some people will be stupid
+    document.getElementById("strokerad").innerHTML = "Stroke&nbsp;Radius: " + strokerad.toFixed(1);
+}
+
+function incrementStrokeWidth(n) {
+    strokewid += n;
+    if (strokewid < 0) {strokewid = 0;}
+    if (strokewid > 32) {strokewid = 32;} //because some people will be stupid
+    document.getElementById("strokewid").innerHTML = "Stroke&nbsp;&nbsp;Width: " + strokewid.toFixed(1);
 }
