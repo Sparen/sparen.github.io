@@ -73,7 +73,7 @@ function updateGame() {
     myGameArea.clear();
     myGameArea.frameNo += 1;
     if (everyinterval(4)) { //fire stuff here
-        console.log("updateGame: Creating New Bullet");
+        //console.log("updateGame: Creating New Bullet");
         for (i = 0; i < 5; i += 1) {
             var newshot_bowap_color = "rgb(" + (196 + Math.round(64*Math.cos(myGameArea.frameNo/96))) + ", " + (196 + Math.round(64*Math.sin(myGameArea.frameNo/64))) + ", " + (196 + Math.round(64*Math.sin(myGameArea.frameNo/128))) + ")";
             var newshot_bowap = new objEnemyShot(320, 120, 4, bowapangle, 0, 0, newshot_bowap_color);
