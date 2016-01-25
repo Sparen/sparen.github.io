@@ -1,9 +1,9 @@
 var player;
 var bullets = [];
-var boss;
 var numdeaths;
 var bowapangle = 0;
 var numinring = 5;
+var speedtoggle = 4;
 
 function startGame() {
     console.log("startGame(): Running");
@@ -16,14 +16,6 @@ function objPlayer() {
     this.y = y;
     this.update = function () {
 
-    }
-}
-
-function objEnemy() {
-    this.x = x;
-    this.y = y;
-    this.update = function () {
-        
     }
 }
 
@@ -77,7 +69,7 @@ function updateGame() {
         //console.log("updateGame: Creating New Bullet");
         for (i = 0; i < numinring; i += 1) {
             var newshot_bowap_color = "rgb(" + (196 + Math.round(64*Math.cos(myGameArea.frameNo/96))) + ", " + (196 + Math.round(64*Math.sin(myGameArea.frameNo/64))) + ", " + (196 + Math.round(64*Math.sin(myGameArea.frameNo/128))) + ")";
-            var newshot_bowap = new objEnemyShot(320, 120, 4, bowapangle, 0, 0, newshot_bowap_color);
+            var newshot_bowap = new objEnemyShot(320, 120, speedtoggle, bowapangle, 0, 0, newshot_bowap_color);
             bullets.push(newshot_bowap);
             bowapangle += Math.PI*2/numinring;
         }
@@ -114,11 +106,12 @@ function everyinterval(n) {
 function incrementNumInRing(n) {
     numinring += n;
     if (numinring < 0) {numinring = 0;}
+    if (numinring > 512) {numinring = 512;} //because some people will be stupid
     document.getElementById("numinring").innerHTML = "Number in ring: " + numinring;
 }
 
-function inherit(proto) {
-    function F() {}
-    F.prototype = proto;
-    return new F;
+function incrementSpeed(n) {
+    speedtoggle += n;
+    if (speedtoggle < 0) {speedtoggle = 0.1;}
+    document.getElementById("speedtoggle").innerHTML = "Speed: " + speedtoggle.toFixed(1);
 }
