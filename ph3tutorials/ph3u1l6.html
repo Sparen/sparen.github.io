@@ -201,6 +201,7 @@ function wait(n){
 	      <h2 style="color:yellow" id="sub7">Part 7: How Do I Close the Script?</h2>
 	      <p>Right now our script does practically nothing since all it does is create a boss and move it to a location (and then allow it to be shot down). However, we need to be able to close the script in order to finish writing a solid complete framework for our script.</p>
 	      <p>In the sample scripts that come with Danmakufu, there is a portion of @MainLoop that basically runs only when the boss's life falls below or equal to 0. However, that adds clutter to @MainLoop. Therefore, we will call a task TFinalize; at the end of @Initialize.</p>
+	      <p><strong>Note: Keeping the control code in @MainLoop is a perfectly fine method. TFinalize is just one of many possible ways to handle the end of a script.</strong></p>
 	      <pre class="prettyprint linenums"><code>task TFinalize {
     while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){yield;}
     Obj_Delete(objBoss);
@@ -547,9 +548,9 @@ function wait(n){
         </div>
       </div>
       <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>
+        <p style="text-align: center;">Last Update to Page: Jan 24, 2016</p>
         <p style="text-align: center;"><a href="#top">Top</a></p>
-        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>
+        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>
         <p style="text-align: center;"><span style="font-weight: bold;">Other
             Sites/Affiliates</span></p>
         <div style="text-align: center;">
