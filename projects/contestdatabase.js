@@ -202,7 +202,21 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
 
     anpl_svg += '</svg>';
 
-    document.getElementById("displaybox").innerHTML = displaystring + "<br>" + anpl_svg;
+    //OVERALL STATS
+    var anpl_totalnumcontests = [0, 0];
+    var anpl_totalnumparts = [0, 0];
+    for (i = 0; i < years.length; i++){
+        anpl_totalnumcontests[0] += anpl_numcontests[i][0];
+        anpl_totalnumparts[0] += anpl_numparts[i][0];
+        anpl_totalnumcontests[1] += anpl_numcontests[i][1];
+        anpl_totalnumparts[1] += anpl_numparts[i][1];
+    }
+    var anpl_overallaverages = [(anpl_totalnumparts[0]/anpl_totalnumcontests[0]).toFixed(2), (anpl_totalnumparts[1]/anpl_totalnumcontests[1]).toFixed(2)];
+
+    var displaystring2 = "MotK Overall: " + anpl_overallaverages[0] + " participants/contest<br>" + 
+    "LOCAA Overall: " + anpl_overallaverages[1] + " participants/contest<br>";
+
+    document.getElementById("displaybox").innerHTML = displaystring + "<br>" + anpl_svg + "<br>" + displaystring2;
 }
 
 function execute() {
