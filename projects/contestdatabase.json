@@ -274,6 +274,17 @@
             "judges": ["Trickysticks", "ExPorygon", "Miransu"],
             "numparticipants": 3,
             "result": [["Kirbio"], ["Sparen"], ["PhantomSong"]]
+        },
+        {
+            "id": "artifact3",
+            "location": "locaa",
+            "loc_category": "artifact",
+            "name": "time is of the essence",
+            "year": 2015,
+            "host": "Trickysticks",
+            "judges": ["Trickysticks", "ExPorygon", "Ultima", "Spectral Nexus"],
+            "numparticipants": 3,
+            "result": ["Conarnar", "Python", "Ultimadragon88"]
         }
     ]
 }
