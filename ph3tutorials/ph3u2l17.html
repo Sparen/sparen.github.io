@@ -79,7 +79,43 @@
 	      <p>Assuming you have the font and your browser is capable, it should render similar to below:</p>
 	      <p><span style="font-family:'Russell Square',arial;color:white;text-shadow: -1px 0 rgb(224, 64, 192), 0 1px rgb(224, 64, 192), 1px 0 rgb(224, 64, 192), 0 -1px rgb(224, 64, 192);text-align:center;font-size:24px">--&gt; Russell Square Regular &lt;--</span></p>
 	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Align and Center Text Objects?</h2>
+	      <p>Aligning and centering text objects is where things become painful. <code>ObjText_SetHorizontalAlignment()</code> is the function used for this. There are three styles - left, center, and right. To align right and center, you must set <code>ObjText_SetMaxWidth()</code> as well. This is to ensure that Danmakufu knows where the borders are. If you want to left-align, you do not need to set a maximum width, although it is recommended that you do so anyways. Note that with <code>ObjText_SetMaxWidth()</code>, characters that do not fit will be shoved onto the next line. Additionally, glyphs in fonts may render with different widths and the like depending on your computer. Please be advised. You can use functions like <code>ObjText_SetSidePitch()</code> with negative values to squeeze text into a smaller space.</p>
+	      <p>Let's begin by aligning to the left. All you need to do is <code>ObjText_SetHorizontalAlignment(ALIGNMENT_LEFT)</code>, and all lines of the text object will be left-aligned. Since left-align is the default, you shouldn't even need to do this.</p>
+	      <p>Now let's align to the right. Of course, you need to set the maximum width and other things, but what does the x position actually mean? Well, say you have a max width of 300 and want the right boundary to be at 192 pixels. In this case, you would use</p>
+	      <pre class="prettyprint"><code>    ObjText_SetHorizontalAlignment(objText, ALIGNMENT_RIGHT);
+    ObjText_SetMaxWidth(objText, 300);
+    ObjRender_SetX(objText, 192 - 300);</code></pre>
+	      <p>So why do we need 192 - 300? Well, the right bound that we want is 192, but the text object is 300 pixels wide, so we need to set the x position to the left corner of the bounding box. In other words, we will have a bounding box for the text object extending from 192 - 300 to 192, with width 300. In this bounding box, the text will all be aligned to the right. If we did not have this bounding box (if SetMaxWidth was never called), Danmakufu would not know where the bounding box was, and would not know where or how to render the text object.</p>
+	      <p>Centering along a line uses a similar process. We will use ALIGNMENT_CENTER for this. In this case, the X position will be the line you want to center along - half the max width. For example:</p>
+	      <pre class="prettyprint linenums"><code>task LifeExtendGraphic{
+        let objText = ObjText_Create();
+        ObjText_SetText(objText, "EXTEND!");
+        ObjText_SetFontSize(objText, 24);
+        ObjText_SetFontType(objText, "MS Gothic");
+        ObjText_SetFontBold(objText, false);
+        ObjText_SetFontColorTop(objText, 255, 224, 255);
+        ObjText_SetFontColorBottom(objText, 240, 208, 240);
+        ObjText_SetFontBorderType(objText, BORDER_FULL);
+        ObjText_SetFontBorderColor(objText, 192, 96, 192);
+        ObjText_SetFontBorderWidth(objText, 2);
+        ObjText_SetHorizontalAlignment(objText, ALIGNMENT_CENTER);
+        ObjText_SetMaxWidth(objText, 360);
+        Obj_SetRenderPriority(objText, 0.6);
+        ObjRender_SetX(objText, 194 - 180);
+        //Minus half the max width. 194 = 388/2 (388 is GetStgFrameWidth w/ r.p.<80)
+	ObjRender_SetY(objText, 75);
+
+        loop(120){
+		yield;
+        }
+        Obj_Delete(objText);
+}</code></pre>
+	      <p>There are plenty of other functions for manipulating text objects in the documentation. Check them out if you want to do some more interesting adjustments.</p>
 	      <h2 style="color:yellow" id="sub6">Part 6: How do I Use Danmakufu's Bracketed String Characters?</h2>
+	      <p>Danmakufu ph3 is somewhat stupid in that it gave up the standard \n for [r] in strings. But there are other similar things and escape characters in ph3.</p>
+	      <p>According to the official documentation, there are two bracketed strings - [r] for new lines and [ruby] for ruby/furigana. For [r], you just place it in the string and it will automatically line break.</p>
+	      <p>There are also some other standard things, such as the <code>&amp;nbsp;</code>, a non-breaking space, <code>&amp;quot;</code> for a quotation mark " (since you cannot just put them in strings or the Danmakufu interpreter will assume you are trying to end the string, and <code>&amp;osb;</code> and <code>&amp;csb;</code> for the [ and ], respectively (since they are interpreted in syntactic analysis). </p>
+	      <p>This being said, you can turn off Syntactic Analysis. Using <code>ObjText_SetSyntacticAnalysis()</code> will disable interpreting of things such as [r] in a text object.</p>
 	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
 	      <p>Text</p>
 	      <pre class="prettyprint linenums"><code>task TFinalize{
@@ -100,7 +136,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Jan 22, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Feb 01, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
