@@ -2,6 +2,9 @@ var database_obj;
 
 var NUMLOCATIONS = 2; //hardcoded. Refers to the location field in the JSON
 
+//JSON NOTES:
+//NUMBERS THAT ARE UNKNOWN DEFAULT TO -1. OTHER UNKNOWNS DEFAULT TO NOTHING
+
 function createDropdown() {
     console.log("createDropdown(): Running");
     return "<form method='POST' onSubmit='return execute();'>" +
@@ -109,7 +112,7 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
 
     document.getElementById("displaybox").innerHTML = displaystring + "<br><br>" + cpy_svg + 
     "<br><br>Disclaimer: This information may not be up to date, and some contests lack start and/or end dates.<br>" +
-    "Contests without start dates only show their end month. Contests with no date information are not shown.";
+    "All contests here are listed by end year. Contests with no date information are not shown.";
 }
 
 function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCODED
@@ -319,7 +322,7 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
 
     pot_svg += '</svg>';
 
-    document.getElementById("displaybox").innerHTML = displaystring + pot_svg;
+    document.getElementById("displaybox").innerHTML = displaystring + pot_svg + "<br><br>Contests without a valid end date are not displayed. Contests without a valid start date only show their end month and year.";
 }
 
 function execute() {
