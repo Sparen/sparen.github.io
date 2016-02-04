@@ -108,7 +108,7 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     cpy_svg += '</svg>';
 
     document.getElementById("displaybox").innerHTML = displaystring + "<br><br>" + cpy_svg + 
-    "<br><br>Disclaimer: This information may not be up to data, and some contests lack start and/or end dates.<br>" +
+    "<br><br>Disclaimer: This information may not be up to date, and some contests lack start and/or end dates.<br>" +
     "Contests without start dates only show their end month. Contests with no date information are not shown.";
 }
 
