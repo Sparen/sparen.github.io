@@ -307,7 +307,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   max-width: 480px;
 }
 
-.ytembed embed, .ytembed_sm embed {
+.ytembed embed, .ytembed_sm embed, .ytembed iframe, .ytembed_sm iframe {
   position: absolute;
   top: 0;
   left: 0;
