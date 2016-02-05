@@ -41,15 +41,16 @@
 	          <li><a href="#quiz1">Quiz: Creating and Customizing Text Objects</a></li>
 	 	  <li><a href="#sub7">Part 7: Text Objects or Images of Text?</a></li>
 	          <li><a href="#quiz2">Quiz: Text Vs Image Vs Sprite List</a></li>
+	 	  <li><a href="#sub8">Part 8: Where Can I Get these Fonts?</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss Text Objects and Fonts, and how to use them in Danmakufu.</p>
 	      <p>We will also have a discussion on when to use text objects rather than images of text, as well as how best to align and manage text displays for maximum player benefit.</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: What are Fonts and How Do I Use them in Danmakufu?</h2>
-	      <p><strong><span style="color:salmon">Note: Arial is used as the backup for the following fonts.</span> Depending on whether or not you have the font and what browser you are using, you may see all the fonts rendered properly or you may see a splattering of colored Arial (or in the worse case scenario, <span style="font-family:'Times New Roman'">Times New Roman</span>)</strong></p>
+	      <p><strong><span style="color:salmon">Note: Arial is used as the backup for the following fonts.</span> Depending on whether or not you have the font and what browser you are using, you may see all the fonts rendered properly or you may see a splattering of colored Arial (or in the worse case scenario, <span style="font-family:'Times New Roman'">Times New Roman</span>)</strong>. At the end of the guide, links and information on the fonts used in this tutorial will be available.</p>
 	      <p>So let's begin with this: what are fonts? You have undoubtedly heard about the ever-present <span style="font-family:helvetica, Arial;color:#FFCCCC">Helvetica</span>, the standard and boring <span style="font-family:arial;color:#CCFFCC">Arial</span>, and the remarkably stupid troll font <span style="font-family:'comic sans ms', Arial;color:#CCCCFF">Comic Sans</span>. <span style="font-family:'comic sans ms', Arial;color:#FFFFAA">Please do not use Comic Sans in a serious script</span> (or anything serious, for that matter). Other unacceptable fonts include <span style="font-family:papyrus, Arial;color:#AAFFFF">Papyrus</span> and <span style="font-family:'wingdings', Arial;color:#CCCCCC">Wingdings</span> (Wingdings).</p>
-	      <p>The default font used by Danmakufu (ph3, after [.1 pre2]) is <span style="font-family:'MS Gothic', arial;color:#FFCCFF">MS Gothic</span>. Other common fonts used in the real world include <span style="font-family:'Verdana', arial;color:#CCFFFF">Verdana</span> and <span style="font-family:'Courier',arial;color:#FFAAFF">Courier</span>. In Computer Science, <span style="font-family:'Andale Mono', monospace;color:rgb(59,248,80)">Andale Mono</span> is commonly used.</p>
+	      <p>The default font used by Danmakufu (ph3, after [.1 pre2]) is <span style="font-family:'MS Gothic', arial;color:#FFCCFF">MS Gothic</span>. Other common fonts used in the real world include <span style="font-family:'Verdana', arial;color:#CCFFFF">Verdana</span> and <span style="font-family:'Courier',arial;color:#FFAAFF">Courier</span>. In Computer Science, <span style="font-family:'Andale Mono', monospace;color:rgb(59,248,80)">Andale Mono</span> is commonly used. Windows users may see <span style="font-family:'Lucida Console', monospace;color:#CCCCCC">Lucida Console</span> instead.</p>
 	      <p>For most practical purposes, you will want to <b>avoid</b> Danmakufu's default of MS Gothic. It's not a bad font, but it has a number of quirks. However, Danmakufu grants you the flexibility to use nearly any font in existence, so that should not be a problem.</p>
 	      <p>The <code>InstallFont()</code> function is able to install nearly any font that you might need. By default, Danmakufu will be able to use fonts on your Computer. However, when distributing scripts to others, it is important to include non-standard fonts with your script and use InstallFont on them, since you cannot tell people to install all of the fonts manually. Not everyone will have your font. This being said, InstallFont is neat because it returns true if the loading was a success. You use InstallFont as follows:</p>
 	      <pre class="prettyprint"><code>InstallFont(GetCurrentScriptDirectory() ~ "font/Revue.ttf");</code></pre>
@@ -78,6 +79,7 @@
     ObjText_SetFontBorderWidth(objText, 1);</code></pre>
 	      <p>Assuming you have the font and your browser is capable, it should render similar to below:</p>
 	      <p><span style="font-family:'Russell Square',arial;color:white;text-shadow: -1px 0 rgb(224, 64, 192), 0 1px rgb(224, 64, 192), 1px 0 rgb(224, 64, 192), 0 -1px rgb(224, 64, 192);text-align:center;font-size:24px">--&gt; Russell Square Regular &lt;--</span></p>
+	      <div class="tut_exercise">EXERCISE: Test out some text objects. See how borders work, and how color gradients can be used. What colors go well with others? Think about contrast in regards to the background and legibility.</div>
 	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Align and Center Text Objects?</h2>
 	      <p>Aligning and centering text objects is where things become painful. <code>ObjText_SetHorizontalAlignment()</code> is the function used for this. There are three styles - left, center, and right. To align right and center, you must set <code>ObjText_SetMaxWidth()</code> as well. This is to ensure that Danmakufu knows where the borders are. If you want to left-align, you do not need to set a maximum width, although it is recommended that you do so anyways. Note that with <code>ObjText_SetMaxWidth()</code>, characters that do not fit will be shoved onto the next line. Additionally, glyphs in fonts may render with different widths and the like depending on your computer. Please be advised. You can use functions like <code>ObjText_SetSidePitch()</code> with negative values to squeeze text into a smaller space.</p>
 	      <p>Let's begin by aligning to the left. All you need to do is <code>ObjText_SetHorizontalAlignment(ALIGNMENT_LEFT)</code>, and all lines of the text object will be left-aligned. Since left-align is the default, you shouldn't even need to do this.</p>
@@ -87,7 +89,7 @@
     ObjRender_SetX(objText, 192 - 300);</code></pre>
 	      <p>So why do we need 192 - 300? Well, the right bound that we want is 192, but the text object is 300 pixels wide, so we need to set the x position to the left corner of the bounding box. In other words, we will have a bounding box for the text object extending from 192 - 300 to 192, with width 300. In this bounding box, the text will all be aligned to the right. If we did not have this bounding box (if SetMaxWidth was never called), Danmakufu would not know where the bounding box was, and would not know where or how to render the text object.</p>
 	      <p>Centering along a line uses a similar process. We will use ALIGNMENT_CENTER for this. In this case, the X position will be the line you want to center along - half the max width. For example:</p>
-	      <pre class="prettyprint linenums"><code>task LifeExtendGraphic{
+	      <pre class="prettyprint linenums"><code>    task LifeExtendGraphic{
         let objText = ObjText_Create();
         ObjText_SetText(objText, "EXTEND!");
         ObjText_SetFontSize(objText, 24);
@@ -109,22 +111,111 @@
 		yield;
         }
         Obj_Delete(objText);
-}</code></pre>
+    }</code></pre>
 	      <p>There are plenty of other functions for manipulating text objects in the documentation. Check them out if you want to do some more interesting adjustments.</p>
 	      <h2 style="color:yellow" id="sub6">Part 6: How do I Use Danmakufu's Bracketed String Characters?</h2>
 	      <p>Danmakufu ph3 is somewhat stupid in that it gave up the standard \n for [r] in strings. But there are other similar things and escape characters in ph3.</p>
 	      <p>According to the official documentation, there are two bracketed strings - [r] for new lines and [ruby] for ruby/furigana. For [r], you just place it in the string and it will automatically line break.</p>
 	      <p>There are also some other standard things, such as the <code>&amp;nbsp;</code>, a non-breaking space, <code>&amp;quot;</code> for a quotation mark " (since you cannot just put them in strings or the Danmakufu interpreter will assume you are trying to end the string, and <code>&amp;osb;</code> and <code>&amp;csb;</code> for the [ and ], respectively (since they are interpreted in syntactic analysis). </p>
 	      <p>This being said, you can turn off Syntactic Analysis. Using <code>ObjText_SetSyntacticAnalysis()</code> will disable interpreting of things such as [r] in a text object.</p>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
-	      <p>Text</p>
-	      <pre class="prettyprint linenums"><code>task TFinalize{
-    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){yield;}
-    Obj_Delete(objBoss);
-    DeleteShotAll(TYPE_ALL, TYPE_IMMEDIATE);
-    SetAutoDeleteObject(true);
-    CloseScript(GetOwnScriptID());
-}</code></pre>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Creating and Customizing Text Objects</h2>
+	        <!--Quiz start.-->
+		<p>1) Reimu wants her text to be white with a red border of width two, and to use the font <span style="font-family:'Gill Sans',arial;color:#FFFFCC">Gill Sans</span> with a size of 24, bold. Write the necessary code to accomplish this task.</p>
+		<p>Hit 'Show' to show possible answers.</p>
+	        <textarea rows="12" cols="75">    let objText = ObjText_Create();
+    ObjText_SetText(objText, "Reimu Hakurei");</textarea>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+	      <p>Suggested answer is below.</p>
+	      <pre class="prettyprint linenums"><code>    let objText = ObjText_Create();
+    ObjText_SetText(objText, "Reimu Hakurei");
+    ObjText_SetFontSize(objText, 24);
+    ObjText_SetFontType(objText, "Gill Sans");
+    ObjText_SetFontBold(objText, true);
+    ObjText_SetFontColorTop(objText, 255, 255, 255);
+    ObjText_SetFontColorBottom(objText, 255, 255, 255);
+    ObjText_SetFontBorderType(objText, BORDER_FULL);
+    ObjText_SetFontBorderColor(objText, 255, 0, 0);
+    ObjText_SetFontBorderWidth(objText, 2);</code></pre>
+	        </div></div>
+		<br>
+		<p>2) Seiran wants to triangulate the world, and has embarked on her grand journey. But first, she wants the word 'MOCHI' to be prominently displayed in the center of the Danmakufu playing field. Of course, it will be in wonderful <span style="font-family:'Futura',arial;color:#AACCFF">Futura</span>. Assuming that the render priority is between 0.2 and 0.8, write code to position the text.</p>
+		<p>Hit 'Show' to show possible answers.</p>
+	        <textarea rows="18" cols="75">    let objText = ObjText_Create();
+    ObjText_SetText(objText, "MOCHI");
+    ObjText_SetFontSize(objText, 24);
+    ObjText_SetFontType(objText, "Futura");
+    ObjText_SetFontBold(objText, true);
+    ObjText_SetFontColorTop(objText, 255, 255, 255);
+    ObjText_SetFontColorBottom(objText, 255, 255, 255);
+    ObjText_SetFontBorderType(objText, BORDER_FULL);
+    ObjText_SetFontBorderColor(objText, 255, 0, 0);
+    ObjText_SetFontBorderWidth(objText, 2);
+    ObjRender_SetY(objText, 128);
+    //Write code to position and center code below
+
+    </textarea>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+	      <p>Suggested answer is below.</p>
+	      <pre class="prettyprint linenums"><code>    let objText = ObjText_Create();
+    ObjText_SetText(objText, "MOCHI");
+    ObjText_SetFontSize(objText, 24);
+    ObjText_SetFontType(objText, "Futura");
+    ObjText_SetFontBold(objText, true);
+    ObjText_SetFontColorTop(objText, 255, 255, 255);
+    ObjText_SetFontColorBottom(objText, 255, 255, 255);
+    ObjText_SetFontBorderType(objText, BORDER_FULL);
+    ObjText_SetFontBorderColor(objText, 255, 0, 0);
+    ObjText_SetFontBorderWidth(objText, 2);
+    ObjRender_SetY(objText, 128);
+    ObjRender_SetX(objText, 194 - 160);
+    ObjText_SetMaxWidth(objText, 320); //any number large enough to hold 5 characters of 24 pt font Futura is OK
+    ObjText_SetHorizontalAlignment(objText, ALIGNMENT_CENTER);</code></pre>
+	        </div></div>
+	      <h2 style="color:yellow" id="sub7">Part 7: Text Objects or Images of Text?</h2>
+	      <p>Now that we've discussed Text Objects, it's about time we discussed their limitations. As we have discussed previously, a single text object is limited to a single color gradient, a single border style, and a single font and font size.</p>
+	      <p>If you wanted a horizontal gradient of rainbow text or insane Alpha-blended text shadows, you're not going to be able to do that natively in Danmakufu. Also, languages like Thai tend to, more often than not, get stuck in weird font or Text Encoding issues and simply not render correctly. In these cases (and in others as well), it is almost always preferable to use an image file containing text.</p>
+	      <p>For example, look at the following (from Phantasmagoria of Imagine Breaker). Note: It may be blurry depending on your browser. Additionally, a gray background has been prepared to show the black alpha shadow.</p>
+	      <img class="pixelimg" src="./tutimg/u2l17textsample.png" style="width:400%;height:auto;max-width:256px;background-color:#666666" alt="Gore Shotsheet Image"></img><br><br>
+	      <p>The first thing you will notice is the pixel-perfect precision used in the image. Danmakufu does a horrible job with this level of precision in text objects - fonts will render differently on different computers with different widths between individual glyphs. Additionally, the color and border do not bleed here, and the border works as intended. In Danmakufu, large thick borders may look quite ugly, especially if you in fact WANT a gradient between the text color and border. These kinds of effects cannot be done using Danmakufu's text objects.</p>
+	      <p>Then there's the shadow. In Danmakufu, BORDER_SHADOW, as we discussed previously, does not create only a shadow, and in general does not work that great. Using an image, you can customize shadows and effects, and are only limited by your ability to use graphical editing software.</p>
+	      <p>For another example, let's examine Lunarethic's HUD difficulty text images in his RaNGE 15 contest entry (see video at the top of the page, in top right corner of game screen).</p>
+	      <!-- <img class="pixelimg" src="./tutimg/u2l17textsample2.png" style="width:200%;height:auto;max-width:256px" alt="Lunarethic Difficulty Image"></img><br><br> WAITING FOR PERMISSION TO USE -->
+	      <p>Besides being able to control how the text is rendered (distance between characters, text border, etc), we can see here that additional effects using the same colors and border format were done in this entry. Ordinary <span style="font-family:'Revue',arial;color:#FFCC88">Revue</span> is obviously incapable of handling the extra graphical effects. And this is where the real line tends to be drawn - text objects are only capable of rendering what is in the font library. If you want to apply masks with other images and textures, you can do that through pixel shaders, but adding graphics into text and similar things can really only be done using images.</p>
+	      <p>To close, I'll give a brief note about another way of rendering text - sprite lists. With the built-in Danmakufu defaults for the system number text (for score and the like), sprite lists are used. 2D Sprite lists are essentially lists of 2D sprites grouped together as one object. By doing this with an image file containing text glyphs, you are able to manually select how to render each individual character, which allows you to apply color to text and the like. However, this is an exceptionally expensive way to render text, since each character is essentially a 2D sprite. This is mainly used with custom fonts that aren't packaged as .ttf or .otf, etc, as well as with emulations of other systems, such as my Touhoumon Mystery Dungeon project. Regardless, they will be discussed in a much later tutorial when we go into primitives.</p>
+	      <h2 style="color:yellow" id="quiz2">Quiz: Text Vs Image Vs Sprite List</h2>
+	        <!--Quiz start.-->
+		<p>1) Kanako is trying to make a stage opening image using the font <span style="font-family:'DIN Alternate','DIN 1451','DIN','Alte DIN 1451 Mittelschrift',arial;color:#AAFFCC">DIN 1451</span>. However, it's too standardized for her liking, and Suwako suggests pasting frogs everywhere on the text. Of course, they cannot change the font, so what is the best way to have both the frogs and text in harmony?</p>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. Text Object<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Image containing text<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. Sprite List only<br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. Text Object + Render Object(s)<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+	      <h2 style="color:yellow" id="sub8">Part 8: Where Can I Get these Fonts?</h2>
+	      <p>All fonts below will render in <span style="font-family:'wingdings', Arial;color:#CCCCCC">Wingdings</span> (Wingdings) if you do not have them. If you don't have Wingdings, the Wingdings text left of the parenthesis (in gray) will render in Arial. Unless you don't have Arial. In which case you're on your own.</p>
+	      <p><span style="font-family:helvetica, Wingdings;color:#FFCCCC">Helvetica</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Helvetica">Wikipedia</a></p>
+	      <p><span style="font-family:arial,Wingdings;color:#CCFFCC">Arial</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Arial">Wikipedia</a></p>
+	      <p><span style="font-family:'comic sans ms', Wingdings;color:#CCCCFF">Comic Sans MS</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Comic_Sans">Wikipedia</a></p>
+	      <p><span style="font-family:papyrus, Wingdings;color:#AAFFFF">Papyrus</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Papyrus_(typeface)">Wikipedia</a></p>
+	      <p><span style="font-family:'MS Gothic', Wingdings;color:#FFCCFF">MS Gothic</span>  (Note: MS Gothic is Danmakufu's default font)</p>
+	      <p><span style="font-family:'Verdana', Wingdings;color:#CCFFFF">Verdana</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Verdana">Wikipedia</a></p>
+	      <p><span style="font-family:'Courier', Wingdings;color:#FFAAFF">Courier</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Courier_(typeface)">Wikipedia</a></p>
+	      <p><span style="font-family:'Andale Mono', Wingdings;color:rgb(59,248,80)">Andale Mono</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Andale_Mono">Wikipedia</a></p>
+	      <p><span style="font-family:'Lucida Console', Wingdings;color:#CCCCCC">Lucida Console</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Lucida#Lucida_Console">Wikipedia</a></p>
+	      <p><span style="font-family:'Revue',Wingdings;color:#FFCC88">Revue</span> (Note: Revue is used in Touhou (10+) for the HUD difficulty text)</p>
+	      <p><span style="font-family:'Eurostile',Wingdings;color:#88FFCC">Eurostile</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Eurostile">Wikipedia</a></p>
+	      <p><span style="font-family:'Russell Square',Wingdings;color:rgb(224, 64, 192)">Russell Square Regular</span> (Note: Russell Square is used in Touhou (10+) for HUD boss names)</p>
+	      <p><span style="font-family:'Gill Sans', Wingdings;color:#FFFFCC">Gill Sans</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Gill_Sans">Wikipedia</a></p>
+	      <p><span style="font-family:'Futura', Wingdings;color:#AACCFF">Futura</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/Futura_(typeface)">Wikipedia</a></p>
+	      <p><span style="font-family:'DIN Alternate','DIN 1451','DIN','Alte DIN 1451 Mittelschrift', Wingdings;color:#AAFFCC">DIN 1451</span> - <a target="_blank" href="https://en.wikipedia.org/wiki/DIN_1451">Wikipedia</a></p>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
@@ -136,7 +227,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Feb 01, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Feb 05, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
@@ -144,5 +235,6 @@
         </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script type="text/javascript" src="javascript/U2L17Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
