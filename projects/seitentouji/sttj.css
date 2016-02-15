@@ -182,6 +182,14 @@ p, fieldset, table, pre {
   margin-left:1%;
 }
 
+.pixelimg {
+    image-rendering: -moz-crisp-edges;         /* Firefox */
+    image-rendering:   -o-crisp-edges;         /* Opera */
+    image-rendering: -webkit-optimize-contrast;/* Webkit (non-standard naming) */
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
+}
+
 /*SeitenTouji stuff*/
 
 .sttjnavbar{
@@ -268,7 +276,7 @@ p, fieldset, table, pre {
   border: 1px solid #AAAAAA;
   background-color: #f9f9f9;
   color: black;/*Color of the text*/
-  margin: 0.5em 0 0.5em 1em;
+  margin: 0.5em -0.5em 0.5em 0.5em;
   padding: 0.5em;
   float: right;
   clear: right;
@@ -276,7 +284,7 @@ p, fieldset, table, pre {
   text-align:left; 
   font-size:88%; 
   line-height:1.5em;
-  max-width: 300px;
+  width: 300px;
 }
 
 .sttjbiotablenameheader{/*th*/
