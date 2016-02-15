@@ -47,7 +47,7 @@
 	      <p>In this lesson, I will introduce shotsheets as well as blend types, and will explain the properties of bullets as well as the ObjMove and ObjRender functions that can be used with them</p>
 	      <p>Although seemingly disjoint from the rest of the tutorials, I will be providing basic information on graphics in Danmakufu, and will also explain how I (and quite a few other) danmakufu scripters choose to load our shotsheets.</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: What are Shotsheets and Shot Constant Sheets?</h2>
-	      <p>By now, you should be familiar with the presence of <code>#include"script/default_system/Default_ShotConst.txt"</code> at the top of our Single scripts. If you remove this while firing shots in the script, you will get errors stating that some final constant in all caps has not been defined. Here I will provide a brief explanation for how this works, as well as shotsheets themselves.</p>
+	      <p>By now, you should be familiar with the presence of <code>#include "script/default_system/Default_ShotConst.txt"</code> at the top of our Single scripts. If you remove this while firing shots in the script, you will get errors stating that some final constant in all caps has not been defined. Here I will provide a brief explanation for how this works, as well as shotsheets themselves.</p>
 	      <p>First we will observe the Default_ShotConst.txt file in the default system, which is a shot constant file we have included. A shot constant sheet is a file that references an image containing shots (which it loads, along with an associated shotsheet), and contains a list of final constants which can be used to reference the numerical IDs of bullets defined in the shotsheet. As for the include, an include basically takes the contents of the included file and spills them into the script calling #include, specifically at the place where the #include was.</p>
 	      <pre class="prettyprint linenums"><code>local
 {
@@ -258,7 +258,7 @@ loop(15){
 		<br>
 		<p>6) Write code to rotate a shot graphic such that it makes a full rotation after 37 frames.</p>
 		<p>Hit 'Show' to show possible answers.</p>
-	        <textarea rows="10" cols="75">task RotateShot(obj){
+	        <textarea rows="10" style="width:100%;max-width:640px">task RotateShot(obj){
     //Feel free to write your own local variables here
     while(!Obj_IsDeleted(obj)){
         //Insert Code here
@@ -304,7 +304,7 @@ loop(15){
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Feb 14, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
