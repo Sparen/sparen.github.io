@@ -114,7 +114,7 @@
     }
 
     task movement{
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
+        while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
             ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90, GetCenterX - 90), rand(GetCenterY - 90, GetCenterY - 150), 60);
             wait(360);
         }

@@ -69,14 +69,14 @@ task MainTask{
 }
 
 task movement{
-    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
-        ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90,GetCenterX - 90), rand(GetCenterY - 60,GetCenterY - 120), 60);
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
+        ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90, GetCenterX - 90), rand(GetCenterY - 60, GetCenterY - 120), 60);
         wait(240);
     }
 }
 
 task fireA{
-    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
         let angleT = GetAngleToPlayer(objBoss);
         ascent(i in -1..2){
             ascent(j in 0..3){
@@ -88,7 +88,7 @@ task fireA{
 }
 
 task fireB{
-    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
         let angleT = GetAngleToPlayer(objBoss);
         loop(13){
             ascent(i in 0..3){

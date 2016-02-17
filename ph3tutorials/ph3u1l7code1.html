@@ -72,8 +72,8 @@ task MainTask{
 }
 
 task movement{
-    while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
-        ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90,GetCenterX - 90), rand(GetCenterY - 60,GetCenterY - 120), 60);
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
+        ObjMove_SetDestAtFrame(objBoss, rand(GetCenterX + 90, GetCenterX - 90), rand(GetCenterY - 60, GetCenterY - 120), 60);
         wait(240);
     }
 }
