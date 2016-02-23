@@ -255,6 +255,22 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   border-width: 2px;
   border-color: #00AADD;
 }
+
+.tutorialnav a{
+  list-style-type: none;
+  display:inline-block;
+  width: 80%;
+  font-weight: bold;
+  background-color: #002030;
+  padding: 4px;
+  text-decoration: none;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #00AADD;
+}
+.tutorialnav a:hover{
+  background-color: #003344;
+}
 /*END MENUS BY SPAREN*/
 
 /* CSS @media overrides. 468 is the largest an iPhone can do  */
