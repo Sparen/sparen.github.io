@@ -36,11 +36,88 @@
 	          <li><a href="#sub3">Part 3: What are the Differences between Functions, Tasks, and Subroutines?</a></li>
 	          <li><a href="#sub4">Part 4: What are Function Libraries?</a></li>
 	          <li><a href="#sub5">Part 5: How Do I Use #include?</a></li>
+	          <li><a href="#sub6">Part 6: How do #include statements within #included files work?</a></li>
 	          <li><a href="#quiz1">Quiz: #include</a></li>
+	          <li><a href="#sub7">Part 7: What is Documentation and Why Should (or Shouldn't) I Use It?</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss in great detail functions, subroutines, and function libraries. This lesson assumes that you have read and are familiar with the contents of <a href="./ph3u1l5.html">Lesson 5</a>. <a href="./ph3u2l15.html">Lesson 15</a> is also recommended reading.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: What are Functions?</h2>
+	      <p>Back in Lesson 5, we introduced functions. In Danmakufu ph3, all functions have names - there are built-in functions and of course, user-defined functions. Built-in functions such as <code>GetCurrentScriptDirectory</code> are in CamelCase (PascalCase, to be exact). User defined functions can be literally anything that isn't a reserved keyword.</p>
+	      <p>Functions may take parameters - they're optional but may be useful depending on the usage of the function. Functions may also return values or simply return nothing. They are also executed in the main thread - the next chunk of code will not execute until the function has finished execution. However, since <code>yield;</code> is rarely used inside functions, this is not a major problem and will go unnoticed for the most part.</p>
+	      <p>As a reminder, in this tutorial (and in many other resources for general computer science), functions are addressed by functionname(), where the parentheses hold any parameters the function may have.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: What are the Differences between Functions, Tasks, and Subroutines?</h2>
+	      <p>We've gone over functions and tasks before, but we will now discuss tasks in the context of libraries. We will also have a brief introduction to subroutines, which are not generally useful until you begin larger scale projects.</p>
+	      <p>As stated in Lesson 5, tasks, or coroutines, are similar to functions except that they run in parallel to the @MainLoop(s) and each other. Tasks are good for organizing code by taking large chunks of code and labeling them with descriptive names, and they are useful in script flow and control. Tasks are used for a large variety of things, from timing sound effects to repeating code while the boss is alive, etc.</p>
+	      <p>Tasks cannot return values, and can be broken out of using return;, which will immediately stop execution of a task. Since they run in parallel (tasks run after @MainLoop has run due to the yield; in @MainLoop), they can access changing values with scope that is global with respect to the task, and can respond accordingly.</p>
+	      <p>And now we reach subroutines. Subroutines are created in a similar way to functions and tasks - you say <code>sub name {}</code> and voila. However, subroutines have a number of limitations - they cannot take parameters and, like functions, they run in series with the code block that called them, effectively making them functions with less power. However, their strength lies in code organization, as you can store commonly used code in subroutines to reduce code redundancy (though this is the same of tasks and functions).</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: What are Function Libraries?</h2>
+	      <p>So now that we have a brief understanding of functions, tasks, and subroutines, it's time that we looked at function libraries and #includes.</p>
+	      <p>Back in lesson 5 Part 7, we created our first function.</p>
+	      <pre class="prettyprint"><code>function wait(n){loop(n){yield;}}</code></pre>
+	      <p>This function ended up being shoved in the end of every script we wrote in Lesson 7, along with some other user-defined functions we made. However, this meant that if we had 100 attacks done the same way, we'd have 100 copies of each of these functions! And what would happen if we made a mistake in one of them but realized after we had already made dozens of different attacks? Well, we'd have to go back and individually change each and every one of them.</p>
+	      <p>This is where libraries come in handy. You can use one library and define the functions in one place, and then 'include' those libraries in multiple scripts. Libraries are not the only things that can be included. We've included Shot Constant sheets, for example. And you can put pretty much anything in a file and include that file elsewhere. We'll get into some of the quirks in the next part, but for now, let's do some examples.</p>
+	      <p>First, let's create a directory called 'lib' in one of your script folders. (If you do not yet do so, I suggest having separate folders for music, sound effects, scripts, and images as well). Inside this 'lib' folder, let's create 'lib_general.dnh'. And inside that file, let's paste the following:</p>
+	      <pre class="linenums prettyprint"><code>function GetCenterX(){
+    return GetStgFrameWidth() / 2;
+}
+function GetCenterY(){
+    return GetStgFrameHeight() / 2;
+}
+function wait(n){
+     loop(n){yield;}
+}</code></pre>
+	      <p>You may recognize these three functions - in fact, you definitely should since you should have been using them.</p>
+	      <p>Now, let's say you have a Single script called boss_ns1.txt, located in the same directory as lib. Now, after the Danmakufu Header, let's include the following:</p>
+	      <pre class="prettyprint"><code>#include "./lib/lib_general.dnh"</code></pre>
+	      <p>You do not need a semicolon at the end of the line. You do not need a space between #include and the first quotation mark - in other words:</p>
+	      <pre class="prettyprint"><code>#include"./lib/lib_general.dnh" //This is also valid but is not preferred</code></pre>
+	      <p>Now, if wait(), GetCenterX(), and GetCenterY() have already been defined in the Single script, running it will bring up an error about functions already existing with the same name. This is because when we #include lib_general.dnh, the three functions have been defined, but when Danmakufu reaches the end of the Single script, it find duplicates. Remove the duplicated functions (the versions in the Single script).</p>
+	      <p>Congratulations! You have created and included your first function library!</p>
+	      <div class="tut_exercise">EXERCISE: If you have yet to actually move general purpose functions such as wait() into a library, go and do it now.</div>
+	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Use #include?</h2>
+	      <p>Most of the time, you will want to include multiple libraries in a single script. For example, you may have a cutin library for spellcard cutins. So now it's a good idea to elaborate on the peculiarities of #include.</p>
+	      <p>Firstly, pathing. When using #include, you move forwards and backwards in the file system using standard pathing notation, but you CANNOT use functions such as <code>GetCurrentScriptDirectory()</code> in the #include line - you use './' instead to point to the current directory. In the same way, to go back a directory, you use the standard '../'. So if boss_ns1.txt was located in a script directory in the same folder as lib, we would have used the following:</p>
+	      <pre class="prettyprint"><code>#include "./../lib/lib_general.dnh"</code></pre>
+	      <p>Next is the issue of multiple includes in the same file. We will discuss dependencies in the next part of this lesson.</p>
+	      <p>As shown above, we can easily have conflicts between libraries. But what if two libraries separately define GetCenterX() or something similar? Well, if the functions defined individually are the same, the best option is to first include your general purpose function library, and then include the more specialized library. In this case, the more specialized library's copy of the function will be removed. To be more specific, the order of #includes in a script determines which included files have access to contents of other included files. If you do this:</p>
+	      <pre class="prettyprint"><code>#include "./../lib/lib_general.dnh"
+#include "./../lib/lib_cutin.dnh"</code></pre>
+	      <p>...then lib_cutin will be able to access the contents of lib_general. HOWEVER, lib_general will NOT be able to access the contents of lib_cutin. This is in contrast to other programming languages, and there are many more peculiarities with this system as well. For example, accessing global variables located in a script in an included file.  In general, simply do not do this. Libraries should not depend on variables defined inside a script. If you want to get the boss scene within a library, use <code>GetEnemyBossSceneObjectID()</code> within the library instead of referencing the objScene variable in the script. Want to get the boss HP? Pass the boss object as a parameter to the relevant function in the library, like we did for BulletCommand tasks in earlier lessons. For example:</p>
+	      <pre class="linenums prettyprint"><code>/* *************************************************************************
+*BulletDeleteEffect(obj) -- Creates a shot deletion effect
+*Param: objparent (obj) - Shot Object to render effect at
+************************************************************************* */
+task BulletDeleteEffect(objparent){
+    let path = GetCurrentScriptDirectory~"./img/bulletdelete.png";
+    let obj = ObjPrim_Create(OBJ_SPRITE_2D);
+    ObjPrim_SetTexture(obj, path);
+    ObjRender_SetPosition(obj, ObjMove_GetX(objparent), ObjMove_GetY(objparent), 1);
+    ObjRender_SetBlendType(obj, BLEND_ADD_ARGB);
+    ObjRender_SetScaleXYZ(obj, 0.5, 0.5, 0);
+    if(ObjShot_GetImageID(objparent) <= 0){return;}
+    let shotinfo = GetShotDataInfoA1(ObjShot_GetImageID(objparent), TARGET_ENEMY, INFO_DELAY_COLOR);
+    ObjRender_SetColor(obj, shotinfo[0], shotinfo[1], shotinfo[2]);
+    ascent(i in 0..8){
+        ObjSprite2D_SetSourceRect(obj, i*64, 0, (i + 1)*64, 64);
+        ObjSprite2D_SetDestCenter(obj);
+        loop(5){yield;}
+    }
+    Obj_Delete(obj);
+}</code></pre>
+	      <p>The above is a sample Bullet Delete Effect task, which is located within a function library. Note that it takes a parameter objparent (a Shot Object in this case), where this parameter is used for things such as object position. Although it may seem obvious to do this for a shot object, which can be any object, the same applies for enemy objects and boss objects - if you were to reference the enemy boss within a function library, there would be problems if there was no boss, for example.</p>
+	      <p>To close this part of the lesson, we will conclude with the most painful part of #include files - the usage of <code>GetCurrentScriptDirectory()</code> WITHIN an included file. In 0.12m, it would use the path of the script that included the #include file. In ph3 however, <code>GetCurrentScriptDirectory()</code> uses the path to the included file. In other words, if you wanted to reference an image event_reimuhappy.png in the img folder from lib_dialogue.dnh located in the lib directory, where lib_dialogue.dnh was included by a Stage script in the same directory as both lib and img, you would use the following code:</p>
+	      <pre class="prettyprint"><code>//In the Stage script
+#include "./lib/lib_dialogue.dnh"
+
+//In the Dialogue Library
+let pathReimu = GetCurrentScriptDirectory() ~ "../img/event_reimuhappy.png";</code></pre>
+	      <p>And that about covers the absolute basics for non-nested include statements.</p>
+	      <h2 style="color:yellow" id="sub6">Part 6: How do #include statements within #included files work?</h2>
+	      <p></p>
+	      <p></p>
+	      <p></p>
 	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: Text Vs Image Vs Sprite List</h2>
 	        <!--Quiz start.-->
@@ -68,7 +145,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Feb 17, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Feb 25, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
