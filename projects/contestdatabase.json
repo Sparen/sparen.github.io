@@ -222,7 +222,7 @@
             "loc_category": "locaa",
             "name": "locaa2",
             "year": 2012,
-            "duration": [-1, 2012.10],
+            "duration": [2012.08, 2012.10],
             "host": "",
             "judges": [],
             "numparticipants": 3,
