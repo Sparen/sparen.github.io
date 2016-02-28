@@ -39,6 +39,7 @@
 	          <li><a href="#sub6">Part 6: How do #include statements within #included files work?</a></li>
 	          <li><a href="#quiz1">Quiz: #include</a></li>
 	          <li><a href="#sub7">Part 7: What is Documentation and Why Should (or Shouldn't) I Use It?</a></li>
+	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
@@ -75,6 +76,7 @@ function wait(n){
 	      <pre class="prettyprint"><code>#include"./lib/lib_general.dnh" //This is also valid but is not preferred</code></pre>
 	      <p>Now, if wait(), GetCenterX(), and GetCenterY() have already been defined in the Single script, running it will bring up an error about functions already existing with the same name. This is because when we #include lib_general.dnh, the three functions have been defined, but when Danmakufu reaches the end of the Single script, it find duplicates. Remove the duplicated functions (the versions in the Single script).</p>
 	      <p>Congratulations! You have created and included your first function library!</p>
+	      <p>Note: tasks are often grouped together in libraries as well. Additionally, it is better to have more smaller functions/tasks that do simpler jobs than to have gigantic functions/tasks that do numerous things.</p>
 	      <div class="tut_exercise">EXERCISE: If you have yet to actually move general purpose functions such as wait() into a library, go and do it now.</div>
 	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Use #include?</h2>
 	      <p>Most of the time, you will want to include multiple libraries in a single script. For example, you may have a cutin library for spellcard cutins. So now it's a good idea to elaborate on the peculiarities of #include.</p>
@@ -115,25 +117,106 @@ task BulletDeleteEffect(objparent){
 let pathReimu = GetCurrentScriptDirectory() ~ "../img/event_reimuhappy.png";</code></pre>
 	      <p>And that about covers the absolute basics for non-nested include statements.</p>
 	      <h2 style="color:yellow" id="sub6">Part 6: How do #include statements within #included files work?</h2>
-	      <p></p>
-	      <p></p>
-	      <p></p>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Text Vs Image Vs Sprite List</h2>
+	      <p>Once you start building more and more libraries, it becomes more and more of a pain to manually include every file individually. Additionally, packages do not allow you to use certain object types and functions on those types are undefined. You will be forced to create separate libraries when you build larger projects, both to enhance readability (and to make it easier to find things) and to separate what is used where.</p>
+	      <p>One way to deal with all of these problems is to have certain function libraries #include other libraries as dependencies. However, this has its fair share of problems, which I will get into.</p>
+	      <p>What is a dependency, though? Simply put, it's a library that is required for other libraries to function. In other words, if a dialogue library requires GetCenterY(), and lib_general.dnh contains that function, lib_general.dnh can be considered a dependency of the dialogue library. Anyways, #including files in #included files.</p>
+	      <p>First the benefits: If we have several function libraries that depend on the GetCenterX() function located in lib_general.dnh, for example. One method is, in the script using the libraries, to first #include lib_general.dnh and then #include the other libraries. But once you have 5 lines of include statements, this becomes problematic, especially if you decide to change one of the file names - you have to go through every place that #includes that file and manually fix the filenames.</p>
+	      <p>Now, alternatively you could create a file fxn_include.dnh that contains the following:</p>
+	      <pre class="prettyprint"><code>#include "./fxn_general.dnh"
+#include "./fxn_library1.dnh"
+...</code></pre>
+	      <p>Using the above, you could include one file - fxn_include.dnh - in your scripts in place of all of the individual #include statements. This makes it easier to debug when something goes wrong, and makes dependencies much easier in that the order in which you #include in the file is equivalent to the loading order, just as before. By keeping it all in one place, adding a dependency won't require you to change the order of your #include statements in every single script you use them in.</p>
+	      <p>However, there are the disadvantages - firstly that you can't access any global variables from a twice #included file and secondly that you will still need to differentiate between libraries that are #included in packages and libraries that can be #included anywhere. Dependencies may become problematic in this case.</p>
+	      <p>Still, if you have many different libraries, having files specifically to #include other files is good for organization and, if all the functions and tasks in your libraries are self-sufficient in terms of variables, it should work smoothly.</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: #include</h2>
 	        <!--Quiz start.-->
-		<p>1) Kanako is trying to make a stage opening image using the font <span style="font-family:'DIN Alternate','DIN 1451','DIN','Alte DIN 1451 Mittelschrift',arial;color:#AAFFCC">DIN 1451</span>. However, it's too standardized for her liking, and Suwako suggests pasting frogs everywhere on the text. Of course, they cannot change the font, so what is the best way to have both the frogs and text in harmony?</p>
-	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+		<p>1) Parsee is extremely jealous of Yamame's new function libraries, each of which contains parameterized tasks unique to specific ailments. Therefore, Parsee decides to take action and messes with something. Yamame returns the next day to find that although all the libraries are there and all the paths are correct, the program is pausing every time a new disease is called. What is the issue here?</p>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'C');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. Text Object<br>
+	        A. The incorrect files were #included<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. Image containing text<br>
+	        B. All of the tasks were changed to subroutines<br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. Sprite List only<br>
+	        C. All of the tasks were changed to functions<br>
 	        <input type="RADIO" value="D" name="cc">
-	        D. Text Object + Render Object(s)<br>
+	        D. Danmakufu is trying to load new boss scene objects<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
+		<p>2) Yuugi is trying to include a file located in the lib directory, but Danmakufu crashes. Code is below.</p>
+	        <pre class="prettyprint"><code>#include GetCurrentScriptDirectory() ~ "lib/fxn_general.dnh"</code></pre>
+		<p>What is her issue?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 5);">
+	        <input type="RADIO" value="A" name="cc">
+	        A. She should use './' instead of GetCurrentScriptDirectory()<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. GetCurrentScriptDirectory() should be in quotes<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. There should not be a space between #include and GetCurrentScriptDirectory()<br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. She should use '../' instead of GetCurrentScriptDirectory()<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+	      <h2 style="color:yellow" id="sub7">Part 7: What is Documentation and Why Should (or Shouldn't) I Use It?</h2>
+	      <p>To close this lesson, I would like to give some brief notes on Documentation and why you should (or should not) use it. Documentation is basically a way of explaining what your code does, but not like with simple single-line comments. Documentation is a standard way of telling users of your code (including yourself) what your code does, what it returns, etc. The Danmakufu Wiki's function list contains Documentation of all the functions in the language and what they do. Of course, you will want local documentation within your libraries themselves.</p>
+	      <p>So why would you perhaps not want to use it? Well, if you want to render your code incomprehensible to everyone else (and perhaps yourself in the future), then not having documentation is fine. If you code is 'self-documenting' (i.e. the names of your functions explain what they do), that's... frowned upon but done all the time in actual programming.</p>
+	      <p>Anyways, having documentation is a good idea. So let's get some examples.</p>
+	      <p>First, my sample sound library - <a target="_blank" href="https://github.com/TheLandOfCodesAndApertures/Sparen_Sound_Library/blob/master/FxnSFX.dnh">Link here</a></p>
+	      <p>As you can see, the top of the file has a large block comment. This block contains information about the author of the library as well as other relevant information (licenses, which version of a program it is used for, compatibility, dependencies, etc). Usage instructions have also been provided for this particular library.</p>
+	      <p>After this, before each function, we have a block comment with some contents. For example:</p>
+	      <pre class="prettyprint linenums"><code>/* *************************************************************************
+*obj SoundSFX(string) -- Loads a sound effect and creates a sound object for the given file path
+*Param: path (string) - File Path of sound file to use
+*Return: Object ID of created Sound Object, or null if invalid path
+************************************************************************* */</code></pre>
+	      <p>The first line of text contains a few things of note. First, the <code>obj SoundSFX(string)</code> portion. In many languages, it is customary to label functions this way - return type, then the function name with parameter types in parenthesis. After this there is a description of what the function does.</p>
+	      <p>After this, I have two lines for Param (parameters) and Return (return value), respectively. As before, Param has the name of a parameter followed by its type in parenthesis and then a description of the type. Return also has a description of the return value. Note that it was not obvious what the function did by the name and that it was also not obvious what the return value was. Without the documentation, it would be difficult for someone seeing the code for the first time to understand what the code did.</p>
+	      <p>Below is another example.</p>
+	      <pre class="prettyprint linenums"><code>/* ******************************************************************
+* Sparen's ObjMessageLog Library
+* For use with Touhou Danmakufu ph3
+* (C) Sparen of Iria 2015
+****************************************************************** */
+
+/* ******************************************************************
+* ObjMessageLog - An object that stores all message data and assists with writing it to the text box
+* Extends: ObjSprite2D
+* Extended by: N/A
+* Dependencies: lib_Text
+****************************************************************** */
+
+/* ******************************************************************
+* Constructors (ObjMessageLog)
+****************************************************************** */
+
+//Initializes a Message Log Object.
+//Param: N/A
+//Return: Object ID (int)
+function ObjMessageLog_Create(){
+    let obj = ObjPrim_Create(OBJ_SPRITE_2D);
+    Obj_SetValue(obj, "mlog_lines", 0);
+    Obj_SetValue(obj, "mlog_log", []);
+
+    ObjMessageLog_Manage(obj);
+    ObjMessageLog_Render(obj);
+
+    return obj;
+}</code></pre>
+	      <p>In this example, we once again have a block comment at the top with some basic information as well as another block comment describing dependencies. This is a custom render object class in Danmakufu, so it extends ObjSprite2D, and this information is clearly stated at top if the file.</p>
+	      <p>As for the first method, there is once again a description of what the function does, any possible parameters, and the return value.</p>
+	      <p>In the end, what kind of documentation you use does not really matter as long as it is consistent across a library and contains all the necessary information for someone to use your library without problems.</p>
+	      <p>In the next lesson, we will create a function library using what we have learned in the past few lessons.</p>
+	      <h2 style="color:yellow" id="subs">Summary</h2>
+	        <ul>
+	          <li>When a statement is called involving a function, the function will complete execution before the outer statement can continue.</li>
+	          <li>Libraries contain related functions and/or tasks in a single file</li>
+	          <li>Good libraries do not depend on external variables</li>
+	          <li>#include is used to utilize libraries and other text-based code assets. You cannot use functions inside of it.</li>
+	          <li>#include can be used within #included files</li>
+	          <li>The order in which files are #included matters if one requires functions defined in the other</li>
+	          <li>Documentation can be used to describe what exactly a function or task does.</li>
+	        </ul>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
@@ -145,7 +228,7 @@ let pathReimu = GetCurrentScriptDirectory() ~ "../img/event_reimuhappy.png";</co
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Feb 25, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Feb 28, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
@@ -153,5 +236,6 @@ let pathReimu = GetCurrentScriptDirectory() ~ "../img/event_reimuhappy.png";</co
         </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script type="text/javascript" src="javascript/U2L18Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
