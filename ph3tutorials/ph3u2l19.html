@@ -62,9 +62,72 @@
 	ObjSprite2D_SetDestRect(obj, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 }</code></pre>
 	      <p>What InitFrame() does is simple - it takes the STG_Frame graphic (see the file in question to get a better sense of what it is) and pastes it on the screen with the lowest render priority possible - 0. Since 0 is less than 0.2, the position is relative to the top left corner of the window. The assigned rects are SCREEN_WIDTH and SCREEN_HEIGHT, or 640 and 480 respectively (depending on what was set in your def file, if you use one). This pastes the entire thing neatly on the screen. The playing field is black in the STG_Frame - both black and transparent are perfectly fine for this.</p>
-	      <p>Besides changing the image, it is possible to change the size of the playing field as well. </p>
-	      <p></p>
-	      <p></p>
+	      <p>Besides changing the image, it is possible to change the size of the playing field as well. To do this, you will use the <code>SetStgFrame()</code> function, whose default values are (32, 16, 416, 464, 20, 80). The first four arguments are the left, top, right, and bottom of the playing field with respect to the top left corner of the window. The last two are the render priorities used as the boundaries for what is rendered with respect to the top left of the playing field. By default, render priorities between 20 and 80 will use the top left corner of the playing field as (0,0) and all others will use the top left corner of the window.</p>
+	      <p>It is highly suggested that you put <code>SetStgFrame()</code> in @Initialize of your system script.</p>
+	      <div class="tut_exercise">EXERCISE: Try and use SetStgFrame() to do fullscreen danmaku!</div>
+	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Obtain and Display Score, Lives, and Other Fields?</h2>
+	      <p>Now we will discuss all of the various fields that are on the screen - score, lives, bombs, and graze. We will also go over how to add more of these.</p>
+	      <p>Looking at the defaults, it becomes quite obvious that there is a text object for the words and a sprite list for the numbers. The text object is obviously customizable, and you can move it wherever you want. The text object can be substituted for an sprite if you want fancier effects.</p>
+	      <p>The sprite list can be substituted for text if you want to use your own font, or you can change the font in Default_SystemDigit.png to give custom pixel numbers. This is entirely up to you. Do note, however, that with a sprite list, you are manually positioning each individual sprite (each individual number). It is recommended that you study the examples in Default_System.txt if you want to continue using sprite lists for information such as score.</p>
+	      <p>But all of this is besides the point - the tasks that control the displays - TScore, TGraze, and so on, run for the entire duration of your script, terminating upon script completion. They all use a while loop for updating and a series of functions to obtain their data.</p>
+	      <p><code>GetScore()</code>, <code>GetGraze()</code>, <code>GetPlayerLife()</code>, and <code>GetPlayerSpell()</code> are all aptly named and return exactly what you think they will return. For the latter two, they return <strong>the amount remaining</strong>. In other words, if GetPlayerLife() returns 0, the player is still alive but has no lives remaining.</p>
+	      <p>So let's do some tweaking. To start, let's convert the sprite list to a text object.</p>
+	      <p>In the default system file, the following is used:</p>
+	      <pre class="prettyprint"><code>    let count = 2;
+
+    ...
+
+    let point = GetPlayerSpell();
+    point = min(point, 99);
+    let listNum = DigitToArray(point, count);</code></pre>
+	      <p>What this does is simple - count is the number of digits to show (in the case of player bombs, 2), and <code>min(point, 99)</code> makes sure that point never exceeds 99 on the display.</p>
+	      <p>For a text object, we can use <code>rtos()</code> instead of count and DigitToArray. What <code>rtos()</code> does is take a number and use the given format string to turn the number as a string. For example:</p>
+	      <pre class="prettyprint"><code>    let score = GetScore();
+    score = min(score, 9999999999999);
+    ObjText_SetText(objNum, rtos("0000000000000", score));</code></pre>
+	      <p>First, we get the score, and then we make sure the score to display is not greater than 9999999999999. Then we use rtos. If you take note of the number of 0s, it is the same as the number of 9s. Therefore, this ensures that our score will be rendered the way we want it. See <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Text_Functions#rtos">rtos</a> on the Danmakufu Wiki to see the formatters on the string.</p>
+	      <p>If we did <code>rtos("00000", 45)</code>, we would get "00045". Using the '.' is required if you want decimal points to be recognized.</p>
+	      <p>So using rtos, we can turn our number into a string and use a text object to display it. Of course, we are limited by the general limitations of text objects. For a more concrete example:</p>
+	      <pre class="prettyprint linenums"><code>task TGraze(){
+        let objGraze = ObjText_Create();
+        ObjText_SetText(objGraze, "Graze");
+        ObjText_SetFontSize(objGraze, 20);
+        ObjText_SetFontType(objGraze, "Fairview Regular");
+        ObjText_SetFontBold(objGraze, false);
+        ObjText_SetFontColorTop(objGraze, 255, 255, 255);
+        ObjText_SetFontColorBottom(objGraze, 255, 255, 255);
+        ObjText_SetFontBorderType(objGraze, BORDER_FULL);
+        ObjText_SetFontBorderColor(objGraze, 255, 128, 128);
+        ObjText_SetFontBorderWidth(objGraze, 2);
+        Obj_SetRenderPriority(objGraze, 0.01);
+        ObjRender_SetX(objGraze, 425);
+        ObjRender_SetY(objGraze, 199);
+
+        let objNum = ObjText_Create();
+        ObjText_SetText(objNum, "000000");
+        ObjText_SetFontSize(objNum, 20);
+        ObjText_SetFontType(objNum, "Helvetica");
+        ObjText_SetFontBold(objNum, true);
+        ObjText_SetFontColorTop(objNum, 255, 255, 255);
+        ObjText_SetFontColorBottom(objNum, 255, 255, 255);
+        ObjText_SetFontBorderType(objNum, BORDER_FULL);
+        ObjText_SetFontBorderColor(objNum, 0, 0, 0);
+        ObjText_SetFontBorderWidth(objNum, 2);
+        Obj_SetRenderPriority(objNum, 0.1);
+        ObjRender_SetX(objNum, 528);
+        ObjRender_SetY(objNum, 201);
+
+        while(true){
+                let score = GetGraze();
+                score = min(score, 999999);
+                ObjText_SetText(objNum, rtos("000000", score));
+                yield;
+        }
+}</code></pre>
+	      <p>Note that depending on your fonts, you may have to do some additional tweaks to align your text and numbers correctly, especially when using two different fonts for text and numbers.</p>
+	      <p>When using CommonData to store custom fields (e.g. high score, etc), you can use the same method as above to display them on the HUD.</p>
+	      <p>Now, it is also popular to use graphics for life and bombs. In this case, I recommend using an array of sprites or a sprite list. How you implement this is up to you, but determining which graphic to use is the hardest part. If you don't have life and bomb fragments, you can actually make one set of sprites to hold the 'empty' graphic (if you decide to use them at all), and have another set of sprites to hold the 'full' graphic, and toggle <code>Obj_SetVisible</code> to determine whether or not to display the 'full' graphic.</p>
+	      <p>I won't provide code here, but you can try it out for yourself. Just as a note, you will need to use CommonData in order to handle life fragments or bomb fragments. This of course will have a thorough explanation in a later tutorial.</p>
 	      <p></p>
 	      <p></p>
 	      <p></p>
