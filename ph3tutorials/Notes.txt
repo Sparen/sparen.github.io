@@ -19,7 +19,8 @@ L14-DNHArt 107 (Youmu - Conarnar)
 L15-DNHArt 103 (Youmu - Trickysticks)
 L16-DNHArt 110 (Mokou - Python)
 L17-DNHArt 117 (Pumpkin of the Afterlife - Lunarethic)
-L18-DNHART 99 (Letty X Lily - Lefkada)
+L18-DNHArt 99 (Letty X Lily - Lefkada)
+L19-DNHArt 120 (Mus Armus - Vigor)
 
 U3
 
