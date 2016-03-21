@@ -36,6 +36,7 @@
 	          <li><a href="#sub3">Part 3: How Do I Change the STG_Frame and Playing Field?</a></li>
 	          <li><a href="#sub4">Part 4: How Do I Obtain and Display Score, Lives, and Other Fields?</a></li>
 	          <li><a href="#sub5">Part 5: How Do I Set Custom Pause, EndScene, and ReplaySaveScenes?</a></li>
+	          <li><a href="#sub6">Part 6: How Do System Script Events Work?</a></li>
 	          <li><a href="#quiz1">Quiz: System Scripts</a></li>
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
@@ -44,6 +45,24 @@
 	      <p>In this lesson, I will discuss System scripts, which are run for the duration of any single, plural, or stage. They contain things that must be run across entire scripts such as the STG_Frame, contents of the HUD (player score, life, etc), and custom scripts. They are also excellent places to load fonts and shotsheets, as well as link Danmakufu .dat archives.</p>
 	      <p>This lesson requires knowledge of render and text objects and will also contain brief information on extend systems and the like, which will be revisited after CommonData has been introduced. For reference, please see <a href="./ph3u2l13.html">Lesson 13</a> and <a href="./ph3u2l17.html">Lesson 17</a> for 2D Sprites and Text, respectively.</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: What are System Scripts?</h2>
+	      <p>So, System Scripts. These scripts, linked to via #System in the Danmakufu Header, are executed when you begin the execution of a script. By default, if there is no #System specified in a script, Danmakufu will default to the system file provided in default_system. <strong>It is imperative that you do not mess around with these files and do not link to them using #System</strong>.</p>
+	      <p>We will begin by examining the existing contents of Default_System.txt in the context of making our own System script. Therefore, we will make a new directory called <code>system</code> in any script folder (so we will have img, lib, system, etc) and will copy all of the contents of default_system into that folder. You can leave out bgm - we won't be using it.</p>
+	      <p>Now, let's take your plural script, and in the Danmakufu header, add #System["path/to/system/file"] with the relative path from the plural to Default_System.txt in the quotes. For example, <code>#System["./../system/Default_System.txt"]</code>. This will force the plural to always load the system script in /system/ rather than the default. It is highly recommended that you also add #System to all of your Single scripts so that when you run them individually, the correct system script is loaded.</p>
+	      <p>Now that we have that done, let's take a look at the contents of Default_System.txt, and let's do some changes and edits.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Change the STG_Frame and Playing Field?</h2>
+	      <p>The first thing you will notice is that the system file is long - @Initialize calls a large number of tasks. Each of these handles a specific part of the HUD, such as the STG_Frame, Score, or the like.</p>
+	      <p>Let's begin with the first function called - InitFrame().</p>
+	      <pre class="prettyprint linenums"><code>function InitFrame()
+{
+	let path = GetCurrentScriptDirectory() ~ "img/Default_SystemBackground.png";
+	let obj = ObjPrim_Create(OBJ_SPRITE_2D);
+	ObjPrim_SetTexture(obj, path);
+	Obj_SetRenderPriority(obj, 0);
+	ObjSprite2D_SetSourceRect(obj, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+	ObjSprite2D_SetDestRect(obj, 0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
+}</code></pre>
+	      <p>What InitFrame() does is simple - it takes the STG_Frame graphic (see the file in question to get a better sense of what it is) and pastes it on the screen with the lowest render priority possible - 0. Since 0 is less than 0.2, the position is relative to the top left corner of the window. The assigned rects are SCREEN_WIDTH and SCREEN_HEIGHT, or 640 and 480 respectively (depending on what was set in your def file, if you use one). This pastes the entire thing neatly on the screen. The playing field is black in the STG_Frame - both black and transparent are perfectly fine for this.</p>
+	      <p>Besides changing the image, it is possible to change the size of the playing field as well. </p>
 	      <p></p>
 	      <p></p>
 	      <p></p>
@@ -95,7 +114,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Mar 20, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 21, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
