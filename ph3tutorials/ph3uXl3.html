@@ -27,6 +27,7 @@
 	          <li><a href="#sub1">Control over Distribution</a></li>
 	          <li><a href="#sub2">Asset Protection</a></li>
 	          <li><a href="#sub3">Code Structure and Protection</a></li>
+	          <li><a href="#sub4">Using FileArchiver.exe</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Control over Distribution</h2>
 	      <p>To begin, let's go over distribution. There a number of channels for distribution of a Danmakufu Project. Bulletforge, Mediafire, and Dropbox are very common resources. However, each of these sources has its own pros and cons.</p>
@@ -47,9 +48,38 @@
 	      <p><b>Licensing</b> or clearly stating in a README whether or not your code can be copied, altered, and/or reproduced is absolutely necessary. If there is none of this in a released script, you as creator have significantly less control over what happens if/when someone takes and reuses your code. We learn from each other and we tend to ask permission, but language barriers and ignorance of code theft (especially in the case of danmaku patterns) will always happen.</p>
 	      <p><b>Archiving</b> using the Danmakufu archiver is a powerful way to protect your publicly released code. However, besides the need to keep your own backup, it is technically possible to pull code from the archive (though incredibly difficult and time-consuming).</p>
 	      <p><b>Obfuscation</b> is another way to protect your code. Tools such as <a target="_blank" href="https://github.com/Sparen/DanmakufuObfuscator">my Danmakufu Obfuscator</a> provide ways to make your code illegible to most people. My tool has documentation removal and white space removal functionalities only - changing names of variables and functions is not feasible due to Danmakufu's include system.</p>
-	      <p>Overall, what you do is up to you, but I hope that you have a better understanding of how you can protect your code and assets. Thank you for reading.</p>
+	      <p>Overall, what you do is up to you, but I hope that you have a better understanding of how you can protect your code and assets.</p>
+	      <h2 style="color:yellow" id="sub4">Using FileArchiver.exe</h2>
+	      <p>FileArchiver.exe is located in the tools/ directory of your copy of Danmakufu ph3. For the purposes of explaining, we will assume the following type of file structure, with a folder specifically for images:</p>
+	      <pre>--ScriptName/
+  |--img/
+  |  |--sprite.png
+  |  |--cutin.png
+  |  |--otherimage.png
+  |--lib/
+  |--script/
+  |--sound/
+  |--system/</pre>
+	      <p>We will be compressing the contents of img/ using FileArchiver.exe. First, open the program. The UI is as follows:</p>
+	        <img class="pixelimg" alt="DNH File Archiver GUI" src="tutimg/uXl3img1.png" style="max-width:632px;width:100%;height:auto"><br><br>
+	      <p>The main box with File, Directory, and Path shows all the files to be placed in the archive.</p>
+	      <p>If you hit 'Add', you'll be able to navigate to the directory containing the files to add. Simply select all of the files that you want to be in the archive, and click 開く (Open) to add the files to the list of files to archive. キャンセル can be used to cancel. ファイル名 (Name) states the name of the file, and ファイルの種類 specifies the type of file (.png, etc).</p>
+	        <img class="pixelimg" alt="DNH File Archiver GUI" src="tutimg/uXl3img2.png" style="max-width:632px;width:100%;height:auto"><br><br>
+	      <p>Once you've hit 開く, you get the following:</p>
+	        <img class="pixelimg" alt="DNH File Archiver GUI" src="tutimg/uXl3img3.png" style="max-width:632px;width:100%;height:auto"><br><br>
+	      <p>Now you can choose to remove files from this list if you choose, or do something else. Or you can hit Start Archive to create the archive. It will prompt you for a location to put your archive as well as a name for your .dat. In this case, we want our archive to be in the same directory as img/.</p>
+	        <img class="pixelimg" alt="DNH File Archiver GUI" src="tutimg/uXl3img4.png" style="max-width:632px;width:100%;height:auto"><br><br>
+	      <p>Once the archiving has finished, you will get a success message.</p>
+	        <img class="pixelimg" alt="DNH File Archiver GUI" src="tutimg/uXl3img5.png" style="max-width:287px;width:100%;height:auto"><br><br>
+	      <p>At this point, the archive has been made. You can view it in the destination directory.</p>
+	        <img class="pixelimg" alt="DNH File Archiver GUI" src="tutimg/uXl3img6.png" style="max-width:632px;width:100%;height:auto"><br><br>
+	      <p>Note that the archive has actually compressed the files inside - in this case, 1.9 MB have been shaved off of the file size.</p>
+	      <p>Now, some things about archives - firstly, everything archived is case sensitive. If you referred to a file called Sprite_seiran.png as sprite_seiran.png, it will no longer work in the archive. <strong>The filepaths in the .dat archive are case sensitive</strong>. Secondly, we are placing the archive one directory ABOVE where the images used to be - in this case, in the same folder as img/. This is because when you archive files, the filepath is saved - assuming you archived all of the contents of img/ in imgarchive.dat, you are free to remove the img/ directory entirely, and all of your filepaths using img/ will still work!</p>
+	      <p>As for loading archives, please be advised that you can only load an archive once. So if you're doing a package, load it in the package. Otherwise, load it at the top of your system script.</p>
+	      <p>And that's basically it. Thanks for reading!</p>
+	      <p></p>
 	      <br>            </div>          </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Jan 25, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 23, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
