@@ -89,47 +89,58 @@
 	      <p>If we did <code>rtos("00000", 45)</code>, we would get "00045". Using the '.' is required if you want decimal points to be recognized.</p>
 	      <p>So using rtos, we can turn our number into a string and use a text object to display it. Of course, we are limited by the general limitations of text objects. For a more concrete example:</p>
 	      <pre class="prettyprint linenums"><code>task TGraze(){
-        let objGraze = ObjText_Create();
-        ObjText_SetText(objGraze, "Graze");
-        ObjText_SetFontSize(objGraze, 20);
-        ObjText_SetFontType(objGraze, "Fairview Regular");
-        ObjText_SetFontBold(objGraze, false);
-        ObjText_SetFontColorTop(objGraze, 255, 255, 255);
-        ObjText_SetFontColorBottom(objGraze, 255, 255, 255);
-        ObjText_SetFontBorderType(objGraze, BORDER_FULL);
-        ObjText_SetFontBorderColor(objGraze, 255, 128, 128);
-        ObjText_SetFontBorderWidth(objGraze, 2);
-        Obj_SetRenderPriority(objGraze, 0.01);
-        ObjRender_SetX(objGraze, 425);
-        ObjRender_SetY(objGraze, 199);
+    let objGraze = ObjText_Create();
+    ObjText_SetText(objGraze, "Graze");
+    ObjText_SetFontSize(objGraze, 20);
+    ObjText_SetFontType(objGraze, "Fairview Regular");
+    ObjText_SetFontBold(objGraze, false);
+    ObjText_SetFontColorTop(objGraze, 255, 255, 255);
+    ObjText_SetFontColorBottom(objGraze, 255, 255, 255);
+    ObjText_SetFontBorderType(objGraze, BORDER_FULL);
+    ObjText_SetFontBorderColor(objGraze, 255, 128, 128);
+    ObjText_SetFontBorderWidth(objGraze, 2);
+    Obj_SetRenderPriority(objGraze, 0.01);
+    ObjRender_SetX(objGraze, 425);
+    ObjRender_SetY(objGraze, 199);
 
-        let objNum = ObjText_Create();
-        ObjText_SetText(objNum, "000000");
-        ObjText_SetFontSize(objNum, 20);
-        ObjText_SetFontType(objNum, "Helvetica");
-        ObjText_SetFontBold(objNum, true);
-        ObjText_SetFontColorTop(objNum, 255, 255, 255);
-        ObjText_SetFontColorBottom(objNum, 255, 255, 255);
-        ObjText_SetFontBorderType(objNum, BORDER_FULL);
-        ObjText_SetFontBorderColor(objNum, 0, 0, 0);
-        ObjText_SetFontBorderWidth(objNum, 2);
-        Obj_SetRenderPriority(objNum, 0.1);
-        ObjRender_SetX(objNum, 528);
-        ObjRender_SetY(objNum, 201);
+    let objNum = ObjText_Create();
+    ObjText_SetText(objNum, "000000");
+    ObjText_SetFontSize(objNum, 20);
+    ObjText_SetFontType(objNum, "Helvetica");
+    ObjText_SetFontBold(objNum, true);
+    ObjText_SetFontColorTop(objNum, 255, 255, 255);
+    ObjText_SetFontColorBottom(objNum, 255, 255, 255);
+    ObjText_SetFontBorderType(objNum, BORDER_FULL);
+    ObjText_SetFontBorderColor(objNum, 0, 0, 0);
+    ObjText_SetFontBorderWidth(objNum, 2);
+    Obj_SetRenderPriority(objNum, 0.1);
+    ObjRender_SetX(objNum, 528);
+    ObjRender_SetY(objNum, 201);
 
-        while(true){
-                let score = GetGraze();
-                score = min(score, 999999);
-                ObjText_SetText(objNum, rtos("000000", score));
-                yield;
-        }
+    while(true){
+        let score = GetGraze();
+        score = min(score, 999999);
+        ObjText_SetText(objNum, rtos("000000", score));
+        yield;
+    }
 }</code></pre>
 	      <p>Note that depending on your fonts, you may have to do some additional tweaks to align your text and numbers correctly, especially when using two different fonts for text and numbers.</p>
 	      <p>When using CommonData to store custom fields (e.g. high score, etc), you can use the same method as above to display them on the HUD.</p>
 	      <p>Now, it is also popular to use graphics for life and bombs. In this case, I recommend using an array of sprites or a sprite list. How you implement this is up to you, but determining which graphic to use is the hardest part. If you don't have life and bomb fragments, you can actually make one set of sprites to hold the 'empty' graphic (if you decide to use them at all), and have another set of sprites to hold the 'full' graphic, and toggle <code>Obj_SetVisible</code> to determine whether or not to display the 'full' graphic.</p>
 	      <p>I won't provide code here, but you can try it out for yourself. Just as a note, you will need to use CommonData in order to handle life fragments or bomb fragments. This of course will have a thorough explanation in a later tutorial.</p>
-	      <p></p>
-	      <p></p>
+	      <div class="tut_exercise">EXERCISE: Rearrange the contents of the HUD. What works best? What looks good? Take note of how text color and the color of the STG_Frame worth together.</div>
+	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Set Custom Pause, EndScene, and ReplaySaveScenes?</h2>
+	      <p>System Scripts are used across an entire script - usually, the same system script is linked in every single script in a project. Therefore, numerous things that must run regardless of the script are handled here - including but not limited to preloading shotsheets, custom item scripts, and the big three: Pause, EndScene, and ReplaySaveScene scripts.</p>
+	      <p>You will want to replace these or at the very least modify them. To start, the Pause and EndScene scripts are in Japanese, and the ReplaySaveScreen has a number of annoying flaws. Additionally, you will probably want to change the fonts and colors.</p>
+	      <p>We will go over how to modify these scripts in a later tutorial, but linking your new ones is quite simple.</p>
+	      <p>Basically, go to @Initialize, and add the following:</p>
+	      <pre class="prettyprint"><code>    SetPauseScriptPath(GetCurrentScriptDirectory() ~ "./Pause.dnh");
+    SetEndSceneScriptPath(GetCurrentScriptDirectory() ~ "./EndScene.dnh");
+    SetReplaySaveSceneScriptPath(GetCurrentScriptDirectory() ~ "./ReplaySaveScene.dnh");</code></pre>
+	      <p>These three functions tell Danmakufu to use your custom Pause, EndScene, and ReplaySaveScene scripts instead of the copies found in default_system. I highly recommend using these functions and linking to a local set of the three scripts, even if you don't do any heavy edits. As a general rule of thumb, don't edit default_system - have a local system folder in each script and link to that instead.</p>
+	      <h2 style="color:yellow" id="sub6">Part 6: How Do System Script Events Work?</h2>
+	      <p>System Scripts are often used to control a number of things such as the boss lifebar, boss timer, and he like. The @Event of a system script also handles what happens when you start and capture a spellcard using the events EV_START_BOSS_SPELL and EV_GAIN_SPELL. Though you are free to put these in any @Event anywhere, they are usually consistent throughout the entire script and as a result, it is highly recommended that you use them in your system script.</p>
+	      <p>EV_START_BOSS_SPELL runs at the start of a spellcard. It is commonly used to play sound effects at the start of all spells and for ant effects not in the cutin library. EV_GAIN_SPELL is commonly used to play sound effects upon spell capture and perform any other things done at that time such as displaying the spellcard bonus. In a much earlier tutorial, we awarded spellcard bonuses using TFinalize. Handling it in this event in the system script is highly recommended, especially if you are copy-pasting the spellcard bonus award code in each script.</p>
 	      <p></p>
 	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: System Scripts</h2>
@@ -177,7 +188,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Mar 21, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 23, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>

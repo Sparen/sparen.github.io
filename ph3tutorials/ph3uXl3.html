@@ -75,11 +75,9 @@
 	        <img class="pixelimg" alt="DNH File Archiver GUI" src="tutimg/uXl3img6.png" style="max-width:632px;width:100%;height:auto"><br><br>
 	      <p>Note that the archive has actually compressed the files inside - in this case, 1.9 MB have been shaved off of the file size.</p>
 	      <p>Now, some things about archives - firstly, everything archived is case sensitive. If you referred to a file called Sprite_seiran.png as sprite_seiran.png, it will no longer work in the archive. <strong>The filepaths in the .dat archive are case sensitive</strong>. Secondly, we are placing the archive one directory ABOVE where the images used to be - in this case, in the same folder as img/. This is because when you archive files, the filepath is saved - assuming you archived all of the contents of img/ in imgarchive.dat, you are free to remove the img/ directory entirely, and all of your filepaths using img/ will still work!</p>
-	      <p>As for loading archives, please be advised that you can only load an archive once. So if you're doing a package, load it in the package. Otherwise, load it at the top of your system script. For example:</p>
-	      <pre class="prettyprint"><code>AddArchiveFile(GetCurrentScriptDirectory() ~ "../imgarchive.dat"); //In system script located in system/
-
-@Initialize{
-...</code></pre>
+	      <p>Additionally, note that the file archiver preserves the original files. If you don't remove the originals, Danmakufu will read from the original files even if you add the archive. So you should actually remove img/ from the script entirely (and keep it somewhere safe as a backup - <strong>always keep the originals as a backup</strong>).</p>
+	      <p>As for loading archives, please be advised that you can only load an archive once. So if you're doing a package, load it in the package. Otherwise, load it in your system script (recommended that you do it as the first line of @Initialize). The function is as follows:</p>
+	      <pre class="prettyprint"><code>AddArchiveFile(GetCurrentScriptDirectory() ~ "../imgarchive.dat"); //In system script located in system/</code></pre>
 	      <p>And that's basically it. Thanks for reading!</p>
 	      <p></p>
 	      <br>            </div>          </div>        </div>      </div>      <footer>
