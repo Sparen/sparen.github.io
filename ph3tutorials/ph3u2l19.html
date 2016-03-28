@@ -141,41 +141,64 @@
 	      <h2 style="color:yellow" id="sub6">Part 6: How Do System Script Events Work?</h2>
 	      <p>System Scripts are often used to control a number of things such as the boss lifebar, boss timer, and he like. The @Event of a system script also handles what happens when you start and capture a spellcard using the events EV_START_BOSS_SPELL and EV_GAIN_SPELL. Though you are free to put these in any @Event anywhere, they are usually consistent throughout the entire script and as a result, it is highly recommended that you use them in your system script.</p>
 	      <p>EV_START_BOSS_SPELL runs at the start of a spellcard. It is commonly used to play sound effects at the start of all spells and for ant effects not in the cutin library. EV_GAIN_SPELL is commonly used to play sound effects upon spell capture and perform any other things done at that time such as displaying the spellcard bonus. In a much earlier tutorial, we awarded spellcard bonuses using TFinalize. Handling it in this event in the system script is highly recommended, especially if you are copy-pasting the spellcard bonus award code in each script.</p>
-	      <p></p>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+	      <p>It is also common to have custom events in System scripts, but we will get into that at a much later time. <strong>Note:The default spellcard sound effect is not handled in the default system file, but in Default_System_MagicCircle.txt</strong>. If you want to change the default spell sound effect, I suggest using EV_START_BOSS_SPELL in the system file and removing the sound data from your local Magic Circle.</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: System Scripts</h2>
 	        <!--Quiz start.-->
-		<p>1) Parsee is extremely jealous of Yamame's new function libraries, each of which contains parameterized tasks unique to specific ailments. Therefore, Parsee decides to take action and messes with something. Yamame returns the next day to find that although all the libraries are there and all the paths are correct, the program is pausing every time a new disease is called. What is the issue here?</p>
-	        <form method="POST" onSubmit="return checkAnswerA1(this, 'C');">
-	        <input type="RADIO" value="A" name="cc">
-	        A. The incorrect files were #included<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. All of the tasks were changed to subroutines<br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. All of the tasks were changed to functions<br>
-	        <input type="RADIO" value="D" name="cc">
-	        D. Danmakufu is trying to load new boss scene objects<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
+		<p>1) Eirin comes up with a clever way to handle life fragments - she simply uses decimal points to handle them. Assuming that there are 5 fragments per life (0.2 lives per fragment), how would she handle a text object stating the amount of fragments needed to reach the next extend?</p>
+		<p>Hit 'Show' to show possible answers.</p>
+	        <textarea rows="12" style="width:100%;max-width:640px">    ...
+    // Assume objNum2 is the text object used to show the number of fragments needed
+    while(true){
+        let lives = GetPlayerLife();
+        lives = min(score, 9);
+        lives = max(score, 0);
+        ObjText_SetText(objNum2, "Next: " ~ "Fill in the code here");
+        yield;
+    }</textarea>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+	      <p>Suggested answer is below.</p>
+	      <pre class="prettyprint linenums"><code>    ...
+    // Assume objNum2 is the text object used to show the number of fragments needed
+    while(true){
+        let lives = GetPlayerLife();
+        lives = min(score, 9);
+        lives = max(score, 0);
+        ObjText_SetText(objNum2, "Next: " ~ rtos("0", 5 - 10*(lives - (truncate(lives)))));
+        yield;
+    }</code></pre>
+	        </div></div>
 		<br>
-		<p>2) Yuugi is trying to include a file located in the lib directory, but Danmakufu crashes. Code is below.</p>
-	        <pre class="prettyprint"><code>#include GetCurrentScriptDirectory() ~ "lib/fxn_general.dnh"</code></pre>
-		<p>What is her issue?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'A', 5);">
-	        <input type="RADIO" value="A" name="cc">
-	        A. She should use './' instead of GetCurrentScriptDirectory()<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. GetCurrentScriptDirectory() should be in quotes<br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. There should not be a space between #include and GetCurrentScriptDirectory()<br>
-	        <input type="RADIO" value="D" name="cc">
-	        D. She should use '../' instead of GetCurrentScriptDirectory()<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
+		<p>2) Write code to handle awarding of the spellcard bonus. Please set the last digit to 0 (as per convention). Only write code for the actual awarding of the score - not the display of the score on the screen.</p>
+		<p>Hit 'Show' to show possible answers.</p>
+	        <textarea rows="12" style="width:100%;max-width:640px">    alternative(GetEventType())
+    case(EV_START_BOSS_SPELL){
+        ...
+    }case(EV_GAIN_SPELL){
+        let objScene = GetEnemyBossSceneObjectID();
+        //Add your code here
+    }</textarea>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+	      <p>Suggested answer is below.</p>
+	      <pre class="prettyprint linenums"><code>    alternative(GetEventType())
+    case(EV_START_BOSS_SPELL){
+        ...
+    }case(EV_GAIN_SPELL){
+        let objScene = GetEnemyBossSceneObjectID();
+        let score = truncate(ObjEnemyBossScene_GetInfo(objScene, INFO_SPELL_SCORE) / 10) * 10;
+        if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT) + ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
+	    AddScore(score);
+	}
+    </code></pre>
+	        </div></div>
 		<br>
 	      <h2 style="color:yellow" id="subs">Summary</h2>
 	        <ul>
-	          <li></li>
+	          <li>System files are run at the start of a script and can run tasks common to an entire script.</li>
+	          <li>System files are used for displaying the STG_Frame and HUD components</li>
+	          <li>System files are used to set custom Pause, EndScene, and ReplaySaveScene scripts.</li>
+	          <li>System files are often used to handle events within a script, especially things such as spellcard declarations, spellcard bonus awarding, and the like.</li>
 	        </ul>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
@@ -188,7 +211,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Mar 23, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Mar 28, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
