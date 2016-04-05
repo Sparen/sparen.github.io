@@ -7,10 +7,11 @@
             "name": "halloween",
             "year": 2009,
             "duration": [2009.10, 2009.10],
-            "host": "CK Crash",
-            "judges": ["CK Crash", "Drake", "Naut", "Stuffman"],
+            "host": "CK Crash/Onthenet",
+            "judges": ["CK Crash/Onthenet", "Drake", "Naut", "CK Crash/Onthenet", "Stuffman"],
             "numparticipants": 15,
-            "result": [["Helepolis"], ["Stuffman"], ["Thaws"]]
+            "result": [["Helepolis"], ["Stuffman"], ["Thaws"]],
+            "participants": ["Helepolis", "Stuffman", "Thaws", "rdj", "Kylesky", "puremrz", "Garlyle", "Nimble", "Iryan", "Demonbman", "Wingz", "Gamecubic", "CK Crash/Onthenet", "Bluemoon and Lishy", "Naut"]
         },
         {
             "id": "range2",
@@ -22,7 +23,8 @@
             "host": "Stuffman",
             "judges": ["Stuffman"],
             "numparticipants": 14,
-            "result": [["VideoGameCrack"], ["Blargel"], ["Kayorei"]]
+            "result": [["VideoGameCrack"], ["Blargel"], ["Kayorei"]],
+            "participants": ["Alwaysthe9", "VideoGameCrack", "Iryan", "Blargel", "Kayorei", "Nimble", "Nuclear Cheese", "UltimaRepman", "Kylesky", "Thaws", "Blue Wolf", "Demonbman", "rdj", "Drake"]
         },
         {
             "id": "range3",
@@ -34,7 +36,8 @@
             "host": "Naut",
             "judges": ["Naut"],
             "numparticipants": 20,
-            "result": [["Thaws"], ["Iryan"], ["DgBarca"]]
+            "result": [["Thaws"], ["Iryan"], ["DgBarca"]],
+            "participants": ["Thaws", "Iryan", "DgBarca", "CK Crash/Onthenet", "Gamecubic", "NovaRaven", "Demonbman", "Shockman", "AweStrikerNova", "VideoGameCrack", "Danielu", "Dennislol", "Dr. Katz", "Karanum", "kris", "Furu", "Nimble", "Kylesky", "Flashtirade", "Alwaysthe9"]
         },
         {
             "id": "range4",
@@ -46,7 +49,8 @@
             "host": "Naut",
             "judges": ["Naut"],
             "numparticipants": 14,
-            "result": [["Iryan"], ["Azure"], ["Nimble"]]
+            "result": [["Iryan"], ["Azure"], ["Nimble"]],
+            "participants": ["Bark", "Hoppefrosk", "Azure", "Kayorei", "Iryan", "Demonbman", "GBZero", "rdj", "Shockman", "Stuffman", "Suikama", "Torpedo", "Miransu/Mewkyuu", "Patrick Alexander"]
         },
         {
             "id": "range5",
@@ -58,7 +62,8 @@
             "host": "Helepolis",
             "judges": ["Helepolis", "Blargel", "Kefit"],
             "numparticipants": 17,
-            "result": [["Dr Katz", "Nimble"], ["Furienfify", "Johnny Walker"], ["Nobu", "Ravenlock"]]
+            "result": [["Dr Katz", "Nimble"], ["Furienfify", "Johnny Walker"], ["Nobu", "Ravenlock"]],
+            "participants": ["Bark", "Blue Spoiler", "Dr. Katz", "Furienfify", "Dennislol", "Pozeal", "Nobu", "Suikama", "Furu", "Johnny Walker", "Karanum", "Kylesky", "Patrick Alexander", "Naut", "Nimble", "DgBarca", "Ravenlock"]
         },
         {
             "id": "range6",
@@ -70,7 +75,8 @@
             "host": "Naut",
             "judges": ["Naut", "Drake"],
             "numparticipants": 12,
-            "result": [["Stuffman"], ["Foremoster"], ["Bitz"]]
+            "result": [["Stuffman"], ["Foremoster"], ["Bitz"]],
+            "participants": ["Stuffman", "Foremoster", "Bitz", "Iryan", "KrackoCloud", "Bark", "Demonbman", "Polaris", "Thaws", "Kylesky", "Miransu/Mewkyuu", "Suikama"]
         },
         {
             "id": "range7",
@@ -82,7 +88,8 @@
             "host": "Drake",
             "judges": ["COMMUNITY"],
             "numparticipants": 13,
-            "result": [["Sasupoika"], ["Thaws"], ["Kylesky"]]
+            "result": [["Sasupoika"], ["Thaws"], ["Kylesky"]],
+            "participants": ["GenericTouhouFan", "Iryan", "Kylesky", "Suikama", "Chau", "Schezo", "Grumskiz", "Foremoster", "Zerro", "Naut", "CK Crash/Onthenet", "Sasupoika", "Thaws"]
         },
         {
             "id": "range8",
@@ -93,8 +100,9 @@
             "duration": [2011.03, 2011.04],
             "host": "Drake",
             "judges": ["COMMUNITY"],
-            "numparticipants": 3,
-            "result": [["Naut"], ["Azure"], ["Stuffman"]]
+            "numparticipants": 6,
+            "result": [["Naut"], ["Azure"], ["Stuffman"]],
+            "participants": ["Kylesky", "Naut", "Thaws", "Stuffman", "Drake", "Azure"]
         },
         {
             "id": "range9",
@@ -106,7 +114,8 @@
             "host": "Helepolis",
             "judges": ["Helepolis"],
             "numparticipants": 4,
-            "result": [["Sasupoika"], ["Kazu"], ["Schezo"]]
+            "result": [["Sasupoika"], ["Kazu"], ["Schezo"]],
+            "participants": ["SFN", "Schezo", "Kazu", "Sasupoika"]
         },
         {
             "id": "range10",
@@ -118,7 +127,8 @@
             "host": "Drake",
             "judges": ["Drake", "Erppo"],
             "numparticipants": 22,
-            "result": [["TalosMistake", "CK Crash"], ["Naut"], ["Sparen"]]
+            "result": [["TalosMistake", "CK Crash/Onthenet"], ["Naut"], ["Sparen"]],
+            "participants": ["AJS", "KuroArashi", "Qwertyzxcv", "Gusano2314", "AkaoniP", "PhantomSong", "Miransu/Mewkyuu", "Rikako Asakura", "Sparen", "Spectral Nexus", "Infinite Ultima Wave", "Formless Mass", "Fraug", "Naut", "Maths ~Angelic Version~", "ShadowNCS", "ExPorygon/Ozzy840", "TalosMistake", "Darkness1", "Sasupoika", "Thaws", "CK Crash/Onthenet"]
         },
         {
             "id": "range10.5",
@@ -130,7 +140,8 @@
             "host": "PhantomSong",
             "judges": ["PhantomSong", "GUEST"],
             "numparticipants": 8,
-            "result": [["Darkness1"], ["TalosMistake"], ["Sparen"]]
+            "result": [["Darkness1"], ["TalosMistake"], ["Sparen"]],
+            "participants": ["Neito", "Sparen", "Miplouf", "gtbot", "Darkness1", "Spectral Nexus", "TalosMistake", "Infinite Ultima Wave"]
         },
         {
             "id": "range11",
@@ -141,8 +152,9 @@
             "duration": [2014.04, 2014.05],
             "host": "PhantomSong",
             "judges": ["PhantomSong", "GUEST"],
-            "numparticipants": 7,
-            "result": [["Kirbio"], ["Darkness1"], ["Sparen", "Bob the Tanuki"]]
+            "numparticipants": 8,
+            "result": [["Kirbio"], ["Darkness1"], ["Sparen", "Bob the Tanuki"]],
+            "participants": ["ShadowNCS", "Rikako Asakura", "Lunarethic", "Spectral Nexus", "Sparen", "Bob the Tanuki", "Darkness1", "Kirbio"]
         },
         {
             "id": "range12",
@@ -152,9 +164,10 @@
             "year": 2014,
             "duration": [2014.10, 2014.11],
             "host": "PhantomSong",
-            "judges": ["ExPorygon", "AJS"],
-            "numparticipants": 16,
-            "result": [["Arby26"], ["Darkness1"], ["Trickysticks"]]
+            "judges": ["ExPorygon/Ozzy840", "AJS"],
+            "numparticipants": 17,
+            "result": [["Arby26"], ["Darkness1"], ["Trickysticks"]],
+            "participants": ["Ultimadragon88", "Lunarethic", "Aoki Yakumo/1000 Sun Studios", "Lefkada", "Arby26", "Trickysticks", "Goldstein Izayoi", "Darkness1", "Baron Blade", "Bob the Tanuki", "Alicirno", "Sariel", "Conarnar", "Yukkurix3", "Kirbio", "TresserT", "Sparen"]
         },
         {
             "id": "range13",
@@ -164,9 +177,10 @@
             "year": 2015,
             "duration": [2015.01, 2015.02],
             "host": "Sparen",
-            "judges": ["Sparen", "AchySolrock", "Trickysticks", "Miransu"],
+            "judges": ["Sparen", "AchySolrock", "Trickysticks", "Miransu/Mewkyuu"],
             "numparticipants": 8,
-            "result": [["Kirbio"], ["Lunarethic"], ["Lefkada"]]
+            "result": [["Kirbio"], ["Lunarethic"], ["Lefkada"]],
+            "participants": ["Kirbio", "Lunarethic", "Lefkada", "Bob the Tanuki", "TresserT", "Searinox", "Zhan Fox", "Hopemetal"]
         },
         {
             "id": "range14",
@@ -176,9 +190,10 @@
             "year": 2015,
             "duration": [2015.07, 2015.07],
             "host": "PhantomSong",
-            "judges": ["TalosMistake", "ExPorygon", "Lunarethic"],
+            "judges": ["TalosMistake", "ExPorygon/Ozzy840", "Lunarethic"],
             "numparticipants": 19,
-            "result": [["AJS"], ["Kirbio", "Miransu"], ["TresserT"]]
+            "result": [["AJS"], ["Kirbio", "Miransu/Mewkyuu"], ["TresserT"]],
+            "participants": ["AJS", "Kirbio", "Miransu/Mewkyuu", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada", "AchySolrock", "Ran Yakumo", "Gizmo the Dragon", "Midnight Sparkle", "auto2112", "Fluffy8x"]
         },
         {
             "id": "range15",
@@ -190,7 +205,8 @@
             "host": "DLS",
             "judges": ["Trickysticks", "Sparen", "AJS"],
             "numparticipants": 9,
-            "result": [["Lunarethic"], ["TresserT"], ["Kirbio"]]
+            "result": [["Lunarethic"], ["TresserT"], ["Kirbio"]],
+            "participants": ["Lunarethic", "TresserT", "Kirbio", "tyrz_939", "Vigor", "auto2112", "DLS", "Alice Matroy/SKN", "Haru", "WishMakers"]
         },
         {
             "id": "range16",
@@ -202,7 +218,8 @@
             "host": "Lefkada",
             "judges": ["Lefkada", "Neshima", "AJS"],
             "numparticipants": 18,
-            "result": [["TresserT"], ["Python"], ["Spectral Nexus"]]
+            "result": [["TresserT"], ["Python"], ["Spectral Nexus"]],
+            "participants": ["TresserT", "Python", "Spectral Nexus", "Lunarethic", "Kirbio", "Zhan Fox", "Vigor", "gtbot", "AchySolrock", "Arby26", "Sparen", "Conarnar", "Miplouf", "Haru", "Badz", "DrytheMeowstic", "PhantomSong", "tyrz_939", "Trickysticks", "Fefnir"]
         },
         {
             "id": "locaa1",
@@ -214,7 +231,8 @@
             "host": "",
             "judges": [],
             "numparticipants": 6,
-            "result": [["AJS"], ["Miplouf"], ["Miransu"]]
+            "result": [["AJS"], ["Miplouf"], ["Miransu/Mewkyuu"]],
+            "participants": ["ExPorygon/Ozzy840", "Trickysticks", "Matteo", "Miransu/Mewkyuu", "Miplouf", "AJS"]
         },
         {
             "id": "locaa2",
@@ -226,7 +244,8 @@
             "host": "",
             "judges": [],
             "numparticipants": 3,
-            "result": [["Rogus"], ["Miransu"], ["Miplouf"]]
+            "result": [["Rogus"], ["Miransu/Mewkyuu"], ["Miplouf"]],
+            "participants": ["Miplouf", "Miransu/Mewkyuu", "Rogus"]
         },
         {
             "id": "locaa3",
@@ -238,7 +257,8 @@
             "host": "",
             "judges": [],
             "numparticipants": 3,
-            "result": [["Miransu"], ["Sparen"], ["FondueMaster"]]
+            "result": [["Miransu/Mewkyuu"], ["Sparen"], ["FondueMaster"]],
+            "participants": ["Miransu/Mewkyuu", "Sparen", "FondueMaster"]
         },
         {
             "id": "curse1",
@@ -250,7 +270,8 @@
             "host": "TrollTrain",
             "judges": ["Sparen", "Trickysticks", "TrollTrain"],
             "numparticipants": 7,
-            "result": [["Miransu"], ["TalosMistake"], ["Sariel"]]
+            "result": [["Miransu/Mewkyuu"], ["TalosMistake"], ["Sariel"]],
+            "participants": ["Miransu/Mewkyuu", "TalosMistake", "Sariel", "NeoxRave", "PhantomSong", "Miplouf", "Gusano2314"]
         },
         {
             "id": "locaa4",
@@ -260,9 +281,10 @@
             "year": 2014,
             "duration": [2013.11, 2014.02],
             "host": "Sparen",
-            "judges": ["Trickysticks", "Ultima", "ExPorygon"],
+            "judges": ["Trickysticks", "Ultima", "ExPorygon/Ozzy840"],
             "numparticipants": 3,
-            "result": [["Sariel"], ["Sparen"], ["Gusano2314"]]
+            "result": [["Sariel"], ["Sparen"], ["Gusano2314"]],
+            "participants": ["Sariel", "Sparen", "Gusano2314"]
         },
         {
             "id": "locaa5",
@@ -274,7 +296,8 @@
             "host": "Sparen",
             "judges": ["Sparen", "Ultima"],
             "numparticipants": 3,
-            "result": [["AJS"], ["PhantomSong"], ["Gusano2314"]]
+            "result": [["AJS"], ["PhantomSong"], ["Gusano2314"]],
+            "participants": ["AJS", "PhantomSong", "Gusano2314"]
         },
         {
             "id": "locaa6",
@@ -286,7 +309,21 @@
             "host": "",
             "judges": [],
             "numparticipants": 3,
-            "result": [["AJS"], ["Sparen"], ["Kirbio", "Lunarethic"]]
+            "result": [["AJS"], ["Sparen"], ["Kirbio", "Lunarethic"]],
+            "participants": ["AJS", "Sparen", "Kirbio", "Lunarethic"]
+        },
+        {
+            "id": "locaa7",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "outsider occupation",
+            "year": 2016,
+            "duration": [2016.03, 2016.03],
+            "host": "AJS",
+            "judges": ["AJS", "Sagaci", "Sparen"],
+            "numparticipants": 15,
+            "result": [],
+            "participants": ["Gizmo the Dragon", "Python", "DrytheMeowstic", "Fluffy8x", "Vigor", "Badz", "Conarnar", "TresserT", "DLS", "Gusano2314", "Fumi", "Lefkada", "Sariel", "Mr. Gaberson", "Zemoo"]
         },
         {
             "id": "artifact1",
@@ -298,7 +335,8 @@
             "host": "Trickysticks",
             "judges": ["Trickysticks", "IHNN"],
             "numparticipants": 6,
-            "result": [["ExPorygon"], ["PhantomSong", "Kirbio"], ["ShadowNCS"]]
+            "result": [["ExPorygon/Ozzy840"], ["PhantomSong", "Kirbio"], ["ShadowNCS"]],
+            "participants": ["PhantomSong", "ShadowNCS", "Ran Yakumo", "Kirbio", "TresserT", "ExPorygon/Ozzy840"]
         },
         {
             "id": "artifact2",
@@ -308,9 +346,10 @@
             "year": 2014,
             "duration": [2014.03, 2014.04],
             "host": "Trickysticks",
-            "judges": ["Trickysticks", "ExPorygon", "Miransu"],
+            "judges": ["Trickysticks", "ExPorygon/Ozzy840", "Miransu/Mewkyuu"],
             "numparticipants": 3,
-            "result": [["Kirbio"], ["Sparen"], ["PhantomSong"]]
+            "result": [["Kirbio"], ["Sparen"], ["PhantomSong"]],
+            "participants": ["Kirbio", "Sparen", "PhantomSong"]
         },
         {
             "id": "artifact3",
@@ -320,9 +359,10 @@
             "year": 2015,
             "duration": [2014.10, 2015.01],
             "host": "Trickysticks",
-            "judges": ["Trickysticks", "ExPorygon", "Ultima", "Spectral Nexus"],
+            "judges": ["Trickysticks", "ExPorygon/Ozzy840", "Ultima", "Spectral Nexus"],
             "numparticipants": 3,
-            "result": ["Conarnar", "Python", "Ultimadragon88"]
+            "result": [["Conarnar"], ["Python"], ["Ultimadragon88"]],
+            "participants": ["Conarnar", "Python", "Ultimadragon88"]
         }
     ]
 }
