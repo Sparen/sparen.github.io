@@ -13,6 +13,7 @@ function createDropdown() {
             "<option value='cpy' name='opt'>Contests per Year</option>" +
             "<option value='avgnumpartloc' name='opt'>Avg. Num. of Participants by Loc.</option>" +
             "<option value='participateovertime' name='opt'>Participants Over Time</option>" +
+            "<option value='participanthistory' name='opt'>Participant History</option>" +
             "</select>" +
             "<input type='SUBMIT' value='Submit'>" +
             "</form>";
@@ -325,6 +326,78 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
     document.getElementById("displaybox").innerHTML = displaystring + pot_svg + "<br><br>Contests without a valid end date are not displayed. Contests without a valid start date only show their end month and year.";
 }
 
+function participantHistory() {
+    console.log("participantHistory(): Running");
+    var allparticipants = [];
+    var contests = database_obj.contests; //array of contests
+
+    var ph_displaystring = "Please select people from the following lists in order to generate histories.<br><br>" + 
+    "This feature is currently under construction. In the future, you will be able to select any number of participants and a chart will be generated showing their participation, top three placement, and judging and hosting history over the span of multiple contests.<br><br>";
+
+    //first, obtain list of all chartable people
+    for (i = 0; i < contests.length; i++) {
+        var ph_judges = contests[i].judges;
+        var ph_host = contests[i].host;
+        var ph_participants = contests[i].participants;
+
+        //For obtaining all participants, dropdown list
+        var ph_temp;
+        for (j = 0; j < ph_judges.length; j++) {
+            ph_temp = ph_judges[j];
+            if(!contains(allparticipants, ph_temp)) {
+                allparticipants = allparticipants.concat(ph_temp);
+            }
+        }
+        if(!contains(allparticipants, ph_host)) {
+            allparticipants = allparticipants.concat(ph_host);
+        }
+        for (j = 0; j < ph_participants.length; j++) {
+            ph_temp = ph_participants[j];
+            if(!contains(allparticipants, ph_temp)) {
+                allparticipants = allparticipants.concat(ph_temp);
+            }
+        }
+
+        //for listings by contest
+        var contestdisplay = "<div>" + contests[i].id + ": " + contests[i].name + "</div>";
+        contestdisplay = contestdisplay + "Host: " + '<input type="checkbox" id=' + ph_host + 'defaultChecked="false">' + ph_host + '<br>';
+        contestdisplay = contestdisplay + "Judges: <br>";
+        for (j = 0; j < ph_judges.length; j++) {
+            ph_temp = ph_judges[j];
+            if(ph_temp != "COMMUNITY" && ph_temp != "GUEST") {
+                contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="ph_participant" id=' + ph_temp + 'defaultChecked="false">' + ph_temp + '<br>';
+            } else {
+                contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;' + ph_temp + '<br>';
+            }
+        }
+        contestdisplay = contestdisplay + 'Participants: <br><table style="width:100%"><tr>'; //DON'T SHOW THE MISSHAPEN BORDER PLZ
+        for (j = 0; j < ph_participants.length; j++) {
+            ph_temp = ph_participants[j];
+            contestdisplay = contestdisplay + '<td><input type="checkbox" id=' + ph_temp + 'defaultChecked="false">' + ph_temp + '</td>';
+            if (j % 5 == 4) {
+                contestdisplay = contestdisplay + '</tr><tr>';
+            }
+        }
+        for (j = ph_participants.length; j % 5 != 0; j++) { //buffer space
+            contestdisplay = contestdisplay + '<td></td>';
+        }
+        contestdisplay = contestdisplay + "</tr></table>";
+
+        ph_displaystring = ph_displaystring + contestdisplay;
+    }
+    document.getElementById("displaybox").innerHTML = ph_displaystring;
+
+}
+
+function participantHistory_graphgen() { //call with a button call
+    console.log("participantHistory_graphgen(): Running");
+    //Read and obtain all selected names
+    var phgg_selpartic = [];
+
+
+    //Prepare SVG using Participants over Time as the base
+}
+
 function execute() {
     console.log("execute(): Running");
     var s = "none";
@@ -344,6 +417,8 @@ function execute() {
         averageNumParticipantsLocation();
     } else if (s === "participateovertime") {
         participantsOverTime();
+    } else if (s === "participanthistory") {
+        participantHistory();
     }
 
     console.log("execute(): End");
