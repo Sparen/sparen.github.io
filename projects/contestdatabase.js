@@ -314,9 +314,10 @@ function participantHistory() {
     var contests = database_obj.contests; //array of contests
 
     var ph_displaystring = "Please select people from the following lists in order to generate histories.<br><br>" + 
-    "This feature is currently under construction. In the future, you will be able to select any number of participants and a chart will be generated showing their participation, top three placement, and judging and hosting history over the span of multiple contests.<br><br>";
+    "This feature allows you to select any number of participants, and a chart will be generated showing their participation, top three placement, and judging and hosting history over the span of multiple contests.<br><br>";
 
     ph_displaystring = ph_displaystring + "<form method='POST' onSubmit='return participantHistory_graphgen();'><input type='SUBMIT' value='Submit'></form>";
+    ph_displaystring = ph_displaystring + '<input type="checkbox" name="ph_controlmaster" defaultChecked="false" onclick="return participantHistory_toggleall(this, this.checked);"> Toggle All<br><br>'
 
     //first, obtain list of all chartable people
     for (i = 0; i < contests.length; i++) {
@@ -377,6 +378,16 @@ function participantHistory() {
 function participantHistory_selectbycontest(contestid, parent, newval) {
     console.log("participantHistory_selectbycontest(): Running");
     var ph_checked = document.getElementsByClassName("ph_" + contestid);
+    for (i = 0; i < ph_checked.length; i++) {
+        ph_checked[i].checked = newval;
+    }
+    parent.checked = newval; //Some weird error where it stays unchecked when you check it. whelp.
+    return false;
+}
+
+function participantHistory_toggleall(parent, newval) {
+    console.log("participantHistory_toggleall(): Running");
+    var ph_checked = document.getElementsByName("ph_participant");
     for (i = 0; i < ph_checked.length; i++) {
         ph_checked[i].checked = newval;
     }
