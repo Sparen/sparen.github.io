@@ -345,8 +345,12 @@ function participantHistory() {
 
         //for listings by contest
         var contestdisplay = "<div>" + contests[i].id + ": " + contests[i].name + "</div>";
-        contestdisplay = contestdisplay + '<input type="checkbox" name="ph_control" defaultChecked="false" onclick="return participantHistory_selectbycontest(\'' + contests[i].id + '\', this, this.checked);"> Check All<br>'
-        contestdisplay = contestdisplay + "Host: " + '<input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_host + '" defaultChecked="false">' + ph_host + '<br>';
+        contestdisplay = contestdisplay + '<input type="checkbox" name="ph_control" defaultChecked="false" onclick="return participantHistory_selectbycontest(\'' + contests[i].id + '\', this, this.checked);"> Check All<br>';
+        if (ph_host != "") {
+            contestdisplay = contestdisplay + "Host: " + '<input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_host + '" defaultChecked="false">' + ph_host + '<br>';
+        } else {
+            contestdisplay = contestdisplay + "Host: N/A" + '<br>';
+        }
         contestdisplay = contestdisplay + "Judges: <br>";
         for (j = 0; j < ph_judges.length; j++) {
             ph_temp = ph_judges[j];
