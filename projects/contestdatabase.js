@@ -452,7 +452,7 @@ function participantHistory_graphgen() { //call with a button call
     phgg_svg += '<circle cx="' + (phgg_svg_width - 96) + '" cy="' + (phgg_svg_height/2 + 10) + '" r="4" fill="#FFCC88"></circle>';
     phgg_svg += '<text x="' + (phgg_svg_width - 80) + '" y="' + (phgg_svg_height/2 + 10) + '" font-family="Andale Mono, Monospace" font-size="10px" fill="#DDDDDD"' +
           'text-anchor="start" dominant-baseline="central">Top 3</text>';
-    phgg_svg += '<circle cx="' + (phgg_svg_width - 96) + '" cy="' + (phgg_svg_height/2 + 40) + '" r="6" stroke="#FFFFFF" stroke-width="1" fill="#222222"></circle>';
+    phgg_svg += '<circle cx="' + (phgg_svg_width - 96) + '" cy="' + (phgg_svg_height/2 + 40) + '" r="5" stroke="#FFFFFF" stroke-width="1" fill="#222222"></circle>';
     phgg_svg += '<text x="' + (phgg_svg_width - 80) + '" y="' + (phgg_svg_height/2 + 40) + '" font-family="Andale Mono, Monospace" font-size="10px" fill="#DDDDDD"' +
           'text-anchor="start" dominant-baseline="central">Participant</text>';
 
@@ -502,12 +502,12 @@ function participantHistory_graphgen() { //call with a button call
             var phgg_basewidth = ((phggindiv_end[0] - phggindiv_start[0])*12 + phggindiv_end[1] - phggindiv_start[1])*16; //does not include 8 pixel base rect width
             var nodelocation = 144 + phgg_basestart + phgg_basewidth/2;
 
-            if(contains(contestobj.participants, phgg_player)) {
+            if(contains(contestobj.participants, phgg_player) || contains(contestobj.judges, phgg_player) || contestobj.host == phgg_player) {
                 if(phggplay_start > nodelocation || phggplay_start == 0){phggplay_start = nodelocation;} //if first contest, mark it!
                 if(contestobj.host == phgg_player) {
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + (16 + j*16) + '" r="6" stroke="#FF6688" stroke-width="1" fill="#222222"></circle>';
-                } else {
-                    phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + (16 + j*16) + '" r="6" stroke="#FFFFFF" stroke-width="1" fill="#222222"></circle>';
+                } else if(contains(contestobj.participants, phgg_player)) {
+                    phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + (16 + j*16) + '" r="5" stroke="#FFFFFF" stroke-width="1" fill="#222222"></circle>';
                 }
                 var topthree = false;
                 for(l = 0; l < contestobj.result.length; l++) {
@@ -526,9 +526,11 @@ function participantHistory_graphgen() { //call with a button call
         }
         phgg_startendpath = phgg_startendpath + '<path d="M ' + phggplay_start + ' ' + (16 + j*16) + ' H ' + phggplay_end + '" stroke-width="1" stroke="#666666"></path>';
 
-        phgg_svg = phgg_svg + phgg_string;
-        phgg_svg = phgg_svg + phgg_startendpath;
-        phgg_svg = phgg_svg + phgg_nodes;
+        if(phgg_player != "") { //Exclude NULL players - i.e. no judge for a contest
+            phgg_svg = phgg_svg + phgg_string;
+            phgg_svg = phgg_svg + phgg_startendpath;
+            phgg_svg = phgg_svg + phgg_nodes;
+        }
     }
 
     phgg_svg += '</svg>';

@@ -11,7 +11,7 @@
             "judges": ["CK Crash/Onthenet", "Drake", "Naut", "Stuffman"],
             "numparticipants": 15,
             "result": [["Helepolis"], ["Stuffman"], ["Thaws"]],
-            "participants": ["Helepolis", "Stuffman", "Thaws", "rdj", "Kylesky", "puremrz", "Garlyle", "Nimble", "Iryan", "Demonbman", "Wingz", "Gamecubic", "CK Crash/Onthenet", "Bluemoon and Lishy", "Naut", "Drake"]
+            "participants": ["Helepolis", "Stuffman", "Thaws", "rdj", "Kylesky", "puremrz", "Garlyle", "Nimble", "Iryan", "Demonbman", "Wingz", "Gamecubic", "CK Crash/Onthenet", "Bluemoon and Lishy", "Naut"]
         },
         {
             "id": "range2",
@@ -118,6 +118,45 @@
             "participants": ["SFN", "Schezo", "Kazu", "Sasupoika"]
         },
         {
+            "id": "locaa1",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "locaa1",
+            "year": 2012,
+            "duration": [2012.06, 2012.07],
+            "host": "",
+            "judges": [],
+            "numparticipants": 6,
+            "result": [["AJS"], ["Miplouf"], ["Miransu/Mewkyuu"]],
+            "participants": ["ExPorygon/Ozzy840", "Trickysticks", "Matteo", "Miransu/Mewkyuu", "Miplouf", "AJS"]
+        },
+        {
+            "id": "locaa2",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "locaa2",
+            "year": 2012,
+            "duration": [2012.08, 2012.10],
+            "host": "",
+            "judges": [],
+            "numparticipants": 3,
+            "result": [["Rogus"], ["Miransu/Mewkyuu"], ["Miplouf"]],
+            "participants": ["Miplouf", "Miransu/Mewkyuu", "Rogus"]
+        },
+        {
+            "id": "locaa3",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "locaa3",
+            "year": 2013,
+            "duration": [2013.02, 2013.06],
+            "host": "",
+            "judges": [],
+            "numparticipants": 3,
+            "result": [["Miransu/Mewkyuu"], ["Sparen"], ["FondueMaster"]],
+            "participants": ["Miransu/Mewkyuu", "Sparen", "FondueMaster"]
+        },
+        {
             "id": "range10",
             "location": "motk",
             "loc_category": "range",
@@ -144,6 +183,58 @@
             "participants": ["Neito", "Sparen", "Miplouf", "gtbot", "Darkness1", "Spectral Nexus", "TalosMistake", "Infinite Ultima Wave"]
         },
         {
+            "id": "curse1",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "overused all-stars",
+            "year": 2013,
+            "duration": [2013.10, 2013.10],
+            "host": "TrollTrain",
+            "judges": ["Sparen", "Trickysticks", "TrollTrain"],
+            "numparticipants": 7,
+            "result": [["Miransu/Mewkyuu"], ["TalosMistake"], ["Sariel"]],
+            "participants": ["Miransu/Mewkyuu", "TalosMistake", "Sariel", "NeoxRave", "PhantomSong", "Miplouf", "Gusano2314"]
+        },
+        {
+            "id": "artifact1",
+            "location": "motk",
+            "loc_category": "artifact",
+            "name": "the pagoda of bishamonten",
+            "year": 2014,
+            "duration": [2013.12, 2014.01],
+            "host": "Trickysticks",
+            "judges": ["Trickysticks", "IHNN"],
+            "numparticipants": 6,
+            "result": [["ExPorygon/Ozzy840"], ["PhantomSong", "Kirbio"], ["ShadowNCS"]],
+            "participants": ["PhantomSong", "ShadowNCS", "Ran Yakumo", "Kirbio", "TresserT", "ExPorygon/Ozzy840"]
+        },
+        {
+            "id": "locaa4",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "unlikely pairs",
+            "year": 2014,
+            "duration": [2013.11, 2014.02],
+            "host": "Sparen",
+            "judges": ["Trickysticks", "Infinite Ultima Wave", "ExPorygon/Ozzy840"],
+            "numparticipants": 3,
+            "result": [["Sariel"], ["Sparen"], ["Gusano2314"]],
+            "participants": ["Sariel", "Sparen", "Gusano2314"]
+        },
+        {
+            "id": "artifact2",
+            "location": "locaa",
+            "loc_category": "artifact",
+            "name": "augmented magic",
+            "year": 2014,
+            "duration": [2014.03, 2014.04],
+            "host": "Trickysticks",
+            "judges": ["Trickysticks", "ExPorygon/Ozzy840", "Miransu/Mewkyuu"],
+            "numparticipants": 3,
+            "result": [["Kirbio"], ["Sparen"], ["PhantomSong"]],
+            "participants": ["Kirbio", "Sparen", "PhantomSong"]
+        },
+        {
             "id": "range11",
             "location": "motk",
             "loc_category": "range",
@@ -157,6 +248,32 @@
             "participants": ["ShadowNCS", "Rikako Asakura", "Lunarethic", "Spectral Nexus", "Sparen", "Bob the Tanuki", "Darkness1", "Kirbio"]
         },
         {
+            "id": "locaa5",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "fury of the rivals",
+            "year": 2014,
+            "duration": [2014.05, 2014.07],
+            "host": "Sparen",
+            "judges": ["Sparen", "Ultima"],
+            "numparticipants": 3,
+            "result": [["AJS"], ["PhantomSong"], ["Gusano2314"]],
+            "participants": ["AJS", "PhantomSong", "Gusano2314"]
+        },
+        {
+            "id": "locaa6",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "troll scripts",
+            "year": 2014,
+            "duration": [2014.07, 2014.09],
+            "host": "",
+            "judges": [],
+            "numparticipants": 3,
+            "result": [["AJS"], ["Sparen"], ["Kirbio", "Lunarethic"]],
+            "participants": ["AJS", "Sparen", "Kirbio", "Lunarethic"]
+        },
+        {
             "id": "range12",
             "location": "motk",
             "loc_category": "range",
@@ -168,6 +285,19 @@
             "numparticipants": 17,
             "result": [["Arby26"], ["Darkness1"], ["Trickysticks"]],
             "participants": ["Ultimadragon88", "Lunarethic", "Aoki Yakumo/1000 Sun Studios", "Lefkada", "Arby26", "Trickysticks", "Goldstein Izayoi", "Darkness1", "Baron Blade", "Bob the Tanuki", "Alicirno", "Sariel", "Conarnar", "Yukkurix3", "Kirbio", "TresserT", "Sparen"]
+        },
+        {
+            "id": "artifact3",
+            "location": "locaa",
+            "loc_category": "artifact",
+            "name": "time is of the essence",
+            "year": 2015,
+            "duration": [2014.10, 2015.01],
+            "host": "Trickysticks",
+            "judges": ["Trickysticks", "ExPorygon/Ozzy840", "Ultima", "Spectral Nexus"],
+            "numparticipants": 3,
+            "result": [["Conarnar"], ["Python"], ["Ultimadragon88"]],
+            "participants": ["Conarnar", "Python", "Ultimadragon88"]
         },
         {
             "id": "range13",
@@ -222,97 +352,6 @@
             "participants": ["TresserT", "Python", "Spectral Nexus", "Lunarethic", "Kirbio", "Zhan Fox", "Vigor", "gtbot", "AchySolrock", "Arby26", "Sparen", "Conarnar", "Miplouf", "Haru", "Badz", "DrytheMeowstic", "PhantomSong", "tyrz_939", "Trickysticks", "Fefnir"]
         },
         {
-            "id": "locaa1",
-            "location": "locaa",
-            "loc_category": "locaa",
-            "name": "locaa1",
-            "year": 2012,
-            "duration": [2012.06, 2012.07],
-            "host": "",
-            "judges": [],
-            "numparticipants": 6,
-            "result": [["AJS"], ["Miplouf"], ["Miransu/Mewkyuu"]],
-            "participants": ["ExPorygon/Ozzy840", "Trickysticks", "Matteo", "Miransu/Mewkyuu", "Miplouf", "AJS"]
-        },
-        {
-            "id": "locaa2",
-            "location": "locaa",
-            "loc_category": "locaa",
-            "name": "locaa2",
-            "year": 2012,
-            "duration": [2012.08, 2012.10],
-            "host": "",
-            "judges": [],
-            "numparticipants": 3,
-            "result": [["Rogus"], ["Miransu/Mewkyuu"], ["Miplouf"]],
-            "participants": ["Miplouf", "Miransu/Mewkyuu", "Rogus"]
-        },
-        {
-            "id": "locaa3",
-            "location": "locaa",
-            "loc_category": "locaa",
-            "name": "locaa3",
-            "year": 2013,
-            "duration": [2013.02, 2013.06],
-            "host": "",
-            "judges": [],
-            "numparticipants": 3,
-            "result": [["Miransu/Mewkyuu"], ["Sparen"], ["FondueMaster"]],
-            "participants": ["Miransu/Mewkyuu", "Sparen", "FondueMaster"]
-        },
-        {
-            "id": "curse1",
-            "location": "locaa",
-            "loc_category": "locaa",
-            "name": "overused all-stars",
-            "year": 2013,
-            "duration": [2013.10, 2013.10],
-            "host": "TrollTrain",
-            "judges": ["Sparen", "Trickysticks", "TrollTrain"],
-            "numparticipants": 7,
-            "result": [["Miransu/Mewkyuu"], ["TalosMistake"], ["Sariel"]],
-            "participants": ["Miransu/Mewkyuu", "TalosMistake", "Sariel", "NeoxRave", "PhantomSong", "Miplouf", "Gusano2314"]
-        },
-        {
-            "id": "locaa4",
-            "location": "locaa",
-            "loc_category": "locaa",
-            "name": "unlikely pairs",
-            "year": 2014,
-            "duration": [2013.11, 2014.02],
-            "host": "Sparen",
-            "judges": ["Trickysticks", "Ultima", "ExPorygon/Ozzy840"],
-            "numparticipants": 3,
-            "result": [["Sariel"], ["Sparen"], ["Gusano2314"]],
-            "participants": ["Sariel", "Sparen", "Gusano2314"]
-        },
-        {
-            "id": "locaa5",
-            "location": "locaa",
-            "loc_category": "locaa",
-            "name": "fury of the rivals",
-            "year": 2014,
-            "duration": [2014.05, 2014.07],
-            "host": "Sparen",
-            "judges": ["Sparen", "Ultima"],
-            "numparticipants": 3,
-            "result": [["AJS"], ["PhantomSong"], ["Gusano2314"]],
-            "participants": ["AJS", "PhantomSong", "Gusano2314"]
-        },
-        {
-            "id": "locaa6",
-            "location": "locaa",
-            "loc_category": "locaa",
-            "name": "troll scripts",
-            "year": 2014,
-            "duration": [2014.07, 2014.09],
-            "host": "",
-            "judges": [],
-            "numparticipants": 3,
-            "result": [["AJS"], ["Sparen"], ["Kirbio", "Lunarethic"]],
-            "participants": ["AJS", "Sparen", "Kirbio", "Lunarethic"]
-        },
-        {
             "id": "locaa7",
             "location": "locaa",
             "loc_category": "locaa",
@@ -324,45 +363,6 @@
             "numparticipants": 14,
             "result": [["Vigor"], ["Conarnar"], ["TresserT"]],
             "participants": ["Gizmo the Dragon", "Python", "DrytheMeowstic", "Fluffy8x", "Vigor", "Badz", "Conarnar", "TresserT", "DLS", "Gusano2314", "Fumiko", "Lefkada", "Sariel", "Mr. Gaberson"]
-        },
-        {
-            "id": "artifact1",
-            "location": "motk",
-            "loc_category": "artifact",
-            "name": "the pagoda of bishamonten",
-            "year": 2014,
-            "duration": [2013.12, 2014.01],
-            "host": "Trickysticks",
-            "judges": ["Trickysticks", "IHNN"],
-            "numparticipants": 6,
-            "result": [["ExPorygon/Ozzy840"], ["PhantomSong", "Kirbio"], ["ShadowNCS"]],
-            "participants": ["PhantomSong", "ShadowNCS", "Ran Yakumo", "Kirbio", "TresserT", "ExPorygon/Ozzy840"]
-        },
-        {
-            "id": "artifact2",
-            "location": "locaa",
-            "loc_category": "artifact",
-            "name": "augmented magic",
-            "year": 2014,
-            "duration": [2014.03, 2014.04],
-            "host": "Trickysticks",
-            "judges": ["Trickysticks", "ExPorygon/Ozzy840", "Miransu/Mewkyuu"],
-            "numparticipants": 3,
-            "result": [["Kirbio"], ["Sparen"], ["PhantomSong"]],
-            "participants": ["Kirbio", "Sparen", "PhantomSong"]
-        },
-        {
-            "id": "artifact3",
-            "location": "locaa",
-            "loc_category": "artifact",
-            "name": "time is of the essence",
-            "year": 2015,
-            "duration": [2014.10, 2015.01],
-            "host": "Trickysticks",
-            "judges": ["Trickysticks", "ExPorygon/Ozzy840", "Ultima", "Spectral Nexus"],
-            "numparticipants": 3,
-            "result": [["Conarnar"], ["Python"], ["Ultimadragon88"]],
-            "participants": ["Conarnar", "Python", "Ultimadragon88"]
         }
     ]
 }
