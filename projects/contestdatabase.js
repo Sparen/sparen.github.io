@@ -350,7 +350,7 @@ function participantHistory() {
         contestdisplay = contestdisplay + "Judges: <br>";
         for (j = 0; j < ph_judges.length; j++) {
             ph_temp = ph_judges[j];
-            if(ph_temp != "COMMUNITY" && ph_temp != "GUEST") {
+            if(ph_temp != "COMMUNITY" && ph_temp != "GUEST" && ph_temp != "") {
                 contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_temp + '" defaultChecked="false">' + ph_temp + '<br>';
             } else {
                 contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;' + ph_temp + '<br>';
