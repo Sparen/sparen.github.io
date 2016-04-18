@@ -476,7 +476,8 @@ function participantHistory_graphgen() { //call with a button call
         var phggplay_start = 0; //start pixel of line
         var phggplay_end = 0; //end pixel of line
         var phgg_string = '<text x="8" y="' + (16 + j*16) + '" fill="#DDDDDD" text-anchor="start" dominant-baseline="central" font-family="Andale Mono, Monospace" font-size="10px">' + phgg_player + '</text>';
-        var phgg_startendpath = "";
+        var phgg_startendpath = '<path d="M 4 ' + (16 + j*16 - 8) + ' H ' + (phgg_svg_width - 128) + '" stroke-width="1" stroke="#333333"></path>'; //default guide lines
+        phgg_startendpath = phgg_startendpath + '<path d="M 4 ' + (16 + j*16 + 8) + ' H ' + (phgg_svg_width - 128) + '" stroke-width="1" stroke="#333333"></path>'; //default guide lines
         var phgg_nodes = "";
 
         //Now to iterate over all the contests in search of the name!
@@ -490,7 +491,7 @@ function participantHistory_graphgen() { //call with a button call
             var nodelocation = 144 + phgg_basestart + phgg_basewidth/2;
 
             if(contains(contestobj.participants, phgg_player)) {
-                if(phggplay_start == 0){phggplay_start = nodelocation;} //if first contest, mark it!
+                if(phggplay_start > nodelocation || phggplay_start == 0){phggplay_start = nodelocation;} //if first contest, mark it!
                 if(contestobj.host == phgg_player) {
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + (16 + j*16) + '" r="6" stroke="#FF6688" stroke-width="1" fill="#222222"></circle>';
                 } else {
@@ -508,10 +509,10 @@ function participantHistory_graphgen() { //call with a button call
                 if(contains(contestobj.judges, phgg_player)) {
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + (16 + j*16) + '" r="2" fill="#44FFCC"></circle>';
                 }
-                phggplay_end = nodelocation; //update to make sure it lands on the last contest
+                if(phggplay_end < nodelocation){phggplay_end = nodelocation;} //if first contest, mark it!
             }
         }
-        phgg_startendpath = '<path d="M ' + phggplay_start + ' ' + (16 + j*16) + ' H ' + phggplay_end + '" stroke-width="1" stroke="#666666"></path>';
+        phgg_startendpath = phgg_startendpath + '<path d="M ' + phggplay_start + ' ' + (16 + j*16) + ' H ' + phggplay_end + '" stroke-width="1" stroke="#666666"></path>';
 
         phgg_svg = phgg_svg + phgg_string;
         phgg_svg = phgg_svg + phgg_startendpath;
