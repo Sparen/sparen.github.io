@@ -476,7 +476,7 @@ function participantHistory_graphgen() { //call with a button call
             var phgg_basewidth = ((phgg_end[0] - phgg_start[0])*12 + phgg_end[1] - phgg_start[1])*16; //does not include 8 pixel base rect width
             textlabels += '<text x="' + (144 + phgg_basestart + phgg_basewidth/2) + '" y="' + (phgg_svg_height - 80) + 
             '" fill="' + phgg_color + '" text-anchor="start" dominant-baseline="central" writing-mode="tb" font-family="Andale Mono, Monospace" font-size="10px">' + contests[i].id + '</text>';
-            textlabels += '<path d="M' + (144 + phgg_basestart + phgg_basewidth/2) + ' 4 V' + (phgg_svg_height - 108) + '" stroke-width="1" stroke="#333333"></path>'; //contest guideline
+            textlabels += '<path d="M' + (144 + phgg_basestart + phgg_basewidth/2) + ' 4 V' + (phgg_svg_height - 156) + '" stroke-width="1" stroke="#333333"></path>'; //contest guideline
         }
     }
 
