@@ -334,6 +334,8 @@ function participantHistory() {
     var ph_displaystring = "Please select people from the following lists in order to generate histories.<br><br>" + 
     "This feature is currently under construction. In the future, you will be able to select any number of participants and a chart will be generated showing their participation, top three placement, and judging and hosting history over the span of multiple contests.<br><br>";
 
+    ph_displaystring = ph_displaystring + "<form method='POST' onSubmit='return participantHistory_graphgen();'><input type='SUBMIT' value='Submit'></form>";
+
     //first, obtain list of all chartable people
     for (i = 0; i < contests.length; i++) {
         var ph_judges = contests[i].judges;
@@ -360,12 +362,13 @@ function participantHistory() {
 
         //for listings by contest
         var contestdisplay = "<div>" + contests[i].id + ": " + contests[i].name + "</div>";
-        contestdisplay = contestdisplay + "Host: " + '<input type="checkbox" id=' + ph_host + 'defaultChecked="false">' + ph_host + '<br>';
+        contestdisplay = contestdisplay + '<input type="checkbox" name="ph_control" defaultChecked="false" onclick="return participantHistory_selectbycontest(\'' + contests[i].id + '\', this, this.checked);"> Check All<br>'
+        contestdisplay = contestdisplay + "Host: " + '<input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_host + '" defaultChecked="false">' + ph_host + '<br>';
         contestdisplay = contestdisplay + "Judges: <br>";
         for (j = 0; j < ph_judges.length; j++) {
             ph_temp = ph_judges[j];
             if(ph_temp != "COMMUNITY" && ph_temp != "GUEST") {
-                contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="ph_participant" id=' + ph_temp + 'defaultChecked="false">' + ph_temp + '<br>';
+                contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_temp + '" defaultChecked="false">' + ph_temp + '<br>';
             } else {
                 contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;' + ph_temp + '<br>';
             }
@@ -373,7 +376,7 @@ function participantHistory() {
         contestdisplay = contestdisplay + 'Participants: <br><table style="width:100%"><tr>'; //DON'T SHOW THE MISSHAPEN BORDER PLZ
         for (j = 0; j < ph_participants.length; j++) {
             ph_temp = ph_participants[j];
-            contestdisplay = contestdisplay + '<td><input type="checkbox" id=' + ph_temp + 'defaultChecked="false">' + ph_temp + '</td>';
+            contestdisplay = contestdisplay + '<td><input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_temp + '" defaultChecked="false">' + ph_temp + '</td>';
             if (j % 5 == 4) {
                 contestdisplay = contestdisplay + '</tr><tr>';
             }
@@ -389,13 +392,33 @@ function participantHistory() {
 
 }
 
+function participantHistory_selectbycontest(contestid, parent, newval) {
+    console.log("participantHistory_selectbycontest(): Running");
+    var ph_checked = document.getElementsByClassName("ph_" + contestid);
+    for (i = 0; i < ph_checked.length; i++) {
+        ph_checked[i].checked = newval;
+    }
+    parent.checked = newval; //Some weird error where it stays unchecked when you check it. whelp.
+    return false;
+}
+
 function participantHistory_graphgen() { //call with a button call
     console.log("participantHistory_graphgen(): Running");
     //Read and obtain all selected names
+    var ph_checked = document.getElementsByName("ph_participant");
     var phgg_selpartic = [];
+    for (i = 0; i < ph_checked.length; i++) {
+        var phggtemp = ph_checked[i].id;
+        if(!contains(phgg_selpartic, phggtemp) && ph_checked[i].checked) {
+                phgg_selpartic = phgg_selpartic.concat(phggtemp);
+        }
+    }
 
+    document.getElementById("displaybox").innerHTML = "Selected participants: " + phgg_selpartic;
 
     //Prepare SVG using Participants over Time as the base
+
+    return false;
 }
 
 function execute() {
