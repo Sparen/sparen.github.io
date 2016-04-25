@@ -510,7 +510,8 @@ function participantHistory_graphgen() { //call with a button call
                 if(phggplay_start > nodelocation || phggplay_start == 0){phggplay_start = nodelocation;} //if first contest, mark it!
                 if(contestobj.host == phgg_player) {
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + (16 + j*16) + '" r="6" stroke="#FF6688" stroke-width="1" fill="#222222"></circle>';
-                } else if(contains(contestobj.participants, phgg_player)) {
+                }
+                if(contains(contestobj.participants, phgg_player)) {
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + (16 + j*16) + '" r="5" stroke="#FFFFFF" stroke-width="1" fill="#222222"></circle>';
                 }
                 var topthree = false;
