@@ -24,7 +24,7 @@
             "judges": ["Stuffman"],
             "numparticipants": 14,
             "result": [["VideoGameCrack"], ["Blargel"], ["Kayorei"]],
-            "participants": ["Alwaysthe9", "VideoGameCrack", "Iryan", "Blargel", "Kayorei", "Nimble", "Nuclear Cheese", "UltimaRepman", "Kylesky", "Thaws", "Blue Wolf", "Demonbman", "rdj", "Drake"]
+            "participants": ["Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "VideoGameCrack", "Iryan", "Blargel", "Kayorei", "Nimble", "Nuclear Cheese", "UltimaRepman", "Kylesky", "Thaws", "Blue Wolf", "Demonbman", "rdj", "Drake"]
         },
         {
             "id": "range3",
@@ -37,7 +37,7 @@
             "judges": ["Naut"],
             "numparticipants": 20,
             "result": [["Thaws"], ["Iryan"], ["DgBarca"]],
-            "participants": ["Thaws", "Iryan", "DgBarca", "CK Crash/Onthenet", "Gamecubic", "NovaRaven", "Demonbman", "Shockman", "AweStrikerNova", "VideoGameCrack", "Danielu", "Dennislol", "Dr. Katz", "Karanum", "kris", "Furu", "Nimble", "Kylesky", "Flashtirade", "Alwaysthe9"]
+            "participants": ["Thaws", "Iryan", "DgBarca", "CK Crash/Onthenet", "Gamecubic", "NovaRaven", "Demonbman", "Shockman", "AweStrikerNova", "VideoGameCrack", "Danielu", "Dennislol", "Dr. Katz", "Karanum", "kris", "Furu", "Nimble", "Kylesky", "Flashtirade", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"]
         },
         {
             "id": "range4",
@@ -50,7 +50,7 @@
             "judges": ["Naut"],
             "numparticipants": 14,
             "result": [["Iryan"], ["Azure"], ["Nimble"]],
-            "participants": ["Bark", "Hoppefrosk", "Azure", "Kayorei", "Iryan", "Demonbman", "GBZero", "rdj", "Shockman", "Stuffman", "Suikama", "Torpedo", "Miransu/Mewkyuu", "Patrick Alexander"]
+            "participants": ["Bark", "Hoppefrosk", "Azure", "Kayorei", "Iryan", "Demonbman", "GBZero", "rdj", "Shockman", "Stuffman", "Suikama", "Torpedo", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "Patrick Alexander"]
         },
         {
             "id": "range5",
@@ -76,7 +76,7 @@
             "judges": ["Naut", "Drake"],
             "numparticipants": 12,
             "result": [["Stuffman"], ["Foremoster"], ["Bitz"]],
-            "participants": ["Stuffman", "Foremoster", "Bitz", "Iryan", "KrackoCloud", "Bark", "Demonbman", "Polaris", "Thaws", "Kylesky", "Miransu/Mewkyuu", "Suikama"]
+            "participants": ["Stuffman", "Foremoster", "Bitz", "Iryan", "KrackoCloud", "Bark", "Demonbman", "Polaris", "Thaws", "Kylesky", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "Suikama"]
         },
         {
             "id": "range7",
@@ -127,8 +127,8 @@
             "host": "",
             "judges": [],
             "numparticipants": 6,
-            "result": [["AJS"], ["Miplouf"], ["Miransu/Mewkyuu"]],
-            "participants": ["ExPorygon/Ozzy840", "Trickysticks", "Matteo", "Miransu/Mewkyuu", "Miplouf", "AJS"]
+            "result": [["AJS"], ["Miplouf"], ["Miransu/Byzantheryx/Mewkyuu/alwaysthe9"]],
+            "participants": ["ExPorygon/Ozzy840", "Trickysticks", "Matteo", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "Miplouf", "AJS"]
         },
         {
             "id": "locaa2",
@@ -140,8 +140,8 @@
             "host": "",
             "judges": [],
             "numparticipants": 3,
-            "result": [["Rogus"], ["Miransu/Mewkyuu"], ["Miplouf"]],
-            "participants": ["Miplouf", "Miransu/Mewkyuu", "Rogus"]
+            "result": [["Rogus"], ["Miransu/Byzantheryx/Mewkyuu/alwaysthe9"], ["Miplouf"]],
+            "participants": ["Miplouf", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "Rogus"]
         },
         {
             "id": "locaa3",
@@ -153,8 +153,8 @@
             "host": "",
             "judges": [],
             "numparticipants": 3,
-            "result": [["Miransu/Mewkyuu"], ["Sparen"], ["FondueMaster"]],
-            "participants": ["Miransu/Mewkyuu", "Sparen", "FondueMaster"]
+            "result": [["Miransu/Byzantheryx/Mewkyuu/alwaysthe9"], ["Sparen"], ["FondueMaster"]],
+            "participants": ["Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "Sparen", "FondueMaster"]
         },
         {
             "id": "range10",
@@ -167,7 +167,7 @@
             "judges": ["Drake", "Erppo"],
             "numparticipants": 22,
             "result": [["TalosMistake", "CK Crash/Onthenet"], ["Naut"], ["Sparen"]],
-            "participants": ["AJS", "KuroArashi", "Qwertyzxcv", "Gusano2314", "AkaoniP", "PhantomSong", "Miransu/Mewkyuu", "Rikako Asakura", "Sparen", "Spectral Nexus", "Infinite Ultima Wave", "Formless Mass", "Fraug", "Naut", "Maths ~Angelic Version~", "ShadowNCS", "ExPorygon/Ozzy840", "TalosMistake", "Darkness1", "Sasupoika", "Thaws", "CK Crash/Onthenet"]
+            "participants": ["AJS", "KuroArashi", "Qwertyzxcv", "Gusano2314", "AkaoniP", "PhantomSong", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "Rikako Asakura", "Sparen", "Spectral Nexus", "Infinite Ultima Wave", "Formless Mass", "Fraug", "Naut", "Maths ~Angelic Version~", "ShadowNCS", "ExPorygon/Ozzy840", "TalosMistake", "Darkness1", "Sasupoika", "Thaws", "CK Crash/Onthenet"]
         },
         {
             "id": "range10.5",
@@ -192,8 +192,8 @@
             "host": "TrollTrain",
             "judges": ["Sparen", "Trickysticks", "TrollTrain"],
             "numparticipants": 7,
-            "result": [["Miransu/Mewkyuu"], ["TalosMistake"], ["Sariel"]],
-            "participants": ["Miransu/Mewkyuu", "TalosMistake", "Sariel", "NeoxRave", "PhantomSong", "Miplouf", "Gusano2314"]
+            "result": [["Miransu/Byzantheryx/Mewkyuu/alwaysthe9"], ["TalosMistake"], ["Sariel"]],
+            "participants": ["Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TalosMistake", "Sariel", "NeoxRave", "PhantomSong", "Miplouf", "Gusano2314"]
         },
         {
             "id": "artifact1",
@@ -229,7 +229,7 @@
             "year": 2014,
             "duration": [2014.03, 2014.04],
             "host": "Trickysticks",
-            "judges": ["Trickysticks", "ExPorygon/Ozzy840", "Miransu/Mewkyuu"],
+            "judges": ["Trickysticks", "ExPorygon/Ozzy840", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"],
             "numparticipants": 3,
             "result": [["Kirbio"], ["Sparen"], ["PhantomSong"]],
             "participants": ["Kirbio", "Sparen", "PhantomSong"]
@@ -307,7 +307,7 @@
             "year": 2015,
             "duration": [2015.01, 2015.02],
             "host": "Sparen",
-            "judges": ["Sparen", "AchySolrock", "Trickysticks", "Miransu/Mewkyuu"],
+            "judges": ["Sparen", "AchySolrock", "Trickysticks", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"],
             "numparticipants": 8,
             "result": [["Kirbio"], ["Lunarethic"], ["Lefkada"]],
             "participants": ["Kirbio", "Lunarethic", "Lefkada", "Bob the Tanuki", "TresserT", "Searinox", "Zhan Fox", "Hopemetal"]
@@ -322,8 +322,8 @@
             "host": "PhantomSong",
             "judges": ["TalosMistake", "ExPorygon/Ozzy840", "Lunarethic"],
             "numparticipants": 19,
-            "result": [["AJS"], ["Kirbio", "Miransu/Mewkyuu"], ["TresserT"]],
-            "participants": ["AJS", "Kirbio", "Miransu/Mewkyuu", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada", "AchySolrock", "Ran Yakumo", "Gizmo the Dragon", "Midnight Sparkle", "auto2112", "Fluffy8x"]
+            "result": [["AJS"], ["Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"], ["TresserT"]],
+            "participants": ["AJS", "Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada", "AchySolrock", "Ran Yakumo", "Gizmo the Dragon", "Midnight Sparkle", "auto2112", "Fluffy8x"]
         },
         {
             "id": "range15",
