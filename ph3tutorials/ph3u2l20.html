@@ -1,0 +1,239 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 20</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 20 - Manipulating Pause and End Scene Files. A guide on how to manipulate and customize Pause and End Scene scripts."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Pause, End, Scene">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u2l19.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to System Files">Unit 2 Lesson 19</a></li>
+	        <li><span>Navigation Bar</span></li>
+	        <li><span>---</span></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 20 - Manipulating Pause and End Scene Files</h1>	      <p>The video for this lesson is CK Crash's Sanae for the RaNGE 10 contest - it had a super awesome pause menu, and it's an amazing script you should all play.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/XMo48p-9_Jg" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are Pause and End Scene Scripts?</a></li>
+	          <li><a href="#sub3">Part 3: What is inside a Pause or End Scene Script?</a></li>
+	          <li><a href="#sub4">Part 4: How Do Menus in Danmakufu Work?</a></li>
+	          <li><a href="#sub5">Part 5: What are the Results from a Pause or End Scene Script?</a></li>
+	          <li><a href="#sub6">Part 6: How Do the Pause and End Scene Text Objects Work?</a></li>
+	          <li><a href="#quiz1">Quiz: Pause and End Scene Scripts</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will discuss Pause and End Scene scripts, which are called on demand upon pause or end of a script, respectfully.</p>
+	      <p>This lesson requires knowledge of render and text objects. For reference, please see <a href="./ph3u2l13.html">Lesson 13</a> and <a href="./ph3u2l17.html">Lesson 17</a> for 2D Sprites and Text, respectively. You must read <a href="./ph3u2l19.html">Lesson 19</a> first before starting with this tutorial, as that tutorial has information that will not be duplicated here.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: What are Pause and End Scene Scripts?</h2>
+	      <p>So we've seen System scripts, and the gist is that it's a script run at the start of a script that continues running until the script ends. Pause and End Scenes are different but have some similarities. Pause scripts are run automatically on EV_PAUSE_ENTER (when you hit ESC, which is the default key for Pause in Danmakufu). When you pause the game, Danmakufu automatically handles the actual pausing of the game - all the Pause script does is give the player a menu of what to do - for example, resume, retry, or return to title. And that's all.</p>
+	      <p>End Scene scripts are similar to Pause Scripts, both codewise and in how they are triggered. End Scene scripts are automatically triggered when a script finishes executing. Usually the menu the player is presented with has replay save, retry, and return to title as its options, though there may be more depending on how the scripter rolls.</p>
+	      <p>In the previous lesson, we went over how to set custom Pause, EndScene, and ReplaySave scripts, and of course, you will want to follow those procedures. For the purposes of this tutorial and for every script you make, you should ALWAYS call your own Pause and End Scene scripts (i.e. you must include your own Pause and End Scene scripts within your game and should never rely on default_system's defaults) from your System file from here on out. <span style="color:salmon">By this point in the tutorial, you are no longer considered a beginner, and you should not be using the default Pause and End Scene scripts.</span> Of course, the main reason is that they're in Japanese, and at the very least, you want to have an English version (or whatever language your target audience speaks) packaged with your script.</p>
+	      <p>Note that with Packages, there will be a different method for handling Pause and End Scenes, but we'll get there when we get there.</p>
+	      <p>Anyways, we'll be working with the defaults, so copy the default pause and end scene scripts from default_system into your system folder or preferred directory, and link them with your System script so that your scripts will hook into them. We're going to take them apart.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: What is inside a Pause or End Scene Script?</h2>
+	      <p>When you open up Default_Pause.txt, you are greeted by a wall of code in two main tasks, TBackground and TMain, both of which are called in @Initialize. <code>SetAutoDeleteObject(true);</code> should be left alone - it will make sure that all the objects you create in the pause (or end scene) script will delete when you close the script.</p>
+	      <p>Anyways, the meat of the task is in TMenu. As for TBackground, it's responsible for that fancy effect above the playing field but below the text. More specifically, it takes a screenshot of the screen with a render target, and then does some fancy vertex stuff to produce the effect. We won't look into this now.</p>
+	      <pre class="prettyprint"><code>task TMenu
+{
+	let selectIndex = 0;//選択位置
+	task TMenuItem(let index, let mx, let my, let text)
+	{
+	    // Will be discussed later
+	}
+
+	//メニュー配置
+	let mx = 48;
+	let my = 32;
+	let texts = ["再開", "再生終了", "最初からやり直す"];
+	var countMenu = length(texts);
+	ascent(var iText in 0 .. countMenu)
+	{
+		TMenuItem(iText, mx, my, texts[iText]);
+		my += 32;
+	}
+
+	//キー状態がリセットされるまで待機
+	while(GetVirtualKeyState(VK_PAUSE) != KEY_FREE){yield;}
+...</code></pre>
+	      <p>Anyways, let's take a look at TMenu. First, you have selectIndex, which is your counter. It will determine which option the player is currently selecting (if there are three choices, it will have values of 0, 1, or 2). We also have a task TMenuItem that creates the text objects. Don't worry about this just yet - we'll go over this in a moment. We then have two variables - mx and my. There is also an array called texts. All three of these get fed into TMenuItem. So we can deduce that mx is the x coordinate from where the text objects for our options start, y is their y coordinate, and texts holds the values to show. Specifically, for the Pause Menu they are Cancel, End, and Retry. For the End Scene they are Save Replay, End, and Retry. Please take the time to turn these into English (and remove all other Japanese from the script while you're at it).</p>
+	      <p>We ascent through all possible options and create the text objects, then wait for the player to stop holding the escape key (Pause) or the Z key (End Scene). This is to make sure the pause scene doesn't spontaneously end (in the Pause script's case) and makes sure that the first option in the menu isn't automatically selected if the player happens to be holding the Z key when the End Scene begins execution.</p>
+	      <pre class="prettyprint"><code>//Pause Script
+...
+	//決定
+	if(GetVirtualKeyState(VK_OK) == KEY_PULL)
+	{
+		let listResult = [RESULT_CANCEL, RESULT_END, RESULT_RETRY];
+		SetScriptResult(listResult[selectIndex]);
+		CloseScript(GetOwnScriptID());
+		return;
+	}
+
+	//キャンセル
+	if(GetVirtualKeyState(VK_CANCEL) == KEY_PULL || GetVirtualKeyState(VK_PAUSE) == KEY_PULL)
+	{
+		SetScriptResult(RESULT_CANCEL);
+		CloseScript(GetOwnScriptID());
+		return;
+	}
+...</code></pre>
+	      <p>But what about the menu? We have an infinite loop with a bunch of things inside. First, we have a check against VK_OK, which is the virtual key for OK (defaults to Z). If we release the key (KEY_PULL is the releasing of the key), then we have a list of outcomes corresponding to the text objects. Our counter selectIndex determines which one is saved. The script is closed and the loop is broken.</p>
+	      <p>And if we cancel (Pause menu only, VK_CANCEL is the virtual key for CANCEL, defaults to X), we save RESULT_CANCEL and close the script. The Pause script also allows you to exit via Esc as well.</p>
+	      <p>In regards to keys, note that when you push down, that triggers KEY_PUSH, and releasing the key is KEY_PULL. There's also KEY_HOLD (holding down the key, see below) and KEY_FREE (doing nothing with the key).</p>
+	      <p>And now we have the good part - navigating the menu.</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: How Do Menus in Danmakufu Work?</h2>
+	      <pre class="prettyprint"><code>	//メニュー選択処理
+	let frameKeyHold = 0;//キー押しっぱなしフレーム数
+	loop
+	{
+...
+		//カーソル移動
+		if(GetVirtualKeyState(VK_UP) == KEY_PUSH)
+		{
+			selectIndex--;
+		}
+		else if(GetVirtualKeyState(VK_DOWN) == KEY_PUSH)
+		{
+			selectIndex++;
+		}
+		else if(GetVirtualKeyState(VK_UP) == KEY_HOLD)
+		{
+			frameKeyHold++;
+			if(frameKeyHold == 30 || (frameKeyHold > 30 && (frameKeyHold % 10 == 0)))
+			{
+				selectIndex--;
+			}
+		}
+		else if(GetVirtualKeyState(VK_DOWN) == KEY_HOLD)
+		{
+			frameKeyHold++;
+			if(frameKeyHold == 30 || (frameKeyHold > 30 && (frameKeyHold % 10 == 0)))
+			{
+				selectIndex++;
+			}
+		}
+		else
+		{
+			frameKeyHold = 0;
+		}
+
+		if(selectIndex < 0) 
+		{
+			selectIndex = countMenu - 1;
+		}
+		else
+		{
+			selectIndex %= countMenu;
+		}
+
+		yield;
+	}</code></pre>
+	      <p>Now, it definitely looks like a mess. There's a variable outside the loop called frameKeyHold that will be used when we hold down keys (so that after a certain number of frames, the selection will change). Note that if we have KEY_PUSH (the act of pushing a key), all it does is move our index up or down. However, if we hold down the keys, notice that frameKeyHold goes up, and if it hits 30 frames (and any 10 frames afterwards), the index will move. So if you press the key and release within 30 frames, selectIndex will change by one unit. If you press the key and hold it for 35 frames before releasing, it will change by two units. So we have a 30 frame wait to make sure that the player doesn't accidentally move too far, and once that's passed, it changes every 10 frames to allow for fast movement within the menu. If neither up nor down is being held, then the frameKeyHold resets.</p>
+	      <p>After this, our menu handles when the select index is out of bounds. If it's less than 0, wrap it to the last option. If it's greater than the last option, mod it and wrap it to where it needs to go.</p>
+	      <p>And that's the menu!</p>
+	      <h2 style="color:yellow" id="sub5">Part 5: What are the Results from a Pause or End Scene Script?</h2>
+	      <p>Anyways, let's discuss that listResult and the SetScriptResult stuff a little bit. Earlier I just brushed right past it, but there's actually quite a bit of stuff here.</p>
+	      <p>RESULT_CANCEL is a constant that means 'resume the ongoing script'. In a Pause script, it resumes the script (i.e. unpauses)</p>
+	      <p>RESULT_END is a constant that means 'quit'. It will quit the script (if Pause) and return to the title menu (or however the package handles it if you use a package). </p>
+	      <p>RESULT_RETRY is a constant that will restart the current script. It will reset things such as Points, Graze, Lives, and Bombs, but does <b>NOT</b> reset CommonData. And of course, if you use a package, the way it's handled may be a little different.</p>
+	      <p>RESULT_SAVE_REPLAY will trigger the replay save scene.</p>
+	      <p>Regardless of which one is being used, they are saved using SetScriptResult and Danmakufu handles the results.</p>
+	      <h2 style="color:yellow" id="sub6">Part 6: How Do the Pause and End Scene Text Objects Work?</h2>
+	      <p>Anyways, we've already covered text objects, so this should be self-explanatory, but let's take a look anyways.</p>
+	      <pre class="prettyprint linenums"><code>	task TMenuItem(let index, let mx, let my, let text)
+	{
+		function CreateTextObject(let mx, let my, let text)
+		{
+			let obj = ObjText_Create();
+			ObjText_SetText(obj, text);
+			ObjText_SetFontSize(obj, 20);
+			ObjText_SetFontBold(obj, true);
+			ObjText_SetFontColorTop(obj, 128, 128, 255);
+			ObjText_SetFontColorBottom(obj, 64, 64, 255);
+			ObjText_SetFontBorderType(obj, BORDER_FULL);
+			ObjText_SetFontBorderColor(obj,255, 255, 255);
+			ObjText_SetFontBorderWidth(obj, 2);
+			Obj_SetRenderPriorityI(obj, 10);
+			ObjRender_SetX(obj, mx);
+			ObjRender_SetY(obj, my);
+			return obj;
+		}
+
+		let objText = CreateTextObject(mx, my, text);
+		let objSelect = CreateTextObject(mx, my, text);
+		ObjRender_SetBlendType(objSelect, BLEND_ADD_RGB);
+		loop
+		{
+			Obj_SetVisible(objSelect, index == selectIndex);
+			yield;
+		}
+	}</code></pre>
+	      <p>We have a task surrounding a function. This is a common procedure to be able to manipulate the object returned by the function. So we create two objects - objText and objSelect, of which objSelect is ADD rendered. Now, this is ugly and there are far better options than this that you may want to consider. The loop states that objSelect should only be visible when we have selected this particular menu option.</p>
+	      <p>The text object is pretty simple, and you are free to customize or do away with this arrangement entirely. Changing colors is one simple step up, as is using a specific font.</p>
+	      <p>More complex methods exist, but the most important thing is to be able to distinguish which option has been selected, so you'll want to keep that loop and do something with the index == selectIndex expression *unless you use a cursor image to mark which option has been selected, in which case the cursor will position itself based off of the current value of selectIndex). Feel free to experiment and get something nice. Or use images, which is also nice.</p>
+	      <p>Pause and End Scenes are an important part of a game, and can be used to great effect. Use a good aesthetic, and make your Pause and End Scenes fit in nicely with the rest of your game. It'll pay off.</p>
+	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Pause and End Scene Scripts</h2>
+	        <!--Quiz start.-->
+		<p>1) TODO </p>
+		<p>Hit 'Show' to show possible answers.</p>
+	        <textarea rows="12" style="width:100%;max-width:640px"> TODO </textarea>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+	      <p>Suggested answer is below.</p>
+	      <pre class="prettyprint linenums"><code> TODO </code></pre>
+	        </div></div>
+		<br>
+		<p>2) TODO </p>
+		<p>Hit 'Show' to show possible answers.</p>
+	        <textarea rows="12" style="width:100%;max-width:640px"> TODO </textarea>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+	      <p>Suggested answer is below.</p>
+	      <pre class="prettyprint linenums"><code> TODO </code></pre>
+	        </div></div>
+		<br>
+	      <h2 style="color:yellow" id="subs">Summary</h2>
+	        <ul>
+	          <li></li>
+	        </ul>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u2l19.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to System Files">Unit 2 Lesson 19</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer>
+        <p style="text-align: center;">Last Update to Page: May 04, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </footer>    </div>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://google-code-prettify.googlecode.com/svn/loader/run_prettify.js?lang=c"></script>  </body></html>
