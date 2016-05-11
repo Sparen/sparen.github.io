@@ -97,7 +97,7 @@
 	}
 ...</code></pre>
 	      <p>But what about the menu? We have an infinite loop with a bunch of things inside. First, we have a check against VK_OK, which is the virtual key for OK (defaults to Z). If we release the key (KEY_PULL is the releasing of the key), then we have a list of outcomes corresponding to the text objects. Our counter selectIndex determines which one is saved. The script is closed and the loop is broken.</p>
-	      <p>And if we cancel (Pause menu only, VK_CANCEL is the virtual key for CANCEL, defaults to X), we save RESULT_CANCEL and close the script. The Pause script also allows you to exit via Esc as well.</p>
+	      <p>And if we cancel (Pause menu only, VK_CANCEL is the virtual key for CANCEL, defaults to X), we save RESULT_CANCEL and close the pause script, returning to the game. The Pause script also allows you to exit via Esc as well.</p>
 	      <p>In regards to keys, note that when you push down, that triggers KEY_PUSH, and releasing the key is KEY_PULL. There's also KEY_HOLD (holding down the key, see below) and KEY_FREE (doing nothing with the key).</p>
 	      <p>And now we have the good part - navigating the menu.</p>
 	      <h2 style="color:yellow" id="sub4">Part 4: How Do Menus in Danmakufu Work?</h2>
@@ -152,7 +152,7 @@
 	      <p>And that's the menu!</p>
 	      <h2 style="color:yellow" id="sub5">Part 5: What are the Results from a Pause or End Scene Script?</h2>
 	      <p>Anyways, let's discuss that listResult and the SetScriptResult stuff a little bit. Earlier I just brushed right past it, but there's actually quite a bit of stuff here.</p>
-	      <p>RESULT_CANCEL is a constant that means 'resume the ongoing script'. In a Pause script, it resumes the script (i.e. unpauses)</p>
+	      <p>RESULT_CANCEL is a constant that means 'cancel the pause script and resume the ongoing script'. In a Pause script, it resumes the script (i.e. unpauses)</p>
 	      <p>RESULT_END is a constant that means 'quit'. It will quit the script (if Pause) and return to the title menu (or however the package handles it if you use a package). </p>
 	      <p>RESULT_RETRY is a constant that will restart the current script. It will reset things such as Points, Graze, Lives, and Bombs, but does <b>NOT</b> reset CommonData. And of course, if you use a package, the way it's handled may be a little different.</p>
 	      <p>RESULT_SAVE_REPLAY will trigger the replay save scene.</p>
@@ -191,30 +191,36 @@
 	      <p>The text object is pretty simple, and you are free to customize or do away with this arrangement entirely. Changing colors is one simple step up, as is using a specific font.</p>
 	      <p>More complex methods exist, but the most important thing is to be able to distinguish which option has been selected, so you'll want to keep that loop and do something with the index == selectIndex expression *unless you use a cursor image to mark which option has been selected, in which case the cursor will position itself based off of the current value of selectIndex). Feel free to experiment and get something nice. Or use images, which is also nice.</p>
 	      <p>Pause and End Scenes are an important part of a game, and can be used to great effect. Use a good aesthetic, and make your Pause and End Scenes fit in nicely with the rest of your game. It'll pay off.</p>
-	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: Pause and End Scene Scripts</h2>
 	        <!--Quiz start.-->
-		<p>1) TODO </p>
-		<p>Hit 'Show' to show possible answers.</p>
-	        <textarea rows="12" style="width:100%;max-width:640px"> TODO </textarea>
-	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-		<div class="spoiler"><div>
-	      <p>Suggested answer is below.</p>
-	      <pre class="prettyprint linenums"><code> TODO </code></pre>
-	        </div></div>
+		<p>1) Which final constant is sent as a script result signaling 'return to title'? </p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', '5');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. RESULT_RETRY<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. RESULT_CANCEL<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. RESULT_END<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 		<br>
-		<p>2) TODO </p>
-		<p>Hit 'Show' to show possible answers.</p>
-	        <textarea rows="12" style="width:100%;max-width:640px"> TODO </textarea>
-	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-		<div class="spoiler"><div>
-	      <p>Suggested answer is below.</p>
-	      <pre class="prettyprint linenums"><code> TODO </code></pre>
-	        </div></div>
+		<p>2) How long would you hold the down arrow key (VK_DOWN) in order to move two options down? </p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '4');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 30<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 40<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 50<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
 		<br>
 	      <h2 style="color:yellow" id="subs">Summary</h2>
 	        <ul>
-	          <li></li>
+	          <li>Pause scripts are run when the game is paused</li>
+	          <li>End scene scripts are run when the game is over or the player has died</li>
+	          <li>Menus work by checking for virtual key input</li>
+	          <li>Pause and End Scenes return their script result using existing constants such as RESULT_END</li>
 	        </ul>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
@@ -227,7 +233,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: May 04, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: May 11, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
