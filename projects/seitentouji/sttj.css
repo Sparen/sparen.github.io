@@ -1,4 +1,4 @@
-html{color:#29293D;background:#DDEEEE;}
+html{color:#FFFFFF;background:#000000;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
   margin:0;
   padding:0;
@@ -63,36 +63,15 @@ body{text-align:center;}
 .spoilerbutton[value="Hide"] + .spoiler {padding:0px;}
 /* END animated spoiler CSS by Bloggersentral.com */
 
-a:link{color:rgb(24,48,64);}
-a:visited {color:rgb(32,64,128);}
-a:hover {color:rgb(64,128,192);}
+a:link{color:rgb(192,255,255);}
+a:visited {color:rgb(50,200,200);}
+a:hover {color:rgb(82,235,251);}
 
-#ft{clear:both;}
 footer{clear:both;}
 #top{
   text-align:left;
   margin:auto 10px;
   width:auto;
-}
-
-.yui-t1{
-  margin:auto;
-  text-align:left;
-}
-.yui-b{position:relative;}#yui-main .yui-b{position:static;}#yui-main,.yui-g{width:100%;}.yui-t1 #yui-main{float:right;margin-left:-25em;}.yui-t1 .yui-b{float:left;width:12.30769em;}.yui-t1 #yui-main .yui-b{margin-left:13.30769em;}#yui-main .yui-b{float:none;width:auto;}.yui-g div.first{float:left;}#bd:after,.yui-g:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
-
-/*Alter things common to all bodies here*/
-.yui-g{
-  max-width: 850px;
-  width: 100%;
-}
-
-/*Allows word wrapping for non-top, non-footer non-sidebar content (AKA just .yui-b). Code from w3schools.*/
-.yui-b{
-    display: -webkit-flex; /* Safari */
-    -webkit-flex-wrap: wrap; /* Safari 6.1+ */
-    display: flex;   
-    flex-wrap: wrap;
 }
 
 h1 {font-size: 138.5%;}
@@ -145,10 +124,10 @@ th, td {
   border-right-style: solid;  
   border-bottom-style: solid;  
   border-left-style: solid;  
-  border-top-color: black;  
-  border-right-color: black;  
-  border-bottom-color: black;  
-  border-left-color: black;  
+  border-top-color: white;  
+  border-right-color: white;  
+  border-bottom-color: white;  
+  border-left-color: white;  
   padding-top: 0.5em;  
   padding-right: 0.5em;  
   padding-bottom: 0.5em;  
@@ -167,19 +146,23 @@ p, fieldset, table, pre {
 }
 
 /*CSS OVERRIDES FOR SEITENTOUJI*/
-.yui-t1 #yui-main{float:center;margin-left:8.5%;}/*When width is 80% for =yui-main, this aligns it center. FLoat left and center act the same...*/
-
-#yui-main{
+.sttj_container{
   border-style: double;
-  border-radius: 25px;
+  border-radius: 8px;
   border-width: 5px;
-  padding: 12px;
+  border-color: #448877;
   width: 80%;
-  border-color: #A3A3C2;
+  padding: 1em;
+  margin: 0 auto; 
+  background: #001111;
 }
 
-.yui-t1 #yui-main .yui-b{
-  margin-left:1%;
+.sttj_gametag{
+  max-width: 384px;
+}
+
+#bd{
+  width: 100%;
 }
 
 .pixelimg {
@@ -257,12 +240,6 @@ p, fieldset, table, pre {
 
 /* CSS @media overrides. 468 is the largest an iPhone can do  */
 @media screen and (max-width: 480px) and (orientation: portrait) {
-  .yui-t1 #yui-main{
-    margin-left:0em;
-  }
-  .yui-t1 #yui-main .yui-b{
-    margin-left:0em;
-  }
   .sttjnavbar{
     position:relative;
   }
@@ -273,11 +250,10 @@ p, fieldset, table, pre {
 }
 
 .sttjbiotablename{/*Table*/
-  border: 1px solid #AAAAAA;
-  background-color: #f9f9f9;
+  background-color: white;
   color: black;/*Color of the text*/
-  margin: 0.5em -0.5em 0.5em 0.5em;
-  padding: 0.5em;
+  margin: 0.5em -0.25em 0.5em 0.5em;
+  padding: 4em;
   float: right;
   clear: right;
 
@@ -287,10 +263,19 @@ p, fieldset, table, pre {
   width: 300px;
 }
 
-.sttjbiotablenameheader{/*th*/
+.sttjbiotablename th, .sttjbiotablename td{
+  background: white;
+  border: 1px solid #222222;
+}
+
+.sttjbiotablenameheader{/*tr*/
+}
+
+.sttjbiotablenameheader th{/*th*/
   text-align:center; 
   font-size:125%; 
   font-weight:bold;
   background: #DDEEFF;
-  border-radius: 3px 3px 0px 0px;
+  border: none;
 }
+
