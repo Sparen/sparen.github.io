@@ -78,7 +78,7 @@
         ObjPrim_SetTexture(obj, imgpath);
         ObjSprite2D_SetSourceRect(obj, 0, 1, 383, 448); //alternatively, 0, 0, 384, 448
         ObjSprite2D_SetDestCenter(obj);
-        ObjRender_SetPosition(obj, 384 / 2, 448 / 2); //move it to the center of the screen
+        ObjRender_SetPosition(obj, 384 / 2, 448 / 2, 1); //move it to the center of the screen
     }</code></pre>
 	      <p>And there we have it! In regards to positioning, passing a 0 into SetDestRect will basically place that  side of the image at the location of the object. In other words, if you have a 64x96 image, its position is (384/2, 448/2), and its DestRect is (0, 0, 64, 96), the left side of the image will be on the horizontal center axis, the top side will be on the vertical center axis, and the other two sides will be offset from given axes by 64 and 96 pixels, respectively. SetDestRect can be used to scale the graphic, although <code>ObjRender_SetScaleXYZ()</code> is far more flexible at doing this.</p>
 	      <div class="tut_exercise">EXERCISE: Find a seamless texture online. Experiment with Source and Dest rects. Tile the graphic with SourceRect and scale it with DestRect. Get a feel for how you can manipulate the images.</div>
@@ -169,7 +169,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 19, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Jun 08, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
