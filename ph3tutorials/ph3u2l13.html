@@ -80,7 +80,17 @@
         ObjSprite2D_SetDestCenter(obj);
         ObjRender_SetPosition(obj, 384 / 2, 448 / 2, 1); //move it to the center of the screen
     }</code></pre>
-	      <p>And there we have it! In regards to positioning, passing a 0 into SetDestRect will basically place that  side of the image at the location of the object. In other words, if you have a 64x96 image, its position is (384/2, 448/2), and its DestRect is (0, 0, 64, 96), the left side of the image will be on the horizontal center axis, the top side will be on the vertical center axis, and the other two sides will be offset from given axes by 64 and 96 pixels, respectively. SetDestRect can be used to scale the graphic, although <code>ObjRender_SetScaleXYZ()</code> is far more flexible at doing this.</p>
+	      <p>And there we have it! In regards to positioning, passing a 0 into SetDestRect will basically place that side of the image at the location of the object. In other words, if you have a 64x96 image, its position on the coordinate plane is (384/2, 448/2), and its DestRect is (0, 0, 64, 96), then the left side of the image will be on the horizontal center axis, the top side will be on the vertical center axis, and the other two sides will be offset from given axes by 64 and 96 pixels, respectively. SetDestRect can be used to scale the graphic, although <code>ObjRender_SetScaleXYZ()</code> is far more flexible at doing this.</p>
+	      <p>Note that our current graphic is positioned and rendered at the center of the screen. If you want to lock the top left corner of the image to the top left corner of the screen, you could do the following:</p>
+	      <pre class="prettyprint linenums"><code>    task RenderBG{
+        let obj = ObjPrim_Create(OBJ_SPRITE_2D);
+        let imgpath = GetCurrentScriptDirectory() ~ "./u2l13sample.png";
+        ObjPrim_SetTexture(obj, imgpath);
+        ObjSprite2D_SetSourceRect(obj, 0, 1, 383, 448); //alternatively, 0, 0, 384, 448
+        ObjSprite2D_SetDestRect(obj, 0, 0, 384, 448);
+        ObjRender_SetPosition(obj, 0, 0, 1); //move it to the top left corner of the screen
+    }</code></pre>
+	      <p>As a final note, the third (z) parameter of ObjRender_SetPosition has no real usage with 2D sprites since it is completely independent from render priorities. It will be used with 3D sprites and other 3D render objects. Some people use 0 as the default, I tend to use 1. With 2D sprites, it doesn't actually matter what you use.</p>
 	      <div class="tut_exercise">EXERCISE: Find a seamless texture online. Experiment with Source and Dest rects. Tile the graphic with SourceRect and scale it with DestRect. Get a feel for how you can manipulate the images.</div>
 	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Animate a Boss?</h2>
 	      <p>Now that we have covered source rects, destination rects, and positioning, it is time for us to animate our sprites. For reference, we will use a sample spritesheet, which you can find <a href="./tutimg/u2l13spritesheet.png">here</a>.</p>
