@@ -47,7 +47,7 @@
 	      <h2 style="color:yellow" id="sub2">Part 2: What are the Blend Types in Danmakufu ph3?</h2>
 	      <p>Firstly, what are the blend types present in Danmakufu? Well, there is, of course, the default - Alpha. Then there are two forms of Additive Blending - BLEND_ADD_RGB and BLEND_ADD_ARGB. There are also Multiplicative and Subtractive blends. Also available is Invert, which is commonly abused due to its effects.</p>
 	      <p>You can use <code>ObjRender_SetBlendType()</code> to change blend types.</p>
-	      <p>As of ph3 [.1 pre6a], there is also a BLEND_SHADOW, which is not documented. I unfortunately have not tried this and do not know the proper name for it - it could be darken, divide, difference, overlay, etc. I will update this when it is known or when it is included in the documentation.</p>
+	      <p>As of ph3 [.1 pre6a], there is also a BLEND_SHADOW, which is not documented. For more information, see the following thread on Maidens of the Kaleidoscope: <a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,19666.0.html">Figuring out BLEND_SHADOW</a>.</p>
 	      <h2 style="color:yellow" id="sub3">Part 3: What is Alpha Compositing and How is it Used?</h2>
 	      <p>I'll begin with the simplest 'blend' - Alpha. This is the default and renders the image the exact same way as any graphical editor. Transparency is maintained if present.</p>
 	      <p>From a technical standpoint, Alpha Compositing involves taking the image in question and merging it with the background below (for Danmakufu, that means anything with a lower render priority or any object with the same render priority that was created prior).</p>
@@ -77,7 +77,7 @@
         ObjRender_SetScaleXYZ(objInv, 0.25, 0.25, 1);
         ObjRender_SetPosition(objInv, 384/2, 448/2, 1);
         ObjRender_SetBlendType(objInv, BLEND_INV_DESTRGB);
-        while(ObjEnemy_GetInfo(objBoss,INFO_LIFE) > 0){
+        while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
             ObjRender_SetScaleXYZ(objInv, 0.25 + 0.1*sin(objcount*3), 0.25 + 0.1*sin(objcount*3), 1);
             objcount++;
             yield;
@@ -134,7 +134,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 19, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Jun 22, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
