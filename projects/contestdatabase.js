@@ -438,6 +438,7 @@ function participantHistory_graphgen() { //call with a button call
     phgg_svg += '<rect x="0" y="0" height="' + phgg_svg_height + '" width="' + phgg_svg_width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
 
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
+    //144 is the buffer on the left (for names). 128 is the buffer on the right (for the key)
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     for (i = 0; i < years.length; i++) { //years
         for (j = 0; j < 12; j++) {

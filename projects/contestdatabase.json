@@ -332,11 +332,11 @@
             "name": "trick or shoot",
             "year": 2015,
             "duration": [2015.10, 2015.10],
-            "host": "DLS",
+            "host": "Guilmon/DLS",
             "judges": ["Trickysticks", "Sparen", "AJS"],
             "numparticipants": 9,
             "result": [["Lunarethic"], ["TresserT"], ["Kirbio"]],
-            "participants": ["Lunarethic", "TresserT", "Kirbio", "tyrz_939", "Vigor", "auto2112", "DLS", "Alice Matroy/SKN", "Haru", "WishMakers"]
+            "participants": ["Lunarethic", "TresserT", "Kirbio", "tyrz_939", "Vigor", "auto2112", "Guilmon/DLS", "Alice Matroy/SKN", "Haru", "WishMakers"]
         },
         {
             "id": "range16",
@@ -362,7 +362,20 @@
             "judges": ["AJS", "Sagaci", "Sparen"],
             "numparticipants": 14,
             "result": [["Vigor"], ["Conarnar"], ["TresserT"]],
-            "participants": ["Gizmo the Dragon", "Python", "DrytheMeowstic", "Fluffy8x", "Vigor", "Badz", "Conarnar", "TresserT", "DLS", "Gusano2314", "Fumiko", "Lefkada", "Sariel", "Mr. Gaberson"]
+            "participants": ["Gizmo the Dragon", "Python", "DrytheMeowstic", "Fluffy8x", "Vigor", "Badz", "Conarnar", "TresserT", "Guilmon/DLS", "Gusano2314", "Fumiko", "Lefkada", "Sariel", "Mr. Gaberson"]
+        },
+        {
+            "id": "locaa8",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "pure gensokyo",
+            "year": 2016,
+            "duration": [2016.06, 2016.06],
+            "host": "TresserT",
+            "judges": ["Trickysticks", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "Sparen", "TalosMistake"],
+            "numparticipants": 24,
+            "result": [[""], [""], [""]],
+            "participants": ["AchySolrock", "Agent17", "AJS", "Akakyu", "Alzack", "Awalys", "Badz", "Conarnar", "Dark", "Gizmo the Dragon", "Guilmon/DLS", "Haru", "Kirbio", "Lefkada", "Lunarethic", "DrytheMeowstic", "Natashi", "PhantomSong", "Pikmin H", "Python", "RickyRister", "Sphe", "TresserT", "WishMakers"]
         }
     ]
 }
