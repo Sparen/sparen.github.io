@@ -332,6 +332,11 @@
 <priority>0.1</priority>
 </url>
 <url>
+<loc>http://sparen.github.io/projects/judge_locaa8.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.1</priority>
+</url>
+<url>
 <loc>http://sparen.github.io/projects/projectspmddnh_devlog.html</loc>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
