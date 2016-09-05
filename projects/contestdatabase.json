@@ -376,6 +376,19 @@
             "numparticipants": 24,
             "result": [["Kirbio"], ["TresserT"], ["Akakyu"]],
             "participants": ["AchySolrock", "Agent17", "AJS", "Akakyu", "Alzack13", "Awalys", "Badz", "Conarnar", "Dark/Ran Yakumo", "Gizmo the Dragon", "Guilmon/DLS", "Haru", "Kirbio", "Lefkada", "Lunarethic", "DrytheMeowstic", "Natashi", "PhantomSong", "Pikmin H", "Python", "RickyRister", "Sphe", "TresserT", "WishMakers"]
+        },
+        {
+            "id": "locaa9",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "miracle mallet contest",
+            "year": 2016,
+            "duration": [2016.08, 2016.08],
+            "host": "Infinite Ultima Wave",
+            "judges": ["ExPorygon/Ozzy840", "Conarnar"],
+            "numparticipants": 3,
+            "result": [[""], [""], [""]],
+            "participants": ["AchySolrock", "gtbot", "Gizmo the Dragon", "Python"]
         }
     ]
 }
