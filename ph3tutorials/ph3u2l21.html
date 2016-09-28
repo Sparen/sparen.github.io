@@ -1,0 +1,112 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 21</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 21 - Customizing Replay Save Files. A guide on how to manipulate and customize Replay Save scripts."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Replay, Save">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u2l20.html" title="Sparen's Danmakufu ph3 Tutorials - Manipulating Pause and End Scene Files">Unit 2 Lesson 20</a></li>
+	        <li><span>Navigation Bar</span></li>
+	        <li><span>---</span></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 21 - Customizing Replay Save Files</h1>	      <p>The video for this lesson is TresserT's Reisen. A true mind trip. Enjoy, and please Koishi appropriately.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/t6h2J6Oz11c" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are Replay Save Scripts?</a></li>
+	          <li><a href="#sub3">Part 3: What is inside a Replay Save Script?</a></li>
+	          <li><a href="#sub4">Part 4: How do I use Custom Replay Save Scripts?</a></li>
+	          <li><a href="#quiz1">Quiz: Replay Save Scripts</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will discuss Replay Save scripts, which are called after the user decides to save a replay in an End Scene.</p>
+	      <p>You must read the previous lesson - <a href="./ph3u2l20.html">Lesson 20</a> - before starting with this tutorial, as this lesson is its logical continuation. We will assume that you are familiar with menus, manipulating text objects, and other things that have already been covered.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: What are Replay Save Scripts?</h2>
+	      <p>We've discussed many types of scripts already - Pause, End Scene, and so on. Reply Save screens are another integral feature that should be implemented by all scripters. Especially since the default one looks rather horrible and doesn't let you cancel out of a replay once you accidentally hit the 'Save Replay' button in the End Scene.</p>
+	      <p>We set a custom Replay Save Scene in our System file with <code>SetReplaySaveSceneScriptPath()</code>, the same way as with Pause and End Scenes. This will replace the default.</p>
+	      <p>The very first thing you should do is change the font. The next thing to do is change the Japanese in the strTextIn and strTextView variables to English or your language of choice (終 translates to 'end', 終了 translates to 'finished').</p>
+	      <p>One thing to note, however, is the presence of brackets [ and ] in strTextIn and strTextView. Unfortunately, I highly recommend removing them and replacing them with spaces " ", because they are highly problematic (Danmakufu recognizes them as special characters, etc.). Simply remove them and add two empty spaces before your new 'End'.</p>
+	      <p>The reason why they work OK in the default replay save script is because strTextIn is used only for array length operations and indexing (it contains the actual characters input into your replay name), and strTextView is used exclusively for what you see displayed as the options, except that it uses a different character set to prevent bad things from happening.</p>
+	      <p>Now, let's take a look at the Replay Save Script's structure, as well as how it works.</p>
+	      <h2 style="color:yellow" id="sub3">Part 3: What is inside a Replay Save Script?</h2>
+	      <p>The default Replay Save Scene contains a number of functions and variables to be aware of. To start, the final constants MENU_INDEX_SELECTION and MENU_NAME_ENTRY, which are used to tell the script which menu you are on (selecting a replay slot to save the replay in, or in the name entry menu).</p>
+	      <p>The first of these menus is controlled via <code>TReplayIndexSelection</code>, while the latter is controlled by <code>TNameEntry</code>.</p>
+	      <p></p>
+	      <p></p>
+	      <p></p>
+	      <p></p>
+	      <p></p>
+	      <p></p>
+	      <p></p>
+	      <p></p>
+	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Replay Save Scripts</h2>
+	        <!--Quiz start.-->
+		<p>1) Which final constant is sent as a script result signaling 'return to title'? </p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', '5');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. RESULT_RETRY<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. RESULT_CANCEL<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. RESULT_END<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) How long would you hold the down arrow key (VK_DOWN) in order to move two options down? </p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '4');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 30<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 40<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 50<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+	      <h2 style="color:yellow" id="subs">Summary</h2>
+	        <ul>
+	          <li></li>
+	        </ul>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u2l20.html" title="Sparen's Danmakufu ph3 Tutorials - Manipulating Pause and End Scene Files">Unit 2 Lesson 20</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer>
+        <p style="text-align: center;">Last Update to Page: Sept 28, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <div style="text-align: center;"><br>
+          <p><b>ADVERTISEMENTS</b></p>
+          <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
+          <p>Read <a href="../advertisements.html">this page</a> for more information.</p><br>
+        </div>      </footer>    </div>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>  </body></html>

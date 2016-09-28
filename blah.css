@@ -379,6 +379,12 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   background-color:rgb(0,96,64);
 }
 
+.indexupdfall2016{
+  border:2px solid; 
+  border-color:rgb(256,224,128); 
+  background-color:rgb(160,64,0);
+}
+
 .indexupdsp2015title{
   padding: 5px;
 }
