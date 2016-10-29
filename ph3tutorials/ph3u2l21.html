@@ -47,11 +47,25 @@
 	      <p>We set a custom Replay Save Scene in our System file with <code>SetReplaySaveSceneScriptPath()</code>, the same way as with Pause and End Scenes. This will replace the default.</p>
 	      <p>The very first thing you should do is change the font. The next thing to do is change the Japanese in the strTextIn and strTextView variables to English or your language of choice (終 translates to 'end', 終了 translates to 'finished').</p>
 	      <p>One thing to note, however, is the presence of brackets [ and ] in strTextIn and strTextView. Unfortunately, I highly recommend removing them and replacing them with spaces " ", because they are highly problematic (Danmakufu recognizes them as special characters, etc.). Simply remove them and add two empty spaces before your new 'End'.</p>
+	      <p>Alternatively, [osb] and [csb] seem to provide the [ and ] characters, respectively if used in a string, similarly to [r]. (Thanks to Uruwi/Fluffy8x)</p>
 	      <p>The reason why they work OK in the default replay save script is because strTextIn is used only for array length operations and indexing (it contains the actual characters input into your replay name), and strTextView is used exclusively for what you see displayed as the options, except that it uses a different character set to prevent bad things from happening.</p>
 	      <p>Now, let's take a look at the Replay Save Script's structure, as well as how it works.</p>
 	      <h2 style="color:yellow" id="sub3">Part 3: What is inside a Replay Save Script?</h2>
 	      <p>The default Replay Save Scene contains a number of functions and variables to be aware of. To start, the final constants MENU_INDEX_SELECTION and MENU_NAME_ENTRY, which are used to tell the script which menu you are on (selecting a replay slot to save the replay in, or in the name entry menu).</p>
 	      <p>The first of these menus is controlled via <code>TReplayIndexSelection</code>, while the latter is controlled by <code>TNameEntry</code>.</p>
+	      <p><code>TReplayIndexSelection</code>, as you may have guessed, handles selecting which replay slot to save your replay in. It functions as a menu that displays various information about a replay. If you look at the individual menu items, created by <code>TMenuItem</code>, the text showed has the replay number, as well as name, date/time, and the score of the replay. These are all saved in replays by default.</p>
+	      <p>Note the 'by default'. If you decide to make a full game or a rather complex stage/boss with various other features (will require a package), you can choose to display other things as well, using Replay Comments and Common Data.</p>
+	      <p>Anyways, if no replay exists at a given slot, "No Data" is appended. And additionally, note that hitting right/left will allow you to access another page of replays! No, you are not limited to 10 replays per script. You can have significantly more by default in Danmakufu.</p>
+	      <p><code>TNameEntry</code> is where you input your name. There are two arrays for the characters used, and using the strTextIn array, characters can be viewed and accessed, selected, and then added to your name. Here you can set the maximum name length (defaults to 8) and default name (defaults to "No Name"), and if you implement CommonData to save a player's input name, you can start out with the previously input name (you will have to implement this yourself).</p>
+	      <p>Beyond these two tasks, there really isn't anything else noteworthy about a Replay Save Script. Just follow standard procedure when dealing with scripts if you try to use a custom one.</p>
+	      <h2 style="color:yellow" id="sub4">Part 4: How do I use Custom Replay Save Scripts?</h2>
+	      <p>As with other scripts, you can choose to use a custom Replay Save Script. As usual, put them in a directory within your script, and link to it from the System File using a relative path. For example:</p>
+	      <pre class="prettyprint"><code>    SetPauseScriptPath(GetCurrentScriptDirectory() ~ "./Pause.dnh");
+    SetEndSceneScriptPath(GetCurrentScriptDirectory() ~ "./EndScene.dnh");
+    SetReplaySaveSceneScriptPath(GetCurrentScriptDirectory() ~ "./ReplaySaveScene.dnh");</code></pre>
+	      <p>Some things you will probably want to do are change the font used, allow for the user to cancel out of <code>TNameEntry</code>, etc.</p>
+	      <p>If you decide to handle Replay Comments, however, things get a little hairy. In <code>TNameEntry</code>, you'll have to, before calling <code>SaveReplay()</code>, <code>SetReplayInfo(REPLAY_COMMENT, &lt;your stuff here&gt;)</code>. If you have multiple fields, I suggest delimiting using "/", though this can and will make storing paths difficult. We will likely discuss this in a later tutorial.</p>
+	      <p></p>
 	      <p></p>
 	      <p></p>
 	      <p></p>
@@ -100,7 +114,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 28, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Oct 29, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
