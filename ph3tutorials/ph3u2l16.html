@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 16</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 16 - Upgrading Singles for Usage in Plurals. A guide to making (0,0) spawning errors disappear."      name="description">
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 16</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 16 - Object Autodeletion and (0,0) Spawning. A guide to making (0,0) spawning errors disappear."      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
@@ -23,7 +23,7 @@
 	        <li><span>Navigation Bar</span></li>
 	        <li><a href="./ph3u2l17.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Text Functions and Fonts">Unit 2 Lesson 17</a></li>
 	      </ul>
-            </div>            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 16 - Upgrading Singles for Usage in Plurals</h1>	      <p>The video for this lesson is Python's Human Inferno, because Mokou likes to regenerate and add extra singles onto plurals with reckless abandon.</p>
+            </div>            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 16 - Object Autodeletion and (0,0) Spawning</h1>	      <p>The video for this lesson is Python's Human Inferno, because Mokou likes to regenerate and add extra singles onto plurals with reckless abandon.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <div class="ytembed_sm">
 	        <iframe src="https://www.youtube.com/embed/cPbwLy1sypg" frameborder="0" allowfullscreen></iframe>
@@ -41,7 +41,7 @@
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
-	      <p>In this lesson, I will discuss how to make single scripts plural-friendly. I will cover TFinalize in greater detail, as well as how Object Autodeletion impacts a script. Additional miscellaneous topics will also be covered. <strong>This lesson assumes that you are familiar with the contents of Lessons 3-8 and <a href="./ph3u2l12.html">Lesson 12</a>. If you are not familiar with these, please review them.</strong></p>
+	      <p>In this lesson, I will discuss how to make single scripts plural-friendly. I will cover TFinalize in greater detail, as well as how Object Autodeletion impacts a script. (0,0) spawning and how to prevent it are major topics in this lesson. Additional miscellaneous topics will also be covered. <strong>This lesson assumes that you are familiar with the contents of Lessons 3-8 and <a href="./ph3u2l12.html">Lesson 12</a>. If you are not familiar with these, please review them.</strong></p>
 	      <h2 style="color:yellow" id="sub2">Part 2: Why Upgrade Single Scripts?</h2>
 	      <p>So far, most of my code examples (exception being in <a href="./ph3u1l6.html">Lesson 6</a>) have been written in such a way that assumes they were mere singles, not linked into boss battles. And so, we have, for the most part, been writing code in such a way where, theoretically, bullets can spawn after the conclusion of the single. We will, in this lesson, tackle this problem.</p>
 	      <p>To highlight this problem, let's consider the TFinalize from <a href="./ph3u1l7code2.html">Lesson 7</a>. Note that this version does not have the spellcard bonus implemented.</p>
@@ -282,7 +282,7 @@ task BulletCommands(obj, dir) {
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Feb 23, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
+        <p style="text-align: center;">Last Update to Page: Nov 27, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>
         <div style="text-align: center;"><br>
           <p><b>ADVERTISEMENTS</b></p>
           <p>Hey scripters! Want me to feature your script/project/blog/website/Youtube video down here?</p>
