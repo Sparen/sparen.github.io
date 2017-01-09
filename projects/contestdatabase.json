@@ -389,6 +389,19 @@
             "numparticipants": 3,
             "result": [["AchySolrock", "gtbot"], ["Gizmo the Dragon"], ["Python"]],
             "participants": ["AchySolrock", "gtbot", "Gizmo the Dragon", "Python"]
+        },
+        {
+            "id": "lenen1",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "kill two birds with one stone",
+            "year": 2017,
+            "duration": [2016.12, 2017.01],
+            "host": "Python",
+            "judges": ["Python", "TresserT"],
+            "numparticipants": 0,
+            "result": [[],[],[]],
+            "participants": []
         }
     ]
 }
