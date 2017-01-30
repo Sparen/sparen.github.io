@@ -69,4 +69,14 @@
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
 </url>
+<url>
+<loc>http://sparen.github.io/projects/seitentouji/bio_enrai.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.1</priority>
+</url>
+<url>
+<loc>http://sparen.github.io/projects/seitentouji/bio_yutaro.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.1</priority>
+</url>
 </urlset>
