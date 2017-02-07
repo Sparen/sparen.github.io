@@ -284,7 +284,7 @@
             "judges": ["ExPorygon/Ozzy840", "AJS"],
             "numparticipants": 17,
             "result": [["Arby26"], ["Darkness1"], ["Trickysticks"]],
-            "participants": ["Ultimadragon88", "Lunarethic", "Aoki Yakumo/1000 Sun Studios", "Lefkada", "Arby26", "Trickysticks", "Goldstein Izayoi", "Darkness1", "Baron Blade", "Bob the Tanuki", "Alicirno", "Sariel", "Conarnar", "Yukkurix3", "Kirbio", "TresserT", "Sparen"]
+            "participants": ["Ultimadragon88", "Lunarethic", "Aoki Yakumo/1000 Sun Studios", "Lefkada/Ephy", "Arby26", "Trickysticks", "Goldstein Izayoi", "Darkness1", "Baron Blade", "Bob the Tanuki", "Alicirno", "Sariel", "Conarnar", "Yukkurix3", "Kirbio", "TresserT", "Sparen"]
         },
         {
             "id": "artifact3",
@@ -309,8 +309,8 @@
             "host": "Sparen",
             "judges": ["Sparen", "AchySolrock", "Trickysticks", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"],
             "numparticipants": 8,
-            "result": [["Kirbio"], ["Lunarethic"], ["Lefkada"]],
-            "participants": ["Kirbio", "Lunarethic", "Lefkada", "Bob the Tanuki", "TresserT", "Searinox", "Zhan Fox", "Hopemetal"]
+            "result": [["Kirbio"], ["Lunarethic"], ["Lefkada/Ephy"]],
+            "participants": ["Kirbio", "Lunarethic", "Lefkada/Ephy", "Bob the Tanuki", "TresserT", "Searinox", "Zhan Fox", "Hopemetal"]
         },
         {
             "id": "range14",
@@ -323,7 +323,7 @@
             "judges": ["TalosMistake", "ExPorygon/Ozzy840", "Lunarethic"],
             "numparticipants": 19,
             "result": [["AJS"], ["Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"], ["TresserT"]],
-            "participants": ["AJS", "Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada", "AchySolrock", "Dark/Ran Yakumo", "Gizmo the Dragon", "Midnight Sparkle", "auto2112", "Fluffy8x"]
+            "participants": ["AJS", "Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada/Ephy", "AchySolrock", "Dark/Ran Yakumo", "Gizmo the Dragon", "Midnight Sparkle", "auto2112", "Uruwi/Fluffy8x"]
         },
         {
             "id": "range15",
@@ -345,8 +345,8 @@
             "name": "unexpected master mind",
             "year": 2016,
             "duration": [2015.12, 2016.01],
-            "host": "Lefkada",
-            "judges": ["Lefkada", "Neshima", "AJS"],
+            "host": "Lefkada/Ephy",
+            "judges": ["Lefkada/Ephy", "Neshima", "AJS"],
             "numparticipants": 18,
             "result": [["TresserT"], ["Python"], ["Spectral Nexus"]],
             "participants": ["TresserT", "Python", "Spectral Nexus", "Lunarethic", "Kirbio", "Zhan Fox", "Vigor", "gtbot", "AchySolrock", "Arby26", "Sparen", "Conarnar", "Miplouf", "Haru", "Badz", "DrytheMeowstic", "PhantomSong", "tyrz_939", "Trickysticks", "Fefnir"]
@@ -362,7 +362,7 @@
             "judges": ["AJS", "Sagaci", "Sparen"],
             "numparticipants": 14,
             "result": [["Vigor"], ["Conarnar"], ["TresserT"]],
-            "participants": ["Gizmo the Dragon", "Python", "DrytheMeowstic", "Fluffy8x", "Vigor", "Badz", "Conarnar", "TresserT", "Guilmon/DLS", "Gusano2314", "Fumiko", "Lefkada", "Sariel", "Mr. Gaberson"]
+            "participants": ["Gizmo the Dragon", "Python", "DrytheMeowstic", "Uruwi/Fluffy8x", "Vigor", "Badz", "Conarnar", "TresserT", "Guilmon/DLS", "Gusano2314", "Fumiko", "Lefkada/Ephy", "Sariel", "Mr. Gaberson"]
         },
         {
             "id": "locaa8",
@@ -375,7 +375,7 @@
             "judges": ["Trickysticks", "Sparen", "TalosMistake"],
             "numparticipants": 24,
             "result": [["Kirbio"], ["TresserT"], ["Akakyu"]],
-            "participants": ["AchySolrock", "Agent17", "AJS", "Akakyu", "Alzack13", "Awalys", "Badz", "Conarnar", "Dark/Ran Yakumo", "Gizmo the Dragon", "Guilmon/DLS", "Haru", "Kirbio", "Lefkada", "Lunarethic", "DrytheMeowstic", "Natashi", "PhantomSong", "Pikmin H", "Python", "RickyRister", "Sphe", "TresserT", "WishMakers"]
+            "participants": ["AchySolrock", "Agent17", "AJS", "Akakyu", "Alzack13", "Awalys", "Badz", "Conarnar", "Dark/Ran Yakumo", "Gizmo the Dragon", "Guilmon/DLS", "Haru", "Kirbio", "Lefkada/Ephy", "Lunarethic", "DrytheMeowstic", "Natashi", "PhantomSong", "Pikmin H", "Python", "RickyRister", "Sphe", "TresserT", "WishMakers"]
         },
         {
             "id": "locaa9",
@@ -399,9 +399,9 @@
             "duration": [2016.12, 2017.01],
             "host": "Python",
             "judges": ["Python", "TresserT"],
-            "numparticipants": 0,
+            "numparticipants": 9,
             "result": [[],[],[]],
-            "participants": []
+            "participants": ["Conarnar", "Umbra", "Guilmon/DLS", "Sphe", "Natashi", "Vigor", "Choon", "Adam", "AchySolrock", "gtbot", "Alice Matroy/SKN"]
         }
     ]
 }
