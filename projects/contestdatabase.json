@@ -400,7 +400,7 @@
             "host": "Python",
             "judges": ["Python", "TresserT"],
             "numparticipants": 9,
-            "result": [[],[],[]],
+            "result": [["Natashi"],["Sphe"],["Conarnar"]],
             "participants": ["Conarnar", "Umbra", "Guilmon/DLS", "Sphe", "Natashi", "Vigor", "Choon", "Adam", "AchySolrock", "gtbot", "Alice Matroy/SKN"]
         }
     ]
