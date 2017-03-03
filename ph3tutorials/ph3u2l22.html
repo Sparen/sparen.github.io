@@ -23,10 +23,10 @@
 	        <li><span>Navigation Bar</span></li>
 	        <li><span>---</span></li>
 	      </ul>
-            </div>            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 22 - Implementing Scrolling 2D Backgrounds in Background Files</h1>	      <p>The video for this lesson is TBA. Insert description here</p>
+            </div>            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 22 - Implementing Scrolling 2D Backgrounds in Background Files</h1>	      <p>The video for this lesson is TalosMistake's Yuyuko. Enjoy the beautiful backgrounds, which you will soon learn to make (or well, the 2D ones).</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <div class="ytembed_sm">
-	        <iframe src="https://www.youtube.com/embed/t6h2J6Oz11c" frameborder="0" allowfullscreen></iframe>
+	        <iframe src="https://www.youtube.com/embed/HyBJAhkhOXQ" frameborder="0" allowfullscreen></iframe>
 	      </div>
 	      <div class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
@@ -46,7 +46,50 @@
 	      <p>In this lesson, I will discuss Background Scripts as well as how to implement various types of 2D backgrounds by transforming their component 2D sprites (simple scrolling, rotating).</p>
 	      <p>This lesson requires familiarity with 2D Sprites. If you are not familiar with 2D Sprites, please refer to <a href="./ph3u2l13.html">Lesson 13</a>.</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: What are Background Scripts?</h2>
+	      <p>We've covered a lot of different script types now. System, Replay Save, Pause, End Scene... But now we'll touch on Background scripts. Like System scripts, you link to them in the Danmakufu header, and they run for the duration of a script. You can use the same background script for stages, plurals, and singles, and they generally work well.</p>
+	      <p>Note that although you can *technically* dump whatever you want in a Background script, they are generally used to run tasks for stage/nonspell backgrounds and spell backgrounds. If you have any graphical effects that do not affect gameplay, like falling cherry petals or the like, the Background script is where you put them.</p>
 	      <h2 style="color:yellow" id="sub3">Part 3: How are Background Scripts structured?</h2>
+	      <p>We will begin our discussion of Background scripts by dissecting the default, located in default_system/Default_Background_IceMountain.txt. Naturally, similarly to System scripts, you can name your Background script however you want, as long as you link to it properly.</p>
+	      <p>Inside the default Background script, there is a field, <code>bSpell</code>, which is controlled in @MainLoop. Contents of @MainLoop are below:</p>
+	      <pre class="prettyprint linenums"><code>@MainLoop
+{
+
+	let objScene = GetEnemyBossSceneObjectID();
+	if(objScene != ID_INVALID && ObjEnemyBossScene_GetInfo(objScene, INFO_IS_SPELL))
+	{
+		bSpell = true;
+	}
+	else
+	{
+		bSpell = false;
+	}
+	
+
+	yield;
+}</code></pre>
+	      <p>As you can see, we get the EnemyBossScene Object, and if it exists (i.e. on a boss), we check if there's a spell going on. If so, bSpell turns true, otherwise false. This is how we control the Spell Background.</p>
+	      <p>In @Initialize, we will ignore all the camera and fog commands, as those are used for 3D Backgrounds. All standard Background scripts will have a task for the stage background (TNormalBackground in this case) and a task for the spell background (TSpellBackground). In this case, TNormalBackground is called three times - that is due to the way it is structured.</p>
+	      <p>For the purposes of this guide, which focuses on 2D backgrounds, we will turn our focus to TSpellBackground.</p>
+	      <p>At the start of the task, we define all the paths to the textures we want to use, and then create the relevant render objects (2D sprites). It is highly recommended to use render priorities of 0.21 and, if necessary, 0.22 for effects that are continuously spawned and must render over other background components. I personally advise against using more than three render priority slots. Instead, in order to layer specific textures over others, keep in mind that the order in which you create 2D sprites dictates the order in which they are created in the background.</p>
+	      <p>For the default background, for example, obj2 is created after obj1. Although they have the same render priority, obj2 will render above obj1.</p>
+	      <p>After creating your textures, a standard loop begins. The default background tasks use the following to fade out the stage background:</p>
+	      <pre class="prettyprint linenums"><code>	let frameInvisible = 0;
+...
+		if(bSpell)
+		{
+			frameInvisible++;
+			if(frameInvisible >= 60)
+			{
+				Obj_SetVisible(obj, false);
+			}
+		}
+		else
+		{
+			frameInvisible = 0;
+			Obj_SetVisible(obj, true);
+		}</code></pre>
+	      <p>Essentially, after 60 frames, the object in the background turns invisible. If you have multiple objects in the background to turn off, you would set all of them to invisible or visible depending on the situation.</p>
+	      <p>The spell background is similar, but has slightly different structure.</p>
 	      <h2 style="color:yellow" id="sub4">Part 4: How do I make a static 2D background?</h2>
 	      <h2 style="color:yellow" id="sub5">Part 5: How do I make a scrolling 2D background?</h2>
 	      <h2 style="color:yellow" id="sub6">Part 6: How do I make a rotating 2D background?</h2>
