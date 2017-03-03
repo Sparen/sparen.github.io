@@ -55,7 +55,7 @@
 	      <p>The first of these menus is controlled via <code>TReplayIndexSelection</code>, while the latter is controlled by <code>TNameEntry</code>.</p>
 	      <p><code>TReplayIndexSelection</code>, as you may have guessed, handles selecting which replay slot to save your replay in. It functions as a menu that displays various information about a replay. If you look at the individual menu items, created by <code>TMenuItem</code>, the text showed has the replay number, as well as name, date/time, and the score of the replay. These are all saved in replays by default.</p>
 	      <p>Note the 'by default'. If you decide to make a full game or a rather complex stage/boss with various other features (will require a package), you can choose to display other things as well, using Replay Comments and Common Data.</p>
-	      <p>Anyways, if no replay exists at a given slot, "No Data" is appended. And additionally, note that hitting right/left will allow you to access another page of replays! No, you are not limited to 10 replays per script. You can have significantly more by default in Danmakufu.</p>
+	      <p>Anyways, if no replay exists at a given slot, "No Data" is appended. And additionally, note that hitting right/left will allow you to access another page of replays! No, you are not limited to 10 replays per script. You can have significantly more by default in Danmakufu. The hard number is <code>REPLAY_INDEX_DIGIT_MAX - REPLAY_INDEX_DIGIT_MIN + 1</code>, which is equal to 99.</p>
 	      <p><code>TNameEntry</code> is where you input your name. There are two arrays for the characters used, and using the strTextIn array, characters can be viewed and accessed, selected, and then added to your name. Here you can set the maximum name length (defaults to 8) and default name (defaults to "No Name"), and if you implement CommonData to save a player's input name, you can start out with the previously input name (you will have to implement this yourself).</p>
 	      <p>Beyond these two tasks, there really isn't anything else noteworthy about a Replay Save Script. Just follow standard procedure when dealing with scripts if you try to use a custom one.</p>
 	      <h2 style="color:yellow" id="sub4">Part 4: How do I use Custom Replay Save Scripts?</h2>
@@ -77,31 +77,33 @@
 	      <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: Replay Save Scripts</h2>
 	        <!--Quiz start.-->
-		<p>1) Which final constant is sent as a script result signaling 'return to title'? </p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', '5');">
+		<p>1) What is the number of replays that can be stored for a given script? </p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '3');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. RESULT_RETRY<br>
+	        A. 10<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. RESULT_CANCEL<br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. RESULT_END<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
-		<br>
-		<p>2) How long would you hold the down arrow key (VK_DOWN) in order to move two options down? </p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '4');">
-	        <input type="RADIO" value="A" name="cc">
-	        A. 30<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. 40<br>
+	        B. 99<br>
 	        <input type="RADIO" value="C" name="cc">
 	        C. 50<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
+		<p>2) How do you escape the [ character in Danmakufu? </p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '2');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. \[<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. [osb]<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. [csb]<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
 	      <h2 style="color:yellow" id="subs">Summary</h2>
 	        <ul>
-	          <li></li>
+	          <li>Replay Save Scenes run when the option to save a replay is selected from an End Scene</li>
+	          <li>Replay Save Scenes have two parts - choosing a replay slot, and name input + saving the replay</li>
+	          <li>Replay Save Scenes allow for customizing what information (CommonData, Replay Comments) gets saved to a replay</li>
 	        </ul>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
@@ -114,7 +116,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 29, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Mar 03, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016-2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
