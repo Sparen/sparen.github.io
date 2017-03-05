@@ -402,6 +402,19 @@
             "numparticipants": 9,
             "result": [["Natashi"],["Sphe"],["Conarnar"]],
             "participants": ["Conarnar", "Umbra", "Guilmon/DLS", "Sphe", "Natashi", "Vigor", "Choon", "Adam", "AchySolrock", "gtbot", "Alice Matroy/SKN"]
+        },
+        {
+            "id": "locaa10",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "insider obfuscation",
+            "year": 2017,
+            "duration": [2017.03, 2017.03],
+            "host": "TresserT",
+            "judges": ["Sparen", "Ultimadragon88"],
+            "numparticipants": 0,
+            "result": [[], [], []],
+            "participants": []
         }
     ]
 }
