@@ -323,7 +323,7 @@
             "judges": ["TalosMistake", "ExPorygon/Ozzy840", "Lunarethic"],
             "numparticipants": 19,
             "result": [["AJS"], ["Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"], ["TresserT"]],
-            "participants": ["AJS", "Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada/Ephy", "AchySolrock", "Dark/Ran Yakumo", "Gizmo the Dragon", "Midnight Sparkle", "auto2112", "Uruwi/Fluffy8x"]
+            "participants": ["AJS", "Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada/Ephy", "AchySolrock", "Dark/Ran Yakumo", "Gizmo the Dragon", "Midnight Sparkle", "The Terrible Bullet Dodger/auto2112", "Uruwi/Fluffy8x"]
         },
         {
             "id": "range15",
@@ -336,7 +336,7 @@
             "judges": ["Trickysticks", "Sparen", "AJS"],
             "numparticipants": 9,
             "result": [["Lunarethic"], ["TresserT"], ["Kirbio"]],
-            "participants": ["Lunarethic", "TresserT", "Kirbio", "tyrz_939", "Vigor", "auto2112", "Guilmon/DLS", "Alice Matroy/SKN", "Haru", "WishMakers"]
+            "participants": ["Lunarethic", "TresserT", "Kirbio", "tyrz_939", "Vigor", "The Terrible Bullet Dodger/auto2112", "Guilmon/DLS", "Alice Matroy/SKN", "Haru", "WishMakers"]
         },
         {
             "id": "range16",
@@ -412,9 +412,9 @@
             "duration": [2017.03, 2017.03],
             "host": "TresserT",
             "judges": ["Sparen", "Ultimadragon88", "Vigor"],
-            "numparticipants": 0,
+            "numparticipants": 9,
             "result": [[], [], []],
-            "participants": []
+            "participants": ["Asthmagician", "Conarnar", "Dark/Ran Yakumo", "DrytheMeowstic", "Mr. Gaberson", "Python", "Trickysticks", "The Terrible Bullet Dodger/auto2112", "WishMakers"]
         }
     ]
 }
