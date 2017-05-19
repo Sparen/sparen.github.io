@@ -43,15 +43,119 @@
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss the 2D Camera and some applications, including screen flip and screenshake.</p>
 	      <p>This lesson requires familiarity with 2D backgrounds. If you are not familiar with 2D Backgrounds, please refer to <a href="./ph3u2l22.html">Lesson 22</a>.</p>
-              <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: What is the 2D Camera?</h2>
-	      <p></p>
+	      <p>When you view the playing field in Danmakufu, it is a 384x448 pixel section of the screen using render priorities between 20 and 80, surrounded by the rest of the HUD to form a 640x480 pixel window. Within the playing field, in render priorities between 20 and 80, the display is controlled by the 2D Camera. </p>
+	      <p>The 2D Camera is how the playing field is viewed. If the focus were to be moved to (0,0), it would appear as if the contents of the screen had shifted by 192 pixels to the left and 224 pixels up. Other transforms have their own various effects.</p>
+	      <p>If we want to zoom in on a certain character and rotate the screen like in AJS's Cacophonous Cadre, we can do so. If we want to do a Seija spin, we can do so. That's the functionality that the 2D Camera Provides.</p>
 	      <h2 style="color:yellow" id="sub3">Part 3: What are the various 2D Camera functions?</h2>
-	      <p></p>
+	      <p>The 2D Camera functions can be found on the Danmakufu Wiki - <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/2D_Camera_Functions">2D Camera Functions</a>. For this portion of the tutorial, we shall focus on the code AJS uses in his Cacophonous Cadre to zoom in on a target on the screen.</p>
+	      <pre class="prettyprint linenums"><code>task ScreenZoom(targX,targY){
+	Set2DCameraFocusX(targX);
+	Set2DCameraFocusY(targY);
+	Set2DCameraAngleZ(30);
+	Set2DCameraRatio(1.5);
+	wait(30);
+	Set2DCameraFocusX(targX);
+	Set2DCameraFocusY(targY);
+	Set2DCameraAngleZ(-30);
+	Set2DCameraRatio(2);
+	wait(30);
+	Set2DCameraFocusX(targX);
+	Set2DCameraFocusY(targY);
+	Set2DCameraAngleZ(10);
+	Set2DCameraRatio(2.5);
+	
+	...//Screenshake-related code
+
+	wait(60);
+	
+	Set2DCameraAngleZ(0);
+	Set2DCameraRatio(1);
+	Set2DCameraFocusX(GetScreenWidth/2);
+	Set2DCameraFocusY(GetScreenHeight/2);
+
+}</code></pre>
+	      <p>The 2D Camera's default focus is the center of the playing field, at (384/2, 448/2) by default. It can be changed using <code>Set2DCameraFocusX()</code> and <code>Set2DCameraFocusY()</code>. You can use this to effectively move the 'playing field' wherever you want.</p>
+	      <p>To rotate the view around the Z axis, use <code>Set2DCameraAngleZ()</code>. In the above example, the camera is rotated first to 30 degrees, then to -30, then to 10, and finally back to the default of 0.</p>
+	      <p>To zoom in, use <code>Set2DCameraRatio()</code>, which defaults to a value of 1 (no zoom). In the above example, the camera zooms in 1.5x, then 2x, and finally 2.5x before reverting.</p>
+	      <p>However, the 2D Camera Ratio can be set with <code>Set2DCameraRatioX()</code> and <code>Set2DCameraRatioY()</code> as well. As stated on the Wiki, setting negative values for these will essentially flip them. We'll review this later on.</p>
 	      <h2 style="color:yellow" id="sub4">Part 4: How do I implement 2D Screenshake?</h2>
-	      <p></p>
+	      <p>Screenshake is simple - for a set duration of time, shake the focus of the 2D camera around, and restore it at the end. In AJS's example, he did the following:</p>
+	      <pre class="prettyprint"><code>	Set2DCameraFocusX(GetScreenWidth/2);
+	Set2DCameraFocusY(GetScreenHeight/2);</code></pre>
+	      <p>This restores the camera focus to the original location, which in his case is not (192, 244) since he has a different sized playing field.</p>
+	      <p>Knowing what we want to do, there are two ways to go about the actual screenshake. One way is to use random offsets, and the other is to perform the screenshake in an organized fashion, where the screen shakes by a preset or math-controlled amount (for example, having the screenshake increase and then decrease using a sine wave).</p>
+	      <p>For an example of an organized screen shake, let's review AJS's code once more.</p>
+	      <pre class="prettyprint linenums"><code>task screenshake(shakeamount,length){
+	let delay = 1;
+	let origshakeamount = shakeamount;
+	
+	loop(length){
+	Set2DCameraFocusX(GetScreenWidth/2+shakeamount);
+	Set2DCameraFocusY(GetScreenHeight/2+shakeamount);
+	wait(delay);
+	Set2DCameraFocusX(GetScreenWidth/2-shakeamount);
+	Set2DCameraFocusY(GetScreenHeight/2-shakeamount);
+	wait(delay);
+	Set2DCameraFocusX(GetScreenWidth/2+shakeamount);
+	Set2DCameraFocusY(GetScreenHeight/2-shakeamount);
+	wait(delay);
+	Set2DCameraFocusX(GetScreenWidth/2-shakeamount);
+	Set2DCameraFocusY(GetScreenHeight/2+shakeamount);
+	wait(delay);
+	shakeamount-=origshakeamount/length;}
+	Set2DCameraFocusX(GetScreenWidth/2);
+	Set2DCameraFocusY(GetScreenHeight/2);
+}</code></pre>
+	      <p>In the above code, the screenshake task takes a pattern duration (<code>length</code>), as well as an amplitude (<code>shakeamount</code>). For <code>length</code> cycles, the code shifts the camera four different ways in an organized fashion, taking length*4 frames to execute. After this, the camera is restored.</p>
+	      <p>For a random shake approach, we can do the following: </p>
+	      <pre class="prettyprint linenums"><code>/* *************************************************************************
+*ScreenShakeA1(int, double) -- Screenshake the 2D camera for a given time with a given intensity
+*Param: shaketime (int) - Time to shake for
+*Param: intensity (double) - Maximum change in position
+************************************************************************* */
+task ScreenShakeA1(shaketime, intensity){
+    while(shaketime > 0){
+        Set2DCameraFocusX(GetStgFrameWidth/2 + rand(-intensity, intensity));
+        Set2DCameraFocusY(GetStgFrameHeight/2 + rand(-intensity, intensity));
+        shaketime--;
+        yield;
+    }
+    Set2DCameraFocusX(GetStgFrameWidth/2);
+    Set2DCameraFocusY(GetStgFrameHeight/2);
+    yield;
+}</code></pre>
+	      <p>In this scenario, we have our time and intensity as parameters. We log the original position of the 2D camera, and then, for <code>shaketime</code> frames, move the camera's focus from the center using the intensity as an upper bound on each the X and Y deviations. At the end, we restore the original camera position.</p>
+	      <p>It will be left as an exercise to create a sine-based screenshake (see below Exercise and Quiz).</p>
+	      <div class="tut_exercise">EXERCISE: Using the sine function, create a screenshake task ScreenShakeSine(x, n) that, over x frames, oscillates from 0 intensity to n and then back to 0.</div>
 	      <h2 style="color:yellow" id="sub5">Part 5: How do I replicate Seija's This Side Down?</h2>
-	      <p></p>
+	      <p>It's finally time to do some Seija replication! First and foremost, the 2D background must be perfectly centered around the horizontal center line (default to 448/2 = 224). Otherwise when we perform the flip, it will be unbalanced and look weird due to there being more of the image above the center line than below. </p>
+	      <p>In the spell, Seija flips the screen, then, from the top, spawns bullets in a -1..2 wave with a 30 degree offset, straight downwards. The bullet spawn pattern is random in the y aspect but preset in the x.</p>
+	      <p>Let us begin with the screen flip. From above we know that <code>Set2DCameraRatioY()</code> can be used to flip the screen. Therefore, if we want the screen to flip, taking one full second, we can do the following:</p>
+	      <pre class="prettyprint linenums"><code>task MainTask(){
+    ascent(i in -30..31){
+        Set2DCameraRatioY(1/30*-i);
+        yield;
+    }
+}</code></pre>
+	      <p>The above starts with i at -30, AKA RatioX = 1. It then increases to 30, when the RatioX = -1. It does this over 60 frames.</p>
+	      <p>After this, the bullets are fired. As stated before, the pattern is a wave from the bottom of the screen. Except that the bottom is still the top - just because the camera has changed doesn't mean that the actual coordinates you use in Danmakufu change. Code below.</p>
+	      <pre class="prettyprint linenums"><code>task MainTask(){
+    ascent(i in -30..31){
+        Set2DCameraRatioY(1/30*-i);
+        yield;
+    }
+    while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0) {
+        let x = GetCenterX() + 192 * cos(count * 3);
+        let y = rand(0, 96);
+        ascent(i in -1..2) {
+            CreateShotA1(x, y, 2, 90 + 30*i, DS_FIRE_RED, 12);
+        }
+        wait(8);
+    }
+}</code></pre>
+	      <p>As you can see, while the boss is alive we get our x and y positions, and fire the wave. Our y position is between 0 (the top of the screen) and 96. Since the screen has been flipped vertically, though it appears that the bullets are spawning on the bottom half and are moving up, the reality is that they're spawning in the top, moving down, and are simply flipped across the horizontal center axis of the screen.</p>
+            <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: 2D Camera Functions</h2>
 	        <!--Quiz start.-->
 		<p>1) Question?</p>
@@ -87,7 +191,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Apr 12, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: May 19, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
