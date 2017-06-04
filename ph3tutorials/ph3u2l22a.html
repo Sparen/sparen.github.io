@@ -36,6 +36,7 @@
 	          <li><a href="#sub3">Part 3: What are the various 2D Camera functions?</a></li>
 	          <li><a href="#sub4">Part 4: How do I implement 2D Screenshake?</a></li>
 	          <li><a href="#sub5">Part 5: How do I replicate Seija's This Side Down?</a></li>
+	          <li><a href="#sub6">Part 6: How do I make the 2D Camera rotate?</a></li>
 	          <li><a href="#quiz1">Quiz: 2D Camera Functions</a></li>
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
@@ -155,30 +156,51 @@ task ScreenShakeA1(shaketime, intensity){
     }
 }</code></pre>
 	      <p>As you can see, while the boss is alive we get our x and y positions, and fire the wave. Our y position is between 0 (the top of the screen) and 96. Since the screen has been flipped vertically, though it appears that the bullets are spawning on the bottom half and are moving up, the reality is that they're spawning in the top, moving down, and are simply flipped across the horizontal center axis of the screen.</p>
-            <p>UNDER CONSTRUCTION BELOW THIS LINE</p>
+	      <h2 style="color:yellow" id="sub6">Part 6: How do I make the 2D Camera rotate?</h2>
+            <p>To close the lesson, we will have a brief discussion about replicating Seija's last boss spell, where the screen rotates around the center of the screen.</p>
+            <p>As stated earlier, the camera focus defaults to the center, and <code>Set2DCameraAngleZ()</code> can be used to set the rotational angle of the 2D Camera.</p>
+            <p>Using this, one way to rotate the screen (background and all) is to adjust the angle of the 2D Camera over time using a while loop. We can make a task that handles this:</p>
+	      <pre class="prettyprint linenums"><code>task RotateScreen(change, time, dir) {
+    loop(time) {
+        Set2DCameraAngleZ(Get2DCameraAngleZ() + change/time * dir);
+        yield;
+    }
+}</code></pre>
+            <p>In this scenario, change is the number of degrees to rotate, time is how long it takes to perform the rotation (in frames), and dir is the direction of rotation.</p>
 	      <h2 style="color:yellow" id="quiz1">Quiz: 2D Camera Functions</h2>
 	        <!--Quiz start.-->
-		<p>1) Question?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', '5');">
+		<p>1) Seiga, having been forgotten after Seija came into existence, wants to cash in on Seija's popularity. With vengeance, she plans to create a combination script utilizing both her and Seija's abilities. However, she is befuddled when upon capturing a spell in the middle of the screenshake animation, the screen does not return to its original position. Which function can be used to reset the 2D Camera?</p>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'C');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. The destination rects are not properly implemented.<br>
+	        A. <code>SetCameraRadius()</code><br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. The initial position of the render objects is incorrect.<br>
+	        B. <code>Set2DCameraRatio()</code><br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. In her source rects, she is adding <code>frame % 512</code> instead of subtracting.<br>
+	        C. <code>Reset2DCamera()</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
-		<p>2) Question?</p>
-	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
-	        <input type="RADIO" value="A" name="cc">
-	        A. frame<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. frame / 6<br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. frame ^ 0.5<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
+		<p>2) In an inspirational burst of sadism, Seija decides to have the screen flip indefinitely while rotating. Write a task below to handle this.</p>
+		<p>Hit 'Show' to show possible answers.</p>
+	        <textarea rows="12" style="width:100%;max-width:640px">    task Koishi {
+        let count = 0;
+        while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0) {
+            //Your code here
+        }
+    }</textarea>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+	      <p>One possible answer is below.</p>
+	      <pre class="prettyprint linenums"><code>    task Koishi {
+        let count = 0;
+        while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0) {
+            Set2DCameraRatioX(cos(count));
+            Set2DCameraAngleZ(count/2);
+            count++;
+            yield;
+        }
+    }</code></pre>
+	        </div></div>
 		<br>
 	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
@@ -191,7 +213,7 @@ task ScreenShakeA1(shaketime, intensity){
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: May 19, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: June 03, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
