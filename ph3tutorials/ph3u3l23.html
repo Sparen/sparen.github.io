@@ -1,0 +1,199 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 23</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 23 - Basics of Stages in Danmakufu. A guide on Danmakufu's Stage scripts."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Stage">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u2l22a.html" title="Sparen's Danmakufu ph3 Tutorials - Recollection: This Side Down">Extra Lesson 4</a></li>
+	        <li><span>Navigation Bar</span></li>
+	        <li><span>---</span></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 style="color:orange">Sparen's Danmakufu ph3 Tutorials Lesson 23 - Basics of Stages in Danmakufu</h1>
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are Stage Scripts?</a></li>
+	          <li><a href="#sub3">Part 3: How do Stage Scripts work?</a></li>
+	          <li><a href="#sub4">Part 4: How do I run a Plural Script from a Stage Script?</a></li>
+	          <li><a href="#sub5">Part 5: How do I play music in a Stage Script?</a></li>
+	          <li><a href="#quiz1">Quiz: Stage Scripts</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will discuss Stage Scripts - in particular, how they function and how they can be  used.</p>
+	      <h2 style="color:yellow" id="sub2">Part 2: What are Stage Scripts?</h2>
+	      <p>Stage Scripts are the main structural component of a full stage in Danmakufu. Just like Singles correspond to a single attack and Plurals correspond to a boss battle, Stages encompass various different components that make up a stage. In a Stage, you will load Plural scripts, handle creation of stage enemies, and handle stage banners, various graphical effects, and store commonly used events.</p>
+              <p>Over the course of this unit, we will cover Common Data and its applications, @Event and how it can be used to run specific code from anywhere in your game, stage enemies and familiars, and the basic components of 3D backgrounds, user input, and player scripts.</p>
+	      <p>Stage scripts in Danmakufu are denoted by <code>#TouhouDanmakufu[Stage]</code> and contain the same basic components as other scripts we have seen. <strong>It is HIGHLY RECOMMENDED that you be familiar with all prior lessons before entering this unit.</strong> Stage scripts are extremely versatile and you can do practically anything in them. In fact, continue systems and the like heavily depend on stages. </p>
+	      <h2 style="color:yellow" id="sub3">Part 3: How do Stage Scripts work?</h2>
+	      <p>Like any other script, Stages can be run in the standard manner, and they also have special code in packages for various stage control functionality. Like other scripts, they will run in parallel with the System, Background, loaded and registered plurals, and more.</p>
+	      <p>Stage scripts, in order to perform their tasks, will depend on task calls to run in parallel, control mechanisms to ensure that scripts are kept in sync, and careful use of functions and subroutines for appropriate blocking. In this brief lesson, we will observe the default ExRumia_Stage.txt that comes with ph3 [.1 pre6a].</p>
+	      <pre class="prettyprint linenums"><code>#東方弾幕風[Stage]
+#ScriptVersion[3]
+#Title["EXルーミアテストステージ"]
+#Text["EXルーミアテストステージ"]
+#Image["./ExRumia(星符「ミッドナイトレヴァリエ」).jpg"]
+#Background["script/default_system/Default_Background_IceMountain.txt"]
+
+@Initialize
+{
+    TStage();
+}
+
+@MainLoop
+{
+    yield;
+}
+
+@Finalize
+{
+}
+
+
+task TStage
+{
+    let dir = GetCurrentScriptDirectory();
+
+    //ボス再生
+    let path = dir ~ "ExRumia_Plural.txt";
+    let idScript = LoadScriptInThread(path);
+    loop(60){yield;}//1秒くらいあれば、コンパイル完了すると思われる。
+    StartScript(idScript);
+
+    //敵ボスシーンが終了するまで待機
+    while(!IsCloseScript(idScript) && GetPlayerState() != STATE_END)
+    {
+        yield;
+    }
+
+    //～～～敵の出現やボスの出現を繰り返す。
+
+    loop(240){yield;}
+
+    //ステージ終了
+    CloseStgScene();
+}</code></pre>
+	      <h2 style="color:yellow" id="sub4">Part 4: How do I run a Plural Script from a Stage Script?</h2>
+	      <p>We will begin by observing <code>@Initialize</code>, where a single task is called. This TStage task is the main task of the Stage script, and contains essentially everything we will need to run. The <code>@MainLoop</code> has a yield; as is standard to allow the TStage task to run. </p>
+	      <p>In TStage, we define a path to a Plural Script, then run <code>LoadScriptInThread()</code>. This loads the script (blocking, waits for the script to load before doing anything else), and returns the ID of the now-running script. This ID is important for NotifyEvent, which we will cover in a later lesson. </p>
+	      <p><code>StartScript()</code> is used to run the script with the given ID. Note that it doesn't particularly matter whether or not the script was a Plural script - any script can be run this way, hence the versatility of Stage scripts. Note that you can technically load and run scripts elsewhere but Packages, Stages, and System scripts are the three places where external scripts are typically run.</p>
+	      <p>After starting the other script, which runs in parallel, the stage scripts waits for two conditions - the player being alive and the plural script being open. Once either ceases to be true, the stage waits a bit and then closes - otherwise it stays open, waiting for the other conditions to be met. Both conditions are important - if there was no check for the plural being open or not, the stage would just close without waiting for the plural to complete. If the player death check is not present, if the player died in the plural the stage script would continue onwards.</p>
+	      <p>At the end of every stage, it will be necessary to <code>CloseStgScene</code>, which closes the stage formally. And with that, we have a simple stage.</p>
+	      <p>Now let's spice things up a bit, shall we?</p>
+	      <h2 style="color:yellow" id="sub5">How do I play music in a Stage Script?</h2>
+	      <p>If you are not familiar with Danmakufu's sound functions, please refer to <a href="./ph3u2l15.html">Lesson 15</a> and refresh yourself.</p>
+	      <p>To begin, have a stage script prepared as well as two .ogg music bgm tracks. We will create a new function in our Stage Script as follows, similar to the CreateTrack task in Lesson 15:</p>
+	      <pre class="prettyprint linenums"><code>function StageBGM(obj, ID){
+    ObjSound_SetSoundDivision(obj, SOUND_BGM);
+    ObjSound_SetRestartEnable(obj, true);
+    ObjSound_SetLoopEnable(obj, true);
+    ObjSound_SetLoopTime(obj, 0, 300);
+    if(ID == 1){ObjSound_SetLoopTime(bgm, 0, 32);}
+    if(ID == 2){ObjSound_SetLoopTime(obj, 32, 192);}
+    return obj;
+}</code></pre>
+	      <p>We will use this code to handle two different tracks in the stage - the stage theme and the boss theme. At the start of TStage, we will want to actually create and process the two tracks, as well as the boss script. NOTE: bgm and bgm2 have been declared outside all the routines in this scenario.</p>
+	      <pre class="prettyprint linenums"><code>task TStage{
+    let pathboss = GetCurrentScriptDirectory() ~ "./script/PS1B.txt";
+    let bossScript = LoadScriptInThread(pathboss);
+
+    bgm2 = ObjSound_Create();
+    ObjSound_Load(bgm2, GetCurrentScriptDirectory() ~ "music/Boss1.ogg");
+    StageBGM(bgm2, 2);
+    bgm = ObjSound_Create();
+    ObjSound_Load(bgm, GetCurrentScriptDirectory() ~ "music/Stg1.ogg");
+    StageBGM(bgm, 1);
+    ObjSound_Play(bgm);
+    //...</code></pre>
+	      <p>Note that I am loading the boss script at the start of the stage. This brings us errors with the plural at the start of the stage and has other benefits. Below this, we create and prepare two music tracks, and then play the stage bgm.</p>
+	      <p>It will generally be advisable to load all your assets at the start of the stage rather than right before they are needed.</p>
+              <p>Although we have a partially functional system now, the above is only one piece of the bigger puzzle, as we need to provision for when the player pauses the game - when the player pauses the game, you will generally want the background music to stop, and you will want the music to resume once the pause has ended.</p>
+	      <p>In this stage, I am using the stagepart variable to store information on which part of the stage (and therefore music track) is currently active - 0 for stage and 1 for boss. This value will be initially set to 0 and then set to 1 once the boss music begins playing.</p>
+	      <p>There are two events relating to pausing - EV_PAUSE_ENTER when the user hits the virtual key for pause (defaults to esc) and EV_PAUSE_LEAVE when a pause script is closed. Using the system below, we are able to turn off the correct bgm track and then turn it back on after the pause script has run.</p>
+	      <pre class="prettyprint linenums"><code>@Event {
+    alternative(GetEventType())
+    case(EV_PAUSE_ENTER){
+        if(stagepart == 0){
+            ObjSound_Stop(bgm);
+        } 
+        if(stagepart == 1){
+            ObjSound_Stop(bgm2);
+        } 
+    }
+    case(EV_PAUSE_LEAVE){
+        if(stagepart == 0){
+            ObjSound_Play(bgm);
+        } 
+        if(stagepart == 1){
+            ObjSound_Play(bgm2);
+        } 
+    }
+}</code></pre>
+	      <p>The final step is to actually handle the transition to the boss. If you have a dialogue event, you will want to handle this transition within the dialogue event, but otherwise transitioning immediately before the boss is quite effective. Given the system I have provided above, all we need to do is change the stagepart to 1, and then switch to the other bgm track.</p>
+	      <pre class="prettyprint"><code>        stagepart = 1;
+        ObjSound_Stop(bgm);
+	ObjSound_Play(bgm2);
+        //Handle starting boss plural script</code></pre>
+	      <p>And that's all!</p>
+	      <h2 style="color:yellow" id="quiz1">Quiz: Stage Scripts</h2>
+	        <!--Quiz start.-->
+		<p>1) Keine has a script that does not seem to work correctly. The plural starts, and then the player beats the boss. However, the stage never progresses? What could the problem be?</p>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. The Stage script does not check whether or not the plural ended.<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. The Plural Script does not have a <code>CloseScript(GetOwnScriptID());</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. The player Mokou-tan actually died.<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) True or False: Stages can create Primitive and Move objects.</p>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. True<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. False<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+	      <h2 style="color:yellow" id="subs">Summary</h2>
+	        <ul>
+	          <li>Stage Scripts can load Plural Scripts with <code>LoadScriptInThread()</code> and run them with <code>StartScript()</code></li>
+	          <li>Stage Scripts are closed using <code>CloseStgScene()</code></li>
+	          <li>Stage Scripts can be used to handle graphical effects and music for stages and bosses</li>
+	        </ul>
+	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u2l22a.html" title="Sparen's Danmakufu ph3 Tutorials - Recollection: This Side Down">Extra Lesson 4</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer>
+        <p style="text-align: center;">Last Update to Page: June 05, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script type="text/javascript" src="javascript/U3L23Quiz1.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>  </body></html>

@@ -212,6 +212,11 @@
 </url>
 <url>
 <loc>http://sparen.github.io/ph3tutorials/ph3u2l22a.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
+<loc>http://sparen.github.io/ph3tutorials/ph3u3l23.html</loc>
 <changefreq>weekly</changefreq>
 <priority>0.6</priority>
 </url>
