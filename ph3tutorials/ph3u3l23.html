@@ -97,7 +97,7 @@ task TStage
 	      <p>After starting the other script, which runs in parallel, the stage scripts waits for two conditions - the player being alive and the plural script being open. Once either ceases to be true, the stage waits a bit and then closes - otherwise it stays open, waiting for the other conditions to be met. Both conditions are important - if there was no check for the plural being open or not, the stage would just close without waiting for the plural to complete. If the player death check is not present, if the player died in the plural the stage script would continue onwards.</p>
 	      <p>At the end of every stage, it will be necessary to <code>CloseStgScene</code>, which closes the stage formally. And with that, we have a simple stage.</p>
 	      <p>Now let's spice things up a bit, shall we?</p>
-	      <h2 style="color:yellow" id="sub5">How do I play music in a Stage Script?</h2>
+	      <h2 style="color:yellow" id="sub5">Part 5: How do I play music in a Stage Script?</h2>
 	      <p>If you are not familiar with Danmakufu's sound functions, please refer to <a href="./ph3u2l15.html">Lesson 15</a> and refresh yourself.</p>
 	      <p>To begin, have a stage script prepared as well as two .ogg music bgm tracks. We will create a new function in our Stage Script as follows, similar to the CreateTrack task in Lesson 15:</p>
 	      <pre class="prettyprint linenums"><code>function StageBGM(obj, ID){
