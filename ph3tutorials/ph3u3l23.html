@@ -105,11 +105,12 @@ task TStage
     ObjSound_SetRestartEnable(obj, true);
     ObjSound_SetLoopEnable(obj, true);
     ObjSound_SetLoopTime(obj, 0, 300);
-    if(ID == 1){ObjSound_SetLoopTime(bgm, 0, 32);}
+    if(ID == 1){ObjSound_SetLoopTime(obj, 0, 32);}
     if(ID == 2){ObjSound_SetLoopTime(obj, 32, 192);}
     return obj;
 }</code></pre>
-	      <p>We will use this code to handle two different tracks in the stage - the stage theme and the boss theme. At the start of TStage, we will want to actually create and process the two tracks, as well as the boss script. NOTE: bgm and bgm2 have been declared outside all the routines in this scenario.</p>
+	      <p>We will use this code to handle two different tracks in the stage - the stage theme and the boss theme. Note that all this function does is set values for a provided object - it DOES NOT create the sound object itself.</p>
+	      <p>At the start of TStage, we will want to actually create and process the two sound objects, as well as the boss script. NOTE: bgm and bgm2 have been declared outside all the routines in this scenario.</p>
 	      <pre class="prettyprint linenums"><code>task TStage{
     let pathboss = GetCurrentScriptDirectory() ~ "./script/PS1B.txt";
     let bossScript = LoadScriptInThread(pathboss);
@@ -191,7 +192,7 @@ task TStage
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: June 05, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: June 23, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <script type="text/javascript" src="javascript/U3L23Quiz1.js"></script>
