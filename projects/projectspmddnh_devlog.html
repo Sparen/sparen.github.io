@@ -27,7 +27,7 @@
 	      <p>Notice: This project is dead and has been replaced by the less-ambitious <a href="./projectstmddnh_devlog.html">Touhou Mystery Dungeon</a> project.</p>
 	      <!-- Apparently, Frentic's original graphics for this project are dated 11/3/2012... o_O -->
 	      </div>
-	      <div style="width: 600px;" class="tutorialnav">
+	      <div style="width: 600px;">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
 	          <li><a href="./projectstmddnh_devlog.html">Newer</a></li>
@@ -83,7 +83,7 @@
 	      <p class="indexdevlogtitleA">'A few' hours is probably a bad estimate, because it took like 6 hours at the very least. On the way, I made some water tiles and failed to make lava tiles. In the end, I got Map 2 to work for all wall/room/hall combinations present in the map using case by case fixes. Good god the FPS with my camera debug code is bad for the 48x36 grid. Anyways, turns out implementing water fully will have to wait - I am tired, and I forgot to make a large number of tiles for water, so I need to do that before I can continue implementation of that and float.</p>
 	      <p class="indexdevlogtitleA">To conclude, have an image of my beautiful new tileset (custom made by me - please do not steal or I WILL find you) as well as (hopefully) no rendering issues.</p>
 	      <center><input class="spoilerbutton indexdevlogtitleA" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-	      <div class="spoiler"><div><img src="http://i1164.photobucket.com/albums/q570/SparenofIria/DevLog%20Image%204%20Mar%2023%202015_zpsdqkigz6b.png" alt="Devlog Image" width="640" height="480"></div></div></center>
+	      <div class="spoiler"><div><img src="./img/TMDDevlog-20150323.png" alt="Devlog Image" width="640" height="480"></div></div></center>
 	      </div>
 	      <h2 style="color:rgb(59,248,80)" id="submar222015">March 22, 2015</h2>
 	      <div class="indexdevlogA">
@@ -98,11 +98,11 @@
 	      <p class="indexdevlogtitleA">With the map loading function done, it was time to move forwards with the coding. So I began writing my function to load Tileset graphics. There was a lot to do, and as I went on, I ditched the constants for their respective numbers because I could save space. It took a long time, and I began with the edges of the map and tiles that had no different bordering tiles. Of course... my function was saying that the state was -1, and I facedesked (not actually) when I saw the ObjTile_SetType commented out.</p>
 	      <p class="indexdevlogtitleA">After another facedesk due to not using ObjSprite2D_SetDestRect, I got the walls to load! See image below:</p>
 	      <center><input class="spoilerbutton indexdevlogtitleA" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-	      <div class="spoiler"><div><img src="http://i1164.photobucket.com/albums/q570/SparenofIria/DevLog%20Image%201_zpsfxxmq9kb.png" alt="Devlog Image" width="640" height="480"></div></div></center>
+	      <div class="spoiler"><div><img src="./img/TMDDevlog-20150320a.png" alt="Devlog Image" width="640" height="480"></div></div></center>
 	      <p class="indexdevlogtitleA">And of course, this made me very, very happy. I tweaked the tile spawn ratios of flowers and the like, and began implementing some of the other things, such as when the bottom left corners were rooms and the rest were walls.</p>
 	      <p class="indexdevlogtitleA">In the end, I got most of the walls done. There are some known cases that I need to work on, and there are cases where the tileset cannot even handle the issue (such as when the top left and bottom right corners are not walls and everything else surrounding a tile is). I also learned that my map was rendered flipped across y=-x, which will make things a challenge once I have non-square things. I hope all goes well... Regardless, have the other image.</p>
 	      <center><input class="spoilerbutton indexdevlogtitleA" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
-	      <div class="spoiler"><div><img src="http://i1164.photobucket.com/albums/q570/SparenofIria/DevLog%20Image%202_zpsccjchjv3.png" alt="Devlog Image" width="640" height="480"></div></div></center>
+	      <div class="spoiler"><div><img src="./img/TMDDevlog-20150320b.png" alt="Devlog Image" width="640" height="480"></div></div></center>
 	      <p class="indexdevlogtitleA">Anyways, I need to implement the rest of the walls as well as rooms in order to complete the first tileset. And then... time to test creating a player, timing turns, and testing collision and camera movement!</p>
 	      <p class="indexdevlogtitleA">Below is the second DevLog video!</p>
 	      <div style="text-align:center"><embed width="420" height="315" class="indexdevlogtitleA"
@@ -170,4 +170,4 @@
 Summer will be great~
 (Now... as for tile set replacement, figuring out the animations, and obtaining all of our bgm... that's a different story...)
 I guess I'll have to choose a sacrificial bgm for my testing dungeon, because I'll be listening to it until I'm sick of it.</blockquote>
-	      </div>	      <br>            </div>          </div>        </div>      </div>      <footer>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015 by Andrew Fan</p>      </footer>    </div>  </body></html>
+	      </div>	      <br>            </div>          </div>        </div>      </div>      <footer>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015-2017 by Andrew Fan</p>      </footer>    </div>  </body></html>
