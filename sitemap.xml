@@ -322,6 +322,12 @@
 <priority>0.5</priority>
 </url>
 <url>
+<loc>http://sparen.github.io/projects/projectsphase5_range17.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
 <loc>http://sparen.github.io/projects/motkbirthday2015.html</loc>
 <changefreq>monthly</changefreq>
 <priority>0.1</priority>
@@ -356,6 +362,7 @@
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
+
 <url>
 <loc>http://sparen.github.io/projects/contestdatabase.html</loc>
 <changefreq>weekly</changefreq>
