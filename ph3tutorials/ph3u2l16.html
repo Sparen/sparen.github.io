@@ -118,6 +118,7 @@ task Surround(parentobj, id) {
     }
     ObjMove_SetSpeed(obj, rand(0.5, 5));
     ObjMove_SetAngle(obj, rand(0, 360));
+    ObjShot_SetAutoDelete(obj, true);
 }</code></pre>
 	      <p>We have multiple problems in this example. Firstly, the Ring task can continue to fire bullets after the boss is gone, because there is no check in the Ring task. Secondly, what happens if one of the objects created from the Ring task leaves the screen? What happens to the objects created in the Surround task? When the parentobj goes off screen before 60 frames have passed, the objects created by Surround are still rotating around the parent. But when it suddenly disappears, the surrounding bullets may try to set their position once more and, in the process, relocate to (30*cos(objcount + id*360/12), 30*sin(objcount + id*360/12)) since <code>ObjMove_GetX(parentobj)</code> and <code>ObjMove_GetY(parentobj)</code> both return 0.</p>
 	      <p>As you can see, we must fix both situations. The Ring task requires a check to see if the boss is still in existence, but the Surround task requires a check to see if the parent object is still in existence. As a result, we have the following:</p>
@@ -144,6 +145,7 @@ task Surround(parentobj, id) {
     }
     ObjMove_SetSpeed(obj, rand(0.5, 5));
     ObjMove_SetAngle(obj, rand(0, 360));
+    ObjShot_SetAutoDelete(obj, true);
 }</code></pre>
 	      <p>Alternatively, we can use the objcount to write Surround differently.</p>
 	      <pre class="prettyprint linenums"><code>task Surround(parentobj, id) {
@@ -157,6 +159,7 @@ task Surround(parentobj, id) {
     }
     ObjMove_SetSpeed(obj, rand(0.5, 5));
     ObjMove_SetAngle(obj, rand(0, 360));
+    ObjShot_SetAutoDelete(obj, true);
 }</code></pre>
 	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Use SetAutoDeleteObject()?</h2>
 	      <p>Now we will have a brief discussion on <code>SetAutoDeleteObject()</code></p>
@@ -282,7 +285,7 @@ task BulletCommands(obj, dir) {
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Nov 27, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: July 24, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
