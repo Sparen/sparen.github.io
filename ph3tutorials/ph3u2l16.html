@@ -42,6 +42,7 @@
 	        </ul>
 	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss how to make single scripts plural-friendly. I will cover TFinalize in greater detail, as well as how Object Autodeletion impacts a script. (0,0) spawning and how to prevent it are major topics in this lesson. Additional miscellaneous topics will also be covered. <strong>This lesson assumes that you are familiar with the contents of Lessons 3-8 and <a href="./ph3u2l12.html">Lesson 12</a>. If you are not familiar with these, please review them.</strong></p>
+	      <p>The tl;dr of this entire lesson is <strong>do not spawn objects using the position of deleted objects</strong>.</p>
 	      <h2 style="color:yellow" id="sub2">Part 2: Why Upgrade Single Scripts?</h2>
 	      <p>So far, most of my code examples (exception being in <a href="./ph3u1l6.html">Lesson 6</a>) have been written in such a way that assumes they were mere singles, not linked into boss battles. And so, we have, for the most part, been writing code in such a way where, theoretically, bullets can spawn after the conclusion of the single. We will, in this lesson, tackle this problem.</p>
 	      <p>To highlight this problem, let's consider the TFinalize from <a href="./ph3u1l7code2.html">Lesson 7</a>. Note that this version does not have the spellcard bonus implemented.</p>
@@ -285,7 +286,7 @@ task BulletCommands(obj, dir) {
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: July 24, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: July 25, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
