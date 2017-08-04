@@ -425,9 +425,9 @@
             "duration": [2017.07, 2017.07],
             "host": "PhantomSong",
             "judges": ["PhantomSong", "TresserT", "Trickysticks"],
-            "numparticipants": 8,
-            "result": [[],[],[]],
-            "participants": ["GenoCraft", "Sparen", "tyrz_939", "CrestedPeak9", "Searinox", "A Bro", "DrytheMeowstic", "Python"]
+            "numparticipants": 7,
+            "result": [["Python"],["CrestedPeak9"],["Sparen"]],
+            "participants": ["GenoCraft", "Sparen", "tyrz_939", "CrestedPeak9", "Searinox", "A Bro", "Python"]
         }
     ]
 }
