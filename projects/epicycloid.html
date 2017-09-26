@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparencycloid.js</title>
+    <link rel="stylesheet" type="text/css" href="http://sparen.github.io/blah.css">
+    <meta content="Andrew Fan's Code Dump: The Embodiment of Code and Hacks (AFCDTECH) - Sparencycloid.js"
+      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Project, Epicycloid">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </head>
+  <body id="mhome" onload="loadEpicycloid()">
+    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Home</a></li>
+          <li><a class="mabout" href="../aboutme.html">About Me</a></li>
+          <li><a class="mph3tutorials" href="../ph3tutorials/ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorials</a></li>
+          <li><a class="mprojects" href="../projects/projects.html" title="Sparen's Danmakufu Projects">Projects</a></li>
+          <li><a class="mdnhart" href="../dnhart.html">DNHArt</a></li>
+        </ul>
+      </div>
+      <div id="bd" style="text-align:center;>
+	<div font-size:24px">
+	<h1>Sparencycloid.js</h1>
+	<p>I was bored. Originally made Sept 25, 2017.</p>
+	<p>Primary Config Options:</p>
+	<div style="font-family:'andale mono', monospace">
+	<span id="modetoggle">Select Mode: </span><span id="currentmode"></span>
+	<button type="button" onclick="setMode(false); getMode();">Regular</button>
+	<button type="button" onclick="setMode(true); getMode();">Border of Wave and Particle</button>
+	<br>
+	<span id="modetoggle">Toggle Lines between circle centers: </span>
+	<button type="button" onclick="setMainLines(true);">On</button>
+	<button type="button" onclick="setMainLines(false);">Off</button>
+	<br>
+	<span id="modetoggle">Toggle Lines tracing outer circles: </span>
+	<button type="button" onclick="setSubLines(true);">On</button>
+	<button type="button" onclick="setSubLines(false);">Off</button>
+	<br>
+	<span id="maxparticle">Max # Particle Effects: 32</span>
+	<button type="button" onclick="incrementMaxParticles(1)">+ 1</button>
+	<button type="button" onclick="incrementMaxParticles(-1)">- 1</button>
+	<br>
+	</div>
+
+	<br><div id="epicycloid-main" style="text-align:center"></div>	
+
+	<br>
+	<p>Customize Options:</p>
+	<div style="font-family:'andale mono', monospace">
+	<span id="radsmall">Radius of Outer Circles: 48</span>
+	<button type="button" onclick="incrementSmallRad(1)">+ 1</button>
+	<button type="button" onclick="incrementSmallRad(-1)">- 1</button>
+	<button type="button" onclick="incrementSmallRad(10)">+ 10</button>
+	<button type="button" onclick="incrementSmallRad(-10)">- 10</button>
+	<br>
+	<span id="radbig">Radius of Inner Circle: 144</span>
+	<button type="button" onclick="incrementBigRad(1)">+ 1</button>
+	<button type="button" onclick="incrementBigRad(-1)">- 1</button>
+	<button type="button" onclick="incrementBigRad(10)">+ 10</button>
+	<button type="button" onclick="incrementBigRad(-10)">- 10</button>
+	<br>
+	<span id="radeffect">Radius of Effect Circles: 2</span>
+	<button type="button" onclick="incrementEffectRad(0.1)">+ 0.1</button>
+	<button type="button" onclick="incrementEffectRad(-0.1)">- 0.1</button>
+	<button type="button" onclick="incrementEffectRad(1)">+ 1</button>
+	<button type="button" onclick="incrementEffectRad(-1)">- 1</button>
+	<br>
+	<div style="font-family:'andale mono', monospace">
+	<span id="strokesmall">Stroke Width of Outer Circles: 2</span>
+	<button type="button" onclick="incrementSmallStroke(0.1)">+ 0.1</button>
+	<button type="button" onclick="incrementSmallStroke(-0.1)">- 0.1</button>
+	<button type="button" onclick="incrementSmallStroke(1)">+ 1</button>
+	<button type="button" onclick="incrementSmallStroke(-1)">- 1</button>
+	<br>
+	<span id="strokebig">Stroke Width of Inner Circle: 2</span>
+	<button type="button" onclick="incrementBigStroke(0.1)">+ 0.1</button>
+	<button type="button" onclick="incrementBigStroke(-0.1)">- 0.1</button>
+	<button type="button" onclick="incrementBigStroke(1)">+ 1</button>
+	<button type="button" onclick="incrementBigStroke(-1)">- 1</button>
+	<br>
+	<span id="strokeeffect">Stroke Width of Effect Circles: 0.5</span>
+	<button type="button" onclick="incrementEffectStroke(0.1)">+ 0.1</button>
+	<button type="button" onclick="incrementEffectStroke(-0.1)">- 0.1</button>
+	<button type="button" onclick="incrementEffectStroke(1)">+ 1</button>
+	<button type="button" onclick="incrementEffectStroke(-1)">- 1</button>
+	<br>
+	<p>More config options (color, angle increment rate, bowap sine multiplier, number circles coming soon/eventually</p>
+	</div>
+	<br>
+	<p>This was made using Javascript and Scalable Vector Graphics. It uses Queue.js</p>
+	<p>This animation is set to update every 20 milliseconds. Occasionally it may momentarily freeze. It is not recommended to keep this animation running with high number of max particle/high number of circles if your computer starts to overheat.</p>
+	</div>
+      </div>
+      <footer>
+        <p style="text-align: center;"><a href="http://sparen.github.io">Return to Homepage</a></p>
+        <p style="text-align: center;">Sparencycloid.js © 2017 Andrew Fan/Sparen of Iria</p>
+      </footer>
+    </div>
+  <script type="text/javascript" src="./js/Queue.js"></script>
+  <script type="text/javascript" src="./js/Epicycloid.js"></script>
+  </body>
+</html>
