@@ -428,6 +428,19 @@
             "numparticipants": 7,
             "result": [["Python"],["CrestedPeak9"],["Sparen"]],
             "participants": ["GenoCraft", "Sparen", "tyrz_939", "CrestedPeak9", "Searinox", "A Bro", "Python"]
+        },
+        {
+            "id": "range18",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "extra love",
+            "year": 2017,
+            "duration": [2017.10, 2017.10],
+            "host": "ExPorygon/Ozzy840",
+            "judges": ["ExPorygon/Ozzy840", "Trickysticks"],
+            "numparticipants": 0,
+            "result": [[""],[""],[""]],
+            "participants": []
         }
     ]
 }
