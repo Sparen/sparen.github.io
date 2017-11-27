@@ -438,9 +438,9 @@
             "duration": [2017.10, 2017.10],
             "host": "ExPorygon/Ozzy840",
             "judges": ["ExPorygon/Ozzy840", "Trickysticks"],
-            "numparticipants": 0,
-            "result": [[""],[""],[""]],
-            "participants": []
+            "numparticipants": 12,
+            "result": [["Junky"],["Jimmy", "Conarnar"],["DrytheMeowstic"]],
+            "participants": ["Junky", "Jimmy", "Conarnar", "DrytheMeowstic", "Vigor", "Umbra", "WishMakers", "iVAwalys", "GenoCraft", "Arcvasti", "Lollipop", "Rawsome"]
         }
     ]
 }
