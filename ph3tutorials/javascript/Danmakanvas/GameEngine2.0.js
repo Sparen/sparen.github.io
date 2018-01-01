@@ -23,7 +23,7 @@ var startedplurals = []; //array containing IDs of all canvases that have alread
 /* *****
  * void startGame(string canvasid)
  * -- Runs the canvas on the given canvas ID
- * Param: canvasid - the string containing the id of the canvas to use. Hopefully enables multiple canvasses on the same webpage.
+ * Param: canvasid - the string containing the id of the canvas to use. Multiple canvases on the same page are not supported.
  * *****/
 function startGame(canvasid) {
     console.log("startGame(): Running on canvas with id " + canvasid);
@@ -38,6 +38,7 @@ var myGameArea = {
         this.context = this.canvas.getContext("2d");
         this.frameNo = 0;
         if (!contains(startedplurals, canvasid)) {
+            console.log("myGameArea.start(): Canvas " + canvasid + "has not been started yet. Initializing this.interval for the canvasid");
             startedplurals.push(canvasid);
             this.interval = setInterval(update_main, 20, canvasid); //in milliseconds. Runs update every 20 millis (50 FPS). canvasid is passed to update_main
         }
@@ -70,6 +71,8 @@ function update_main(canvasid) {
         bullets[i].update();
         if (!isinbounds(bullets[i])) {
             objtoremove.push(i);
+        } else if (bullets[i].vanishtime > 0 && bullets[i].existtime > bullets[i].vanishtime) {
+            objtoremove.push(i);
         }
     }
     for (i = objtoremove.length - 1; i >= 0; i -= 1) {
@@ -100,7 +103,7 @@ function draw_main(canvasid) {
  * Param: swid - the stroke radius of the bullet graphic
  * Param: hitbox - the radius of the bullet hitbox
  * *****/
-function EnemyShot(x, y, speed, angle, accel, maxspeed, color, brad, srad, swid, hitbox) {
+function EnemyShot(x, y, speed, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime) {
     this.x = x;
     this.y = y;
     this.speed = speed;
@@ -108,12 +111,16 @@ function EnemyShot(x, y, speed, angle, accel, maxspeed, color, brad, srad, swid,
     this.accel = accel;
     this.maxspeed = maxspeed;
     this.hitbox = hitbox;
+    this.createtime = myGameArea.frameNo;
+    this.existtime = 0;
+    this.vanishtime = vanishtime;
     this.update = function () {
         this.x += this.speed*Math.cos(this.angle);
         this.y += this.speed*Math.sin(this.angle);
         if (this.accel != 0) { //Only if accelerating
             this.speed = Math.min(this.maxspeed, this.speed + this.accel);
         }
+        this.existtime += 1;
     };
     this.draw = function () {
         var ctx = myGameArea.context; //game window

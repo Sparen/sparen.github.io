@@ -1,0 +1,37 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 11 Danmakanvas Example 1</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 11 Danmakanvas Example 1"      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Code">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div class="yui-g">
+	      <h2 style="color:yellow" id="cp2">Danmakanvas - Stationary Astroid (Parametric Graph)</h2>
+	      <p>Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
+	      <pre class="prettyprint"><code>    let angleT = 0;
+    loop(30){
+        //NOTE: The bullet color does not correspond to the graphic used in the code below
+        CreateShotA1(ObjMove_GetX(objBoss) + 120*cos(angleT) ^ 3, ObjMove_GetY(objBoss) + 120*sin(angleT) ^ 3, 0, angleT, 0, 0);
+        angleT += 360/30;
+    }</code></pre>
+	      <canvas id="gamecanvas_1" width="384" height="448" style="border:1px solid #DDDDDD;">
+	      </canvas>
+	      <br>
+	      <button type="button" onclick="startGame('gamecanvas_1')">Run Danmakanvas Simulation</button>
+	      <br>            </div>          </div>        </div>      </div>      <footer>
+        <p style="text-align: center;">Last Update to Page: Jan 01, 2018</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>
+    <script type="text/javascript" src="javascript/Danmakanvas/GameEngine2.0.js"></script>
+    <script type="text/javascript" src="javascript/Danmakanvas/PluralModule_Astroid.js"></script>  </body></html>

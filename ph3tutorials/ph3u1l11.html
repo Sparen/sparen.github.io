@@ -166,10 +166,17 @@
 	      <p>\(x(t) = a\times cos^{3}(t)\)<br><br>\(y(t) = a\times sin^{3}(t)\)</p>
 	      <p>It's not too bad. Let's spawn bullets in an astroid!</p>
 	      <pre class="prettyprint"><code>    let angleT = 0;
-    loop(30){
+    loop(60){
         CreateShotA1(ObjMove_GetX(objBoss) + 120*cos(angleT) ^ 3, ObjMove_GetY(objBoss) + 120*sin(angleT) ^ 3, 2, angleT, 1, 0);
-        angleT += 360/30;
+        angleT += 360/60;
     }</code></pre>
+	      <p>To see a simulation of what the astroid might look like if the boss were at the center and the bullets did not move, click here: <a href="./ph3u1l11canvas1.html">Danmakanvas - Lesson 11 (Astroid)</a></p>
+	      <p>Below is a sample of what the astroid might look like if the boss were at the center and the bullets moved as shown in the code above.</p>
+	      <p>Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
+	      <canvas id="gamecanvas_2" width="384" height="448" style="border:1px solid #DDDDDD;">
+	      </canvas>
+	      <br>
+	      <button type="button" onclick="startGame('gamecanvas_2')">Run Danmakanvas Simulation</button>
 	      <p>And that's that. We have an astroid. Of course, with these types of curves, you don't usually want the bullets to just go outwards with the same speed, because it will just look like a square, then a circle as it gets farther from its spawn point. You could do some complex speed alteration, or you could just change the angle and do interesting things with the angle. It's up to you.</p>
 	      <p>That concludes the lesson!</p>
 	      <div class="tut_exercise">EXERCISE: Try to recreate some parametric equations in Danmakufu. Try incrementing the angle at which the bullets are fired as you go around, or experiment with different speeds.</div>
@@ -190,10 +197,12 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Jan 01, 2018</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <script type="text/javascript" src="javascript/U1L11Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>
-    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>  </body></html>
+    <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+    <script type="text/javascript" src="javascript/Danmakanvas/GameEngine2.0.js"></script>
+    <script type="text/javascript" src="javascript/Danmakanvas/PluralModule_Astroid.js"></script>  </body></html>

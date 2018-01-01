@@ -403,6 +403,18 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   background-color: #775511; 
 }
 
+.indexupdwinter2017{
+  border-width: 2px; 
+  border-color: aqua; 
+  border-style: none solid none solid; 
+  padding-left: 8px; 
+  padding-right: 8px; 
+  padding-bottom: 8px; 
+  padding-top: 4px; 
+  border-radius: 4px; 
+  background-color: #115577; 
+}
+
 .indexupdsp2015title{
   padding: 5px;
 }
