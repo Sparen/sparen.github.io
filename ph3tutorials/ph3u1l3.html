@@ -40,7 +40,7 @@
 	          <li><a href="#quiz2">Quiz: Danmakufu Framework</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What are the Different Script Types in Danmakufu?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What are the Different Script Types in Danmakufu?</h2>
 	      <p>In the last lesson, we learned that the Danmakufu menu contains options for things such as 'Single' and 'Plural'. Today we will learn what these things actually are and how scripters use them. In this lesson, we will also explore the fundamental parts of any Danmakufu script in ph3, and will begin our study of the Single, the building block of any boss battle.</p>
 	      <p>First, let's go over the <b>single</b>, which tends to contain one attack, although it can be altered to include more or less than one depending on the goals of the scripter. Generally speaking, it will be one chunk of the boss's lifebar, and will contain either a nonspell or a spell.</p>
 	      <p>Singles are surprisingly versatile. Since ph3 allows you to control significant parts of the system, you can have a nonspell turn into a spell halfway, use multiple bosses, and other things, depending on what you need.</p>
@@ -48,7 +48,7 @@
 	      <p><b>Stage</b> scripts are the building blocks of full games and are also used in releasing standalone boss battles with built-in difficulty selection and other options. Stages can load plural scripts and come with a variety of customization options. Once you have mastered the usage of plurals, you will most likely move on directly to stages. However, that's for much later, so don't focus on this now.</p>
 	      <p><b>Packages</b> are new in ph3. In 0.12m, there was no easy way to allow access to replays and to create menus. However, ph3 added package functionality, which sort of acts as a main menu for your game. They are 100% customizable, although they have limitations in terms of which functions are allowed. Packages are used for complete games as well as projects where a main menu is wanted.</p>
 	      <p>Although the above are the primary types of scripts, there are also a few key file types to note: Background and System files. We will discuss these in later detail in the future, but let's just say that you may want to use the defaults until you are comfortable with tasking and basic image and text manipulation in Danmakufu.</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Types of Scripts</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Types of Scripts</h2>
 	        <!--Quiz start.-->
 		<p>Suika would like to make a nonspell for a boss battle in Danmakufu. Which of the following script types should she use?</p>
 	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
@@ -60,12 +60,12 @@
 	        C. Plural<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub2">Part 2: What are the Components of a Danmakufu Script?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are the Components of a Danmakufu Script?</h2>
 	      <p><a target="_blank" href="ph3u1l3code1.html">Click this link to open massive wall of code in a seperate window</a></p>
 	      <p><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Sample_Danmaku_Scripts#SampleA01:_Shooting_a_Bullet_Straight_Down">Source</a></p>
 	      <p>If you have no experience with Computer Science, you are probably completely overwhelmed by this wall of code. This particular single is the translation (from Japanese) of SampleA01, located in the 'sample' directory inside your ph3 script folder. This is code written to be used as a template for scripters, and as such, it is what I will use as an example. For future reference, do make use of the sample scripts (and the ExRumia boss and player), as they are a useful resource.</p>
 	      <p>So now we will look at the text and will take it apart piece by piece.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: What are the Components of the Danmakufu Header?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What are the Components of the Danmakufu Header?</h2>
 	      <p>First, there are things at the top prefixed by the hashtag #. These (not the include - just the top portion) make up the Danmakufu Header. The first line is #TouhouDanmakufu[Single]. This designates the script as a Touhou Danmakufu script - without this line, Danmakufu will not read the file as a danmakufu executable and it will therefore not show up in any of the searches (e.g. All, Directory, etc.). In place of 'Single', you can also use 'Plural', 'Stage', and 'Package', the types of scripts elaborated upon in Part 1.</p>
 	      <p>Next there is #ScriptVersion[3]. As stated by the comment next to it, located after the //, it is <b>required for all ph3 scripts.</b> #ScriptVersion[2] refers to Danmakufu 0.12m and #ScriptVersion[1] refers to something made back when Touhou 10 didn't exist. Let's just say that you just need to have #ScriptVersion[3] for ph3 to run the script correctly.</p>
 	      <p>After the script version are two fields labeled #Title and #Text, with a string inside containing the whatever information is used to describe the fields. What is placed in #Title will appear as the label for the script when you traverse Danmakufu's script lists, and #Text describes the text in the bottom left quarter of the screen. I highly suggest never leaving #Title blank, as it can confuse people browsing through a folder if you suddenly have a script with no title - if you do not want Danmakufu to list the script when it spits out the list of all executable scripts, it's better to comment out the #TouhouDanmakufu[ScriptType] line instead. How to manipulate strings in ph3 as well as how to comment will be discussed in a later tutorial.</p>
@@ -80,14 +80,14 @@
 </code></pre>
 	      <p>#Background and #System are used to specify custom background and system files to use in place of the defaults. We will get into this much later on.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: Which header fields are required? Why?</div>
-	      <h2 style="color:yellow" id="sub4">Part 4: What are the Main Routines Used in a Single?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: What are the Main Routines Used in a Single?</h2>
 	      <p>Now we will shift our focus elsewhere. We will ignore the plethora of comments and let statements and will instead focus on the items prefixed with @. These are the routines of a Single script. As listed on the page, there are @Event, @Initialize, and @MainLoop, as well as @Loading and @Finalize, which are meant to be used in conjunction with one another when loading resources. Beginners should simply ignore @Finalize and @Loading until they are creating larger projects. <b>Note that the L in @MainLoop is capitalized. Danmakufu is case sensitive. Do not use @Mainloop or your script will not work because MainLoop and Mainloop are two completely different things.</b></p>
 	      <p>First I will discuss @Initialize. In @Initialize, which only runs once at the start of the script, the commands in between the braces {} are executed in order. Here you will register the enemies, prepare resources, and usually move the boss to its desired starting location. I will not get into more detail about these now, but you will gradually learn what to put here as you gain your own coding style. I will discuss this when we assemble our first Single script.</p>
 	      <p>Next is @MainLoop. By default, this routine runs once per frame. There are 60 frames in a second, hopefully, as displayed in the FPS meter. Since @MainLoop runs every frame, it is commonly used for things that need to run each frame, such as setting the boss's hitbox. You can control a number of things here, although most scripters tend to use tasks either in conjunction with @MainLoop or completely independently of @MainLoop. We will get into this later as well.</p>
 	      <p>Next is @Event, which was introduced in ph3. Here, various 'events' are controlled, and you will set things such as spell bonus, boss life, and other things here. We will briefly talk about @Event when making our first single, although since it can get complicated, most of the details will be held off for higher level tutorials.</p>
 	      <p>Finally, @Finalize, which was present in 0.12m, and @Loading, which was introduced in ph3. @Loading runs once before @Initialize and should only be used for loading resources. In the far far future, there may be a significantly more thorough explanation of what @Loading does, but for now, just be aware that it exists. @Finalize runs once at the end of a script and is used for deleting loaded resources. Both of these are completely optional and can be omitted from a script.</p>
 	      <p>In the next lesson, you will learn about comments, variables, and a number of other components of programming and scripting languages, as well as Danmakufu syntax. However, for now... here's a quiz.</p>
-	      <h2 style="color:yellow" id="quiz2">Quiz: Danmakufu Framework</h2>
+	      <h2 class="ph3tutorialheader" id="quiz2">Quiz: Danmakufu Framework</h2>
 	        <!--Quiz start.-->
 		<p>Reimu is very angry. She cocks her head one way, and then the other. However, she can't figure out why her script isn't showing up in the list of scripts in Danmakufu ph3's Directory lists. She has reloaded, made sure that the file is in the script directory, and has even considered calling Nitori over. Her Danmakufu header is below, and every line prefixed with a # in the entire script is included in this header.</p>
 	        <pre class="prettyprint"><code>#ScriptVersion[3]
@@ -105,7 +105,7 @@
 	        D. It's Yukari's fault<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Not particularly relevant yet, but will be in the next few lessons</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -116,7 +116,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Jan 21, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Jan 21, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/U1L3Quiz1.js"></script>
     <script type="text/javascript" src="javascript/U1L3Quiz2.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />

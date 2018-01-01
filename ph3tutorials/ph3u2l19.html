@@ -41,15 +41,15 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss System scripts, which are run for the duration of any single, plural, or stage. They contain things that must be run across entire scripts such as the STG_Frame, contents of the HUD (player score, life, etc), and custom scripts. They are also excellent places to load fonts and shotsheets, as well as link Danmakufu .dat archives.</p>
 	      <p>This lesson requires knowledge of render and text objects and will also contain brief information on extend systems and the like, which will be revisited after CommonData has been introduced. For reference, please see <a href="./ph3u2l13.html">Lesson 13</a> and <a href="./ph3u2l17.html">Lesson 17</a> for 2D Sprites and Text, respectively.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: What are System Scripts?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are System Scripts?</h2>
 	      <p>So, System Scripts. These scripts, linked to via #System in the Danmakufu Header, are executed when you begin the execution of a script. By default, if there is no #System specified in a script, Danmakufu will default to the system file provided in default_system. <strong>It is imperative that you do not mess around with these files and do not link to them using #System</strong>.</p>
 	      <p>We will begin by examining the existing contents of Default_System.txt in the context of making our own System script. Therefore, we will make a new directory called <code>system</code> in any script folder (so we will have img, lib, system, etc) and will copy all of the contents of default_system into that folder. You can leave out bgm - we won't be using it.</p>
 	      <p>Now, let's take your plural script, and in the Danmakufu header, add #System["path/to/system/file"] with the relative path from the plural to Default_System.txt in the quotes. For example, <code>#System["./../system/Default_System.txt"]</code>. This will force the plural to always load the system script in /system/ rather than the default. It is highly recommended that you also add #System to all of your Single scripts so that when you run them individually, the correct system script is loaded.</p>
 	      <p>Now that we have that done, let's take a look at the contents of Default_System.txt, and let's do some changes and edits.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Change the STG_Frame and Playing Field?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How Do I Change the STG_Frame and Playing Field?</h2>
 	      <p>The first thing you will notice is that the system file is long - @Initialize calls a large number of tasks. Each of these handles a specific part of the HUD, such as the STG_Frame, Score, or the like.</p>
 	      <p>Let's begin with the first function called - InitFrame().</p>
 	      <pre class="prettyprint linenums"><code>function InitFrame()
@@ -66,7 +66,7 @@
 	      <p>Besides changing the image, it is possible to change the size of the playing field as well. To do this, you will use the <code>SetStgFrame()</code> function, whose default values are (32, 16, 416, 464, 20, 80). The first four arguments are the left, top, right, and bottom of the playing field with respect to the top left corner of the window. The last two are the render priorities used as the boundaries for what is rendered with respect to the top left of the playing field. By default, render priorities between 20 and 80 will use the top left corner of the playing field as (0,0) and all others will use the top left corner of the window.</p>
 	      <p>It is highly suggested that you put <code>SetStgFrame()</code> in @Initialize of your system script.</p>
 	      <div class="tut_exercise">EXERCISE: Try and use SetStgFrame() to do fullscreen danmaku!</div>
-	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Obtain and Display Score, Lives, and Other Fields?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How Do I Obtain and Display Score, Lives, and Other Fields?</h2>
 	      <p>Now we will discuss all of the various fields that are on the screen - score, lives, bombs, and graze. We will also go over how to add more of these.</p>
 	      <p>Looking at the defaults, it becomes quite obvious that there is a text object for the words and a sprite list for the numbers. The text object is obviously customizable, and you can move it wherever you want. The text object can be substituted for a sprite if you want fancier effects.</p>
 	      <p>The sprite list can be substituted for text if you want to use your own font, or you can change the font in Default_SystemDigit.png to give custom pixel numbers. This is entirely up to you. Do note, however, that with a sprite list, you are manually positioning each individual sprite (each individual number). It is recommended that you study the examples in Default_System.txt if you want to continue using sprite lists for information such as score.</p>
@@ -130,7 +130,7 @@
 	      <p>Now, it is also popular to use graphics for life and bombs. In this case, I recommend using an array of sprites or a sprite list. How you implement this is up to you, but determining which graphic to use is the hardest part. If you don't have life and bomb fragments, you can actually make one set of sprites to hold the 'empty' graphic (if you decide to use them at all), and have another set of sprites to hold the 'full' graphic, and toggle <code>Obj_SetVisible</code> to determine whether or not to display the 'full' graphic.</p>
 	      <p>I won't provide code here, but you can try it out for yourself. Just as a note, you will need to use CommonData in order to handle life fragments or bomb fragments. This of course will have a thorough explanation in a later tutorial.</p>
 	      <div class="tut_exercise">EXERCISE: Rearrange the contents of the HUD. What works best? What looks good? Take note of how text color and the color of the STG_Frame worth together.</div>
-	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Set Custom Pause, EndScene, and ReplaySaveScenes?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How Do I Set Custom Pause, EndScene, and ReplaySaveScenes?</h2>
 	      <p>System Scripts are used across an entire script - usually, the same system script is linked in every single script in a project. Therefore, numerous things that must run regardless of the script are handled here - including but not limited to preloading shotsheets, custom item scripts, and the big three: Pause, EndScene, and ReplaySaveScene scripts.</p>
 	      <p>You will want to replace these or at the very least modify them. To start, the Pause and EndScene scripts are in Japanese, and the ReplaySaveScreen has a number of annoying flaws. Additionally, you will probably want to change the fonts and colors.</p>
 	      <p>We will go over how to modify these scripts in a later tutorial, but linking your new ones is quite simple.</p>
@@ -139,11 +139,11 @@
     SetEndSceneScriptPath(GetCurrentScriptDirectory() ~ "./EndScene.dnh");
     SetReplaySaveSceneScriptPath(GetCurrentScriptDirectory() ~ "./ReplaySaveScene.dnh");</code></pre>
 	      <p>These three functions tell Danmakufu to use your custom Pause, EndScene, and ReplaySaveScene scripts instead of the copies found in default_system. I highly recommend using these functions and linking to a local set of the three scripts, even if you don't do any heavy edits. As a general rule of thumb, don't edit default_system - have a local system folder in each script and link to that instead.</p>
-	      <h2 style="color:yellow" id="sub6">Part 6: How Do System Script Events Work?</h2>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How Do System Script Events Work?</h2>
 	      <p>System Scripts are often used to control a number of things such as the boss lifebar, boss timer, and he like. The @Event of a system script also handles what happens when you start and capture a spellcard using the events EV_START_BOSS_SPELL and EV_GAIN_SPELL. Though you are free to put these in any @Event anywhere, they are usually consistent throughout the entire script and as a result, it is highly recommended that you use them in your system script.</p>
 	      <p>EV_START_BOSS_SPELL runs at the start of a spellcard. It is commonly used to play sound effects at the start of all spells and for ant effects not in the cutin library. EV_GAIN_SPELL is commonly used to play sound effects upon spell capture and perform any other things done at that time such as displaying the spellcard bonus. In a much earlier tutorial, we awarded spellcard bonuses using TFinalize. Handling it in this event in the system script is highly recommended, especially if you are copy-pasting the spellcard bonus award code in each script.</p>
 	      <p>It is also common to have custom events in System scripts, but we will get into that at a much later time. <strong>Note:The default spellcard sound effect is not handled in the default system file, but in Default_System_MagicCircle.txt</strong>. If you want to change the default spell sound effect, I suggest using EV_START_BOSS_SPELL in the system file and removing the sound data from your local Magic Circle.</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: System Scripts</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: System Scripts</h2>
 	        <!--Quiz start.-->
 		<p>1) Eirin comes up with a clever way to handle life fragments - she simply uses decimal points to handle them. Assuming that there are 5 fragments per life (0.2 lives per fragment), how would she handle a text object stating the amount of fragments needed to reach the next extend?</p>
 		<p>Hit 'Show' to show possible answers.</p>
@@ -194,14 +194,14 @@
     </code></pre>
 	        </div></div>
 		<br>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>System files are run at the start of a script and can run tasks common to an entire script.</li>
 	          <li>System files are used for displaying the STG_Frame and HUD components</li>
 	          <li>System files are used to set custom Pause, EndScene, and ReplaySaveScene scripts.</li>
 	          <li>System files are often used to handle events within a script, especially things such as spellcard declarations, spellcard bonus awarding, and the like.</li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -212,7 +212,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Sept 05, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016-2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Sept 05, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />

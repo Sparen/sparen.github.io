@@ -41,12 +41,12 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>We've finally arrived at the lesson you've probably all been waiting for - 2D Sprites. In this lesson, I will cover creation of 2D Sprites and how to use them for rendering basic images as well as creating a basic boss animation, among other things. So? Let's get started!</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: What are 2D Sprites?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are 2D Sprites?</h2>
 	      <p>Everything in Danmakufu (and all software in general) is rendered as a primitive with a vertex shader. Primitives can be hard to understand, so we will go over more advanced primitive types in a later lesson. The good thing is that ph3 introduces 2D and 3D Sprites for rendering rectangular images, so you do not need to know the details about primitives for rendering basic images.</p>
 	      <p>Let's say that you have an image that you want to display on the screen. We will render it as a 2D Sprite. Enemy Objects and rendered as 2D Sprites, so you can use 2D Sprite functions on an enemy object. For other situations, you will create a 2D Sprite using the following: <code>ObjPrim_Create(OBJ_SPRITE_2D);</code>. This will create a 2D Sprite, which is a rectangle in 2D space.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: What Functions Do I Use with 2D Sprites?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What Functions Do I Use with 2D Sprites?</h2>
 	      <p>For the most part, you will use ObjRender and ObjSprite2D functions on 2D Sprite Objects, as well as <code>ObjPrim_SetTexture()</code>, render priority functions, and Blend Type functions (which will be discussed in the next lesson). First, I'll discuss <code>ObjPrim_SetTexture()</code>.</p>
 	      <p><code>ObjPrim_SetTexture()</code> is the function you use to tell Danmakufu which image to render. It takes two parameters - the object ID of the primitive object, and the path to the image. It is recommended that you save the path name as a variable and then pass the variable in as the second parameter, as it looks cleaner and helps save a little computation time if you use the same image file multiple times in the same task/script. After you've set the texture, you will need to tell Danmakufu how to render the part of the image you want rendered.</p>
 	      <p>2D Sprites have four vertices that form a rectangle, and you use the following three functions to tell Danmakufu which parts of the image to use and how to display the selection - <code>ObjSprite2D_SetSourceRect()</code>, <code>ObjSprite2D_SetDestRect()</code>, and <code>ObjSprite2D_SetDestCenter()</code>.</p>
@@ -58,7 +58,7 @@
 	      <p>What <code>ObjSprite2D_SetDestRect()</code> does is as follows: The position of the object acts as the origin, like with a coordinate axis. If your second (left) argument is 16, then the left side of the image will be 16 pixels to the right of the object's position. So (obj, -16, 16, 16, 16) would render the object in a square of side length 32 centered at the object's position. Basically, each argument controls the offset value of one side of the texture.</p>
 	      <p>As for DestCenter, say you have a 64x96 sprite. Using <code>ObjSprite2D_SetDestCenter(objBoss)</code> is equivalent to using <code>ObjSprite2D_SetDestRect(objBoss, -32, -48, 32, 48);</code></p>
 	      <div class="tut_checkpoint">CHECKPOINT: How do <code>ObjSprite2D_SetSourceRect()</code> and <code>ObjSprite2D_SetDestRect()</code> work? How can you change the scale of an image by altering the Dest Rect?</div>
-	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Display an Image?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How Do I Display an Image?</h2>
 	      <p>It is now time to display images! For the purposes of this tutorial, I will provide a texture and a spritesheet. First, the texture - <a href="./tutimg/u2l13sample.png">u2l13sample.png</a></p>
 	      <p>We will begin by examining u2l13sample.png. Our mission in this part is to take this image and display it using Danmakufu. Since we have not yet covered Background scripts, simply make a task called <code>RenderBG</code> in a Single script and call the task in @Initialize.</p>
 	      <p>Now, the components of given task. First, we will declare a variable <code>obj</code> and will assign it the returned object ID of <code>ObjPrim_Create(OBJ_SPRITE_2D)</code>. This is the object we will be manipulating in this task.</p>
@@ -92,7 +92,7 @@
     }</code></pre>
 	      <p>As a final note, the third (z) parameter of ObjRender_SetPosition has no real usage with 2D sprites since it is completely independent from render priorities. It will be used with 3D sprites and other 3D render objects. Some people use 0 as the default, I tend to use 1. With 2D sprites, it doesn't actually matter what you use.</p>
 	      <div class="tut_exercise">EXERCISE: Find a seamless texture online. Experiment with Source and Dest rects. Tile the graphic with SourceRect and scale it with DestRect. Get a feel for how you can manipulate the images.</div>
-	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Animate a Boss?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How Do I Animate a Boss?</h2>
 	      <p>Now that we have covered source rects, destination rects, and positioning, it is time for us to animate our sprites. For reference, we will use a sample spritesheet, which you can find <a href="./tutimg/u2l13spritesheet.png">here</a>.</p>
 	      <p>In this tutorial, I will not cover the movement or cast animations - it is better for you to figure out how to do those by yourself. However, I will be showing the idle sprites.</p>
 	      <p>OK. So for the animation (the first row only), we have 4 64x64 sprites. Every 8 frames (you can change the number if you want to), we will change to the next image, and after the fourth, it will go back to the first. Let's begin coding.</p>
@@ -129,7 +129,7 @@
     }</code></pre>
 	      <p>Above, all I did was implement the animframe changing code, as well as the resetting the source rect based on the animframe. In the current case, animframe/8 will always be between 0 and 3, which corresponds to the four sprites in the animation as they are located on the spritesheet. Using this, we can successfully render and animate the numbers 1-4.</p>
 	      <p>Of course, to implement movement, etc. you would need movement angle and speed, and you can include if statements that will take care of that. Just be aware that if you decide to flip the sprite when the enemy moves in one direction, you may need to flip it back when it moves in the other direction.</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: 2D Sprites</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: 2D Sprites</h2>
 	        <!--Quiz start.-->
 		<p>1) We have a 32x32 image with a 24x24 sprite. Which of the following will render the sprite as a 48x48 image? There are multiple correct answers.</p>
 	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
@@ -153,7 +153,7 @@
 	        C. Use <code>ObjSprite2D_SetDestCenter(obj)</code> instead of <code>ObjSprite2D_SetDestRect(obj, 0, 0, 512, 512)</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub6">Part 6: What Are Render Priorities?</h2>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: What Are Render Priorities?</h2>
 	      <p>To close this lesson, we will have a brief discussion about render priorities, which are how Danmakufu (and programs in general) render images on top of each other.</p>
 	      <p>In Danmakufu, there are render priorities from 0 to 100, and something rendered with a render priority of 40 will render above 39, for example. When rendering multiple images with the same render priority, whichever is created later will render above the one created earlier.</p>
 	      <p>By default, render priorities of 20 and below, as well as 80 and above, use the top left of the window as their origin (0,0), while those in between use the top left of the playing field as their origin. Everything rendered in a standard plural or stage should be in the 20-80 range, while things rendered in packages should be rendered in the other ranges.</p>
@@ -161,14 +161,14 @@
 	      <p>Pretty much all of these defaults can be changed using various functions, so don't worry if you want to change them, though they should be adequate for all practical purposes.</p>
 	      <p>Anyways, there are two ways to set the render priority of a graphic: <code>Obj_SetRenderPriority()</code> and <code>Obj_SetRenderPriorityI()</code>. The first uses a 0.0 to 1.0 scale, and the latter uses the 0 to 100 scale I've been using. Decimal values do not work for the latter and will truncate to the integer portion - IE, you only have 101 render priority slots.</p>
 	      <p>For now, keep render priorities in mind, as they will prove important later on. That concludes the lesson.</p>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>2D Sprites have their own functions for determining their UV (<code>ObjSprite2D_SetSourceRect()</code>) and XY rects (<code>ObjSprite2D_SetDestRect()</code> and <code>ObjSprite2D_SetDestCenter()</code>)</li>
 	          <li><code>ObjSprite2D_SetDestRect()</code> can be used to stretch and scale a 2D Sprite</li>
 	          <li>A boss can be animated using a counter and either if/else/switch statements or by flooring the difference between the animation frame and the number of sprites</li>
 	          <li>Objects with higher render priorities render above those with lower render priorities</li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -179,7 +179,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Jun 08, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2015 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Jun 08, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <script type="text/javascript" src="javascript/U2L13Quiz1.js"></script>

@@ -40,11 +40,11 @@
 	          <li><a href="#sub6">Part 6: How do I Replicate Eternal Meek?</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will be explaining the usage of rand in greater detail, how to recreate rand_int, how to index arrays using rand, and will show, step by step, the components of Eternal Meek and how we can replicate it.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: How do I use rand?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: How do I use rand?</h2>
 	      <p>We've used rand before. You give rand two numbers - these are your bounds. rand() will generate a floating point number between these (it will, for practical purposes, never be an integer). Note that regardless of whether or not the bounds are included, it is nearly impossible to get exactly those bounds, so always use rand() assuming that the result will have a multitude of numbers after a decimal point.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: What Functions Can I Use to Truncate Floats?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What Functions Can I Use to Truncate Floats?</h2>
 	      <p>We will be creating a function called rand_int shortly, but before we do this, we must discuss the various built-in ways to truncate floating point numbers (anything with a decimal point) to integers in Touhou Danmakufu ph3. Our main reference will be <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Math_Functions" title="Math Functions for Touhou Danmakufu ph3">Math Functions</a>.</p>
 	      <p>The first function we will look at is <code>round()</code>. This function will round the decimal to the nearest integer using standard rules. Anything .5 or greater will round up, anything less than .5 will round down.</p>
 	      <pre class="prettyprint"><code>round(0.006);     //0
@@ -75,7 +75,7 @@ floor(6.246);     //6
 floor(-1.836);    //-2
 floor(-9.496);    //-10</code></pre>
 	      <p>Now that we have these, we will create <code>rand_int()</code>.</p>
-	      <h2 style="color:yellow" id="sub4">Part 4: How do I Write My Own rand_int?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I Write My Own rand_int?</h2>
 	      <p>The function of rand_int() is to return a random integer in between two bounds, inclusive. To do this, which of the four functions should we use?</p>
 	      <p>Of the four, trunc, ceil, and floor all exclude one or both of the bounds. Therefore, the only option here is to use round(). So how exactly would we go about making this function?</p>
 	      <p>Let's start with the skeleton. We have a function that takes in two integer parameters and returns an integer. So let's write an empty function.</p>
@@ -90,12 +90,12 @@ floor(-9.496);    //-10</code></pre>
 	      <p>This works by first running rand(). This obtains a floating point value between the two bounds, and then runs round() on it, turning it into an integer.</p>
 	      <p>Note that using <code>round(rand(min, max))</code> results in a bias against the first and last numbers. Alternate and perhaps more effective ways to implement rand_int include <code>truncate(rand(min, max + 1))</code>, etc.</p>
 	      <p>Of course, what are the uses of rand_int?</p>
-	      <h2 style="color:yellow" id="sub5">Part 5: What are the Uses of rand_int?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: What are the Uses of rand_int?</h2>
 	      <p>rand_int is used whenever you need a random integer. This often happens when you want a specific graphic in a range - you can use <code>rand_int(min, max)</code> to obtain a random integer between min and max inclusive.</p>
 	      <p>But let's say you don't want the one in the middle. For example, you want 30-36, but not 33. How could you do this? Well, rand_int provides a solution. Remember that you index arrays starting from 0 and then incrementing from there. So we can do the following!</p>
 	      <pre class="prettyprint"><code>let graphic = [30, 31, 32, 34, 35, 36][rand_int(0, 5)];</code></pre>
 	      <p>The above code will create an array with [30, 31, 32, 34, 35, 36], and will then index that array using the [rand_int(0, 5)]. The rand_int will spit out an integer between 0 (corresponding to 30) and 5 (corresponding to 36). This is a nifty trick that you may consider using. (Credits to Infinite Ultima Wave for teaching me that this exists)</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: rand_int</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: rand_int</h2>
 	        <!--Quiz start.-->
 		<p>1) Let's say we run <code>rand_int(0, 50)</code>. Which of the following is not a possible result?</p>
 	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
@@ -124,7 +124,7 @@ floor(-9.496);    //-10</code></pre>
 	        D. 0.5<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub6">Part 6: How do I Replicate Eternal Meek?</h2>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I Replicate Eternal Meek?</h2>
 	      <p>So it's finally time for the main show - Eternal Meek! We will begin with an analysis of the spellcard.</p>
 	      <p>The first thing to note is that this 13 second spell has Sakuya stationary in one location. This means that there will be no movement at all during the attacking. The next thing to note is that the bullets are all spawned from directly on top of her position with a high delay. This will inform the player to beware of faster bullets, and indeed, the bullet speeds are fast.</p>
 	      <p>Based on how often the SFX plays, it is safe to assume that there is a bullet every frame, or a bullet every two frames. This allows us to formulate our MainTask, which we will call once at the end of @Initialize. For the purposes of our replica, we will have one bullet per frame.</p>
@@ -148,7 +148,7 @@ floor(-9.496);    //-10</code></pre>
     }
 }</code></pre>
 	      <p>And there we have it - Eternal Meek, the easiest spellcard to replicate in all of Touhou.</p>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -159,7 +159,7 @@ floor(-9.496);    //-10</code></pre>
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />

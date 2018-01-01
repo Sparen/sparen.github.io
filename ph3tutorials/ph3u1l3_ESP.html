@@ -41,7 +41,7 @@
 	          <li><a href="#quiz2">Examen: Entorno de trabajo de Danmakufu</a></li>
 	          <li><a href="#subf">Fuentes y recursos externos</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Parte 1: ¿Cuáles son los diferentes tipos de scripts en Danmakufu?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Parte 1: ¿Cuáles son los diferentes tipos de scripts en Danmakufu?</h2>
 	      <p>En la última lección aprendimos que el menú de Danmakufu tenía opciones para cosas como "Single" y "Plural". Hoy vamos a aprender qué son estas cosas en realidad y cómo las usan los scripters. En esta lección también exploraremos las partes fundamentales de cualquier script de Danmakufu ph3 y comenzaremos a estudiar los Singles, que son las piezas fundamentales de toda batalla con un boss.</p>
 	      <p>Primero iremos con el <b>Single</b>, que suele contener un solo ataque, aunque se pueden modificar para que incluyan más o menos que uno dependiendo de los objetivos del scripter. Por lo general, será una parte de la barra de la vida del boss y contendrá, ya sea una spell o no-spell.</p>
 	      <p>Los singles son sorprendentemente versátiles. Ya que el ph3 te deja controlar gran parte del sistema, puedes hacer que una no-spell se convierta en una spell a mitad de camino, usar bosses múltiples, entre otras cosas, dependiendo de tus necesidades.</p>
@@ -49,7 +49,7 @@
 	      <p>Los scripts de <b>Stage</b> son los cimientos de los juegos completos y también se usan en scripts donde solo hay una batalla con un boss pero que tienen para seleccionar dificultad y otras cosas. Los stages pueden cargar scripts plurals y vienen con una variedad de opciones de personalización. Una vez que hayas dominado el uso de los plurals, querrás ir directo a los stages. Sin embargo eso es para mucho más adelante, así que no te centres en esto todavía.</p>
 	      <p>Los <b>Packages</b> son nuevos en el ph3. En el 0.12m no había una forma fácil de crear menús y permitir el acceso a los replays. Sin embargo en el ph3 se agregaron los packages, que funciona como una especie de menú para tus juegos. Son 100% personalizables, aunque tienen algunas limitaciones en cuanto a las funciones que se pueden usar. Los packages se usan en juegos completos y en proyectos donde se necesite un menú principal.</p>
 	      <p>Si bien los anteriores son los principales tipos de scripts, hay algunos tipos de archivos puntuales a tener en cuenta: Archivos de fondo (background) y de sistema (system). Discutiremos esos archivos en detalle en el futuro, pero solo digamos que por ahora usarás los archivos default hasta que estés acostumbrado a usar "tasks" y a manipular texto e imágenes en Danmakufu.</p>
-	      <h2 style="color:yellow" id="quiz1">Examen: Tipos de scripts</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Examen: Tipos de scripts</h2>
 	        <!--Quiz start.-->
 		<p>Suika quiere hacer una no-spell para una batalla con un boss en Danmakufu. ¿Cuál de los siguientes scripts debería usar?</p>
 	        <form method="POST" onSubmit="return checkAnswerA1ESP(this, 'B');">
@@ -61,12 +61,12 @@
 	        C. Plural<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub2">Parte 2: ¿Cuáles son los componentes de un script de Danmakufu?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Parte 2: ¿Cuáles son los componentes de un script de Danmakufu?</h2>
 	      <p><a target="_blank" href="ph3u1l3code1_ESP.html">Clic aquí para abrir una masiva cantidad de código en una ventana separada</a></p>
 	      <p><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Sample_Danmaku_Scripts#SampleA01:_Shooting_a_Bullet_Straight_Down">Fuente</a></p>
 	      <p>Si no tienes experiencia con las ciencias de la computación, probablemente estés abrumado por esta cantidad de código. Este single en particular es la traducción (del japonés) de SampleA01, ubicado en la carpeta “sample” dentro de la carpeta “script” de tu ph3. Este código está hecho para que los scripters lo usen como base, y como tal, es lo que usaré de ejemplo. Para futuras referencias, dale uso a los scripts de ejemplo (y al player y boss ExRumia), son un recurso bastante útil.</p>
 	      <p>Ahora vamos a echarle un vistazo al texto y lo desglosaremos parte por parte.</p>
-	      <h2 style="color:yellow" id="sub3">Parte 3: ¿Cuáles son los componentes de la cabecera (header) de Danmakufu?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Parte 3: ¿Cuáles son los componentes de la cabecera (header) de Danmakufu?</h2>
 	      <p>Primero, hay cosas arriba de todo con un # de prefijo. Estos (no el include, solo la parte de arriba) conforman el header de Danmakufu. La primera línea es #TouhouDanmakufu[Single]. Esto designa el script como un script de Touhou Danmakufu – sin esta línea, el Danmakufu no leerá el archivo como uno ejecutable y por consiguiente no se mostrará en las búsquedas (como por ejemplo en All, Directory, etcétera). En el lugar de Single también se puede poner “Plural”, “Stage” y “Package”, los tipos de scripts explicados en la parte 1.</p>
 	      <p>Lo siguiente es #ScriptVersion[3]. Como se indica en el comentario (lo que le sigue a los //), <b>esto es necesario para todos los scripts de ph3</b>. #ScriptVersion[2] se refiere a Danmakufu 0.12m y #ScriptVersion[1] a algo que se usaba desde antes de que el Touhou 10 siquiera exista. Solo digamos que simplemente necesitas tener un #ScriptVersion[3] para que el ph3 corra bien.</p>
 	      <p>Luego de la versión del script hay dos campos rotulados #Title y #Text, con una cadena (string) dentro que contiene la información usada para describir los campos. Lo que va en #Title será la etiqueta del script mientras navegas por la lista de scripts en Danmakufu. #Text es el texto que aparece abajo a la izquierda en la pantalla de selección de scripts. Sugiero nunca dejar #Title en blanco, ya que podría confundir a la gente que de repente aparezca un script sin título mientras navegan por la lista – si no quieres que el script aparezca en la lista de scripts de Danmakufu, es comentar la línea #TouhouDanmakufu[TipoDeScript]. Cómo manipular cadenas en el ph3 y cómo comentar será discutido en otro tutorial.</p>
@@ -81,14 +81,14 @@
 </code></pre>
 	      <p>#Background y #System se usan para un fondo personalizado y para utilizar archivos de sistema diferentes a los que vienen por defecto.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: ¿Qué campos son requeridos en el header? ¿Por qué?</div>
-	      <h2 style="color:yellow" id="sub4">Parte 4: ¿Cuáles son las rutinas principales utilizadas en un single?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Parte 4: ¿Cuáles son las rutinas principales utilizadas en un single?</h2>
 	      <p>Ahora nos vamos a enfocar en algo más. Vamos a ignorar todos los comentarios y las sentencias (statements) “let” y en su lugar nos centraremos en los ítems que comienzan con un @. Estas son las rutinas de un script Single. Como se ve en la página, están @Event, @Initialize y @MainLoop; también están @Loading y @Finalize, que se supone, están pensados para usarse en conjunto mientras cargan los recursos. Los principiantes pueden ignorar @Loading y @Finalize hasta que empiecen a crear proyectos más grandes. Ten en cuenta que la L de @MainLoop está en mayúscula. Danmakufu diferencia mayúsculas y minúsculas (case sensitive). <b>No uses @Mainloop o tu script no funcionará porque MainLoop y Mainloop son dos cosas totalmente distintas.</b></p>
 	      <p>Primero vamos a explicar @Initialize, que se ejecuta solo una vez el comienzo del script. Los comandos entre llaves {} se ejecutan en orden. Aquí vas a registrar a los enemigos, preparar recursos y a veces mover el boss a la posición inicial deseada. Todavía no entraré en mucho detalle en este apartado, pero gradualmente irás aprendiendo qué es lo que va aquí mientras desarrollas tu propio estilo.</p>
 	      <p>El siguiente es @MainLoop. Por defecto, esta rutina se ejecuta una vez por frame (cuadro). Hay 60 frames en un segundo, como se muestra (en teoría), en el medidor de FPS. Ya que @MainLoop se ejecuta cada frame, se usa para cosas que necesitan ejecutarse cada cuadro, como indicar dónde está el hitbox del boss. Puedes controlar bastantes cosas aquí, pero muchos scripters prefieren usar tasks en conjunto con @MainLoop o a veces completamente independiente de esta. Veremos esto con detalle más adelante.</p>
 	      <p>El siguiente es @Event, que fue introducido en el ph3. Aquí se controlan varios 'eventos', y se configuran cosas como los spell bonus, la vida del boss, entre otras. Hablaremos brevemente acerca de @Event cuando hagamos nuestro primer single, pero como puede volverse complicado, la mayor parte de los detalles serán abarcados en tutoriales más avanzados.</p>
 	      <p>Por último, @Finalize, que ya estaba presente en el 0.12m. Y @Loading, que fue introducido en el ph3. @Loading se ejecuta una vez, antes de @Initialize y solo debería usarse para cargar recursos. En un futuro muy, muy lejano, tal vez explique mejor qué es lo que hace @Loading, pero por ahora, solo ten en cuenta que existe. @Finalize se ejecuta una vez al finalizar el script y se usa para borrar los recursos cargados. Estas dos rutinas son opcionales y pueden obviarse en el script.</p>
 	      <p>En la siguiente lección aprenderemos sobre los comentarios, variables y una cantidad de otros componentes de lenguajes de programación y scripting, así como también la sintaxis del Danmakufu. Sin embargo, por ahora... un examen.</p>
-	      <h2 style="color:yellow" id="quiz2">Examen: Entorno de trabajo de Danmakufu</h2>
+	      <h2 class="ph3tutorialheader" id="quiz2">Examen: Entorno de trabajo de Danmakufu</h2>
 	        <!--Quiz start.-->
 		<p>Reimu está muy enojada. Mueve la cabeza de un lado a otro. Sin embargo, no puede darse cuenta por qué su script no se muestra en la lista de scripts de Danmakufu ph3 en la parte de Directory. Ya ha recargado, se aseguró de que el archivo está en la carpeta “script” y hasta consideró llamar a Nitori. El header de su script se muestra a continuación, y las líneas siguientes líneas están incluidas en su header.</p>
 	        <pre class="prettyprint"><code>#ScriptVersion[3]
@@ -106,7 +106,7 @@
 	        D. Es culpa de Yukari.<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="subf">Fuentes y recursos externos</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Fuentes y recursos externos</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Todavía no es particularmente relevante, pero lo será en las siguientes lecciones.</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -117,7 +117,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Última actualización de la página: Jan 21, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>
+        <p style="text-align: center;">Última actualización de la página: Jan 21, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>
         <p style="text-align: center;">Esta página fue traducido por Paty y Andrew Fan.</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/U1L3Quiz1.js"></script>
     <script type="text/javascript" src="javascript/U1L3Quiz2.js"></script>

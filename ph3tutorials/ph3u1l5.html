@@ -44,7 +44,7 @@
 	          <li><a href="#sub9">Part 9: What are the Reserved Keywords?</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will cover the following:</p>
 	      <ul>
 	          <li>Booleans and Boolean Operations</li>
@@ -65,7 +65,7 @@
 	          <li>One-Dimensional Arrays</li>
 	      </ul>
 	      <p>Please note that the contents of this page are partially based off of <a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs">CK Crash's Danmakufu ph3 tutorial</a> and that it may be a more suitable option for learning about how Danmakufu treats variables and the like.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: What are Booleans?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Booleans?</h2>
 	      <p>A boolean is, simply put, either true or false.</p>
 	        <pre class="prettyprint"><code>let bool = true;
 let bool2 = false;</code></pre>
@@ -83,7 +83,7 @@ let test2 = (bool && bool2); //test2 is true if bool AND bool2 are true, else fa
 let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE if bool2 is false.</code></pre>
 	      <p>As seen above, || denotes OR and && denotes AND. When we discuss if and if-else statements in the next part, we will be returning to this, as it is the foundation of script control and flow in danmakufu.</p>
 	      <p>To close, be aware that the boolean true is equivalent to 1 and the boolean false is equivalent to 0. This is good to know for Computer Programming in general.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: What are If and If-Else Statements?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What are If and If-Else Statements?</h2>
 	      <p>So now that we have all this knowledge of booleans and boolean expressions, what will we do with it? Well, if you want to only execute certain code under certain conditions, you can use booleans and boolean expressions in if, if-else, and alternative-case (switch) statements!</p>
 	        <pre class="prettyprint"><code>if(count &gt; 30){count = 0;}</code></pre>
 	      <p>Above is an example of an if statement. If statements have a condition (a boolean or boolean expression) that is true, the code in the braces following the statement will be executed. In the above situation, the variable <code>count</code> will be set to 0 if its value is greater than 30. If its value is not greater than 30, the code within the braces will not be executed.</p>
@@ -122,7 +122,7 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
 	//Do various stuff
     }</code></pre>
 	      <p>The way an alternative-case statement works is as follows: The variable inside alternative() is the variable that is being tested. The first case asks whether x == -3. If true, it will execute the stuff inside the braces for case(-3) and ignore everything else. If x is not -3, it will move on to the next case and so on. Finally, if it has exhausted its options, it will do whatever is in others{} or, if others{} is not present, simply exit the statement and do nothing. Very useful.</p>
-	      <h2 style="color:yellow" id="sub4">Part 4: What are Loops and How do I Use Them?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: What are Loops and How do I Use Them?</h2>
 	      <p>If you want to repeatedly do the same thing over and over again (and perhaps with slightly different effects), loops are the solution! There are a few types of loops in Danmakufu.</p>
 	      <p>The first type of loop is the generic loop. It is a structure that takes an integer parameter <code>n</code> and will run the code in the following block <code>n</code> times. The parameter must be an integer because it makes no sense to repeat something 3.5 times. For example:</p>
 	        <pre class="prettyprint"><code>let x = 5;
@@ -177,7 +177,7 @@ local{
 	      <p>Please note that by convention, the values used in ascent/descent/for loops go as follows: i, j, k, l, etc. Regarding descent loops, the local variable decrements instead of incrementing. You will need descent loops for certain things but you will be using ascent loops most of the time. If you don't understand ascent loops, that's perfectly fine - they're harder to understand than some of the other things in Danmakufu, and you will not need them until you are trying to do graphic fade-ins or more complex bullet patterns.</p>
 	      <p>Finally, on an important note, please remember <code>break;</code> - this will break you out of the innermost loop. This has a variety of uses, which will be useful later on. However, using <code>break;</code> outside of a loop may crash Danmakufu. Please be advised.</p>
 	      <div class="tut_exercise">EXERCISE: Write various things using while loops, and then write them again using ascent loops. Compare your two implementations. Did one do the job better than the other? Which one took less space to write?</div>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Loops and Booleans</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Loops and Booleans</h2>
 	        <!--Quiz start.-->
 		<p>Consider the following code for Questions 1 and 2.</p>
 	        <pre class="prettyprint"><code>let x = 5;
@@ -265,7 +265,7 @@ if(x == (23 / 2)){
 	        B. 23<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub5">Part 5: What are Functions?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: What are Functions?</h2>
 	      <p>We have referenced functions before, but now is the time to go in depth about what a function is and how to use them.</p>
 	      <p>Firstly, a function is able to take and return parameters, also known as arguments or inputs. For example, you can have a function f(x)=x+5 that takes a value x, and returns that value incremented by 5. In Danmakufu, it looks like this:</p>
 		<pre class="prettyprint"><code>function math(var){  //using 'let var' is also acceptable but nobody really does it.
@@ -279,13 +279,13 @@ if(x == (23 / 2)){
 let y = math(6); //y will be equal to 11</code></pre>
 	      <p>Simple, right? A function takes its parameters in the form (a, b, c, ...) and returns whatever is in the return statement. A function does not have to return anything and does not require parameters. Note that you can only return one thing - alternatively, you can return an array of different things as long as they are of the same type. However, this gets clunky and can be confusing, so it's best to have a function return a single value. Functions are very useful for quick things such as returning the angle from the player to the boss, getting the player movement direction, etc. All built-in functions are executed immediately when called and will finish execution before the next line of code runs. You can also use <code>yield;</code> in a function and where the function was called, nothing else will execute until the function has completed its run (things not in the script, such as the bgm, background, and system will still work), but we'll get into that later when we discuss <code>yield;</code>. Please note that when referring to a function, people usually refer to the function as functionname(). The parenthesis indicate parameters, which is the primary feature of functions.</p>
 	      <p>We will review functions, subroutines, and function libraries in much greater detail in <a href="./ph3u2l18.html">Lesson 18</a>.
-	      <h2 style="color:yellow" id="sub6">Part 6: What are Tasks?</h2>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: What are Tasks?</h2>
 	      <p>Now that we have functions out of the way, it's time to explain tasks, also known as coroutines. You can send parameters to a task as well, and the main difference between tasks and functions is that tasks are made to run alongside your other scripts. For example, you could create a task that creates a bullet and then makes it do something every frame for 60 frames before disappearing only for it to reappear elsewhere on the screen and split into other bullets. Tasks give Danmakufu flexibility and are excellent at organizing code. Do note that by convention, you do not put parenthesis after a task unless there are parameters, unlike the case with functions.</p>
 	      <p>Tasks are also amazing at script flow. For example, if you want a sound effect to play thirty frames after a bullet is spawned, you can just call a task that waits 30 frames and then plays a sound effect. Very helpful for timing things in a script.</p>
 	      <p>When I discuss various scripting styles, I will discuss the tasking style, which is very popular due to Helepolis's video tutorials. Please do note, however, that in ph3, unlike in 0.12m, the standard @MainLoop style requires externalizing commands to tasks anyways because you must manually control when bullets spawn and using return; in a routine such as @MainLoop has the potential to crash Danmakufu. That being said, using return; in a coroutine/task will stop execution of the rest of the task and will ignore everything after the return; statement, ending the task entirely. Tasks cannot return a value.</p>
 	      <p>However, now that we have so much stuff about tasks and script control, we should probably go over yield;</p>
 	      <div class="tut_checkpoint">CHECKPOINT: Can you return a value using a task?</div>
-	      <h2 style="color:yellow" id="sub7">Part 7: How do I use yield;?</h2>
+	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I use yield;?</h2>
 	      <p>The function of yield; is to pause execution of a routine, subroutine, function, or task by one frame.</p>
 	      <p>That is literally the simplest way to explain what yield; does.</p>
 	      <p>Please note the following, however:</p>
@@ -298,14 +298,14 @@ let y = math(6); //y will be equal to 11</code></pre>
 		<pre class="prettyprint"><code>function wait(n){loop(n){yield;}}</code></pre>
 	      <p>This function is a must-have for everyone's function library. It yields n frames. <code>wait(60);</code> is the equivalent of <code>loop(60){yield;}</code>, but one is longer than the other, so people just use wait().</p>
 	      <p>As this tutorial progresses, you will learn more ways to use <code>yield;</code> as well as other techniques in which <code>yield;</code> is a key component. But now... the semicolon.</p>
-	      <h2 style="color:yellow" id="sub8">Part 8: What Should I Know About Danmakufu Syntax?</h2>
+	      <h2 class="ph3tutorialheader" id="sub8">Part 8: What Should I Know About Danmakufu Syntax?</h2>
 	      <p>Now we will have a brief discussion about Danmakufu syntax. As you all know, Danmakufu is a scripting language and, like programming languages, has both conventions and rules. Like other programming languages, all function, task, variable, and routine names are case sensitive. In other words, @mainloop will not be recognized because Danmakufu only recognizes @MainLoop. Calling a function Wait(n) when you have a function wait(n) will bring up a function not defined error.</p>
 	      <p>Additionally, please, please, PLEASE remember to close all of your (, [, and {. Before running a script (or upon getting an error), use a ctrl-F test to make sure that the number of { is equal to the number of }. Otherwise, <i>something</i> is going to error. Guaranteed.</p>
 	      <p>Also please make use of tabbing. I cannot emphasize this enough. In this tutorial, I use 2, 4, or 8 spaces for tabs. However, the spacing is not what matters - having white space in the first place is what's important. Having unreadable code means that others will be less likely to help you.</p>
 	      <p>And finally... the bane of all existence. THE SEMICOLON.</p>
 	      <p>Danmakufu requires a semicolon at the end of each statement (there are a few exceptions), and if you forget to put one after a statement, the error will reference the line afterwards and not the line with the error. If you call a function or task, remember to place a ; after the closing parenthesis. If you declare a variable, put a ; after you have declared the variable. This is how Danmakufu (and other languages) determine when you have ended a statement, and without it, Danmakufu will be confused. The two big exceptions to the semicolon rule are headers and include statements (we will cover include statements much later). The other is that you don't need a semicolon in a block containing only one statement if the statement is followed immediately by a closing brace }. However, always put the semicolon - I don't care how mkm wants you to code; This is better procedure and more relevant for computer science as a whole.</p>
 	      <p>That's all for now. The quizzes below should be enough to review the information.</p>
-	      <h2 style="color:yellow" id="quiz2">Quiz: Script Flow and Syntax</h2>
+	      <h2 class="ph3tutorialheader" id="quiz2">Quiz: Script Flow and Syntax</h2>
 	        <!--Quiz start.-->
 		<p>1) Why does Danmakufu freeze when the below code is executed?</p>
 	        <pre class="prettyprint"><code>while(!Obj_IsDeleted(obj)){ //Obj_IsDeleted() returns a boolean
@@ -352,7 +352,7 @@ Wait(5);
 	        B. There should be no semicolon after yield<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub9">Part 9: What are the Reserved Keywords?</h2>
+	      <h2 class="ph3tutorialheader" id="sub9">Part 9: What are the Reserved Keywords?</h2>
 	      <p>I will close this lesson with some notes on Reserved Keywords. Note that I obtained this information from the tutorials at <a target="_blank" href="http://www.fragmentedskies.com/danmakufu-ph3-tutorials/reserved-keywords/">Fragmented Skies</a>, so there may be some that are missing or some that are not in fact reserved keywords.</p>
 	      <p>In a programming language, a reserved keyword is a name that cannot be used for your own variables, functions, etc. For example, you cannot have a task named 'function', because 'function' is a reserved keyword in that it has a specific usage preprogrammed into the language.</p>
 	      <p>The following are examples of reserved keywords:</p>
@@ -360,7 +360,7 @@ Wait(5);
 	      <p>There are also function names built into Danmakufu that are reserved and cannot be overridden (if you try to override these with a function, you will get an error where a function with the same name is already defined. If you name a variable as one of these, it will freeze rather than erroring.</p>
 	      <p><code>add append compare concatenate divide false index length multiply negative not pi power predecessor remainder result slice successor subtract true</code></p>
 	      <p>On that note, please just use the mathematical operator if it is available. <code>add(3, 5);</code> is utterly pointless when <code>3 + 5</code> is significantly easier and less of a pain to write.</p>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Should give an alternative, visual example to the contents of this lesson</p>
 	      <p><a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs" title="Danmakufu for Easy Modos by CK Crash">Danmakufu for Easy Modos by CK Crash</a> (CK Crash)<br>--&gt;Since this tutorial was used as a source for mine, I highly suggest that you read it if you haven't already.</p>
 	      <br>            </div>          </div>
@@ -372,7 +372,7 @@ Wait(5);
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: July 24, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: July 24, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <script type="text/javascript" src="javascript/U1L5Quiz1.js"></script>

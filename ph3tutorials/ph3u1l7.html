@@ -59,7 +59,7 @@
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>
-	      <h2 style="color:yellow" id="sub1">Part 1: How Do I Designate a Single as a Spellcard?</h2>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: How Do I Designate a Single as a Spellcard?</h2>
 	      <p>To begin, a note. I will not be involving the @MainLoop style from now on - I will show the task method and my own method, because the former is commonly used and because the latter is good for understanding alternate ways in which you can script Danmakufu. Also, <strong>it is highly recommended that you have read Lessons 3-6 and understand most of the information</strong>.</p>
 	      <p>Let's start off with our code from the end of Lesson 6. We will now begin the transformation from a nonspell to a spell!</p>
 	      <p>First, let's review the top of our code - the part containing global variables. Currently, we only have <code>let objBoss;</code>. Right after that, we will want to add the following:</p>
@@ -96,7 +96,7 @@ task TDrawLoop {
 	      <p>As a final note, it is also possible to <code>ObjEnemyBossScene_StartSpell(GetEnemyBossSceneObjectID)</code> instead of having a global variable to store the EnemyBossSceneObject's ID, but you will have to use the Get ID function multiple times in the spellcard bonus code.</p>
 	      <p>And with that, we have our basic spell done! Now to add stuff to it!</p>
 	      <div class="tut_checkpoint">CHECKPOINT: What function tells Danmakufu that your Single is a Spellcard?</div>
-	      <h2 style="color:yellow" id="sub2">Part 2: What are the Movement Functions?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are the Movement Functions?</h2>
 	      <p>In our old script, all the boss did was sit there and shoot a bullet at the player every half second (30 frames). Now we will make the boss move!</p>
 	      <p>For the tasking style, we will create a task called <code>movement</code> and call it right before the while loop in MainTask. We will also add a <code>wait(120);</code> before calling movement in MainTask. This will delay the task 120 frames before beginning to fire or move. The boss will be able to move into position, etc. For my style, set counter to -120 to start, and in the if statement controlling firing, add <code>&& count >= 0</code> so that bullets will only fire if count >= 0. As for movement, we can use the same movement task (I personally do this differently) as with the tasking style, which we will make below.</p>
 	      <p>So, movement. For objects on which ObjMove functions apply (this will be discussed in <a href="./ph3u1l8.html">Lesson 8</a>), there are all kinds of ways to move the enemy. Documentation can be found <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Move_Object_Functions">here</a>.</p>
@@ -111,7 +111,7 @@ task TDrawLoop {
     }</code></pre>
 	      <p>If using my style, then please make sure to include <code>if(count == 0){movement;}</code> in @Initialize to actually call the task.</p>
 	      <p>Now that our boss is moving, it is time for a short quiz, after which we will learn to do things more complex that firing a single bullet at the player.</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Frames, Speed, and yield;</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Frames, Speed, and yield;</h2>
 	        <!--Quiz start.-->
 		<br>
 		<p>1) How long does it take for a bullet traveling at speed 4 (pixels/second) to travel from the left side of the default playing field to the right side (same y coordinate)?</p>
@@ -148,7 +148,7 @@ task TDrawLoop {
 	        C. <code>ObjMove_SetDestAtFrame()</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub3">Part 3: How do I Use Loops?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I Use Loops?</h2>
 	      <p>Now we will begin making our code significantly more interesting.</p>
 	      <p>For our current code, please check <a target="_blank" href="./ph3u1l7code1.html">here</a>.</p>
 	      <p>Please note that for this part, we will focus on the MainTask; task for the tasking style and the fire; task for my style - we will not be touching any other parts of the script, although we will reference other parts.</p>
@@ -188,7 +188,7 @@ task TDrawLoop {
 	      <p>For reference, my video tutorial on ascent loops can be found <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&amp;list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K" title="Sparen's Danmakufu ph3 Video Tutorials - Using Ascent Loops and More (Youtube)">here</a></p>
 	      <div class="tut_exercise">EXERCISE: Try spawning bullets in a semicircle - there's a trick to getting it just right! Hint: Use ascent loops</div>
 	      <div class="tut_exercise">EXERCISE: Experiment with bullet speeds and delay in ascent loops - there's more you can do than just lines or waves of bullets.</div>
-	      <h2 style="color:yellow" id="sub4">Part 4: How do I Sync Spawning to the Boss's Movement?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I Sync Spawning to the Boss's Movement?</h2>
 	      <p>Now we will add another attack to the boss's pattern. However, this pattern will look weird if spawned when the boss is moving.</p>
 	      <p>For the tasking method, we will first create a task fireA, and will move the entire while loop in MainTask to fireA. In MainTask, where the while loop was located, call <code>fireA;</code> instead. We are naming it fireA because we will be creating a fireB later on. For the Sparen method, rename fire; to fireA. Remember to change it in @MainLoop as well. If your text editor supports find-replace all, you will quickly find the function to be a godsend.</p>
 	      <p>Now, we will create a task fireB. You may want to copy fireA for now and simply rename it.</p>
@@ -207,14 +207,14 @@ task TDrawLoop {
 	      <p>This concludes the lesson. As of now, you now have the ability to do quite a few things in Danmakufu. I suggest practicing with the techniques you already have at this point so that you can better understand the techniques by experimenting with them yourself. However, I advise that you do not upload your scripts to Bulletforge at this point in the tutorial. Criticism can be harsh, and it's best that you wait until you have significantly more knowledge about Danmakufu. For information about Bulletforge, please read <a href="./ph3uXl2.html" title="How to Use Bulletforge - Sparen's Danmakufu Tutorials">How to Use Bulletforge</a>.</p>
 	      <p>For the final versions of the scripts we have made in this tutorial, please check <a target="_blank" href="./ph3u1l7code2.html">here</a>.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How long does it take for the boss to move to its destination when using ObjMove_SetDest functions? How can you synchronize this to multiple individual patterns?</div>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>Danmakufu will only recognize a spellcard if <code>ObjEnemyBossScene_StartSpell(GetEnemyBossSceneObjectID());</code> is run</li>
 	          <li>Danmakufu does not automatically add the Spellcard Bonus to the score at the end of a spell</li>
 	          <li>Boss movement, animation, and attacks can be controlled via separate tasks that run at the same rate</li>
 	          <li>You can use loops to create a variety of danmaku patterns</li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Not as relevant anymore, but still good if you haven't yet watched it</p>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=IAJTT0zOepw" title="Helepolis's Improving our boss and danmaku">[ 弾幕風 PH3 Tutorial ] Improving our boss and danmaku</a> (Helepolis)<br>--&gt;Covers things that were also covered in this tutorial - a good resource.</p>
 	      <br>
@@ -233,7 +233,7 @@ task TDrawLoop {
       <div id="ft">
         <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>
         <p style="text-align: center;"><a href="#top">Top</a></p>
-        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>
+        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>
         <p style="text-align: center;"><span style="font-weight: bold;">Other
             Sites/Affiliates</span></p>
         <div style="text-align: center;">

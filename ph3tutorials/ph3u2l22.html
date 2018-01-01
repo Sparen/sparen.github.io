@@ -42,13 +42,13 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss Background Scripts as well as how to implement various types of 2D backgrounds by transforming their component 2D sprites (simple scrolling, rotating).</p>
 	      <p>This lesson requires familiarity with 2D Sprites. If you are not familiar with 2D Sprites, please refer to <a href="./ph3u2l13.html">Lesson 13</a>.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: What are Background Scripts?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Background Scripts?</h2>
 	      <p>We've covered a lot of different script types now. System, Replay Save, Pause, End Scene... But now we'll touch on Background scripts. Like System scripts, you link to them in the Danmakufu header, and they run for the duration of a script. You can use the same background script for stages, plurals, and singles, and they generally work well.</p>
 	      <p>Note that although you can *technically* dump whatever you want in a Background script, they are generally used to run tasks for stage/nonspell backgrounds and spell backgrounds. If you have any graphical effects that do not affect gameplay, like falling cherry petals or the like, the Background script is where you put them.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: How are Background Scripts structured?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How are Background Scripts structured?</h2>
 	      <p>We will begin our discussion of Background scripts by dissecting the default, located in default_system/Default_Background_IceMountain.txt. Naturally, similarly to System scripts, you can name your Background script however you want, as long as you link to it properly.</p>
 	      <p>Inside the default Background script, there is a field, <code>bSpell</code>, which is controlled in @MainLoop. Contents of @MainLoop are below:</p>
 	      <pre class="prettyprint linenums"><code>@MainLoop
@@ -89,7 +89,7 @@
 		}</code></pre>
 	      <p>Essentially, after 60 frames, the object in the background turns invisible. If you have multiple objects in the background to turn off, you would set all of them to invisible or visible depending on the situation.</p>
 	      <p>The spell background is similar, but has slightly different structure.</p>
-	      <h2 style="color:yellow" id="sub4">Part 4: How do I make a static 2D background?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I make a static 2D background?</h2>
 	      <p>Now that we have a basic understanding of how things work, let's begin with a static 2D background. To begin, recall that the playing field uses render priorities 20 to 80. For a refresher on render priorities, refer to <a href="./ph3u2l13.html">Lesson 13</a>. Additionally, recall that the standard playing field is 384x448 pixels.</p>
 	      <p>With textures in Danmakufu, due to the underlying graphics engine (DirectX), it is highly recommended that you use 512x512 or similar multiples of 2 in the dimensions of your images. As an example, we will center a 512x512 image in the middle of the playing field.</p>
 	      <pre class="prettyprint linenums"><code>task TSpellBackground {
@@ -123,7 +123,7 @@
 	      <p>In the above example, note that the image is only visible when alpha > 0. This is used for transitioning between the stage and spell background tasks.</p>
 	      <p>If we want to add more background images, simply add the new objects. You may want to fiddle with alpha values and blend types if you want to stack multiple images on top of one another to create interesting effects.</p>
 	      <p>To provide another example, let's say we have a 32x32 image that we would like to tile across the screen. Using the code above, it would tile across the entire screen without any changes to the code.</p>
-	      <h2 style="color:yellow" id="sub5">Part 5: How do I make a scrolling 2D background?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I make a scrolling 2D background?</h2>
 	      <p>Now we would like to scroll images. To do this, we will manipulate the Source Rects of the image. Since Source Rects wrap, we can take advantage of that property to essentially provide the image of a scrolling image without actually moving the image. Essentially, what we're doing is the following:</p>
               <svg id="svganim" width="400" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
                   <defs>
@@ -207,7 +207,7 @@
 	      <p>This is the same code as above, except that we now have bgfog as obj2. It is a seamless texture, which means that if it were to wrap, you wouldn't notice the edges of the image. You can also use tileable textures.</p>
 	      <p>In the loop, we edit the source rect. Note the <code>(frame*2) % 512</code> - this is what's scrolling it. As the frame increases, the numbers rise, going up to 512. As a result, the source rect gently moves downwards, and after 256 frames, it resets to its original position without any noticeable teleportation (the number you mod by, in this case 512, must be a multiple of the image dimensions).</p>
 	      <p>And that's one way to scroll 2D images. You do the same for the source rects of 3D images.</p>
-	      <h2 style="color:yellow" id="sub6">Part 6: How do I make a rotating 2D background?</h2>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I make a rotating 2D background?</h2>
 	      <p>For rotation, instead of changing source rects, we will instead take advantage of <code>ObjRender_SetAngleZ()</code>.</p>
 	      <p>What this function does is rotate a 2D image on the cartesian x-y plane. In other words, it's rotating around the z-axis. Similarly, <code>ObjRender_SetAngleX()</code> and <code>ObjRender_SetAngleY()</code> rotate the image around the X and Y axes, on the y-z and x-z planes respectively.</p>
 	      <p>Usage is simple. See the following example:</p>
@@ -253,14 +253,14 @@
 	      <p>In this example, we have two of the same image, rotating around their centers (their position, as set in <code>ObjRender_SetPosition()</code>) with a change of frame degrees. In other words, in 6 seconds, they will make a complete rotation. Usually, it is recommended to have two images rotating in opposite directions to give a feel of balance to your background.</p>
 	      <div class="tut_exercise">EXERCISE: In a background script, try out rotating images around different points on the screen. What arrangements are visually appealing? What spin frequencies are distracting?</div>
 	      <div class="tut_exercise">EXERCISE: In a background script, try to rotate images using Border of Wave and Particle style angle incrementation, using a different variable for holding the rotation angle of the images and adding sin(frame*n) to this new variable every frame.</div>
-	      <h2 style="color:yellow" id="sub7">Part 7: How do I layer textures with varying Alpha and Blend Types?</h2>
+	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I layer textures with varying Alpha and Blend Types?</h2>
 	      <p>We've finally reached blend types and layering. First and foremost, please do feel free to utilize multiple render priorities - for some backgrounds, it provides immense flexibility.</p>
 	      <p>Anyways, let's say you have two images, each of which have alpha of 255 for every pixel. In Danmakufu, you set the alpha of each to 128, and naively render them on top of each other with BLEND_ALPHA (the default). What do you see? Well, a mess... that's rather dark. What you're essentially doing is adding the rgb of the initial bottom layer (black) with half the rgb of one image and half the rgb of the other. It's not necessarily going to look good.</p>
 	      <p>In more complex backgrounds, you will want to play with different images rendered on top of others, with scrolling effects and rotating objects (as well as scaling objects too, perhaps) being used to enhance the experience. It's very important to consider how much of each image to show - for a fog layer, you may want a low alpha, for example, even if the source image is already mostly transparent. Rendering at 255 alpha is going to be exceptionally rare, unless it's a base background image upon which other things are placed.</p>
 	      <p>Another thing to keep in mind is contrast. You will want good contrast between the background and the bullets. Usually, since bullets tend to be bright, this means that the spell background must be dark. The only exceptions are cases where the background is very bright and the bullets are very dark, such as with Tsurubami Senri and Tsubakura Enraku's attacks in the Len'en Project. However, this is definitely not the norm.</p>
 	      <p>If you start out with a bright base background, you may therefore be tempted to dump a crapton of dark images on top. However, you have blend types to spice things up. In general, ADD_RGB and MULTIPLY are big no-nos for spell backgrounds, as ADD_RGB is not flexible (no matter what alpha you assign to it, it always renders the same way) and MULTIPLY can be unintuitive to control. Also, whatever you do, do NOT use INV_DESTRGB. We don't need more of that eye-scarring invert, especially in a background.</p>
 	      <p>The most useful blend types will be BLEND_ADD_ARGB and BLEND_SUBTRACT. ADD_ARGB provides shininess in a way that can be easily controlled by changing the alpha value of the render object. Subtractive blend is a rather easy way to darken an image - using a white fog background to cast a black fog over everything else, for example. Do be aware that if you choose to change the color of an image with Danmakufu's <code>ObjRender_SetColor()</code>, subtractive blend will not handle those colors the same way as with alpha or add.</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Background Scripts</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Background Scripts</h2>
 	        <!--Quiz start.-->
 		<p>1) Sanae is making a scrolling background with two components - one that should move in the bottom right direction and one that should move in the bottom left direction. However, instead of moving in the bottom right and bottom left directions, they're moving in the top left and top right directions. Why is this?</p>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', '5');">
@@ -284,13 +284,13 @@
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>Background Scripts are run the same way as System scripts</li>
 	          <li>Rendering images in Background Scripts is the same as rendering images anywhere else in Danmakufu</li>
 	          <li>When scrolling via SetSourceRect, adding frames scrolls in the opposite direction</li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -301,7 +301,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Apr 10, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016-2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Apr 10, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />

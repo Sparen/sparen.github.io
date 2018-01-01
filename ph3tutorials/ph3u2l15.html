@@ -41,28 +41,28 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>Sound is very important in any form of modern video game. Using sound effects and background music effectively make the experience significantly better, and they provide mood, ambience, and style. Of course, there are multiple ways to implement sound in Danmakufu, and we will go into these shortly.</p>
 	      <p>Before reading this guide, I expect that you already understand what .mp3 and .wav files are. I will cover .ogg files (OGG Vorbis) briefly, as they are the preferred option for BGM tracks in Danmakufu, but I will not cover .mp3 and .wav files. Note that this guide requires that you do not use #BGM, as these sound functions are in fact a replacement for #BGM in Stage scripts and Plural scripts.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: How do I Use Danmakufu's Audio Functions?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: How do I Use Danmakufu's Audio Functions?</h2>
 	      <p>To begin the lesson, I will explain the beginner-level audio functions that come prepackaged with Danmakufu. These <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Audio_Functions">Audio Functions</a> require little to no effort to use, and are easier to understand and utilize than Sound Objects. But of course, they have their limitations.</p>
 	      <p>Now, there are a number of Audio Functions. <code>LoadSound()</code> MUST be called prior to using <code>PlayBGM()</code> or <code>PlaySE</code>, as Danmakufu must load the audio files into memory. Additionally, LoadSound must be used in the same script as the Play functions. If you LoadSound in a System script, you cannot PlaySE with the same path in a Single script and expect the sound to play. You must load the files in the same script where you play them.</p>
 	      <p>Of course, looking at the function list, there is also a <code>RemoveSound()</code>. If you do use <code>LoadSound()</code>, please use <code>RemoveSound()</code> in @Finalize. Removing loaded sounds is one of the only  uses of @Finalize in ph3.</p>
 	      <p>There are two Play functions and one Stop function, and their usage should be clear from the documentation on the Wiki. You give a path to the loaded sound effect or bgm track, and for BGM, you also give loop points. Anyways, it's about time I elaborated on what is acceptable for a BGM track and what is acceptable for a Sound Effect.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: Which File Types Should I Use?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Which File Types Should I Use?</h2>
 	      <p>Most people don't really know any better when it comes to audio files. I mean, they all hold sound, right? Well, yes. But each file type has its own strengths and weaknesses.</p>
 	      <p>First, .mp3, which is undeniably the most popular way to share music due to its relatively small size, since it doesn't keep track of the parts of the music inaudible to most humans. In essence, it's meant for keeping audio tracks small. Unfortunately, it is not so great when looping. .mp3 tracks are used as BGM tracks but never for Sound Effects.</p>
 	      <p>Next is .wav, which is uncompressed. In other words, they are gigantic. Some scripters find it convenient to use .wav files as BGM. <strong>This is not acceptable.</strong> A 50 MB .wav can easily be exported to a 10 MB .ogg, saving the user a lot in download time and disk space. However, for sound effects, .wav files are the preferred option because they are very small in file size and high-quality.</p>
 	      <p>Then of course, there is OGG Vorbis. OGG Vorbis is Open Source and completely free, and works excellently as BGM in Danmakufu due to the support for looping. If you are going to loop your BGM, <strong>please do not open the track in Audacity and copy-paste the looped section 10 times or download a super extended version from Youtube.</strong> All you are doing is providing the player of your script with music files that are probably 5-10x as big as they should be. Simply export as .ogg using Audacity. Note that .ogg are rarely if ever used as Sound Effects. So don't use them for Sound Effects unless you're really trying to save space.</p>
 	      <p>In conclusion, use .ogg for BGM and .wav for Sound Effects.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: Why are .wav tracks not preferred for BGM?</div>
-	      <h2 style="color:yellow" id="sub4">Part 4: How do I Create Sound Objects?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I Create Sound Objects?</h2>
 	      <p>Now, I've already discussed the uses of Danmakufu's default audio functions. But what if you want to loop your tracks at a certain point? What if you want to control the volume? Now we're getting into Sound Object territory.</p>
 	      <p>First, let's begin by creating Sound Objects. The <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Sound_Object_Functions">Sound Object Functions</a> are pretty confusing for those who are unfamiliar with dealing with music, so we'll go through them.</p>
 	      <p>To create a Sound Object, we use <code>ObjSound_Create()</code>, which returns the ID of your sound object. A single sound object can be played multiple times.</p>
 	      <p>Once you have created a sound object, you must give it a file path to the sound you want it to play, whether it is a bgm or a sound effect. You use <code>ObjSound_Load(obj, filepath)</code> to load a given sound file to the object. You can override this by loading a different sound at any time. After this, it is recommended to use <code>ObjSound_SetSoundDivision()</code> to state whether your sound object refers to a BGM or a sound effect. This function is completely optional.</p>
 	      <p>Now of course, the goodies that I mentioned earlier, such as volume and looping. Let's take a look.</p>
-	      <h2 style="color:yellow" id="sub5">Part 5: How do I Use and Manipulate Sound Objects?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I Use and Manipulate Sound Objects?</h2>
 	      <p>First we will discuss how to play sound objects. You use <code>ObjSound_Play()</code>, <code>ObjSound_Stop()</code>, and <code>ObjSound_IsPlaying()</code> to control sound objects. <code>ObjSound_SetFade()</code> can be used to fade the sound rather than abruptly stopping it.</p>
 	      <p>If you want to play a sound object with a given volume, then use <code>ObjSound_SetVolumeRate()</code>. The volume goes from 0 to 100 linearly. It used to be exponential but this was changed. It is highly recommended that all your sound effects be around the same volume, as you will most likely want to use the same function for creating all of them. As for Pan Rate, controlled by <code>ObjSound_SetPanRate()</code>, you can control which earbud/side you want the sound to go to, with -100 being all to the left side and 100 to all on the right side. This is used in cases such as the warp sound effects in Subterranean Animism, where all of the sound effect goes to one ear and not the other. For most cases, you will never use this function, but it exists.</p>
 	      <p>Now it is time to talk about looping. Sound objects by default do not loop. You must use <code>ObjSound_SetLoopEnable()</code> to allow a track to loop. After this, there are two main methods for how to loop - by time, and by sample.</p>
@@ -80,7 +80,7 @@
 	      <p>To end this lesson, I will discuss restarting tracks using <code>ObjSound_SetRestartEnable()</code>. Easily the most frustrating function in the entire sound object section, it will, if set to true, restart the song from the very start if the sound object is stopped and restarted later. Otherwise the song will continue from where it left off when <code>ObjSound_Play()</code> is called. Combined with looping and stopping and playing and restarting, this function can be a royal pain to figure out, but it's quite useful if you need it. It is, however, an optional function. Don't use it unless you need it.</p>
 	      <p>For future reference, I will be providing a sound effect library for public use here: <a target="_blank" href="https://github.com/TheLandOfCodesAndApertures/Sparen_Sound_Library">Sparen's Sound Library</a>. I suggest that you look at the tasks used to create the sound objects, and perhaps use them as a reference when creating your own.</p>
 	      <div class="tut_exercise">EXERCISE: Implement your own sound object for bgm. Experiment with the various functions. What happens when you play two sound objects that are both set to bgm at the same time? SFX?</div>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Sounds in Danmakufu</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Sounds in Danmakufu</h2>
 	        <!--Quiz start.-->
 		<p>1) Junko wants her music to be as pure as possible. To ensure this, she wants her bgm to be recognized by Danmakufu as a BGM. How should she do this?</p>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 4);">
@@ -106,19 +106,19 @@
 	        C. The bgm is shorter than one minute and 25 seconds<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub6">Part 6: How Can I Use Audacity to Export to .ogg?</h2>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How Can I Use Audacity to Export to .ogg?</h2>
 	      <p>In this tutorial, I've mentioned Audacity a lot, but for good reason. It's a free piece of open-source software that has all kinds of audio manipulation features. You can add effects, new tracks, and all kinds of stuff, or you can simply use it for looping music or exporting between different file types.</p>
 	      <p>Since Audacity is a must-have for all Danmakufu scripter (and video game designers, to an extent), you should definitely get it and be familiar with how to use it. The official website is <a href="http://www.audacityteam.org" target="_blank">here</a> and you can download the software here as well.</p>
 	      <p>Anyways, I'll only go over exporting to .ogg here. First, open your .mp3/.wav/whatever sound file in Audacity. Then go to File -> Export Audio. Under file type, select OGG Vorbis. And then save! You're done.</p>
 	      <p>As stated previously, .ogg files are vastly better when you need to loop music tracks in Danmakufu, so Audacity is a helpful tool.</p>
 	      <p></p>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>You must Load a sound before it can be played.</li>
 	          <li>Different file types have different types and advantages - .ogg is best for BGM and .wav is best for Sound Effects</li>
 	          <li>Sound Objects can be customized to loop, have volume rates and pan rates, and more</li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -129,7 +129,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: May 03, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: May 03, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />

@@ -158,7 +158,7 @@ caption {
 }
 p, fieldset, table, pre {margin-bottom: 1em;}
 
-/*TUTORIAL ASSIST BY SPAREN*/
+/* ----- TUTORIAL ASSIST BY SPAREN ----- */
 .tut_exercise{
     background-color: #000080;
     color: #00FFCC;
@@ -174,6 +174,8 @@ p, fieldset, table, pre {margin-bottom: 1em;}
     padding: 2px;
 }
 
+/* ----- IMAGE ENHANCEMENT STYLING ----- */
+
 .pixelimg {
     image-rendering: -moz-crisp-edges;         /* Firefox */
     image-rendering:   -o-crisp-edges;         /* Opera */
@@ -182,7 +184,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
     -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 }
 
-/*MENUS BY SPAREN. PLACED AT BOTTOM IN ORDER TO OVERRIDE ALL DEFAULTS*/
+/* ----- MENUS BY SPAREN. PLACED AT BOTTOM IN ORDER TO OVERRIDE ALL DEFAULTS ----- */
 #menubar{/*Move and position the menubar.*/
   width: 154px;
   float: left;
@@ -308,10 +310,14 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   }
 }
 
+/* ----- Loading fonts ----- */
+
 @font-face{
   font-family: pmdfont;
   src: url(PKMN-Mystery-Dungeon.ttf);
 }
+
+/* ----- YOUTUBE EMBEDDED VIDEOS - Styling ----- */
 
 .ytembed{
   position: relative;
@@ -339,7 +345,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   height: 100%;
 }
 
-/*Today's Updates - Prettyfication*/
+/* ----- Today's Updates - Prettyfication ----- */
 .indexupdsp2015{
   border:2px solid; 
   border-radius: 5px; 
@@ -419,6 +425,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   padding: 5px;
 }
 
+/* ----- DIV STYLING FOR DEVLOGS ----- */
 .indexdevlogA{
   border:2px solid; 
   border-radius: 5px; 
@@ -430,7 +437,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   padding: 5px;
 }
 
-/*DNH Style Guide Help*/
+/* ----- DIV STYLING FOR VARIOUS SUBSITES ----- */
 .dnhstylediv{
   padding: 10px;
   border-style: solid;
@@ -444,4 +451,14 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   border-radius: 16px; 
   border-color: #7FFFD4;
   background-color: #001122;
+}
+
+/* ----- HEADER STYLING ----- */
+.ph3tutorialheader {
+  color: #FFEECC;
+  background-color: #226655;
+  border-width: 4px; 
+  border-color: #CCEEFF; 
+  border-style: none solid none solid; 
+  padding-left: 4px; 
 }

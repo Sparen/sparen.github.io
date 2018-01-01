@@ -42,18 +42,18 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss in great detail functions, subroutines, and function libraries. This lesson assumes that you have read and are familiar with the contents of <a href="./ph3u1l5.html">Lesson 5</a>. <a href="./ph3u2l15.html">Lesson 15</a> is also recommended reading.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: What are Functions?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Functions?</h2>
 	      <p>Back in Lesson 5, we introduced functions. In Danmakufu ph3, all functions have names - there are built-in functions and of course, user-defined functions. Built-in functions such as <code>GetCurrentScriptDirectory</code> are in CamelCase (PascalCase, to be exact). User defined functions can be literally anything that isn't a reserved keyword.</p>
 	      <p>Functions may take parameters - they're optional but may be useful depending on the usage of the function. Functions may also return values or simply return nothing. They are also executed in the main thread - the next chunk of code will not execute until the function has finished execution. However, since <code>yield;</code> is rarely used inside functions, this is not a major problem and will go unnoticed for the most part.</p>
 	      <p>As a reminder, in this tutorial (and in many other resources for general computer science), functions are addressed by functionname(), where the parentheses hold any parameters the function may have.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: What are the Differences between Functions, Tasks, and Subroutines?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What are the Differences between Functions, Tasks, and Subroutines?</h2>
 	      <p>We've gone over functions and tasks before, but we will now discuss tasks in the context of libraries. We will also have a brief introduction to subroutines, which are not generally useful until you begin larger scale projects.</p>
 	      <p>As stated in Lesson 5, tasks, or coroutines, are similar to functions except that they run in parallel to the @MainLoop(s) and each other. Tasks are good for organizing code by taking large chunks of code and labeling them with descriptive names, and they are useful in script flow and control. Tasks are used for a large variety of things, from timing sound effects to repeating code while the boss is alive, etc.</p>
 	      <p>Tasks cannot return values, and can be broken out of using return;, which will immediately stop execution of a task. Since they run in parallel (tasks run after @MainLoop has run due to the yield; in @MainLoop), they can access changing values with scope that is global with respect to the task, and can respond accordingly.</p>
 	      <p>And now we reach subroutines. Subroutines are created in a similar way to functions and tasks - you say <code>sub name {}</code> and voila. However, subroutines have a number of limitations - they cannot take parameters and, like functions, they run in series with the code block that called them, effectively making them functions with less power. However, their strength lies in code organization, as you can store commonly used code in subroutines to reduce code redundancy (though this is the same of tasks and functions).</p>
-	      <h2 style="color:yellow" id="sub4">Part 4: What are Function Libraries?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: What are Function Libraries?</h2>
 	      <p>So now that we have a brief understanding of functions, tasks, and subroutines, it's time that we looked at function libraries and #includes.</p>
 	      <p>Back in lesson 5 Part 7, we created our first function.</p>
 	      <pre class="prettyprint"><code>function wait(n){loop(n){yield;}}</code></pre>
@@ -78,7 +78,7 @@ function wait(n){
 	      <p>Congratulations! You have created and included your first function library!</p>
 	      <p>Note: tasks are often grouped together in libraries as well. Additionally, it is better to have more smaller functions/tasks that do simpler jobs than to have gigantic functions/tasks that do numerous things.</p>
 	      <div class="tut_exercise">EXERCISE: If you have yet to actually move general purpose functions such as wait() into a library, go and do it now.</div>
-	      <h2 style="color:yellow" id="sub5">Part 5: How Do I Use #include?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How Do I Use #include?</h2>
 	      <p>Most of the time, you will want to include multiple libraries in a single script. For example, you may have a cutin library for spellcard cutins. So now it's a good idea to elaborate on the peculiarities of #include.</p>
 	      <p>Firstly, pathing. When using #include, you move forwards and backwards in the file system using standard pathing notation, but you CANNOT use functions such as <code>GetCurrentScriptDirectory()</code> in the #include line - you use './' instead to point to the current directory. In the same way, to go back a directory, you use the standard '../'. So if boss_ns1.txt was located in a script directory in the same folder as lib, we would have used the following:</p>
 	      <pre class="prettyprint"><code>#include "./../lib/lib_general.dnh"</code></pre>
@@ -116,7 +116,7 @@ task BulletDeleteEffect(objparent){
 //In the Dialogue Library
 let pathReimu = GetCurrentScriptDirectory() ~ "../img/event_reimuhappy.png";</code></pre>
 	      <p>And that about covers the absolute basics for non-nested include statements.</p>
-	      <h2 style="color:yellow" id="sub6">Part 6: How do #include statements within #included files work?</h2>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do #include statements within #included files work?</h2>
 	      <p>Once you start building more and more libraries, it becomes more and more of a pain to manually include every file individually. Additionally, packages do not allow you to use certain object types and functions on those types are undefined. You will be forced to create separate libraries when you build larger projects, both to enhance readability (and to make it easier to find things) and to separate what is used where.</p>
 	      <p>One way to deal with all of these problems is to have certain function libraries #include other libraries as dependencies. However, this has its fair share of problems, which I will get into.</p>
 	      <p>What is a dependency, though? Simply put, it's a library that is required for other libraries to function. In other words, if a dialogue library requires GetCenterY(), and lib_general.dnh contains that function, lib_general.dnh can be considered a dependency of the dialogue library. Anyways, #including files in #included files.</p>
@@ -128,7 +128,7 @@ let pathReimu = GetCurrentScriptDirectory() ~ "../img/event_reimuhappy.png";</co
 	      <p>Using the above, you could include one file - fxn_include.dnh - in your scripts in place of all of the individual #include statements. This makes it easier to debug when something goes wrong, and makes dependencies much easier in that the order in which you #include in the file is equivalent to the loading order, just as before. By keeping it all in one place, adding a dependency won't require you to change the order of your #include statements in every single script you use them in.</p>
 	      <p>However, there are the disadvantages - firstly that you can't access any global variables from a twice #included file and secondly that you will still need to differentiate between libraries that are #included in packages and libraries that can be #included anywhere. Dependencies may become problematic in this case.</p>
 	      <p>Still, if you have many different libraries, having files specifically to #include other files is good for organization and, if all the functions and tasks in your libraries are self-sufficient in terms of variables, it should work smoothly.</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: #include</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: #include</h2>
 	        <!--Quiz start.-->
 		<p>1) Parsee is extremely jealous of Yamame's new function libraries, each of which contains parameterized tasks unique to specific ailments. Therefore, Parsee decides to take action and messes with something. Yamame returns the next day to find that although all the libraries are there and all the paths are correct, the program is pausing every time a new disease is called. What is the issue here?</p>
 	        <form method="POST" onSubmit="return checkAnswerA1(this, 'C');">
@@ -158,7 +158,7 @@ let pathReimu = GetCurrentScriptDirectory() ~ "../img/event_reimuhappy.png";</co
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
-	      <h2 style="color:yellow" id="sub7">Part 7: What is Documentation and Why Should (or Shouldn't) I Use It?</h2>
+	      <h2 class="ph3tutorialheader" id="sub7">Part 7: What is Documentation and Why Should (or Shouldn't) I Use It?</h2>
 	      <p>To close this lesson, I would like to give some brief notes on Documentation and why you should (or should not) use it. Documentation is basically a way of explaining what your code does, but not like with simple single-line comments. Documentation is a standard way of telling users of your code (including yourself) what your code does, what it returns, etc. The Danmakufu Wiki's function list contains Documentation of all the functions in the language and what they do. Of course, you will want local documentation within your libraries themselves.</p>
 	      <p>So why would you perhaps not want to use it? Well, if you want to render your code incomprehensible to everyone else (and perhaps yourself in the future), then not having documentation is fine. If you code is 'self-documenting' (i.e. the names of your functions explain what they do), that's... frowned upon but done all the time in actual programming.</p>
 	      <p>Anyways, having documentation is a good idea. So let's get some examples.</p>
@@ -206,7 +206,7 @@ function ObjMessageLog_Create(){
 	      <p>In this example, we once again have a block comment at the top with some basic information as well as another block comment describing dependencies. This is a custom render object class in Danmakufu, so it extends ObjSprite2D, and this information is clearly stated at top if the file.</p>
 	      <p>As for the first method, there is once again a description of what the function does, any possible parameters, and the return value.</p>
 	      <p>In the end, what kind of documentation you use does not really matter as long as it is consistent across a library and contains all the necessary information for someone to use your library without problems.</p>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>When a statement is called involving a function, the function will complete execution before the outer statement can continue.</li>
 	          <li>Libraries contain related functions and/or tasks in a single file</li>
@@ -216,7 +216,7 @@ function ObjMessageLog_Create(){
 	          <li>The order in which files are #included matters if one requires functions defined in the other</li>
 	          <li>Documentation can be used to describe what exactly a function or task does.</li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -227,7 +227,7 @@ function ObjMessageLog_Create(){
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Jun 11, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016-2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Jun 11, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2016-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <script type="text/javascript" src="javascript/U2L18Quiz1.js"></script>

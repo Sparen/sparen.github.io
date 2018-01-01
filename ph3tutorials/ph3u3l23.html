@@ -36,13 +36,13 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss Stage Scripts - in particular, how they function and how they can be  used.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: What are Stage Scripts?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Stage Scripts?</h2>
 	      <p>Stage Scripts are the main structural component of a full stage in Danmakufu. Just like Singles correspond to a single attack and Plurals correspond to a boss battle, Stages encompass various different components that make up a stage. In a Stage, you will load Plural scripts, handle creation of stage enemies, and handle stage banners, various graphical effects, and store commonly used events.</p>
               <p>Over the course of this unit, we will cover Common Data and its applications, @Event and how it can be used to run specific code from anywhere in your game, stage enemies and familiars, and the basic components of 3D backgrounds, user input, and player scripts.</p>
 	      <p>Stage scripts in Danmakufu are denoted by <code>#TouhouDanmakufu[Stage]</code> and contain the same basic components as other scripts we have seen. <strong>It is HIGHLY RECOMMENDED that you be familiar with all prior lessons before entering this unit.</strong> Stage scripts are extremely versatile and you can do practically anything in them. In fact, continue systems and the like heavily depend on stages. </p>
-	      <h2 style="color:yellow" id="sub3">Part 3: How do Stage Scripts work?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do Stage Scripts work?</h2>
 	      <p>Like any other script, Stages can be run in the standard manner, and they also have special code in packages for various stage control functionality. Like other scripts, they will run in parallel with the System, Background, loaded and registered plurals, and more.</p>
 	      <p>Stage scripts, in order to perform their tasks, will depend on task calls to run in parallel, control mechanisms to ensure that scripts are kept in sync, and careful use of functions and subroutines for appropriate blocking. In this brief lesson, we will observe the default ExRumia_Stage.txt that comes with ph3 [.1 pre6a].</p>
 	      <pre class="prettyprint linenums"><code>#東方弾幕風[Stage]
@@ -90,14 +90,14 @@ task TStage
     //ステージ終了
     CloseStgScene();
 }</code></pre>
-	      <h2 style="color:yellow" id="sub4">Part 4: How do I run a Plural Script from a Stage Script?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I run a Plural Script from a Stage Script?</h2>
 	      <p>We will begin by observing <code>@Initialize</code>, where a single task is called. This TStage task is the main task of the Stage script, and contains essentially everything we will need to run. The <code>@MainLoop</code> has a yield; as is standard to allow the TStage task to run. </p>
 	      <p>In TStage, we define a path to a Plural Script, then run <code>LoadScriptInThread()</code>. This loads the script (blocking, waits for the script to load before doing anything else), and returns the ID of the now-running script. This ID is important for NotifyEvent, which we will cover in a later lesson. </p>
 	      <p><code>StartScript()</code> is used to run the script with the given ID. Note that it doesn't particularly matter whether or not the script was a Plural script - any script can be run this way, hence the versatility of Stage scripts. Note that you can technically load and run scripts elsewhere but Packages, Stages, and System scripts are the three places where external scripts are typically run.</p>
 	      <p>After starting the other script, which runs in parallel, the stage scripts waits for two conditions - the player being alive and the plural script being open. Once either ceases to be true, the stage waits a bit and then closes - otherwise it stays open, waiting for the other conditions to be met. Both conditions are important - if there was no check for the plural being open or not, the stage would just close without waiting for the plural to complete. If the player death check is not present, if the player died in the plural the stage script would continue onwards.</p>
 	      <p>At the end of every stage, it will be necessary to <code>CloseStgScene</code>, which closes the stage formally. And with that, we have a simple stage.</p>
 	      <p>Now let's spice things up a bit, shall we?</p>
-	      <h2 style="color:yellow" id="sub5">Part 5: How do I play music in a Stage Script?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I play music in a Stage Script?</h2>
 	      <p>If you are not familiar with Danmakufu's sound functions, please refer to <a href="./ph3u2l15.html">Lesson 15</a> and refresh yourself.</p>
 	      <p>To begin, have a stage script prepared as well as two .ogg music bgm tracks. We will create a new function in our Stage Script as follows, similar to the CreateTrack task in Lesson 15:</p>
 	      <pre class="prettyprint linenums"><code>function StageBGM(obj, ID){
@@ -153,7 +153,7 @@ task TStage
 	ObjSound_Play(bgm2);
         //Handle starting boss plural script</code></pre>
 	      <p>And that's all!</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Stage Scripts</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Stage Scripts</h2>
 	        <!--Quiz start.-->
 		<p>1) Keine has a script that does not seem to work correctly. The plural starts, and then the player beats the boss. However, the stage never progresses? What could the problem be?</p>
 	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
@@ -175,13 +175,13 @@ task TStage
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>Stage Scripts can load Plural Scripts with <code>LoadScriptInThread()</code> and run them with <code>StartScript()</code></li>
 	          <li>Stage Scripts are closed using <code>CloseStgScene()</code></li>
 	          <li>Stage Scripts can be used to handle graphical effects and music for stages and bosses</li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -192,7 +192,7 @@ task TStage
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: June 23, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: June 23, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2017-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <script type="text/javascript" src="javascript/U3L23Quiz1.js"></script>

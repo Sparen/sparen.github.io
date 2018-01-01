@@ -40,10 +40,10 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss how to make single scripts plural-friendly. I will cover TFinalize in greater detail, as well as how Object Autodeletion impacts a script. (0,0) spawning and how to prevent it are major topics in this lesson. Additional miscellaneous topics will also be covered. <strong>This lesson assumes that you are familiar with the contents of Lessons 3-8 and <a href="./ph3u2l12.html">Lesson 12</a>. If you are not familiar with these, please review them.</strong></p>
 	      <p>The tl;dr of this entire lesson is <strong>do not spawn objects using the position of deleted objects</strong>.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: Why Upgrade Single Scripts?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: Why Upgrade Single Scripts?</h2>
 	      <p>So far, most of my code examples (exception being in <a href="./ph3u1l6.html">Lesson 6</a>) have been written in such a way that assumes they were mere singles, not linked into boss battles. And so, we have, for the most part, been writing code in such a way where, theoretically, bullets can spawn after the conclusion of the single. We will, in this lesson, tackle this problem.</p>
 	      <p>To highlight this problem, let's consider the TFinalize from <a href="./ph3u1l7code2.html">Lesson 7</a>. Note that this version does not have the spellcard bonus implemented.</p>
 	      <pre class="prettyprint linenums"><code>task TFinalize{
@@ -67,7 +67,7 @@
 	      <p>Now, let's conjure a scenario. Suddenly, the boss just died. In Spawn, i is now equal to 3, and we are in an ascent loop. One frame later, the boss object no longer exists, and all objects created in the script, including all shots on the screen and all delay clouds, are deleted.</p>
 	      <p>However, the task is still running. i is equal to 4. A bullet spawns as the next single in the plural starts. However, objBoss no longer exists. So the bullet spawns at (0,0), in the top left of the screen.</p>
 	      <p>Admittedly, this scenario becomes more likely if you have as much as a single yield in TFinalize. But now we're going to see what exactly we can do to prevent (0,0) spawning.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Prevent (0,0) Spawning?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How Do I Prevent (0,0) Spawning?</h2>
 	      <p>Since (0,0) spawning is caused by positioning objects relative to other objects that no longer exist, we can work appropriately to prevent it. In the above case, we had no way to prevent (0,0) spawning - it would simply occur occasionally. But now we will go over how to stop it.</p>
 	      <p>In Lesson 6, I introduced the following line of code:</p>
 	      <pre class="prettyprint"><code>if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){return;}
@@ -162,14 +162,14 @@ task Surround(parentobj, id) {
     ObjMove_SetAngle(obj, rand(0, 360));
     ObjShot_SetAutoDelete(obj, true);
 }</code></pre>
-	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Use SetAutoDeleteObject()?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How Do I Use SetAutoDeleteObject()?</h2>
 	      <p>Now we will have a brief discussion on <code>SetAutoDeleteObject()</code></p>
 	      <p>As has been stated before, calling this function with the value true will toggle object deletion upon closure of the script it was called in. For instance, let's say I have a Cutin function that has both graphical and text components. The text, at the very least, must stay until the end of the Single. As a result, we can choose to delete it manually when the boss's HP has dropped below 0. However, this condition assumes that there is a boss to begin with, and hardcoding the case results in the function being useless in any other situation.</p>
 	      <p>The standard (not the default), is to use <code>SetAutoDeleteObject(true)</code> before you close a script. It can be used in any form of script and is commonly used in all standard scripts (we will discuss its usage or the lack thereof in packages in a much later tutorial). By default, <code>SetAutoDeleteObject()</code> is set to false.</p>
 	      <p>By using this function, the graphics and text created by the Cutin function will automatically delete at the termination of the parent script, removing any need to manually delete them and allowing the function to be used in any script that uses <code>SetAutoDeleteObject(true)</code>. This is a great boon in function libraries, which will be discussed in a few tutorials.</p>
 	      <p>We will discuss objects that must persist after a Single script has terminated in later tutorials, specifically when we discuss NotifyEvent and Items.</p>
 	      <p>In the end, by using this function in conjunction with various other means of preventing (0,0) spawning, you can improve the stability of your script while also making sure that all objects are properly deleted when they are no longer needed.</p>
-	      <h2 style="color:yellow" id="sub5">Part 5: What Other Methods Can I Use?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: What Other Methods Can I Use?</h2>
 	      <p>In this guide (and for the entire tutorial sequence as a whole), we have assumed that you are using a TFinalize task. However, it is possible to use @MainLoop to handle the same functionality. You can use the following at the end of @MainLoop instead of TFinalize:</p>
 	      <pre class="prettyprint"><code>if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0){
     Obj_Delete(objBoss);
@@ -182,7 +182,7 @@ task Surround(parentobj, id) {
 //instead of simply using
 yield;</code></pre>
 	      <p>Since preventing the yield; in @MainLoop will prevent tasks for running, you can effectively shut down all object creation as long as all of your objects are created in tasks. Note, however, that since tasks will not resume, no tasks will update at all in that particular script, and if you want explosion effects or other effects, you will have to handle them using NotifyEvent or separate Single scripts.</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Preventing (0,0) spawning</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Preventing (0,0) spawning</h2>
 	        <!--Quiz start.-->
 		<p>1) Add necessary additions to the following code to prevent the 'wave' sound effect from playing if the bullet is is timed with does not exist.</p>
 		<p>Hit 'Show' to show possible answers.</p>
@@ -268,14 +268,14 @@ task BulletCommands(obj, dir) {
 		<div class="spoiler"><div>
 		<p>SetAutoDeleteObject was either not set or was set to false, and the cutin function did not handle deletion of the cutin graphics and text. SetAutoDeleteObject should be set to true in the script for a local but adaptable solution, or the cutin should handle deletion for a global but specific solution.</p>
 	        </div></div>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>Make sure that objects are never created at the location of a deleted object</li>
 	          <li>Delete your unneeded objects at the end of a script</li>
 	          <li>Avoid spawning bullets from nonexistent or deleted enemies</li>
 	          <li>Terminate tasks early using <code>return;</code></li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -286,7 +286,7 @@ task BulletCommands(obj, dir) {
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: July 25, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2017 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: July 25, 2017</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />

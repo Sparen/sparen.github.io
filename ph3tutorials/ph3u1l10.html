@@ -46,15 +46,15 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will be explaining angular velocity, as well as curved lasers. I will cover how curved lasers are rendered and how their hitboxes work, as well as the tip decrement function. Additionally, I will discuss angular velocity when used on loose lasers and bullets, as well as various uses of ObjMove_AddPattern and how to use *-1 for alternating patterns. I will also cover passing alternating direction multipliers into tasks to have angles increment in the opposite direction. <strong>It is highly recommended that you have read Lessons 8 and 9 before beginning this lesson</strong>.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: What is Angular Velocity?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What is Angular Velocity?</h2>
 	      <p>Remember back in <a href="./ph3u1l8.html">Lesson 8</a> when I explained Angular Velocity? Well now I will be going in-depth on angular velocity. First and foremost, what is angular velocity?</p>
 	      <p>Angular velocity is the change in angle per unit time. For example, a bullet with angular velocity 5 would turn 120 degrees in 24 frames, and would make a complete rotation back to its starting point in 72 frames. Angular velocity has a number of uses, of which the most common are temporary curving of bullets and curved lasers (which are the highlight of this lesson but not the most important part).</p>
 	      <p>You can use Danmakufu's built-in Angular Velocity for shot graphics via shotsheets (as stated in Lesson 8) and on move objects. The former only rotates the graphic while the latter changes the path a moving object takes. We will only focus on the latter in this lesson.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: How Do I Manipulate Angular Velocity?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How Do I Manipulate Angular Velocity?</h2>
 	      <p>By default, there are no functions that automatically create an object with angular velocity. To assign angular velocity to an object, you must use <code>ObjMove_SetAngularVelocity(obj, num);</code> or ObjMove_AddPattern (A2-A4). The former is very good for assigning to an object immediately while the latter is good for giving an object angular velocity (or removing it) at a certain time. We will go over <code>ObjMove_SetAngularVelocity()</code> first, as it is the simpler of the functions and has a variety of uses for lasers as well as bullets. Remember to assign a variable to your shot's ID so that you can use functions to obtain and modify its properties.</p>
-	      <h2 style="color:yellow" id="sub4">Part 4: How Do I Create and Use Curved Lasers?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How Do I Create and Use Curved Lasers?</h2>
 	      <p>Curvy lasers are the bane of a danmaku dodger's existence. They do strange movements, are hard to predict, and oftentimes barely dodge you or smash right into you. They are also expensive for the computer's processor although they can be extremely beautiful and make for excellent danmaku when used correctly.</p>
 	      <p>Like with other shot functions, we can use the following to create a curved laser and assign it an ID:</p>
 	      <pre class="prettyprint"><code>    let objLaser = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, GetAngleToPlayer(objBoss),
@@ -63,7 +63,7 @@
 	      <p>You may be wondering how curved lasers are rendered, as the length changes depending on speed. We will go over this later in the lesson.</p>
 	      <p>Generally speaking, when using curved lasers, you don't use them alone. Usually, they are paired, in waves, or in rings. Oftentimes, entire patterns will be based on curved lasers. However, be aware that you need to do a few tweaks to curved lasers for them to work well.</p>
 	      <div class="tut_exercise">EXERCISE: Experiment with Angular Velocity on Loose Lasers. Then try it on Curved Lasers. What is the difference?</div>
-	      <h2 style="color:yellow" id="sub5">Part 5: What are the Functions for Manipulating Curved Lasers?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: What are the Functions for Manipulating Curved Lasers?</h2>
 	      <p>Regarding functions for curved lasers, there aren't actually that many specifically for curved lasers. Most of the time, you will use general ObjMove functions for curved lasers. However, there is one of great significance: <code>ObjCrLaser_SetTipDecrement(obj, val);</code></p>
 	      <p>This function sets transparency reduction of curved laser tips. If not set to 0, the tip of a curved laser will be invisible, and with narrow curved lasers, you can and will cheapshot players. They won't see the tip of the curved laser because it is invisible, and will die. This function was added after the Danmakufu community requested it, and it is a godsend that all who use Danmakufu's built-in curved lasers are expected to use.</p>
 	      <p>The default is 1, where the tip is not visible at all, and the function allows a range from 0 (no fading) to 1 (full fading). The value is a percentage, so 0.5 will have 50% fading of the laser tips.</p>
@@ -71,12 +71,12 @@
         60, 18, 1018, 10);
     ObjCrLaser_SetTipDecrement(objLaser, 1); //make the tip of the laser visible</code></pre>
 	      <div class="tut_exercise">EXERCISE: Experiment with ObjCrLaser_SetTipDecrement. What effect does it have on how curved lasers are displayed?</div>
-	      <h2 style="color:yellow" id="sub6">Part 6: Why Does Using Curved Lasers Lag So Much?</h2>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: Why Does Using Curved Lasers Lag So Much?</h2>
 	      <p>It's the question you've all been asking - why is there so much lag when using curved lasers?</p>
 	      <p>Aside from the ridiculous amount of ADD rendering, the answer lies in the hitbox. So far, we have learned about linear and radial hitboxes. However, a curved laser's hitbox is of a certain width but is not straight or in a circle. As a result, Danmakufu takes each individual piece of the curved laser (based on length) and assigns a hitbox to each part. if the length is 96, there will be 96 collision checks on that laser, the equivalent of 96 bullets for that one laser. The longer the base length of the curved laser, the more expensive it is to calculate its hitbox and render the graphic.</p>
 	      <p>The obvious solution now is to decrease the length of the curved laser. However, to do this means shortening the laser itself. To have a longer laser with a small base length, increase the speed of the laser. Of course, don't go too overboard with this or the laser will be too fast to dodge.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How is the hitbox of a curved laser different from that of a loose laser?</div>
-	      <h2 style="color:yellow" id="sub7">Part 7: How Can I Use Acceleration With Angular Velocity?</h2>
+	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How Can I Use Acceleration With Angular Velocity?</h2>
 	      <p>One of the features of curvy lasers is their ability to not only curve, but also accelerate and change speeds. By giving them acceleration, they will expand and contract. When combined with angular velocity, this allows the curvy lasers to twist and turn with varying speeds.</p>
 	      <p>When you have a curvy laser that has no acceleration and a non-zero angular velocity, it will loop back to its starting point due to the nature of angular velocity. By providing a non-zero acceleration, this will no longer occur. The simplest way to do this is to use <code>ObjMove_AddPatternA2</code>, which allows you to change both angular velocity, max speed, and speed at the same time. Alternatively, you can set Max Speed, Acceleration, and Angular Velocity separately. For example, look at the below code:</p>
 	      <pre class="prettyprint"><code>    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, GetAngleToPlayer(objBoss),
@@ -86,7 +86,7 @@
     ObjMove_AddPatternA2(obj, 120, NO_CHANGE, NO_CHANGE, 0.2, -0.2, 4);</code></pre>
 	      <p>In this code, we first set angular velocity, and then at 60 frames, turn it off and have the laser start decelerating, which will compress it. Finally, at 120 frames, we turn on acceleration again and give it a slight angular velocity as it leaves the screen. This is but one example of how you can use acceleration in conjunction with curvy lasers.</p>
 	      <div class="tut_exercise">EXERCISE: Experiment with acceleration and angular velocity when using curved lasers. What do you notice about lasers that return from offscreen?</div>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Angular Velocity and Curved Lasers</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Angular Velocity and Curved Lasers</h2>
 	        <!--Quiz start.-->
 		<p>1) How many frames does it take for a curvy laser with angular velocity 2 to make a full 360 degree rotation back to its starting point?</p>
 	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', 2);">
@@ -113,7 +113,7 @@
 	        C. Wrong Pagoda - find a new one<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub8">Part 8: How Can I Create Curving Bullet Lines?</h2>
+	      <h2 class="ph3tutorialheader" id="sub8">Part 8: How Can I Create Curving Bullet Lines?</h2>
 	      <p>We now leave the land of Shou and Seiga and now enter the land of Tewi.</p>
 	      <p>Fundamentally, lines of bullets that all do the same thing are what curvy lasers are, albeit in a significantly less precise way. Think about it this way - if a curvy laser is just a lot of hitboxes with a stretched graphic, then wouldn't a long string of bullets (with hitboxes) be the same? The answer is yes, and as a result, we can approach them the same way.</p>
 	      <p>To create curving bullet lines (which, btw, are significantly less lag-inducing than curvy lasers), you just need to keep the bullet's actions the same, preferably via a BulletCommands task or by giving them all the same code. The only change is when they are spawned. So there are two ways to do this, really. The first is using delay and the second is by using yield; The first method is shown below. <strong>Note that ObjMove_AddPatternA2 should be used on bullets created with CreateShotA2 and that using it on shots made with CreateShotA1 may have unwanted consequences</strong>.</p>
@@ -147,7 +147,7 @@
     }</code></pre>
 	      <p>Note that now we are storing the x, y, and angle variables in exchange for a constant delay time (which has its benefits, of course). This must be done in case the boss moves. If the spawning position and angle change *at all*, the bullets will no longer be a string, and their movement will change based on their new position and angle. Just be aware of this if you decide that you want to use this method.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: Why do we store the position and angle of the boss outside of the loop?</div>
-	      <h2 style="color:yellow" id="sub9">Part 9: How Do I Create Snaking Lasers and Bullet Lines?</h2>
+	      <h2 class="ph3tutorialheader" id="sub9">Part 9: How Do I Create Snaking Lasers and Bullet Lines?</h2>
 	      <p>Now we will discuss snake lasers and snaking bullet lines.</p>
 	      <p>First thing's first - what exactly are we doing? Well, we are going to create a laser/bullet string that changes its angular velocity every set number of frames to -1 * its original value. This creates a snaking bullet string, which has its applications.</p>
 	      <p>To do this, we will want to use ObjMove_AddPattern with a variable, which I will name wvel (for omega, angular velocity).</p>
@@ -165,7 +165,7 @@
 	      <p>Above, I have set it up so that every 30 frames, the angular velocity will be set to -1 * its value at the time. This will control the snaking.</p>
 	      <p>But what if the snaking bullet stream stops snaking halfway down the screen like I mentioned earlier? Simply change the 12 to a higher number! If you were to not use an ascent loop and decided to manually add ObjMove_AddPattern copy-pasted like 12 times with different values, you would need to copy-paste again and then test, repeat.</p>
 	      <p>The process above will work for both curvy lasers and bullet strings. However, be sure that your attack is fair, and that you aren't running the ascent loop way more than you need to - otherwise, your script may lag. If your laser only changes the direction of its angular velocity 4 times, you don't need to ascent(i in 0..30) - just do ascent(i in 0..4) or something similar.</p>
-	      <h2 style="color:yellow" id="sub10">Part 10: What are the Uses of Passing Direction Multipliers Into Tasks?</h2>
+	      <h2 class="ph3tutorialheader" id="sub10">Part 10: What are the Uses of Passing Direction Multipliers Into Tasks?</h2>
 	      <p>I will close this lesson with another automation technique - passing directions into tasks.</p>
 	      <p>Let's say we have our SnakePattern task from Part 9. Now, it always starts with wvel = 1 every time it is run. But what if we want it to start curving in the opposite direction at the start instead? We could always copy the task, and do some slight changes. However, it is far more effective to pass a direction multiplier into the task.</p>
 	      <p>Let's say that this is the code that calls SnakePattern. Please note that this example uses curvy lasers and not bullet strings.</p>
@@ -199,7 +199,7 @@
 	}
     }</code></pre>
 	      <p>So what did we do? We set up SnakePattern so that it takes a direction parameter (which can also be used as a multiplier, should we want an angular velocity of -2.3 or something). Now, instead of duplicating the task with a different number, we have allowed our code to run more effectively, and by calling SnakePattern with -1 and 1 in the task CreateLaserRing, we achieve our desired effect.</p>
-	      <h2 style="color:yellow" id="quiz2">Quiz: Snaking Paths and Direction Multipliers</h2>
+	      <h2 class="ph3tutorialheader" id="quiz2">Quiz: Snaking Paths and Direction Multipliers</h2>
 	        <!--Quiz start.-->
 	      <pre class="prettyprint linenums"><code>
     task SnakePattern(obj, dir){
@@ -232,14 +232,14 @@
 	        C. 0<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>Angular Velocity can be manipulated using <code>ObjMove_SetAngularVelocity</code> and the ObjMove_AddPattern functions</li>
 	          <li>Curved Lasers do not have angular velocity by default</li>
 	          <li>Curved Lasers by default render with tips faded out</li>
 	          <li>You can multiply a variable by *-1 in an ascent or descent loop to change the alternate directions of bullets and/or lasers</li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -250,7 +250,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2016 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
+        <p style="text-align: center;">Last Update to Page: Oct 18, 2015</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2014-2018 by Andrew Fan</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <script type="text/javascript" src="javascript/U1L10Quiz1.js"></script>

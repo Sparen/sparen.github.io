@@ -39,13 +39,13 @@
 	          <li><a href="#quiz1">Examen: Ejecutando Danmakufu</a></li>
 	          <li><a href="#subf">Fuentes y recursos externos</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Parte 1: ¿Cómo abro Danmakufu?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Parte 1: ¿Cómo abro Danmakufu?</h2>
 	      <p>Empezaremos esta lección explicando cómo ejecutar Danmakufu. Para el ph3 (versiones más nuevas que la [.1 pre2]) simplemente doble clic en el ejecutable (th_dnh.exe). Para versiones más viejas, necesitas usar la configuración regional en japonés (Locale) para abrir Danmakufu o no funcionará correctamente (el 0.12m directamente tira error, el ph3 no cargará ninguno de los scripts). Sin embargo, hay muchos recursos en Rika and Nitori's Garage Experiments (RaNGE), así que saltearé esto.</p>
 	      <p>Si estás usando Wine en MacOSX o Linux para ejecutar programas de Windows, usa lo siguiente:</p>
 	      <pre class="prettyprint"><code>LANG="ja_JP" wine th_dnh.exe</code></pre>
 	      <p>Esto lo ejecutará con la configuración regional en japonés (el equivalente a usar AppLocale en Windows).</p>
 	      <p>En la carpeta de Danmakufu también está el DnhViewer.exe. Es parecido al ejecutable principal pero con algunas herramientas de depuración (como la "I" para invencibilidad). Personalmente nunca lo uso, pero queda en ti usarlo o no. También hay un config.exe para opciones de configuración. Su uso principal es activar la ventana de registro (Log Window), aunque esto será explicado en un tutorial mucho más adelante.</p>
-	      <h2 style="color:yellow" id="sub2">Parte 2: ¿Cómo navego por los menús de Danmakufu?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Parte 2: ¿Cómo navego por los menús de Danmakufu?</h2>
 	      <p>Danmakufu abre mostrando en su título la versión que está siendo utilizada. Hay siete opciones en el ph3 y un contador de FPS (frames per second/cuadros por segundo) abajo a la derecha – Este contador de FPS es muy importante, así que por favor préstale atención mientras estés programando. No importa mucho en el menú, pero una vez en el juego, es importante medir qué tan eficientemente corre tu script.</p>
 	      <p>Las opciones en el menú principal de Danmakufu son:</p>
 	      <ul>
@@ -62,7 +62,7 @@
 	      <p>Si estás en Directory, arriba habrá una ruta a la carpeta en la que estás actualmente, y podrás seleccionar un directorio para entrar. Ten en cuenta que solo se mostrarán los scripts reconocidos como ejecutables azules por Danmakufu.</p>
 	      <p>Luego de seleccionar "Play", serás llevado a un menú de selección de personaje. ¡Selecciona uno y listo!</p>
 	      <p>Ten en cuenta que si agregas un archivo a la carpeta de algún script, Danmakufu lo cargará una vez que vuelvas a entrar al directorio. Sin embargo, si sacas un script de la carpeta "player" después de abrir Danmakufu, la opción para elegir dicho jugador todavía estará ahí, y causará un error si lo seleccionas (verificado en el ph3[.1 pre4a]). Por lo que para actualizar la lista de jugadores, tendrás que cerrar y volver a abrir Danmakufu.</p>
-	      <h2 style="color:yellow" id="sub3">Parte 3: ¿Cómo juego scripts en Danmakufu?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Parte 3: ¿Cómo juego scripts en Danmakufu?</h2>
 	      <p>En Danmakufu, como en Touhou, puedes disparar, usar bombas, focus y pausar, entre otras cosas. Sin embargo, el ph3 le permite a los scripters agregar teclas virtuales personalizadas (custom virtual keys) y hay dos teclas definidas para el usuario, C y V. Las teclas más usadas son:</p>
 	      <ul>
 	          <li>Z: Presiona para disparar (si se puede) y seleccionar</li>
@@ -72,7 +72,7 @@
 	          <li>Esc: Presiona para pausar</li>
 	      </ul>
 	      <p>Ten en cuenta que en menús personalizados como aquellos hechos en packages, es posible que un scripter asigne teclas completamente diferentes para seleccionar, cancelar, etcétera. Sin embargo, las teclas default son Z para seleccionar y X para cancelar.</p>
-	      <h2 style="color:yellow" id="quiz1">Examen: Ejecutando Danmakufu</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Examen: Ejecutando Danmakufu</h2>
 	        <!--Quiz start.-->
 		<p>Remilia quiere jugar un script de Danmakufu. Sin embargo, ella solo conoce el nombre de la carpeta – "MeowMeowVampire" y tiene al menos 60 carpetas en su carpeta de scripts. ¿Qué opción debería elegir para encontrar el script que quiere?</p>
 	        <form method="POST" onSubmit="return checkAnswerESP(this, 'C');">
@@ -84,7 +84,7 @@
 	        C. Directory<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="subf">Fuentes y recursos externos</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Fuentes y recursos externos</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=xOr8ZJLSlW4" title="Sparen's Video Tutorial on using Wine">[5] Touhou Danmakufu ph3 Tutorial - Using Wine to Run Touhou Games </a> (Sparen)<br>--&gt;Mi tutorial visual para jugar Touhou Danmakufu en MacOSX usando Wine</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
@@ -95,7 +95,7 @@
 	    </ul>
 	    <br>
           </div>        </div>      </div>      <footer>
-        <p style="text-align: center;">Última actualización de la página: May 03, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015-2016 by Andrew Fan</p>
+        <p style="text-align: center;">Última actualización de la página: May 03, 2016</p>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015-2018 by Andrew Fan</p>
         <p style="text-align: center;">Esta página fue traducido por Paty y Andrew Fan.</p>        <p style="text-align: center;"><span style="font-weight: bold;">Other            Sites/Affiliates</span></p>        <div style="text-align: center;">          <a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img	      alt="&quot;Maidens of the Kaleidoscope&quot;"	      src="../images/afflogomotk.png"></a>          <a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;"	      src="../images/afflogobulletforge.png"></a>        </div>      </footer>    </div>
     <script type="text/javascript" src="javascript/U1L2Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
