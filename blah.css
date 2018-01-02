@@ -455,12 +455,22 @@ p, fieldset, table, pre {margin-bottom: 1em;}
 
 /* ----- HEADER STYLING ----- */
 
-/* ph3tutorialheader: replaces boring yellow text h2s sitewide */
+/* ph3tutorialheader: replaces boring yellow text h2s on top level pages and in the ph3 tutorials section */
 .ph3tutorialheader {
   color: #FFEECC;
   background-color: #226655;
   border-width: 4px; 
   border-color: #CCEEFF; 
+  border-style: none solid none solid; 
+  padding-left: 4px; 
+}
+
+/* projectheader: replaces boring yellow text h2s in the projects section (AKA only the projects page since everything else uses custom headers) */
+.projectheader {
+  color: #EEFFCC;
+  background-color: #226655;
+  border-width: 4px; 
+  border-color: #CCFFEE; 
   border-style: none solid none solid; 
   padding-left: 4px; 
 }
