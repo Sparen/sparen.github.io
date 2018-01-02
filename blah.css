@@ -467,6 +467,16 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   padding-left: 5px; 
 }
 
+/* toplevelheaderb: replaces ordinary code color text h1s */
+.toplevelheaderb {
+  color: rgb(59,248,80);
+  background-color: #115544;
+  border-width: 6px; 
+  border-color: rgb(59,248,80); 
+  border-style: none double none double; 
+  padding-left: 5px; 
+}
+
 /* ph3tutorialheader: replaces boring yellow text h2s on top level pages and in the ph3 tutorials section */
 .ph3tutorialheader {
   color: #FFEECC;
