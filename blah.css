@@ -161,17 +161,19 @@ p, fieldset, table, pre {margin-bottom: 1em;}
 /* ----- TUTORIAL ASSIST BY SPAREN ----- */
 .tut_exercise{
     background-color: #000080;
-    color: #00FFCC;
+    color: #66FFEE;
+    border-color: #00FFCC;
     border-style: double;
-    border-width: 1px;
-    padding: 2px;
+    border-width: 3px;
+    padding: 4px;
 }
 .tut_checkpoint{
     background-color: #400000;
-    color: #FF99FF;
+    color: #FFBBFF;
+    border-color: #FF99FF;
     border-style: double;
-    border-width: 1px;
-    padding: 2px;
+    border-width: 3px;
+    padding: 4px;
 }
 
 /* ----- IMAGE ENHANCEMENT STYLING ----- */
