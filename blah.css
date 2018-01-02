@@ -457,6 +457,16 @@ p, fieldset, table, pre {margin-bottom: 1em;}
 
 /* ----- HEADER STYLING ----- */
 
+/* toplevelheadera: replaces boring orange text h1s */
+.toplevelheadera {
+  color: #FFDDBB;
+  background-color: #995511;
+  border-width: 6px; 
+  border-color: #FFCCAA; 
+  border-style: none none none solid; 
+  padding-left: 5px; 
+}
+
 /* ph3tutorialheader: replaces boring yellow text h2s on top level pages and in the ph3 tutorials section */
 .ph3tutorialheader {
   color: #FFEECC;
