@@ -454,6 +454,8 @@ p, fieldset, table, pre {margin-bottom: 1em;}
 }
 
 /* ----- HEADER STYLING ----- */
+
+/* ph3tutorialheader: replaces boring yellow text h2s sitewide */
 .ph3tutorialheader {
   color: #FFEECC;
   background-color: #226655;
