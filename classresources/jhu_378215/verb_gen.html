@@ -1,189 +1,0 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - AS.378.215-216 - Verb Particles</title>    <link rel="stylesheet" type="text/css" href="../../blah.css">    <meta content="AFCDTech - AS.378.215-216 - Verb Particles for Second Year Japanese"      name="description">
-    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Project, Script">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-58194930-1', 'auto');
-    ga('send', 'pageview');
-  </script>  </head>  <body id="mhome">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
-        <ul>
-          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Home</a></li>
-          <li><a class="mclassresources" href="../index.html">Class Resources</a></li>
-          <li><a href="./../jhu_378116/index.html">AS.378.116</a></li>
-          <li><a href="./index.html">AS.378.215-216</a></li>
-        </ul>
-      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div class="yui-g">	      <h1 style="color:rgb(59,248,80)">Verb Particles</h1>	      <p>Here you will find automatically generated questions in quiz format. Please select the correct particle.</p>
-	      <p>You may want to consider zooming in if you cannot read the furigana/ruby on top of the kanji. If you see words you are not familiar with, please use Google Translate or some other software - limiting direct objects based off of the lesson of the verb makes writing the software significantly more complicated than it needs to be for basic functionality.</p>
-	      <p>If you find errors, a grammatically/situationally incorrect sentence, or a sentence that is downright insulting, please inform me via text, Facebook, or e-mail. The random nature of the program means that strange and unusual combinations of words may appear. Chances are that I will have forgotten a scenario in which case a certain particle is acceptable/not acceptable. Additionally, some verbs do not take direct objects, so particles have been set despite them not always being required.</p>
-	      <p>This program is Open Source but it is highly recommended that you not copy or reuse the code here, as it was written in an extremely haphazard way.</p>
-	        <h2 style="color:aqua">Verb Selection</h2>
-		  <input type="checkbox" value="Check All" onclick="qc_checkAll(this.checked)"> Check All<br>
-		<table style="width:100%"><tr><td>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz3_master" onclick="qc_checkL3(this.checked)"> Check L3<br>
-		  <input type="checkbox" name="verb" id="quiz3_iku" defaultChecked="false"> L3 - <ruby lang="ja"><rb>行</rb><rp>(</rp><rt>い</rt><rp>)</rp></ruby>く<br>
-		  <input type="checkbox" name="verb" id="quiz3_kaeru" defaultChecked="false"> L3 - <ruby lang="ja"><rb>帰</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz3_kiku" defaultChecked="false"> L3 - <ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>く<br>
-		  <input type="checkbox" name="verb" id="quiz3_nomu" defaultChecked="false"> L3 - <ruby lang="ja"><rb>飲</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>む<br>
-		  <input type="checkbox" name="verb" id="quiz3_hanasu" defaultChecked="false"> L3 - <ruby lang="ja"><rb>話</rb><rp>(</rp><rt>はな</rt><rp>)</rp></ruby>す<br>
-		  <input type="checkbox" name="verb" id="quiz3_yomu" defaultChecked="false"> L3 - <ruby lang="ja"><rb>読</rb><rp>(</rp><rt>よ</rt><rp>)</rp></ruby>む<br>
-		  <input type="checkbox" name="verb" id="quiz3_okiru" defaultChecked="false"> L3 - <ruby lang="ja"><rb>起</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>きる<br>
-		  <input type="checkbox" name="verb" id="quiz3_taberu" defaultChecked="false"> L3 - <ruby lang="ja"><rb>食</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>べる<br>
-		  <input type="checkbox" name="verb" id="quiz3_neru" defaultChecked="false"> L3 - <ruby lang="ja"><rb>寝</rb><rp>(</rp><rt>ね</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz3_miru" defaultChecked="false"> L3 - <ruby lang="ja"><rb>見</rb><rp>(</rp><rt>み</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz3_kuru" defaultChecked="false"> L3 - <ruby lang="ja"><rb>来</rb><rp>(</rp><rt>く</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz3_suru" defaultChecked="false"> L3 - する<br>
-		  <input type="checkbox" name="verb" id="quiz3_benkyousuru" defaultChecked="false"> L3 - <ruby lang="ja"><rb>勉強</rb><rp>(</rp><rt>べんきょう</rt><rp>)</rp></ruby>する<br>
-		  </p>
-		</td><td>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz4_master" onclick="qc_checkL4(this.checked)"> Check L4<br>
-		  <input type="checkbox" name="verb" id="quiz4_au" defaultChecked="false"> L4 - <ruby lang="ja"><rb>会</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>う<br>
-		  <input type="checkbox" name="verb" id="quiz4_aru" defaultChecked="false"> L4 - ある<br>
-		  <input type="checkbox" name="verb" id="quiz4_kau" defaultChecked="false"> L4 - <ruby lang="ja"><rb>買</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>う<br>
-		  <input type="checkbox" name="verb" id="quiz4_kaku" defaultChecked="false"> L4 - <ruby lang="ja"><rb>書</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>く<br>
-		  <input type="checkbox" name="verb" id="quiz4_toru" defaultChecked="false"> L4 - <ruby lang="ja"><rb>撮</rb><rp>(</rp><rt>と</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz4_matsu" defaultChecked="false"> L4 - <ruby lang="ja"><rb>待</rb><rp>(</rp><rt>ま</rt><rp>)</rp></ruby>つ<br>
-		  <input type="checkbox" name="verb" id="quiz4_wakaru" defaultChecked="false"> L4 - わかる<br>
-		  <input type="checkbox" name="verb" id="quiz4_iru" defaultChecked="false"> L4 - いる<br>
-		  </p>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz5_master" onclick="qc_checkL5(this.checked)"> Check L5<br>
-		  <input type="checkbox" name="verb" id="quiz5_oyogu" defaultChecked="false"> L5 - <ruby lang="ja"><rb>泳</rb><rp>(</rp><rt>およ</rt><rp>)</rp></ruby>ぐ<br>
-		  <input type="checkbox" name="verb" id="quiz5_kiku" defaultChecked="false"> L5 - <ruby lang="ja"><rb>聞</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>く<br>
-		  <input type="checkbox" name="verb" id="quiz5_noru" defaultChecked="false"> L5 - <ruby lang="ja"><rb>乗</rb><rp>(</rp><rt>の</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz5_yaru" defaultChecked="false"> L5 - やる<br>
-		  <input type="checkbox" name="verb" id="quiz5_dekakeru" defaultChecked="false"> L5 - <ruby lang="ja"><rb>出</rb><rp>(</rp><rt>で</rt><rp>)</rp></ruby>かける<br>
-		  </p>
-		</td><td>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz6_master" onclick="qc_checkL6(this.checked)"> Check L6<br>
-		  <input type="checkbox" name="verb" id="quiz6_asobu" defaultChecked="false"> L6 - <ruby lang="ja"><rb>遊</rb><rp>(</rp><rt>あそ</rt><rp>)</rp></ruby>ぶ<br>
-		  <input type="checkbox" name="verb" id="quiz6_isogu" defaultChecked="false"> L6 - <ruby lang="ja"><rb>急</rb><rp>(</rp><rt>いそ</rt><rp>)</rp></ruby>ぐ<br>
-		  <input type="checkbox" name="verb" id="quiz6_kaesu" defaultChecked="false"> L6 - <ruby lang="ja"><rb>返</rb><rp>(</rp><rt>かえ</rt><rp>)</rp></ruby>す<br>
-		  <input type="checkbox" name="verb" id="quiz6_kesu" defaultChecked="false"> L6 - <ruby lang="ja"><rb>消</rb><rp>(</rp><rt>け</rt><rp>)</rp></ruby>す<br>
-		  <input type="checkbox" name="verb" id="quiz6_shinu" defaultChecked="false"> L6 - <ruby lang="ja"><rb>死</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>ぬ<br>
-		  <input type="checkbox" name="verb" id="quiz6_suwaru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>座</rb><rp>(</rp><rt>すわ</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz6_tatsu" defaultChecked="false"> L6 - <ruby lang="ja"><rb>立</rb><rp>(</rp><rt>た</rt><rp>)</rp></ruby>つ<br>
-		  <input type="checkbox" name="verb" id="quiz6_tabakowosuu" defaultChecked="false"> L6 - たばこを<ruby lang="ja"><rb>吸</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>う<br>
-		  <input type="checkbox" name="verb" id="quiz6_tsukau" defaultChecked="false"> L6 - <ruby lang="ja"><rb>使</rb><rp>(</rp><rt>つか</rt><rp>)</rp></ruby>う<br>
-		  <input type="checkbox" name="verb" id="quiz6_tetsudau" defaultChecked="false"> L6 - <ruby lang="ja"><rb>手伝</rb><rp>(</rp><rt>てつだ</rt><rp>)</rp></ruby>う<br>
-		  <input type="checkbox" name="verb" id="quiz6_hairu" defaultChecked="false"> L6 - <ruby lang="ja"><rb>入</rb><rp>(</rp><rt>はい</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz6_motsu" defaultChecked="false"> L6 - <ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>つ<br>
-		  <input type="checkbox" name="verb" id="quiz6_yasumu" defaultChecked="false"> L6 - <ruby lang="ja"><rb>休</rb><rp>(</rp><rt>やす</rt><rp>)</rp></ruby>む<br>
-		  <input type="checkbox" name="verb" id="quiz6_akeru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>開</rb><rp>(</rp><rt>あ</rt><rp>)</rp></ruby>ける<br>
-		  <input type="checkbox" name="verb" id="quiz6_oshieru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>教</rb><rp>(</rp><rt>おし</rt><rp>)</rp></ruby>える<br>
-		  <input type="checkbox" name="verb" id="quiz6_oriru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>降</rb><rp>(</rp><rt>お</rt><rp>)</rp></ruby>りる<br>
-		  <input type="checkbox" name="verb" id="quiz6_kariru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>借</rb><rp>(</rp><rt>か</rt><rp>)</rp></ruby>りる<br>
-		  <input type="checkbox" name="verb" id="quiz6_shimeru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>閉</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>める<br>
-		  <input type="checkbox" name="verb" id="quiz6_tsukeru" defaultChecked="false"> L6 - つける<br>
-		  <input type="checkbox" name="verb" id="quiz6_denwawokakeru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>電話</rb><rp>(</rp><rt>でんわ</rt><rp>)</rp></ruby>をかける<br>
-		  <input type="checkbox" name="verb" id="quiz6_wasureru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>忘</rb><rp>(</rp><rt>わす</rt><rp>)</rp></ruby>れる<br>
-		  <input type="checkbox" name="verb" id="quiz6_tsuretekuru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>連</rb><rp>(</rp><rt>つ</rt><rp>)</rp></ruby>れてくる<br>
-		  <input type="checkbox" name="verb" id="quiz6_mottekuru" defaultChecked="false"> L6 - <ruby lang="ja"><rb>持</rb><rp>(</rp><rt>も</rt><rp>)</rp></ruby>ってくる<br>
-		  </p>
-		</td><td>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz7_master" onclick="qc_checkL7(this.checked)"> Check L7<br>
-		  <input type="checkbox" name="verb" id="quiz7_utau" defaultChecked="false"> L7 - <ruby lang="ja"><rb>歌</rb><rp>(</rp><rt>うた</rt><rp>)</rp></ruby>う<br>
-		  <input type="checkbox" name="verb" id="quiz7_kaburu" defaultChecked="false"> L7 - かぶる<br>
-		  <input type="checkbox" name="verb" id="quiz7_shiru" defaultChecked="false"> L7 - <ruby lang="ja"><rb>知</rb><rp>(</rp><rt>し</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz7_sumu" defaultChecked="false"> L7 - <ruby lang="ja"><rb>住</rb><rp>(</rp><rt>す</rt><rp>)</rp></ruby>む<br>
-		  <input type="checkbox" name="verb" id="quiz7_haku" defaultChecked="false"> L7 - はく<br>
-		  <input type="checkbox" name="verb" id="quiz7_meganewokakeru" defaultChecked="false"> L7 - <ruby lang="ja"><rb>眼鏡</rb><rp>(</rp><rt>めがね</rt><rp>)</rp></ruby>をかける<br>
-		  <input type="checkbox" name="verb" id="quiz7_kiru" defaultChecked="false"> L7 - <ruby lang="ja"><rb>着</rb><rp>(</rp><rt>き</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz7_tsutomeru" defaultChecked="false"> L7 - <ruby lang="ja"><rb>勤</rb><rp>(</rp><rt>つと</rt><rp>)</rp></ruby>める<br>
-		  <input type="checkbox" name="verb" id="quiz7_kekkonsuru" defaultChecked="false"> L7 - <ruby lang="ja"><rb>結婚</rb><rp>(</rp><rt>けっこん</rt><rp>)</rp></ruby>する<br>
-		  </p>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz8_master" onclick="qc_checkL8(this.checked)"> Check L8<br>
-		  <input type="checkbox" name="verb" id="quiz8_amegafuru" defaultChecked="false"> L8 - <ruby lang="ja"><rb>雨</rb><rp>(</rp><rt>あめ</rt><rp>)</rp></ruby>が<ruby lang="ja"><rb>降</rb><rp>(</rp><rt>ふ</rt><rp>)</rp></ruby>る<br>
-		  <input type="checkbox" name="verb" id="quiz8_arau" defaultChecked="false"> L8 - <ruby lang="ja"><rb>洗</rb><rp>(</rp><rt>あら</rt><rp>)</rp></ruby>う<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_iu" defaultChecked="false">--> L8 - 言う<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_iru" defaultChecked="false">--> L8 - いる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_osokunaru" defaultChecked="false">--> L8 - 遅くなる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_omou" defaultChecked="false">--> L8 - 思う<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_kiru" defaultChecked="false">--> L8 - 切る<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_tsukuru" defaultChecked="false">--> L8 - 作る<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_motteiku" defaultChecked="false">--> L8 - 持っていく<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_jirojiromiru" defaultChecked="false">--> L8 - じろじろ見る<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_hajimeru" defaultChecked="false">--> L8 - 始める<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_untensuru" defaultChecked="false">--> L8 - 運転する<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_sentakusuru" defaultChecked="false">--> L8 - 洗濯する<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_soujisuru" defaultChecked="false">--> L8 - 掃除する<br>
-		  <!--<input type="checkbox" name="verb" id="quiz8_ryourisuru" defaultChecked="false">--> L8 - 料理する<br>
-		  </p>
-		</td><td>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz9_master" onclick="qc_checkL9(this.checked)"> Check L9<br>
-		  <!--<input type="checkbox" name="verb" id="quiz9_odoru" defaultChecked="false">--> L9 - 踊る<br>
-		  <!--<input type="checkbox" name="verb" id="quiz9_owaru" defaultChecked="false">--> L9 - 終わる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz9_hajimaru" defaultChecked="false">--> L9 - 始まる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz9_hiku" defaultChecked="false">--> L9 - 弾く<br>
-		  <!--<input type="checkbox" name="verb" id="quiz9_morau" defaultChecked="false">--> L9 - もらう<br>
-		  <!--<input type="checkbox" name="verb" id="quiz9_oboeru" defaultChecked="false">--> L9 - 覚える<br>
-		  <!--<input type="checkbox" name="verb" id="quiz9_deru" defaultChecked="false">--> L9 - 出る<br>
-		  <!--<input type="checkbox" name="verb" id="quiz9_undousuru" defaultChecked="false">--> L9 - 運動する<br>
-		  <!--<input type="checkbox" name="verb" id="quiz9_sanposuru" defaultChecked="false">--> L9 - 散歩する<br>
-		  </p>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz10_master" onclick="qc_checkL10(this.checked)"> Check L10<br>
-		  <!--<input type="checkbox" name="verb" id="quiz10_kakaru" defaultChecked="false">--> L10 - かかる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz10_tomaru" defaultChecked="false">--> L10 - 泊まる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz10_naru" defaultChecked="false">--> L10 - なる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz10_harau" defaultChecked="false">--> L10 - 払う<br>
-		  <!--<input type="checkbox" name="verb" id="quiz10_kimeru" defaultChecked="false">--> L10 - 決める<br>
-		  <!--<input type="checkbox" name="verb" id="quiz10_renshuusuru" defaultChecked="false">--> L10 - 練習する<br>
-		  </p>
-		</td><td>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz11_master" onclick="qc_checkL11(this.checked)"> Check L11<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_usowotsuku" defaultChecked="false">--> L11 - うそをつく<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_onakagasuku" defaultChecked="false">--> L11 - お腹がすく<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_kau" defaultChecked="false">--> L11 - 飼う<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_saboru" defaultChecked="false">--> L11 - サボる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_toru" defaultChecked="false">--> L11 - 取る<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_narau" defaultChecked="false">--> L11 - 習う<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_noboru" defaultChecked="false">--> L11 - 登る<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_hataraku" defaultChecked="false">--> L11 - 働く<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_tsukareru" defaultChecked="false">--> L11 - 疲れる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_yameru" defaultChecked="false">--> L11 - やめる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_kenkasuru" defaultChecked="false">--> L11 - けんかする<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_shoukaisuru" defaultChecked="false">--> L11 - 紹介する<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_daiettosuru" defaultChecked="false">--> L11 - ダイエットする<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_chikokusuru" defaultChecked="false">--> L11 - 遅刻する<br>
-		  <!--<input type="checkbox" name="verb" id="quiz11_ryuugakusuru" defaultChecked="false">--> L11 - 留学する<br>
-		  </p>
-		  <p>
-		  <input type="checkbox" name="verb" id="quiz12_master" onclick="qc_checkL12(this.checked)"> Check L12<br>
-		  <!--<input type="checkbox" name="verb" id="quiz12_kazewohiku" defaultChecked="false">--> L12 - 風邪をひく<br>
-		  <!--<input type="checkbox" name="verb" id="quiz12_kyoumigaaru" defaultChecked="false">--> L12 - 興味がある<br>
-		  <!--<input type="checkbox" name="verb" id="quiz12_nakusu" defaultChecked="false">--> L12 - なくす<br>
-		  <!--<input type="checkbox" name="verb" id="quiz12_nodogakawaku" defaultChecked="false">--> L12 - のどが渇く<br>
-		  <!--<input type="checkbox" name="verb" id="quiz12_sekigaderu" defaultChecked="false">--> L12 - せきが出る<br>
-		  <!--<input type="checkbox" name="verb" id="quiz12_wakareru" defaultChecked="false">--> L12 - 別れる<br>
-		  <!--<input type="checkbox" name="verb" id="quiz12_kinchousuru" defaultChecked="false">--> L12 - 緊張する<br>
-		  <!--<input type="checkbox" name="verb" id="quiz12_shinpaisuru" defaultChecked="false">--> L12 - 心配する<br>
-		  </p>
-		</td>
-		</tr></table>
-		  <input type="button" value="Generate" onclick="question_create()">
-		  <br><br>
-		<div style="overflow: hidden;">
-		    <div id="quiz_quest" style="font-size:150%"></div>
-		    <div id="quiz_inner" style="font-size:150%;width: 60%;display:inline-block;float:left;"></div>
-		    <div id="quiz_result" style="width: 40%;display:inline-block;overflow: hidden;"></div>
-		</div>
-	      <br>            </div>          </div>        </div>      </div>      <footer>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2015 by Andrew Fan</p>      </footer>    </div>
-    <script type="text/javascript" src="../javascript/JapQuiz.js"></script>
-    <script type="text/javascript" src="../javascript/verb_gen.js"></script>
-    <style>
-	table, th, td {
-	    border:1px solid white;
-	    vertical-align: top;
-	}
-    </style>  </body></html>
