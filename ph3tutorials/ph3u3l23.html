@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 23, 2017')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body onload="setupENG('Jan 12, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
@@ -32,6 +32,7 @@
 	          <li><a href="#sub3">Part 3: How do Stage Scripts work?</a></li>
 	          <li><a href="#sub4">Part 4: How do I run a Plural Script from a Stage Script?</a></li>
 	          <li><a href="#sub5">Part 5: How do I play music in a Stage Script?</a></li>
+	          <li><a href="#sub6">Part 6: How can I have both a boss and a midboss in a Stage Script?</a></li>
 	          <li><a href="#quiz1">Quiz: Stage Scripts</a></li>
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
@@ -153,6 +154,32 @@ task TStage
 	ObjSound_Play(bgm2);
         //Handle starting boss plural script</code></pre>
 	      <p>And that's all!</p>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How can I have both a boss and a midboss in a Stage Script?</h2>
+	      <p>As an extra note, the process for handling multiple plural scripts in a single stage script is quite simple. Assuming the midboss doesn't have any special music needs, we can do the following:</p>
+	      <pre class="prettyprint"><code>task TStage{
+    let pathmidboss = GetCurrentScriptDirectory() ~ "./script/PS4M.txt";
+    let pathboss = GetCurrentScriptDirectory() ~ "./script/PS4B.txt";
+    let midbossScript = LoadScriptInThread(pathmidboss);
+    let bossScript = LoadScriptInThread(pathboss);
+
+    //Handle stage
+
+    //Midboss
+    StartScript(midbossScript);
+    while(!IsCloseScript(midbossScript) && GetPlayerState() != STATE_END){
+      yield;
+    }
+
+    //Handle stage
+
+    //Boss
+    StartScript(bossScript);
+    while(!IsCloseScript(bossScript) && GetPlayerState() != STATE_END){
+      yield;
+    }
+
+    //Cleanup</code></pre>
+	      <p>As can be seen from the code above, it's a simple matter of loading another plural and then starting it when necessary.</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Stage Scripts</h2>
 	        <!--Quiz start.-->
 		<p>1) Keine has a script that does not seem to work correctly. The plural starts, and then the player beats the boss. However, the stage never progresses? What could the problem be?</p>
