@@ -441,6 +441,19 @@
             "numparticipants": 12,
             "result": [["Junky"],["Jimmy", "Conarnar"],["DrytheMeowstic"]],
             "participants": ["Junky", "Jimmy", "Conarnar", "DrytheMeowstic", "Vigor", "Umbra", "WishMakers", "iVAwalys", "GenoCraft", "Arcvasti", "Lollipop", "Rawsome"]
+        },
+        {
+            "id": "locaa11",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "perfect possession incident",
+            "year": 2018,
+            "duration": [2018.01, 2018.02],
+            "host": "WishMakers",
+            "judges": ["WishMakers"],
+            "numparticipants": 0,
+            "result": [[], [], []],
+            "participants": []
         }
     ]
 }
