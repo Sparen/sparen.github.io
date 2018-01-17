@@ -1,0 +1,134 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 24</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 24 - Introduction to Common Data. A guide on Danmakufu's Common Data."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Common, Data">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Jan 17, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u3l23.html" title="Sparen's Danmakufu ph3 Tutorials - Basics of Stages in Danmakufu">Unit 3 Lesson 23</a></li>
+	        <li><span>Navigation Bar</span></li>
+	        <li><span>---</span></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 24 - Introduction to Common Data</h1>
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What is Common Data?</a></li>
+	          <li><a href="#sub3">Part 3: How do I use Common Data?</a></li>
+	          <li><a href="#sub4">Part 4: How can I use Common Data with Difficulties?</a></li>
+	          <li><a href="#sub5">Part 5: How do I communicate between scripts?</a></li>
+	          <li><a href="#quiz1">Quiz: Common Data</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will discuss Common Data on an introductory level. Area Common Data will be covered in a later guide. Before reading this tutorial, you should be familiar with variables and scoping, including terms such as global and local variables, as well as statements and blocks.</p>
+	      <p>You should also be familiar with the standard scripts that run when you run a Danmakufu script, such as the background script and system script. If you are not familiar with these topics, please refer to earlier lessons to refresh yourself. There is a brief refresher below, but it is important to be familiar with the concepts in order to fully understand the use cases for Common Data.</p>
+	      <p>Besides the basics of Common Data, I will also cover its most common usages in stage-tier scripts, those being configuration settings such as difficulty and communication between scripts - especially the system script and background script. There will be brief discussion on extend systems in a later guide.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What is Common Data?</h2>
+	      <p>To understand Common Data, it is first necessary to understand variables and scoping, as mentioned prior.</p>
+	      <p>For example, let's refer to the following:</p>
+	      <pre class="prettyprint linenums"><code>let count = -60;
+
+@Initialize {
+    count = 0;
+    DisplayCount(count);
+}
+
+@MainLoop{
+    count += 1;
+    yield;
+}
+
+task DisplayCount(inputcount) {
+    let taskcount = 100;
+    loop {
+        WriteLog("Current Count: " ~ IntToString(count) ~ "; Input Count: " ~ IntToString(inputcount) ~ "; Task Count: " ~ IntToString(taskcount));
+        taskcount += 1;
+        yield;
+    }
+}
+</code></pre>
+	      <p>We will discuss the log window in a later lesson, but for now, all you need to know is that WriteLog prints the string it is given to the log window, where it can be seen. Recall that ~ concatenates two strings.</p>
+	      <p>As can be seen from the code above, we have a global variable count, which is initially set to the value -60. In @Initialize, which runs once at the start of the script, the value of this global value count is reset to 0, and DisplayCount, a task, is called with the current value of count as a parameter. In our Main Loop, the global count value is incremented each frame.</p>
+	      <p>Now, what does <code>DisplayCount()</code> actually write? Well, the first value printed is the value of the global variable count, which is 0, 1, etc. After the semicolon, it then prints inputcount, which is always set to 0. This is because Danmakufu passes by value rather than by reference (IE the value passed to DisplayCount when it was called is independent of the current value of the count global variable).</p>
+	      <p>After those, it then prints the value of taskcount, a local variable to the DisplayCount task. As this is a local variable, attempting to call this value outside of the the block defining the contents of the DisplayCount task will result in failure.</p>
+	      <p>But what if you need that taskcount value for something outside of DisplayCount? Well, within a script you would just make it a global variable, or increase its scope so that it can be accessed by more levels of nested blocks. But what if you want the value to be accessible by a different script?</p>
+	      <p>One may think that #include files are a good solution. After all, if two different scripts running at the same time both include the same file, then of course any variables defined in that #included file should be shared, right? That is incorrect, as the way #includes work in Danmakufu involves their contents being read as if they were a part of the parent script that #included it. The two or more files that #include the same file will therefore have separate copies of the variables defined within the #include. So what's the solution?</p>
+	      <p>Danmakufu provides CommonData as a means for communicating between multiple scripts. CommonData are shared across all running scripts, and can be read or written by any running script to a scope global to the entire project currently running. CommonData will persist until the game session has ended and Danmakufu is closed or the player has returned to the Danmakufu script navigation menus.</p>
+	      <p>CommonData is therefore very useful, and utilizing it appropriately allows for great benefit and flexibility. However, using it poorly will result in even more confusing and hard to debug code, as issues from one script may persist in CommonData and affect subsequent scripts run in the same session. (Ex: CommonData set in one single accidentally changes behavior in the next single)</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I use Common Data?</h2>
+	      <p>To begin our discussion on the usage of Common Data, it is necessary for you to become acquainted with the functions used to set and retrieve Common Data. These can be accessed at the <a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Common_Data_Functions">Danmakufu Wiki</a>.</p>
+	      <p>For the purposes of this guide, we will only look at the four basic functions, which write to the 'blank' Common Data Area (more on this in the guide on Area Common Data). These are <code>SetCommonData()</code>, <code>GetCommonData()</code>, <code>ClearCommonData()</code>, and <code>DeleteCommonData()</code>.</p>
+	      <p>To begin, we will want to set our common data. The parameters for <code>SetCommonData()</code> are a key and a value; each CommonData area is essentially a map that maps keys (which must be strings) to values of arbitrary type.</p>
+	      <p>Let's say that we are tracking the number of times the player has captured a spell in a stage to determine whether or not a special plural script should be run. One way to handle this would be to have a variable in the stage script and an Event that would increment the counter, but we will discuss this technique in a later guide.</p>
+	      <p>With CommonData, we can have a CommonData with key 'NumSpellCaptures'. In our TFinalize for the plural (or whatever code is run at the end of the Single script), we can check for spell capture with the boolean expression <code>ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT) + ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0</code>, assuming the current boss scene is referenced with the objScene variable.</p>
+	      <p>We can wrap this boolean expression in an if statement, and we can increment the value stored in the CommonData accordingly.</p>
+	      <pre class="prettyprint"><code>    if(ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SHOOTDOWN_COUNT) + ObjEnemyBossScene_GetInfo(objScene, INFO_PLAYER_SPELL_COUNT) == 0){
+        SetCommonData("NumSpellCaptures", GetCommonData("NumSpellCaptures", 0) + 1);
+    }</code></pre>
+	      <p>Now, there are a few things to note. Firstly, it is not possible to simply increment with ++, as that functionality does not work on CommonData values, which can be of arbitrary type. Secondly, when using <code>GetCommonData()</code>, it is necessary to provide a default value in case that particular CommonData does not exist or has not been set yet. It is useful to default CommonData to helpful values, such as 0 for counters, -1 for values that are of critical importance and must be set, etc.</p>
+	      <p>Beyond this, there are other functions - <code>ClearCommonData()</code>, and <code>DeleteCommonData()</code>. The former wipes all CommonData in the default 'blank' Common Data Area. For all practical purposes, if you are not using specific Area Common Data this will purge all key-value pairs that have already been defined, making it seem as if they had never existed. Given that this is automatically done when the script ends, there is rarely a time for this function to be used. <code>DeleteCommonData</code> will delete a single key-value pair with the specialized key. For example, if we were to <code>DeleteCommonData("NumSpellCaptures")</code> somewhere in our code, the next run of the code above would return the default value of 0 for GetCommonData("NumSpellCaptures", 0) regardless of what it used to be before running <code>DeleteCommonData()</code>. This is due to the fact that the key-value pair has been wiped and the mapping no longer exists after we run the deletion function.</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 3: How can I use Common Data with Difficulties?</h2>
+	      <p>The most common use case for Common Data in stage level scripts is with difficulty selection. It is often more pleasant to have a single stage or plural to run that provides a difficulty select option rather than having a different executable plural for each difficulty.</p>
+	      <p>We will cover the menu itself, communication with the System script to display a text object with the appropriate difficulty text and color, and usage of CommonData in the stage to select the proper plural (assuming there is a different plural for each difficulty).</p>
+	      <p>UNDER CONSTRUCTION BELOW</p>
+	      <pre class="prettyprint linenums"><code></code></pre>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Stage Scripts</h2>
+	        <!--Quiz start.-->
+		<p>1) Keine has a script that does not seem to work correctly. The plural starts, and then the player beats the boss. However, the stage never progresses? What could the problem be?</p>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. The Stage script does not check whether or not the plural ended.<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. The Plural Script does not have a <code>CloseScript(GetOwnScriptID());</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. The player Mokou-tan actually died.<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) True or False: Stages can create Primitive and Move objects.</p>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. True<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. False<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li>CommonData can be used to share values between scripts</code></li>
+	          <li>CommonData can be used to set difficulty and other configuration settings for the duration of a script</li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	        <li><a href="./ph3u3l23.html" title="Sparen's Danmakufu ph3 Tutorials - Basics of Stages in Danmakufu">Unit 3 Lesson 23</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>  </body></html>
