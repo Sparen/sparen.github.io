@@ -198,7 +198,7 @@ task TStage
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
-		<p>2) Now, let's say that we want to have the difficulty text in the top right display the currently selected difficulty during the menu as opposed to only after a difficulty has been selected. Assuming we use an infinite loop in the Difficulty text control in the System script that changes the text, color, etc. based on the current CommonData, what can we add to our Difficulty select menu to change the difficulty dynamically?</p>
+		<p>2) Now, let's say that we want to have the difficulty text in the top right display the currently selected difficulty during the menu as opposed to only after a difficulty has been selected. Assuming we use an infinite loop in the Difficulty text control in the System script that changes the text, color, etc. based on the current CommonData, what can we add to our current Difficulty select menu to dynamically change the difficulty?</p>
 		<p>Hit 'Show' to show possible answers.</p>
 	        <textarea rows="32" style="width:100%;max-width:640px">    //Infinite Loop that runs until the player has made a selection.
     loop{
@@ -266,10 +266,11 @@ task TStage
 		<br>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I communicate between scripts?</h2>
 	      <p>To close off this lesson, we will have a brief discussion on other uses for standard Common Data.</p>
-	      <p>One big one is communication between the Player script and the stage being played. Let's say that we have a system where every time a spellcard is captured, points are accumulated that allow for the player to release a special attack, after which the points are depleted.</p>
+	      <p>One rather advanced usage of Common Data is communication between the Player script and the stage being played. Let's say that we have a system where every time a spellcard is captured, points are accumulated that allow for the player to release a special attack, after which the points are depleted.</p>
 	      <p>As will be discussed in a later lesson, anything involving player shots should be handled inside a player script. Therefore, in TFinalize for our spellcards, we will increment the number of points. In the player script, on special attack toggle, the player script first checks to see if enough points have been accrued. If so, launch the attack and consume the points. And finally, the System script checks the number of points each frame to display it on the HUD so that the player can see how many points they currently have.</p>
 	      <p>Systems like these become possible with Common Data. In addition to the above, in-stage menus to set Common Data can be used for effects (so the player can choose how heavy the effects in the stage are), various gameplay modes (Pointdevice vs Legacy, Infinite Lives toggle, etc.), and more.</p>
 	      <p>Depending on what you need, it may be possible to implement your ideas without CommonData (or Events). But they are powerful tools that will enable many exciting and interesting features for your players.</p>
+	      <p>As a final note, there are many ways to use Common Data and the examples shown in this lesson are just a few. I suggest experimenting on your own in order to determine what works best for you.</p>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>CommonData can be used to share values between scripts</code></li>
