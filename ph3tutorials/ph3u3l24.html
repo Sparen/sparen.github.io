@@ -166,7 +166,7 @@ task TStage
         Obj_Delete(TextObjects[i]);
     }
 }</code></pre>
-	      <p>In the above, we have a number of features, including text automatically centered horizontally, menu controls adjusting the selection, and color switching to make it clear which option is selected (it is highly recommended that you use an additional Render Object in addition to the color). In the case that the commands used for the text objects or the method for horizontally centering a text object are unclear, please review <a href="./ph3u2l17.html">Lesson 17</a>.</p>
+	      <p>In the above, we have a number of features, including text automatically centered horizontally, menu controls adjusting the selection, and color switching to make it clear which option is selected (it is highly recommended that you use an additional Render Object in addition to the color). In the case that the commands used for the text objects or the method for horizontally centering a text object are unclear, please review <a href="./ph3u2l17.html">Lesson 17</a>. Note that <code>DrawSubMenuText() is a function that creates a text objects, sets various fields, and returns the created object; it is not shown for conciseness.</p>
 	      <p>Now we need to handle the actual setting of CommonData. Before the yield; in the infinite loop, we will do the following:</p>
 	      <pre class="prettyprint linenums"><code>        if(GetVirtualKeyState(VK_SHOT) == KEY_PUSH){
             sdiff = diffs[selection];
