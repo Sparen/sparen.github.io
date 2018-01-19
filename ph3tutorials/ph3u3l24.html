@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jan 17, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body onload="setupENG('Jan 18, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
@@ -31,8 +31,8 @@
 	          <li><a href="#sub2">Part 2: What is Common Data?</a></li>
 	          <li><a href="#sub3">Part 3: How do I use Common Data?</a></li>
 	          <li><a href="#sub4">Part 4: How can I use Common Data with Difficulties?</a></li>
-	          <li><a href="#sub5">Part 5: How do I communicate between scripts?</a></li>
 	          <li><a href="#quiz1">Quiz: Common Data</a></li>
+	          <li><a href="#sub5">Part 5: How do I communicate between scripts?</a></li>
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
@@ -84,33 +84,191 @@ task DisplayCount(inputcount) {
     }</code></pre>
 	      <p>Now, there are a few things to note. Firstly, it is not possible to simply increment with ++, as that functionality does not work on CommonData values, which can be of arbitrary type. Secondly, when using <code>GetCommonData()</code>, it is necessary to provide a default value in case that particular CommonData does not exist or has not been set yet. It is useful to default CommonData to helpful values, such as 0 for counters, -1 for values that are of critical importance and must be set, etc.</p>
 	      <p>Beyond this, there are other functions - <code>ClearCommonData()</code>, and <code>DeleteCommonData()</code>. The former wipes all CommonData in the default 'blank' Common Data Area. For all practical purposes, if you are not using specific Area Common Data this will purge all key-value pairs that have already been defined, making it seem as if they had never existed. Given that this is automatically done when the script ends, there is rarely a time for this function to be used. <code>DeleteCommonData</code> will delete a single key-value pair with the specialized key. For example, if we were to <code>DeleteCommonData("NumSpellCaptures")</code> somewhere in our code, the next run of the code above would return the default value of 0 for GetCommonData("NumSpellCaptures", 0) regardless of what it used to be before running <code>DeleteCommonData()</code>. This is due to the fact that the key-value pair has been wiped and the mapping no longer exists after we run the deletion function.</p>
-	      <h2 class="ph3tutorialheader" id="sub4">Part 3: How can I use Common Data with Difficulties?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How can I use Common Data with Difficulties?</h2>
 	      <p>The most common use case for Common Data in stage level scripts is with difficulty selection. It is often more pleasant to have a single stage or plural to run that provides a difficulty select option rather than having a different executable plural for each difficulty.</p>
 	      <p>We will cover the menu itself, communication with the System script to display a text object with the appropriate difficulty text and color, and usage of CommonData in the stage to select the proper plural (assuming there is a different plural for each difficulty).</p>
-	      <p>UNDER CONSTRUCTION BELOW</p>
-	      <pre class="prettyprint linenums"><code></code></pre>
-	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Stage Scripts</h2>
+	      <p>Let's begin with the TStage from the sample stage:</p>
+	      <pre class="prettyprint linenums"><code>//DNH Header and other routines have been excluded from this example.
+
+@Initialize
+{
+    TStage();
+}
+
+task TStage
+{
+    let dir = GetCurrentScriptDirectory();
+
+    let path = dir ~ "ExRumia_Plural.txt";
+    let idScript = LoadScriptInThread(path);
+    loop(60){yield;}
+    StartScript(idScript);
+
+    while(!IsCloseScript(idScript) && GetPlayerState() != STATE_END)
+    {
+        yield;
+    }
+
+    loop(240){yield;}
+
+    CloseStgScene();
+}</code></pre>
+	      <p>First, let's consider our basic menu. We want a menu at the start of the stage (with the stage background, likely) that will utilize the arrow keys to control the selection of options. During this time, the player cannot bomb, and it may be preferable to also disable player movement, though implementation of this restriction will, in true mathematics + computer science fashion, be left as an exercise to the reader :)</p>
+	      <p>Let's begin. If you are unfamiliar with menus and basic virtual keys in Danmakufu, please review <a href="./ph3u2l20.html">Lesson 20</a>. Before doing any boss stuff, we will freeze the player's ability to bomb using <code>SetForbidPlayerSpell(true);</code> - this should prevent unwanted bomb usage.</p>
+	      <p>Now, we will call our menu. Generally speaking, due to the fact that the menu must be blocking (IE, the stage cannot progress unless the player has completed selection of their options in the menu), we cannot use a task for the menu. Instead, we will use a function (a subroutine is also fine).</p>
+	      <p>First, in our menu, we will want to create our text objects, give them IDs, and have a loop checking the player's current selection. See below for an example.</p>
+	      <pre class="prettyprint linenums"><code>function SetStageDifficulty{ //Adapted from code used by gtbot
+    let selection = 0; //Initialize the player's selection to index 0
+    let sdiff = 0; //Selected difficulty
+	
+    let TextObjects = []; //Container for text objects, so that we can delete them at the end of the function
+    let TextNames = ["Normal", "Hard"]; //Supported difficulties (text only)
+	
+    let diffs = [1, 2]; //Define the values (CommonData) to utilize 
+
+    let Center = [GetStgFrameWidth()/2, GetStgFrameHeight()/2]; //Define the center of the playing field
+    ascent(i in 0..length(TextNames)){ //For each difficulty option, handle the text object
+        TextObjects = TextObjects ~ [DrawSubMenuText(TextNames[i])]; //Add the Text object to the array
+        let locText = TextObjects[i]; //Retrieve text contents
+        ObjText_SetHorizontalAlignment(locText, ALIGNMENT_CENTER);
+        ObjRender_SetPosition(locText, Center[0] - 100, Center[1] - 150 + i*25, 0);
+        ObjText_SetMaxWidth(locText, 200);
+        ObjText_SetFontSize(locText, 16);//new
+        ObjText_SetFontType(locText, "Helvetica");
+        ObjText_SetFontBorderColor(locText, 16, 16, 16);
+    }
+	
+    //Infinite Loop that runs until the player has made a selection.
+    loop{
+        //Menu controls
+        if(GetVirtualKeyState(VK_UP) == KEY_PUSH){selection--;}
+        if(GetVirtualKeyState(VK_DOWN) == KEY_PUSH){selection++;}
+        if(selection < 0){selection = 1;}
+        if(selection > 1){selection = 0;}
+
+        //Make it clear to the player which option is selected
+        ascent(i in 0..length(TextObjects)){
+            if(selection == i){
+                ObjText_SetFontColorTop(TextObjects[i], r[i], g[i], b[i]);
+                ObjText_SetFontColorBottom(TextObjects[i], r[i]/1.5, g[i]/1.5, b[i]/1.5);
+            } else {
+                ObjText_SetFontColorTop(TextObjects[i], r[i]/1.75, g[i]/1.75, b[i]/1.75);
+                ObjText_SetFontColorBottom(TextObjects[i], r[i]/2.25, g[i]/2.25, b[i]/2.25);
+            }
+        }
+
+        //Handle setting Common Data here
+        //SEE BELOW
+	
+        yield;
+    }
+    ascent(i in 0..length(TextObjects)){
+        Obj_Delete(TextObjects[i]);
+    }
+}</code></pre>
+	      <p>In the above, we have a number of features, including text automatically centered horizontally, menu controls adjusting the selection, and color switching to make it clear which option is selected (it is highly recommended that you use an additional Render Object in addition to the color). In the case that the commands used for the text objects or the method for horizontally centering a text object are unclear, please review <a href="./ph3u2l17.html">Lesson 17</a>.</p>
+	      <p>Now we need to handle the actual setting of CommonData. Before the yield; in the infinite loop, we will do the following:</p>
+	      <pre class="prettyprint linenums"><code>        if(GetVirtualKeyState(VK_SHOT) == KEY_PUSH){
+            sdiff = diffs[selection];
+            SetCommonData("Difficulty", sdiff); //Set the CommonData here
+            break;
+        }</code></pre>
+	      <p>Firstly, please note that in the method being showcased here, the "Difficulty" Common Data is a mapping from string to integer, with 0 corresponding to Easy, 1 to Normal, etc. Advantages of this mapping strategy will be discussed at the end of the current part.</p>
+	      <p>In our original code above, we <code>let diffs = [1, 2];</code>. This is designed so that 0 can correspond to Easy and 3 can correspond to Lunatic, as stated above. The method shown here using sdiff enables any number of difficulties to be used without changing the { 0: "Easy", 1: "Normal", 2: "Hard", 3: "Lunatic" } mapping currently in place. As the scripter, it will be up to you to handle your difficulty mappings.</p>
+	      <p>In regards to variables, <code>selection</code> is current selection of the text objects, indexed with the top text object (in this case, 'Normal') at 0. When the player chooses their desired difficulty, their selection uses the <code>selection</code> index to index the <code>diffs</code> array so that when the first 'Normal' option is selected, the <code>selection</code> index (0) indexes the <code>diffs</code> array and retrieves 1, which we have defined to be 'Normal' difficulty. If 'Hard' were selected, the <code>selection</code> index would be 1, would index <code>diffs</code> to retrieve 2, and would correspond to the 'Hard' difficulty.</p>
+	      <p>With this, we now have a functional menu that allows the player to select their desired difficulty and save the result in CommonData.</p>
+	      <p>After calling all menus, don't forget to re-enable player bombs.</p>
+	      <p>Now, as for using this CommonData, a common technique, especially among new players, is to have different plural scripts for each difficulty. With CommonData and a menu, it is possible to have a single stage executable that handles all the difficulties in your script. To handle different plurals depending on the difficulty, in TStage, simply check the CommonData and run a different plural depending on the value.</p>
+	      <p>Alternatively, if you use one plural regardless of difficulty and have your Single scripts be different depending on the difficulty, in TPlural handle which Singles to load depending on the CommonData. After all, once set, it can be accessed from any other running script in the session.</p>
+	      <p>A more advanced technique uses one Single for all difficulties. Earlier, I mentioned the utility of the string to integer mapping. This allows us to directly use the difficulty value in bullet patterns (e.g. <code>loop(15 + GetCommonData("Difficulty", 0) * 3) { CreateShotA1(...); }</code> in addition to other less restrictive tasks such as choosing plural scripts and the like.</p>
+	      <div class="tut_exercise">EXERCISE: Lock the player's position and disable player shooting in addition to disabling player spellcards/bombs.</div>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Common Data</h2>
 	        <!--Quiz start.-->
-		<p>1) Keine has a script that does not seem to work correctly. The plural starts, and then the player beats the boss. However, the stage never progresses? What could the problem be?</p>
-	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+		<p>1) One of the aspects of difficulties that was not discussed above was displaying the difficulty in the top right corner of the STG_Frame. To do this, we generally utilize the System script. A key component of this implementation involves displaying no text before a difficulty has been selected. Which blocking code snippet best implements this requirement in accordance with standards for default variables?</p>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'C');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. The Stage script does not check whether or not the plural ended.<br>
+	        A. <code>while (GetCommonData("Difficulty", 0) == 0) {yield;}</code><br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. The Plural Script does not have a <code>CloseScript(GetOwnScriptID());</code><br>
+	        B. <code>if (GetCommonData("Difficulty", 0) == 0) {yield;}</code><br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. The player Mokou-tan actually died.<br>
+	        C. <code>while (GetCommonData("Difficulty", -1) == -1) {yield;}</code><br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. <code>if (GetCommonData("Difficulty", -1) == -1) {yield;}</code><br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
-		<p>2) True or False: Stages can create Primitive and Move objects.</p>
-	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
-	        <input type="RADIO" value="A" name="cc">
-	        A. True<br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. False<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
+		<p>2) Now, let's say that we want to have the difficulty text in the top right display the currently selected difficulty during the menu as opposed to only after a difficulty has been selected. Assuming we use an infinite loop in the Difficulty text control in the System script that changes the text, color, etc. based on the current CommonData, what can we add to our Difficulty select menu to change the difficulty dynamically?</p>
+		<p>Hit 'Show' to show possible answers.</p>
+	        <textarea rows="32" style="width:100%;max-width:640px">    //Infinite Loop that runs until the player has made a selection.
+    loop{
+        //Menu controls
+        if(GetVirtualKeyState(VK_UP) == KEY_PUSH){selection--;}
+        if(GetVirtualKeyState(VK_DOWN) == KEY_PUSH){selection++;}
+        if(selection < 0){selection = 1;}
+        if(selection > 1){selection = 0;}
+
+        //Make it clear to the player which option is selected
+        ascent(i in 0..length(TextObjects)){
+            if(selection == i){
+                ObjText_SetFontColorTop(TextObjects[i], r[i], g[i], b[i]);
+                ObjText_SetFontColorBottom(TextObjects[i], r[i]/1.5, g[i]/1.5, b[i]/1.5);
+            } else {
+                ObjText_SetFontColorTop(TextObjects[i], r[i]/1.75, g[i]/1.75, b[i]/1.75);
+                ObjText_SetFontColorBottom(TextObjects[i], r[i]/2.25, g[i]/2.25, b[i]/2.25);
+            }
+        }
+
+        //Handle setting Common Data here
+        if(GetVirtualKeyState(VK_SHOT) == KEY_PUSH){
+            sdiff = diffs[selection];
+            SetCommonData("Difficulty", sdiff); //Set the CommonData here
+            break;
+        }
+	
+        yield;
+    }</textarea>
+	        <input class="spoilerbutton" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';">
+		<div class="spoiler"><div>
+	      <p>Suggested answer is below.</p>
+	      <pre class="prettyprint linenums"><code>    //Infinite Loop that runs until the player has made a selection.
+    loop{
+        //Menu controls
+        if(GetVirtualKeyState(VK_UP) == KEY_PUSH){selection--;}
+        if(GetVirtualKeyState(VK_DOWN) == KEY_PUSH){selection++;}
+        if(selection < 0){selection = 1;}
+        if(selection > 1){selection = 0;}
+
+        //Make it clear to the player which option is selected
+        ascent(i in 0..length(TextObjects)){
+            if(selection == i){
+                ObjText_SetFontColorTop(TextObjects[i], r[i], g[i], b[i]);
+                ObjText_SetFontColorBottom(TextObjects[i], r[i]/1.5, g[i]/1.5, b[i]/1.5);
+            } else {
+                ObjText_SetFontColorTop(TextObjects[i], r[i]/1.75, g[i]/1.75, b[i]/1.75);
+                ObjText_SetFontColorBottom(TextObjects[i], r[i]/2.25, g[i]/2.25, b[i]/2.25);
+            }
+        }
+
+        //Handle setting Common Data here
+        if(GetVirtualKeyState(VK_SHOT) == KEY_PUSH){
+            sdiff = diffs[selection];
+            SetCommonData("Difficulty", sdiff); //Set the CommonData here
+            break;
+        }
+
+        if(selection == 0){SetCommonData("Difficulty", 1);}
+        if(selection == 1){SetCommonData("Difficulty", 2);}
+	
+        yield;
+    }</code></pre>
+	        </div></div>
 		<br>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I communicate between scripts?</h2>
+	      <p>To close off this lesson, we will have a brief discussion on other uses for standard Common Data.</p>
+	      <p>One big one is communication between the Player script and the stage being played. Let's say that we have a system where every time a spellcard is captured, points are accumulated that allow for the player to release a special attack, after which the points are depleted.</p>
+	      <p>As will be discussed in a later lesson, anything involving player shots should be handled inside a player script. Therefore, in TFinalize for our spellcards, we will increment the number of points. In the player script, on special attack toggle, the player script first checks to see if enough points have been accrued. If so, launch the attack and consume the points. And finally, the System script checks the number of points each frame to display it on the HUD so that the player can see how many points they currently have.</p>
+	      <p>Systems like these become possible with Common Data. In addition to the above, in-stage menus to set Common Data can be used for effects (so the player can choose how heavy the effects in the stage are), various gameplay modes (Pointdevice vs Legacy, Infinite Lives toggle, etc.), and more.</p>
+	      <p>Depending on what you need, it may be possible to implement your ideas without CommonData (or Events). But they are powerful tools that will enable many exciting and interesting features for your players.</p>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>CommonData can be used to share values between scripts</code></li>
@@ -130,5 +288,6 @@ task DisplayCount(inputcount) {
     <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script type="text/javascript" src="javascript/U3L24Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>  </body></html>
