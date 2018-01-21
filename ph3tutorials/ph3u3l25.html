@@ -1,0 +1,90 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 25</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 25 - Understanding and Manipulating @Event. A guide on Danmakufu's Events."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Event">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Jan 20, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u3l24.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Common Data">Unit 3 Lesson 24</a></li>
+	        <li><span>Navigation Bar</span></li>
+	        <li><span>---</span></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 25 - Understanding and Manipulating @Event</h1>
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What Events have we already seen?</a></li>
+	          <li><a href="#sub3">Part 3: What are Events?</a></li>
+	          <li><a href="#sub4">Part 4: How do I use Danmakufu's built-in Events?</a></li>
+	          <li><a href="#quiz1">Quiz: Events</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In these two lessons (25 and 26), I will cover Events in Danmakufu. This lesson will function as an introduction to Events in general, with parallels drawn from other programming languages, and will also serve as a refresher for the existing events in Danmakufu that are handled automatically by the system, as well as potential uses of these built-in Events.</p>
+	      <p>These two guides will assume that you are familiar with Common Data and will also assume that you are familiar with scripts in Danmakufu in general.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What Events have we already seen?</h2>
+	      <p>We've been mentioning Events on and off throughout these guides. Back in <a href="./ph3u1l6.html">Lesson 6</a>, we discussed @Event briefly in the context of setting up a boss's lifebar, timer, and spell bonus. Here we reviewed <code>EV_REQUEST_LIFE</code>, <code>EV_REQUEST_TIMER</code>, and <code>EV_REQUEST_SPELL_SCORE</code>, which are used exclusively for Single scripts that handle boss attacks. In <a href="./ph3u1l7.html">Lesson 7</a>, we added<code> EV_REQUEST_IS_DURABLE_SPELL</code> to this list.</p>
+	      <p>In <a href="./ph3u2l19.html">Lesson 19</a>, we covered the Events called in the default system script: <code>EV_GAIN_SPELL</code> and <code>EV_START_BOSS_SPELL</code>. We'll be taking a closer look at this later due to the way Danmakufu opens another script in the System file.</p>
+	      <p>Finally, in <a href="./ph3u3l23.html">Lesson 23</a>, we discussed the automatic Pause events and how to work with these.</p>
+	      <p>All of the events we have currently discussed are but a subset of the full list. There are plenty of built-in events that can be browsed at the <a target="_blank" href="http://www.geocities.co.jp/SiliconValley-Oakland/9951/pre/th_dnh_help_v3.html">Official Danmakufu ph3 Documentation</a>: 'イベント(@Event)' on the sidebar. We'll be discussing the majority of these in this guide, the next one (on EV_USER), and the player script creation guide.</p>
+	      <p>So we have all of these events. What are they, and how do they work exactly?</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What are Events?</h2>
+	      <p>Consider the following scenario:</p>
+	      <p>Suppose we are on a website with only a single button on it smack in the middle. We move the mouse around, we attempt to scroll, etc. But nothing happens. But then we click the button.</p>
+	      <p>When the button is clicked, the website responds and replaces the contents of the screen with cat videos. The clicking of the button is an event - specifically, the Javascript <code>onclick</code> event. Not surprisingly, the function call or code bound to the button's onclick event triggers when you, well, click the button.</p>
+	      <p>Wikipedia's page on <a target="_blank" href="https://en.wikipedia.org/wiki/Event_(computing)">Events</a> states that "an event is an action or occurrence recognized by software, often originating asynchronously from the external environment, that may be handled by the software." Translated into English, that means that an event is some kind of action that does not have a set time to execute, and is handled by the software. In Danmakufu, events are automatically called when needed, and for all scripts currently running, the @Event routine is checked to see if there is any code to execute with respect to the given event.</p>
+	      <p></p>
+	      <p>UNDER CONSTRUCTION BELOW</p>
+	      <pre class="prettyprint linenums"><code>
+</code></pre>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Common Data</h2>
+	        <!--Quiz start.-->
+		<p>1) One of the aspects of difficulties that was not discussed above was displaying the difficulty in the top right corner of the STG_Frame. To do this, we generally utilize the System script. A key component of this implementation involves displaying no text before a difficulty has been selected. Which blocking code snippet best implements this requirement in accordance with standards for default variables?</p>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'C');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>while (GetCommonData("Difficulty", 0) == 0) {yield;}</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. <code>if (GetCommonData("Difficulty", 0) == 0) {yield;}</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. <code>while (GetCommonData("Difficulty", -1) == -1) {yield;}</code><br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. <code>if (GetCommonData("Difficulty", -1) == -1) {yield;}</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li></li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l24.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Common Data">Unit 3 Lesson 24</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>  </body></html>
