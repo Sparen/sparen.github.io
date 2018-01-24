@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jan 20, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body onload="setupENG('Jan 23, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
@@ -27,15 +27,17 @@
 	      <div class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
-	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
 	          <li><a href="#sub2">Part 2: What Events have we already seen?</a></li>
 	          <li><a href="#sub3">Part 3: What are Events?</a></li>
 	          <li><a href="#sub4">Part 4: How do I use Danmakufu's built-in Events?</a></li>
+	          <li><a href="#sub5">Part 5: How do I handle Event Arguments?</a></li>
+	          <li><a href="#sub6">Part 6: What things should I be careful with when using Events?</a></li>
 	          <li><a href="#quiz1">Quiz: Events</a></li>
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
 	      <p>In these two lessons (25 and 26), I will cover Events in Danmakufu. This lesson will function as an introduction to Events in general, with parallels drawn from other programming languages, and will also serve as a refresher for the existing events in Danmakufu that are handled automatically by the system, as well as potential uses of these built-in Events.</p>
 	      <p>These two guides will assume that you are familiar with Common Data and will also assume that you are familiar with scripts in Danmakufu in general.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What Events have we already seen?</h2>
@@ -49,28 +51,60 @@
 	      <p>Suppose we are on a website with only a single button on it smack in the middle. We move the mouse around, we attempt to scroll, etc. But nothing happens. But then we click the button.</p>
 	      <p>When the button is clicked, the website responds and replaces the contents of the screen with cat videos. The clicking of the button is an event - specifically, the Javascript <code>onclick</code> event. Not surprisingly, the function call or code bound to the button's onclick event triggers when you, well, click the button.</p>
 	      <p>Wikipedia's page on <a target="_blank" href="https://en.wikipedia.org/wiki/Event_(computing)">Events</a> states that "an event is an action or occurrence recognized by software, often originating asynchronously from the external environment, that may be handled by the software." Translated into English, that means that an event is some kind of action that does not have a set time to execute, and is handled by the software. In Danmakufu, events are automatically called when needed, and for all scripts currently running, the @Event routine is checked to see if there is any code to execute with respect to the given event.</p>
-	      <p></p>
-	      <p>UNDER CONSTRUCTION BELOW</p>
-	      <pre class="prettyprint linenums"><code>
+	      <div class="tut_checkpoint">CHECKPOINT: At which points in time do events NOT fire/execute?</div>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I use Danmakufu's built-in Events?</h2>
+	      <p>So let's discuss usage of the built-in Events. For example, let's say that we want to have an Extend system based on player graze. We can use <code>EV_GRAZE</code> for this - when this event happens to be called, run some code to handle the Extends. Of course, you can have an <code>EV_GRAZE</code> check in multiple scripts or just one, and it will trigger in all of them. But as long as the player isn't grazing, the event will never fire.</p>
+	      <p>Many of the event we've seen before fire at a specific time, but asynchronously with regards to the overall program flow. The @Event routine will run any code in the <code>case</code> block. This means that as long as you know the list of supported events in Danmakufu and under what conditions they fire, you can hook any supported code you want to the occurrence of a given event. Want to have the player automatically bomb when they are hit? In a player script, call the spellcard (if they have any left) using <code>EV_HIT</code>. Want to implement a continue menu? <code>EV_PLAYER_SHOOTDOWN</code> is the event that runs when the player is hit when they are out of lives and fail to deathbomb.</p>
+              <p>One big usage is to do specific things on spell capture. For example, see the following code (see Default_System.txt for a similar version):</p>
+	      <pre class="prettyprint linenums"><code>    alternative(GetEventType())
+    case(EV_GAIN_SPELL) {
+        let objScene = GetEnemyBossSceneObjectID();
+        let score = truncate(ObjEnemyBossScene_GetInfo(objScene, INFO_SPELL_SCORE) / 10) * 10;
+        TGainSpell(score); //task for drawing spellcard bonus on screen
+    }
 </code></pre>
-	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Common Data</h2>
+              <p>In the above code, on the GAIN_SPELL event, we set the ones digit of the spellcard bonus to 0 (typically, the ones digit is reserved for # continues currently used, hence the purging of the ones digit from spellcard bonuses above) and then run a task to display the spellcard bonus in text on the screen. If we want to, we can handle all kinds of things here as well - applying the bonus to the player's score, toggling various settings, etc. It's up to you as for what you want to put in the event block.</p>
+	      <p>There are many ways to utilize the built-in events in Danmakufu. Many of these will be discussed alongside player scripts, but with what you know now, it shouldn't be too hard to play sound effects on certain events, etc.</p>
+	      <p>Of course, all this being said, the true flexibility of events is in NotifyEventAll and User Defined Events - the topic of the next lesson.</p>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I handle Event Arguments?</h2>
+	      <p>Back when we discussed the Single script events, we used a function called <code>SetScriptResult()</code> with a value. For example, <code>case(EV_REQUEST_LIFE){SetScriptResult(2500);}</code> to set the boss's HP to 2500 units. In this case, the REQUEST_LIFE event requires a return value that MUST be passed back using <code>SetScriptResult()</code> inside the case block.</p>
+	      <p>There are a number of events that require return values using the above method. But there are also events that provide values. These can be acquired using <code>GetEventArgument()</code>, which we will see a lot of in the next lesson.</p>
+	      <p>For example, when we discuss custom items, we will need to handle <code>EV_GET_ITEM</code>, where <code>GetEventArgument(0)</code> returns the type of item picked up by the player.</p>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: What things should I be careful with when using Events?</h2>
+	      <p>To close this lesson, we will discuss pitfalls and things to avoid when working with events.</p>
+	      <p>First and foremost, it is important to keep track of where you are handling events. Are you handling x Event in the System script? In the stage? Both? Keep track of where you're handling events and they will be much easier to debug afterwards. Personally, I recommend keeping track of all events in your stage script with the exception of System-specific events. For communication with Background scripts and other scripts, it will typically be best to minimize usage of @Event and utilize CommonData instead, though this is up to the scripter.</p>
+	      <p>Finally, restrictions. The most pressing are <code>EV_PAUSE_ENTER</code> and <code>EV_PAUSE_LEAVE</code>. These are triggered by user input regardless of whether the main game is playing or a replay is playing. <span style="color:red">Therefore, usage of <code>rand</code>, creation of bullets, and creation of enemies is explicitly banned in the case blocks for these events. Failing to uphold these design constraints will result in replay desync on pause.</span></p>
+	      <p>In addition to the above, there are many events that are meant for use in player scripts. Usage of these events outside of player scripts can have unforseen consequences. For example, <code>EV_GRAZE</code> is expressly meant for usage inside player scripts (for particle effects and sound effects). Therefore, it is designed to fire at most once per frame. This means it will fire once if the player grazes one bullet in that frame, and will also fire once if the player grazes twenty bullets in that frame. Keep this in mind when designing graze-based systems.</p>
+	      <p>Finally, as a note for the next lesson, calling events within events when using arguments is bad practice. This is because calling an event within an existing event will overwrite <code>GetEventArgument()</code> for the outer event.</p>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Events</h2>
 	        <!--Quiz start.-->
-		<p>1) One of the aspects of difficulties that was not discussed above was displaying the difficulty in the top right corner of the STG_Frame. To do this, we generally utilize the System script. A key component of this implementation involves displaying no text before a difficulty has been selected. Which blocking code snippet best implements this requirement in accordance with standards for default variables?</p>
-	        <form method="POST" onSubmit="return checkAnswerA1(this, 'C');">
+		<p>1) Let's say that we have a Stage, a Player, and a System script. Each has a case block for EV_GRAZE. Suppose we have a graze-based extend system, where getting 1000 graze provides the player with a bomb. However, when running the game, grazing a single bullet seems to be adding more than one point to this extend system. What is the likely cause for the problem and a potential solution?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '6');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. <code>while (GetCommonData("Difficulty", 0) == 0) {yield;}</code><br>
+	        A. EV_GRAZE increments at most once per frame; Don't use EV_GRAZE<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. <code>if (GetCommonData("Difficulty", 0) == 0) {yield;}</code><br>
+	        B. Points are being incremented in multiple scripts; Remove duplicate incrementation code<br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. <code>while (GetCommonData("Difficulty", -1) == -1) {yield;}</code><br>
-	        <input type="RADIO" value="D" name="cc">
-	        D. <code>if (GetCommonData("Difficulty", -1) == -1) {yield;}</code><br>
+	        C. Intended Behavior<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) In a script whose gimmick is to steal a player's bomb if they time out a spellcard, which of the following events would be most effectively utilized for the removal of the player bomb if the scripter chose to utilize events for this problem?</p>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. EV_TIMEOUT <br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. EV_END_BOSS_STEP <br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. EV_REQUEST_TIMER <br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
-	          <li></li>
+	          <li>Events are called asynchronously</li>
+	          <li>Danmakufu Events can receive arguments and return values</li>
+	          <li>Danmakufu Events are often meant to be used in certain script types and may not function properly in other script types</li>
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
