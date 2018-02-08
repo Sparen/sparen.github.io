@@ -1,0 +1,109 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 26</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 26 - Utilizing EV_USER with NotifyEventAll. A guide on Danmakufu's User Events and NotifyEventAll."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Event, User, Notify, NotifyEventAll">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Feb 08, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u3l25.html" title="Sparen's Danmakufu ph3 Tutorials - Understanding and Manipulating @Event">Unit 3 Lesson 25</a></li>
+	        <li><span>Navigation Bar</span></li>
+	        <li><span>---</span></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 26 - Utilizing EV_USER with NotifyEventAll</h1>
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are User Events?</a></li>
+	          <li><a href="#sub3">Part 3: How do I use NotifyEvent?</a></li>
+	          <li><a href="#quiz1">Quiz: User Events</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
+	      <p>Continuing on from the previous tutorial, we will now cover user events and NotifyEventAll as a means for triggering these user created events. As this lesson is a continuation of the previous, it is highly recommended that you be familiar with Events in general before moving on to this lesson.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are User Events?</h2>
+	      <p>In the previous lesson, we covered Events in general, and how they are used in Danmakufu as well as how a scripter can execute code when a built-in event fires in Danmakufu.</p>
+	      <p>User Events are custom events that can be created by a scripter to fire whenever they want, and form the basis of most communication between Single Scripts, Stage Scripts, and Package Scripts. The number of uses available for User Events is essentially limitless - the most common uses are for spawning items, handling sound effects, and handling effects such as boss explosions which typically are not run inside a Single script due to them being performed after the boss battle has concluded (some scripters use a dummy single script with just the explosion).</p>
+	      <p>User Events come in a variety of flavors - EV_USER (1000000), EV_USER_SYSTEM (2000000), EV_USER_STAGE (3000000), EV_USER_PLAYER (4000000), and EV_USER_PACKAGE (5000000). Naturally, the different types are for different use cases.</p>
+	      <p>Note that each event constant corresponds to a number - the constants are essentially shorthand. So there are 1 million different possibilities for each category. For example:</p>
+		<pre class="prettyprint"><code>@Event {
+        alternative(GetEventType)
+        case(EV_USER_PLAYER) { }
+        case(EV_USER_PLAYER + 1) { }
+        case(EV_USER_PLAYER + 2) { }
+        // ... ... ...
+}</code></pre>
+	      <p>Do note that not all of these constants will be available at any given time - in a package, you may not be able to access EV_USER_PLAYER, for example. That being said, you will not be running out of possible events any time soon.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I use NotifyEvent?</h2>
+	      <p>Now, to use these custom events you must be able to call them somehow, as they are never triggered automatically. Triggering is done via <a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Script_Functions#NotifyEvent">NotifyEvent()</a> or <a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Script_Functions#NotifyEventAll">NotifyEventAll()</a> - for all practical purposes NotifyEvent is never used, as it requires the script ID. NotifyEventAll will hit every currently running script and if they have the given event in their @Event, the code will execute. This does mean that if you accidentally use the same event constant for two different things in two different places, both will get called, so be careful not to reuse event constants for different events.</p>
+	      <p><code>NotifyEventAll()</code> has a number of interesting features. First it takes the event type/constant (I.E. EV_USER_STAGE + 12) and then it takes parameters. Here is where it gets interesting.</p>
+	      <p>Say we want to spawn a boss explosion in the Stage script at the boss's position. In the Single script, before deleting the boss in our cleanup task (e.g. TFinalize), we can do the following:</p>
+		<pre class="prettyprint"><code>NotifyEventAll(EV_USER_STAGE+777, [ObjMove_GetX(objBoss), ObjMove_GetY(objBoss)]);</code></pre>
+	      <p>In the slot reserved for a single argument, we can pass an array of multiple values! Just be aware that arrays in Danmakufu can only hold a single type (i.e. only numbers or only strings), so if you want to pass types of different values, you will need to convert to a String and then parse afterwards.</p>
+	      <p>Speaking of that afterwards, what goes in @Event for our stage script?</p>
+		<pre class="prettyprint"><code>    case(EV_USER_STAGE+777){ //Boss Explosion
+        let arg = GetEventArgument(0); //x, y
+        BossExplosion(arg[0], arg[1]);
+    }</code></pre>
+	      <p>As you can see above, we use <code>GetEventArgument(0)</code> to retrieve the argument passed in <code>NotifyEventAll()</code>. This array can then be indexed to retrieve the boss's coordinates.</p>
+	      <p>There are many ways to use User Events - we will discuss Items and some other interesting features in following lessons.</p>
+	      <p>UNDER CONSTRUCTION BELOW</p>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Events</h2>
+	        <!--Quiz start.-->
+		<p>1) Let's say that we have a Stage, a Player, and a System script. Each has a case block for EV_GRAZE. Suppose we have a graze-based extend system, where getting 1000 graze provides the player with a bomb. However, when running the game, grazing a single bullet seems to be adding more than one point to this extend system. What is the likely cause for the problem and a potential solution?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '6');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. EV_GRAZE increments at most once per frame; Don't use EV_GRAZE<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. Points are being incremented in multiple scripts; Remove duplicate incrementation code<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. Intended Behavior<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) In a script whose gimmick is to steal a player's bomb if they time out a spellcard, which of the following events would be most effectively utilized for the removal of the player bomb if the scripter chose to utilize events for this problem?</p>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. EV_TIMEOUT <br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. EV_END_BOSS_STEP <br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. EV_REQUEST_TIMER <br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li></li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p><a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Miransu%27s_EV_USER_Guide" title="Miransu's EV USER Guide">Miransu's EV USER Guide</a> (Miransu)<br>--&gt;An older guide on getting started with User Events.</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l25.html" title="Sparen's Danmakufu ph3 Tutorials - Understanding and Manipulating @Event">Unit 3 Lesson 25</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>  </body></html>
