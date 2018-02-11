@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Feb 08, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body onload="setupENG('Feb 10, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
@@ -62,34 +62,24 @@
     }</code></pre>
 	      <p>As you can see above, we use <code>GetEventArgument(0)</code> to retrieve the argument passed in <code>NotifyEventAll()</code>. This array can then be indexed to retrieve the boss's coordinates.</p>
 	      <p>There are many ways to use User Events - we will discuss Items and some other interesting features in following lessons.</p>
-	      <p>UNDER CONSTRUCTION BELOW</p>
-	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Events</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: User Events</h2>
 	        <!--Quiz start.-->
-		<p>1) Let's say that we have a Stage, a Player, and a System script. Each has a case block for EV_GRAZE. Suppose we have a graze-based extend system, where getting 1000 graze provides the player with a bomb. However, when running the game, grazing a single bullet seems to be adding more than one point to this extend system. What is the likely cause for the problem and a potential solution?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '6');">
+		<p>1) In large projects, it is often inconvenient to load and play sound effects in each and every single script, as there are many sound effects that are inevitably left but not used, and there is a lot of code duplication. In this scenario, which of the following EV_USER categories are well-suited to handling sound effects in a stage script?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'C', '2');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. EV_GRAZE increments at most once per frame; Don't use EV_GRAZE<br>
+	        A. EV_USER_PLAYER<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. Points are being incremented in multiple scripts; Remove duplicate incrementation code<br>
+	        B. EV_USER_PACKAGE<br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. Intended Behavior<br>
-	        <input type="SUBMIT" value="Submit">
-	        </form>
-		<br>
-		<p>2) In a script whose gimmick is to steal a player's bomb if they time out a spellcard, which of the following events would be most effectively utilized for the removal of the player bomb if the scripter chose to utilize events for this problem?</p>
-	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'A');">
-	        <input type="RADIO" value="A" name="cc">
-	        A. EV_TIMEOUT <br>
-	        <input type="RADIO" value="B" name="cc">
-	        B. EV_END_BOSS_STEP <br>
-	        <input type="RADIO" value="C" name="cc">
-	        C. EV_REQUEST_TIMER <br>
+	        C. EV_USER<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
-	          <li></li>
+	          <li>Custom User Events that can be triggered by the user are provided by Danmakufu</li>
+	          <li>NotifyEvent and NotifyEventAll can be used to trigger User Events</li>
+	          <li>User Event constant IDs provide at least 1 million options per category</li>
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Miransu%27s_EV_USER_Guide" title="Miransu's EV USER Guide">Miransu's EV USER Guide</a> (Miransu)<br>--&gt;An older guide on getting started with User Events.</p>
