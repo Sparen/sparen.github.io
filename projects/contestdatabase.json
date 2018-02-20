@@ -450,10 +450,10 @@
             "year": 2018,
             "duration": [2018.01, 2018.02],
             "host": "WishMakers",
-            "judges": ["WishMakers"],
-            "numparticipants": 0,
+            "judges": ["WishMakers", "CreepyNinja", "Trickysticks"],
+            "numparticipants": 12,
             "result": [[], [], []],
-            "participants": []
+            "participants": ["JDude", "Python", "Conarnar", "GenoCraft", "Junky", "GCP", "Ultimadragon88", "TresserT", "The Terrible Bullet Dodger/auto2112", "Adam", "GhostPhanom", "AJS", "Arcvasti", "Vigor"]
         }
     ]
 }
