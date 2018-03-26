@@ -1,3 +1,5 @@
+"use strict";
+
 var database_obj;
 
 var NUMLOCATIONS = 3; //hardcoded. Refers to the location field in the JSON
@@ -73,7 +75,7 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     var displaystring = "";
     for (i = 0; i < years.length; i++) {
         displaystring = displaystring + years[i] + " - " +
-        "MotK: " + values[i][0] + "   |   LOCAA: " + values[i][1] + "   |   UWoM: " + values[i][2] + 
+        "MotK: " + values[i][0] + "   |   LOCAA: " + values[i][1] + "   |   UWoM: " + values[i][2] +
         "   |   Total: " + (values[i][0] + values[i][1] + values[i][2]) + "<br>";
     }
 
@@ -201,21 +203,23 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     for (i = 0; i < years.length; i++) { //points and years
         var temp_anpl_svg_motkcount = 10*anpl_averages[i][0];
         var temp_anpl_svg_locaacount = 10*anpl_averages[i][1];
+        var temp_anpl_svg_uwomcount = 10*anpl_averages[i][1];
         anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_motkcount) + '" r="2" stroke="white" stroke-width="0.5" fill="#66AAFF"></circle>';
         anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_locaacount) + '" r="2" stroke="white" stroke-width="0.5" fill="#66FFAA"></circle>';
+        anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_uwomcount) + '" r="2" stroke="white" stroke-width="0.5" fill="#CCCCCC"></circle>';
         anpl_svg += '<text x="' + (48 + i*32) + '" y="290" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
           'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[i] + '</text>';
     }
 
     //key
-    anpl_svg += '<rect x="' + (cpy_svg_width - 96) + '" y="96" height="8" width="8" fill="#66AAFF"></rect>';
-    anpl_svg += '<text x="' + (cpy_svg_width - 80) + '" y="100" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+    anpl_svg += '<rect x="' + (anpl_svg_width - 96) + '" y="96" height="8" width="8" fill="#66AAFF"></rect>';
+    anpl_svg += '<text x="' + (anpl_svg_width - 80) + '" y="100" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="start" dominant-baseline="central">MotK</text>';
-    anpl_svg += '<rect x="' + (cpy_svg_width - 96) + '" y="126" height="8" width="8" fill="#66FFAA"></rect>';
-    anpl_svg += '<text x="' + (cpy_svg_width - 80) + '" y="130" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+    anpl_svg += '<rect x="' + (anpl_svg_width - 96) + '" y="126" height="8" width="8" fill="#66FFAA"></rect>';
+    anpl_svg += '<text x="' + (anpl_svg_width - 80) + '" y="130" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="start" dominant-baseline="central">LOCAA</text>';
-    anpl_svg += '<rect x="' + (cpy_svg_width - 96) + '" y="156" height="8" width="8" fill="#CCCCCC"></rect>';
-    anpl_svg += '<text x="' + (cpy_svg_width - 80) + '" y="160" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+    anpl_svg += '<rect x="' + (anpl_svg_width - 96) + '" y="156" height="8" width="8" fill="#CCCCCC"></rect>';
+    anpl_svg += '<text x="' + (anpl_svg_width - 80) + '" y="160" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="start" dominant-baseline="central">UWoM</text>';
 
     anpl_svg += '<text x="' + (anpl_svg_width - 4) + '" y="314" font-family="Andale Mono, Monospace" font-size="6px" fill="#DDDDDD"' +
@@ -224,8 +228,8 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     anpl_svg += '</svg>';
 
     //OVERALL STATS
-    var anpl_totalnumcontests = [0, 0];
-    var anpl_totalnumparts = [0, 0];
+    var anpl_totalnumcontests = [0, 0, 0];
+    var anpl_totalnumparts = [0, 0, 0];
     for (i = 0; i < years.length; i++){
         anpl_totalnumcontests[0] += anpl_numcontests[i][0];
         anpl_totalnumparts[0] += anpl_numparts[i][0];
