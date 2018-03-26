@@ -342,7 +342,7 @@ function participantHistory() {
     "This feature allows you to select any number of participants, and a chart will be generated showing their participation, top three placement, and judging and hosting history over the span of multiple contests.<br><br>";
 
     ph_displaystring = ph_displaystring + "<form method='POST' onSubmit='return participantHistory_graphgen();'><input type='SUBMIT' value='Submit'></form>";
-    ph_displaystring = ph_displaystring + '<input type="checkbox" name="ph_controlmaster" defaultChecked="false" onclick="return participantHistory_toggleall(this, this.checked);"> Toggle All<br><br>'
+    ph_displaystring = ph_displaystring + '<input type="checkbox" name="ph_controlmaster" defaultChecked="false" onclick="return participantHistory_toggleall(this, this.checked);"> Toggle All<br><br>';
 
     //first, obtain list of all chartable people
     for (i = 0; i < contests.length; i++) {
