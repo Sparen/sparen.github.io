@@ -632,13 +632,7 @@ function execute() {
     }
 
     console.log("execute(): End");
-
-    // return "false" to indicate not to
-    // submit the form.
-    // change this to "true" if the form
-    // "action" is valid,
-    // i.e. points to a valid CGI script
-    //
+    
     return false;
 }
 
