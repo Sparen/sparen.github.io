@@ -95,9 +95,9 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
         var temp_cpy_svg_uwomcount = 10*values[i][2];
         cpy_svg += '<path d="M ' + (48 + i*16) + ' 230 V ' + (230 - temp_cpy_svg_motkcount) + '" stroke="#66AAFF" stroke-width="12" fill="none"></path>';
         cpy_svg += '<path d="M ' + (48 + i*16) + ' ' + (230 - temp_cpy_svg_motkcount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount) + '" stroke="#66FFAA" stroke-width="12" fill="none"></path>';
-        cpy_svg += '<path d="M ' + (48 + i*16) + ' ' + (230 - temp_cpy_svg_motkcount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount) + '" stroke="#CCCCCC" stroke-width="12" fill="none"></path>';
+        cpy_svg += '<path d="M ' + (48 + i*16) + ' ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount) + '" stroke="#CCCCCC" stroke-width="12" fill="none"></path>';
         cpy_svg += '<text x="' + (48 + i*16) + '" y="' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount - 2)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="white"' +
-          'text-anchor="middle" dominant-baseline="alphabetic">' + (values[i][0] + values[i][1]) + '</text>';
+          'text-anchor="middle" dominant-baseline="alphabetic">' + (values[i][0] + values[i][1] + values[i][2]) + '</text>';
         cpy_svg += '<text x="' + (48 + i*16) + '" y="250" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
           'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[i] + '</text>';
     }
