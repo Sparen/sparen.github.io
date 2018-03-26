@@ -48,17 +48,17 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     //First, find range of years and prepare arrays accordingly. This shows skipped years
     var min = contests[0].year;
     var max = contests[0].year;
-    for (i = 0; i < contests.length; i++) {
+    for (i = 0; i < contests.length; i += 1) {
         var temp = contests[i].year;
         if (temp > max) {max = temp;}
         if (temp < min && temp != -1) {min = temp;}
     }
-    for (i = min; i <= max; i++) {
+    for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
         values = values.concat([[0, 0, 0]]);
     }
 
-    for (i = 0; i < contests.length; i++) {
+    for (i = 0; i < contests.length; i += 1) {
         var temp = contests[i].year;
         if (contains(years, temp)) { //This statement is necessary for the -1 case
             var tempindex = 0;
@@ -73,7 +73,7 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     console.log("contestsPerYear(): Preparing Result");
     //var displaystring = "This feature is under construction";
     var displaystring = "";
-    for (i = 0; i < years.length; i++) {
+    for (i = 0; i < years.length; i += 1) {
         displaystring = displaystring + years[i] + " - " +
         "MotK: " + values[i][0] + "   |   LOCAA: " + values[i][1] + "   |   UWoM: " + values[i][2] +
         "   |   Total: " + (values[i][0] + values[i][1] + values[i][2]) + "<br>";
@@ -86,12 +86,12 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
         'xmlns:xlink="http://www.w3.org/1999/xlink">';
         //border
     cpy_svg += '<rect x="0" y="0" height="280" width="' + cpy_svg_width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
-    for (i = 0; i < 6; i++) { //lines
+    for (i = 0; i < 6; i += 1) { //lines
         cpy_svg += '<path d="M 48 ' + (230 - i*50) + ' H ' + (cpy_svg_width - 120) + '" stroke="#666666" stroke-width="1" fill="none"></path>';
         cpy_svg += '<text x="24" y="' + (230 - i*50)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="middle" dominant-baseline="central">' + (5*i) + '</text>';
     }
-    for (i = 0; i < years.length; i++) { //paths and text
+    for (i = 0; i < years.length; i += 1) { //paths and text
         var temp_cpy_svg_motkcount = 10*values[i][0];
         var temp_cpy_svg_locaacount = 10*values[i][1];
         var temp_cpy_svg_uwomcount = 10*values[i][2];
@@ -133,18 +133,18 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     //First, find range of years and prepare arrays accordingly. This shows skipped years
     var min = contests[0].year;
     var max = contests[0].year;
-    for (i = 0; i < contests.length; i++) {
+    for (i = 0; i < contests.length; i += 1) {
         var temp = contests[i].year;
         if (temp > max) {max = temp;}
         if (temp < min && temp != -1) {min = temp;}
     }
-    for (i = min; i <= max; i++) {
+    for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
         anpl_numcontests = anpl_numcontests.concat([[0, 0, 0]]); //range, locaa, uwom
         anpl_numparts = anpl_numparts.concat([[0, 0, 0]]);
     }
 
-    for (i = 0; i < contests.length; i++) {
+    for (i = 0; i < contests.length; i += 1) {
         var temp = contests[i].year;
         if (contains(years, temp)) { //This statement is necessary for the -1 case
             var tempindex = 0;
@@ -159,7 +159,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
 
     //assemble averages
     var anpl_averages = [];
-    for (i = 0; i < years.length; i++) {
+    for (i = 0; i < years.length; i += 1) {
         var temp_avg = [(anpl_numparts[i][0]/anpl_numcontests[i][0]).toFixed(2), (anpl_numparts[i][1]/anpl_numcontests[i][1]).toFixed(2), (anpl_numparts[i][2]/anpl_numcontests[i][2]).toFixed(2)];
         if (isNaN(temp_avg[0])) {temp_avg[0] = 0; console.log("anps(): 0 contests at " + years[i] + " at MotK");}
         if (isNaN(temp_avg[1])) {temp_avg[1] = 0; console.log("anps(): 0 contests at " + years[i] + " at LOCAA");}
@@ -170,7 +170,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     console.log("averageNumParticipantsLocation(): Preparing Result");
     //var displaystring = "This feature is under construction";
     var displaystring = "";
-    for (i = 0; i < years.length; i++) {
+    for (i = 0; i < years.length; i += 1) {
         displaystring = displaystring + years[i] + " - " +
         "MotK: #C: " + anpl_numcontests[i][0] + ", #P: " + anpl_numparts[i][0] + ", #Avg: " + anpl_averages[i][0] + "   |   LOCAA: #C: " + anpl_numcontests[i][1] + ", #P: " + anpl_numparts[i][1] + ", #Avg: " + anpl_averages[i][1] + "   |   UWoM: #C: " + anpl_numcontests[i][2] + ", #P: " + anpl_numparts[i][2] + ", #Avg: " + anpl_averages[i][2] + "<br>";
     }
@@ -183,13 +183,13 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
         //border
 
     anpl_svg += '<rect x="0" y="0" height="320" width="' + anpl_svg_width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
-    for (i = 0; i < 6; i++) { //lines
+    for (i = 0; i < 6; i += 1) { //lines
         anpl_svg += '<path d="M 48 ' + (270 - i*50) + ' H ' + (anpl_svg_width - 120) + '" stroke="#666666" stroke-width="1" fill="none"></path>';
         anpl_svg += '<text x="24" y="' + (270 - i*50)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="middle" dominant-baseline="central">' + (5*i) + '</text>';
     }
 
-    for (i = 0; i < years.length - 1; i++) { //paths
+    for (i = 0; i < years.length - 1; i += 1) { //paths
         var temp_anpl_svg_motkcount = 10*anpl_averages[i][0];
         var temp_anpl_svg_locaacount = 10*anpl_averages[i][1];
         var temp_anpl_svg_uwomcount = 10*anpl_averages[i][2];
@@ -200,7 +200,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
         anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_locaacount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_locaacount2) + '" stroke="#66FFAA" stroke-width="2" fill="none"></path>';
         anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_uwomcount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_uwomcount2) + '" stroke="#CCCCCC" stroke-width="2" fill="none"></path>';
     }
-    for (i = 0; i < years.length; i++) { //points and years
+    for (i = 0; i < years.length; i += 1) { //points and years
         var temp_anpl_svg_motkcount = 10*anpl_averages[i][0];
         var temp_anpl_svg_locaacount = 10*anpl_averages[i][1];
         var temp_anpl_svg_uwomcount = 10*anpl_averages[i][2];
@@ -230,7 +230,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     //OVERALL STATS
     var anpl_totalnumcontests = [0, 0, 0];
     var anpl_totalnumparts = [0, 0, 0];
-    for (i = 0; i < years.length; i++){
+    for (i = 0; i < years.length; i += 1){
         anpl_totalnumcontests[0] += anpl_numcontests[i][0];
         anpl_totalnumparts[0] += anpl_numparts[i][0];
         anpl_totalnumcontests[1] += anpl_numcontests[i][1];
@@ -255,12 +255,12 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
     //First, find range of years and prepare arrays accordingly. This shows skipped years
     var min = contests[0].year;
     var max = contests[0].year;
-    for (i = 0; i < contests.length; i++) {
+    for (i = 0; i < contests.length; i += 1) {
         var temp = contests[i].year;
         if (temp > max) {max = temp;}
         if (temp < min && temp != -1) {min = temp;}
     }
-    for (i = min; i <= max; i++) {
+    for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
     }
 
@@ -273,7 +273,7 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
         //border
 
     pot_svg += '<rect x="0" y="0" height="400" width="' + pot_svg_width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
-    for (i = 0; i < 7; i++) { //lines
+    for (i = 0; i < 7; i += 1) { //lines
         pot_svg += '<path d="M 48 ' + (320 - i*50) + ' H ' + (pot_svg_width - 120) + '" stroke="#666666" stroke-width="1" fill="none"></path>';
         pot_svg += '<text x="24" y="' + (320 - i*50)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="middle" dominant-baseline="central">' + (5*i) + '</text>';
@@ -281,8 +281,8 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
 
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    for (i = 0; i < years.length; i++) { //years
-        for (j = 0; j < 12; j++) {
+    for (i = 0; i < years.length; i += 1) { //years
+        for (j = 0; j < 12; j += 1) {
             pot_svg += '<text x="' + (48 + i*32*6 + j*16) + '" y="350" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
             'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + (months[j] + " " + years[i]) + '</text>';
         }
@@ -306,7 +306,7 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
     //And now, the data points. Rectangles will be used here.
     var displaystring = ""; //to log when contest data is unknown
     var textlabels = ""; //so that all text rendered on a higher layer
-    for (i = 0; i < contests.length; i++) { //for each contest
+    for (i = 0; i < contests.length; i += 1) { //for each contest
         var results = fetchstartendcolor(contests[i]);
         var pot_start = results.startval;
         var pot_end = results.endval;
@@ -345,14 +345,14 @@ function participantHistory() {
     ph_displaystring = ph_displaystring + '<input type="checkbox" name="ph_controlmaster" defaultChecked="false" onclick="return participantHistory_toggleall(this, this.checked);"> Toggle All<br><br>';
 
     //first, obtain list of all chartable people
-    for (i = 0; i < contests.length; i++) {
+    for (i = 0; i < contests.length; i += 1) {
         var ph_judges = contests[i].judges;
         var ph_host = contests[i].host;
         var ph_participants = contests[i].participants;
 
         //For obtaining all participants, dropdown list
         var ph_temp;
-        for (j = 0; j < ph_judges.length; j++) {
+        for (j = 0; j < ph_judges.length; j += 1) {
             ph_temp = ph_judges[j];
             if(!contains(allparticipants, ph_temp)) {
                 allparticipants = allparticipants.concat(ph_temp);
@@ -361,7 +361,7 @@ function participantHistory() {
         if(!contains(allparticipants, ph_host)) {
             allparticipants = allparticipants.concat(ph_host);
         }
-        for (j = 0; j < ph_participants.length; j++) {
+        for (j = 0; j < ph_participants.length; j += 1) {
             ph_temp = ph_participants[j];
             if(!contains(allparticipants, ph_temp)) {
                 allparticipants = allparticipants.concat(ph_temp);
@@ -377,7 +377,7 @@ function participantHistory() {
             contestdisplay = contestdisplay + "Host: N/A" + '<br>';
         }
         contestdisplay = contestdisplay + "Judges: <br>";
-        for (j = 0; j < ph_judges.length; j++) {
+        for (j = 0; j < ph_judges.length; j += 1) {
             ph_temp = ph_judges[j];
             if(ph_temp != "COMMUNITY" && ph_temp != "GUEST" && ph_temp != "") {
                 contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_temp + '" defaultChecked="false">' + ph_temp + '<br>';
@@ -386,14 +386,14 @@ function participantHistory() {
             }
         }
         contestdisplay = contestdisplay + 'Participants: <br><table style="width:100%"><tr>'; //DON'T SHOW THE MISSHAPEN BORDER PLZ
-        for (j = 0; j < ph_participants.length; j++) {
+        for (j = 0; j < ph_participants.length; j += 1) {
             ph_temp = ph_participants[j];
             contestdisplay = contestdisplay + '<td><input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_temp + '" defaultChecked="false">' + ph_temp + '</td>';
             if (j % 5 == 4) {
                 contestdisplay = contestdisplay + '</tr><tr>';
             }
         }
-        for (j = ph_participants.length; j % 5 != 0; j++) { //buffer space
+        for (j = ph_participants.length; j % 5 != 0; j += 1) { //buffer space
             contestdisplay = contestdisplay + '<td></td>';
         }
         contestdisplay = contestdisplay + "</tr></table>";
@@ -407,7 +407,7 @@ function participantHistory() {
 function participantHistory_selectbycontest(contestid, parent, newval) {
     console.log("participantHistory_selectbycontest(): Running");
     var ph_checked = document.getElementsByClassName("ph_" + contestid);
-    for (i = 0; i < ph_checked.length; i++) {
+    for (i = 0; i < ph_checked.length; i += 1) {
         ph_checked[i].checked = newval;
     }
     parent.checked = newval; //Some weird error where it stays unchecked when you check it. whelp.
@@ -417,7 +417,7 @@ function participantHistory_selectbycontest(contestid, parent, newval) {
 function participantHistory_toggleall(parent, newval) {
     console.log("participantHistory_toggleall(): Running");
     var ph_checked = document.getElementsByName("ph_participant");
-    for (i = 0; i < ph_checked.length; i++) {
+    for (i = 0; i < ph_checked.length; i += 1) {
         ph_checked[i].checked = newval;
     }
     parent.checked = newval; //Some weird error where it stays unchecked when you check it. whelp.
@@ -429,7 +429,7 @@ function participantHistory_graphgen() { //call with a button call
     //Read and obtain all selected names
     var ph_checked = document.getElementsByName("ph_participant");
     var phgg_selpartic = [];
-    for (i = 0; i < ph_checked.length; i++) {
+    for (i = 0; i < ph_checked.length; i += 1) {
         var phggtemp = ph_checked[i].id;
         if(!contains(phgg_selpartic, phggtemp) && ph_checked[i].checked) {
                 phgg_selpartic = phgg_selpartic.concat(phggtemp);
@@ -443,12 +443,12 @@ function participantHistory_graphgen() { //call with a button call
     //First, find range of years and prepare arrays accordingly. This shows skipped years
     var min = contests[0].year;
     var max = contests[0].year;
-    for (i = 0; i < contests.length; i++) {
+    for (i = 0; i < contests.length; i += 1) {
         var temp = contests[i].year;
         if (temp > max) {max = temp;}
         if (temp < min && temp != -1) {min = temp;}
     }
-    for (i = min; i <= max; i++) {
+    for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
     }
 
@@ -465,8 +465,8 @@ function participantHistory_graphgen() { //call with a button call
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
     //144 is the buffer on the left (for names). 128 is the buffer on the right (for the key)
     var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    for (i = 0; i < years.length; i++) { //years
-        for (j = 0; j < 12; j++) {
+    for (i = 0; i < years.length; i += 1) { //years
+        for (j = 0; j < 12; j += 1) {
             phgg_svg += '<text x="' + (144 + i*32*6 + j*16) + '" y="' + (phgg_svg_height - 108) + '" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
             'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + (months[j] + " " + years[i]) + '</text>';
         }
@@ -492,7 +492,7 @@ function participantHistory_graphgen() { //call with a button call
     //And now, the data points. Rectangles will be used here.
     var displaystring = ""; //to log when contest data is unknown
     var textlabels = ""; //so that all text rendered on a higher layer
-    for (i = 0; i < contests.length; i++) { //for each contest
+    for (i = 0; i < contests.length; i += 1) { //for each contest
         var results = fetchstartendcolor(contests[i]);
         var phgg_start = results.startval;
         var phgg_end = results.endval;
@@ -513,7 +513,7 @@ function participantHistory_graphgen() { //call with a button call
     phgg_svg += textlabels; //labels with contest ID
 
     //Now it's time to add the participants! Oh boy what a... uh... treat!
-    for (j = 0; j < phgg_selpartic.length; j++) { //for each and every player.
+    for (j = 0; j < phgg_selpartic.length; j += 1) { //for each and every player.
         var phgg_player = phgg_selpartic[j];
         var phggplay_start = 0; //start pixel of line
         var phggplay_end = 0; //end pixel of line
@@ -523,7 +523,7 @@ function participantHistory_graphgen() { //call with a button call
         var phgg_nodes = "";
 
         //Now to iterate over all the contests in search of the name!
-        for (k = 0; k < contests.length; k++) { //for each contest
+        for (k = 0; k < contests.length; k += 1) { //for each contest
             var contestobj = contests[k];
             var phggindiv_results = fetchstartendcolor(contests[k]);
             var phggindiv_start = phggindiv_results.startval;
@@ -541,7 +541,7 @@ function participantHistory_graphgen() { //call with a button call
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + (16 + j*16) + '" r="5" stroke="#FFFFFF" stroke-width="1" fill="#222222"></circle>';
                 }
                 var topthree = false;
-                for(l = 0; l < contestobj.result.length; l++) {
+                for(l = 0; l < contestobj.result.length; l += 1) {
                     if(contains(contestobj.result[l], phgg_player)){
                         topthree = true;
                     }
