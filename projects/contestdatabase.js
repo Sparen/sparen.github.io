@@ -1,4 +1,4 @@
-"use strict";
+//use strict will result in unwanted problems. Don't use it here.
 
 var database_obj;
 
