@@ -53,7 +53,7 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     }
     for (i = min; i <= max; i++) {
         years = years.concat([i]);
-        values = values.concat([[0, 0]]);
+        values = values.concat([[0, 0, 0]]);
     }
 
     for (i = 0; i < contests.length; i++) {
