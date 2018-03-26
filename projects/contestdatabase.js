@@ -203,7 +203,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     for (i = 0; i < years.length; i++) { //points and years
         var temp_anpl_svg_motkcount = 10*anpl_averages[i][0];
         var temp_anpl_svg_locaacount = 10*anpl_averages[i][1];
-        var temp_anpl_svg_uwomcount = 10*anpl_averages[i][1];
+        var temp_anpl_svg_uwomcount = 10*anpl_averages[i][2];
         anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_motkcount) + '" r="2" stroke="white" stroke-width="0.5" fill="#66AAFF"></circle>';
         anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_locaacount) + '" r="2" stroke="white" stroke-width="0.5" fill="#66FFAA"></circle>';
         anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_uwomcount) + '" r="2" stroke="white" stroke-width="0.5" fill="#CCCCCC"></circle>';
