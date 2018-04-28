@@ -323,7 +323,7 @@
             "judges": ["TalosMistake", "ExPorygon/Ozzy840", "Lunarethic"],
             "numparticipants": 19,
             "result": [["AJS"], ["Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"], ["TresserT"]],
-            "participants": ["AJS", "Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada/Ephy", "AchySolrock", "Dark/Ran Yakumo", "Gizmo the Dragon", "Midnight Sparkle", "The Terrible Bullet Dodger/auto2112", "Uruwi/Fluffy8x"]
+            "participants": ["AJS", "Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada/Ephy", "AchySolrock", "Dark/Ran Yakumo", "Gizmo the Dragon", "Middy/Midnight Sparkle", "The Terrible Bullet Dodger/auto2112", "Uruwi/Fluffy8x"]
         },
         {
             "id": "range15",
@@ -464,9 +464,9 @@
             "duration": [2018.03, 2018.04],
             "host": "Koukou",
             "judges": ["Koukou", "om the nom", "Tony64"],
-            "numparticipants": 0,
+            "numparticipants": 8,
             "result": [[], [], []],
-            "participants": []
+            "participants": ["RemindMeToCheck", "Alice Matroy/SKN", "Haru", "The Terrible Bullet Dodger/auto2112", "Adam", "Oelesp", "DrytheMeowstic", "Samario", "Middy/Midnight Sparkle", "Vigor"]
         }
     ]
 }
