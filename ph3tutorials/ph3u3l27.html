@@ -1,0 +1,106 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 27</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 27 - Basics of Items. A guide on Danmakufu's User Events and NotifyEventAll."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Event, User, Notify, NotifyEventAll">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Apr 28, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u3l26.html" title="Sparen's Danmakufu ph3 Tutorials - Utilizing EV_USER with NotifyEventAll">Unit 3 Lesson 26</a></li>
+	        <li><span>Navigation Bar</span></li>
+	        <li><span>---</span></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 27 - Basics of Items</h1>
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
+	          <li><a href="#sub2">Part 2: How do I create and manipulate Item Objects?</a></li>
+	          <li><a href="#sub3">Part 3: How do I spawn Item Objects when using AutoDelete?</a></li>
+	          <li><a href="#quiz1">Quiz: Items in Danmakufu</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
+	      <p>In this lesson, we will cover items in Danmakufu. We will discuss the default Item Objects and functions that can be used on Items, as well as how to create Item Objects using Events in Danmakufu. This lesson requires knowledge on NotifyEventAll, so please review Lessons 25 and 26 if you are not familiar with how Events work. This lesson assumes that you are at the stage in your Danmakufu career where you are always using Stage Scripts to handle script-wide events/music/loading plurals.</p>
+	      <p>Creating custom items will be left for a later guide and will not be covered in this lesson.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: How do I create and manipulate Item Objects?</h2>
+	      <p>In Danmakufu, items are objects that can be 'collected' by the player. By default, they fly upwards then fall vertically downwards. If the player goes above the autocollect line, all items currently on-screen will fly at the player until collected or something happens to the player (death, etc).</p>
+	      <p>We use <code>CreateItemA1()</code> and <code>CreateItemA2()</code> to create default items in Danmakufu. For reference, refer to <a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Item_Functions">Item Function Documentation</a> on the DNH Wiki. Here you can see that <code>CreateItemA1()</code> takes four parameters, the first being the type of the item. This can be one of the following: ITEM_1UP, ITEM_SPELL, ITEM_POINT, ITEM_POWER, ITEM_USER, and _S variants of the first four. The other parameters are the starting position and score value for collecting the item. <code>CreateItemA2</code> is similar but allows you to specify a destination to move to.</p>
+	      <p>Besides these, there a number of other helpful functions. <code>CollectAllItems()</code> will force all items on-screen to move at the player (helpful when the player bombs/uses a spellcard). <code>CollectItemsInCircle()</code> does something similar but only in a circle that can be placed anywhere on-screen, while <code>CollectItemsByType()</code> only works on a certain object type.</p>
+	      <p>In addition, it is necessary to mention Bullet Delete Items - these special items are created when bullets are deleted (such as at the end of a spellcard or by a player bomb/spellcard). These are the small items that fly at the player and award points for clearing bullets.</p>
+	      <p>Note that <code>CreateItemA1()</code> and <code>CreateItemA2()</code> return the object IDs of the created objects, allowing you to perform ObjMove and ObjRender functions on them. In addition, you can utilize <a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Item_Object_Functions">Item Object Functions</a> on them. You can use <code>ObjItem_SetRenderScoreEnable()</code> to control whether the score is rendered on collection, for example. <code>ObjItem_SetAutoCollectEnable()</code> allows you to decide whether or not the item can be autocollected when the player moves above the item autocollect line. In addition, <code>ObjItem_SetDefinedMovePatternA1()</code> allows you to change item movement behavior - as noted earlier, items by default fly upwards before falling down. This function provides ITEM_MOVE_DOWN and ITEM_MOVE_TOPLAYER - the former removes the flying upwards before falling while the latter makes the item aim at the player immediately.</p>
+	      <p>Now that we have an understanding of the types of functions we can use, if you were to actually *use* <code>CreateItemA1()</code> or <code>CreateItemA2()</code>, you will likely be surprised to see that none of the created items actually *do* anything when collected. Well, the score works. But Point items do not increase points, 1UPs don't give extends/extra lives, and Spell items don't add spellcards/bombs. By default, all of this behavior is nonexistent and must be added by the scripter.</p>
+	      <p>Custom items and item scripts will be explored in a later guide.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I spawn Item Objects when using AutoDelete?</h2>
+	      <p>For now, let's get back to actually spawning items. Of course you can just call <code>CreateItemA1()</code> whenever you want to, but you typically spawn items at the end of a script. The problem here, of course, is that if <code>SetAutoDeleteObject()</code> is set to true to do automatic cleanup of your Single's objects, the objects you create at the end of your script will be purged along with everything else.</p>
+	      <p>To rectify this, we must make the objects spawn in a different script.</p>
+	      <p>What?! you may be thinking to yourself. It is a roundabout solution but it is also one that is reliable and scalable. We will define user events in our stage script and then trigger these events from within our Single script.</p>
+	      <p>First, the stage script:</p>
+		<pre class="prettyprint"><code>@Event{
+    alternative(GetEventType())
+    case(EV_USER_STAGE+1){ //Generic Spell point drop
+        let arg = GetEventArgument(0); //x, y
+        CreateItemA1(ITEM_POINT, arg[0], arg[1], 15000);
+    }
+    case(EV_USER_STAGE+2){ //Generic Spell point drop
+        let arg = GetEventArgument(0); //x, y
+        ascent(i in 0..12){
+            CreateItemA1(ITEM_POINT, arg[0] + 30*cos(30*i), arg[1] + 30*sin(30*i), 15000);
+        }
+    }
+    ...
+}</code></pre>
+	      <p>Here we have two events for spawning items - one that spawns a single ITEM_POINT at a position passed as a parameter via NotifyEventAll, and one that spawns a ring of 12 ITEM_POINT in radius 30 from the provided spawn point.</p>
+	      <p>As for triggering? In TFinalize or wherever you handle the end of the script, call something along the lines of the following. Make sure you call it <b>BEFORE</b> you delete the boss object, or the item will spawn at (0,0).</p>
+		<pre class="prettyprint"><code>NotifyEventAll(EV_USER_STAGE+2, [ObjMove_GetX(objBoss), ObjMove_GetY(objBoss)]);</code></pre>
+	      <p>Here we have an event call that passes the current position of the boss in as the event argument, in the form of an array. And voila, we've spawned a bunch of items.</p>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Items in Danmakufu</h2>
+	        <!--Quiz start.-->
+		<p>1) Eirin is making programmable suppository-shaped items that she intends to sneak into Reisen's bullet collection. How can she ensure that when fired, they aim straight for the player?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '2');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>ObjItem_SetRenderScoreEnable()</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. <code>ObjItem_SetDefinedMovePatternA1()</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. <code>ObjItem_SetAutoCollectEnable()</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li>Items in Danmakufu are objects that can be collected by the player</li>
+	          <li>Items in Danmakufu are a subtype of Move and Render Objects</li>
+	          <li>By default, Items are purely graphical/score and do not have extra functionality built in</li>
+	          <li>NotifyEventAll can be used to create items in a different script, bypassing autodeletion restrictions</li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p><a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Sparen%27s_Basic_Ph3_Item_Tutorial" title="Sparen's Basic Ph3 Item Tutorial">Sparen's Basic Ph3 Item Tutorial</a> (Sparen of Iría)<br>--&gt;Original tutorial explaining NotifyEventAll usage to circumvent Item Object autodeletion</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l26.html" title="Sparen's Danmakufu ph3 Tutorials - Utilizing EV_USER with NotifyEventAll">Unit 3 Lesson 26</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>  </body></html>
