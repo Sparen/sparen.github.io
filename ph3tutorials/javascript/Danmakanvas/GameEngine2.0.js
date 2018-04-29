@@ -88,6 +88,8 @@ function draw_main(canvasid) {
     for (i = 0; i < bullets.length; i += 1) {
         bullets[i].draw();
     }
+    myGameArea.context.font = "12px Arial";
+    myGameArea.context.fillText("Danmakanvas v2.0 ~ Bullet Count: " + (bullets.length).toString(), 4, 12);
 }
 
 /* **************** Object Constructors **************** */

@@ -5,10 +5,10 @@
 "use strict";
 
 //Controller that determines which attacks to display
-function getPluralController(canvasid) {
+function getPluralController(currgame, canvasid) {
     switch(canvasid) {
         case "gamecanvas_1":
-            return new Plural_1();
+            return new Plural_1(currgame);
             break;
         default:
             console.log("getPluralController(): Canvas ID " + canvasid + " could not be recognized. Please check to make sure that the canvas ID is correct and/or supported.");
@@ -16,8 +16,8 @@ function getPluralController(canvasid) {
 }
 
 //Constructor for a Plural
-function Plural_1() {
-    var singles = [new Single_1()];
+function Plural_1(currgame) {
+    var singles = [new Single_1(currgame)];
     this.step = 0; //Starting single
     this.update = function () {
         singles[this.step].update();
@@ -28,11 +28,11 @@ function Plural_1() {
 }
 
 //Constructor for a Single
-function Single_1() {
+function Single_1(currgame) {
     var tasks = [];
     //Push Starting/Continuous Tasks here:
-    tasks.push(new Single_1_Task_Shiki(1, 64, "aquamarine", "aquamarine"));
-    tasks.push(new Single_1_Task_Shiki(-1, 64, "pink", "pink"));
+    tasks.push(new Single_1_Task_Shiki(1, 64, "aquamarine", "aquamarine", currgame));
+    tasks.push(new Single_1_Task_Shiki(-1, 64, "pink", "pink", currgame));
     //In update, push tasks that run every x frames
     this.update = function () { //Main Loop
         //Remove completed tasks
@@ -54,7 +54,7 @@ function Single_1() {
     }
 }
 
-function Single_1_Task_Shiki(dir, dist, color, color2) {
+function Single_1_Task_Shiki(dir, dist, color, color2, currgame) {
     this.counter = 0;
     this.maxcounter = -1; //maximum time allowed for task to run. Use -1 for non-terminating tasks
     this.finished = false;
@@ -62,15 +62,15 @@ function Single_1_Task_Shiki(dir, dist, color, color2) {
     this.update = function () {
         //Comment out counter check for nonterminating tasks
         //render shiki as a bullet that lasts one frame
-        var selfshot = new EnemyShot(192 + dir * dist, 224, 0, 0, 0, 5, color2, 3, 5, 1, 4, 1);
-        bullets.push(selfshot);
-        if (everyinterval(75)) { 
+        var selfshot = new EnemyShot(192 + dir * dist, 224, 0, 0, 0, 5, color2, 3, 5, 1, 4, 1, currgame);
+        currgame.bullets.push(selfshot);
+        if (currgame.everyinterval(75)) { 
             var i;
             for (i = 0; i < 36; i++) {
-                var newshot = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 + 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1);
-                bullets.push(newshot);
-                var newshot2 = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 - 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1);
-                bullets.push(newshot2);
+                var newshot = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 + 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1, currgame);
+                currgame.bullets.push(newshot);
+                var newshot2 = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 - 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1, currgame);
+                currgame.bullets.push(newshot2);
             }
         }
         this.counter += 1; //increment counter
