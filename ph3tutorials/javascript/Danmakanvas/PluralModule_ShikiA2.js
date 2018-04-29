@@ -1,5 +1,5 @@
 //Plural Module
-//Rotating Familiars: For use with Lesson 28
+//Side Familiars: For use with Lesson 28
 //Copyright Andrew Fan 2018
 
 "use strict";
@@ -31,11 +31,8 @@ function Plural_1() {
 function Single_1() {
     var tasks = [];
     //Push Starting/Continuous Tasks here:
-    var i;
-    for (i = 0; i < 6; i += 1) {
-        tasks.push(new Single_1_Task_Shiki(i, 6, 1, 48, "aquamarine", "blue"));
-        tasks.push(new Single_1_Task_Shiki(i, 6, -1, 96, "pink", "red"));
-    }
+    tasks.push(new Single_1_Task_Shiki(1, 64, "aquamarine", "aquamarine"));
+    tasks.push(new Single_1_Task_Shiki(-1, 64, "pink", "pink"));
     //In update, push tasks that run every x frames
     this.update = function () { //Main Loop
         //Remove completed tasks
@@ -57,25 +54,23 @@ function Single_1() {
     }
 }
 
-function Single_1_Task_Shiki(ID, numinring, dir, rad, color, color2) {
+function Single_1_Task_Shiki(dir, dist, color, color2) {
     this.counter = 0;
     this.maxcounter = -1; //maximum time allowed for task to run. Use -1 for non-terminating tasks
     this.finished = false;
 
-    this.angleT = ID*Math.PI*2/numinring;
     this.update = function () {
         //Comment out counter check for nonterminating tasks
-        this.angleT = ID*Math.PI*2/numinring + this.counter*0.02*dir;
-        var shikix = 192 + rad*Math.cos(this.angleT);
-        var shikiy = 224 + rad*Math.sin(this.angleT);
         //render shiki as a bullet that lasts one frame
-        var selfshot = new EnemyShot(shikix, shikiy, 0, 0, 0, 5, color2, 8, 4, 1, 4, 1);
+        var selfshot = new EnemyShot(192 + dir * dist, 224, 0, 0, 0, 5, color2, 3, 5, 1, 4, 1);
         bullets.push(selfshot);
-        if (everyinterval(20)) { 
+        if (everyinterval(75)) { 
             var i;
-            for (i = 0; i < 3; i++) {
-                var newshot = new EnemyShot(shikix, shikiy, 1.5, this.angleT + Math.PI + i * toRadians(120), 0, 5, color, 3, 5, 0.75, 4, -1);
+            for (i = 0; i < 36; i++) {
+                var newshot = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 + 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1);
                 bullets.push(newshot);
+                var newshot2 = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 - 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1);
+                bullets.push(newshot2);
             }
         }
         this.counter += 1; //increment counter
