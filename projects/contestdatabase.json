@@ -464,9 +464,9 @@
             "duration": [2018.03, 2018.04],
             "host": "Koukou",
             "judges": ["Koukou", "om the nom", "Tony64"],
-            "numparticipants": 8,
+            "numparticipants": 7,
             "result": [[], [], []],
-            "participants": ["RemindMeToCheck", "Alice Matroy/SKN", "Haru", "The Terrible Bullet Dodger/auto2112", "Adam", "Oelesp", "DrytheMeowstic", "Samario", "Middy/Midnight Sparkle", "Vigor"]
+            "participants": ["Alice Matroy/SKN", "Haru", "The Terrible Bullet Dodger/auto2112", "Adam", "Oelesp", "DrytheMeowstic", "Samario", "Middy/Midnight Sparkle", "Vigor"]
         }
     ]
 }
