@@ -1,0 +1,168 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 28</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 28 - Implementing Stage Enemies and Familiars. A guide on creating both familiars and stage enemies in Danmakufu ph3."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Familiar, Shikigami, Stage, Enemy">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Apr 29, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+            <div class="tutnavbar">
+	      <ul>
+	        <li><a href="./ph3u3l27.html" title="Sparen's Danmakufu ph3 Tutorials - Basics of Items">Unit 3 Lesson 27</a></li>
+	        <li><span>Navigation Bar</span></li>
+	        <li><span>---</span></li>
+	      </ul>
+            </div>            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 28 - Implementing Stage Enemies and Familiars</h1>
+	      <div class="tutorialnav">
+	        <h2 style="color:aqua">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
+	          <li><a href="#sub2">Part 2: How do I implement Familiars?</a></li>
+	          <li><a href="#sub3">Part 3: What are Stage Enemies?</a></li>
+	          <li><a href="#sub4">Part 4: How do I implement Stage Enemies (Function Style)?</a></li>
+	          <li><a href="#sub5">Part 5: How do I implement Stage Enemies (Script Style)?</a></li>
+	          <li><a href="#quiz1">Quiz: Familiars and Stage Enemies</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
+	      <p>In this lesson, we will discuss the primary gameplay component of Stage Scripts - Stage Enemies. In addition, we will cover boss familiars/enemy familiars in general, as they can provide similar or supplementary roles. For this lesson, it is assumed that you have worked with Plural scripts to the extent by which you understand how bullet trajectories affect gameplay, difficulty, and balancing. In addition, you must have a good understanding of ObjMove and ObjRender functions, as we will be using them heavily.</p>
+	      <p>Now, let's briefly review why Familiars and Stage Enemies are important.</p>
+	      <p>First, it is often preferable to have all bullets originating at the boss or at some location relative to the boss (IE ring around boss/spiral from boss). It may even be preferable to have bullets simply spawn at a static position on the screen or in a formation relative to the playing field/player. But in many cases, attaching a bullet spawner to a static or moving object (familiar) can provide depth to gameplay. From a Touhou perspective, Touhou 8 - Imperishable Night has some of the most complex and varied uses of familiars, and it can be said that the combination of familiars and stage enemies is a major component in the richness of the game's overall gameplay.</p>
+	      <p>By having a number of different familiars all doing the same thing but in different locations, with perhaps different firing angles, we create a pattern that is immediately recognizable for what it is (often because it is symmetric). The bullets are not being spawned at the boss, providing different angles to dodge. There are so many different ways to use familiars that it is beyond the scope of this lesson to describe their varied usage, although we will cover some brief examples.</p>
+	      <p>As for Stage Enemies, stages wouldn't be complete without them. Stage enemies can appear anywhere on the screen, and can fire bullets in any direction, in any frequency, and in ways that require the player to strategize/move in a certain way. While familiars are typically linked to some 'master' enemy, stage enemies can be entirely autonomous or, more often than not, part of a pattern. Of course, level design is beyond the scope of this particular lesson, but how you use stage enemies is key to the success of a stage.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: How do I implement Familiars?</h2>
+	      <p>Let's begin implementation with familiars. For the purposes of this lesson, a Familiar is simply a render object that moves in a predefined pattern either relative to the gameplay area or an enemy such as the boss. Familiars typically spawn bullets from their position. Note that it is possible to use a bullet as a familiar to provide it with a hitbox, but the concept is fundamentally the same.</p>
+	      <p>Let's begin with a typical example. Given an enemy, create a task that spawns a familiar. We will review three different examples - one where familiars rotate around the parent object's position and fire bullets relative to their angle from the parent object, one where familiars are positioned relative to their parent object (similarly to player options), and one where familiars are positioned relative to the screen.</p>
+	      <p>First, rotating familiars. We will want a task that takes an ID (to note which familiar in the ring they are), the total number of familiars in the ring (to control spacing dynamically), the direction to rotate in, and the radius to spawn from the parent object. We'll begin with a basic example, where the familiars fire three bullets each at 120 degree offsets, angled towards the boss.</p>
+		<pre class="prettyprint"><code>    //This example uses a graphic as the familiar
+    @MainLoop {
+        if(count == 0){
+            ascent(i in 0..6) {CreateShikiA1G(i, 6, 1, 48);}
+        }
+
+        count++;
+        yield;
+    }
+
+    task CreateShikiA1G(ID, num, dir, rad) {
+        let objcount = 0; //counter to control firing of bullets and movement
+        let angleO = ID*360/num; //Initial angle (will be updated)
+        //obtain object ID
+	let graphic = GetCurrentScriptDirectory() ~ "./../img/familiar.png"; //Define path
+	let obj = ObjPrim_Create(OBJ_SPRITE_2D);
+	ObjPrim_SetTexture(obj, graphic);
+	ObjSprite2D_SetSourceRect(obj, 0, 0, 64, 64); //use whatever dimensions necessary
+	ObjSprite2D_SetDestCenter(obj);
+	ObjRender_SetBlendType(obj, BLEND_ADD_ARGB);
+        while(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) > 0) { //linked to the parent enemy's life
+            //ID*360/num sets the angle relative to the other familiars. objcount*dir handles the rotation
+            angleO = ID*360/num + objcount*dir; //Update angle
+            ObjRender_SetPosition(obj, ObjMove_GetX(objEnemy) + rad*cos(angleO), 
+                                       ObjMove_GetY(objEnemy) + rad*sin(angleO), 1); 
+            ObjRender_SetAngleZ(obj, angleO); 
+
+            if (objcount % 12 == 0) { //control firing rate
+                let currx = ObjRender_GetX(obj);
+                let curry = ObjRender_GetY(obj);
+                ascent(i in 0..3) {
+                    CreateShotA1(currx, curry, 1.5, angleO + 180 + i * 120, 5, 0);
+                }
+            }
+
+            objcount++;
+            yield;
+        }
+        Obj_Delete(obj);
+    }</code></pre>
+<hr>
+		<pre class="prettyprint"><code>    //This example uses a bullet as the familiar
+    @MainLoop {
+        if(count == 0){
+            ascent(i in 0..6) {CreateShikiA1B(i, 6, 1, 48);}
+        }
+
+        count++;
+        yield;
+    }
+
+    task CreateShikiA1B(ID, num, dir, rad) {
+        let objcount = 0; //counter to control firing of bullets and movement
+        let angleO = ID*360/num; //Initial angle (will be updated)
+        //obtain object ID
+        let obj = CreateShotA1(ObjMove_GetX(objEnemy), ObjMove_GetY(objEnemy), 0, ID*360/num, 29, 0); 
+        //If using a bullet as a familiar, ensure it doesn't get accidentally deleted
+        ObjShot_SetSpellResist(obj, true); 
+        ObjShot_SetAutoDelete(obj, false);
+        while(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) > 0) { //linked to the parent enemy's life
+            //ID*360/num sets the angle relative to the other familiars. objcount*dir handles the rotation
+            angleO = ID*360/num + objcount*dir; //Update angle
+            ObjMove_SetPosition(obj, ObjMove_GetX(objEnemy) + rad*cos(angleO), 
+                                     ObjMove_GetY(objEnemy) + rad*sin(angleO)); 
+            ObjMove_SetAngle(obj, angleO); 
+
+            if (objcount % 12 == 0) { //control firing rate
+                let currx = ObjMove_GetX(obj);
+                let curry = ObjMove_GetY(obj);
+                ascent(i in 0..3) {
+                    CreateShotA1(currx, curry, 1.5, angleO + 180 + i * 120, 5, 0);
+                }
+            }
+
+            objcount++;
+            yield;
+        }
+        ObjShot_FadeDelete(obj);
+    }</code></pre>
+	      <p>Above we have two examples, one using a graphic for the familiar (using ObjRender functions to position the familiar), and one using a bullet for the familiar (using ObjMove functions to position the familiar). As you can see, most of the work involved is recalculating the angle and position each frame. The parameters we pass in allow for us to configure the familiars - we could do <code>ascent(i in 0..12) {CreateShikiA1B(i, 12, 1, 48);}</code> to double the number of familiars in the single ring or <code>ascent(i in 0..6) {CreateShikiA1B(i, 6, 1, 48); CreateShikiA1B(i, 6, -1, 96);}</code> to have two rings rotating in opposite directions.</p>
+	      <p>*INSERT DANMAKANVAS EXAMPLE HERE*</p>
+	      <p>TODO: Side shiki example</p>
+	      <p></p>
+	      <p>TODO: Sine screen top Maryuu example</p>
+	      <p></p>
+		<pre class="prettyprint"><code></code></pre>
+	      <p>UNDER CONSTRUCTION</p>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Items in Danmakufu</h2>
+	        <!--Quiz start.-->
+		<p>1) Eirin is making programmable suppository-shaped items that she intends to sneak into Reisen's bullet collection. How can she ensure that when fired, they aim straight for the player?</p>
+	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '2');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. <code>ObjItem_SetRenderScoreEnable()</code><br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. <code>ObjItem_SetDefinedMovePatternA1()</code><br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. <code>ObjItem_SetAutoCollectEnable()</code><br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li></li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l27.html" title="Sparen's Danmakufu ph3 Tutorials - Basics of Items">Unit 3 Lesson 27</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>  </body></html>
