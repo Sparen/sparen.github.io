@@ -20,14 +20,14 @@
  * -- Creates a new game
  * Param: canvasid - the string containing the id of the canvas to use. 
  * *****/
-function createNewGame(canvasid) {
+function createNewGame(canvasid, title) {
     console.log("createNewGame(): Now Running");
-    var newgame = new NewGame(canvasid);
+    var newgame = new NewGame(canvasid, title);
     newgame.startGame(canvasid);
 }
 
 //Constructor for the object
-function NewGame(canvasid) {
+function NewGame(canvasid, title) {
     this.player = {}; //player
     this.bullets = []; //array containing all bullets
     this.pluralcontroller = {}; //Current plural running
@@ -102,7 +102,8 @@ function NewGame(canvasid) {
         currobj.draw_main(canvasid); //draw updated things 
 
         currobj.context.font = "12px Arial";
-        currobj.context.fillText("Danmakanvas v2.1 ~ Bullet Count: " + (currobj.bullets.length).toString(), 4, 12);
+        currobj.context.fillText("Danmakanvas v2.1 ~ " + title, 4, 12);
+        currobj.context.fillText("Bullet Count: " + (currobj.bullets.length).toString(), 4, 444);
     };
 
     //Main draw loop. Handles render order.
