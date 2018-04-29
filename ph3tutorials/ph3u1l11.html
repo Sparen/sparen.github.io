@@ -157,7 +157,11 @@
 	      <p>If we look at this code, we first declare a variable angleT and assign a random angle to it. Then we loop 120 times. Inside the outer loop, we have an inner loop and some bullet spawn code that creates what would normally be a ring of three bullets if we were creating a circle. But instead of a circle, we have some strange equation with angleT*5 and the like. What could this be? Well, <a target="_blank" href="https://www.youtube.com/watch?v=DJlFU4_tZ-U">there's a name for it</a> but we won't get into that. Below are the parametric equations that create this thing.</p>
 	      <p>\(x = 120\times cos(3\times t)\)<br><br>\(y = 90\times sin(5\times t)\)</p>
 	      <p>As you can see, we can take a complicated curve and make Danmakufu act like a really inefficient graphing calculator.</p>
-	      <p>To see a simulation of what the above might look like if the boss were at the center, click here: <a href="./ph3u1l11canvas2.html">Danmakanvas - Lesson 11 (Veemon Graph)</a></p>
+	      <p class="danmakanvasdisc">Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
+	      <canvas id="gamecanvas_3" width="384" height="448" style="border:1px solid #DDDDDD;">
+	      </canvas>
+	      <br>
+	      <button type="button" onclick="createNewGame('gamecanvas_3', 'L11: Veemon Lissajous')">Run Danmakanvas Simulation</button>
 	      <p>Anyways, what's the point of this lesson? What kind of parametric curves would I ever want to use in Danmakufu?</p>
 	      <p>Well, polar equations aside, there are a few that you may want...</p>
 	      <p>Generally speaking, people don't appreciate math in Danmakufu, and math for math's sake is generally not fun if you're not into that kind of thing. But you can do some interesting things. We will use the Astroid as our focus for the remainder of the lesson.</p>
@@ -171,13 +175,18 @@
         CreateShotA1(ObjMove_GetX(objBoss) + 120*cos(angleT) ^ 3, ObjMove_GetY(objBoss) + 120*sin(angleT) ^ 3, 2, angleT, 1, 0);
         angleT += 360/60;
     }</code></pre>
-	      <p>To see a simulation of what the astroid might look like if the boss were at the center and the bullets did not move, click here: <a href="./ph3u1l11canvas1.html">Danmakanvas - Lesson 11 (Astroid)</a></p>
+	      <p>To see a simulation of what the astroid might look like if the boss were at the center and the bullets did not move, see below:</p>
+	      <p class="danmakanvasdisc">Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
+	      <canvas id="gamecanvas_1" width="384" height="448" style="border:1px solid #DDDDDD;">
+	      </canvas>
+	      <br>
+	      <button type="button" onclick="createNewGame('gamecanvas_1', 'L11: Static Astroid')">Run Danmakanvas Simulation</button>
 	      <p>Below is a sample of what the astroid might look like if the boss were at the center and the bullets moved as shown in the code above.</p>
-	      <p>Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
+	      <p class="danmakanvasdisc">Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
 	      <canvas id="gamecanvas_2" width="384" height="448" style="border:1px solid #DDDDDD;">
 	      </canvas>
 	      <br>
-	      <button type="button" onclick="startGame('gamecanvas_2')">Run Danmakanvas Simulation</button>
+	      <button type="button" onclick="createNewGame('gamecanvas_2', 'L11: Astroidmaku')">Run Danmakanvas Simulation</button>
 	      <p>And that's that. We have an astroid. Of course, with these types of curves, you don't usually want the bullets to just go outwards with the same speed, because it will just look like a square, then a circle as it gets farther from its spawn point. You could do some complex speed alteration, or you could just change the angle and do interesting things with the angle. It's up to you.</p>
 	      <p>That concludes the lesson!</p>
 	      <div class="tut_exercise">EXERCISE: Try to recreate some parametric equations in Danmakufu. Try incrementing the angle at which the bullets are fired as you go around, or experiment with different speeds.</div>
@@ -205,5 +214,5 @@
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>
     <script src='https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
-    <script type="text/javascript" src="javascript/Danmakanvas/GameEngine2.0.js"></script>
-    <script type="text/javascript" src="javascript/Danmakanvas/PluralModule_Astroid.js"></script>  </body></html>
+    <script type="text/javascript" src="javascript/Danmakanvas/GameEngine2.1.js"></script>
+    <script type="text/javascript" src="javascript/Danmakanvas/PluralModule_L11.js"></script>  </body></html>

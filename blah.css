@@ -176,6 +176,15 @@ p, fieldset, table, pre {margin-bottom: 1em;}
     padding: 4px;
 }
 
+.danmakanvasdisc {
+    background-color: #004000;
+    color: #BBFFFF;
+    border-color: #99FFFF;
+    border-style: solid;
+    border-width: 1px;
+    padding: 4px;
+}
+
 /* ----- IMAGE ENHANCEMENT STYLING ----- */
 
 .pixelimg {
