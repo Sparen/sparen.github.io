@@ -195,7 +195,7 @@ function getFxnDocs(fxnname, domid) {
         str += "<code>&nbsp;&nbsp;&nbsp;&nbsp;" + i.toString() + ") " + fxn.args[i - 1] + "</code><br>";
     }
     str += "<code>Return: " + fxn.returnv + "</code><br>";
-    str += "<br>Notes:<br>" + fxn.notes;
+    if (fxn.notes !== "") {str += "<br>Notes:<br>" + fxn.notes;}
 
     //Prepare tooltip
     document.getElementById(domid).innerHTML = str;
