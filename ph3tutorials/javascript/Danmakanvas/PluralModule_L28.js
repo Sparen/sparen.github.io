@@ -145,10 +145,12 @@ function Single_2_Task_Shiki(dir, dist, color, color2, currgame) {
         if (currgame.everyinterval(75)) { 
             var i;
             for (i = 0; i < 36; i++) {
-                var newshot = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 + 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1, currgame);
-                currgame.bullets.push(newshot);
-                var newshot2 = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 - 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1, currgame);
-                currgame.bullets.push(newshot2);
+                if (i !== 18) { //18 results in speed of 0
+                    var newshot = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 + 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1, currgame);
+                    currgame.bullets.push(newshot);
+                    var newshot2 = new EnemyShot(192 + dir * dist, 224, -2 + i/36*4, toRadians(90 - 15*Math.sin(i * 15) + this.counter * 0.7 * dir), 0, 5, color, 1, 3, 1, 4, -1, currgame);
+                    currgame.bullets.push(newshot2);
+                }
             }
         }
         this.counter += 1; //increment counter
