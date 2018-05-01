@@ -87,7 +87,7 @@ floor(-9.496);    //-10</code></pre>
 	      <pre class="prettyprint"><code>function rand_int(min, max){
   return round(rand(min, max))
 }</code></pre>
-	      <p>This works by first running <span class="tooltip" onmouseover="getFxnDocs('rand', 'f_rand_03');"><code>rand()</code><span class="tooltiptext" id="f_rand_03"></span></span>. This obtains a floating point value between the two bounds, and then runs round() on it, turning it into an integer.</p>
+	      <p>This works by first running <span class="tooltip" onmouseover="getFxnDocs('rand', 'f_rand_03');"><code>rand()</code><span class="tooltiptext" id="f_rand_03"></span></span>. This obtains a floating point value between the two bounds, and then runs <span class="tooltip" onmouseover="getFxnDocs('round', 'f_round_03');"><code>round()</code><span class="tooltiptext" id="f_round_03"></span></span> on it, turning it into an integer.</p>
 	      <p>Note that using <code>round(rand(min, max))</code> results in a bias against the first and last numbers. Alternate and perhaps more effective ways to implement rand_int include <code>truncate(rand(min, max + 1))</code>, etc.</p>
 	      <p>Of course, what are the uses of rand_int?</p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: What are the Uses of rand_int?</h2>
