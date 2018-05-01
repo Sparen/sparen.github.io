@@ -158,7 +158,7 @@ var dnhph3docs = {
                 {
                     "fname": "pi",
                     "args": [],
-                    "returnv": "value of pi rounded to 6 decimal digits : number",
+                    "returnv": "value of pi : number",
                     "notes": ""
                 },
                 {
