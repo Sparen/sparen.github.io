@@ -238,7 +238,7 @@ function loadDocsByCategory (catnameparam) {
     var fs = catobj.fxns;
     var j;
     for (j = 0; j < fs.length; j += 1) {
-        returnstring += "<code style='font-size: 24px'>" + fs[j].fname + "()</code><br>";
+        returnstring += "<code style='font-size: 20px'>" + fs[j].fname + "()</code><br>";
         var k;
         for (k = 1; k <= fs[j].args.length; k += 1) {
             returnstring += "<code>&nbsp;&nbsp;&nbsp;&nbsp;" + k.toString() + ") " + fs[j].args[k - 1] + "</code><br>";
