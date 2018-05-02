@@ -1,7 +1,7 @@
 // Documentation for Touhou Danmakufu ph3, in a really shitty JavaScript / JSON file
 
 /* Types: 
- * real (for numbers) will be noted as 'number' or 'Object ID'
+ * real (for numbers) will be noted as 'number' or 'Object ID'. numbers that are specifically floating points will be referred to as 'float' in types
  * char (for strings) will be noted as 'char' or 'string'
  * 
  */
@@ -205,20 +205,50 @@ var dnhph3docs = {
                 {
                     "fname": "itoa",
                     "args": ["v : number (int)"],
-                    "returnv": "v as an array : char []",
-                    "notes": "Converts an integer value to an array form, but leaves out decimal places.<br>Example: rtoa(12.34) -> ['1', '2']"
+                    "returnv": "v as an array : string",
+                    "notes": "Converts an integer value to an string form, but leaves out decimal places.<br>Example: rtoa(12.34) -> ['1', '2']<br>This function might behave identically to IntToString."
                 },
                 {
                     "fname": "rtoa",
                     "args": ["v : number"],
-                    "returnv": "v as an array : char []",
-                    "notes": "Converts any real number to an array form.<br>Example: rtoa(12.34) -> ['1', '2', '.', '3', '4']"
+                    "returnv": "v as an array : string",
+                    "notes": "Converts any real number to an string form.<br>Example: rtoa(12.34) -> ['1', '2', '.', '3', '4']"
                 },
                 {
                     "fname": "rtos",
                     "args": ["format : string", "v : number"],
                     "returnv": "v as a string, with filtering options : string",
-                    "notes": "The format is presented as a string that determines how many digits will be shown.<br>It can contain any combination of the following three characters: 0, ., #.<br>0 is a slot for a digit.<br>. represents the decimal place in the string.<br># creates a space in the string."
+                    "notes": "The format is presented as a string that determines how many digits will be shown.<br>It can contain any combination of the following three characters: 0, ., #.<br>0 is a slot for a digit.<br>. represents the decimal place in the string.<br># creates a space in the string.<br>Example: rtos(\"000.000\", 1.23) = \"001.230\", and rtos(\"#00\", 1.23) = \" 01\"."
+                },
+                {
+                    "fname": "vtos",
+                    "args": ["format : string", "v : number"],
+                    "returnv": "v as a string, with filtering options : string",
+                    "notes": "The format is presented as a string.<br>Format String: First, the number of digits on each side of the decimal are specified (000.00 is 3.2 in the format string).<br>Unused digits will be filled with spaces.<br>If preceded by a \"-\", the digits will be right-justified, adding blank spaces to the right instead of the left.<br>If preceded by a \"0\", all digits not occupied by the value will be filled by zeroes.<br>If ended with a \"d\", the value will be presented as an integer.<br>If ended with an \"f\", the value will be presented as a real/floating point number.<br>If ended with an \"s\", this indicates the value given was in the form of a string.<br>Example: vtos(\"03d\", 1.23) = \"001\", vtos(\"3d\", 1.23) = \"　1\", vtos(\"-3d\", 1.23) = \"1　\", and vtos(\"03.5f\", 1.23) = \"001.23000\"."
+                },
+                {
+                    "fname": "atoi",
+                    "args": ["v : string"],
+                    "returnv": "v as an integer : number (int)",
+                    "notes": "If there is a decimal part, then it will be truncated.<br>If the string does not represent a valid number, then 0 will be returned."
+                },
+                {
+                    "fname": "ator",
+                    "args": ["v : string"],
+                    "returnv": "v as an real/floating point : number (float)",
+                    "notes": "If the string does not represent a valid number, then 0 will be returned."
+                },
+                {
+                    "fname": "TrimString",
+                    "args": ["v : string"],
+                    "returnv": "v without preceding and trailing whitespace : string",
+                    "notes": "Example: TrimString(\" ABC \") will return \"ABC\"."
+                },
+                {
+                    "fname": "SplitString",
+                    "args": ["v : string", "d : string"],
+                    "returnv": "Array consisting of v split by delimiter d : string []",
+                    "notes": "Example: SplitString(\"A/123/BCD\", \"/\") will return [\"A\", \"123\", \"BCD\"]."
                 }
             ]
         }
