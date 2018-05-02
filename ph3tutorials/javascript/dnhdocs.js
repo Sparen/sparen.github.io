@@ -39,7 +39,7 @@ var dnhph3docs = {
                     "fname": "remainder",
                     "args": ["dividend : number", "divisor : number"],
                     "returnv": "modulo (remainder of a quotient) of two values : number",
-                    "notes": "divident % divisor.<br>Remainder or % will always return a value with the same sign as the divisor.<br>For example, -7 % 4 equals 1 and 7 % -4 equals -1."
+                    "notes": "dividend % divisor.<br>Remainder or % will always return a value with the same sign as the divisor.<br>For example, -7 % 4 equals 1 and 7 % -4 equals -1."
                 },
                 {
                     "fname": "power",
@@ -73,21 +73,21 @@ var dnhph3docs = {
                 },
                 {
                     "fname": "cos",
-                    "args": ["ang : number"],
+                    "args": ["ang : number (degrees)"],
                     "returnv": "cosine of ang : number",
-                    "notes": "Argument should be in degrees.<br>Cosine is a value between -1 and 1 that corresponds to the x-value in a coordinate plane."
+                    "notes": "Cosine is a value between -1 and 1 that corresponds to the x-value in a coordinate plane."
                 },
                 {
                     "fname": "sin",
-                    "args": ["ang : number"],
+                    "args": ["ang : number (degrees)"],
                     "returnv": "sine of ang : number",
-                    "notes": "Argument should be in degrees.<br>Sine is a value between -1 and 1 that corresponds to the y-value in a coordinate plane."
+                    "notes": "Sine is a value between -1 and 1 that corresponds to the y-value in a coordinate plane."
                 },
                 {
                     "fname": "tan",
-                    "args": ["ang : number"],
+                    "args": ["ang : number (degrees)"],
                     "returnv": "tangent of ang : number",
-                    "notes": "Argument should be in degrees.<br>Tangent is the slope of the line created by the angle (x/y)."
+                    "notes": "Tangent is the slope of the line created by the angle (x/y)."
                 },
                 {
                     "fname": "acos",
@@ -122,25 +122,25 @@ var dnhph3docs = {
                 {
                     "fname": "round",
                     "args": ["v : number"],
-                    "returnv": "v as an integer : number",
+                    "returnv": "v as an integer : number (int)",
                     "notes": "Values of 0.5 or greater are rounded up; otherwise they are rounded down."
                 },
                 {
                     "fname": "truncate",
                     "args": ["v : number"],
-                    "returnv": "v with decimal component removed : number",
-                    "notes": "Example: 1.123 -> 1<br>The shortened name trunc can also be used to refer to this function."
+                    "returnv": "v with decimal component removed : number (int)",
+                    "notes": "Example: truncate(1.123) -> 1<br>The shortened name trunc can also be used to refer to this function."
                 },
                 {
                     "fname": "ceil",
                     "args": ["v : number"],
-                    "returnv": "v rounded up to next integer : number",
+                    "returnv": "v rounded up to next integer : number (int)",
                     "notes": ""
                 },
                 {
                     "fname": "floor",
                     "args": ["v : number"],
-                    "returnv": "v rounded down to next integer : number",
+                    "returnv": "v rounded down to next integer : number (int)",
                     "notes": ""
                 },
                 {
@@ -178,6 +178,47 @@ var dnhph3docs = {
                     "args": ["v : number"],
                     "returnv": "v * -1 : number",
                     "notes": "-v<br>Multiplies -1 to the value, then returns it."
+                }
+            ]
+        },
+        {
+            "catname": "Text Functions",
+            "fxns": [
+                {
+                    "fname": "InstallFont",
+                    "args": ["path : string (path)"],
+                    "returnv": "true if loading succeeded, false otherwise : bool",
+                    "notes": "Loads the given font specified with the file path, which can be used with ObjText_SetFontType, allowing for usage of fonts that are not installed on the player's computer."
+                },
+                {
+                    "fname": "ToString",
+                    "args": ["v : number"],
+                    "returnv": "v as a string : string",
+                    "notes": ""
+                },
+                {
+                    "fname": "IntToString",
+                    "args": ["v : number"],
+                    "returnv": "v as a string : string",
+                    "notes": "Omits any decimal places."
+                },
+                {
+                    "fname": "itoa",
+                    "args": ["v : number (int)"],
+                    "returnv": "v as an array : char []",
+                    "notes": "Converts an integer value to an array form, but leaves out decimal places.<br>Example: rtoa(12.34) -> ['1', '2']"
+                },
+                {
+                    "fname": "rtoa",
+                    "args": ["v : number"],
+                    "returnv": "v as an array : char []",
+                    "notes": "Converts any real number to an array form.<br>Example: rtoa(12.34) -> ['1', '2', '.', '3', '4']"
+                },
+                {
+                    "fname": "rtos",
+                    "args": ["format : string", "v : number"],
+                    "returnv": "v as a string, with filtering options : string",
+                    "notes": "The format is presented as a string that determines how many digits will be shown.<br>It can contain any combination of the following three characters: 0, ., #.<br>0 is a slot for a digit.<br>. represents the decimal place in the string.<br># creates a space in the string."
                 }
             ]
         }
@@ -220,6 +261,7 @@ function retrieveFxn(fxnname) {
 function loadDocs() {
     //Load each category one by one
     document.getElementById("math_fxns").innerHTML = loadDocsByCategory("Math Functions");
+    document.getElementById("text_fxns").innerHTML = loadDocsByCategory("Text Functions");
 }
 
 function loadDocsByCategory (catnameparam) {
