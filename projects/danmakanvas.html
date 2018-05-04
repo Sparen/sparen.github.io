@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Danmakanvas</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <meta content="Andrew Fan's Code Dump: The Embodiment of Code and Hacks (AFCDTECH) - Danmakanvas"
+      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Project, Danmakanvas">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </head>
+  <body id="mhome" onload="loadEpicycloid()">
+    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+        <ul>
+          <li><a href="http://sparen.github.io" title="AFCDTech">Home</a></li>
+          <li><a href="../aboutme.html">About Me</a></li>
+          <li><a href="../ph3tutorials/ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorials</a></li>
+          <li><a href="./projects.html" title="Sparen's Danmakufu Projects">Projects</a></li>
+          <li><a href="../dnhart.html" title="My video playlists and series on Youtube">DNHArt</a></li>
+          <li><a href="./contestdatabase.html" title="Western Touhou Community Danmakufu Contest Database">Contest Database</a></li>
+          <li><a href="https://sparen.github.io/DanmakufuVideos/index.html" title="Danmakufu Video Database">DNH Video Database</a></li>
+        </ul>
+      </div>
+      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div class="yui-g">	      <h1 class="toplevelheaderb">Danmakanvas</h1>	      <p>Welcome to my Danmakanvas information page!</p>	      <h2 class="projectheader">What is Danmakanvas?</h2>
+	      <p>Danmakanvas is a lightweight danmaku engine built in JavaScript (for HTML5 Canvas) that is embedded within this website's tutorials to provide visual examples of danmaku patterns. It provides bullets, as well as simulated tasks and Single scripts.</p>
+	      <p>Danmakanvas was first written May-June 2016 (v1) and was, to be frank, OK at best, with a plethora of SetInterval problems and limited usage. However, in January 2018, this old project was slightly rewritten and added to this website (v2) in a form that was usable... if there was only one canvas per page. In April-May 2018, Danmakanvas was rewritten to allow for multiple canvases on the same webpage.</p>
+	      <h2 class="projectheader">Embedding in other websites</h2>
+	      <p><span style="color: red">WARNING: Danmakanvas may break at any time.</span></p>
+	      <p>This section will be filled out at a later time.</p>
+	      <h2 class="projectheader">Changelog</h2>
+	      <p>Only versions past 2.1 have their changes documented here.</p>
+	      <h4>v2.1.1 [May 03, 2018]</h4>
+	      <p>* Fixed issue where clicking 'Run Danmakanvas Simulation' multiple times would start new instances of the simulation on the same canvas. Issue was a porting issue from 2.0, where startedplurals was not global and was accidentally made local to a game instance (where it was effectively useless). New clicks no longer boot up a new instance. [Thanks to Arcvasti]</p>
+	      <p>* Note that the 2.0 behavior of reset-on-click is not implemented in 2.1.1 and will require more changes in order to work. Whether or not this feature is necessary is a different issue entirely.</p>
+	      <h4>v2.1 [Apr 29, 2018]</h4>
+	      <p>* New version of Danmakanvas that has each game as a new instance, allowing for multiple canvases on the same page.</p>
+	      <p>* Plural/Single format is different and old scripts for 2.0 are not compatible with 2.1, as information on the current game must be threaded into the plurals and singles.</p>	      <br>            </div>          </div>        </div>      </div>      <footer>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2018 by Andrew Fan</p>      </footer>
+    </div>
+  </body>
+</html>
