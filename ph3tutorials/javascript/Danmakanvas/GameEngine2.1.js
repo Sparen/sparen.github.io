@@ -15,6 +15,9 @@
 //Constructors should start in Uppercase. Variables should be in camelCase.
 //Variables and Functions are hoisted (they can be used before they are declared)
 
+//Global variables (use sparingly)
+var startedplurals = []; //array containing IDs of all canvases that have already initiated.
+
 /* *****
  * void createNewGame(string canvasid)
  * -- Creates a new game
@@ -31,7 +34,6 @@ function NewGame(canvasid, title) {
     this.player = {}; //player
     this.bullets = []; //array containing all bullets
     this.pluralcontroller = {}; //Current plural running
-    this.startedplurals = []; //array containing IDs of all canvases that have already initiated.
     this.canvas = document.getElementById(canvasid);
     this.context = this.canvas.getContext("2d");
     this.frameNo = 0;
@@ -52,9 +54,9 @@ function NewGame(canvasid, title) {
         }
 
         //If the interval has not been started yet, begin it.
-        if (!contains(this.startedplurals, canvasid)) {
+        if (!contains(startedplurals, canvasid)) {
             console.log("startGame(): Canvas " + canvasid + " has not been started yet. Initializing this.interval for the canvasid");
-            this.startedplurals.push(canvasid);
+            startedplurals.push(canvasid);
             this.setupInterval(20);
         }
     };
@@ -102,7 +104,7 @@ function NewGame(canvasid, title) {
         currobj.draw_main(canvasid); //draw updated things 
 
         currobj.context.font = "12px Arial";
-        currobj.context.fillText("Danmakanvas v2.1 ~ " + title, 4, 12);
+        currobj.context.fillText("Danmakanvas v2.1.1 ~ " + title, 4, 12);
         currobj.context.fillText("Bullet Count: " + (currobj.bullets.length).toString(), 4, 444);
     };
 
