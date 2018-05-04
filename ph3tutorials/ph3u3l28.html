@@ -30,8 +30,7 @@
 	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
 	          <li><a href="#sub2">Part 2: How do I implement Familiars?</a></li>
 	          <li><a href="#sub3">Part 3: What are Stage Enemies?</a></li>
-	          <li><a href="#sub4">Part 4: How do I implement Stage Enemies (Function Style)?</a></li>
-	          <li><a href="#sub5">Part 5: How do I implement Stage Enemies (Script Style)?</a></li>
+	          <li><a href="#sub4">Part 4: How do I implement Stage Enemies?</a></li>
 	          <li><a href="#quiz1">Quiz: Familiars and Stage Enemies</a></li>
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
@@ -46,7 +45,7 @@
 	      <p>Let's begin implementation with familiars. For the purposes of this lesson, a Familiar is simply a render object that moves in a predefined pattern either relative to the gameplay area or an enemy such as the boss. Familiars typically spawn bullets from their position. Note that it is possible to use a bullet as a familiar to provide it with a hitbox, but the concept is fundamentally the same.</p>
 	      <p>Let's begin with a typical example. Given an enemy, create a task that spawns a familiar. We will review three different examples - one where familiars rotate around the parent object's position and fire bullets relative to their angle from the parent object, one where familiars are positioned relative to their parent object (similarly to player options), and one where familiars are positioned relative to the screen.</p>
 	      <p>First, rotating familiars. We will want a task that takes an ID (to note which familiar in the ring they are), the total number of familiars in the ring (to control spacing dynamically), the direction to rotate in, and the radius to spawn from the parent object. We'll begin with a basic example, where the familiars fire three bullets each at 120 degree offsets, angled towards the boss.</p>
-		<pre class="prettyprint"><code>    //This example uses a graphic as the familiar
+		<pre class="prettyprint linenums"><code>    //This example uses a graphic as the familiar
     @MainLoop {
         if(count == 0){
             ascent(i in 0..6) {CreateShikiA1G(i, 6, 1, 48);}
@@ -87,7 +86,7 @@
         Obj_Delete(obj);
     }</code></pre>
 <hr>
-		<pre class="prettyprint"><code>    //This example uses a bullet as the familiar
+		<pre class="prettyprint linenums"><code>    //This example uses a bullet as the familiar
     @MainLoop {
         if(count == 0){
             ascent(i in 0..6) {CreateShikiA1B(i, 6, 1, 48);}
@@ -132,7 +131,7 @@
 	      <br>
 	      <button type="button" onclick="createNewGame('gamecanvas_1', 'L28: Twin Rotating Familiars')">Run Danmakanvas Simulation</button>
 	      <p>While rotating familiars are very common, it is also common to have familiars offset from an enemy. Below, an example. We will need to pass a direction parameter once again (to demote which side of the boss the familiar is on so we can reuse the task for both instances) as well as the distance to the parent object.</p>
-		<pre class="prettyprint"><code>    //This example uses a graphic as the familiar
+		<pre class="prettyprint linenums"><code>    //This example uses a graphic as the familiar
     @MainLoop {
         if(count == 0){
             CreateShikiA2G(1, 64);
@@ -177,8 +176,115 @@
 	      <br>
 	      <button type="button" onclick="createNewGame('gamecanvas_2', 'L28: Side Familiars')">Run Danmakanvas Simulation</button>
 	      <p>Finally, we will close our discussion of Familiars in Danmakufu with an example of familiars decoupled from the boss. In this example, we will have a pair of familiars be emitted from the boss before flying across the top of the screen back and forth.</p>
-	      <p></p>
-	      <p>TODO: Sine screen top Maryuu example</p>
+		<pre class="prettyprint linenums"><code>    @MainLoop {
+        ...
+        
+        CreateShikiA3B(1); CreateShikiA3B(-1);
+        
+        ...
+	yield;
+    }
+
+    task CreateShikiA3B(dir){ //This example uses a bullet as the familiar
+	let obj = CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 0, 0, 132, 0);
+	ObjShot_SetSpellResist(obj, true);
+	ObjMove_SetDestAtFrame(obj, GetCenterX() + 180*dir, 16, 60);
+	wait(60);
+	let objcount = 0;
+	while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
+	    ObjMove_SetX(obj, GetCenterX() + 180*cos(objcount*2)*dir);
+	    if(objcount % 7 == 0){
+		ascent(i in 0..4){
+		    CreateShotA1(ObjMove_GetX(obj), ObjMove_GetY(obj), 3 + i/4, 90, 124, 0);
+		}
+	    }
+	    objcount++;
+	    yield;
+	}
+        Obj_Delete(obj);
+    }</code></pre>
+	      <p>Here we have a task that creates a familiar starting at the boss's position. It moves to a position at the top of the screen via <code>ObjMove_SetDestAtFrame()</code>, then begins oscillating about the central axis. Every now and then, it fires bullets directly downwards.</p>
+	      <p>Note that this example does NOT have familiars that delete themselves after a certain amount of time. Rather, these last for the duration of the Single.</p>
+	      <p class="danmakanvasdisc">Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
+	      <canvas id="gamecanvas_3" width="384" height="448" style="border:1px solid #DDDDDD;">
+	      </canvas>
+	      <br>
+	      <button type="button" onclick="createNewGame('gamecanvas_3', 'L28: Oscillating Familiars')">Run Danmakanvas Simulation</button>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What are Stage Enemies?</h2>
+	      <p style="text-align:center"><img src="./tutimg/u3l28stgenemyex.png" width="320px"></img></p>
+	      <p>Stage enemies are a key component of stages, providing most of the bullets, items, and other gameplay elements present. Just like designing a nonspell or spell for a boss, designing stages is a complex and interesting process. However, a stage is far more complex than a boss Single. Stage enemies, as stated earlier, can appear from anywhere, and can do pretty much anything. Single stage enemies can fire complex patterns. Others can form danmaku in a group. And the interaction between stage enemies, the duration of time they stay on-screen, etc. all matter when designing a good stage.</p>
+	      <p>Here we will only discuss building the stage enemy so it can be created in a Stage script. But keep in mind the role that stage enemies play when designing your stages.</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I implement Stage Enemies?</h2>
+	      <p>There are a multitude of ways to implement stage enemies in Danmakufu, especially since there has, for the vast majority of ph3's existence, been no guide on how to do so and scripters have created a variety of methods. For this guide, I will use what I consider to be the most simple approach given what we already know and have reviewed (IE the method I use). If the method I describe here does not work well for you, by all means feel free to use another system or invent your own.</p>
+	      <p>But anyways, stage enemies. Stage enemies, unlike boss enemies, function as standard objects. There is no built-in event system for their life, and at the same time there is no crazy boss scene stuff to deal with. Just simple objects and methods as detailed in <a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Enemy_Object_Functions">Enemy Object Functions (Danmakufu Wiki)</a>. Let's go over them.
+	      <p>First we have <code>ObjEnemy_Create()</code>, which, as you may expect, creates a new object and returns its object ID, just like with many of the other Obj****_Create functions we have seen already. The catch here is that we must use <code>OBJ_ENEMY</code> as the parameter to this function to notify Danmakufu that we are creating a non-boss enemy, unlike in a standard Single where we specify that it is a <code>OBJ_ENEMY_BOSS</code>. After this, we must, just like with a Single, <code>ObjEnemy_Regist()</code> on the Object ID to activate the stage enemy. </p>
+	      <p>To initialize the life of a stage enemy, we must use <code>ObjEnemy_SetLife()</code>, which in Singles is rarely used. Of course, we can use <code>ObjEnemy_AddLife()</code> to increment or decrement the value without manually setting it.</p>
+	      <p><code>ObjEnemy_GetInfo()</code>, <code>ObjEnemy_SetDamageRate()</code>, <code>ObjEnemy_SetIntersectionCircleToShot()</code>, and <code>ObjEnemy_SetIntersectionCircleToPlayer()</code> work the same as with Boss Enemies.</p>
+	      <p>As you can see, we have used most of these functions before. Creating a stage enemy is therefore a simple task on paper. Now, as for putting them into an actual stage...</p>
+	      <p>...The number of different methods for achieving this is likely close to the number of scripters who have ever made stage enemies. I will propose one method, and of course you may choose to use another one or your own.</p>
+	      <p>The style we will use in this guide consists of separate files for enemy scripts, say, StageEnemy1.txt or something similar. This will be #included into a stage like so:</p>
+		<pre class="prettyprint"><code>#include "./stgenemy/StageEnemy1.txt"
+#include "./stgenemy/StageEnemy2.txt"
+#include "./stgenemy/StageEnemy3.txt"
+#include "./stgenemy/StageEnemy4.txt"
+#include "./stgenemy/StageEnemy5.txt"
+#include "./stgenemy/StageEnemy6.txt"</code></pre>
+	      <p>In these #include files, we will have a single task each. Note that for simplicity, I will be excluding some of the more interesting options.</p>
+		<pre class="prettyprint linenums"><code>task CreateStageEnemy1(x, y, speedE, angleE) {
+    let count = 0; //Counter
+    let Xmin = -32;
+    let Xmax = GetStgFrameWidth + 32;
+    let Ymin = -32; 
+    let Ymax = GetStgFrameHeight + 32;
+
+    let objEnemy;
+    TInitialize;
+
+    task TInitialize {
+        objEnemy = ObjEnemy_Create(OBJ_ENEMY);
+        ObjEnemy_Regist(objEnemy);
+        ObjEnemy_SetLife(objEnemy, 48);
+        SetDamageRateAtFrameEnm(objEnemy, 80, 50, 30);
+        ObjMove_SetPosition(objEnemy, x, y);
+        ObjMove_SetAngle(objEnemy, angleE);
+        ObjMove_SetSpeed(objEnemy, speedE);
+        TDrawLoop(objEnemy);
+        TMainLoop;
+        TFinalize;
+    }
+
+    task TMainLoop {
+        while(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) > 0) {
+            ObjEnemy_SetIntersectionCircleToShot(objEnemy, ObjMove_GetX(objEnemy), ObjMove_GetY(objEnemy), 32); 
+            ObjEnemy_SetIntersectionCircleToPlayer(objEnemy, ObjMove_GetX(objEnemy), ObjMove_GetY(objEnemy), 8);
+
+            if (count == 30) {bulletA;}
+
+            if (GetEnemyX(objEnemy) < Xmin || GetEnemyX(objEnemy) > Xmax || GetEnemyY(objEnemy) < Ymin || GetEnemyY(objEnemy) > Ymax) {
+                item = 1;
+                ObjEnemy_SetLife(objEnemy, -1000);
+            }
+            count++;
+            yield;
+        }
+    }
+
+    task bulletA{
+        while(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) > 0) {
+            //Do stuff
+            yield;
+        }
+    }
+
+    task TFinalize {
+        while(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) > 0) {yield;}
+        Obj_Delete(objEnemy);
+    }
+}</code></pre>
+	      <p>Here we have one big task CreateStageEnemy1 that creates a new stage enemy, places it at (x,y) with speed speedE and angle angleE, and essentially mimics the structure of a Single. We have an initialization task that assigns damage rate and position, then calls other loops. We have a main loop that handles the hitbox, firing bullets, and checking if the enemy is out of bounds. We have a finalize task that deletes the enemy.</p>
+	      <p>Of note is the X/Y min/max setup - when the stage enemy leaves the screen you typically want to delete it. Additionally, I have excluded the implementation of the Draw Loop for this enemy as it is dependent on your own spritesheet setup.</p>
+	      <p>Now, as for creating the enemy in-stage? Well, since we've #included the file, we can just <code>CreateStageEnemy1(-16, 128, 2, 0);</code> or whatever else we want to do!</p>
+	      <p>There any many variations on stage enemies - having them slow down, fire, then start back up, for example. Or having them fade into existence, fade out of existence, etc. It's up to you as the scripter to implement what you feel is best for the stage you are designing.</p>
 	      <p></p>
 		<pre class="prettyprint"><code></code></pre>
 	      <p>UNDER CONSTRUCTION</p>
