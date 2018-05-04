@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Apr 29, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body onload="setupENG('May 03, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
@@ -31,6 +31,7 @@
 	          <li><a href="#sub2">Part 2: How do I implement Familiars?</a></li>
 	          <li><a href="#sub3">Part 3: What are Stage Enemies?</a></li>
 	          <li><a href="#sub4">Part 4: How do I implement Stage Enemies?</a></li>
+	          <li><a href="#sub5">Part 5: What are things to avoid when implementing Stage Enemies?</a></li>
 	          <li><a href="#quiz1">Quiz: Familiars and Stage Enemies</a></li>
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
@@ -261,7 +262,6 @@
             if (count == 30) {bulletA;}
 
             if (GetEnemyX(objEnemy) < Xmin || GetEnemyX(objEnemy) > Xmax || GetEnemyY(objEnemy) < Ymin || GetEnemyY(objEnemy) > Ymax) {
-                item = 1;
                 ObjEnemy_SetLife(objEnemy, -1000);
             }
             count++;
@@ -285,25 +285,69 @@
 	      <p>Of note is the X/Y min/max setup - when the stage enemy leaves the screen you typically want to delete it. Additionally, I have excluded the implementation of the Draw Loop for this enemy as it is dependent on your own spritesheet setup.</p>
 	      <p>Now, as for creating the enemy in-stage? Well, since we've #included the file, we can just <code>CreateStageEnemy1(-16, 128, 2, 0);</code> or whatever else we want to do!</p>
 	      <p>There any many variations on stage enemies - having them slow down, fire, then start back up, for example. Or having them fade into existence, fade out of existence, etc. It's up to you as the scripter to implement what you feel is best for the stage you are designing.</p>
-	      <p></p>
-		<pre class="prettyprint"><code></code></pre>
-	      <p>UNDER CONSTRUCTION</p>
-	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Items in Danmakufu</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: What are things to avoid when implementing Stage Enemies?</h2>
+	      <p>To close this lesson, we will discuss some things that you should <b>NOT</b> do.</p>
+	      <p>In regards to the method by which you create stage enemies, do NOT use Scripts for enemies. With a Boss, you have each Single in a script. However, if you have 20-30 stage enemies on-screen at the same time and are using scripts, that means you're running 20-30 @Events, 20-30 @MainLoops, etc. There is a lot of overhead associated with starting up and running a script, and the hit to the game's FPS will be noticeable.</p>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Stage Enemies in Danmakufu</h2>
 	        <!--Quiz start.-->
-		<p>1) Eirin is making programmable suppository-shaped items that she intends to sneak into Reisen's bullet collection. How can she ensure that when fired, they aim straight for the player?</p>
-	        <form method="POST" onSubmit="return checkAnswerP(this, 'B', '2');">
+		<p>1) Tewi is setting up a stage enemy with the following code, but it never appears. Why is it not appearing?</p>
+		<pre class="prettyprint linenums"><code>task CreateStageEnemyA(x, y, speedE, angleE) {
+    let count = 0; //Counter
+    let Xmin = -32;
+    let Xmax = GetStgFrameWidth + 32;
+    let Ymin = -32; 
+    let Ymax = GetStgFrameHeight + 32;
+
+    let objEnemy;
+    TInitialize;
+
+    task TInitialize {
+        objEnemy = ObjEnemy_Create(OBJ_ENEMY);
+        ObjEnemy_Regist(objEnemy);
+        SetDamageRateAtFrameEnm(objEnemy, 80, 50, 30);
+        ObjMove_SetPosition(objEnemy, x, y);
+        ObjMove_SetAngle(objEnemy, angleE);
+        ObjMove_SetSpeed(objEnemy, speedE);
+        TDrawLoop(objEnemy);
+        TMainLoop;
+        TFinalize;
+    }
+
+    task TMainLoop {
+        while(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) > 0) {
+            ObjEnemy_SetIntersectionCircleToShot(objEnemy, ObjMove_GetX(objEnemy), ObjMove_GetY(objEnemy), 32); 
+            ObjEnemy_SetIntersectionCircleToPlayer(objEnemy, ObjMove_GetX(objEnemy), ObjMove_GetY(objEnemy), 8);
+
+            if (GetEnemyX(objEnemy) < Xmin || GetEnemyX(objEnemy) > Xmax || GetEnemyY(objEnemy) < Ymin || GetEnemyY(objEnemy) > Ymax) {
+                ObjEnemy_SetLife(objEnemy, -1000);
+            }
+            count++;
+            yield;
+        }
+    }
+
+    task TFinalize {
+        while(ObjEnemy_GetInfo(objEnemy, INFO_LIFE) > 0) {yield;}
+        Obj_Delete(objEnemy);
+    }
+}</code></pre>
+	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. <code>ObjItem_SetRenderScoreEnable()</code><br>
+	        A. The enemy needs an @Event with EV_REQUEST_LIFE.<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. <code>ObjItem_SetDefinedMovePatternA1()</code><br>
+	        B. The enemy's life is not being set explicitly and therefore defaults to 0, resulting in TFinalize deleting the enemy.<br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. <code>ObjItem_SetAutoCollectEnable()</code><br>
+	        C. The enemy is being spawned outside of its assigned bounds and is automatically deleted.<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
-	          <li></li>
+	          <li>Familiars can be used to create danmaku at locations away from but related to the position of the boss or playing field</li>
+	          <li>Familiars can be implemented using either Render Objects or Shot Objects</li>
+	          <li>Stage Enemies are the main gameplay component of a Stage and can be used in a variety of different manners</li>
+	          <li>Stage Enemies can be implemented using Enemy Objects and standard functions/tasks</li>
+	          <li>Stage Enemies should not be implemented using Scripts per enemy instance</li>
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
@@ -319,6 +363,7 @@
     <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <script type="text/javascript" src="javascript/U3L28Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>
     <script type="text/javascript" src="javascript/Danmakanvas/GameEngine2.1.js"></script>
