@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('July 24, 2017')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body onload="setupENG('May 04, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
@@ -146,7 +146,16 @@ while(x &gt; 20){
 while(x &gt; 0){
     x++;
 }</code></pre>
-	      <p>To close our study of the while loop, we will consider the above code, where x is declared to be 5 and while x > 0, x increments by 1. As is easily observable, x will never actually become less than 0. Therefore, this code will cause an infinite loop and Danmakufu will freeze.</p>
+	      <p>Next, we will consider the above code, where x is declared to be 5 and while x > 0, x increments by 1. As is easily observable, x will never actually become less than or equal to 0. Therefore, this code will cause an infinite loop and Danmakufu will freeze.</p>
+	        <pre class="prettyprint"><code>let x = 5;
+let y = 0;
+while(x &gt; 0){
+    while (y &lt; 5) {
+        x -= 1;
+    }
+    y += 1;
+}</code></pre>
+	      <p>Finally, we will discuss the above nested while loops. Here we define variables x and y, and while x is greater than 0 (which it is), it runs a new while loop. This while loop runs as long as y is less than 5, which it is. Like before, we will have an infinite loop, as x will continue to decrement but since y is not mutated within the inner while loop, the condition y &lt; 5 will always be true and the loop will never terminate. Note that the <code>y += 1;</code> line is never executed - this is an example of blocking, where because we have a while loop before the statement, the loop must terminate before the statement can execute.</p>
 	      <p>Now we will discuss the last type of loop in Danmakufu - the for loop. In Danmakufu, the for loop comes in two varieties, ascent and descent.</p>
 	      <p>For a video tutorial, please consult the following: <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&amp;list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K">Sparen's Danmakufu Tutorials - Using Ascent Loops and More</a>. However, please be aware that this tutorial assumes prior knowledge of bullet spawning functions.</p>
 	      <p>A generic ascent loop is structured as follows:</p>
