@@ -251,6 +251,123 @@ var dnhph3docs = {
                     "notes": "Example: SplitString(\"A/123/BCD\", \"/\") will return [\"A\", \"123\", \"BCD\"]."
                 }
             ]
+        },
+        {
+            "catname": "Path Functions",
+            "fxns": [
+                {
+                    "fname": "GetFileDirectory",
+                    "args": ["path : string (path)"],
+                    "returnv": "directory of the specified file path : string (path)",
+                    "notes": "Specifically, returns the input string up to the rightmost forward slash, with backslashes removed."
+                },
+                {
+                    "fname": "GetFilePathList",
+                    "args": ["path : string (path)"],
+                    "returnv": "array of files in the directory of the specified file/directory path : string (path) []",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetDirectoryList",
+                    "args": ["path : string (path)"],
+                    "returnv": "array of the directories available within the directory of the specified path : string (path) []",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetModuleDirectory",
+                    "args": [],
+                    "returnv": "the directory containing the running th_dnh.exe file : string (path)",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetMainStgScriptPath",
+                    "args": [],
+                    "returnv": "the path to the current running stage script : string (path)",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetMainPackageScriptPath",
+                    "args": [],
+                    "returnv": "the path to the current running package script : string (path)",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetMainStgScriptDirectory",
+                    "args": [],
+                    "returnv": "the directory of the current running stage script : string (path)",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCurrentScriptDirectory",
+                    "args": [],
+                    "returnv": "the directory of the current running script (the file in which this function was called) : string (path)",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetScriptPathList",
+                    "args": ["path : string (path)", "scripttype : number (const)"],
+                    "returnv": "array of paths to available (selectable at selection screen) scripts of the specified type within the directory of the specified path : string (path) []",
+                    "notes": "Script type is TYPE_SCRIPT_* where * is one of the following: ALL, PLAYER, SINGLE, PLURAL, STAGE, or PACKAGE."
+                }
+            ]
+        },
+        {
+            "catname": "Time Functions",
+            "fxns": [
+                {
+                    "fname": "GetCurrentDateTimeS",
+                    "args": ["date : string"],
+                    "returnv": "string containing the current date and time : string (date)",
+                    "notes": "Example: If the current date is 2012/09/16 12:34:56, then \"20120916123456\" will be returned.<br>To convert to a number use atoi like so: <code>let year = atoi(GetCurrentDateTimeS[0..4]);</code>"
+                },
+                {
+                    "fname": "GetStageTime",
+                    "args": [],
+                    "returnv": "amount of time that has elapsed since the start of the main script in milliseconds : number (int)",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPackageTime",
+                    "args": [],
+                    "returnv": "amount of time that has elapsed since the start of the main package in milliseconds : number (int)",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCurrentFps",
+                    "args": [],
+                    "returnv": "current FPS : number (float)",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetReplayFps",
+                    "args": [],
+                    "returnv": "replay FPS at the current time point : number (int)",
+                    "notes": "This value refreshes as a much slower rate than GetCurrentFps."
+                }
+            ]
+        },
+        {
+            "catname": "Debug Functions",
+            "fxns": [
+                {
+                    "fname": "WriteLog",
+                    "args": ["value : free"],
+                    "returnv": "",
+                    "notes": "Outputs given value to log window."
+                },
+                {
+                    "fname": "RaiseError",
+                    "args": ["err : string"],
+                    "returnv": "",
+                    "notes": "Creates an error box with the specified err string.<br>Execution of the script is stopped, closing the script."
+                },
+                {
+                    "fname": "assert",
+                    "args": ["condition : bool", "value : free"],
+                    "returnv": "",
+                    "notes": "Raises an error with the specified value and terminates the script if the condition is false."
+                }
+            ]
         }
     ]
 };
@@ -292,6 +409,9 @@ function loadDocs() {
     //Load each category one by one
     document.getElementById("math_fxns").innerHTML = loadDocsByCategory("Math Functions");
     document.getElementById("text_fxns").innerHTML = loadDocsByCategory("Text Functions");
+    document.getElementById("path_fxns").innerHTML = loadDocsByCategory("Path Functions");
+    document.getElementById("time_fxns").innerHTML = loadDocsByCategory("Time Functions");
+    document.getElementById("debug_fxns").innerHTML = loadDocsByCategory("Debug Functions");
 }
 
 function loadDocsByCategory (catnameparam) {
