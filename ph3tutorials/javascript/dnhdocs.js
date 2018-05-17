@@ -487,6 +487,105 @@ var dnhph3docs = {
                     "notes": "Loads everything in the specified common data area from the replay file.<br>Do not call this function during a replay."
                 }
             ]
+        },
+        {
+            "catname": "Audio Functions",
+            "fxns": [
+                {
+                    "fname": "LoadSound",
+                    "args": ["path : string (path)"],
+                    "returnv": "",
+                    "notes": "Loads specified sound file.<br>Required before using PlayBGM or PlaySE in the same script as these two functions are called on the respective paths."
+                },
+                {
+                    "fname": "RemoveSound",
+                    "args": ["path : string (path)"],
+                    "returnv": "",
+                    "notes": "Unloads specified sound file."
+                },
+                {
+                    "fname": "PlayBGM",
+                    "args": ["path : string (path)", "loopstart : number (seconds)", "loopend : number (seconds)"],
+                    "returnv": "",
+                    "notes": "Plays the specified sound file as a looping BGM.<br>You can be more precise by using decimals.<br>BGM will play from start until end of track or loopend, whichever is first, and then play from loopstart."
+                },
+                {
+                    "fname": "PlaySE",
+                    "args": ["path : string (path)"],
+                    "returnv": "",
+                    "notes": "Plays the specified sound file as a sound effect."
+                },
+                {
+                    "fname": "StopSound",
+                    "args": ["path : string (path)"],
+                    "returnv": "",
+                    "notes": "Stops specified sound file."
+                }
+            ]
+        },{
+            "catname": "Input Functions",
+            "fxns": [
+                {
+                    "fname": "GetVirtualKeyState",
+                    "args": ["vkname : string"],
+                    "returnv": "key state of specified virtual key : number (const)",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetVirtualKeyState",
+                    "args": ["vkname : string", "state : number (const)"],
+                    "returnv": "",
+                    "notes": "Sets the given virtual key to the given state.<br>The virtual key will be restored to its true state a frame after you stop calling this function.<br>Keep in mind that if you set it to KEY_HOLD it will not go to KEY_PULL or KEY_PUSH."
+                },
+                {
+                    "fname": "AddVirtualKey",
+                    "args": ["vkname : string", "keyname : number (const)", "padkey : number (const)"],
+                    "returnv": "key state of specified virtual key : number (const)",
+                    "notes": "Registers the given virtual key with the given key.<br>You may map any number of virtual keys to a single key, but virtual keys may only be mapped to a single key.<br>Use KEY_INVALID if you do not want pad input.<br>Note that this function OVERWRITES any existing mappings.<br>IE: If you were to use <code>AddVirtualKey(VK_SHOT, KEY_UP, KEY_INVALID);</code>, whenever you press the up arrow key, the virtual shot key will be pressed.<br>However, you will no longer be able to move up, so to fix this, you add AddVirtualKey(VK_UP, KEY_UP, KEY_INVALID);. You will now shoot and move up at the same time."
+                },
+                {
+                    "fname": "AddReplayTargetVirtualKey",
+                    "args": ["vkname : string"],
+                    "returnv": "",
+                    "notes": "Registers the given key id to the replay file.<br>This key id should be one that you have already registered with AddVirtualKey."
+                },
+                {
+                    "fname": "GetKeyState",
+                    "args": ["keyname : number (const)"],
+                    "returnv": "key state of specified key : number (const)",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetMouseState",
+                    "args": ["mousebutton : number (const)"],
+                    "returnv": "state of specified mouse button : number (const)",
+                    "notes": "Use MOUSE_LEFT, MOUSE_RIGHT, and MOUSE_MIDDLE for the argument."
+                },
+                {
+                    "fname": "GetMouseX",
+                    "args": [],
+                    "returnv": "mouse x position : number",
+                    "notes": "The origin for the mouse coordinates is the upper left of the Danmakufu window (0, 0).<br>Mouse coordinates will be properly adjusted according to the resizing of Danmakufu's window."
+                },
+                {
+                    "fname": "GetMouseY",
+                    "args": [],
+                    "returnv": "mouse y position : number",
+                    "notes": "The origin for the mouse coordinates is the upper left of the Danmakufu window (0, 0).<br>Mouse coordinates will be properly adjusted according to the resizing of Danmakufu's window."
+                },
+                {
+                    "fname": "GetMouseMoveZ",
+                    "args": [],
+                    "returnv": "amount of change that has occurred to the mouse's Z axis : number",
+                    "notes": "The Z axis is normally the middle mouse wheel. If there is no mouse wheel, the value will be 0.<br>The value returned will be negative if the wheel was moved back, and positive if the wheel moved forward."
+                },
+                {
+                    "fname": "SetSkipModeKey",
+                    "args": ["keyname : number (const)"],
+                    "returnv": "",
+                    "notes": "Specifies the key to use for fast playback mode.<br>The default key is KEY_LCONTROL.<br>Specify KEY_INVALID if you do not wish to enable fast playback."
+                }
+            ]
         }
     ]
 };
@@ -532,6 +631,8 @@ function loadDocs() {
     document.getElementById("time_fxns").innerHTML = loadDocsByCategory("Time Functions");
     document.getElementById("debug_fxns").innerHTML = loadDocsByCategory("Debug Functions");
     document.getElementById("cdata_fxns").innerHTML = loadDocsByCategory("Common Data Functions");
+    document.getElementById("audio_fxns").innerHTML = loadDocsByCategory("Audio Functions");
+    document.getElementById("input_fxns").innerHTML = loadDocsByCategory("Input Functions");
 }
 
 function loadDocsByCategory (catnameparam) {

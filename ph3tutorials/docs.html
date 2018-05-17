@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('May 05, 2018'); loadDocs()">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body onload="setupENG('May 17, 2018'); loadDocs()">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
@@ -45,6 +45,7 @@
 	      <p>As a reminder, the OFFICIAL JAPANESE DOCUMENTATION can be found at <a target="_blank" href="http://www.geocities.co.jp/SiliconValley-Oakland/9951/pre/th_dnh_help_v3.html">mkm's website</a>.</p>
 	      <p>In the tutorials, the functions will be available like so: <span class="tooltip" onmouseover="getFxnDocs('add', 'f_add_01');"><code>add()</code><span class="tooltiptext" id="f_add_01"></span></span></p>
 	      <p>Object Functions and System/Script functions will be on their own respective pages to prevent this page from becoming too long. To access these, refer to Object Functions and System/Script Functions (links to be added in the future)</p>
+	      <p>Notes on types:<br>mkm uses types such as 'real' (for real numbers and object IDs), 'char' (for characters and strings), and 'free' (wildcard). In my version of the documentation, I break this down by primary type (number/char/string/bool/free/etc) with a detailed type in parenthesis (float/int/path/Object ID). I also provide types for return values.</p>
 	      <h2 class="ph3tutorialheader" id="sub1">Math Functions</h2>
 	      <div id="math_fxns"></div>
 	      <h2 class="ph3tutorialheader" id="sub2">Text Functions</h2>
@@ -60,6 +61,67 @@
 	      <h2 class="ph3tutorialheader" id="sub7">Audio Functions</h2>
 	      <div id="audio_fxns"></div>
 	      <h2 class="ph3tutorialheader" id="sub8">Input Functions</h2>
+	      <p>Key States:</p>
+	      <pre><code>KEY_FREE: the key is not pressed.
+KEY_PUSH: the key has been pressed.
+KEY_HOLD: the key is being held.
+KEY_PULL: the key has been released.</code></pre>
+	      <p>Virtual Keys (built-in):</p>
+	      <pre><code>VK_LEFT (ID: 0) - Move left
+VK_RIGHT (ID: 1) - Move right
+VK_UP (ID: 2) - Move up
+VK_DOWN (ID: 3) - Move down
+VK_OK (ID: 4) - Confirm
+VK_CANCEL (ID: 5) - Cancel
+VK_SHOT (ID: 6) - Player Shot
+VK_BOMB (ID: 7) - Player Spell/Bomb
+VK_SPELL (ID: 7) (Alias for VK_BOMB)
+VK_SLOWMOVE (ID: 8) - Focus
+VK_USER1 (ID: 9) - User Key 1
+VK_USER2 (ID: 10) - User Key 2
+VK_PAUSE (ID: 11) - Pause</code></pre>
+	      <p>General Keys:</p>
+	      <pre><code>KEY_0 ... KEY_9： 0-9 Keys
+KEY_A ... KEY_Z： A-Z Keys
+KEY_F1 ... KEY_F10： F1-F10 Keys
+KEY_MINUS： -
+KEY_EQUALS： =
+KEY_SLASH： /
+KEY_BACK： Backspace
+KEY_TAB： Tab
+KEY_SPACE： Space
+KEY_LBRACKET： [
+KEY_RBRACKET： ]
+KEY_SEMICOLON： ;
+KEY_APOSTROPHE： '
+KEY_GRAVE： `
+KEY_BACKSLASH： \ Note: Refers to the key on Western keyboards.
+KEY_YEN： \ Note: Refers to the key on Japanese keyboards.
+KEY_AT： @
+KEY_COLON： :
+KEY_UNDERLINE： _
+KEY_CIRCUMFLEX： ^
+KEY_COMMA： ,
+KEY_PERIOD： .
+KEY_INSERT： Insert
+KEY_DELETE： Delete
+KEY_RETURN： Enter
+KEY_LCONTROL： Left Ctrl key
+KEY_RCONTROL： Right Ctrl key
+KEY_LSHIFT： Left Shift
+KEY_RSHIFT： Right Shift
+KEY_LEFT： Left Arrow Key
+KEY_RIGHT： Right Arrow Key
+KEY_UP： Up Arrow Key
+KEY_DOWN： Down Arrow Key
+KEY_NUMPAD0 ... KEY_NUMPAD9： 0-9 on the Number Pad
+KEY_ADD： Number Pad +
+KEY_SUBTRACT： Number Pad -
+KEY_MULTIPLY： Number Pad *
+KEY_DIVIDE： Number Pad /
+KEY_DECIMAL： Number Pad .
+KEY_NUMPADEQUALS： Number Pad =
+KEY_ESCAPE: Escape</code></pre>
 	      <div id="input_fxns"></div>
 	      <h2 class="ph3tutorialheader" id="sub9">Render Functions</h2>
 	      <div id="render_fxns"></div>
