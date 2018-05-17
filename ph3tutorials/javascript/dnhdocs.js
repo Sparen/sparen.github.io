@@ -368,6 +368,125 @@ var dnhph3docs = {
                     "notes": "Raises an error with the specified value and terminates the script if the condition is false."
                 }
             ]
+        },
+        {
+            "catname": "Common Data Functions",
+            "fxns": [
+                {
+                    "fname": "SetCommonData",
+                    "args": ["key : string", "value : free"],
+                    "returnv": "",
+                    "notes": "Maps the given key to the given value in common data. Uses the default common data area.<br>The value can be returned by using GetCommonData with the corresponding key."
+                },
+                {
+                    "fname": "GetCommonData",
+                    "args": ["key : string", "defaultvalue : free"],
+                    "returnv": "The value associated with the given key in the default common data area, or defaultvalue if no mapping exists : free",
+                    "notes": ""
+                },
+                {
+                    "fname": "ClearCommonData",
+                    "args": [],
+                    "returnv": "",
+                    "notes": "Removes all of the common data in the default common data area."
+                },
+                {
+                    "fname": "DeleteCommonData",
+                    "args": ["key : string"],
+                    "returnv": "",
+                    "notes": "Removes the common data mapping with the specified key from the default common data area."
+                },
+                {
+                    "fname": "SetAreaCommonData",
+                    "args": ["area : string", "key : string", "value : free"],
+                    "returnv": "",
+                    "notes": "Maps the given key to the given value in common data. Uses the specified common data area.<br>The value can be returned by using GetAreaCommonData with the corresponding area key."
+                },
+                {
+                    "fname": "GetAreaCommonData",
+                    "args": ["area : string", "key : string", "defaultvalue : free"],
+                    "returnv": "The value associated with the given key in the specified common data area, or defaultvalue if no mapping exists : free",
+                    "notes": ""
+                },
+                {
+                    "fname": "ClearAreaCommonData",
+                    "args": ["area : string"],
+                    "returnv": "",
+                    "notes": "Removes all of the common data in the specified common data area."
+                },
+                {
+                    "fname": "DeleteAreaCommonData",
+                    "args": ["area : string", "key : string"],
+                    "returnv": "",
+                    "notes": "Removes the common data mapping with the specified key from the specified common data area."
+                },
+                {
+                    "fname": "CreateCommonDataArea",
+                    "args": ["area : string"],
+                    "returnv": "",
+                    "notes": "Creates a common data area with the provided area name, in which various common data can be stored."
+                },
+                {
+                    "fname": "IsCommonDataAreaExists",
+                    "args": ["area : string"],
+                    "returnv": "true if the area name corresponds to an existing common data area; false otherwise : bool",
+                    "notes": ""
+                },
+                {
+                    "fname": "CopyCommonDataArea",
+                    "args": ["destarea : string", "sourcearea : string"],
+                    "returnv": "",
+                    "notes": "Copies the common data in the source area to the destination area.<br>If the source common data area is invalid, nothing will happen."
+                },
+                {
+                    "fname": "GetCommonDataAreaKeyList",
+                    "args": [],
+                    "returnv": "Array of all common data area names : string []",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCommonDataValueKeyList",
+                    "args": ["area : string"],
+                    "returnv": "Array of the keys in the specified common data area. : string []",
+                    "notes": ""
+                },
+                {
+                    "fname": "SaveCommonDataAreaA1",
+                    "args": ["area : string"],
+                    "returnv": "true if successful; false otherwise : bool",
+                    "notes": "Saves everything in the specified common data area to a data file."
+                },
+                {
+                    "fname": "LoadCommonDataAreaA1",
+                    "args": ["area : string"],
+                    "returnv": "true if successful; false otherwise : bool",
+                    "notes": "Loads everything in the specified common data area from the saved data file."
+                },
+                {
+                    "fname": "SaveCommonDataAreaA2",
+                    "args": ["area : string", "path : string (path)"],
+                    "returnv": "true if successful; false otherwise : bool",
+                    "notes": "Saves everything in the specified common data area to a data file at the specified path."
+                },
+                {
+                    "fname": "LoadCommonDataAreaA2",
+                    "args": ["area : string", "path : string (path)"],
+                    "returnv": "true if successful; false otherwise : bool",
+                    "notes": "Loads everything in the specified common data area from the saved data file at the specified path."
+                },
+                {
+                    "fname": "SaveCommonDataAreaToReplayFile",
+                    "args": ["area : string"],
+                    "returnv": "true if successful; false otherwise : bool",
+                    "notes": "Saves the specified common data area to the replay file.<br>Do not call this function during a replay."
+                },
+                {
+                    "fname": "LoadCommonDataAreaFromReplayFile",
+                    "args": ["area : string"],
+                    "returnv": "true if successful; false otherwise : bool",
+                    "notes": "Loads everything in the specified common data area from the replay file.<br>Do not call this function during a replay."
+                }
+            ]
         }
     ]
 };
@@ -382,7 +501,7 @@ function getFxnDocs(fxnname, domid) {
     for (i = 1; i <= fxn.args.length; i += 1) {
         str += "<code>&nbsp;&nbsp;&nbsp;&nbsp;" + i.toString() + ") " + fxn.args[i - 1] + "</code><br>";
     }
-    str += "<code>Return: " + fxn.returnv + "</code><br>";
+    if (fxn.returnv !== "") {str += "<code>Return: " + fxn.returnv + "</code><br>";}
     if (fxn.notes !== "") {str += "<br>Notes:<br>" + fxn.notes;}
 
     //Prepare tooltip
@@ -412,6 +531,7 @@ function loadDocs() {
     document.getElementById("path_fxns").innerHTML = loadDocsByCategory("Path Functions");
     document.getElementById("time_fxns").innerHTML = loadDocsByCategory("Time Functions");
     document.getElementById("debug_fxns").innerHTML = loadDocsByCategory("Debug Functions");
+    document.getElementById("cdata_fxns").innerHTML = loadDocsByCategory("Common Data Functions");
 }
 
 function loadDocsByCategory (catnameparam) {
@@ -435,7 +555,7 @@ function loadDocsByCategory (catnameparam) {
         for (k = 1; k <= fs[j].args.length; k += 1) {
             returnstring += "<code>&nbsp;&nbsp;&nbsp;&nbsp;" + k.toString() + ") " + fs[j].args[k - 1] + "</code><br>";
         }
-        returnstring += "<code>Return: " + fs[j].returnv + "</code><br>";
+        if (fs[j].returnv !== "") {returnstring += "<code>Return: " + fs[j].returnv + "</code><br>";}
         if (fs[j].notes !== "") {returnstring += "<br>Notes:<br>" + fs[j].notes;}
         returnstring += "<hr>";
     }
