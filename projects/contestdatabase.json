@@ -323,7 +323,7 @@
             "judges": ["TalosMistake", "ExPorygon/Ozzy840", "Lunarethic"],
             "numparticipants": 19,
             "result": [["AJS"], ["Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"], ["TresserT"]],
-            "participants": ["AJS", "Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada/Ephy", "AchySolrock", "Dark/Ran Yakumo", "Gizmo the Dragon", "Middy/Midnight Sparkle", "The Terrible Bullet Dodger/auto2112", "Uruwi/Fluffy8x"]
+            "participants": ["AJS", "Kirbio", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "TresserT", "Sariel", "Darkness1", "Bob the Tanuki", "Python", "NecroHeart/Vigor", "Conarnar", "Trickysticks", "FondueMaster", "PhantomSong", "Lefkada/Ephy", "AchySolrock", "Dark/Ran Yakumo", "Gizmo the Dragon", "Middy/Midnight Sparkle", "The Terrible Bullet Dodger/auto2112", "Uruwi/Fluffy8x"]
         },
         {
             "id": "range15",
@@ -336,7 +336,7 @@
             "judges": ["Trickysticks", "Sparen", "AJS"],
             "numparticipants": 9,
             "result": [["Lunarethic"], ["TresserT"], ["Kirbio"]],
-            "participants": ["Lunarethic", "TresserT", "Kirbio", "tyrz_939", "Vigor", "The Terrible Bullet Dodger/auto2112", "Guilmon/DLS", "Alice Matroy/SKN", "Haru", "WishMakers"]
+            "participants": ["Lunarethic", "TresserT", "Kirbio", "tyrz_939", "NecroHeart/Vigor", "The Terrible Bullet Dodger/auto2112", "Guilmon/DLS", "Alice Matroy/SKN", "Haru", "WishMakers"]
         },
         {
             "id": "range16",
@@ -349,7 +349,7 @@
             "judges": ["Lefkada/Ephy", "Neshima", "AJS"],
             "numparticipants": 18,
             "result": [["TresserT"], ["Python"], ["Spectral Nexus"]],
-            "participants": ["TresserT", "Python", "Spectral Nexus", "Lunarethic", "Kirbio", "Zhan Fox", "Vigor", "gtbot", "AchySolrock", "Arby26", "Sparen", "Conarnar", "Miplouf", "Haru", "Badz", "DrytheMeowstic", "PhantomSong", "tyrz_939", "Trickysticks", "Fefnir"]
+            "participants": ["TresserT", "Python", "Spectral Nexus", "Lunarethic", "Kirbio", "Zhan Fox", "NecroHeart/Vigor", "gtbot", "AchySolrock", "Arby26", "Sparen", "Conarnar", "Miplouf", "Haru", "Badz", "DrytheMeowstic", "PhantomSong", "tyrz_939", "Trickysticks", "Fefnir"]
         },
         {
             "id": "locaa7",
@@ -361,8 +361,8 @@
             "host": "AJS",
             "judges": ["AJS", "Sagaci", "Sparen"],
             "numparticipants": 14,
-            "result": [["Vigor"], ["Conarnar"], ["TresserT"]],
-            "participants": ["Gizmo the Dragon", "Python", "DrytheMeowstic", "Uruwi/Fluffy8x", "Vigor", "Badz", "Conarnar", "TresserT", "Guilmon/DLS", "Gusano2314", "Fumiko", "Lefkada/Ephy", "Sariel", "Mr. Gaberson"]
+            "result": [["NecroHeart/Vigor"], ["Conarnar"], ["TresserT"]],
+            "participants": ["Gizmo the Dragon", "Python", "DrytheMeowstic", "Uruwi/Fluffy8x", "NecroHeart/Vigor", "Badz", "Conarnar", "TresserT", "Guilmon/DLS", "Gusano2314", "Fumiko", "Lefkada/Ephy", "Sariel", "Mr. Gaberson"]
         },
         {
             "id": "locaa8",
@@ -401,7 +401,7 @@
             "judges": ["Python", "TresserT"],
             "numparticipants": 9,
             "result": [["Natashi"],["Sphe"],["Conarnar"]],
-            "participants": ["Conarnar", "Umbra", "Guilmon/DLS", "Sphe", "Natashi", "Vigor", "Choon", "Adam", "AchySolrock", "gtbot", "Alice Matroy/SKN"]
+            "participants": ["Conarnar", "Umbra", "Guilmon/DLS", "Sphe", "Natashi", "NecroHeart/Vigor", "Choon", "Adam", "AchySolrock", "gtbot", "Alice Matroy/SKN"]
         },
         {
             "id": "locaa10",
@@ -411,7 +411,7 @@
             "year": 2017,
             "duration": [2017.03, 2017.03],
             "host": "TresserT",
-            "judges": ["Sparen", "Ultimadragon88", "Vigor"],
+            "judges": ["Sparen", "Ultimadragon88", "NecroHeart/Vigor"],
             "numparticipants": 9,
             "result": [["Trickysticks", "ExPorygon/Ozzy840"], ["Conarnar"], ["DrytheMeowstic"]],
             "participants": ["Asthmagician", "Conarnar", "Dark/Ran Yakumo", "DrytheMeowstic", "Mr. Gaberson", "Python", "Trickysticks", "ExPorygon/Ozzy840", "The Terrible Bullet Dodger/auto2112", "WishMakers"]
@@ -440,7 +440,7 @@
             "judges": ["ExPorygon/Ozzy840", "Trickysticks"],
             "numparticipants": 12,
             "result": [["Junky"],["Jimmy", "Conarnar"],["DrytheMeowstic"]],
-            "participants": ["Junky", "Jimmy", "Conarnar", "DrytheMeowstic", "Vigor", "Umbra", "WishMakers", "iVAwalys", "GenoCraft", "Arcvasti", "Lollipop", "Rawsome"]
+            "participants": ["Junky", "Jimmy", "Conarnar", "DrytheMeowstic", "NecroHeart/Vigor", "Umbra", "WishMakers", "iVAwalys", "GenoCraft", "Arcvasti", "Lollipop", "Rawsome"]
         },
         {
             "id": "locaa11",
@@ -453,7 +453,7 @@
             "judges": ["WishMakers", "CreepyNinja", "Trickysticks"],
             "numparticipants": 12,
             "result": [["AJS"], ["The Terrible Bullet Dodger/auto2112", "Adam"], ["Junky", "GCP"]],
-            "participants": ["JDude", "Python", "Conarnar", "GenoCraft", "Junky", "GCP", "Ultimadragon88", "TresserT", "The Terrible Bullet Dodger/auto2112", "Adam", "GhostPhanom", "AJS", "Arcvasti", "Vigor"]
+            "participants": ["JDude", "Python", "Conarnar", "GenoCraft", "Junky", "GCP", "Ultimadragon88", "TresserT", "The Terrible Bullet Dodger/auto2112", "Adam", "GhostPhanom", "AJS", "Arcvasti", "NecroHeart/Vigor"]
         },
         {
             "id": "uwom1",
@@ -465,8 +465,8 @@
             "host": "Koukou",
             "judges": ["Koukou", "om the nom", "Tony64"],
             "numparticipants": 7,
-            "result": [[], [], []],
-            "participants": ["Alice Matroy/SKN", "Haru", "The Terrible Bullet Dodger/auto2112", "Adam", "Oelesp", "DrytheMeowstic", "Samario", "Middy/Midnight Sparkle", "Vigor"]
+            "result": [["The Terrible Bullet Dodger/auto2112", "Adam"], ["Middy/Midnight Sparkle"], ["NecroHeart/Vigor"]],
+            "participants": ["Alice Matroy/SKN", "Haru", "The Terrible Bullet Dodger/auto2112", "Adam", "Oelesp", "DrytheMeowstic", "Samario", "Middy/Midnight Sparkle", "NecroHeart/Vigor"]
         }
     ]
 }
