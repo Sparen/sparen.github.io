@@ -467,6 +467,19 @@
             "numparticipants": 7,
             "result": [["The Terrible Bullet Dodger/auto2112", "Adam"], ["Middy/Midnight Sparkle"], ["NecroHeart/Vigor"]],
             "participants": ["Alice Matroy/SKN", "Haru", "The Terrible Bullet Dodger/auto2112", "Adam", "Oelesp", "DrytheMeowstic", "Samario", "Middy/Midnight Sparkle", "NecroHeart/Vigor"]
+        },
+        {
+            "id": "range19",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "stolen artifact reisen",
+            "year": 2018,
+            "duration": [2018.05, 2018.06],
+            "host": "ExPorygon/Ozzy840",
+            "judges": ["ExPorygon/Ozzy840", "Trickysticks"],
+            "numparticipants": 0,
+            "result": [[],[],[]],
+            "participants": []
         }
     ]
 }

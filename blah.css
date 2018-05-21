@@ -284,6 +284,22 @@ p, fieldset, table, pre {margin-bottom: 1em;}
 .tutorialnav a:hover{
   background-color: #003344;
 }
+
+/* Small version of tutorialnav */
+.tutorialnavsmall a{
+  list-style-type: none;
+  display:inline-block;
+  width: 80%;
+  background-color: #002030;
+  padding: 2px 2px 2px 4px;
+  text-decoration: none;
+  border-style: none none none solid;
+  border-width: 2px;
+  border-color: #0088AA;
+}
+.tutorialnavsmall a:hover{
+  background-color: #003344;
+}
 /*END MENUS BY SPAREN*/
 
 /* CSS @media overrides. 468 is the largest an iPhone can do  */
