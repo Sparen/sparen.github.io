@@ -196,15 +196,49 @@ p, fieldset, table, pre {
   float: center;
   list-style-type: none;
   display:inline-block;
-  width: 120px;
+  width: 240px;
   font-weight: bold;
-  background-color: #00BBBB;
+  background-color: #002222;
   text-align: center;
   padding: 4px;
   text-decoration: none;
-  border-style: solid;
-  border-width: 2px;
+  border-style: double;
+  border-width: 3px;
   border-color: #00AADD;
+  border-radius: 6px;
+}
+
+.sttjtocnav{
+  text-align:center;
+}
+.sttjtocnav ul{
+  text-align:center;
+  list-style-type: none;
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden;
+}
+.sttjtocnav li{
+  float: center;
+  list-style-type: none;
+  display:inline-block;
+  text-align: center;
+}
+
+.sttjtocnav a{
+  float: center;
+  list-style-type: none;
+  display:inline-block;
+  width: 240px;
+  font-weight: bold;
+  background-color: #002222;
+  text-align: center;
+  padding: 4px;
+  text-decoration: none;
+  border-style: double;
+  border-width: 3px;
+  border-color: #00AADD;
+  border-radius: 6px;
 }
 
 .sttjheader1 {
@@ -235,6 +269,17 @@ p, fieldset, table, pre {
     padding-left: 24px;
     padding-top: 15px;
     padding-bottom: 5px;
+}
+
+.categoryheader {
+    background-color: #114433;
+    border-style: solid none solid none;
+    border-color: #448888;
+    border-width: 4px;
+    border-radius: 2px;
+    padding: 4px;
+    color: rgb(128,255,224);
+    text-align: center;
 }
 /*END MENUS BY SPAREN*/
 
