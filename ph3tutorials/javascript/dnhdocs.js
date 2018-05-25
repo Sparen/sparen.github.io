@@ -597,14 +597,24 @@ function getFxnDocs(fxnname, domid) {
     //Get information
     var fxn = retrieveFxn(fxnname);
     //Format information
-    var str = "<code style='font-size: 24px'>" + fxn.fname + "()</code><hr>";
-    str += "<code><strong>Arguments:</strong></code><br>"
+    var argnames = ""; //Argument list inside function header
     var i;
-    for (i = 1; i <= fxn.args.length; i += 1) {
-        str += "<code>&nbsp;&nbsp;" + i.toString() + ") " + fxn.args[i - 1] + "</code><br>";
+    for (i = 0; i < fxn.args.length; i += 1) {
+        //Delimit by :, then prune whitepsace
+        var delim = fxn.args[i].split(":");
+        argnames += delim[0].trim().toString();
+        if (i < fxn.args.length - 1) {
+            argnames += ", ";
+        }
+    }
+    var str = "<code style='font-size: 24px'>" + fxn.fname + "(" + argnames + ")</code><hr>";
+    str += "<code><strong>Arguments:</strong></code><br>"
+    var j;
+    for (j = 1; j <= fxn.args.length; j += 1) {
+        str += "<code>&nbsp;&nbsp;" + j.toString() + ") " + fxn.args[j - 1] + "</code><br>";
     }
     if (fxn.returnv !== "") {str += "<code><strong>Return: </strong></code><br><code>&nbsp;&nbsp;" + fxn.returnv + "</code><br>";}
-    if (fxn.notes !== "") {str += "<br><strong>Notes:</strong><br>" + fxn.notes;}
+    if (fxn.notes !== "") {str += "<br><strong>Notes:</strong><br><div class='docsnotesdiv'>" + fxn.notes + "</div>"}
 
     //Prepare tooltip
     document.getElementById(domid).innerHTML = str;
@@ -656,7 +666,17 @@ function loadDocsByCategory (catnameparam) {
     var fs = catobj.fxns;
     var j;
     for (j = 0; j < fs.length; j += 1) {
-        returnstring += "<div class='docsfxnname'><code>" + fs[j].fname + "()</code></div>";
+        var argnames = ""; //Argument list inside function header
+        var l;
+        for (l = 0; l < fs[j].args.length; l += 1) {
+            //Delimit by :, then prune whitepsace
+            var delim = fs[j].args[l].split(":");
+            argnames += delim[0].trim().toString();
+            if (l < fs[j].args.length - 1) {
+                argnames += ", ";
+            }
+        }
+        returnstring += "<div class='docsfxnname'><code>" + fs[j].fname + "(" + argnames + ")</code></div>";
         returnstring += "<div class='docsparamsdiv'><code><strong>Arguments:</strong></code><br>";
         var k;
         for (k = 1; k <= fs[j].args.length; k += 1) {
@@ -664,7 +684,7 @@ function loadDocsByCategory (catnameparam) {
         }
         returnstring += "</div>";
         if (fs[j].returnv !== "") {returnstring += "<div class='docsreturndiv'><code><strong>Return: </strong></code><br><code>&nbsp;&nbsp;" + fs[j].returnv + "</code></div>";}
-        if (fs[j].notes !== "") {returnstring += "<br><strong>Notes:</strong><br>" + fs[j].notes;}
+        if (fs[j].notes !== "") {returnstring += "<br><strong>Notes:</strong><br><div class='docsnotesdiv'>" + fs[j].notes + "</div>";}
         returnstring += "<hr>";
     }
     return returnstring;

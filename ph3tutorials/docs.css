@@ -70,3 +70,8 @@
     padding-bottom: 2px;
     color: #FFEEEE;
 }
+
+/* Also used in tooltips */
+.docsnotesdiv {
+    padding-left: 1em; /* 1 em: apx 2 nbsp; with monospace font */
+}
