@@ -1,0 +1,73 @@
+.docsmenubar {
+    width: 154px;
+    float: left;
+    display:block;
+    height:auto;
+    clear:both;
+    position:relative;/*This and the Z index line move this div above the div that is covering it*/
+    z-index:100;
+
+    border: 1px solid #00DDAA;
+    border-radius: 2px;
+    background-color: #003329;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.docsmenubar ul{
+  text-align:left;
+  list-style-type: none;
+  margin: 0; 
+  padding: 0; 
+  overflow: hidden; 
+}
+
+.docsmenubar a{/*Unlike nav bar, using a instead of li because every item is in fact a link*/
+  float: center;
+  list-style-type: none;
+  display:inline-block;
+  width: 142px;
+  height: 24px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+  padding-bottom: 0px;
+  text-decoration: none;
+}
+
+.docsmenubar li:hover{
+  background-color: #004C3D;
+}
+
+/* Non-link elements in table of contents*/
+.dmbnona {
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    padding-bottom: 2px;
+}
+
+/* The following styles are used in the documentation page but NOT in tooltips. */
+.docsfxnname {
+    font-size: 20px;
+    color: #EEFFEE;
+    background-color: #113322;
+    padding-left: 4px;
+    padding-right: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+}
+
+.docsparamsdiv {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    color: #EEEEFF;
+}
+
+.docsreturndiv {
+    padding-top: 4px;
+    padding-bottom: 2px;
+    color: #FFEEEE;
+}

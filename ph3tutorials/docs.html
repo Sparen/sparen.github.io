@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Documentation</title>    <link rel="stylesheet" type="text/css" href="../blah.css">    <meta content="Sparen's Danmakufu ph3 Documentation"      name="description">
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Function Reference (General Functions)</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Documentation"      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Documentation">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
@@ -9,39 +10,35 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('May 17, 2018'); loadDocs()">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body onload="setupENG('May 17, 2018'); loadDocs()">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
-          <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
-          <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
-          <li><a class="mdnhwiki" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
-          <li><a class="mph3functionlist" target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List</a></li>
+          <li><a href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
+          <li class="dmbnona"><hr>Table of Contents</li>
+	  <li><a href="#sub0">Introduction</a></li>
+	  <li><a href="#sub1">Math Functions</a></li>
+	  <li><a href="#sub2">Text Functions</a></li>
+	  <li><a href="#sub3">Path Functions</a></li>
+	  <li><a href="#sub4">Time Functions</a></li>
+	  <li><a href="#sub5">Debug Functions</a></li>
+	  <li><a href="#sub6">Common Data Functions</a></li>
+	  <li><a href="#sub7">Audio Functions</a></li>
+	  <li><a href="#sub8">Input Functions</a></li>
+	  <li><a href="#sub9">Render Functions</a></li>
+	  <li><a href="#sub10">3D Camera Functions</a></li>
+	  <li><a href="#sub11">2D Camera Functions</a></li>
+	  <li><a href="#sub12">Script Functions</a></li>
+	  <li><a href="#sub13">System Functions</a></li>
+	  <li><a href="#sub14">Player Functions</a></li>
+	  <li><a href="#sub15">Enemy Functions</a></li>
+	  <li><a href="#sub16">Shot Functions</a></li>
+	  <li><a href="#sub17">Item Functions</a></li>
+	  <li><a href="#sub18">Other Functions</a></li>
         </ul>
-      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials - Documentation</h1>
-	      <div class="tutorialnav">
-	        <h2 style="color:aqua">Table of Contents</h2>
-	        <ul>
-	          <li><a href="#sub0">Introduction</a></li>
-	          <li><a href="#sub1">Math Functions</a></li>
-	          <li><a href="#sub2">Text Functions</a></li>
-	          <li><a href="#sub3">Path Functions</a></li>
-	          <li><a href="#sub4">Time Functions</a></li>
-	          <li><a href="#sub5">Debug Functions</a></li>
-	          <li><a href="#sub6">Common Data Functions</a></li>
-	          <li><a href="#sub7">Audio Functions</a></li>
-	          <li><a href="#sub8">Input Functions</a></li>
-	          <li><a href="#sub9">Render Functions</a></li>
-	          <li><a href="#sub10">3D Camera Functions</a></li>
-	          <li><a href="#sub11">2D Camera Functions</a></li>
-	          <li><a href="#sub12">Script Functions</a></li>
-	          <li><a href="#sub13">System Functions</a></li>
-	          <li><a href="#sub14">Player Functions</a></li>
-	          <li><a href="#sub15">Enemy Functions</a></li>
-	          <li><a href="#sub16">Shot Functions</a></li>
-	          <li><a href="#sub17">Item Functions</a></li>
-	          <li><a href="#sub18">Other Functions</a></li>
-	        </ul>
-	      </div>	      <h2 class="ph3tutorialheader" id="sub0">Introduction</h2>
-	      <p>Welcome to my local copy of the Touhou Danmakufu ph3 Documentation, available in case the Danmakufu Wiki goes down *again*. Here you can access the entirety of the translated Danmakufu function reference, although it has passed through the Sparen filter and therefore may be slightly different from the Wiki. Note that not all functions may be documented here, as I prioritize those used in the tutorials and the entire project is a work in progress expected to take a few months time to complete.</p>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials - Function Reference (General Functions)</h1>	      <h2 class="ph3tutorialheader" id="sub0">Introduction</h2>
+	      <p>Welcome to my local copy of the Touhou Danmakufu ph3 Function Reference, available in case the Danmakufu Wiki goes down *again*. Here you can access the entirety of the translated Danmakufu function reference, although it has passed through the Sparen filter and therefore may be slightly different from the Wiki. Note that this is a work in progress and will require time to complete; as such, not all functions may be available.</p>
 	      <p>As a reminder, the OFFICIAL JAPANESE DOCUMENTATION can be found at <a target="_blank" href="http://www.geocities.co.jp/SiliconValley-Oakland/9951/pre/th_dnh_help_v3.html">mkm's website</a>.</p>
 	      <p>In the tutorials, the functions will be available like so: <span class="tooltip" onmouseover="getFxnDocs('add', 'f_add_01');"><code>add()</code><span class="tooltiptext" id="f_add_01"></span></span></p>
 	      <p>Object Functions and System/Script functions will be on their own respective pages to prevent this page from becoming too long. To access these, refer to Object Functions and System/Script Functions (links to be added in the future)</p>

@@ -590,18 +590,21 @@ var dnhph3docs = {
     ]
 };
 
+/* ---------------- Tooltips ---------------- */
+
 //On hover (mouseover), load the documentation into the tooltiptext element 
 function getFxnDocs(fxnname, domid) {
     //Get information
     var fxn = retrieveFxn(fxnname);
     //Format information
     var str = "<code style='font-size: 24px'>" + fxn.fname + "()</code><hr>";
+    str += "<code><strong>Arguments:</strong></code><br>"
     var i;
     for (i = 1; i <= fxn.args.length; i += 1) {
-        str += "<code>&nbsp;&nbsp;&nbsp;&nbsp;" + i.toString() + ") " + fxn.args[i - 1] + "</code><br>";
+        str += "<code>&nbsp;&nbsp;" + i.toString() + ") " + fxn.args[i - 1] + "</code><br>";
     }
-    if (fxn.returnv !== "") {str += "<code>Return: " + fxn.returnv + "</code><br>";}
-    if (fxn.notes !== "") {str += "<br>Notes:<br>" + fxn.notes;}
+    if (fxn.returnv !== "") {str += "<code><strong>Return: </strong></code><br><code>&nbsp;&nbsp;" + fxn.returnv + "</code><br>";}
+    if (fxn.notes !== "") {str += "<br><strong>Notes:</strong><br>" + fxn.notes;}
 
     //Prepare tooltip
     document.getElementById(domid).innerHTML = str;
@@ -621,6 +624,8 @@ function retrieveFxn(fxnname) {
     }
     return {};
 }
+
+/* ---------------- Documentation Page ---------------- */
 
 //Loads documentation onto docs.html
 function loadDocs() {
@@ -651,13 +656,15 @@ function loadDocsByCategory (catnameparam) {
     var fs = catobj.fxns;
     var j;
     for (j = 0; j < fs.length; j += 1) {
-        returnstring += "<code style='font-size: 20px'>" + fs[j].fname + "()</code><br>";
+        returnstring += "<div class='docsfxnname'><code>" + fs[j].fname + "()</code></div>";
+        returnstring += "<div class='docsparamsdiv'><code><strong>Arguments:</strong></code><br>";
         var k;
         for (k = 1; k <= fs[j].args.length; k += 1) {
-            returnstring += "<code>&nbsp;&nbsp;&nbsp;&nbsp;" + k.toString() + ") " + fs[j].args[k - 1] + "</code><br>";
+            returnstring += "<code>&nbsp;&nbsp;" + k.toString() + ") " + fs[j].args[k - 1] + "</code><br>";
         }
-        if (fs[j].returnv !== "") {returnstring += "<code>Return: " + fs[j].returnv + "</code><br>";}
-        if (fs[j].notes !== "") {returnstring += "<br>Notes:<br>" + fs[j].notes;}
+        returnstring += "</div>";
+        if (fs[j].returnv !== "") {returnstring += "<div class='docsreturndiv'><code><strong>Return: </strong></code><br><code>&nbsp;&nbsp;" + fs[j].returnv + "</code></div>";}
+        if (fs[j].notes !== "") {returnstring += "<br><strong>Notes:</strong><br>" + fs[j].notes;}
         returnstring += "<hr>";
     }
     return returnstring;
