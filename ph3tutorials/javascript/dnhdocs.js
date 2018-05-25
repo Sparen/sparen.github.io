@@ -664,7 +664,17 @@ function loadDocsByCategory (catnameparam) {
     }
     //Output
     var fs = catobj.fxns;
+
+    //First, automatically generate a table of contents
+    //May result in slightly malformed HTML :(
+    returnstring += "<div class='docs_cattoc'>";
     var j;
+    for (j = 0; j < fs.length; j += 1) {
+        returnstring += "<div class='unit'>&nbsp;&nbsp;<a href='#fxn_" + fs[j].fname + "'>" + fs[j].fname + "</a>&nbsp;&nbsp;</div>";
+    }
+    returnstring += "</div><br>";
+
+    //Now, loop through functions to populate docs
     for (j = 0; j < fs.length; j += 1) {
         var argnames = ""; //Argument list inside function header
         var l;
@@ -676,7 +686,7 @@ function loadDocsByCategory (catnameparam) {
                 argnames += ", ";
             }
         }
-        returnstring += "<div class='docsfxnname'><code>" + fs[j].fname + "(" + argnames + ")</code></div>";
+        returnstring += "<div class='docsfxnname' id='fxn_" + fs[j].fname + "'><code>" + fs[j].fname + "(" + argnames + ")</code></div>";
         returnstring += "<div class='docsparamsdiv'><code><strong>Arguments:</strong></code><br>";
         var k;
         for (k = 1; k <= fs[j].args.length; k += 1) {

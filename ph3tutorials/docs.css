@@ -1,3 +1,20 @@
+/* Category ToCs */
+.docs_cattoc {
+    border: 1px solid #00DDAA;
+    border-radius: 4px;
+    background-color: #003329;
+    text-align: center;
+    padding: 4px;
+}
+
+.docs_cattoc .unit {
+    border: 1px solid #CCFFCC;
+    display:inline-block;
+    padding: 4px;
+    border-radius: 4px;
+}
+
+/* Sidebar */
 .docsmenubar {
     width: 154px;
     float: left;
