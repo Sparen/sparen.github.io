@@ -13,27 +13,27 @@ var dnhph3docs = {
             "fxns": [
                 {
                     "fname": "add",
-                    "args": ["v1 : number", "v2 : number"],
-                    "returnv": "sum of v1 and v2 : number",
-                    "notes": "v1 + v2.<br>If using add()/+ operator with strings, the result is incompatible with ordinary strings and requires ToString() to be called on it in order to be used with regular strings."
+                    "args": ["value1 : number", "value2 : number"],
+                    "returnv": "sum of value1 and value2 : number",
+                    "notes": "value1 + value2.<br>If using add()/+ operator with strings, the result is incompatible with ordinary strings and requires ToString() to be called on it in order to be used with regular strings."
                 },
                 {
                     "fname": "subtract",
-                    "args": ["v1 : number", "v2 : number"],
-                    "returnv": "difference of v1 and v2 : number",
-                    "notes": "v1 - v2.<br>If using subtract()/- operator with strings, the result is incompatible with ordinary strings and requires ToString() to be called on it in order to be used with regular strings."
+                    "args": ["value1 : number", "value2 : number"],
+                    "returnv": "difference of value1 and value2 : number",
+                    "notes": "value1 - value2.<br>If using subtract()/- operator with strings, the result is incompatible with ordinary strings and requires ToString() to be called on it in order to be used with regular strings."
                 },
                 {
                     "fname": "multiply",
-                    "args": ["v1 : number", "v2 : number"],
-                    "returnv": "product of v1 and v2 : number",
-                    "notes": "v1 * v2"
+                    "args": ["value1 : number", "value2 : number"],
+                    "returnv": "product of value1 and value2 : number",
+                    "notes": "value1 * value2"
                 },
                 {
                     "fname": "divide",
-                    "args": ["v1 : number", "v2 : number"],
-                    "returnv": "quotient of v1 and v2 : number",
-                    "notes": "v1 / v2"
+                    "args": ["value1 : number", "value2 : number"],
+                    "returnv": "quotient of value1 and value2 : number",
+                    "notes": "value1 / value2"
                 },
                 {
                     "fname": "remainder",
@@ -49,62 +49,62 @@ var dnhph3docs = {
                 },
                 {
                     "fname": "min",
-                    "args": ["v1 : number", "v2 : number"],
-                    "returnv": "lesser of v1 and v2 : number",
+                    "args": ["value1 : number", "value2 : number"],
+                    "returnv": "lesser of value1 and value2 : number",
                     "notes": ""
                 },
                 {
                     "fname": "max",
-                    "args": ["v1 : number", "v2 : number"],
-                    "returnv": "greater of v1 and v2 : number",
+                    "args": ["value1 : number", "value2 : number"],
+                    "returnv": "greater of value1 and value2 : number",
                     "notes": ""
                 },
                 {
                     "fname": "log",
-                    "args": ["v : number"],
-                    "returnv": "natural log (base e) of v : number",
+                    "args": ["value : number"],
+                    "returnv": "natural log (base e) of value : number",
                     "notes": ""
                 },
                 {
                     "fname": "log10",
-                    "args": ["v : number"],
-                    "returnv": "common log (base 10) of v : number",
+                    "args": ["value : number"],
+                    "returnv": "common log (base 10) of value : number",
                     "notes": ""
                 },
                 {
                     "fname": "cos",
-                    "args": ["ang : number (degrees)"],
-                    "returnv": "cosine of ang : number",
+                    "args": ["angle : number (degrees)"],
+                    "returnv": "cosine of angle : number",
                     "notes": "Cosine is a value between -1 and 1 that corresponds to the x-value in a coordinate plane."
                 },
                 {
                     "fname": "sin",
-                    "args": ["ang : number (degrees)"],
-                    "returnv": "sine of ang : number",
+                    "args": ["angle : number (degrees)"],
+                    "returnv": "sine of angle : number",
                     "notes": "Sine is a value between -1 and 1 that corresponds to the y-value in a coordinate plane."
                 },
                 {
                     "fname": "tan",
-                    "args": ["ang : number (degrees)"],
-                    "returnv": "tangent of ang : number",
+                    "args": ["angle : number (degrees)"],
+                    "returnv": "tangent of angle : number",
                     "notes": "Tangent is the slope of the line created by the angle (x/y)."
                 },
                 {
                     "fname": "acos",
-                    "args": ["v : number"],
-                    "returnv": "arccosine of v : number",
+                    "args": ["value : number"],
+                    "returnv": "arccosine of value : number",
                     "notes": "Argument must be in range [-1, 1].<br>acos(cos(x)) = x, if x is between 0 and 180."
                 },
                 {
                     "fname": "asin",
-                    "args": ["v : number"],
-                    "returnv": "arcsine of v : number",
+                    "args": ["value : number"],
+                    "returnv": "arcsine of value : number",
                     "notes": "Argument must be in range [-1, 1].<br>asin(sin(x)) = x, if x is between -90 and 90."
                 },
                 {
                     "fname": "atan",
-                    "args": ["v : number"],
-                    "returnv": "arctangent of v : number",
+                    "args": ["value : number"],
+                    "returnv": "arctangent of value : number",
                     "notes": "atan(tan(x)) = x, if x is between -90 and 90."
                 },
                 {
@@ -121,38 +121,38 @@ var dnhph3docs = {
                 },
                 {
                     "fname": "round",
-                    "args": ["v : number"],
-                    "returnv": "v as an integer : number (int)",
+                    "args": ["value : number"],
+                    "returnv": "value as an integer : number (int)",
                     "notes": "Values of 0.5 or greater are rounded up; otherwise they are rounded down."
                 },
                 {
                     "fname": "truncate",
-                    "args": ["v : number"],
-                    "returnv": "v with decimal component removed : number (int)",
+                    "args": ["value : number"],
+                    "returnv": "value with decimal component removed : number (int)",
                     "notes": "Example: truncate(1.123) -> 1<br>The shortened name trunc can also be used to refer to this function."
                 },
                 {
                     "fname": "ceil",
-                    "args": ["v : number"],
-                    "returnv": "v rounded up to next integer : number (int)",
+                    "args": ["value : number"],
+                    "returnv": "value rounded up to next integer : number (int)",
                     "notes": ""
                 },
                 {
                     "fname": "floor",
-                    "args": ["v : number"],
-                    "returnv": "v rounded down to next integer : number (int)",
+                    "args": ["value : number"],
+                    "returnv": "value rounded down to next integer : number (int)",
                     "notes": ""
                 },
                 {
                     "fname": "absolute",
-                    "args": ["v : number"],
-                    "returnv": "absolute value of v : number",
+                    "args": ["value : number"],
+                    "returnv": "absolute value of value : number",
                     "notes": ""
                 },
                 {
                     "fname": "modc",
-                    "args": ["v : number", "v2 : number"],
-                    "returnv": "modulus of v : number",
+                    "args": ["value1 : number", "value2 : number"],
+                    "returnv": "modulus of value1 : number",
                     "notes": "Unlike remainder, modc returns a value with the same sign as the dividend.<br>Example: modc(-7, 4) equals -3 and modc(7, -4) equals 3."
                 },
                 {
@@ -163,21 +163,21 @@ var dnhph3docs = {
                 },
                 {
                     "fname": "successor",
-                    "args": ["v : number"],
-                    "returnv": "v + 1 : number",
-                    "notes": "v++<br>Adds 1 to the value, then returns it."
+                    "args": ["value : number"],
+                    "returnv": "value + 1 : number",
+                    "notes": "value++<br>Adds 1 to the value, then returns it."
                 },
                 {
                     "fname": "predecessor",
-                    "args": ["v : number"],
-                    "returnv": "v - 1 : number",
-                    "notes": "v--<br>Subtracts 1 from the value, then returns it."
+                    "args": ["value : number"],
+                    "returnv": "value - 1 : number",
+                    "notes": "value--<br>Subtracts 1 from the value, then returns it."
                 },
                 {
                     "fname": "negative",
-                    "args": ["v : number"],
-                    "returnv": "v * -1 : number",
-                    "notes": "-v<br>Multiplies -1 to the value, then returns it."
+                    "args": ["value : number"],
+                    "returnv": "value * -1 : number",
+                    "notes": "-value<br>Multiplies -1 to the value, then returns it."
                 }
             ]
         },
@@ -192,62 +192,62 @@ var dnhph3docs = {
                 },
                 {
                     "fname": "ToString",
-                    "args": ["v : number"],
-                    "returnv": "v as a string : string",
+                    "args": ["value : number"],
+                    "returnv": "value as a string : string",
                     "notes": ""
                 },
                 {
                     "fname": "IntToString",
-                    "args": ["v : number"],
-                    "returnv": "v as a string : string",
+                    "args": ["value : number"],
+                    "returnv": "value as a string : string",
                     "notes": "Omits any decimal places."
                 },
                 {
                     "fname": "itoa",
-                    "args": ["v : number (int)"],
-                    "returnv": "v as an array : string",
+                    "args": ["value : number (int)"],
+                    "returnv": "value as an array : string",
                     "notes": "Converts an integer value to an string form, but leaves out decimal places.<br>Example: rtoa(12.34) -> ['1', '2']<br>This function might behave identically to IntToString."
                 },
                 {
                     "fname": "rtoa",
-                    "args": ["v : number"],
-                    "returnv": "v as an array : string",
+                    "args": ["value : number"],
+                    "returnv": "value as an array : string",
                     "notes": "Converts any real number to an string form.<br>Example: rtoa(12.34) -> ['1', '2', '.', '3', '4']"
                 },
                 {
                     "fname": "rtos",
-                    "args": ["format : string", "v : number"],
-                    "returnv": "v as a string, with filtering options : string",
+                    "args": ["format : string", "value : number"],
+                    "returnv": "value as a string, with filtering options : string",
                     "notes": "The format is presented as a string that determines how many digits will be shown.<br>It can contain any combination of the following three characters: 0, ., #.<br>0 is a slot for a digit.<br>. represents the decimal place in the string.<br># creates a space in the string.<br>Example: rtos(\"000.000\", 1.23) = \"001.230\", and rtos(\"#00\", 1.23) = \" 01\"."
                 },
                 {
                     "fname": "vtos",
-                    "args": ["format : string", "v : number"],
-                    "returnv": "v as a string, with filtering options : string",
+                    "args": ["format : string", "value : number"],
+                    "returnv": "value as a string, with filtering options : string",
                     "notes": "The format is presented as a string.<br>Format String: First, the number of digits on each side of the decimal are specified (000.00 is 3.2 in the format string).<br>Unused digits will be filled with spaces.<br>If preceded by a \"-\", the digits will be right-justified, adding blank spaces to the right instead of the left.<br>If preceded by a \"0\", all digits not occupied by the value will be filled by zeroes.<br>If ended with a \"d\", the value will be presented as an integer.<br>If ended with an \"f\", the value will be presented as a real/floating point number.<br>If ended with an \"s\", this indicates the value given was in the form of a string.<br>Example: vtos(\"03d\", 1.23) = \"001\", vtos(\"3d\", 1.23) = \"　1\", vtos(\"-3d\", 1.23) = \"1　\", and vtos(\"03.5f\", 1.23) = \"001.23000\"."
                 },
                 {
                     "fname": "atoi",
-                    "args": ["v : string"],
-                    "returnv": "v as an integer : number (int)",
+                    "args": ["value : string"],
+                    "returnv": "value as an integer : number (int)",
                     "notes": "If there is a decimal part, then it will be truncated.<br>If the string does not represent a valid number, then 0 will be returned."
                 },
                 {
                     "fname": "ator",
-                    "args": ["v : string"],
-                    "returnv": "v as an real/floating point : number (float)",
+                    "args": ["value : string"],
+                    "returnv": "value as an real/floating point : number (float)",
                     "notes": "If the string does not represent a valid number, then 0 will be returned."
                 },
                 {
                     "fname": "TrimString",
-                    "args": ["v : string"],
-                    "returnv": "v without preceding and trailing whitespace : string",
+                    "args": ["value : string"],
+                    "returnv": "value without preceding and trailing whitespace : string",
                     "notes": "Example: TrimString(\" ABC \") will return \"ABC\"."
                 },
                 {
                     "fname": "SplitString",
-                    "args": ["v : string", "d : string"],
-                    "returnv": "Array consisting of v split by delimiter d : string []",
+                    "args": ["value : string", "delimiter : string"],
+                    "returnv": "Array consisting of value split by delimiter : string []",
                     "notes": "Example: SplitString(\"A/123/BCD\", \"/\") will return [\"A\", \"123\", \"BCD\"]."
                 }
             ]
