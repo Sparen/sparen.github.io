@@ -16,10 +16,12 @@ function getFxnDocs(fxnname, domid) {
         }
     }
     var str = "<code style='font-size: 24px'>" + fxn.fname + "(" + argnames + ")</code><hr>";
-    str += "<code><strong>Arguments:</strong></code><br>"
-    var j;
-    for (j = 1; j <= fxn.args.length; j += 1) {
-        str += "<code>&nbsp;&nbsp;" + j.toString() + ") " + fxn.args[j - 1] + "</code><br>";
+    if (fxn.args.length > 0) {
+        str += "<code><strong>Arguments:</strong></code><br>"
+        var j;
+        for (j = 1; j <= fxn.args.length; j += 1) {
+            str += "<code>&nbsp;&nbsp;" + j.toString() + ") " + fxn.args[j - 1] + "</code><br>";
+        }
     }
     if (fxn.returnv !== "") {str += "<code><strong>Return: </strong></code><br><code>&nbsp;&nbsp;" + fxn.returnv + "</code><br>";}
     if (fxn.description !== "") {str += "<br><strong>Description:</strong><br><div class='docsnotesdiv'>" + fxn.description + "</div>";}
@@ -111,12 +113,14 @@ function loadDocsByCategory (catnameparam) {
             }
         }
         returnstring += "<div class='docsfxnname' id='fxn_" + fs[j].fname + "'><a href='#fxn_" + fs[j].fname + "'><code>" + fs[j].fname + "(" + argnames + ")</code></a></div>";
-        returnstring += "<div class='docsparamsdiv'><code><strong>Arguments:</strong></code><br>";
-        var k;
-        for (k = 1; k <= fs[j].args.length; k += 1) {
-            returnstring += "<code>&nbsp;&nbsp;" + k.toString() + ") " + fs[j].args[k - 1] + "</code><br>";
+        if (fs[j].args.length > 0) {
+            returnstring += "<div class='docsparamsdiv'><code><strong>Arguments:</strong></code><br>";
+            var k;
+            for (k = 1; k <= fs[j].args.length; k += 1) {
+                returnstring += "<code>&nbsp;&nbsp;" + k.toString() + ") " + fs[j].args[k - 1] + "</code><br>";
+            }
+            returnstring += "</div>";
         }
-        returnstring += "</div>";
         if (fs[j].returnv !== "") {returnstring += "<div class='docsreturndiv'><code><strong>Return: </strong></code><br><code>&nbsp;&nbsp;" + fs[j].returnv + "</code></div>";}
         if (fs[j].description !== "") {returnstring += "<br><strong>Description:</strong><br><div class='docsnotesdiv'>" + fs[j].description + "</div>";}
         if (fs[j].notes !== "") {returnstring += "<br><strong>Notes:</strong><br><div class='docsnotesdiv'>" + fs[j].notes + "</div>";}

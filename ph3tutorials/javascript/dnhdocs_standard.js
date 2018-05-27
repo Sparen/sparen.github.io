@@ -1007,93 +1007,93 @@ var dnhph3docs_standard = {
             "fxns": [
                 {
                     "fname": "Set2DCameraFocusX",
-                    "args": [],
+                    "args": ["xcoord : number"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets the x coordinate of the focus point.",
+                    "notes": "Defaults to center of the playing field."
                 },
                 {
                     "fname": "Set2DCameraFocusY",
-                    "args": [],
+                    "args": ["ycoord : number"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets the x coordinate of the focus point.",
+                    "notes": "Defaults to center of the playing field."
                 },
                 {
                     "fname": "Set2DCameraFocusZ",
-                    "args": [],
+                    "args": ["rotation : number (degrees)"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the z angle (rotation) of the 2D Camera.",
                     "notes": ""
                 },
                 {
                     "fname": "Set2DCameraRatio",
-                    "args": [],
+                    "args": ["zoom : number"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets the zoom of the camera (centered on the focus point).",
+                    "notes": "Defaults to 1."
                 },
                 {
                     "fname": "Set2DCameraRatioX",
-                    "args": [],
+                    "args": ["xzoom : number"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets the magnification of the x axis of the 2D camera (centered on the focus point).",
+                    "notes": "For example, if you set this value to 2, the x axis will be doubled in size.<br>Defaults to 1.<br>If you specify a negative value, the x axis will be flipped."
                 },
                 {
                     "fname": "Set2DCameraRatioY",
-                    "args": [],
+                    "args": ["yzoom : number"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets the magnification of the y axis of the 2D camera (centered on the focus point).",
+                    "notes": "For example, if you set this value to 2, the y axis will be doubled in size.<br>Defaults to 1.<br>If you specify a negative value, the y axis will be flipped."
                 },
                 {
                     "fname": "Reset2DCamera",
                     "args": [],
                     "returnv": "",
-                    "description": "",
+                    "description": "Resets both the focus point and the zoom ratio, respectively, to the center of the screen and 1.",
                     "notes": ""
                 },
                 {
                     "fname": "Get2DCameraX",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera x coordinate : number",
+                    "description": "Returns the x coordinate of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "Get2DCameraY",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera y coordinate : number",
+                    "description": "Returns the y coordinate of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "Get2DCameraAngleZ",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera rotation angle : number (degrees)",
+                    "description": "Returns the z angle (rotation) of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "Get2DCameraRatio",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "zoom ratio : number",
+                    "description": "Returns the zoom ratio of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "Get2DCameraRatioX",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "x zoom ratio : number",
+                    "description": "Returns the x zoom ratio of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "Get2DCameraRatioY",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "y zoom ratio : number",
+                    "description": "Returns the y zoom ratio of the camera.",
                     "notes": ""
                 }
             ]
