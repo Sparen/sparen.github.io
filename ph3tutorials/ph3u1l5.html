@@ -9,7 +9,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('May 04, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>  </head>  <body onload="setupENG('May 26, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="http://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
         <ul>
           <li><a class="mhome" href="http://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a class="mph3tutorials" href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
@@ -66,7 +66,7 @@
 	      </ul>
 	      <p>Please note that the contents of this page are partially based off of <a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs">CK Crash's Danmakufu ph3 tutorial</a> and that it may be a more suitable option for learning about how Danmakufu treats variables and the like.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Booleans?</h2>
-	      <p>A boolean is, simply put, either true or false.</p>
+	      <p>A boolean is, simply put, either true or false. Booleans in Danmakufu function exactly the same as in most other strongly typed programming languages.</p>
 	        <pre class="prettyprint"><code>let bool = true;
 let bool2 = false;</code></pre>
 	      <p>Boolean expressions are expressions that are either true or false and will be very useful when we discuss if and if-else statements in Part 3.</p>
@@ -81,8 +81,8 @@ let bool2 = false;
 let test = (bool || bool2); //test is true if either bool OR bool2 is true, else false
 let test2 = (bool && bool2); //test2 is true if bool AND bool2 are true, else false
 let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE if bool2 is false.</code></pre>
-	      <p>As seen above, || denotes OR and && denotes AND. When we discuss if and if-else statements in the next part, we will be returning to this, as it is the foundation of script control and flow in danmakufu.</p>
-	      <p>To close, be aware that the boolean true is equivalent to 1 and the boolean false is equivalent to 0. This is good to know for Computer Programming in general.</p>
+	      <p>As seen above, || denotes OR and && denotes AND. When we discuss if and if-else statements in the next part, we will be returning to this, as it is the foundation of script control and flow in danmakufu. Parentheses are used for controlling execution similarly to the order of operations.</p>
+	      <p>To close, be aware that the boolean true is equivalent to 1 and the boolean false is equivalent to 0 (IE <code>1 + true</code> returns 2; <code>true + false</code> returns 1). This is good to know for Computer Programming in general, but we do not recommend utilizing 1 and 0 as a substitute for true and false in Danmakufu.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What are If and If-Else Statements?</h2>
 	      <p>So now that we have all this knowledge of booleans and boolean expressions, what will we do with it? Well, if you want to only execute certain code under certain conditions, you can use booleans and boolean expressions in if, if-else, and alternative-case (switch) statements!</p>
 	        <pre class="prettyprint"><code>if(count &gt; 30){count = 0;}</code></pre>
@@ -121,7 +121,7 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
     others{
 	//Do various stuff
     }</code></pre>
-	      <p>The way an alternative-case statement works is as follows: The variable inside alternative() is the variable that is being tested. The first case asks whether x == -3. If true, it will execute the stuff inside the braces for case(-3) and ignore everything else. If x is not -3, it will move on to the next case and so on. Finally, if it has exhausted its options, it will do whatever is in others{} or, if others{} is not present, simply exit the statement and do nothing. Very useful.</p>
+	      <p>The way an alternative-case statement works is as follows: The variable inside alternative() is the variable that is being tested. The first case asks whether <code>x == -3</code>. If true, it will execute the stuff inside the braces for case(-3) and ignore everything else. If x is not -3, it will move on to the next case and so on. Finally, if it has exhausted its options, it will do whatever is in others{} or, if others{} is not present, simply exit the statement and do nothing. Very useful.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: What are Loops and How do I Use Them?</h2>
 	      <p>If you want to repeatedly do the same thing over and over again (and perhaps with slightly different effects), loops are the solution! There are a few types of loops in Danmakufu.</p>
 	      <p>The first type of loop is the generic loop. It is a structure that takes an integer parameter <code>n</code> and will run the code in the following block <code>n</code> times. The parameter must be an integer because it makes no sense to repeat something 3.5 times. For example:</p>
@@ -156,7 +156,7 @@ while(x &gt; 0){
     y += 1;
 }</code></pre>
 	      <p>Finally, we will discuss the above nested while loops. Here we define variables x and y, and while x is greater than 0 (which it is), it runs a new while loop. This while loop runs as long as y is less than 5, which it is. Like before, we will have an infinite loop, as x will continue to decrement but since y is not mutated within the inner while loop, the condition y &lt; 5 will always be true and the loop will never terminate. Note that the <code>y += 1;</code> line is never executed - this is an example of blocking, where because we have a while loop before the statement, the loop must terminate before the statement can execute.</p>
-	      <p>Now we will discuss the last type of loop in Danmakufu - the for loop. In Danmakufu, the for loop comes in two varieties, ascent and descent.</p>
+	      <p>Now we will discuss the last type of loop in Danmakufu - the for loop. In Danmakufu, the for loop comes in two varieties, ascent and descent. Note to programmers coming from other languages: there is no generic for loop or for-each loop. You must use a while loop or ascent/descent.</p>
 	      <p>For a video tutorial, please consult the following: <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&amp;list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K">Sparen's Danmakufu Tutorials - Using Ascent Loops and More</a>. However, please be aware that this tutorial assumes prior knowledge of bullet spawning functions.</p>
 	      <p>A generic ascent loop is structured as follows:</p>
 	        <pre class="prettyprint"><code>let x = 5;
