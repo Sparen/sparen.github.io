@@ -682,153 +682,712 @@ var dnhph3docs_standard = {
             "fxns": [
                 {
                     "fname": "LoadTexture",
-                    "args": [],
+                    "args": ["path : string (path)"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Loads specified image file to Danmakufu as a texture.",
                     "notes": ""
                 },
                 {
                     "fname": "LoadTextureInLoadThread",
-                    "args": [],
+                    "args": ["path : string (path)"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Loads specified image file to Danmakufu as a texture in a separate thread.",
+                    "notes": "Using this function inside @Loading is the same as using LoadTexture.<br>When using large images, the script will freeze until the image has finished loading."
                 },
                 {
                     "fname": "RemoveTexture",
-                    "args": [],
+                    "args": ["path : string (path)"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Removes specified texture file from Danmakufu.",
                     "notes": ""
                 },
                 {
                     "fname": "GetTextureWidth",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "args": ["path : string (path)"],
+                    "returnv": "width of image file : number (int)",
+                    "description": "Returns the width of the specified image file.",
                     "notes": ""
                 },
                 {
                     "fname": "GetTextureHeight",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "args": ["path : string (path)"],
+                    "returnv": "height of image file : number (int)",
+                    "description": "Returns the height of the specified image file.",
                     "notes": ""
                 },
                 {
                     "fname": "SetFogEnable",
-                    "args": [],
+                    "args": ["enable : bool"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Enables or disables fog.",
                     "notes": ""
                 },
                 {
                     "fname": "SetFogParam",
-                    "args": [],
+                    "args": ["start : number", "end : number", "red : number (int)", "green : number (int)", "blue : number (int)"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets the fog parameters with the start and end distances from the player and the rgb values.",
+                    "notes": "RGB on 0-255 scale.<br>To turn the screen dark around the player, for example, you can use SetFogParam(250, 700, 0, 0, 0)."
                 },
                 {
                     "fname": "ClearInvalidRenderPriority",
                     "args": [],
                     "returnv": "",
-                    "description": "",
+                    "description": "NO_TRANSLATION_FOUND",
                     "notes": ""
                 },
                 {
                     "fname": "SetInvalidRenderPriorityA1",
-                    "args": [],
+                    "args": ["start : number (int)", "end : number (int)"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets invalid render priority between start and end render priorities.",
+                    "notes": "Drawing within the specified range is disabled by this function."
                 },
                 {
                     "fname": "GetReservedRenderTargetName",
-                    "args": [],
+                    "args": ["index : number"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "NO_TRANSLATION_FOUND",
+                    "notes": "Index in range 0-2."
                 },
                 {
                     "fname": "CreateRenderTarget",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "args": ["targetname : string"],
+                    "returnv": "true if successfully created; false otherwise : bool",
+                    "description": "Can create a custom render target outside of the reserved ones.",
+                    "notes": "To use, ObjPrim_SetTexture must have the name of the render target as a string."
                 },
                 {
                     "fname": "RenderToTextureA1",
-                    "args": [],
+                    "args": ["targetname : string", "start : number", "end : number", "rendertargetclear : bool"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Renders the specified range of invalid render priority drawings to a texture.",
+                    "notes": "TODO: What does rendertargetclear do?"
                 },
                 {
                     "fname": "RenderToTextureB1",
-                    "args": [],
+                    "args": ["targetname : string", "obj : number (Object ID)", "rendertargetclear : bool"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Renders the specified object to texture.",
+                    "notes": "TODO: What does rendertargetclear do?"
                 },
                 {
                     "fname": "SaveRenderedTextureA1",
-                    "args": [],
+                    "args": ["targetname : string", "filename : string (path)"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Saves rendered texture to file.",
+                    "notes": "The image file created by this function can be used immediately after its execution."
                 },
                 {
                     "fname": "SaveRenderedTextureA2",
-                    "args": [],
+                    "args": ["targetname : string", "filename : string (path)", "left : number", "top : number", "right : number", "bottom : number"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Saves rendered texture to file, given left/top/right/bottom bounds of the region to capture.",
+                    "notes": "The image file created by this function can be used immediately after its execution."
                 },
                 {
                     "fname": "SaveSnapShotA1",
-                    "args": [],
+                    "args": ["filename : string (path)"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Saves a picture of the game to file.",
+                    "notes": "The image file created by this function can be used immediately after its execution."
                 },
                 {
                     "fname": "SaveSnapShotA2",
-                    "args": [],
+                    "args": ["filename : string (path)", "left : number", "top : number", "right : number", "bottom : number"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Saves a picture of the game to file, given left/top/right/bottom bounds of the region to capture.",
+                    "notes": "The image file created by this function can be used immediately after its execution."
                 },
                 {
                     "fname": "IsPixelShaderSupported",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "args": ["majorversion : number (int)", "minorversion : number (int)"],
+                    "returnv": "true if supported; false otherwise : bool",
+                    "description": "Checks your whether or not your GPU supports the specified pixel shader version and returns true if supported.",
+                    "notes": "Example: <code>IsPixelShaderSupported(3,0);</code> checks for Pixel Shader version 3.0."
                 },
                 {
                     "fname": "SetShader",
-                    "args": [],
+                    "args": ["objshader : number (Object ID)", "rpriority1 : number", "rpriority2 : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "NO_TRANSLATION_FOUND",
                     "notes": ""
                 },
                 {
                     "fname": "SetShaderI",
-                    "args": [],
+                    "args": ["objshader : number (Object ID)", "rpriority1 : number", "rpriority2 : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "NO_TRANSLATION_FOUND",
                     "notes": ""
                 },
                 {
                     "fname": "ResetShader",
+                    "args": ["rpriority1 : number", "rpriority2 : number"],
+                    "returnv": "",
+                    "description": "NO_TRANSLATION_FOUND",
+                    "notes": ""
+                },
+                {
+                    "fname": "ResetShaderI",
+                    "args": ["rpriority1 : number", "rpriority2 : number"],
+                    "returnv": "",
+                    "description": "NO_TRANSLATION_FOUND",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "catname": "3D Camera Functions",
+            "fxns": [
+                {
+                    "fname": "SetCameraFocusX",
                     "args": [],
                     "returnv": "",
                     "description": "",
                     "notes": ""
                 },
                 {
-                    "fname": "ResetShaderI",
+                    "fname": "SetCameraFocusY",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetCameraFocusZ",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetCameraFocusXYZ",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetCameraRadius",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetCameraAzimuthAngle",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetCameraElevationAngle",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetCameraYaw",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetCameraPitch",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetCameraRoll",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraX",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraY",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraZ",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraFocusX",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraFocusY",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraFocusZ",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraRadius",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraAzimuthAngle",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraElevationAngle",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraYaw",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraPitch",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraRoll",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetCameraPerspectiveClip",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "catname": "2D Camera Functions",
+            "fxns": [
+                {
+                    "fname": "Set2DCameraFocusX",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Set2DCameraFocusY",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Set2DCameraFocusZ",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Set2DCameraRatio",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Set2DCameraRatioX",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Set2DCameraRatioY",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Reset2DCamera",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Get2DCameraX",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Get2DCameraY",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Get2DCameraAngleZ",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Get2DCameraRatio",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Get2DCameraRatioX",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "Get2DCameraRatioY",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "catname": "Script Functions",
+            "fxns": [
+                {
+                    "fname": "LoadScript",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "LoadScriptInThread",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "StartScript",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "CloseScript",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "IsCloseScript",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetScriptArgument",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetScriptArgument",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetScriptArgumentCount",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "CloseStgScene",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetOwnScriptID",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetEventType",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetEventArgument",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetScriptResult",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetScriptResult",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetAutoDeleteObject",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "NotifyEvent",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "NotifyEventAll",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetScriptInfoA1",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "catname": "System Functions",
+            "fxns": [
+                {
+                    "fname": "SetStgFrame",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetScore",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "AddScore",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetGraze",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "AddGraze",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPoint",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "AddPoint",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetItemRenderPriorityI",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetShotRenderPriorityI",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetStgFrameRenderPriorityMinI",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetStgFrameRenderPriorityMaxI",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetItemRenderPriorityI",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetShotRenderPriorityI",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerRenderPriorityI",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetCameraFocusPermitPriorityI",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetStgFrameLeft",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetStgFrameTop",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetStgFrameWidth",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetStgFrameHeight",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetScreenWidth",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetScreenHeight",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "IsReplay",
+                    "args": [],
+                    "returnv": "",
+                    "description": "",
+                    "notes": ""
+                },
+                {
+                    "fname": "AddArchiveFile",
                     "args": [],
                     "returnv": "",
                     "description": "",

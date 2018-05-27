@@ -62,6 +62,11 @@ function loadDocs() {
     document.getElementById("cdata_fxns").innerHTML = loadDocsByCategory("Common Data Functions");
     document.getElementById("audio_fxns").innerHTML = loadDocsByCategory("Audio Functions");
     document.getElementById("input_fxns").innerHTML = loadDocsByCategory("Input Functions");
+    document.getElementById("render_fxns").innerHTML = loadDocsByCategory("Render Functions");
+    document.getElementById("3dcamera_fxns").innerHTML = loadDocsByCategory("3D Camera Functions");
+    document.getElementById("2dcamera_fxns").innerHTML = loadDocsByCategory("2D Camera Functions");
+    document.getElementById("script_fxns").innerHTML = loadDocsByCategory("Script Functions");
+    document.getElementById("system_fxns").innerHTML = loadDocsByCategory("System Functions");
 }
 
 function loadDocsByCategory (catnameparam) {
