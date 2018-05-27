@@ -68,12 +68,16 @@
 /* The following styles are used in the documentation page but NOT in tooltips. */
 .docsfxnname {
     font-size: 20px;
-    color: #EEFFEE;
     background-color: #113322;
     padding-left: 4px;
     padding-right: 2px;
     padding-top: 2px;
     padding-bottom: 2px;
+}
+
+.docsfxnname a {
+  color: #EEFFEE;
+  text-decoration: none;
 }
 
 .docsparamsdiv {

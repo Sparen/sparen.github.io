@@ -110,7 +110,7 @@ function loadDocsByCategory (catnameparam) {
                 argnames += ", ";
             }
         }
-        returnstring += "<div class='docsfxnname' id='fxn_" + fs[j].fname + "'><code>" + fs[j].fname + "(" + argnames + ")</code></div>";
+        returnstring += "<div class='docsfxnname' id='fxn_" + fs[j].fname + "'><a href='#fxn_" + fs[j].fname + "'><code>" + fs[j].fname + "(" + argnames + ")</code></a></div>";
         returnstring += "<div class='docsparamsdiv'><code><strong>Arguments:</strong></code><br>";
         var k;
         for (k = 1; k <= fs[j].args.length; k += 1) {

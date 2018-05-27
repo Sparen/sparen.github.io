@@ -841,163 +841,163 @@ var dnhph3docs_standard = {
             "fxns": [
                 {
                     "fname": "SetCameraFocusX",
-                    "args": [],
+                    "args": ["xcoord : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the x coordinate of the camera focus.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraFocusY",
-                    "args": [],
+                    "args": ["ycoord : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the y coordinate of the camera focus.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraFocusZ",
-                    "args": [],
+                    "args": ["zcoord : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the z coordinate of the camera focus.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraFocusXYZ",
-                    "args": [],
+                    "args": ["xcoord : number", "ycoord : number", "zcoord : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the x, y, and z coordinates of the camera focus.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraRadius",
-                    "args": [],
+                    "args": ["distance : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the distance of the camera to the focus point.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraAzimuthAngle",
-                    "args": [],
+                    "args": ["azimuth : number (degrees)"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the azimuth angle from the focus point.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraElevationAngle",
-                    "args": [],
+                    "args": ["elevation : number (degrees)"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the elevation angle from the focus point.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraYaw",
-                    "args": [],
+                    "args": ["yaw : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the horizontal Yaw angle of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraPitch",
-                    "args": [],
+                    "args": ["pitch : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the vertical Pitch angle of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraRoll",
-                    "args": [],
+                    "args": ["roll : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the rotational Roll angle of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraX",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera x coordinate : number",
+                    "description": "Returns the x coordinate of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraY",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera y coordinate : number",
+                    "description": "Returns the y coordinate of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraZ",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera z coordinate : number",
+                    "description": "Returns the z coordinate of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraFocusX",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera focus x coordinate : number",
+                    "description": "Returns the x coordinate of the camera focus point.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraFocusY",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera focus y coordinate : number",
+                    "description": "Returns the y coordinate of the camera focus point.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraFocusZ",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera focus z coordinate : number",
+                    "description": "Returns the z coordinate of the camera focus point.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraRadius",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "distance from focus point to camera : number",
+                    "description": "Returns the distance from the focus point to the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraAzimuthAngle",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "azimuth angle from focus point to camera : number (degrees)",
+                    "description": "Returns the azimuth angle from the focus point to the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraElevationAngle",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "elevation angle from focus point to camera : number (degrees)",
+                    "description": "Returns the elevation angle from the focus point to the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraYaw",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera yaw angle : number",
+                    "description": "Returns the horizontal Yaw angle of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraPitch",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera pitch angle : number",
+                    "description": "Returns the vertical Pitch angle of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraRoll",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "camera roll angle : number",
+                    "description": "Returns the rotational Roll angle of the camera.",
                     "notes": ""
                 },
                 {
                     "fname": "SetCameraPerspectiveClip",
-                    "args": [],
+                    "args": ["nearclip : number", "farclip : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets camera clipping distances.<br>Objects that are further or nearer than the clipping distance will not be drawn.",
                     "notes": ""
                 }
             ]
