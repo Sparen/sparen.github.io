@@ -1103,129 +1103,129 @@ var dnhph3docs_standard = {
             "fxns": [
                 {
                     "fname": "LoadScript",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "args": ["scriptpath : string (path)"],
+                    "returnv": "script ID of loaded script : number (Script ID)",
+                    "description": "Loads and compiles the specified script, and returns its script ID.<br>Also calls @Loading and initializes global variables in the script.",
                     "notes": ""
                 },
                 {
                     "fname": "LoadScriptInThread",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "args": ["scriptpath : string (path)"],
+                    "returnv": "script ID of loaded script : number (Script ID)",
+                    "description": "Loads and compiles the specified script in a different thread, and returns its script ID.<br>Also calls @Loading and initializes global variables in the script.",
                     "notes": ""
                 },
                 {
                     "fname": "StartScript",
-                    "args": [],
+                    "args": ["scriptID : number (Script ID)"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Starts the specified script.<br>Calls @Initialize and starts @MainLoop in the script.",
                     "notes": ""
                 },
                 {
                     "fname": "CloseScript",
-                    "args": [],
+                    "args": ["scriptID : number (Script ID)"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Stops the specified script.",
+                    "notes": "Until this function is called, the script will continue to run."
                 },
                 {
                     "fname": "IsCloseScript",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "args": ["scriptID : number (Script ID)"],
+                    "returnv": "true if script associated with scriptID is not running; false otherwise : bool",
+                    "description": "Returns whether the specified script has been stopped.<br>Returns true if the script is not running.",
                     "notes": ""
                 },
                 {
                     "fname": "SetScriptArgument",
-                    "args": [],
+                    "args": ["scriptID : number (Script ID)", "argindex : number", "value : free"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Before starting the given script with StartScript, sets a value that is to be passed to the given script upon starting.",
+                    "notes": "This value can be retrieved in the started script with GetScriptArgument."
                 },
                 {
                     "fname": "GetScriptArgument",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "args": ["argindex : number"],
+                    "returnv": "script value associated with argument index : free",
+                    "description": "Returns the value of the specified argument, previously set by SetScriptArgument before the script was started.",
                     "notes": ""
                 },
                 {
                     "fname": "GetScriptArgumentCount",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "number of script arguments : number (int)",
+                    "description": "Returns the number of arguments set by SetScriptArgument before the script was started.",
                     "notes": ""
                 },
                 {
                     "fname": "CloseStgScene",
                     "args": [],
                     "returnv": "",
-                    "description": "",
+                    "description": "Ends the current scene (returns to script selection screen).",
                     "notes": ""
                 },
                 {
                     "fname": "GetOwnScriptID",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "ID of script the function is called in : number (Script ID)",
+                    "description": "Returns the script's own ID.",
                     "notes": ""
                 },
                 {
                     "fname": "GetEventType",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "event type : const",
+                    "description": "Returns the event type currently triggered in @Event.",
                     "notes": ""
                 },
                 {
                     "fname": "GetEventArgument",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "args": ["argindex : number"],
+                    "returnv": "event argument of event currently triggered in @Event : free",
+                    "description": "Returns the argument of the event currently triggered in @Event.",
+                    "notes": "Can be an arbitrary value."
                 },
                 {
                     "fname": "SetScriptResult",
-                    "args": [],
+                    "args": ["result : free"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Sets the result of the event in @Event, which can then be retrieved by GetScriptResult.",
                     "notes": ""
                 },
                 {
                     "fname": "GetScriptResult",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "args": ["scriptID : number (Script ID)"],
+                    "returnv": "event result : free",
+                    "description": "Returns the event result from SetScriptResult.",
+                    "notes": "Can be an arbitrary value."
                 },
                 {
                     "fname": "SetAutoDeleteObject",
-                    "args": [],
+                    "args": ["enable : bool"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets whether to delete all existing objects that were created in the current script at its termination.",
+                    "notes": "If set to true, the current script's objects will be deleted.<br>The default value is false."
                 },
                 {
                     "fname": "NotifyEvent",
-                    "args": [],
+                    "args": ["scriptID : number (Script ID)", "eventtype : const", "value : free"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Calls the @Event of the script with the specified ID, triggering the specified event.",
+                    "notes": "The event type may use a value greater than EV_USER."
                 },
                 {
                     "fname": "NotifyEventAll",
-                    "args": [],
+                    "args": ["eventtype : const", "value : free"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Calls the @Event of all scripts, triggering the specified event in all scripts listening for it.",
+                    "notes": "The event type may use a value greater than EV_USER."
                 },
                 {
                     "fname": "GetScriptInfoA1",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "args": ["scriptpath : string (path)", "infotype : const"],
+                    "returnv": "specified return value : varies",
+                    "description": "Parses and returns information from the script file's header.",
+                    "notes": "Constants for infotype are as follows:<br>INFO_SCRIPT_TYPE: Returns the script type (const): one of TYPE_SCRIPT_PLAYER: Player script, TYPE_SCRIPT_SINGLE: Single script, TYPE_SCRIPT_PLURAL: Plural script, TYPE_SCRIPT_STAGE: Stage script, or TYPE_SCRIPT_PACKAGE: Package script.<br>INFO_SCRIPT_PATH: Returns the script path (string).<br>INFO_SCRIPT_ID: Returns the script #ID (int).<br>INFO_SCRIPT_TITLE: Returns the script #Title (string).<br>INFO_SCRIPT_TEXT: Returns the script #Text (string).<br>INFO_SCRIPT_IMAGE: Returns the script #Image (string).<br>INFO_SCRIPT_REPLAY_NAME: Returns the script #ReplayName (string)."
                 }
             ]
         },
@@ -1234,163 +1234,163 @@ var dnhph3docs_standard = {
             "fxns": [
                 {
                     "fname": "SetStgFrame",
-                    "args": [],
+                    "args": ["left : number", "top : number", "right : number", "bottom : number", "minrpriority : number", "maxrpriority : number"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets the STG space frame given the left/top/right/bottom values in the Danmakufu window and the minimum and maximum render priorities provided.",
+                    "notes": "Default values are (32, 16, 416, 464, 20, 80)."
                 },
                 {
                     "fname": "GetScore",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "current score : number",
+                    "description": "Returns the current score.",
                     "notes": ""
                 },
                 {
                     "fname": "AddScore",
-                    "args": [],
+                    "args": ["score : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Adds the given value to the score.",
                     "notes": ""
                 },
                 {
                     "fname": "GetGraze",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "current graze : number",
+                    "description": "Returns the current amount of graze.",
                     "notes": ""
                 },
                 {
                     "fname": "AddGraze",
-                    "args": [],
+                    "args": ["graze : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Adds the given value to the graze count.",
                     "notes": ""
                 },
                 {
                     "fname": "GetPoint",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "current amount of collected point items : number",
+                    "description": "Returns the current amount of point items collected",
                     "notes": ""
                 },
                 {
                     "fname": "AddPoint",
-                    "args": [],
+                    "args": ["point : number"],
                     "returnv": "",
-                    "description": "",
+                    "description": "Adds the given value to the point count.",
                     "notes": ""
                 },
                 {
                     "fname": "SetItemRenderPriorityI",
-                    "args": [],
+                    "args": ["rpriority : number (int)"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets the render priority for items, on a 0 to 100 scale.",
+                    "notes": "Default is 60."
                 },
                 {
                     "fname": "SetShotRenderPriorityI",
-                    "args": [],
+                    "args": ["rpriority : number (int)"],
                     "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "description": "Sets the render priority for bullets, on a 0 to 100 scale.",
+                    "notes": "Default is 50."
                 },
                 {
                     "fname": "GetStgFrameRenderPriorityMinI",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "returnv": "minimum render priority for STG frame : number (int)",
+                    "description": "Returns the lowest render priority for the STG frame, on a 0 to 100 scale.",
+                    "notes": "Default is 20."
                 },
                 {
                     "fname": "GetStgFrameRenderPriorityMaxI",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "returnv": "maximum render priority for STG frame : number (int)",
+                    "description": "Returns the highest render priority for the STG frame, on a 0 to 100 scale.",
+                    "notes": "Default is 80."
                 },
                 {
                     "fname": "GetItemRenderPriorityI",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "render priority for items : number (int)",
+                    "description": "Returns the render priority for items, on a 0 to 100 scale.",
                     "notes": ""
                 },
                 {
                     "fname": "GetShotRenderPriorityI",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "render priority for shots : number (int)",
+                    "description": "Returns the render priority for shots, on a 0 to 100 scale.",
                     "notes": ""
                 },
                 {
                     "fname": "GetPlayerRenderPriorityI",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "render priority for the player : number (int)",
+                    "description": "Returns the render priority for the player, on a 0 to 100 scale.",
                     "notes": ""
                 },
                 {
                     "fname": "GetCameraFocusPermitPriorityI",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "returnv": "max 2D camera render priority : number (int)",
+                    "description": "Returns the highest render priority the 2D camera can affect, on a 0 to 100 scale.",
+                    "notes": "Default is 79."
                 },
                 {
                     "fname": "GetStgFrameLeft",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "returnv": "STG frame left : number (int)",
+                    "description": "Returns the leftmost coordinate of the STG frame (playing field).",
+                    "notes": "Default is 32."
                 },
                 {
                     "fname": "GetStgFrameTop",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "returnv": "STG frame top : number (int)",
+                    "description": "Returns the topmost coordinate of the STG frame (playing field).",
+                    "notes": "Default is 16."
                 },
                 {
                     "fname": "GetStgFrameWidth",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "returnv": "STG frame width : number (int)",
+                    "description": "Returns the width of the STG frame (playing field).",
+                    "notes": "Default is 384."
                 },
                 {
                     "fname": "GetStgFrameHeight",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "returnv": "STG frame height : number (int)",
+                    "description": "Returns the height of the STG frame (playing field).",
+                    "notes": "Default is 448."
                 },
                 {
                     "fname": "GetScreenWidth",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "returnv": "danmakufu window width : number (int)",
+                    "description": "Returns the width of Danmakufu's window.",
+                    "notes": "Default is 640 unless overwritten in a .def file."
                 },
                 {
                     "fname": "GetScreenHeight",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
-                    "notes": ""
+                    "returnv": "danmakufu window height : number (int)",
+                    "description": "Returns the height of Danmakufu's window.",
+                    "notes": "Default is 480 unless overwritten in a .def file."
                 },
                 {
                     "fname": "IsReplay",
                     "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "returnv": "true if called in a replay; false otherwise : bool",
+                    "description": "Returns true if a replay is playing, false otherwise.",
                     "notes": ""
                 },
                 {
                     "fname": "AddArchiveFile",
-                    "args": [],
-                    "returnv": "",
-                    "description": "",
+                    "args": ["archivepath : string (path)"],
+                    "returnv": "true if the archive was successfully read, false otherwise.",
+                    "description": "Adds the path to use when reading images or sounds from an archive file.<br>Returns true if the archive was successfully read, false otherwise.",
                     "notes": ""
                 }
             ]
