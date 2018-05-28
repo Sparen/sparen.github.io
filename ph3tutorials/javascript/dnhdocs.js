@@ -69,6 +69,7 @@ function loadDocs() {
     document.getElementById("2dcamera_fxns").innerHTML = loadDocsByCategory("2D Camera Functions");
     document.getElementById("script_fxns").innerHTML = loadDocsByCategory("Script Functions");
     document.getElementById("system_fxns").innerHTML = loadDocsByCategory("System Functions");
+    document.getElementById("player_fxns").innerHTML = loadDocsByCategory("Player Functions");
 }
 
 function loadDocsByCategory (catnameparam) {

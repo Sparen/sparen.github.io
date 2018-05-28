@@ -1394,6 +1394,235 @@ var dnhph3docs_standard = {
                     "notes": ""
                 }
             ]
+        },
+        {
+            "catname": "Player Functions",
+            "fxns": [
+                {
+                    "fname": "GetPlayerObjectID",
+                    "args": [],
+                    "returnv": "player object ID : number (Object ID)",
+                    "description": "Returns Player Object ID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerScriptID",
+                    "args": [],
+                    "returnv": "player script ID : number (Script ID)",
+                    "description": "Returns Player Script ID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetPlayerSpeed",
+                    "args": ["normal : number", "focus : number"],
+                    "returnv": "",
+                    "description": "Sets the normal speed and focus speed of the player.",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetPlayerClip",
+                    "args": ["left : number", "top : number", "right : number", "bottom : number"],
+                    "returnv": "",
+                    "description": "Sets the area within which the player can move.",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetPlayerLife",
+                    "args": ["value : number"],
+                    "returnv": "",
+                    "description": "Sets number of lives for the player.",
+                    "notes": "Can be a non-integer value."
+                },
+                {
+                    "fname": "SetPlayerSpell",
+                    "args": ["value : number"],
+                    "returnv": "",
+                    "description": "Sets number of spells/bombs for the player.",
+                    "notes": "Can be a non-integer value."
+                },
+                {
+                    "fname": "SetPlayerPower",
+                    "args": ["value : number"],
+                    "returnv": "",
+                    "description": "Sets power value for the player.",
+                    "notes": "Can be a non-integer value."
+                },
+                {
+                    "fname": "SetPlayerInvincibilityFrame",
+                    "args": ["invulnframe : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the number of frames for player invincibility.",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetPlayerDownStateFrame",
+                    "args": ["downstateframe : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the number of frames before respawning the player after player death.",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetPlayerRebirthFrame",
+                    "args": ["rebirthframe : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the number of frames during the player can deathbomb after being hit.",
+                    "notes": "Default is 15 frames."
+                },
+                {
+                    "fname": "SetPlayerRebirthLossFrame",
+                    "args": ["rebirthlossframe : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the number of deathbomb frames the player loses per deathbomb.",
+                    "notes": "Default is 3 frames."
+                },
+                {
+                    "fname": "SetPlayerAutoItemCollectLine",
+                    "args": ["y : number"],
+                    "returnv": "",
+                    "description": "Sets the y coordinate of the auto collect line.",
+                    "notes": "A negative value removes the line.<br>Default is no autocollect line."
+                },
+                {
+                    "fname": "SetForbidPlayerShot",
+                    "args": ["forbid : bool"],
+                    "returnv": "",
+                    "description": "When set to true, the player cannot use normal shots.",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetForbidPlayerSpell",
+                    "args": ["forbid : bool"],
+                    "returnv": "",
+                    "description": "When set to true, the player cannot use bombs.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerX",
+                    "args": [],
+                    "returnv": "player x : number",
+                    "description": "Returns the x coordinate of the player.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerY",
+                    "args": [],
+                    "returnv": "player y : number",
+                    "description": "Returns the y coordinate of the player.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerState",
+                    "args": [],
+                    "returnv": "player state : const",
+                    "description": "Returns the player state.",
+                    "notes": "State is one of:<br>STATE_NORMAL (player is alive)<br>STATE_HIT (after being hit, during counter bomb frames)<br>STATE_DOWN (after being hit, before reappearing)<br>STATE_END (game over)"
+                },
+                {
+                    "fname": "GetPlayerSpeed",
+                    "args": [],
+                    "returnv": "player speed : number []",
+                    "description": "Returns the player movement speed as an array.",
+                    "notes": "Array is [unfocused speed, focused speed]."
+                },
+                {
+                    "fname": "GetPlayerClip",
+                    "args": [],
+                    "returnv": "player clip : number []",
+                    "description": "Gets the player's clip as an array.",
+                    "notes": "Array is [left, top, right, bottom]."
+                },
+                {
+                    "fname": "GetPlayerLife",
+                    "args": [],
+                    "returnv": "player lives : number",
+                    "description": "Returns the number of player lives.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerSpell",
+                    "args": [],
+                    "returnv": "player bombs : number",
+                    "description": "Returns the number of player bombs.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerPower",
+                    "args": [],
+                    "returnv": "player power : number",
+                    "description": "Returns the amount of player power.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerInvincibilityFrame",
+                    "args": [],
+                    "returnv": "player invincibility frames : number (int)",
+                    "description": "Returns the number of frames during which the player is invincible.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerDownStateFrame",
+                    "args": [],
+                    "returnv": "player down state frames : number (int)",
+                    "description": "Returns the number of frames during which the player is respawning.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerRebirthFrame",
+                    "args": [],
+                    "returnv": "player rebirth frames : number (int)",
+                    "description": "Returns the number of frames during which the player can deathbomb.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetAngleToPlayer",
+                    "args": ["obj : number (Object ID)"],
+                    "returnv": "angle from obj to player : number (degrees)",
+                    "description": "Returns the angle from the provided object to the player.",
+                    "notes": ""
+                },
+                {
+                    "fname": "IsPermitPlayerShot",
+                    "args": [],
+                    "returnv": "true if the player can shoot; false otherwise : bool",
+                    "description": "Returns true if the player can use normal shots, false otherwise.",
+                    "notes": ""
+                },
+                {
+                    "fname": "IsPermitPlayerSpell",
+                    "args": [],
+                    "returnv": "true if the player can bomb; false otherwise : bool",
+                    "description": "Returns true if the player can use bombs, false otherwise.",
+                    "notes": "The returned value may differ from a previously set SetForbidPlayerSpell. For instance, it is forced to false during a LastSpell."
+                },
+                {
+                    "fname": "IsPlayerLastSpellWait",
+                    "args": [],
+                    "returnv": "true if the player is currently deathbombing; false otherwise : bool",
+                    "description": "Returns true if the player is deathbombing, false otherwise.",
+                    "notes": ""
+                },
+                {
+                    "fname": "IsPlayerSpellActive",
+                    "args": [],
+                    "returnv": "true if the player is currently bombing; false otherwise : bool",
+                    "description": "Returns true if the player is utilizing a bomb, false otherwise.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetPlayerID",
+                    "args": [],
+                    "returnv": "player script id : string",
+                    "description": "Returns the system ID of the player script.",
+                    "notes": "This value is defined inside the player script in the #ID header."
+                },
+                {
+                    "fname": "GetPlayerReplayName",
+                    "args": [],
+                    "returnv": "player script replay name : string",
+                    "description": "Returns the replay ID of the player.",
+                    "notes": "This value is defined inside the player script in the #ReplayName header."
+                }
+            ]
         }
     ]
 };
