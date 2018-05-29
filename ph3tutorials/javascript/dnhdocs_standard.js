@@ -1698,6 +1698,144 @@ var dnhph3docs_standard = {
                     "notes": "Unlike LoadEnemyShotData, this function can load the same file several times."
                 }
             ]
+        },
+        {
+            "catname": "Shot Functions",
+            "fxns": [
+                {
+                    "fname": "DeleteShotAll",
+                    "args": ["shottype : const", "deletetype : const"],
+                    "returnv": "",
+                    "description": "Deletes all shot objects on screen matching the criteria, utilizing the selected deletion type.",
+                    "notes": "shottype can be:<br>TYPE_ALL (all shot objects)<br>TYPE_SHOT (shot objects without spell resistance)<br>TYPE_CHILD (shot objects fired from the currently running script)<br>deletetype can be:<br>TYPE_IMMEDIATE (immediately delete the bullets)<br>TYPE_FADE (slowly fade out the bullets)<br>TYPE_ITEM (turn the bullets into items according to the running item script)<br>Note: With TYPE_FADE, bullets will still be visible while fading out, but they will not have any collision."
+                },
+                {
+                    "fname": "DeleteShotInCircle",
+                    "args": ["shottype : const", "deletetype : const", "xcoord : number", "ycoord : number", "radius : number"],
+                    "returnv": "",
+                    "description": "Deletes all shot objects matching the criteria in the designated circle centered at (xcoord, ycoord) with provided radius, utilizing the selected deletion type.",
+                    "notes": "type can be:<br>TYPE_ALL (all shot objects)<br>TYPE_SHOT (shot objects without spell resistance)<br>TYPE_CHILD (shot objects fired from the currently running script)<br>deletetype can be:<br>TYPE_IMMEDIATE (immediately delete the bullets)<br>TYPE_FADE (slowly fade out the bullets)<br>TYPE_ITEM (turn the bullets into items according to the running item script)<br>Note: With TYPE_FADE, bullets will still be visible while fading out, but they will not have any collision."
+                },
+                {
+                    "fname": "CreateShotA1",
+                    "args": ["xcoord : number", "ycoord : number", "speed : number", "angle : number (degrees)", "graphic : number (int)", "delay : number (int)"],
+                    "returnv": "object ID of new shot : number (Object ID)",
+                    "description": "Creates a basic bullet that will move at the angle and speed defined.",
+                    "notes": "graphic is the image the bullet will have, while delay is the time in frames before the bullet will appear.<br>During it's delay, there will be a collisionless cloud that appears where the bullet will spawn.<br>Returns a void value in a player script if the player is unable to shoot."
+                },
+                {
+                    "fname": "CreateShotA2",
+                    "args": ["xcoord : number", "ycoord : number", "speed : number", "angle : number (degrees)", "accel : number", "maxspeed : number", "graphic : number (int)", "delay : number (int)"],
+                    "returnv": "object ID of new shot : number (Object ID)",
+                    "description": "Creates a bullet that will move at the angle and speed defined, incrementing its speed by acceleration every frame, capping at maxspeed.",
+                    "notes": "graphic is the image the bullet will have, while delay is the time in frames before the bullet will appear.<br>During it's delay, there will be a collisionless cloud that appears where the bullet will spawn.<br>Returns a void value in a player script if the player is unable to shoot."
+                },
+                {
+                    "fname": "CreateShotOA1",
+                    "args": ["parentobj : number (Object ID)", "speed : number", "angle : number (degrees)", "graphic : number (int)", "delay : number (int)"],
+                    "returnv": "object ID of new shot : number (Object ID)",
+                    "description": "Creates a bullet that will spawn on the coordinates of the given object id and will move at the angle and speed defined.",
+                    "notes": "graphic is the image the bullet will have, while delay is the time in frames before the bullet will appear.<br>During it's delay, there will be a collisionless cloud that appears where the bullet will spawn.<br>Returns a void value in a player script if the player is unable to shoot."
+                },
+                {
+                    "fname": "CreateShotB1",
+                    "args": ["xcoord : number", "ycoord : number", "xspeed : number", "yspeed : number", "graphic : number (int)", "delay : number (int)"],
+                    "returnv": "object ID of new shot : number (Object ID)",
+                    "description": "Creates a bullet that will move at the specified x and y speeds.",
+                    "notes": "graphic is the image the bullet will have, while delay is the time in frames before the bullet will appear.<br>During it's delay, there will be a collisionless cloud that appears where the bullet will spawn.<br>Returns a void value in a player script if the player is unable to shoot."
+                },
+                {
+                    "fname": "CreateShotB2",
+                    "args": ["xcoord : number", "ycoord : number", "xspeed : number", "yspeed : number", "xaccel : number", "yaccel : number", "maxxspeed : number", "maxyspeed : number", "graphic : number (int)", "delay : number (int)"],
+                    "returnv": "object ID of new shot : number (Object ID)",
+                    "description": "Creates a bullet that will move at the specified x and y speeds, incrementing its speed components by the respective acceleration component every frame, capping at the maxspeed for each component.",
+                    "notes": "graphic is the image the bullet will have, while delay is the time in frames before the bullet will appear.<br>During it's delay, there will be a collisionless cloud that appears where the bullet will spawn.<br>Returns a void value in a player script if the player is unable to shoot."
+                },
+                {
+                    "fname": "CreateShotOB1",
+                    "args": ["parentobj : number (Object ID)", "xspeed : number", "yspeed : number", "graphic : number (int)", "delay : number (int)"],
+                    "returnv": "object ID of new shot : number (Object ID)",
+                    "description": "Creates a bullet that will spawn on the coordinates of the given object id and will move at the specified x and y speeds.",
+                    "notes": "graphic is the image the bullet will have, while delay is the time in frames before the bullet will appear.<br>During it's delay, there will be a collisionless cloud that appears where the bullet will spawn.<br>Returns a void value in a player script if the player is unable to shoot."
+                },
+                {
+                    "fname": "CreateLooseLaserA1",
+                    "args": ["xcoord : number", "ycoord : number", "speed : number", "angle : number (degrees)", "length : number", "width : number", "graphic : number (int)", "delay : number (int)"],
+                    "returnv": "object ID of new loose laser : number (Object ID)",
+                    "description": "Creates a loose (moving) laser that will move at the angle and speed defined, with its size defined by the length (in direction of travel) and width.",
+                    "notes": "graphic is the image the bullet will have, while delay is the time in frames before the laser will appear.<br>During it's delay, there will be a collisionless cloud that appears where the laser will spawn.<br>Returns a void value in a player script if the player is unable to shoot.<br>This function can be used to create larger bullets."
+                },
+                {
+                    "fname": "CreateStraightLaserA1",
+                    "args": ["xcoord : number", "ycoord : number", "angle : number (degrees)", "length : number", "width : number", "deletetime : number (int)", "graphic : number (int)", "delay : number (int)"],
+                    "returnv": "object ID of new straight laser : number (Object ID)",
+                    "description": "Creates a straight laser mounted at the position provided, with its size defined by the length (in direction of travel) and width.",
+                    "notes": "graphic is the image the bullet will have, while delay is the time in frames before the laser will appear.<br>The 'deletetime' argument determines how many frames until the laser disappears.<br>During the delay, the laser will appear as a very thin laser that has no collision (AKA delay laser) in order to give the player a warning.<br>Having no delay while using this function is not advisable, as the laser will spawn at full size the moment the delay is over.<br>Returns a void value in a player script if the player is unable to shoot."
+                },
+                {
+                    "fname": "CreateCurveLaserA1",
+                    "args": ["xcoord : number", "ycoord : number", "speed : number", "angle : number (degrees)", "length : number", "width : number", "graphic : number (int)", "delay : number (int)"],
+                    "returnv": "object ID of new curve laser : number (Object ID)",
+                    "description": "Creates a curve laser that will move at the angle and speed defined, with its size defined by the length (in direction of travel) and width.",
+                    "notes": "graphic is the image the bullet will have, while delay is the time in frames before the laser will appear.<br>During it's delay, there will be a collisionless cloud that appears where the laser will spawn.<br>Returns a void value in a player script if the player is unable to shoot.<br>Use ObjMove_SetAngularVelocity to adjust the curve of this laser.<br>This function is heavy to process, so having many curve lasers on-screen at the same time is not recommended."
+                },
+                {
+                    "fname": "SetShotIntersectionCircle",
+                    "args": ["xcoord : number", "ycoord : number", "radius : number"],
+                    "returnv": "",
+                    "description": "Adds a circular player hitbox at the specified position with the provided radius.",
+                    "notes": "Lasts one frame."
+                },
+                {
+                    "fname": "SetShotIntersectionLine",
+                    "args": ["startxcoord : number", "startycoord : number", "endxcoord : number", "endycoord : number", "width : number"],
+                    "returnv": "",
+                    "description": "Adds a linear player hitbox between the two specified positions with the provided width.",
+                    "notes": "Lasts one frame."
+                },
+                {
+                    "fname": "GetShotIdInCircleA1",
+                    "args": ["xcoord : number", "ycoord : number", "radius : number"],
+                    "returnv": "bullet object IDs within circle : number (Object ID) []",
+                    "description": "Returns the object IDs of the bullets inside the given circle in an array.",
+                    "notes": "Inside a player script, it will only return enemy bullet IDs, and vice versa."
+                },
+                {
+                    "fname": "GetShotIdInCircleA2",
+                    "args": ["xcoord : number", "ycoord : number", "radius : number", "target : const"],
+                    "returnv": "bullet object IDs with specified target type within circle : number (Object ID) []",
+                    "description": "Returns the object IDs of the bullets inside the given circle with the specified target type in an array.",
+                    "notes": "Inside a player script, it will only return enemy bullet IDs, and vice versa.<br>target can be:<br>TARGET_ALL (all shots)<br>TARGET_ENEMY (enemy shots only)<br>TARGET_PLAYER (player shots only)"
+                },
+                {
+                    "fname": "GetShotCount",
+                    "args": ["target : const"],
+                    "returnv": "number of bullets with specified target type : number (int)",
+                    "description": "Returns the number of bullets with the specified target type",
+                    "notes": "target can be:<br>TARGET_ALL (all shots)<br>TARGET_ENEMY (enemy shots only)<br>TARGET_PLAYER (player shots only)"
+                },
+                {
+                    "fname": "SetShotAutoDeleteClip",
+                    "args": ["left : number", "top : number", "right : number", "bottom : number"],
+                    "returnv": "",
+                    "description": "Sets at what point bullets will be automatically deleted when leaving the STG screen.",
+                    "notes": "To override this auto deletion, use ObjShot_SetAutoDelete on the bullet you want to prevent from auto deleting."
+                },
+                {
+                    "fname": "GetShotDataInfoA1",
+                    "args": ["graphic : number (int)", "targetshotsheet : const", "infotype : const"],
+                    "returnv": "shotsheet information depending on infotype : varies",
+                    "description": "Returns information from the shotsheet depending on the information requested.",
+                    "notes": "target shotsheet can be TARGET_PLAYER or TARGET_ENEMY.<br>infotype can be:<br>INFO_RECT (returns [left, top, right, bottom] for the graphic)<br>INFO_DELAY_COLOR (returns [red, green, blue] for the graphic)<br>INFO_BLEND (returns blend type for the graphic)<br>INFO_COLLISION (returns radius of collision detection)<br>INFO_COLLISION_LIST (returns 2D array of collision hitbox radii and coordinates [radius, x, y])"
+                },
+                {
+                    "fname": "StartShotScript",
+                    "args": ["scriptpath : string (path)"],
+                    "returnv": "",
+                    "description": "Starts the specified shot script.",
+                    "notes": ""
+                }
+            ]
         }
     ]
 };
