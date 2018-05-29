@@ -1623,6 +1623,81 @@ var dnhph3docs_standard = {
                     "notes": "This value is defined inside the player script in the #ReplayName header."
                 }
             ]
+        },
+        {
+            "catname": "Enemy Functions",
+            "fxns": [
+                {
+                    "fname": "GetEnemyBossSceneObjectID",
+                    "args": [],
+                    "returnv": "boss scene object ID : number (Object ID)",
+                    "description": "Returns the boss scene object ID or ID_INVALID when not in a boss scene.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetEnemyBossObjectID",
+                    "args": [],
+                    "returnv": "array of boss object IDs : number (Object ID) []",
+                    "description": "Returns an array consisting of the Object ID of the boss present on the screen.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetAllEnemyID",
+                    "args": [],
+                    "returnv": "array of enemy object IDs : number (Object ID) []",
+                    "description": "Returns an array consisting of the Object ID of every enemy present on the screen.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetIntersectionRegistedEnemyID",
+                    "args": [],
+                    "returnv": "array of enemy object IDs : number (Object ID) []",
+                    "description": "Returns an array consisting of the Object ID of all enemies with a registered hitbox to player shots (via ObjEnemy_SetIntersectionCircleToShot()).",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetAllEnemyIntersectionPosition",
+                    "args": [],
+                    "returnv": "array of enemy positions : number [][]",
+                    "description": "Returns the position of all enemies for which collision detection is true (currently intersecting) as a 2D array.",
+                    "notes": "Return format is [index][&lt;x coordinate, y coordinate&gt;]."
+                },
+                {
+                    "fname": "GetEnemyIntersectionPosition",
+                    "args": ["xcoord : number", "ycoord : number", "acquisitionvalue : number (int)"],
+                    "returnv": "array of enemy positions : number [][]",
+                    "description": "Returns the enemy intersection position around the given position with acquisitionvalue priority as a 2D array.",
+                    "notes": "Return format is [index][&lt;x coordinate, y coordinate&gt;].<br>The first possible acquisition value (index 0) corresponds to the nearest enemy to the provided x and y coordinates."
+                },
+                {
+                    "fname": "GetEnemyIntersectionPositionByIdA1",
+                    "args": ["enemyID : number (Object ID)"],
+                    "returnv": "array of enemy positions : number [][]",
+                    "description": "Returns all collision detection positions of the specified enemy as a 2D array.",
+                    "notes": "Return format is [index][&lt;x coordinate, y coordinate&gt;].<br>"
+                },
+                {
+                    "fname": "GetEnemyIntersectionPositionByIdA2",
+                    "args": ["enemyID : number (Object ID)", "xcoord : number", "ycoord : number"],
+                    "returnv": "boss scene object ID : number (Object ID)",
+                    "description": "Returns the boss scene object ID or ID_INVALID when not in a boss scene.",
+                    "notes": "Return format is [index][&lt;x coordinate, y coordinate&gt;].<br>The first index (index 0) corresponds to the nearest intersection position from the provided x and y coordinates."
+                },
+                {
+                    "fname": "LoadEnemyShotData",
+                    "args": ["filename : string (path)"],
+                    "returnv": "",
+                    "description": "Loads specified shot image file.",
+                    "notes": "Files with the same name can only be loaded once."
+                },
+                {
+                    "fname": "ReloadEnemyShotData",
+                    "args": ["filename : string (path)"],
+                    "returnv": "",
+                    "description": "Reloads specified shot image file.",
+                    "notes": "Unlike LoadEnemyShotData, this function can load the same file several times."
+                }
+            ]
         }
     ]
 };

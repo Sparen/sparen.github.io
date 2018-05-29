@@ -70,6 +70,7 @@ function loadDocs() {
     document.getElementById("script_fxns").innerHTML = loadDocsByCategory("Script Functions");
     document.getElementById("system_fxns").innerHTML = loadDocsByCategory("System Functions");
     document.getElementById("player_fxns").innerHTML = loadDocsByCategory("Player Functions");
+    document.getElementById("enemy_fxns").innerHTML = loadDocsByCategory("Enemy Functions");
 }
 
 function loadDocsByCategory (catnameparam) {
