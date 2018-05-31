@@ -1925,6 +1925,95 @@ var dnhph3docs_standard = {
                     "notes": "Can be called any amount of times, but currently existing IDs will be replaced by new ones of the same value.<br>You do not need to use LoadItemData before using this function."
                 }
             ]
+        },
+        {
+            "catname": "Other Functions",
+            "fxns": [
+                {
+                    "fname": "StartSlow",
+                    "args": ["slowtarget : const", "fpsvalue : number"],
+                    "returnv": "",
+                    "description": "Creates a pseudo slow effect by forcing Danmakufu to run at the specified FPS value.",
+                    "notes": "There is currently only one target available, TARGET_ALL.<br>Use StopSlow to stop this effect."
+                },
+                {
+                    "fname": "StopSlow",
+                    "args": ["slowtarget : const"],
+                    "returnv": "",
+                    "description": "Removes the pseudo slow from StartSlow, and restores Danmakufu to normal FPS.",
+                    "notes": "There is currently only one target available, TARGET_ALL."
+                },
+                {
+                    "fname": "IsIntersected_Line_Circle",
+                    "args": ["startx : number", "starty : number", "endx : number", "endy : number", "width : number", "xcoord : number", "ycoord : number", "radius : number"],
+                    "returnv": "true if the line and circle collide; false otherwise : bool",
+                    "description": "Checks if the given line with given width is colliding with the given circle of given radius.<br>Returns true if there is a collision; if there is no collision, it returns false.",
+                    "notes": ""
+                },
+                {
+                    "fname": "IsIntersected_Obj_Obj",
+                    "args": ["objID1 : number (Object ID)", "objID2 : number (Object ID)"],
+                    "returnv": "true if the objects collide; false otherwise : bool",
+                    "description": "Checks if the given objects are colliding with each other.<br>Returns true if there is a collision; if there is no collision, it returns false.",
+                    "notes": "This function is currently only available on bullet and laser objects."
+                },
+                {
+                    "fname": "GetObjectDistance",
+                    "args": ["objID1 : number (Object ID)", "objID2 : number (Object ID)"],
+                    "returnv": "distance between two objects : number",
+                    "description": "Returns the distance between the two objects.",
+                    "notes": "If one of the objects' ID is invalid, -1 will be returned."
+                },
+                {
+                    "fname": "GetObject2dPosition",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "2D coordinates of a 3D object projected onto the 2D window : number []",
+                    "description": "Returns the 2D coordinates of a 3D object projected onto the 2D window.",
+                    "notes": "The array is returned as [X, Y]."
+                },
+                {
+                    "fname": "Get2dPosition",
+                    "args": ["xcoord : number", "ycoord : number", "zcoord : number"],
+                    "returnv": "2D location of the provided 3D coordinates projected onto the 2D window : number []",
+                    "description": "Returns the 2D coordinates of the given 3D coordinates projected onto the 2D window.",
+                    "notes": "The array is returned as [X, Y]."
+                },
+                {
+                    "fname": "erase",
+                    "args": ["array : free []", "index : number (int)"],
+                    "returnv": "",
+                    "description": "Removes the element at the given index from an array.",
+                    "notes": ""
+                },
+                {
+                    "fname": "length",
+                    "args": ["array : free []"],
+                    "returnv": "size of array : number (int)",
+                    "description": "Returns the size of an array.",
+                    "notes": ""
+                },
+                {
+                    "fname": "concatenate",
+                    "args": ["array1 : `a []", "array2 : `a []"],
+                    "returnv": "merged array : `a []",
+                    "description": "Concatenates the two provided arrays (of same type) and returns the new array.",
+                    "notes": "Long form for ~.<br>Works on strings, as they are character arrays."
+                },
+                {
+                    "fname": "slice",
+                    "args": ["array : free []", "startcutoff : number (int)", "endcutoff : number (int)"],
+                    "returnv": "indices in between the cutoff values : free []",
+                    "description": "Cuts out a specific portion of an array.",
+                    "notes": "Long form for Array[startcutoff..endcutoff].<br>Sliced portion includes startcutoff but not endcutoff."
+                },
+                {
+                    "fname": "not",
+                    "args": ["boolexpr : bool"],
+                    "returnv": "logical negation of boolexpr : bool",
+                    "description": "Returns the logical negation of the provided boolean expressing.",
+                    "notes": "Long form for !."
+                }
+            ]
         }
     ]
 };

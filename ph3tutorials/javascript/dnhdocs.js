@@ -56,38 +56,62 @@ function retrieveFxn(fxnname) {
 //Loads documentation onto docs.html
 function loadDocs() {
     //Load each category one by one
-    document.getElementById("math_fxns").innerHTML = loadDocsByCategory("Math Functions");
-    document.getElementById("text_fxns").innerHTML = loadDocsByCategory("Text Functions");
-    document.getElementById("path_fxns").innerHTML = loadDocsByCategory("Path Functions");
-    document.getElementById("time_fxns").innerHTML = loadDocsByCategory("Time Functions");
-    document.getElementById("debug_fxns").innerHTML = loadDocsByCategory("Debug Functions");
-    document.getElementById("cdata_fxns").innerHTML = loadDocsByCategory("Common Data Functions");
-    document.getElementById("audio_fxns").innerHTML = loadDocsByCategory("Audio Functions");
-    document.getElementById("input_fxns").innerHTML = loadDocsByCategory("Input Functions");
-    document.getElementById("render_fxns").innerHTML = loadDocsByCategory("Render Functions");
-    document.getElementById("3dcamera_fxns").innerHTML = loadDocsByCategory("3D Camera Functions");
-    document.getElementById("2dcamera_fxns").innerHTML = loadDocsByCategory("2D Camera Functions");
-    document.getElementById("script_fxns").innerHTML = loadDocsByCategory("Script Functions");
-    document.getElementById("system_fxns").innerHTML = loadDocsByCategory("System Functions");
-    document.getElementById("player_fxns").innerHTML = loadDocsByCategory("Player Functions");
-    document.getElementById("enemy_fxns").innerHTML = loadDocsByCategory("Enemy Functions");
-    document.getElementById("shot_fxns").innerHTML = loadDocsByCategory("Shot Functions");
-    document.getElementById("item_fxns").innerHTML = loadDocsByCategory("Item Functions");
+    document.getElementById("math_fxns").innerHTML = loadDocsByCategory("Math Functions", dnhph3docs_standard);
+    document.getElementById("text_fxns").innerHTML = loadDocsByCategory("Text Functions", dnhph3docs_standard);
+    document.getElementById("path_fxns").innerHTML = loadDocsByCategory("Path Functions", dnhph3docs_standard);
+    document.getElementById("time_fxns").innerHTML = loadDocsByCategory("Time Functions", dnhph3docs_standard);
+    document.getElementById("debug_fxns").innerHTML = loadDocsByCategory("Debug Functions", dnhph3docs_standard);
+    document.getElementById("cdata_fxns").innerHTML = loadDocsByCategory("Common Data Functions", dnhph3docs_standard);
+    document.getElementById("audio_fxns").innerHTML = loadDocsByCategory("Audio Functions", dnhph3docs_standard);
+    document.getElementById("input_fxns").innerHTML = loadDocsByCategory("Input Functions", dnhph3docs_standard);
+    document.getElementById("render_fxns").innerHTML = loadDocsByCategory("Render Functions", dnhph3docs_standard);
+    document.getElementById("3dcamera_fxns").innerHTML = loadDocsByCategory("3D Camera Functions", dnhph3docs_standard);
+    document.getElementById("2dcamera_fxns").innerHTML = loadDocsByCategory("2D Camera Functions", dnhph3docs_standard);
+    document.getElementById("script_fxns").innerHTML = loadDocsByCategory("Script Functions", dnhph3docs_standard);
+    document.getElementById("system_fxns").innerHTML = loadDocsByCategory("System Functions", dnhph3docs_standard);
+    document.getElementById("player_fxns").innerHTML = loadDocsByCategory("Player Functions", dnhph3docs_standard);
+    document.getElementById("enemy_fxns").innerHTML = loadDocsByCategory("Enemy Functions", dnhph3docs_standard);
+    document.getElementById("shot_fxns").innerHTML = loadDocsByCategory("Shot Functions", dnhph3docs_standard);
+    document.getElementById("item_fxns").innerHTML = loadDocsByCategory("Item Functions", dnhph3docs_standard);
+    document.getElementById("other_fxns").innerHTML = loadDocsByCategory("Other Functions", dnhph3docs_standard);
 }
 
-function loadDocsByCategory (catnameparam) {
+//Loads documentation onto docs_obj.html
+function loadDocsOBJ() {
+    //Load each category one by one
+    document.getElementById("object_fxns").innerHTML = loadDocsByCategory("Object Functions", dnhph3docs_object);
+    /*
+    document.getElementById("render_object_fxns").innerHTML = loadDocsByCategory("Render Object Functions", dnhph3docs_object);
+    document.getElementById("primitive_object_fxns").innerHTML = loadDocsByCategory("Primitive Object Functions", dnhph3docs_object);
+    document.getElementById("2dsprite_object_fxns").innerHTML = loadDocsByCategory("2D Sprite Object Functions", dnhph3docs_object);
+    document.getElementById("2dspritelist_object_fxns").innerHTML = loadDocsByCategory("2D Sprite List Object Functions", dnhph3docs_object);
+    document.getElementById("3dsprite_object_fxns").innerHTML = loadDocsByCategory("3D Sprite Object Functions", dnhph3docs_object);
+    document.getElementById("mesh_object_fxns").innerHTML = loadDocsByCategory("Mesh Object Functions", dnhph3docs_object);
+    document.getElementById("text_object_fxns").innerHTML = loadDocsByCategory("Text Object Functions", dnhph3docs_object);
+    document.getElementById("shader_object_fxns").innerHTML = loadDocsByCategory("Shader Object Functions", dnhph3docs_object);
+    document.getElementById("sound_object_fxns").innerHTML = loadDocsByCategory("Sound Object Functions", dnhph3docs_object);
+    document.getElementById("file_object_fxns").innerHTML = loadDocsByCategory("File Object Functions", dnhph3docs_object);
+    document.getElementById("textfile_object_fxns").innerHTML = loadDocsByCategory("Text File Object Functions", dnhph3docs_object);
+    document.getElementById("binaryfile_object_fxns").innerHTML = loadDocsByCategory("Binary File Object Functions", dnhph3docs_object);
+    document.getElementById("move_object_fxns").innerHTML = loadDocsByCategory("Move Object Functions", dnhph3docs_object);
+    document.getElementById("enemy_object_fxns").innerHTML = loadDocsByCategory("Enemy Object Functions", dnhph3docs_object);
+    document.getElementById("bossscene_object_fxns").innerHTML = loadDocsByCategory("Boss Scene Object Functions", dnhph3docs_object);
+    document.getElementById("shot_object_fxns").innerHTML = loadDocsByCategory("Shot Object Functions", dnhph3docs_object);
+    document.getElementById("item_object_fxns").innerHTML = loadDocsByCategory("Item Object Functions", dnhph3docs_object);
+    document.getElementById("player_object_fxns").innerHTML = loadDocsByCategory("Player Object Functions", dnhph3docs_object);
+    document.getElementById("collision_object_fxns").innerHTML = loadDocsByCategory("Collision Object Functions", dnhph3docs_object);
+    */
+}
+
+function loadDocsByCategory (catnameparam, maindocobj) {
     var returnstring = "";
 
-    //Standard
-    var cats = dnhph3docs_standard.categories;
+    var cats = maindocobj.categories;
     var catobj; //object referring to the specific category
     var i;
     for (i = 0; i < cats.length; i += 1) {
         if (cats[i].catname === catnameparam) {catobj = cats[i]; break;}
     }
-    //Object
-
-    //Script
 
     if (catobj === null || catobj === undefined) {
         return "Error: Category Not Found";
