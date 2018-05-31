@@ -96,8 +96,8 @@ function loadDocs() {
 function loadDocsOBJ() {
     //Load each category one by one
     document.getElementById("object_fxns").innerHTML = loadDocsByCategory("Object Functions", dnhph3docs_object);
-    /*
     document.getElementById("render_object_fxns").innerHTML = loadDocsByCategory("Render Object Functions", dnhph3docs_object);
+    /*
     document.getElementById("primitive_object_fxns").innerHTML = loadDocsByCategory("Primitive Object Functions", dnhph3docs_object);
     document.getElementById("2dsprite_object_fxns").innerHTML = loadDocsByCategory("2D Sprite Object Functions", dnhph3docs_object);
     document.getElementById("2dspritelist_object_fxns").innerHTML = loadDocsByCategory("2D Sprite List Object Functions", dnhph3docs_object);
