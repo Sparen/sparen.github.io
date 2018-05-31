@@ -348,7 +348,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
 /* Tooltip text */
 .tooltip .tooltiptext {
     visibility: hidden;
-    width: 320px;
+    width: 360px;
     background-color: white;
     color: #000;
     text-align: left;
@@ -361,7 +361,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
     z-index: 1;
     bottom: 110%;
     left: 50%;
-    margin-left: -160px;
+    margin-left: -180px;
 }
 
 /* Show the tooltip text when you mouse over the tooltip container */

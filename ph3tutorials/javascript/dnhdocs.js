@@ -1,3 +1,8 @@
+/* Notes:
+ * - When including this file, it is imperative that ALL doc js files are included as well, as this one directly refers to the objects in the others.
+ *
+ */
+
 /* ---------------- Tooltips ---------------- */
 
 //On hover (mouseover), load the documentation into the tooltiptext element 
@@ -31,6 +36,7 @@ function getFxnDocs(fxnname, domid) {
     document.getElementById(domid).innerHTML = str;
 }
 
+//Retrieves the function object from the available files.
 function retrieveFxn(fxnname) {
     //Standard
     var cats = dnhph3docs_standard.categories;
@@ -45,6 +51,16 @@ function retrieveFxn(fxnname) {
         }
     }
     //Object
+    cats = dnhph3docs_object.categories;
+    for (i = 0; i < cats.length; i += 1) {
+        var fs = cats[i].fxns;
+        var j;
+        for (j = 0; j < fs.length; j += 1) {
+            if (fs[j].fname === fxnname) {
+                return fs[j];
+            }
+        }
+    }
 
     //Script
 
