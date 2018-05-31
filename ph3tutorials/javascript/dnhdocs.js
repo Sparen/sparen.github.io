@@ -72,6 +72,7 @@ function loadDocs() {
     document.getElementById("player_fxns").innerHTML = loadDocsByCategory("Player Functions");
     document.getElementById("enemy_fxns").innerHTML = loadDocsByCategory("Enemy Functions");
     document.getElementById("shot_fxns").innerHTML = loadDocsByCategory("Shot Functions");
+    document.getElementById("item_fxns").innerHTML = loadDocsByCategory("Item Functions");
 }
 
 function loadDocsByCategory (catnameparam) {

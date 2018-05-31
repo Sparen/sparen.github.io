@@ -1836,6 +1836,95 @@ var dnhph3docs_standard = {
                     "notes": ""
                 }
             ]
+        },
+        {
+            "catname": "Item Functions",
+            "fxns": [
+                {
+                    "fname": "CreateItemA1",
+                    "args": ["itemtype : const", "xcoord : number", "ycoord : number", "score : number"],
+                    "returnv": "",
+                    "description": "Creates an item of the provided itemtype and score value at the specified x and y coordinates.",
+                    "notes": "itemtype can be one of the following:<br>ITEM_1UP and ITEM_1UP_S (lives), ITEM_SPELL and ITEM_SPELL_S (bombs), ITEM_POINT and ITEM_POINT_S (points), ITEM_POWER and ITEM_POWER_S (power), or ITEM_USER (user-defined).<br>The types ending in '_S' will create a smaller version of the specified item."
+                },
+                {
+                    "fname": "CreateItemA2",
+                    "args": ["itemtype : const", "xcoord : number", "ycoord : number", "xdest : number", "ydest : number", "score : number"],
+                    "returnv": "",
+                    "description": "Creates an item of the provided itemtype and score value at the specified x and y coordinates that moves to the provided x and y destination coordinates before falling down.",
+                    "notes": "itemtype can be one of the following:<br>ITEM_1UP and ITEM_1UP_S (lives), ITEM_SPELL and ITEM_SPELL_S (bombs), ITEM_POINT and ITEM_POINT_S (points), ITEM_POWER and ITEM_POWER_S (power), or ITEM_USER (user-defined).<br>The types ending in '_S' will create a smaller version of the specified item."
+                },
+                {
+                    "fname": "CreateItemU1",
+                    "args": ["itemID : number (int)", "xcoord : number", "ycoord : number", "score : number"],
+                    "returnv": "",
+                    "description": "Creates a user-defined item with the provided item ID and score value at the specified x and y coordinates.",
+                    "notes": ""
+                },
+                {
+                    "fname": "CreateItemU2",
+                    "args": ["itemtype : const", "xcoord : number", "ycoord : number", "xdest : number", "ydest : number", "score : number"],
+                    "returnv": "",
+                    "description": "Creates a user-defined item with the provided item ID and score value at the specified x and y coordinates that moves to the provided x and y destination coordinates before falling.",
+                    "notes": ""
+                },
+                {
+                    "fname": "CollectAllItems",
+                    "args": [],
+                    "returnv": "",
+                    "description": "Makes all items fly towards the player.",
+                    "notes": ""
+                },
+                {
+                    "fname": "CollectItemsByType",
+                    "args": ["itemtype : const"],
+                    "returnv": "",
+                    "description": "Makes all items of the specified type fly toward the player.",
+                    "notes": "itemtype can be one of the following:<br>ITEM_1UP and ITEM_1UP_S (lives), ITEM_SPELL and ITEM_SPELL_S (bombs), ITEM_POINT and ITEM_POINT_S (points), ITEM_POWER and ITEM_POWER_S (power), or ITEM_USER (user-defined)."
+                },
+                {
+                    "fname": "CollectItemsInCircle",
+                    "args": ["xcoord : number", "ycoord : number", "radius : number"],
+                    "returnv": "",
+                    "description": "Makes all items within the circle fly toward the player.",
+                    "notes": ""
+                },
+                {
+                    "fname": "CancelCollectItems",
+                    "args": [],
+                    "returnv": "",
+                    "description": "Cancels any items that were currently moving to the player for collection.",
+                    "notes": "This function only works for items collected by the player auto item collection line (SetPlayerAutoItemCollectLine)."
+                },
+                {
+                    "fname": "StartItemScript",
+                    "args": ["scriptpath : string (path)"],
+                    "returnv": "",
+                    "description": "Starts the script at the provided path for processing user-defined items.",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetDefaultBonusItemEnable",
+                    "args": ["enable : bool"],
+                    "returnv": "",
+                    "description": "Sets whether or not to create the default autocollected bullet delete items when bullets are deleted to items.",
+                    "notes": "True will create the items, false will not.<br>The default value is true."
+                },
+                {
+                    "fname": "LoadItemData",
+                    "args": ["scriptpath : string (path)"],
+                    "returnv": "",
+                    "description": "Loads the specified item data.",
+                    "notes": "Can be called any amount of times, but currently existing IDs will be replaced by new ones of the same value.<br>You may not use the same file twice in this function; to do so, see ReloadItemData."
+                },
+                {
+                    "fname": "ReloadItemData",
+                    "args": ["scriptpath : string (path)"],
+                    "returnv": "",
+                    "description": "Reloads the specified item data.",
+                    "notes": "Can be called any amount of times, but currently existing IDs will be replaced by new ones of the same value.<br>You do not need to use LoadItemData before using this function."
+                }
+            ]
         }
     ]
 };
