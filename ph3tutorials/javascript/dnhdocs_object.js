@@ -332,7 +332,7 @@ var dnhph3docs_object = {
                     "fname": "ObjPrim_Create",
                     "args": ["objtype : const"],
                     "returnv": "object ID of new primitive object : number (Object ID)",
-                    "description": "Creates a Primitive object.",
+                    "description": "Creates a Primitive object and returns its ID.",
                     "notes": "Object types are:<br>OBJ_PRIMITIVE_2D (primitive (triangle) in the 2D space)<br>OBJ_SPRITE_2D (rectangle in the 2D space (usable by the ObjSprite2D_ functions))<br>OBJ_SPRITE_LIST_2D (list of rectangles in the 2D space (usable by the ObjSpriteList2D_ functions))<br>OBJ_PRIMITIVE_3D (primitive (triangle) in the 3D space)<br>OBJ_SPRITE_3D (rectangle in the 3D space (usable by the ObjSprite3D_ functions))"
                 },
                 {
@@ -403,6 +403,159 @@ var dnhph3docs_object = {
                     "args": ["objID : number (Object ID)", "vertexindex : number (int)", "alpha : number"],
                     "returnv": "",
                     "description": "Sets the alpha of the specified vertex on a 0-255 scale.",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "catname": "2D Sprite Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjSprite2D_SetSourceRect",
+                    "args": ["objID : number (Object ID)", "texleftcoord : number", "textopcoord : number", "texrightcoord : number", "texbottomcoord : number"],
+                    "returnv": "",
+                    "description": "Sets the texture rectangle for the sprite. This is the rectangle on the original texture from which the sprite will be drawn.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSprite2D_SetDestRect",
+                    "args": ["objID : number (Object ID)", "left : number", "top : number", "right : number", "bottom : number"],
+                    "returnv": "",
+                    "description": "Sets the drawing rectangle for the sprite. This is the rectangle where the sprite will be drawn.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSprite2D_SetDestCenter",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Sets the drawing rectangle for the sprite by mapping the center of the source rectangle to (0, 0).",
+                    "notes": "For instance, if the rectangle set with ObjSprite2D_SetSourceRect is (24, 32, 48, 46) (which is 24 wide and 14 high), the destination rectangle becomes (-12, -7, 12, 7)."
+                }
+            ]
+        },
+        {
+            "catname": "2D Sprite List Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjSpriteList2D_SetSourceRect",
+                    "args": ["objID : number (Object ID)", "texleftcoord : number", "textopcoord : number", "texrightcoord : number", "texbottomcoord : number"],
+                    "returnv": "",
+                    "description": "Sets the texture rectangle for the next sprite to be added. This is the rectangle on the original texture from which the sprite will be drawn.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSpriteList2D_SetDestRect",
+                    "args": ["objID : number (Object ID)", "left : number", "top : number", "right : number", "bottom : number"],
+                    "returnv": "",
+                    "description": "Sets the drawing rectangle for the next sprite to be added. This is the rectangle where the sprite will be drawn.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSpriteList2D_SetDestCenter",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Sets the drawing rectangle for the next sprite to be added by mapping the center of the source rectangle to (0, 0).",
+                    "notes": "For instance, if the rectangle set with ObjSprite2D_SetSourceRect is (24, 32, 48, 46) (which is 24 wide and 14 high), the destination rectangle becomes (-12, -7, 12, 7)."
+                },
+                {
+                    "fname": "ObjSpriteList2D_AddVertex",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Adds a sprite vertex to the specified object; the current sprite is finalized and added to the list to be drawn.",
+                    "notes": "After using this function, using functions to modify the 2D sprite list object will target the next sprite to be added."
+                },
+                {
+                    "fname": "ObjSpriteList2D_CloseVertex",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Finalizes the object by preventing more sprites from being added to the list to be drawn.",
+                    "notes": "After using this function, using ObjRender_ functions to transform coordinates (e.g. position, angle, scale, etc) will affect all added sprites in the 2D sprite list as a group."
+                },
+                {
+                    "fname": "ObjSpriteList2D_ClearVertexCount",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Clears the sprite vertices for the specified object; removes all of the sprites previously added.",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "catname": "3D Sprite Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjSprite3D_SetSourceRect",
+                    "args": ["objID : number (Object ID)", "texleftcoord : number", "textopcoord : number", "texrightcoord : number", "texbottomcoord : number"],
+                    "returnv": "",
+                    "description": "Sets the texture rectangle for the sprite. This is the rectangle on the original texture from which the sprite will be drawn.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSprite3D_SetDestRect",
+                    "args": ["objID : number (Object ID)", "left : number", "top : number", "right : number", "bottom : number"],
+                    "returnv": "",
+                    "description": "Sets the drawing rectangle for the sprite. This is the rectangle where the sprite will be drawn.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSprite3D_SetSourceDestRect",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Sets the texture rectangle for the sprite, and maps the center of the rectangle to the destination coordinates (0, 0).",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSprite3D_SetBillboard",
+                    "args": ["objID : number (Object ID)", "billboard : bool"],
+                    "returnv": "",
+                    "description": "Sets the billboard toggle for the sprite.",
+                    "notes": "If set to true, the object associated with objID will always be facing the camera."
+                }
+            ]
+        },
+        {
+            "catname": "Mesh Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjMesh_Create",
+                    "args": [],
+                    "returnv": "object ID of new mesh object : number (Object ID)",
+                    "description": "Creates a 3D mesh object and returns its ID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMesh_Load",
+                    "args": ["objID : number (Object ID)", "meshpath : string (path)"],
+                    "returnv": "",
+                    "description": "Loads a 3D mesh file into the mesh object associated with objID.",
+                    "notes": "Supported Mesh file types are either .mqo (Metasequoia) or .elem (Elfreina)."
+                },
+                {
+                    "fname": "ObjMesh_SetColor",
+                    "args": ["objID : number (Object ID)", "red : number (int)", "green : number (int)", "blue : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the color of the mesh object associated with objID using RGB on a 0-255 scale.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMesh_SetAlpha",
+                    "args": ["objID : number (Object ID)", "alpha : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the alpha of the mesh object associated with objID on a 0-255 scale.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMesh_SetAnimation",
+                    "args": ["objID : number (Object ID)", "animname : string", "animframe : number"],
+                    "returnv": "",
+                    "description": "Sets the animation of the mesh object associated with objID.<br>The animation frame of the specified animation name is drawn.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMesh_SetCoordinate2D",
+                    "args": ["objID : number (Object ID)", "2dcoord : bool"],
+                    "returnv": "",
+                    "description": "When set to true, allows the mesh object associated with objID to be positioned using 2D coordinates.",
                     "notes": ""
                 }
             ]
