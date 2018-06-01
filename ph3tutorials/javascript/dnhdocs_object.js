@@ -299,29 +299,111 @@ var dnhph3docs_object = {
                     "fname": "ObjRender_SetZWrite",
                     "args": ["objID : number (Object ID)", "zwrite : bool"],
                     "returnv": "",
-                    "description": "Allows or prevents the object from writing in the Z-buffer.",
+                    "description": "Allows or prevents the object associated with objID from writing in the Z-buffer.",
                     "notes": ""
                 },
                 {
                     "fname": "ObjRender_SetZTest",
                     "args": ["objID : number (Object ID)", "ztest : bool"],
                     "returnv": "",
-                    "description": "Sets whether or not the object uses the Z-buffer.",
+                    "description": "Sets whether or not the object associated with objID uses the Z-buffer.",
                     "notes": ""
                 },
                 {
                     "fname": "ObjRender_SetFogEnable",
                     "args": ["objID : number (Object ID)", "fogenable : bool"],
                     "returnv": "",
-                    "description": "Allows or prevents the object from being affected by the fog.",
+                    "description": "Allows or prevents the object associated with objID from being affected by the fog.",
                     "notes": "Defaults to true."
                 },
                 {
                     "fname": "ObjRender_SetPermitCamera",
                     "args": ["objID : number (Object ID)", "permitcamera : bool"],
                     "returnv": "",
-                    "description": "Determines whether the object is affected by the 2D camera.",
+                    "description": "Determines whether the object associated with objID is affected by the 2D camera.",
                     "notes": "If set to false, the object will not be affected by the camera regardless of render priority."
+                }
+            ]
+        },
+        {
+            "catname": "Primitive Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjPrim_Create",
+                    "args": ["objtype : const"],
+                    "returnv": "object ID of new primitive object : number (Object ID)",
+                    "description": "Creates a Primitive object.",
+                    "notes": "Object types are:<br>OBJ_PRIMITIVE_2D (primitive (triangle) in the 2D space)<br>OBJ_SPRITE_2D (rectangle in the 2D space (usable by the ObjSprite2D_ functions))<br>OBJ_SPRITE_LIST_2D (list of rectangles in the 2D space (usable by the ObjSpriteList2D_ functions))<br>OBJ_PRIMITIVE_3D (primitive (triangle) in the 3D space)<br>OBJ_SPRITE_3D (rectangle in the 3D space (usable by the ObjSprite3D_ functions))"
+                },
+                {
+                    "fname": "ObjPrim_SetPrimitiveType",
+                    "args": ["objID : number (Object ID)", "primitivetype : bool"],
+                    "returnv": "",
+                    "description": "Sets the vertex layout for the object associated with objID.",
+                    "notes": "Primitive Types are:<br>PRIMITIVE_TRIANGLELIST, PRIMITIVE_TRIANGLESTRIP, PRIMITIVE_TRIANGLEFAN, PRIMITIVE_LINELIST (undocumented), PRIMITIVE_LINESTRIP (undocumented), and PRIMITIVE_POINT_LIST (undocumented)."
+                },
+                {
+                    "fname": "ObjPrim_SetVertexCount",
+                    "args": ["objID : number (Object ID)", "vertexcount : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the number of vertices the object associated with objID contains.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjPrim_GetVertexCount",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "the number of vertices the object associated with objID contains : number (int)",
+                    "description": "Returns the number of vertices the object associated with objID contains.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjPrim_SetTexture",
+                    "args": ["objID : number (Object ID)", "texpath : string (path)"],
+                    "returnv": "",
+                    "description": "Sets the specified texture on the object associated with objID.",
+                    "notes": "Loads the texture file if it has not already been loaded."
+                },
+                {
+                    "fname": "ObjPrim_SetVertexPosition",
+                    "args": ["objID : number (Object ID)", "vertexindex : number (int)", "xcoord : number", "ycoord : number", "zcoord : number"],
+                    "returnv": "",
+                    "description": "Sets the position of the specified vertex for the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjPrim_GetVertexPosition",
+                    "args": ["objID : number (Object ID)", "vertexindex : number (int)"],
+                    "returnv": "coordinates of the specified vertex : number []",
+                    "description": "Returns the position of the specified vertex in an array",
+                    "notes": "Return format is [x, y, z]."
+                },
+                {
+                    "fname": "ObjPrim_SetVertexUV",
+                    "args": ["objID : number (Object ID)", "vertexindex : number (int)", "texturex : number", "texturey : number"],
+                    "returnv": "",
+                    "description": "Sets the UV coordinates for the specified vertex for the object associated with objID.",
+                    "notes": "The value for the coordinates must be in the range (0.0-1.0).<br>For instance, if you want a vertex to be at the center-top of a 512*512 texture, you have to set x to 0.5 and y to 1.0.<br>As it may be troublesome to convert pixels into a 0.0-1.0 value, ObjPrim_SetVertexUVT is recommended."
+                },
+                {
+                    "fname": "ObjPrim_SetVertexUVT",
+                    "args": ["objID : number (Object ID)", "vertexindex : number (int)", "texturex : number", "texturey : number"],
+                    "returnv": "",
+                    "description": "Sets the UV coordinates for the specified vertex for the object associated with objID.",
+                    "notes": "You must set the object's texture using ObjPrim_SetTexture beforehand."
+                },
+                {
+                    "fname": "ObjPrim_SetVertexColor",
+                    "args": ["objID : number (Object ID)", "vertexindex : number (int)", "red : number", "green : number", "blue : number"],
+                    "returnv": "",
+                    "description": "Sets the rgb color of the specified vertex on a 0-255 scale.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjPrim_SetVertexAlpha",
+                    "args": ["objID : number (Object ID)", "vertexindex : number (int)", "alpha : number"],
+                    "returnv": "",
+                    "description": "Sets the alpha of the specified vertex on a 0-255 scale.",
+                    "notes": ""
                 }
             ]
         }
