@@ -559,6 +559,172 @@ var dnhph3docs_object = {
                     "notes": ""
                 }
             ]
+        },
+        {
+            "catname": "Text Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjText_Create",
+                    "args": [],
+                    "returnv": "object ID of new text object : number (Object ID)",
+                    "description": "Creates a text object and returns its ID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetText",
+                    "args": ["objID : number (Object ID)", "text : string"],
+                    "returnv": "",
+                    "description": "Assigns the provided text string to the text object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetFontType",
+                    "args": ["objID : number (Object ID)", "fontname : string"],
+                    "returnv": "",
+                    "description": "Sets the font associated with the fontname to the text object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetFontSize",
+                    "args": ["objID : number (Object ID)", "fontsize : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the size of the font for the text object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetFontBold",
+                    "args": ["objID : number (Object ID)", "bold : bool"],
+                    "returnv": "",
+                    "description": "If set to true, the text will be displayed in bold characters.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetFontColorTop",
+                    "args": ["objID : number (Object ID)", "red : number (int)", "green : number (int)", "blue : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the top color of the text object associated with objID, on a 0-255 scale.",
+                    "notes": "Danmakufu will form a gradient between the colors set with ObjText_SetFontColorTop and ObjText_SetFontColorBottom."
+                },
+                {
+                    "fname": "ObjText_SetFontColorBottom",
+                    "args": ["objID : number (Object ID)", "red : number (int)", "green : number (int)", "blue : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the bottom color of the text object associated with objID, on a 0-255 scale.",
+                    "notes": "Danmakufu will form a gradient between the colors set with ObjText_SetFontColorTop and ObjText_SetFontColorBottom."
+                },
+                {
+                    "fname": "ObjText_SetFontBorderWidth",
+                    "args": ["objID : number (Object ID)", "borderwidth : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the width of the font border for the text object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetFontBorderType",
+                    "args": ["objID : number (Object ID)", "bordertype : const"],
+                    "returnv": "",
+                    "description": "Sets the type of the font border for the text object associated with objID.",
+                    "notes": "Border types are:<br>BORDER_NONE (no border)<br>BORDER_FULL (full border)<br>BORDER_SHADOW (shadow at bottom right of text)"
+                },
+                {
+                    "fname": "ObjText_SetFontBorderColor",
+                    "args": ["objID : number (Object ID)", "red : number (int)", "green : number (int)", "blue : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the color of the font border of the text object associated with objID, on a 0-255 scale.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetMaxWidth",
+                    "args": ["objID : number (Object ID)", "maxwidth : number"],
+                    "returnv": "",
+                    "description": "Sets the maximum width of the text object associated with objID.",
+                    "notes": "The text will automatically create a new line whenever needed.<br>Note that font width changes depending on the rendering system, and that fonts will render differently on different platforms."
+                },
+                {
+                    "fname": "ObjText_SetMaxHeight",
+                    "args": ["objID : number (Object ID)", "maxheight : number"],
+                    "returnv": "",
+                    "description": "Sets the maximum height of the text object associated with objID.",
+                    "notes": "Any part of the text exceeding this height will not be drawn."
+                },
+                {
+                    "fname": "ObjText_SetLinePitch",
+                    "args": ["objID : number (Object ID)", "linepitch : number"],
+                    "returnv": "",
+                    "description": "Sets the line pitch (space between lines) of the text object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetSidePitch",
+                    "args": ["objID : number (Object ID)", "sidepitch : number"],
+                    "returnv": "",
+                    "description": "Sets the side pitch (space between characters) of the text object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetTransCenter",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number"],
+                    "returnv": "",
+                    "description": "Sets the given coordinates as the transformation center of the text object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_SetAutoTransCenter",
+                    "args": ["objID : number (Object ID)", "autocenter : bool"],
+                    "returnv": "",
+                    "description": "When true, sets the center of the text object associated with objID as its transformation center.",
+                    "notes": "Default is true."
+                },
+                {
+                    "fname": "ObjText_SetHorizontalAlignment",
+                    "args": ["objID : number (Object ID)", "alignment : const"],
+                    "returnv": "",
+                    "description": "Sets the alignment of the text object associated with objID.",
+                    "notes": "Horizontal Alignments are:<br>ALIGNMENT_LEFT, ALIGNMENT_CENTER, and ALIGNMENT_RIGHT.<br>To use center or right aligned text, you have to set the maximum width using ObjText_SetMaxWidth (in order to know where the right border is)."
+                },
+                {
+                    "fname": "ObjText_SetSyntacticAnalysis",
+                    "args": ["objID : number (Object ID)", "enabled : bool"],
+                    "returnv": "",
+                    "description": "Allows or prevents checking for the existence of bracket tags (such as line break or ruby text) within the text for the text object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjText_GetTextLength",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "text length : number",
+                    "description": "Returns the length of the specified text object associated with objID.",
+                    "notes": "When using Japanese characters, a half-width character counts as 1 and a full-width character counts as 2 characters."
+                },
+                {
+                    "fname": "ObjText_GetTextLengthCU",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "text length : number",
+                    "description": "Returns the length of the specified text object associated with objID.",
+                    "notes": "Newlines and ruby text are not counted when using this function, unlike with ObjText_GetTextLength.<br>When using Japanese characters, a half-width character counts as 1 and a full-width character counts as 2 characters."
+                },
+                {
+                    "fname": "ObjText_GetTextLengthCUL",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "array of text lengths : number []",
+                    "description": "Returns an array of the lengths of each line of the specified text object associated with objID.",
+                    "notes": "Newlines and ruby text are not counted when using this function.<br>When using Japanese characters, a half-width character counts as 1 and a full-width character counts as 2 characters."
+                },
+                {
+                    "fname": "ObjText_GetTotalWidth",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "width of rendered text : number",
+                    "description": "Returns the overall width of all lines of the text object associated with objID.",
+                    "notes": "Platform dependent."
+                },
+                {
+                    "fname": "ObjText_GetTotalHeight",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "height of rendered text : number",
+                    "description": "Returns the combined height of all lines of the text object associated with objID.",
+                    "notes": "This function's behavior appears to depend only on the number of newlines, as opposed to the number of lines actually displayed with word wrapping taken into account."
+                }
+            ]
         }
     ]
 };
