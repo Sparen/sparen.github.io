@@ -90,6 +90,12 @@ function loadDocs() {
     document.getElementById("shot_fxns").innerHTML = loadDocsByCategory("Shot Functions", dnhph3docs_standard);
     document.getElementById("item_fxns").innerHTML = loadDocsByCategory("Item Functions", dnhph3docs_standard);
     document.getElementById("other_fxns").innerHTML = loadDocsByCategory("Other Functions", dnhph3docs_standard);
+
+    //If the user wanted to access a specific function, scroll them down.
+    var destid = location.hash.substring(1);
+    if (destid != null && destid != undefined && destid != "") {
+        document.getElementById(destid).scrollIntoView();
+    }
 }
 
 //Loads documentation onto docs_obj.html
@@ -117,6 +123,12 @@ function loadDocsOBJ() {
     document.getElementById("player_object_fxns").innerHTML = loadDocsByCategory("Player Object Functions", dnhph3docs_object);
     document.getElementById("collision_object_fxns").innerHTML = loadDocsByCategory("Collision Object Functions", dnhph3docs_object);
     */
+
+    //If the user wanted to access a specific function, scroll them down.
+    var destid = location.hash.substring(1);
+    if (destid != null && destid != undefined && destid != "") {
+        document.getElementById(destid).scrollIntoView();
+    }
 }
 
 function loadDocsByCategory (catnameparam, maindocobj) {
