@@ -1819,7 +1819,7 @@ var dnhph3docs_standard = {
                     "args": ["left : number", "top : number", "right : number", "bottom : number"],
                     "returnv": "",
                     "description": "Sets at what point bullets will be automatically deleted when leaving the STG screen.",
-                    "notes": "To override this auto deletion, use ObjShot_SetAutoDelete on the bullet you want to prevent from auto deleting."
+                    "notes": "To override this auto deletion, use ObjShot_SetAutoDelete on the bullet you want to prevent from auto deleting.<br>Default is (64, 64, 64, 64)."
                 },
                 {
                     "fname": "GetShotDataInfoA1",
