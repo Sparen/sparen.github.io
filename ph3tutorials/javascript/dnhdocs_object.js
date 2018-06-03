@@ -725,6 +725,177 @@ var dnhph3docs_object = {
                     "notes": "This function's behavior appears to depend only on the number of newlines, as opposed to the number of lines actually displayed with word wrapping taken into account."
                 }
             ]
+        },
+        {
+            "catname": "Shader Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjShader_Create",
+                    "args": [],
+                    "returnv": "object ID of new shader object : number (Object ID)",
+                    "description": "Creates a shader object and returns its ID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShader_SetShaderF",
+                    "args": ["objID : number (Object ID)", "shaderfile : string (path)"],
+                    "returnv": "true if successly set; false otherwise : bool",
+                    "description": "Sets the path to the HLSL source for the shader object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShader_SetShaderO",
+                    "args": ["objID : number (Object ID)", "shaderID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Applies the shader linked to the shader object associated with shaderID to the render object associated with objID.",
+                    "notes": "Does not work with text objects, but you can render one to a render target."
+                },
+                {
+                    "fname": "ObjShader_ResetShader",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Terminates application of all shaders to the render object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShader_SetTechnique",
+                    "args": ["objID : number (Object ID)", "technique : string"],
+                    "returnv": "",
+                    "description": "Sets the technique that you want to run on the shader linked to the shader object associated with shaderID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShader_SetVector",
+                    "args": ["objID : number (Object ID)", "paramID : string", "float4x : number", "float4y : number", "float4z : number", "float4w : number"],
+                    "returnv": "",
+                    "description": "Sets a float4 parameter in the shader linked to the shader object associated with shaderID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShader_SetFloat",
+                    "args": ["objID : number (Object ID)", "paramID : string", "floatval : number"],
+                    "returnv": "",
+                    "description": "Sets a float parameter in the shader linked to the shader object associated with shaderID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShader_SetFloatArray",
+                    "args": ["objID : number (Object ID)", "paramID : string", "floatarr : number []"],
+                    "returnv": "",
+                    "description": "Sets a float array parameter in the shader linked to the shader object associated with shaderID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShader_SetTexture",
+                    "args": ["objID : number (Object ID)", "paramID : string", "filepath : string (path)"],
+                    "returnv": "",
+                    "description": "Sets a texture parameter, using the path to the appropriate image, in the shader linked to the shader object associated with shaderID.",
+                    "notes": "You can call multiple textures."
+                }
+            ]
+        },
+        {
+            "catname": "Sound Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjSound_Create",
+                    "args": [],
+                    "returnv": "object ID of new sound object : number (Object ID)",
+                    "description": "Creates a sound object and returns its ID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSound_Load",
+                    "args": ["objID : number (Object ID)", "filepath : string (path)"],
+                    "returnv": "",
+                    "description": "Loads the specified sound file and associates it with the sound object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSound_Play",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Plays the sound file associated with the sound object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSound_Stop",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Stops the sound file associated with the sound object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSound_SetVolumeRate",
+                    "args": ["objID : number (Object ID)", "volume : number"],
+                    "returnv": "",
+                    "description": "Sets the volume of the sound object associated with objID, on a 0-100 scale.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSound_SetPanRate",
+                    "args": ["objID : number (Object ID)", "panvolume : number"],
+                    "returnv": "",
+                    "description": "Sets the pan volume of the sound object associated with objID, on a -100-100 scale.",
+                    "notes": "0 is neutral, -100 is left-side only, 100 is right-side only."
+                },
+                {
+                    "fname": "ObjSound_SetFade",
+                    "args": ["objID : number (Object ID)", "fade : number"],
+                    "returnv": "",
+                    "description": "Sets the fade time of the sound object associated with objID.",
+                    "notes": "Fade value is how much the volume will decrease per second."
+                },
+                {
+                    "fname": "ObjSound_SetLoopEnable",
+                    "args": ["objID : number (Object ID)", "enable : bool"],
+                    "returnv": "",
+                    "description": "Sets whether the sound object associated with objID will loop.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSound_SetLoopTime",
+                    "args": ["objID : number (Object ID)", "loopstart : number", "loopend : number"],
+                    "returnv": "",
+                    "description": "Sets the timing of the loop of the sound object associated with objID, in seconds.",
+                    "notes": "Sound Object will play to end of track or loopend, whichever comes first, then loop back to loopstart."
+                },
+                {
+                    "fname": "ObjSound_SetLoopSampleCount",
+                    "args": ["objID : number (Object ID)", "loopsamplestart : number", "loopsampleend : number"],
+                    "returnv": "",
+                    "description": "Sets the timing of the loop of the sound object associated with objID, using the sample count.",
+                    "notes": "Sound Object will play to end of track or loopsampleend, whichever comes first, then loop back to loopsamplestart."
+                },
+                {
+                    "fname": "ObjSound_SetRestartEnable",
+                    "args": ["objID : number (Object ID)", "enable : bool"],
+                    "returnv": "",
+                    "description": "When set to true, allows the sound object associated with objID to continue where it left off instead of restarting every time ObjSound_Play is called.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSound_SetSoundDivision",
+                    "args": ["objID : number (Object ID)", "soundtype : const"],
+                    "returnv": "",
+                    "description": "Specifies whether the sound object associated with objID is a BGM or Sound Effect.",
+                    "notes": "Values for soundtype are SOUND_BGM and SOUND_SE."
+                },
+                {
+                    "fname": "ObjSound_IsPlaying",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "true if currently playing; false otherwise : bool",
+                    "description": "Returns true if the sound object associated with objID is playing its associated sound file.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjSound_GetVolumeRate",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "volume rate of sound object associated with objID : number",
+                    "description": "Returns the volume of the sound object associated with objID, on a 0-100 scale.",
+                    "notes": ""
+                }
+            ]
         }
     ]
 };

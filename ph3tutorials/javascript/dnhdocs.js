@@ -109,9 +109,9 @@ function loadDocsOBJ() {
     document.getElementById("3dsprite_object_fxns").innerHTML = loadDocsByCategory("3D Sprite Object Functions", dnhph3docs_object);
     document.getElementById("mesh_object_fxns").innerHTML = loadDocsByCategory("Mesh Object Functions", dnhph3docs_object);
     document.getElementById("text_object_fxns").innerHTML = loadDocsByCategory("Text Object Functions", dnhph3docs_object);
-    /*
     document.getElementById("shader_object_fxns").innerHTML = loadDocsByCategory("Shader Object Functions", dnhph3docs_object);
     document.getElementById("sound_object_fxns").innerHTML = loadDocsByCategory("Sound Object Functions", dnhph3docs_object);
+    /*
     document.getElementById("file_object_fxns").innerHTML = loadDocsByCategory("File Object Functions", dnhph3docs_object);
     document.getElementById("textfile_object_fxns").innerHTML = loadDocsByCategory("Text File Object Functions", dnhph3docs_object);
     document.getElementById("binaryfile_object_fxns").innerHTML = loadDocsByCategory("Binary File Object Functions", dnhph3docs_object);
