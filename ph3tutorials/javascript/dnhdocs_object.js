@@ -896,6 +896,175 @@ var dnhph3docs_object = {
                     "notes": ""
                 }
             ]
+        },
+        {
+            "catname": "File Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjFile_Create",
+                    "args": ["objtype : const"],
+                    "returnv": "object ID of new file object : number (Object ID)",
+                    "description": "Creates a file object and returns its ID.",
+                    "notes": "File Object types are OBJ_FILE_TEXT for text files and OBJ_FILE_BINARY for binary files."
+                },
+                {
+                    "fname": "ObjFile_Open",
+                    "args": ["objID : number (Object ID)", "filepath : string (path)"],
+                    "returnv": "true on success; false otherwise : bool",
+                    "description": "Opens a file for reading with the specified file path and binds the file object associated with objID to the opened file.",
+                    "notes": "If this function is used for another file or the object is deleted, the file specified in the filepath is closed."
+                },
+                {
+                    "fname": "ObjFile_OpenNW",
+                    "args": ["objID : number (Object ID)", "filepath : string (path)"],
+                    "returnv": "true on success; false otherwise : bool",
+                    "description": "Opens a file for reading and writing with the specified file path and binds the file object associated with objID to the opened file.",
+                    "notes": "If this function is used for another file or the object is deleted, the file specified in the filepath is closed.<br>If the directory of the specified path does not exist, it will be created.<br>The only paths that can be specified are those under the th_dnh.exe directory."
+                },
+                {
+                    "fname": "ObjFile_Store",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Saves a file previously opened with ObjFile_OpenNW.",
+                    "notes": "Must be called once after writing the data."
+                },
+                {
+                    "fname": "ObjFile_GetSize",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "file size of specified file object : number",
+                    "description": "Returns the file size of specified file object associated with objID.",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "catname": "Text File Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjFileT_GetLineCount",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "number of lines in the text file : number",
+                    "description": "Returns the number of lines in the text file bound to the file object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjFileT_GetLineText",
+                    "args": ["objID : number (Object ID)", "lineindex : number (int)"],
+                    "returnv": "contents of specified line : string",
+                    "description": "Returns the character string of the specified line in the text file.",
+                    "notes": "Lines are 1-indexed rather than 0-indexed."
+                },
+                {
+                    "fname": "ObjFileT_AddLine",
+                    "args": ["objID : number (Object ID)", "linetoadd : string"],
+                    "returnv": "",
+                    "description": "Prepare to write the specified linetoadd character string as one line at the end of the text file.",
+                    "notes": "Must use ObjFile_Store to actually write to the file on disk; this function only writes to the file object."
+                },
+                {
+                    "fname": "ObjFileT_ClearLine",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Clear the line added by ObjFileT_AddLine.",
+                    "notes": "TODO: Does this clear the last line added or ALL lines added but not yet written to disk?"
+                },
+                {
+                    "fname": "ObjFileT_SplitLineText",
+                    "args": ["objID : number (Object ID)", "lineindex : number (int)", "delimiter : string"],
+                    "returnv": "specified line in file delimited by delimiter : string []",
+                    "description": "Returns a character string array obtained by dividing the specified line of the text file by the specified delimiter character.",
+                    "notes": "Lines are 1-indexed rather than 0-indexed."
+                }
+            ]
+        },
+        {
+            "catname": "Binary File Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjFileB_SetByteOrder",
+                    "args": ["objID : number (Object ID)", "byteorder : const"],
+                    "returnv": "",
+                    "description": "Sets the Byte Order of the file bound to the file object associated with objID.",
+                    "notes": "Defaults to ENDIAN_LITTLE.<br>Possible byteorder values are ENDIAN_LITTLE for Little Endian and ENDIAN_BIG for Big Endian."
+                },
+                {
+                    "fname": "ObjFileB_SetCharacterCode",
+                    "args": ["objID : number (Object ID)", "charcode : const"],
+                    "returnv": "",
+                    "description": "Sets the Character Code of the file bound to the file object associated with objID.",
+                    "notes": "Necessary for reading file contents with ObjFileB_ReadString.<br>Defaults to CODE_ACP.<br>Possible character codes supported by Danmakufu are:<br>CODE_ACP (ANSI/Shift-JIS), CODE_UTF8 (UTF-8), CODE_UTF16LE (UTF-16 Little Endian), and CODE_UTF16BE (UTF-16 Big Endian)."
+                },
+                {
+                    "fname": "ObjFileB_GetPointer",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "position of current file pointer : number (int)",
+                    "description": "Returns the position of the current file pointer.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjFileB_GetSeek",
+                    "args": ["objID : number (Object ID)", "filepointer : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the position of the current file pointer.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjFileB_ReadBoolean",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "next byte : bool",
+                    "description": "Reads a byte from file and returns a Boolean value.",
+                    "notes": "The file pointer advances one byte."
+                },
+                {
+                    "fname": "ObjFileB_ReadByte",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "next byte : number (int)",
+                    "description": "Reads a byte from file and returns a Byte value (1-byte integer).",
+                    "notes": "The file pointer advances one byte."
+                },
+                {
+                    "fname": "ObjFileB_ReadShort",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "next two bytes : number (int)",
+                    "description": "Reads two bytes from file and returns a Short value (2-byte integer).",
+                    "notes": "The file pointer advances two bytes."
+                },
+                {
+                    "fname": "ObjFileB_ReadInteger",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "next four bytes : number (int)",
+                    "description": "Reads four bytes from file and returns an Integer value (4-byte integer).",
+                    "notes": "The file pointer advances four bytes."
+                },
+                {
+                    "fname": "ObjFileB_ReadLong",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "next eight bytes : number (int)",
+                    "description": "Reads eight bytes from file and returns a Long value (8-byte integer).",
+                    "notes": "The file pointer advances eight bytes."
+                },
+                {
+                    "fname": "ObjFileB_ReadFloat",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "next four bytes : number (float)",
+                    "description": "Reads four bytes from file and returns an Float value (4-byte floating point).",
+                    "notes": "The file pointer advances four bytes."
+                },
+                {
+                    "fname": "ObjFileB_ReadDouble",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "next eight bytes : number (float)",
+                    "description": "Reads eight bytes from file and returns a Double value (8-byte floating point).",
+                    "notes": "The file pointer advances eight bytes."
+                },
+                {
+                    "fname": "ObjFileB_ReadString",
+                    "args": ["objID : number (Object ID)", "bytestoread : number (int)"],
+                    "returnv": "next bytestoread bytes : string",
+                    "description": "Given a specified number of bytes to read, reads a string from file and returns the string.",
+                    "notes": "The file pointer advances by the specified number of bytestoread.<br>Due to a bug, this function will never return any characters outside of Shift-JIS."
+                }
+            ]
         }
     ]
 };
