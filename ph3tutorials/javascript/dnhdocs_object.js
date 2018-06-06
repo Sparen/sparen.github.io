@@ -680,14 +680,14 @@ var dnhph3docs_object = {
                     "args": ["objID : number (Object ID)", "alignment : const"],
                     "returnv": "",
                     "description": "Sets the alignment of the text object associated with objID.",
-                    "notes": "Horizontal Alignments are:<br>ALIGNMENT_LEFT, ALIGNMENT_CENTER, and ALIGNMENT_RIGHT.<br>To use center or right aligned text, you have to set the maximum width using ObjText_SetMaxWidth (in order to know where the right border is)."
+                    "notes": "Defaults to ALIGNMENT_LEFT.<br>Horizontal Alignments are:<br>ALIGNMENT_LEFT, ALIGNMENT_CENTER, and ALIGNMENT_RIGHT.<br>To use center or right aligned text, you have to set the maximum width using ObjText_SetMaxWidth (in order to know where the right border is)."
                 },
                 {
                     "fname": "ObjText_SetSyntacticAnalysis",
                     "args": ["objID : number (Object ID)", "enabled : bool"],
                     "returnv": "",
                     "description": "Allows or prevents checking for the existence of bracket tags (such as line break or ruby text) within the text for the text object associated with objID.",
-                    "notes": ""
+                    "notes": "Defaults to true"
                 },
                 {
                     "fname": "ObjText_GetTextLength",
@@ -746,7 +746,7 @@ var dnhph3docs_object = {
                 {
                     "fname": "ObjShader_SetShaderO",
                     "args": ["objID : number (Object ID)", "shaderID : number (Object ID)"],
-                    "returnv": "",
+                    "returnv": "true if successly set; false otherwise : bool",
                     "description": "Applies the shader linked to the shader object associated with shaderID to the render object associated with objID.",
                     "notes": "Does not work with text objects, but you can render one to a render target."
                 },
@@ -1063,6 +1063,165 @@ var dnhph3docs_object = {
                     "returnv": "next bytestoread bytes : string",
                     "description": "Given a specified number of bytes to read, reads a string from file and returns the string.",
                     "notes": "The file pointer advances by the specified number of bytestoread.<br>Due to a bug, this function will never return any characters outside of Shift-JIS."
+                }
+            ]
+        },
+        {
+            "catname": "Move Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjMove_SetX",
+                    "args": ["objID : number (Object ID)", "xcoord : number"],
+                    "returnv": "",
+                    "description": "Sets the x coordinate of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetY",
+                    "args": ["objID : number (Object ID)", "ycoord : number"],
+                    "returnv": "",
+                    "description": "Sets the y coordinate of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetPosition",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number"],
+                    "returnv": "",
+                    "description": "Sets the x and y coordinates of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetSpeed",
+                    "args": ["objID : number (Object ID)", "speed : number"],
+                    "returnv": "",
+                    "description": "Sets the speed of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetAngle",
+                    "args": ["objID : number (Object ID)", "angle : number (degrees)"],
+                    "returnv": "",
+                    "description": "Sets the angle of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetAcceleration",
+                    "args": ["objID : number (Object ID)", "accel : number"],
+                    "returnv": "",
+                    "description": "Sets the acceleration of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetMaxSpeed",
+                    "args": ["objID : number (Object ID)", "maxspeed : number"],
+                    "returnv": "",
+                    "description": "Sets the maximum/minimum speed the object associated with objID will approach using the ObjMove_SetAcceleration function.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetAngularVelocity",
+                    "args": ["objID : number (Object ID)", "wvel : number"],
+                    "returnv": "",
+                    "description": "Sets the angular velocity (change in movement angle per frame) of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetDestAtSpeed",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number", "speed : number"],
+                    "returnv": "",
+                    "description": "Moves the object associated with objID towards the given coordinates at the speed specified.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetDestAtFrame",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number", "frames : number (int)"],
+                    "returnv": "",
+                    "description": "Moves the object associated with objID towards the given coordinates in the number of frames specified.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_SetDestAtWeight",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number", "weight : number", "maxspeed : number"],
+                    "returnv": "",
+                    "description": "Moves the object associated with objID towards the given coordinates. It will slow down near the end of the movement based on the weight specified.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_AddPatternA1",
+                    "args": ["objID : number (Object ID)", "frame : number (int)", "speed : number", "angle : number (degrees)"],
+                    "returnv": "",
+                    "description": "After the specified number of frames, changes the speed and angle of the object associated with objID.",
+                    "notes": "NO_CHANGE can be used to preserve the original speed or angle."
+                },
+                {
+                    "fname": "ObjMove_AddPatternA2",
+                    "args": ["objID : number (Object ID)", "frame : number (int)", "speed : number", "angle : number (degrees)", "accel : number", "wvel : number", "maxspeed : number"],
+                    "returnv": "",
+                    "description": "After the specified number of frames, changes the speed, angle, acceleration, angular velocity, and maximum/minimum speed of the object associated with objID.",
+                    "notes": "NO_CHANGE can be used to preserve the original speed, angle, acceleration, angular velocity, or maximum/minimum speed."
+                },
+                {
+                    "fname": "ObjMove_AddPatternA3",
+                    "args": ["objID : number (Object ID)", "frame : number (int)", "speed : number", "angle : number (degrees)", "accel : number", "wvel : number", "maxspeed : number", "graphic : number (int)"],
+                    "returnv": "",
+                    "description": "After the specified number of frames, changes the speed, angle, acceleration, angular velocity, maximum/minimum speed, and bullet graphic of the object associated with objID.",
+                    "notes": "NO_CHANGE can be used to preserve the original speed, angle, acceleration, angular velocity, maximum/minimum speed, or bullet graphic."
+                },
+                {
+                    "fname": "ObjMove_AddPatternA4",
+                    "args": ["objID : number (Object ID)", "frame : number (int)", "speed : number", "angle : number (degrees)", "accel : number", "wvel : number", "maxspeed : number", "targetID : number (Object ID)", "graphic : number (int)"],
+                    "returnv": "",
+                    "description": "After the specified number of frames, changes the speed, angle, acceleration, angular velocity, maximum/minimum speed, and bullet graphic of the object associated with objID, with angle being based off of the angle from the object to the object associated with targetID.",
+                    "notes": "NO_CHANGE can be used to preserve the original speed, angle, acceleration, angular velocity, maximum/minimum speed, or bullet graphic.<br>The angle parameter is relative to the angle from the object to the target. For example, if GetPlayerObjectID is used as the target, an angle of 0 will cause the object to aim for the player."
+                },
+                {
+                    "fname": "ObjMove_AddPatternB1",
+                    "args": ["objID : number (Object ID)", "frame : number (int)", "xspeed : number", "yspeed : number"],
+                    "returnv": "",
+                    "description": "After the specified number of frames, changes the x and y speeds of the object associated with objID.",
+                    "notes": "NO_CHANGE can be used to preserve the original x or y speeds."
+                },
+                {
+                    "fname": "ObjMove_AddPatternB2",
+                    "args": ["objID : number (Object ID)", "frame : number (int)", "xspeed : number", "yspeed : number", "xaccel : number", "yaccel : number", "maxxspeed : number", "maxyspeed : number"],
+                    "returnv": "",
+                    "description": "After the specified number of frames, changes the x and y speeds, accelerations, and maximum/minimum speeds of the object associated with objID.",
+                    "notes": "NO_CHANGE can be used to preserve the original x or y speeds, accelerations, and maximum/minimum speeds."
+                },
+                {
+                    "fname": "ObjMove_AddPatternB3",
+                    "args": ["objID : number (Object ID)", "frame : number (int)", "xspeed : number", "yspeed : number", "xaccel : number", "yaccel : number", "maxxspeed : number", "maxyspeed : number", "graphic : number (int)"],
+                    "returnv": "",
+                    "description": "After the specified number of frames, changes the x and y speeds, accelerations, maximum/minimum speeds, and bullet graphic of the object associated with objID.",
+                    "notes": "NO_CHANGE can be used to preserve the original x or y speeds, accelerations, maximum/minimum speeds, and bullet graphic."
+                },
+                {
+                    "fname": "ObjMove_GetX",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "x coordinate of the object associated with objID : number",
+                    "description": "Returns the x coordinate of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_GetY",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "y coordinate of the object associated with objID : number",
+                    "description": "Returns the y coordinate of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_GetSpeed",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "speed of the object associated with objID : number",
+                    "description": "Returns the speed of the object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjMove_GetAngle",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "angle of the object associated with objID : number (degrees)",
+                    "description": "Returns the angle of the object associated with objID.",
+                    "notes": ""
                 }
             ]
         }
