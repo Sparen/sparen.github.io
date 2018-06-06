@@ -1224,6 +1224,67 @@ var dnhph3docs_object = {
                     "notes": ""
                 }
             ]
+        },
+        {
+            "catname": "Enemy Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjEnemy_Create",
+                    "args": ["objtype : const"],
+                    "returnv": "object ID of new enemy object : number (Object ID)",
+                    "description": "Creates an enemy object and returns its ID.",
+                    "notes": "Enemy Object types are OBJ_ENEMY for standard enemies and OBJ_ENEMY_BOSS for boss enemies.<br>In order to draw the enemy object and have it listed as an existing enemy, you have to register it using ObjEnemy_Regist.<br>If you want to create a boss enemy object, you have to create a boss scene object first."
+                },
+                {
+                    "fname": "ObjEnemy_Regist",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Activates the enemy object associated with objID.",
+                    "notes": "Required to utilize created enemy objects."
+                },
+                {
+                    "fname": "ObjEnemy_GetInfo",
+                    "args": ["objID : number (Object ID)", "infotype : const"],
+                    "returnv": "results of query : number",
+                    "description": "Returns data on the enemy object associated with objID based on the query.",
+                    "notes": "Possible infotypes are:<br>INFO_LIFE - Returns the life points of the enemy<br>INFO_DAMAGE_RATE_SHOT - Returns the damage rate percentage of normal player shots set by ObjEnemy_SetDamageRate on a 0 to 100 scale<br>INFO_DAMAGE_RATE_SPELL - Returns the damage rate percentage of player bombs set by ObjEnemy_SetDamageRate on a 0 to 100 scale<br>INFO_SHOT_HIT_COUNT - Returns the amount of times the enemy was hit by player bullets in the previous frame"
+                },
+                {
+                    "fname": "ObjEnemy_SetLife",
+                    "args": ["objID : number (Object ID)", "life : number"],
+                    "returnv": "",
+                    "description": "Sets the life points of the enemy object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjEnemy_AddLife",
+                    "args": ["objID : number (Object ID)", "life : number"],
+                    "returnv": "",
+                    "description": "Adds the provided life points to the life points of the enemy object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjEnemy_SetDamageRate",
+                    "args": ["objID : number (Object ID)", "shotrate : number", "bombrate : number"],
+                    "returnv": "",
+                    "description": "Sets the damage rate of player attacks against the enemy object associated with objID.",
+                    "notes": "Setting to 0 will cause the enemy to take no damage<br>Defaults to 100 (100%).<br>Values above 100 are possible.<br>Values below 0 are also possible, but may cause the boss health to overflow."
+                },
+                {
+                    "fname": "ObjEnemy_SetIntersectionCircleToShot",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number", "radius : number"],
+                    "returnv": "",
+                    "description": "Sets the position and radius of the player shot collision hitbox of the enemy object associated with objID.",
+                    "notes": "Any attack from the player colliding with the circle will damage the enemy."
+                },
+                {
+                    "fname": "ObjEnemy_SetIntersectionCircleToPlayer",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number", "radius : number"],
+                    "returnv": "",
+                    "description": "Sets the position and radius of the player collision hitbox of the enemy object associated with objID.",
+                    "notes": "Any collision with the circle will kill the character."
+                }
+            ]
         }
     ]
 };

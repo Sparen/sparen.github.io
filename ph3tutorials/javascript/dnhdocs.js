@@ -115,8 +115,8 @@ function loadDocsOBJ() {
     document.getElementById("textfile_object_fxns").innerHTML = loadDocsByCategory("Text File Object Functions", dnhph3docs_object);
     document.getElementById("binaryfile_object_fxns").innerHTML = loadDocsByCategory("Binary File Object Functions", dnhph3docs_object);
     document.getElementById("move_object_fxns").innerHTML = loadDocsByCategory("Move Object Functions", dnhph3docs_object);
-    /*
     document.getElementById("enemy_object_fxns").innerHTML = loadDocsByCategory("Enemy Object Functions", dnhph3docs_object);
+    /*
     document.getElementById("bossscene_object_fxns").innerHTML = loadDocsByCategory("Boss Scene Object Functions", dnhph3docs_object);
     document.getElementById("shot_object_fxns").innerHTML = loadDocsByCategory("Shot Object Functions", dnhph3docs_object);
     document.getElementById("item_object_fxns").innerHTML = loadDocsByCategory("Item Object Functions", dnhph3docs_object);
