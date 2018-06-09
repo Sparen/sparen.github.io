@@ -1285,6 +1285,296 @@ var dnhph3docs_object = {
                     "notes": "Any collision with the circle will kill the character."
                 }
             ]
+        },
+        {
+            "catname": "Boss Scene Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjEnemyBossScene_Create",
+                    "args": [],
+                    "returnv": "object ID of new boss scene object : number (Object ID)",
+                    "description": "Creates a boss scene object and returns its ID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjEnemyBossScene_Regist",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Starts the boss scene object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjEnemyBossScene_Add",
+                    "args": ["objID : number (Object ID)", "phasestep : number (int)", "scriptpath : string (path)"],
+                    "returnv": "",
+                    "description": "Adds the specific Single script to the boss scene object associated with objID at the specified phase step.",
+                    "notes": "Phase steps are 0 indexed."
+                },
+                {
+                    "fname": "ObjEnemyBossScene_LoadInThread",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Compiles all the enemy scripts in the boss scene object associated with objID and initializes global variables.",
+                    "notes": "As the length of compile time cannot be guaranteed, initialize all global variables besides constants in @Initialize."
+                },
+                {
+                    "fname": "ObjEnemyBossScene_GetInfo",
+                    "args": ["objID : number (Object ID)", "infotype : const"],
+                    "returnv": "results of query : varies",
+                    "description": "Returns data on the boss scene object associated with objID based on the query.",
+                    "notes": "Possible infotypes are:<br>INFO_IS_SPELL - Returns true if a spell card is active<br>INFO_IS_LAST_SPELL - Returns true if the Last Spell is active<br>INFO_IS_DURABLE_SPELL - Returns true in the case of a survival spell<br>INFO_IS_LAST_STEP - Returns true when the last spell is active<br>INFO_TIMER - Returns the timer value in seconds<br>INFO_TIMERF - Returns the timer value in frames (returns -1 if unlimited)<br>INFO_ORGTIMERF - Returns the original timer value in frames (returns -1 if unlimited)<br>INFO_SPELL_SCORE - Returns the score of the spell card<br>INFO_REMAIN_STEP_COUNT - Returns the number of steps remaining in the active boss scene<br>INFO_ACTIVE_STEP_LIFE_COUNT - Returns the amount of attacks of the enemy for the active step<br>INFO_ACTIVE_STEP_TOTAL_MAX_LIFE - Returns the initial life of the enemy for the active step<br>INFO_ACTIVE_STEP_TOTAL_LIFE - Returns the total remaining life for the active step<br>INFO_PLAYER_SHOOTDOWN_COUNT - Returns the amount of times the player died during the spell<br>INFO_PLAYER_SPELL_COUNT - Returns the amount of times the player bombed during the spell<br>INFO_ACTIVE_STEP_LIFE_RATE_LIST - Returns an array containing the proportion (0-1) of each attacks's amount of life in the active step<br>INFO_CURRENT_LIFE - Returns the current life of the enemy in the current attack<br>INFO_CURRENT_LIFE_MAX - Returns the maximum life of the enemy in the current attack<br>With regards to the step info types, step refers to the individual sections specified in the ObjEnemyBossScene_Add function's second argument.<br>For each script (referred to as an attack here) you load into the step, you increase the step life count of that specific step by 1."
+                },
+                {
+                    "fname": "ObjEnemyBossScene_SetSpellTimer",
+                    "args": ["objID : number (Object ID)", "timer : number"],
+                    "returnv": "",
+                    "description": "Sets the spell timer in the boss scene object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjEnemyBossScene_StartSpell",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Starts a boss spell card in the boss scene object associated with objID.",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "catname": "Shot Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjShot_Create",
+                    "args": ["objtype : const"],
+                    "returnv": "object ID of new shot object : number (Object ID)",
+                    "description": "Creates a shot object and returns its ID.",
+                    "notes": "Shot Object types are: OBJ_SHOT, OBJ_LOOSE_LASER, OBJ_STRAIGHT_LASER, and OBJ_CURVE_LASER.<br>In order to draw and fire the shot object and have it listed as an existing bullet, you have to register it using ObjShot_Regist."
+                },
+                {
+                    "fname": "ObjShot_Regist",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Activates the shot object associated with objID, firing it.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShot_SetAutoDelete",
+                    "args": ["objID : number (Object ID)", "autodelete : bool"],
+                    "returnv": "",
+                    "description": "Enables or disables auto-deletion of the shot object associated with objID when outside of the screen boundaries.",
+                    "notes": "Defaults to true."
+                },
+                {
+                    "fname": "ObjShot_FadeDelete",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Fades out the shot object associated with objID and deletes it.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShot_SetDeleteFrame",
+                    "args": ["objID : number (Object ID)", "frames : number (int)"],
+                    "returnv": "",
+                    "description": "Deletes the shot object associated with objID after the specified number of frames.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShot_SetDelay",
+                    "args": ["objID : number (Object ID)", "frames : number (int)"],
+                    "returnv": "",
+                    "description": "Delays the shot object associated with objID, firing it after the specified number of frames.",
+                    "notes": "Bullets will glow to announce delay; lasers will be shown very thin."
+                },
+                {
+                    "fname": "ObjShot_SetSpellResist",
+                    "args": ["objID : number (Object ID)", "spellresist : bool"],
+                    "returnv": "",
+                    "description": "When set to true, the shot object associated with objID will not be deleted by the player's bomb.",
+                    "notes": "Defaults to false"
+                },
+                {
+                    "fname": "ObjShot_SetGraphic",
+                    "args": ["objID : number (Object ID)", "graphic : number (int)"],
+                    "returnv": "",
+                    "description": "Gives the shot object associated with objID the specified graphic.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShot_SetSourceBlendType",
+                    "args": ["objID : number (Object ID)", "blendtype : const"],
+                    "returnv": "",
+                    "description": "Gives the shot object associated with objID the specified graphic.",
+                    "notes": "Available blend types are:<br>BLEND_ALPHA, BLEND_ADD_RGB, BLEND_MULTIPLY, BLEND_SUBTRACT, BLEND_ADD_ARGB, BLEND_INV_DESTRGB, and BLEND_SHADOW (undocumented)."
+                },
+                {
+                    "fname": "ObjShot_SetDamage",
+                    "args": ["objID : number (Object ID)", "damage : number"],
+                    "returnv": "",
+                    "description": "Sets the damage of the shot object associated with objID.",
+                    "notes": "Player shots only."
+                },
+                {
+                    "fname": "ObjShot_SetPenetration",
+                    "args": ["objID : number (Object ID)", "penetration : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the penetration of the shot object associated with objID.",
+                    "notes": "The shot object can hit enemies as many times as the penetration value before being deleted.<br>Player shots only."
+                },
+                {
+                    "fname": "ObjShot_SetEraseShot",
+                    "args": ["objID : number (Object ID)", "erase : bool"],
+                    "returnv": "",
+                    "description": "Enables/disables the ability to erase enemy shots when the shot object associated with objID comes into contact with it.",
+                    "notes": "Each time a shot is erased, the penetration of the shot object will go down by 1.<br>Player shots only."
+                },
+                {
+                    "fname": "ObjShot_SetSpellFactor",
+                    "args": ["objID : number (Object ID)", "enable : bool"],
+                    "returnv": "",
+                    "description": "Sets whether or not to use the spell damage factor for the shot object associated with objID.",
+                    "notes": "Player shots only."
+                },
+                {
+                    "fname": "ObjShot_ToItem",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Turns the shot object associated with objID into an item.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShot_AddShotA1",
+                    "args": ["sourceID : number (Object ID)", "targetID : number (Object ID)", "addframe : number (int)"],
+                    "returnv": "",
+                    "description": "At the specified frame, spawns the target shot object at the source shot object's position.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShot_AddShotA2",
+                    "args": ["sourceID : number (Object ID)", "targetID : number (Object ID)", "addframe : number (int)", "distance : number", "angle : number (degrees)"],
+                    "returnv": "",
+                    "description": "At the specified frame, spawns the target shot object at the specified distance and angle from the source shot object's position.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShot_SetIntersectionCircleA1",
+                    "args": ["objID : number (Object ID)", "radius : number"],
+                    "returnv": "",
+                    "description": "Creates a hitbox of specified radius for collision detection of the shot object associated with objID.",
+                    "notes": "In order to maintain the hitbox, it must be set every frame.<br>There can be multiple hitboxes set for one shot object."
+                },
+                {
+                    "fname": "ObjShot_SetIntersectionCircleA2",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number", "radius : number"],
+                    "returnv": "",
+                    "description": "Creates a hitbox of specified radius for collision detection of the shot object associated with objID at the specified position on the screen.",
+                    "notes": "In order to maintain the hitbox, it must be set every frame.<br>There can be multiple hitboxes set for one shot object."
+                },
+                {
+                    "fname": "ObjShot_SetIntersectionLine",
+                    "args": ["objID : number (Object ID)", "startxcoord : number", "startycoord : number", "endxcoord : number", "endycoord : number", "width : number"],
+                    "returnv": "",
+                    "description": "Creates a line segment hitbox between the specified coordinates for collision detection of the shot object associated with objID.",
+                    "notes": "In order to maintain the hitbox, it must be set every frame.<br>There can be multiple hitboxes set for one shot object."
+                },
+                {
+                    "fname": "ObjShot_SetIntersectionEnable",
+                    "args": ["objID : number (Object ID)", "enable : bool"],
+                    "returnv": "",
+                    "description": "Sets whether collision detection of the shot object associated with objID will be checked.",
+                    "notes": "If set to false, the shot object will have no collision detection.<br>Defaults to true."
+                },
+                {
+                    "fname": "ObjShot_SetItemChange",
+                    "args": ["objID : number (Object ID)", "enable : bool"],
+                    "returnv": "",
+                    "description": "Sets whether the shot object associated with objID will turn into an item when deleted.",
+                    "notes": "If set to false, the shot object will not turn into an item.<br>Defaults to true."
+                },
+                {
+                    "fname": "ObjShot_IsSpellResist",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "true if shot object associated with objID is spell resistant; false otherwise : bool",
+                    "description": "Returns whether the shot object associated with objID can be deleted by a player bomb.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjShot_GetImageID",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "graphic ID of shot object associated with objID : bool",
+                    "description": "Returns the graphic ID of the shot object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjLaser_SetLength",
+                    "args": ["objID : number (Object ID)", "length : number"],
+                    "returnv": "",
+                    "description": "Sets the length of the laser object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjLaser_SetRenderWidth",
+                    "args": ["objID : number (Object ID)", "width : number"],
+                    "returnv": "",
+                    "description": "Sets the render width of the laser object associated with objID.",
+                    "notes": "This value is different from the intersection width."
+                },
+                {
+                    "fname": "ObjLaser_SetIntersectionWidth",
+                    "args": ["objID : number (Object ID)", "width : number"],
+                    "returnv": "",
+                    "description": "Sets the intersection (collision) width of the laser object associated with objID.",
+                    "notes": "This value is different from the render width.<br>This can be set to be larger than the laser object's render width."
+                },
+                {
+                    "fname": "ObjLaser_SetGrazeInvalidFrame",
+                    "args": ["objID : number (Object ID)", "ginvframe : number (int)"],
+                    "returnv": "",
+                    "description": "Specify the number of frames after a graze where graze is not counted for the laser object associated with objID.",
+                    "notes": "If you specify 0, the laser object can be grazed only once.<br>The default value is 20 frames (3 graze/second)."
+                },
+                {
+                    "fname": "ObjLaser_SetInvalidLength",
+                    "args": ["objID : number (Object ID)", "ratiobase : number", "ratiotip : number"],
+                    "returnv": "",
+                    "description": "Sets the portion of the laser object associated with objID where there is no collision, in relation to the base and the tip of the laser.",
+                    "notes": "By default, the values are 10 (10%)."
+                },
+                {
+                    "fname": "ObjLaser_GetLength",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "length of laser object associated with objID : number",
+                    "description": "Returns the length of the laser object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjStLaser_SetAngle",
+                    "args": ["objID : number (Object ID)", "angle : number (degrees)"],
+                    "returnv": "",
+                    "description": "Sets the angle at which the straight laser object associated with objID will point.",
+                    "notes": "This value is different from the movement angle."
+                },
+                {
+                    "fname": "ObjStLaser_GetAngle",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "angle of straight laser object associated with objID : number",
+                    "description": "Returns the angle of the straight laser object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjStLaser_SetSource",
+                    "args": ["objID : number (Object ID)", "enable : bool"],
+                    "returnv": "",
+                    "description": "Sets whether the light source at the base of the straight laser object associated with objID is drawn.",
+                    "notes": "Defaults to true."
+                },
+                {
+                    "fname": "ObjCrLaser_SetTipDecrement",
+                    "args": ["objID : number (Object ID)", "reductionrate : number"],
+                    "returnv": "",
+                    "description": "Sets the transparency reduction rate at the tip of the curve laser object associated with objID.",
+                    "notes": "Default is 1.0 (tip of laser is invisible)."
+                }
+            ]
         }
     ]
 };
