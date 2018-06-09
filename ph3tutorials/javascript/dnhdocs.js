@@ -62,7 +62,17 @@ function retrieveFxn(fxnname) {
         }
     }
 
-    //Script
+    //System
+    cats = dnhph3docs_system.categories;
+    for (i = 0; i < cats.length; i += 1) {
+        var fs = cats[i].fxns;
+        var j;
+        for (j = 0; j < fs.length; j += 1) {
+            if (fs[j].fname === fxnname) {
+                return fs[j];
+            }
+        }
+    }
 
     return {};
 }
@@ -121,6 +131,22 @@ function loadDocsOBJ() {
     document.getElementById("item_object_fxns").innerHTML = loadDocsByCategory("Item Object Functions", dnhph3docs_object);
     document.getElementById("player_object_fxns").innerHTML = loadDocsByCategory("Player Object Functions", dnhph3docs_object);
     document.getElementById("collision_object_fxns").innerHTML = loadDocsByCategory("Collision Object Functions", dnhph3docs_object);
+
+    //If the user wanted to access a specific function, scroll them down.
+    var destid = location.hash.substring(1);
+    if (destid != null && destid != undefined && destid != "") {
+        document.getElementById(destid).scrollIntoView();
+    }
+}
+
+//Loads documentation onto docs_sys.html
+function loadDocsSYS() {
+    //Load each category one by one
+    document.getElementById("player_main_fxns").innerHTML = loadDocsByCategory("Player Main Functions", dnhph3docs_system);
+    document.getElementById("player_spell_fxns").innerHTML = loadDocsByCategory("Player Spell Functions", dnhph3docs_system);
+    document.getElementById("private_system_fxns").innerHTML = loadDocsByCategory("Private System Functions", dnhph3docs_system);
+    document.getElementById("custom_script_fxns").innerHTML = loadDocsByCategory("Custom Script Functions", dnhph3docs_system);
+    document.getElementById("package_fxns").innerHTML = loadDocsByCategory("Package Functions", dnhph3docs_system);
 
     //If the user wanted to access a specific function, scroll them down.
     var destid = location.hash.substring(1);
