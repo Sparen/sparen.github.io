@@ -97,11 +97,46 @@ var dnhph3docs_system = {
         {
             "catname": "Private System Functions",
             "fxns": [
+                {
+                    "fname": "SetPauseScriptPath",
+                    "args": ["scriptpath : string (path)"],
+                    "returnv": "",
+                    "description": "Defines a script to be executed when the game is paused.",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetEndSceneScriptPath",
+                    "args": ["scriptpath : string (path)"],
+                    "returnv": "",
+                    "description": "Defines a script to be executed when the game (Single/Plural/Stage) finishes.",
+                    "notes": ""
+                },
+                {
+                    "fname": "SetReplaySaveSceneScriptPath",
+                    "args": ["scriptpath : string (path)"],
+                    "returnv": "",
+                    "description": "Defines a script to be executed when the player chooses to save a replay of the game.",
+                    "notes": ""
+                },
+                {
+                    "fname": "GetTransitionRenderTargetName",
+                    "args": [],
+                    "returnv": "transition render target : string (path)",
+                    "description": "Gets the name of the render target from the frame before a menu script was executed.",
+                    "notes": "Specifically to be used by menu scripts such as the pause script.<br>This can be used to create a texture of the previous frame just before the game is paused.<br>This allows for effects to be applied such as fading to a blur.<br>Example: <code>let target = GetTransitionRenderTargetName(); ObjPrim_SetTexture(obj, target);</code>"
+                }
             ]
         },
         {
             "catname": "Custom Script Functions",
             "fxns": [
+                {
+                    "fname": "SetShotDeleteEventEnable",
+                    "args": ["eventtype : const", "register : bool"],
+                    "returnv": "",
+                    "description": "Sets whether the bullet deletion event is allowed to occur.",
+                    "notes": "Event types are:<br>EV_DELETE_SHOT_IMMEDIATE (event will delete the shot immediately)<br>EV_DELETE_SHOT_FADE (event will fade out the shot)<br>Default is false for both event types."
+                }
             ]
         },
         {
