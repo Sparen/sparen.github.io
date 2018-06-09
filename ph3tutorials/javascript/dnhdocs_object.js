@@ -1575,6 +1575,98 @@ var dnhph3docs_object = {
                     "notes": "Default is 1.0 (tip of laser is invisible)."
                 }
             ]
+        },
+        {
+            "catname": "Item Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjItem_SetItemID",
+                    "args": ["objID : number (Object ID)", "itemID : number (int)"],
+                    "returnv": "",
+                    "description": "Sets the ID of the item object associated with objID, as defined in the item definition script.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjItem_SetRenderScoreEnable",
+                    "args": ["objID : number (Object ID)", "enable : bool"],
+                    "returnv": "",
+                    "description": "Sets whether a score indicator will be displayed when the item object associated with objID is collected.",
+                    "notes": "This is the score given as argument to the CreateItem() functions."
+                },
+                {
+                    "fname": "ObjItem_SetAutoCollectEnable",
+                    "args": ["objID : number (Object ID)", "enable : bool"],
+                    "returnv": "",
+                    "description": "Sets whether the item object associated with objID will be pulled towards the player when the player moves past the point of auto-collection.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjItem_SetDefinedMovePatternA1",
+                    "args": ["objID : number (Object ID)", "movetype : const"],
+                    "returnv": "",
+                    "description": "Sets the movement type of the item object associated with objID.",
+                    "notes": "Defaults to flying upwards and then coming down.<br>Movement types are ITEM_MOVE_DOWN (immediately drops down) and ITEM_MOVE_TOPLAYER (automatically flies towards the player)."
+                },
+                {
+                    "fname": "ObjItem_GetInfo",
+                    "args": ["objID : number (Object ID)", "infotype : const"],
+                    "returnv": "results of query : number",
+                    "description": "Returns data on the item object associated with objID based on the query.",
+                    "notes": "Only available infotype is INFO_ITEM_SCORE (Returns the score value of the item object"
+                }
+            ]
+        },
+        {
+            "catname": "Player Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjPlayer_AddIntersectionCircleA1",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number", "hitboxradius : number", "grazeradius : number"],
+                    "returnv": "",
+                    "description": "Creates a hitbox of specified radius for collision detection of the player object associated with objID.",
+                    "notes": "Coordinates are relative to player object associated with objID.<br>The graze area extends the specified radius around the hitbox (the true graze radius is the sum of the two).<br>The hitbox will remain valid for every frame once created."
+                },
+                {
+                    "fname": "ObjPlayer_AddIntersectionCircleA2",
+                    "args": ["objID : number (Object ID)", "xcoord : number", "ycoord : number", "grazeradius : number"],
+                    "returnv": "",
+                    "description": "Creates a grazebox of specified radius for the player object associated with objID.",
+                    "notes": "Coordinates are relative to player object associated with objID.<br>The grazebox will remain valid for every frame once created."
+                },
+                {
+                    "fname": "ObjPlayer_ClearIntersection",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "",
+                    "description": "Deletes all hitboxes of the player object associated with objID.",
+                    "notes": ""
+                }
+            ]
+        },
+        {
+            "catname": "Collision Object Functions",
+            "fxns": [
+                {
+                    "fname": "ObjCol_IsIntersected",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "true if object associated with objID is currently intersecting with another object; false otherwise : bool",
+                    "description": "Returns true if the object associated with objID is currently intersecting with another object.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjCol_GetListOfIntersectedEnemyID",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "array of all enemy object IDs that the object associated with objID is currently intersecting : number (Object ID) []",
+                    "description": "Returns an array of all enemy object IDs that the object associated with objID is currently intersecting with.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjCol_GetIntersectedCount",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "number of times the object associated with objID intersected with other objects during previous frame : number (int)",
+                    "description": "Returns the number of times the object associated with objID intersected with other objects during the previous frame.",
+                    "notes": "This can be used to determine how many player shots have collided with an enemy."
+                }
+            ]
         }
     ]
 };

@@ -118,11 +118,9 @@ function loadDocsOBJ() {
     document.getElementById("enemy_object_fxns").innerHTML = loadDocsByCategory("Enemy Object Functions", dnhph3docs_object);
     document.getElementById("bossscene_object_fxns").innerHTML = loadDocsByCategory("Boss Scene Object Functions", dnhph3docs_object);
     document.getElementById("shot_object_fxns").innerHTML = loadDocsByCategory("Shot Object Functions", dnhph3docs_object);
-    /*
     document.getElementById("item_object_fxns").innerHTML = loadDocsByCategory("Item Object Functions", dnhph3docs_object);
     document.getElementById("player_object_fxns").innerHTML = loadDocsByCategory("Player Object Functions", dnhph3docs_object);
     document.getElementById("collision_object_fxns").innerHTML = loadDocsByCategory("Collision Object Functions", dnhph3docs_object);
-    */
 
     //If the user wanted to access a specific function, scroll them down.
     var destid = location.hash.substring(1);
