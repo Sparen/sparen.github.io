@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('May 26, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupENG('Jun 09, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
@@ -257,18 +257,18 @@ array = "CIRNO STRIKES BACK";</code></pre>
 		<p>First we will discuss adding things to arrays. Using the concatenation operator ~, you can do the following:</p>
 	        <pre class="prettyprint"><code>let array = [3, 6]; //Define an array of integers
 array = array ~ [4]; //array is now [3, 6, 4]</code></pre>
-		<p>Please note that you must include the item you are going to add as an array - in essence, you are combining two arrays. Also, you can use <code>concatenate(array1, array2)</code> in order to concatenate two arrays, although the method with the ~ is much simpler. Here is another example, this time showing how to include the value of a variable in an array:</p>
+		<p>Please note that you must include the item you are going to add as an array - in essence, you are combining two arrays. Also, you can use <span class="tooltip" onmouseover="getFxnDocs('concatenate', 'f_concatenate_01');"><code>concatenate(array1, array2)</code><span class="tooltiptext" id="f_concatenate_01"></span></span> in order to concatenate two arrays, although the method with the ~ is much simpler. Here is another example, this time showing how to include the value of a variable in an array:</p>
 	        <pre class="prettyprint"><code>let array = []; //Declare an empty array
 let string = "Test";
 array = array ~ [string]; //array is now [string], where the value of string is "Test"</code></pre>
-		<p>Next we will discuss indexing. You can obtain the length of an array using <code>length(nameofarray);</code>. First thing's first though - the first item in an array is indexed 0, not 1. You index an array as follows:</p>
+		<p>Next we will discuss indexing. You can obtain the length of an array using <span class="tooltip" onmouseover="getFxnDocs('length', 'f_length_01');"><code>length(nameofarray)</code><span class="tooltiptext" id="f_length_01"></span></span>. First thing's first though - the first item in an array is indexed 0, not 1. You index an array as follows:</p>
 	        <pre class="prettyprint"><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of length 4 containing the names of Danmakufu Scripters
 let lengthdnh = length(dnh); //4
 let scripter = dnh[2]; //Find the item with index 2 - "Trickysticks"
 let scripter2 = dnh[2..4]; //Obtain an array with the 2 through 3rd indices of dnh - ["Trickysticks", "AJS"]
 let scripter3 = dnh[lengthdnh]; //Brings up an error because the fourth index does not exist
 </code></pre>
-		<p>Once you get over the fact that it starts from 0, it's not too bad. Also, note the two dots for obtaining a subarray of the initial array. The new array includes the index before the two dots but not the one after. We will be seeing this later with ascent loops, and the function <code>slice()</code> (See the Danmakufu Wiki) also performs the same function. Now, consider the following array:</p>
+		<p>Once you get over the fact that it starts from 0, it's not too bad. Also, note the two dots for obtaining a subarray of the initial array. The new array includes the index before the two dots but not the one after. We will be seeing this later with ascent loops, and the function <span class="tooltip" onmouseover="getFxnDocs('slice', 'f_slice_01');"><code>slice()</code><span class="tooltiptext" id="f_slice_01"></span></span> also performs the same function. Now, consider the following array:</p>
 	        <pre class="prettyprint"><code>let array = [3, 6, 9, 12, 9, 9, 12];</code></pre>
 		<p>We are going to perform operations on this array above!</p>
 	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 9, 9, 12];
@@ -279,7 +279,7 @@ array[4]--;</code></pre>
 		<p>There are, of course, other operations (many significantly more complicated), but for now, we will close with removal of indices. It is actually very simple.</p>
 	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 8, 9, 12];
 array = erase(array, 5); //Erase fifth index of array 'array'</code></pre>
-		<p>After executing the function erase on the array, we are left with the following array</p>
+		<p>After executing the function <span class="tooltip" onmouseover="getFxnDocs('erase', 'f_erase_01');"><code>erase()</code><span class="tooltiptext" id="f_erase_01"></span></span> on the array, we are left with the following array</p>
 	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 8, 12];</code></pre>
 		<p>As a final note, since strings are arrays of characters, you can also index strings the same way you index arrays. CK Crash's tutorial (see Part 1 for link) also includes the boolean trick, but we will discuss booleans in the next lesson. There are also 2D and 3D arrays (etc), but we will not deal with those now - there is limited use for them until you are trying to organize CommonData or spawn bullets in a shape, etc.</p>
 	      <h2 class="ph3tutorialheader" id="quiz3">Quiz: Strings and Arrays</h2>

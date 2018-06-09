@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupESP('Jan 26, 2016')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupESP('Jun 09, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
@@ -246,18 +246,18 @@ array = "CIRNO ATACA DE NUEVO";</code></pre>
 		<p>Primero discutiremos cómo agregarle cosas a los arrays. Usando la concatenación ~, se puede hacer lo siguiente:</p>
 	        <pre class="prettyprint"><code>let array = [3, 6]; //Defina un array conteniendo los números 3 y 6.
 array = array ~ [4]; //array ahora es [3, 6, 4].</code></pre>
-		<p>Ten en cuenta que debes incluir el ítem que quieres agregar, escrito como array – en esencia, estás combinando dos arrays. También puedes usar concatenate(array1, array2) para concatenar dos arrays, aunque el método con el ~ es mucho más simple. Otro ejemplo, esta vez mostrando cómo incluir el valor de una variable en un array:</p>
+		<p>Ten en cuenta que debes incluir el ítem que quieres agregar, escrito como array – en esencia, estás combinando dos arrays. También puedes usar <span class="tooltip" onmouseover="getFxnDocs('concatenate', 'f_concatenate_01');"><code>concatenate(array1, array2)</code><span class="tooltiptext" id="f_concatenate_01"></span></span> para concatenar dos arrays, aunque el método con el ~ es mucho más simple. Otro ejemplo, esta vez mostrando cómo incluir el valor de una variable en un array:</p>
 	        <pre class="prettyprint"><code>let array = []; //Declara un array vacío.
 let string = "Test";
 array = array ~ [string]; //array ahora es [string], cuyo valor es "Test".</code></pre>
-		<p>Ahora vamos a discutir indexados. Puedes obtener el largo de un array usando length(nombredelarray);. Pero primero lo primero – el primer elemento de un array está indexado como 0, no 1. </p>
+		<p>Ahora vamos a discutir indexados. Puedes obtener el largo de un array usando <span class="tooltip" onmouseover="getFxnDocs('length', 'f_length_01');"><code>length(nombredelarray)</code><span class="tooltiptext" id="f_length_01"></span></span>. Pero primero lo primero – el primer elemento de un array está indexado como 0, no 1. </p>
 	        <pre class="prettyprint"><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declara un array de largo 4 y contiene los nombres de scripters de Danmakufu.
 let lengthdnh = length(dnh); //4
 let scripter = dnh[2]; //Busca el elemento con índice 2 – "Trickysticks".
 let scripter2 = dnh[2..4]; //Obtiene un array con los elementos en el índice desde el 2 hasta el 3 – ["Trickysticks", "AJS"].
 let scripter3 = dnh[lengthdnh]; //Causa un error porque el cuarto índice no existe.
 </code></pre>
-		<p>Una vez que entiendes que se empieza a contar de 0, no es tan malo. Además, nota los dos puntos para obtener un subarray a partir del array inicial. El nuevo array incluye el elemento del índice indicado a la izquierda de los dos puntos, pero no el de la derecha. Veremos esto con más detalle cuando veamos loops ascendentes. La función slice (ver la wiki de Danmakufu) también hace lo mismo. Ahora consideremos el siguiente array:</p>
+		<p>Una vez que entiendes que se empieza a contar de 0, no es tan malo. Además, nota los dos puntos para obtener un subarray a partir del array inicial. El nuevo array incluye el elemento del índice indicado a la izquierda de los dos puntos, pero no el de la derecha. Veremos esto con más detalle cuando veamos loops ascendentes. La función <span class="tooltip" onmouseover="getFxnDocs('slice', 'f_slice_01');"><code>slice()</code><span class="tooltiptext" id="f_slice_01"></span></span> también hace lo mismo. Ahora consideremos el siguiente array:</p>
 	        <pre class="prettyprint"><code>let array = [3, 6, 9, 12, 9, 9, 12];</code></pre>
 		<p>¡Vamos a operar con el array de arriba!</p>
 	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 9, 9, 12];
@@ -268,7 +268,7 @@ array[4]--;</code></pre>
 		<p>Por supuesto, también hay otras operaciones (algunas significantemente más complicadas), pero por ahora finalizaremos con la eliminación de índices. Es bastante simple.</p>
 	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 8, 9, 12];
 array = erase(array, 5); //Borra el quinto índice del array 'array'.</code></pre>
-		<p>Luego de ejecutar la función erase sobre el array, nos queda el siguiente array:</p>
+		<p>Luego de ejecutar la función <span class="tooltip" onmouseover="getFxnDocs('erase', 'f_erase_01');"><code>erase()</code><span class="tooltiptext" id="f_erase_01"></span></span> sobre el array, nos queda el siguiente array:</p>
 	        <pre class="prettyprint"><code>array = [3, 6, 9, 12, 8, 12];</code></pre>
 		<p>Como nota final, ya que los strings son arrays de caracteres, se pueden indexar strings de la misma forma que indexas arrays. El tutorial de CR Crash (ver el link en la parte 1) incluye el truco booleano, pero discutiremos booleanos en la siguiente lección. También hay arrays 2D y 3D (etc), pero no vamos a lidiar con ellos por ahora – tienen un uso limitado hasta que intentes organizar CommonData y hacer aparecer las balas en cierta forma, etcétera.</p>
 	      <h2 class="ph3tutorialheader" id="quiz3">Examen: Strings y arrays</h2>
