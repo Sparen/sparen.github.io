@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('May 26, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jun 09, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -130,7 +130,7 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
     others{
 	//Do various stuff
     }</code></pre>
-	      <p>The way an alternative-case statement works is as follows: The variable inside alternative() is the variable that is being tested. The first case asks whether <code>x == -3</code>. If true, it will execute the stuff inside the braces for case(-3) and ignore everything else. If x is not -3, it will move on to the next case and so on. Finally, if it has exhausted its options, it will do whatever is in others{} or, if others{} is not present, simply exit the statement and do nothing. Very useful.</p>
+	      <p>The way an alternative-case statement works is as follows: The variable inside <code>alternative()</code> is the variable that is being tested. The first case asks whether <code>x == -3</code>. If true, it will execute the stuff inside the braces for case(-3) and ignore everything else. If x is not -3, it will move on to the next case and so on. Finally, if it has exhausted its options, it will do whatever is in others{} or, if others{} is not present, simply exit the statement and do nothing. Very useful.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: What are Loops and How do I Use Them?</h2>
 	      <p>If you want to repeatedly do the same thing over and over again (and perhaps with slightly different effects), loops are the solution! There are a few types of loops in Danmakufu.</p>
 	      <p>The first type of loop is the generic loop. It is a structure that takes an integer parameter <code>n</code> and will run the code in the following block <code>n</code> times. The parameter must be an integer because it makes no sense to repeat something 3.5 times. For example:</p>
@@ -138,7 +138,7 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
 loop(20){
     x++;
 }</code></pre>
-	      <p>In the above code, we first declare the variable x, which is then assigned the numerical value 5. After this, x++ is called in a loop(20). What the loop does is repeat the code contained within the {} the number of times given in the parenthesis. Therefore, x will equal 25 after this code has been executed. If you had an integer variable y, you could also loop(y), which would loop the code in the following braces y times.</p>
+	      <p>In the above code, we first declare the variable x, which is then assigned the numerical value 5. After this, x++ is called in a <code>loop(20)</code>. What the loop does is repeat the code contained within the {} the number of times given in the parenthesis. Therefore, x will equal 25 after this code has been executed. If you had an integer variable y, you could also <code>loop(y)</code>, which would loop the code in the following braces y times.</p>
 	      <p>Now is a good time to talk about infinite loops. I.E. how to freeze Danmakufu. An infinite loop occurs when a section of code keeps on looping forever, and the only way to stop it is to terminate the program altogether. Later on in this lesson, we will discuss yield; (the best way to make an infinite loop not actually infinite but achieve similar functions until the script terminates), but as a brief note, <code>loop</code> immediately followed by an opening brace { (e.g. <code>loop{blah;}</code>) will trigger an infinite loop. Using infinite loops should be avoided until you have sufficient knowledge of yield;</p>
 	      <p>Next are while loops. Basically, while a certain condition is true (booleans!), the code in the braces after it will be executed, just like an if statement except automatically repeated.</p>
 	        <pre class="prettyprint"><code>let x = 5;
@@ -164,7 +164,7 @@ while(x &gt; 0){
     }
     y += 1;
 }</code></pre>
-	      <p>Finally, we will discuss the above nested while loops. Here we define variables x and y, and while x is greater than 0 (which it is), it runs a new while loop. This while loop runs as long as y is less than 5, which it is. Like before, we will have an infinite loop, as x will continue to decrement but since y is not mutated within the inner while loop, the condition y &lt; 5 will always be true and the loop will never terminate. Note that the <code>y += 1;</code> line is never executed - this is an example of blocking, where because we have a while loop before the statement, the loop must terminate before the statement can execute.</p>
+	      <p>Finally, we will discuss the above nested while loops. Here we define variables x and y, and while x is greater than 0 (which it is), it runs a new while loop. This while loop runs as long as y is less than 5, which it is. Like before, we will have an infinite loop, as x will continue to decrement but since y is not mutated within the inner while loop, the condition <code>y &lt; 5</code> will always be true and the loop will never terminate. Note that the <code>y += 1;</code> line is never executed - this is an example of blocking, where because we have a while loop before the statement, the loop must terminate before the statement can execute.</p>
 	      <p>Now we will discuss the last type of loop in Danmakufu - the for loop. In Danmakufu, the for loop comes in two varieties, ascent and descent. Note to programmers coming from other languages: there is no generic for loop or for-each loop. You must use a while loop or ascent/descent.</p>
 	      <p>For a video tutorial, please consult the following: <a target="_blank" href="https://www.youtube.com/watch?v=I0jBPs90KTg&amp;list=PLJ2F_5rhjlXTwCoPy9-5JSOufqAou908K">Sparen's Danmakufu Tutorials - Using Ascent Loops and More</a>. However, please be aware that this tutorial assumes prior knowledge of bullet spawning functions.</p>
 	      <p>A generic ascent loop is structured as follows:</p>
@@ -377,7 +377,7 @@ Wait(5);
 	      <p><code>alternative ascent break case descent else function if in let local loop others real return sub task times while yield</code></p>
 	      <p>There are also function names built into Danmakufu that are reserved and cannot be overridden (if you try to override these with a function, you will get an error where a function with the same name is already defined. If you name a variable as one of these, it will freeze rather than erroring.</p>
 	      <p><code>add append compare concatenate divide false index length multiply negative not pi power predecessor remainder result slice successor subtract true</code></p>
-	      <p>On that note, please just use the mathematical operator if it is available. <code>add(3, 5);</code> is utterly pointless when <code>3 + 5</code> is significantly easier and less of a pain to write.</p>
+	      <p>On that note, please just use the mathematical operator if it is available. <span class="tooltip" onmouseover="getFxnDocs('add', 'f_add_01');"><code>add(3, 5)</code><span class="tooltiptext" id="f_add_01"></span></span> is utterly pointless when <code>3 + 5</code> is significantly easier and less of a pain to write.</p>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=dKSe8s9FsAc" title="Helepolis's Introduction to Danmakufu Video Tutorial">[ 弾幕風 PH3 Tutorial ] Introduction to Danmakufu</a> (Helepolis)<br>--&gt;Should give an alternative, visual example to the contents of this lesson</p>
 	      <p><a target="_blank" href="https://docs.google.com/document/d/1JZUPpRdaUYzl1zuv-rUeJNq-t9fQH0-TjZzqFYHixAs" title="Danmakufu for Easy Modos by CK Crash">Danmakufu for Easy Modos by CK Crash</a> (CK Crash)<br>--&gt;Since this tutorial was used as a source for mine, I highly suggest that you read it if you haven't already.</p>
