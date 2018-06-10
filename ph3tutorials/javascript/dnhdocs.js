@@ -20,7 +20,9 @@ function getFxnDocs(fxnname, domid) {
             argnames += ", ";
         }
     }
-    var str = "<code style='font-size: 24px'>" + fxn.fname + "(" + argnames + ")</code><hr>";
+    //Unfortunately, font must be fairly small to *fit* in the tooltip since some names can be... long
+    //Same reason why there's a space before (; Forces word wrapping.
+    var str = "<code style='font-size: 18px'>" + fxn.fname + " (" + argnames + ")</code><hr>";
     if (fxn.args.length > 0) {
         str += "<code><strong>Arguments:</strong></code><br>"
         var j;
