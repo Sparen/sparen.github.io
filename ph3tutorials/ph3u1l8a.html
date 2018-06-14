@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('May 1, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jun 14, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -149,7 +149,7 @@ floor(-9.496);    //-10</code></pre>
 	      <p>Each bullet has the same graphic and has the same starting position, but has a different angle and speed. Therefore, we will use rand(0,360) for the angle and rand(3,6) for the speed. For all practical purposes, speeds of 2 and below are slow, 2-4 are moderate, and anything over 4 usually requires a delay laser or for the speed of the bullet to be obvious. In the case of Eternal Meek, the large delay clouds and the occurrence of the spell late in the game help justify the presence of bullets with such high speeds.</p>
 	      <p>Now that we have our arguments prepared, we can fill in our code.</p>
 	      <pre class="prettyprint linenums"><code>task MainTask{
-    ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 60, 60)
+    ObjMove_SetDestAtFrame(objBoss, GetCenterX(), 112, 60)
     wait(120);
     while(ObjEnemy_GetInfo(objBoss, INFO_LIFE) > 0){
 	CreateShotA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), rand(3, 6), rand(0, 360), DS_BALL_S_BLUE, 20);
@@ -157,6 +157,11 @@ floor(-9.496);    //-10</code></pre>
     }
 }</code></pre>
 	      <p>And there we have it - Eternal Meek, the easiest spellcard to replicate in all of Touhou.</p>
+	      <p class="danmakanvasdisc">Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
+	      <canvas id="gamecanvas_1" width="384" height="448" style="border:1px solid #DDDDDD;">
+	      </canvas>
+	      <br>
+	      <button type="button" onclick="createNewGame('gamecanvas_1', 'L8A: Eternal Meek')">Run Danmakanvas Simulation</button>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
 	      <br>            </div>          </div>
@@ -173,6 +178,8 @@ floor(-9.496);    //-10</code></pre>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>
+    <script type="text/javascript" src="javascript/Danmakanvas/GameEngine2.1.js"></script>
+    <script type="text/javascript" src="javascript/Danmakanvas/PluralModule_L8a.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
