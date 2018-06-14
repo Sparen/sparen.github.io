@@ -38,4 +38,4 @@ pre.prettyprint {
   white-space: pre-wrap; /* Break lines */
 }
 
-.prettyprint ol.linenums > li { list-style-type: decimal; background-color: black;}
+.prettyprint ol.linenums > li { list-style-type: decimal; background-color: #111111;}
