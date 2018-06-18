@@ -1981,8 +1981,8 @@ var dnhph3docs_standard = {
                 {
                     "fname": "erase",
                     "args": ["array : free []", "index : number (int)"],
-                    "returnv": "",
-                    "description": "Removes the element at the given index from an array.",
+                    "returnv": "Array with element at index removed",
+                    "description": "Returns a new array with the element at the given index in the provided array removed.",
                     "notes": ""
                 },
                 {
