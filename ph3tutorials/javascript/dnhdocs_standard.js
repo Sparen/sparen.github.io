@@ -733,7 +733,7 @@ var dnhph3docs_standard = {
                     "fname": "ClearInvalidRenderPriority",
                     "args": [],
                     "returnv": "",
-                    "description": "NO_TRANSLATION_FOUND",
+                    "description": "Clear invalid render priorities set with SetInvalidRenderPriorityA1.",
                     "notes": ""
                 },
                 {
@@ -746,16 +746,16 @@ var dnhph3docs_standard = {
                 {
                     "fname": "GetReservedRenderTargetName",
                     "args": ["index : number"],
-                    "returnv": "",
-                    "description": "NO_TRANSLATION_FOUND",
-                    "notes": "Index in range 0-2."
+                    "returnv": "render target texture name : string",
+                    "description": "Returns the name of the render target texture set at the time of Danmakufu startup.",
+                    "notes": "Index in range 0-2.<br>There is always a texture that can be obtained with this function."
                 },
                 {
                     "fname": "CreateRenderTarget",
                     "args": ["targetname : string"],
                     "returnv": "true if successfully created; false otherwise : bool",
-                    "description": "Can create a custom render target outside of the reserved ones.",
-                    "notes": "To use, ObjPrim_SetTexture must have the name of the render target as a string."
+                    "description": "Creates a custom render target outside of the reserved ones.",
+                    "notes": "To use, ObjPrim_SetTexture must have the name of the render target as a string.<br>Textures created with this function can be used for RenderToTextureA1 and other similar functions."
                 },
                 {
                     "fname": "RenderToTextureA1",
@@ -810,29 +810,29 @@ var dnhph3docs_standard = {
                     "fname": "SetShader",
                     "args": ["objshader : number (Object ID)", "rpriority1 : number", "rpriority2 : number"],
                     "returnv": "",
-                    "description": "NO_TRANSLATION_FOUND",
-                    "notes": ""
+                    "description": "Sets the shader object associated with objshader to affect render priorities between rpriority1 and rpriority2.",
+                    "notes": "Render priorities are on a 0-1 scale."
                 },
                 {
                     "fname": "SetShaderI",
                     "args": ["objshader : number (Object ID)", "rpriority1 : number", "rpriority2 : number"],
                     "returnv": "",
-                    "description": "NO_TRANSLATION_FOUND",
-                    "notes": ""
+                    "description": "Sets the shader object associated with objshader to affect render priorities between rpriority1 and rpriority2.",
+                    "notes": "Render priorities are on a 0-100 scale."
                 },
                 {
                     "fname": "ResetShader",
                     "args": ["rpriority1 : number", "rpriority2 : number"],
                     "returnv": "",
-                    "description": "NO_TRANSLATION_FOUND",
-                    "notes": ""
+                    "description": "Sets the shader object associated with objshader to stop affecting render priorities between rpriority1 and rpriority2.",
+                    "notes": "Render priorities are on a 0-1 scale."
                 },
                 {
                     "fname": "ResetShaderI",
                     "args": ["rpriority1 : number", "rpriority2 : number"],
                     "returnv": "",
-                    "description": "NO_TRANSLATION_FOUND",
-                    "notes": ""
+                    "description": "Sets the shader object associated with objshader to stop affecting render priorities between rpriority1 and rpriority2.",
+                    "notes": "Render priorities are on a 0-100 scale."
                 }
             ]
         },
