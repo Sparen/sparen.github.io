@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Function Reference (General Functions)</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Documentation"      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Documentation">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Jun 20, 2018'); loadDocs()">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+        <ul>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
+	  <li><a href="#sub0">Introduction</a></li>
+          <li><a href="./docs.html">Function List</a></li>
+          <li class="dmbnona"><hr><a href="./docs.html">General Functions</a><hr></li>
+	  <li><a href="#sub1">Math Functions</a></li>
+	  <li><a href="#sub2">Text Functions</a></li>
+	  <li><a href="#sub3">Path Functions</a></li>
+	  <li><a href="#sub4">Time Functions</a></li>
+	  <li><a href="#sub5">Debug Functions</a></li>
+	  <li><a href="#sub6">Common Data Fxns</a></li>
+	  <li><a href="#sub7">Audio Functions</a></li>
+	  <li><a href="#sub8">Input Functions</a></li>
+	  <li><a href="#sub9">Render Functions</a></li>
+	  <li><a href="#sub10">3D Camera Functions</a></li>
+	  <li><a href="#sub11">2D Camera Functions</a></li>
+	  <li><a href="#sub12">Script Functions</a></li>
+	  <li><a href="#sub13">System Functions</a></li>
+	  <li><a href="#sub14">Player Functions</a></li>
+	  <li><a href="#sub15">Enemy Functions</a></li>
+	  <li><a href="#sub16">Shot Functions</a></li>
+	  <li><a href="#sub17">Item Functions</a></li>
+	  <li><a href="#sub18">Other Functions</a></li>
+          <li class="dmbnona"><hr><a href="./docs_object.html">Object Functions</a><hr></li>
+	  <li><a href="./docs_object.html#sub1">Object Functions</a></li>
+	  <li><a href="./docs_object.html#sub2">Render Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub3">Primitive Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub4">2D Sprite Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub5">2D Sprite List Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub6">3D Sprite Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub7">Mesh Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub8">Text Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub9">Shader Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub10">Sound Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub11">File Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub12">Text File Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub13">Binary File Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub14">Move Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub15">Enemy Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub16">Boss Scene Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub17">Shot Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub18">Item Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub19">Player Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub20">Collision Obj Fxns</a></li>
+          <li class="dmbnona"><hr><a href="./docs_system.html">Player Script Fxns</a><hr></li>
+	  <li><a href="./docs_system.html#sub1">Player Main Functions</a></li>
+	  <li><a href="./docs_system.html#sub2">Player Spell Functions</a></li>
+          <li class="dmbnona"><hr><a href="./docs_system.html">Private Script Fxns</a><hr></li>
+	  <li><a href="./docs_system.html#sub3">Private System Fxns</a></li>
+	  <li><a href="./docs_system.html#sub4">Custom Script Fxns </a></li>
+	  <li><a href="./docs_system.html#sub5">Package Functions</a></li>
+        </ul>
+      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials - Function Reference (General Functions)</h1>	      <h2 class="ph3tutorialheader" id="sub0">Introduction</h2>
+	      <p>Welcome to my local copy of the Touhou Danmakufu ph3 Function Reference, available in case the Danmakufu Wiki goes down *again*. Here you can access the entirety of the translated Danmakufu function reference, although it has passed through the Sparen filter and therefore may be slightly different from the Wiki.</p>
+	      <p>As a reminder, the OFFICIAL JAPANESE DOCUMENTATION can be found at <a target="_blank" href="http://www.geocities.co.jp/SiliconValley-Oakland/9951/pre/th_dnh_help_v3.html">mkm's website</a>.</p>
+	      <p>In the tutorials, the functions will be available like so: <span class="tooltip" onmouseover="getFxnDocs('add', 'f_add_01');"><code>add()</code><span class="tooltiptext" id="f_add_01"></span></span></p>
+	      <p>Obj Fxns and Player/System/Script functions are on their own respective pages to prevent this page from becoming too long. To access these, refer to the sidebar.</p>
+	      <p>Notes on types:<br>mkm uses types such as 'real' (for real numbers and object IDs), 'char' (for characters and strings), and 'free' (wildcard). In my version of the documentation, I break this down by primary type (number/char/string/bool/free/etc) with a detailed type in parenthesis (float/int/path/Object ID). I also provide types for return values.</p>
+	      <h2 class="ph3tutorialheader" id="sub1">Math Functions</h2>
+	      <div id="math_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub2">Text Functions</h2>
+	      <div id="text_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub3">Path Functions</h2>
+	      <div id="path_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub4">Time Functions</h2>
+	      <div id="time_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub5">Debug Functions</h2>
+	      <div id="debug_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub6">Common Data Functions</h2>
+	      <div id="cdata_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub7">Audio Functions</h2>
+	      <div id="audio_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub8">Input Functions</h2>
+	      <p>Key States:</p>
+	      <pre><code>KEY_FREE: the key is not pressed.
+KEY_PUSH: the key has been pressed.
+KEY_HOLD: the key is being held.
+KEY_PULL: the key has been released.</code></pre>
+	      <p>Virtual Keys (built-in):</p>
+	      <pre><code>VK_LEFT (ID: 0) - Move left
+VK_RIGHT (ID: 1) - Move right
+VK_UP (ID: 2) - Move up
+VK_DOWN (ID: 3) - Move down
+VK_OK (ID: 4) - Confirm
+VK_CANCEL (ID: 5) - Cancel
+VK_SHOT (ID: 6) - Player Shot
+VK_BOMB (ID: 7) - Player Spell/Bomb
+VK_SPELL (ID: 7) (Alias for VK_BOMB)
+VK_SLOWMOVE (ID: 8) - Focus
+VK_USER1 (ID: 9) - User Key 1
+VK_USER2 (ID: 10) - User Key 2
+VK_PAUSE (ID: 11) - Pause</code></pre>
+	      <p>General Keys:</p>
+	      <pre><code>KEY_0 ... KEY_9： 0-9 Keys
+KEY_A ... KEY_Z： A-Z Keys
+KEY_F1 ... KEY_F10： F1-F10 Keys
+KEY_MINUS： -
+KEY_EQUALS： =
+KEY_SLASH： /
+KEY_BACK： Backspace
+KEY_TAB： Tab
+KEY_SPACE： Space
+KEY_LBRACKET： [
+KEY_RBRACKET： ]
+KEY_SEMICOLON： ;
+KEY_APOSTROPHE： '
+KEY_GRAVE： `
+KEY_BACKSLASH： \ Note: Refers to the key on Western keyboards.
+KEY_YEN： \ Note: Refers to the key on Japanese keyboards.
+KEY_AT： @
+KEY_COLON： :
+KEY_UNDERLINE： _
+KEY_CIRCUMFLEX： ^
+KEY_COMMA： ,
+KEY_PERIOD： .
+KEY_INSERT： Insert
+KEY_DELETE： Delete
+KEY_RETURN： Enter
+KEY_LCONTROL： Left Ctrl key
+KEY_RCONTROL： Right Ctrl key
+KEY_LSHIFT： Left Shift
+KEY_RSHIFT： Right Shift
+KEY_LEFT： Left Arrow Key
+KEY_RIGHT： Right Arrow Key
+KEY_UP： Up Arrow Key
+KEY_DOWN： Down Arrow Key
+KEY_NUMPAD0 ... KEY_NUMPAD9： 0-9 on the Number Pad
+KEY_ADD： Number Pad +
+KEY_SUBTRACT： Number Pad -
+KEY_MULTIPLY： Number Pad *
+KEY_DIVIDE： Number Pad /
+KEY_DECIMAL： Number Pad .
+KEY_NUMPADEQUALS： Number Pad =
+KEY_ESCAPE: Escape</code></pre>
+	      <div id="input_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub9">Render Functions</h2>
+	      <div id="render_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub10">3D Camera Functions</h2>
+	      <div id="3dcamera_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub11">2D Camera Functions</h2>
+	      <div id="2dcamera_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub12">Script Functions</h2>
+	      <div id="script_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub13">System Functions</h2>
+	      <div id="system_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub14">Player Functions</h2>
+	      <div id="player_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub15">Enemy Functions</h2>
+	      <div id="enemy_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub16">Shot Functions</h2>
+	      <div id="shot_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub17">Item Functions</h2>
+	      <div id="item_fxns"></div>
+	      <h2 class="ph3tutorialheader" id="sub18">Other Functions</h2>
+	      <div id="other_fxns"></div>            </div>          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?lang=c"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs.js"></script>  </body></html>

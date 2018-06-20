@@ -81,7 +81,7 @@ function retrieveFxn(fxnname) {
 
 /* ---------------- Documentation Page ---------------- */
 
-//Loads documentation onto docs.html
+//Loads documentation onto docs_standard.html
 function loadDocs() {
     //Load each category one by one
     document.getElementById("math_fxns").innerHTML = loadDocsByCategory("Math Functions", dnhph3docs_standard);
@@ -110,7 +110,7 @@ function loadDocs() {
     }
 }
 
-//Loads documentation onto docs_obj.html
+//Loads documentation onto docs_object.html
 function loadDocsOBJ() {
     //Load each category one by one
     document.getElementById("object_fxns").innerHTML = loadDocsByCategory("Object Functions", dnhph3docs_object);
@@ -141,7 +141,7 @@ function loadDocsOBJ() {
     }
 }
 
-//Loads documentation onto docs_sys.html
+//Loads documentation onto docs_system.html
 function loadDocsSYS() {
     //Load each category one by one
     document.getElementById("player_main_fxns").innerHTML = loadDocsByCategory("Player Main Functions", dnhph3docs_system);
@@ -157,6 +157,89 @@ function loadDocsSYS() {
     }
 }
 
+//Loads list of functions with links onto docs.html
+function loadDocsList() {
+    var functionlist = "";
+    var toclist = ""; //internal toc
+    //For every category, link category name with divID, and all the functions present (with links)
+    var temp = ""
+    temp = loadListByCategory("Math Functions", dnhph3docs_standard, "docs_standard.html", "sub1"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Text Functions", dnhph3docs_standard, "docs_standard.html", "sub2"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Path Functions", dnhph3docs_standard, "docs_standard.html", "sub3"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Time Functions", dnhph3docs_standard, "docs_standard.html", "sub4"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Debug Functions", dnhph3docs_standard, "docs_standard.html", "sub5"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Common Data Functions", dnhph3docs_standard, "docs_standard.html", "sub6"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Audio Functions", dnhph3docs_standard, "docs_standard.html", "sub7"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Input Functions", dnhph3docs_standard, "docs_standard.html", "sub8"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Render Functions", dnhph3docs_standard, "docs_standard.html", "sub9"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("3D Camera Functions", dnhph3docs_standard, "docs_standard.html", "sub10"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("2D Camera Functions", dnhph3docs_standard, "docs_standard.html", "sub11"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Script Functions", dnhph3docs_standard, "docs_standard.html", "sub12"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("System Functions", dnhph3docs_standard, "docs_standard.html", "sub13"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Player Functions", dnhph3docs_standard, "docs_standard.html", "sub14"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Enemy Functions", dnhph3docs_standard, "docs_standard.html", "sub15"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Shot Functions", dnhph3docs_standard, "docs_standard.html", "sub16"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Item Functions", dnhph3docs_standard, "docs_standard.html", "sub17"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Other Functions", dnhph3docs_standard, "docs_standard.html", "sub18"); functionlist += temp[0]; toclist += temp[1];
+
+    temp = loadListByCategory("Object Functions", dnhph3docs_object, "docs_object.html", "sub1"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Render Object Functions", dnhph3docs_object, "docs_object.html", "sub2"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Primitive Object Functions", dnhph3docs_object, "docs_object.html", "sub3"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("2D Sprite Object Functions", dnhph3docs_object, "docs_object.html", "sub4"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("2D Sprite List Object Functions", dnhph3docs_object, "docs_object.html", "sub5"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("3D Sprite Object Functions", dnhph3docs_object, "docs_object.html", "sub6"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Mesh Object Functions", dnhph3docs_object, "docs_object.html", "sub7"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Text Object Functions", dnhph3docs_object, "docs_object.html", "sub8"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Shader Object Functions", dnhph3docs_object, "docs_object.html", "sub9"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Sound Object Functions", dnhph3docs_object, "docs_object.html", "sub10"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("File Object Functions", dnhph3docs_object, "docs_object.html", "sub11"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Text File Object Functions", dnhph3docs_object, "docs_object.html", "sub12"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Binary File Object Functions", dnhph3docs_object, "docs_object.html", "sub13"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Move Object Functions", dnhph3docs_object, "docs_object.html", "sub14"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Enemy Object Functions", dnhph3docs_object, "docs_object.html", "sub15"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Boss Scene Object Functions", dnhph3docs_object, "docs_object.html", "sub16"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Shot Object Functions", dnhph3docs_object, "docs_object.html", "sub17"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Item Object Functions", dnhph3docs_object, "docs_object.html", "sub18"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Player Object Functions", dnhph3docs_object, "docs_object.html", "sub19"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Collision Object Functions", dnhph3docs_object, "docs_object.html", "sub20"); functionlist += temp[0]; toclist += temp[1];
+
+    temp = loadListByCategory("Player Main Functions", dnhph3docs_system, "docs_system.html", "sub1"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Player Spell Functions", dnhph3docs_system, "docs_system.html", "sub2"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Private System Functions", dnhph3docs_system, "docs_system.html", "sub3"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Custom Script Functions", dnhph3docs_system, "docs_system.html", "sub4"); functionlist += temp[0]; toclist += temp[1];
+    temp = loadListByCategory("Package Functions", dnhph3docs_system, "docs_system.html", "sub5"); functionlist += temp[0]; toclist += temp[1];
+
+    document.getElementById("fxn_list").innerHTML = toclist + functionlist;
+}
+
+//Load links to documentation into a string for a specific category
+function loadListByCategory(catnameparam, maindocobj, file, subid) {
+    var returnstring = "";
+    var cats = maindocobj.categories;
+    var catobj; //object referring to the specific category
+    var i;
+    for (i = 0; i < cats.length; i += 1) {
+        if (cats[i].catname === catnameparam) {catobj = cats[i]; break;}
+    }
+
+    if (catobj === null || catobj === undefined) {
+        return "Error: Category Not Found";
+    }
+    //Output
+    var fs = catobj.fxns;
+
+    //First, create the header
+    var categoryid = subid + catnameparam.replace(/ /g,'');
+    returnstring += '<h3 class="ph3tutorialheader" id="' + categoryid + '"><a href="./' + file + '#' + subid + '">' + catnameparam + '</a></h3>';
+
+    //Now, loop through functions
+    for (j = 0; j < fs.length; j += 1) {
+        returnstring += "<div id='fxn_" + fs[j].fname + "'><a href='./" + file + "#fxn_" + fs[j].fname + "'><code>" + fs[j].fname + "</code></a></div>";
+    }
+    return [returnstring, "<div><a href='#" + categoryid + "'><code>" + catnameparam + "</code></a></div>"];
+}
+
+//Load documentation into a string for a specific category
 function loadDocsByCategory (catnameparam, maindocobj) {
     var returnstring = "";
 
