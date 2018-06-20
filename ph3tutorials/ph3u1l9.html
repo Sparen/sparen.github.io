@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 18, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jun 20, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -56,6 +56,7 @@
 	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>If you haven't realized by now, this lesson is about non-curvy lasers, which are reserved for the next lesson. Here I will be discussing both loose lasers and straight lasers, as well as delay lasers. Later on, I will also show one way to implement Non-Directional Lasers as well as how to rotate straight lasers. Finally, passing counter IDs with an ascent loop will be covered, and there will be an example of trigonometry usage, although that will be covered in more detail in <a href="./ph3u1l11.html">Lesson 11</a>.</p>
 	      <p>Overall, this lesson will end up covering linear hitboxes and render width vs. hitbox width, among other things, and should provide adequate information for using lasers in Touhou Danmakufu ph3.</p>
+	      <p style="color: #FF6666"><strong>As a precautionary measure, recall that <code>length</code> is a function in Danmakufu and should NEVER under any circumstances be used as a variable name.</strong> If you choose to use <code>length</code> as a variable name, you will be unable to use the <span class="tooltip" onmouseover="getFxnDocs('length', 'f_length_01');"><code> length()</code><span class="tooltiptext" id="f_length_01"></span></span> function in the scope (block) in which the local variable is defined.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Linear Hitboxes?</h2>
 	      <p>Up to now, all the bullets we have discussed have had radial hitboxes - the hitbox of the bullet is calculated using the center of the bullet and a radius from that center. If the player's hitbox happens to overlap with the bullet's hitbox (or boss's hitbox, which is also radial/circular), then the player enters a state where there is the option of deathbombing (depending on the player) before dying.</p>
 	      <p>Unlike normal shots, lasers (of the loose and straight variety) use linear hitboxes. In these cases, there is a width to the hitbox, which is calculated from the center axis of the laser. The overall shape of the hitbox is rectangular.</p>
