@@ -222,7 +222,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   display:inline-block;
   width: 142px;
   height: 24px;
-  font-weight: bold;
+  /*font-weight: bold;*/
   background-color: #003329;
   text-align: left;
   padding-left: 4px;
