@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Oct 18, 2015')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jun 20, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -63,10 +63,10 @@
 	      <p>Angular velocity is the change in angle per unit time. For example, a bullet with angular velocity 5 would turn 120 degrees in 24 frames, and would make a complete rotation back to its starting point in 72 frames. Angular velocity has a number of uses, of which the most common are temporary curving of bullets and curved lasers (which are the highlight of this lesson but not the most important part).</p>
 	      <p>You can use Danmakufu's built-in Angular Velocity for shot graphics via shotsheets (as stated in Lesson 8) and on move objects. The former only rotates the graphic while the latter changes the path a moving object takes. We will only focus on the latter in this lesson.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How Do I Manipulate Angular Velocity?</h2>
-	      <p>By default, there are no functions that automatically create an object with angular velocity. To assign angular velocity to an object, you must use <code>ObjMove_SetAngularVelocity(obj, num);</code> or ObjMove_AddPattern (A2-A4). The former is very good for assigning to an object immediately while the latter is good for giving an object angular velocity (or removing it) at a certain time. We will go over <code>ObjMove_SetAngularVelocity()</code> first, as it is the simpler of the functions and has a variety of uses for lasers as well as bullets. Remember to assign a variable to your shot's ID so that you can use functions to obtain and modify its properties.</p>
+	      <p>By default, there are no functions that automatically create an object with angular velocity. To assign angular velocity to an object, you must use <span class="tooltip" onmouseover="getFxnDocs('ObjMove_SetAngularVelocity', 'f_omsav_01');"><code>ObjMove_SetAngularVelocity(obj, num)</code><span class="tooltiptext" id="f_omsav_01"></span></span> or ObjMove_AddPattern (A2-A4). The former is very good for assigning to an object immediately while the latter is good for giving an object angular velocity (or removing it) at a certain time. We will go over <code>ObjMove_SetAngularVelocity()</code> first, as it is the simpler of the functions and has a variety of uses for lasers as well as bullets. Remember to assign a variable to your shot's ID so that you can use functions to obtain and modify its properties.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How Do I Create and Use Curved Lasers?</h2>
 	      <p>Curvy lasers are the bane of a danmaku dodger's existence. They do strange movements, are hard to predict, and oftentimes barely dodge you or smash right into you. They are also expensive for the computer's processor although they can be extremely beautiful and make for excellent danmaku when used correctly.</p>
-	      <p>Like with other shot functions, we can use the following to create a curved laser and assign it an ID:</p>
+	      <p>Like with other shot functions, we can use a function, in this case <span class="tooltip" onmouseover="getFxnDocs('CreateCurveLaserA1', 'f_ccla1_01');"><code>CreateCurveLaserA1()</code><span class="tooltiptext" id="f_ccla1_01"></span></span>, to create a curved laser and assign it an ID:</p>
 	      <pre class="prettyprint"><code>    let objLaser = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, GetAngleToPlayer(objBoss),
         60, 18, 1018, 10);</code></pre>
 	      <p>The parameters are (x, y, speed, angle, length, width, graphic, delay). Looks like the same for a loose laser, right? Well, if you give a loose laser angular velocity, it does curve... but not smoothly - the base will move with Angular Velocity but the laser itself will remain straight. There is a fundamental difference between loose and curved lasers.</p>
@@ -74,7 +74,7 @@
 	      <p>Generally speaking, when using curved lasers, you don't use them alone. Usually, they are paired, in waves, or in rings. Oftentimes, entire patterns will be based on curved lasers. However, be aware that you need to do a few tweaks to curved lasers for them to work well.</p>
 	      <div class="tut_exercise">EXERCISE: Experiment with Angular Velocity on Loose Lasers. Then try it on Curved Lasers. What is the difference?</div>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: What are the Functions for Manipulating Curved Lasers?</h2>
-	      <p>Regarding functions for curved lasers, there aren't actually that many specifically for curved lasers. Most of the time, you will use general ObjMove functions for curved lasers. However, there is one of great significance: <code>ObjCrLaser_SetTipDecrement(obj, val);</code></p>
+	      <p>Regarding functions for curved lasers, there aren't actually that many specifically for curved lasers. Most of the time, you will use general ObjMove functions for curved lasers. However, there is one of great significance: <span class="tooltip" onmouseover="getFxnDocs('ObjCrLaser_SetTipDecrement', 'f_oclstd_01');"><code>ObjCrLaser_SetTipDecrement(obj, val)</code><span class="tooltiptext" id="f_oclstd_01"></span></span>.</p>
 	      <p>This function sets transparency reduction of curved laser tips. If not set to 0, the tip of a curved laser will be invisible, and with narrow curved lasers, you can and will cheapshot players. They won't see the tip of the curved laser because it is invisible, and will die. This function was added after the Danmakufu community requested it, and it is a godsend that all who use Danmakufu's built-in curved lasers are expected to use.</p>
 	      <p>The default is 1, where the tip is not visible at all, and the function allows a range from 0 (no fading) to 1 (full fading). The value is a percentage, so 0.5 will have 50% fading of the laser tips.</p>
 	      <pre class="prettyprint"><code>    let objLaser = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, GetAngleToPlayer(objBoss),
@@ -88,7 +88,7 @@
 	      <div class="tut_checkpoint">CHECKPOINT: How is the hitbox of a curved laser different from that of a loose laser?</div>
 	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How Can I Use Acceleration With Angular Velocity?</h2>
 	      <p>One of the features of curvy lasers is their ability to not only curve, but also accelerate and change speeds. By giving them acceleration, they will expand and contract. When combined with angular velocity, this allows the curvy lasers to twist and turn with varying speeds.</p>
-	      <p>When you have a curvy laser that has no acceleration and a non-zero angular velocity, it will loop back to its starting point due to the nature of angular velocity. By providing a non-zero acceleration, this will no longer occur. The simplest way to do this is to use <code>ObjMove_AddPatternA2</code>, which allows you to change both angular velocity, max speed, and speed at the same time. Alternatively, you can set Max Speed, Acceleration, and Angular Velocity separately. For example, look at the below code:</p>
+	      <p>When you have a curvy laser that has no acceleration and a non-zero angular velocity, it will loop back to its starting point due to the nature of angular velocity. By providing a non-zero acceleration, this will no longer occur. The simplest way to do this is to use <span class="tooltip" onmouseover="getFxnDocs('ObjMove_AddPatternA2', 'f_omapa2_01');"><code>ObjMove_AddPatternA2()</code><span class="tooltiptext" id="f_omapa2_01"></span></span>, which allows you to change both angular velocity, max speed, and speed at the same time. Alternatively, you can set Max Speed, Acceleration, and Angular Velocity separately. For example, look at the below code:</p>
 	      <pre class="prettyprint"><code>    let obj = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, GetAngleToPlayer(objBoss),
         60, 18, 1018, 10);
     ObjMove_AddPatternA2(obj, 0, 4, GetAngleToPlayer(objBoss), 0, 2, 5);
@@ -244,7 +244,7 @@
 	        </form>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
-	          <li>Angular Velocity can be manipulated using <code>ObjMove_SetAngularVelocity</code> and the ObjMove_AddPattern functions</li>
+	          <li>Angular Velocity can be manipulated using <span class="tooltip" onmouseover="getFxnDocs('ObjMove_SetAngularVelocity', 'f_omsav_02');"><code>ObjMove_SetAngularVelocity()</code><span class="tooltiptext" id="f_omsav_02"></span></span> and the ObjMove_AddPattern functions</li>
 	          <li>Curved Lasers do not have angular velocity by default</li>
 	          <li>Curved Lasers by default render with tips faded out</li>
 	          <li>You can multiply a variable by *-1 in an ascent or descent loop to change the alternate directions of bullets and/or lasers</li>
