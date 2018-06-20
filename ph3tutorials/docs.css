@@ -141,3 +141,11 @@
 }
 
 /* END Tooltips from https://www.w3schools.com/css/css_tooltip.asp */
+
+.docs_copybutton {
+  color: #FFFFFF;
+  background-color: #228866;
+  font-size: 12px;
+  border: 1px solid #66EEAA;
+  border-radius: 4px;
+}

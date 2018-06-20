@@ -194,7 +194,8 @@ function loadDocsByCategory (catnameparam, maindocobj) {
                 argnames += ", ";
             }
         }
-        returnstring += "<div class='docsfxnname' id='fxn_" + fs[j].fname + "'><a href='#fxn_" + fs[j].fname + "'><code>" + fs[j].fname + "(" + argnames + ")</code></a></div>";
+        returnstring += "<div class='docsfxnname' id='fxn_" + fs[j].fname + "'><a href='#fxn_" + fs[j].fname + "'><code>" + fs[j].fname + "(" + argnames + ")</code></a>" + 
+            "&nbsp;&nbsp;<button class='docs_copybutton' onclick='docs_copyName(\"" + fs[j].fname + "\")'>Copy Fxn Name</button></div>";
         if (fs[j].args.length > 0) {
             returnstring += "<div class='docsparamsdiv'><code><strong>Arguments:</strong></code><br>";
             var k;
@@ -209,4 +210,34 @@ function loadDocsByCategory (catnameparam, maindocobj) {
         returnstring += "<hr>";
     }
     return returnstring;
+}
+
+//Enables user to copy function name to clipboard (https://stackoverflow.com/questions/400212)
+function docs_copyName(input) {
+    // Copies a string to the clipboard. Must be called from within an 
+    // event handler such as click. May return false if it failed, but
+    // this is not always possible. Browser support for Chrome 43+, 
+    // Firefox 42+, Safari 10+, Edge and IE 10+.
+    // IE: The clipboard feature may be disabled by an administrator. By
+    // default a prompt is shown the first time the clipboard is 
+    // used (per session).
+    if (window.clipboardData && window.clipboardData.setData) {
+        // IE specific code path to prevent textarea being shown while dialog is visible.
+        return clipboardData.setData("Text", input); 
+
+    } else if (document.queryCommandSupported && document.queryCommandSupported("copy")) {
+        var textarea = document.createElement("textarea");
+        textarea.textContent = input;
+        textarea.style.position = "fixed";  // Prevent scrolling to bottom of page in MS Edge.
+        document.body.appendChild(textarea);
+        textarea.select();
+        try {
+            return document.execCommand("copy");  // Security exception may be thrown by some browsers.
+        } catch (ex) {
+            console.warn("Copy to clipboard failed.", ex);
+            return false;
+        } finally {
+            document.body.removeChild(textarea);
+        }
+    }
 }
