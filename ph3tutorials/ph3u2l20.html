@@ -1,5 +1,12 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 20</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
-    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 20 - Manipulating Pause and End Scene Files. A guide on how to manipulate and customize Pause and End Scene scripts."      name="description">
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 20</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 20 - Manipulating Pause and End Scene Files. A guide on how to manipulate and customize Pause and End Scene scripts."
+      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Pause, End, Scene">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
@@ -10,7 +17,13 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('May 11, 2016')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>
+  </head>
+  <body onload="setupENG('May 11, 2016')">
+    <div class="yui-t1" id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -26,14 +39,20 @@
           <li><a href="./docs_system.html">Private Script Fxns</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
         </ul>
-      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+      </div>
+      <div id="bd">
+        <div id="yui-main">
+          <div class="yui-b">
             <div class="tutnavbar">
 	      <ul>
 	        <li><a href="./ph3u2l19.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to System Files">Unit 2 Lesson 19</a></li>
 	        <li><span>Navigation Bar</span></li>
 	        <li><a href="./ph3u2l21.html" title="Sparen's Danmakufu ph3 Tutorials - Customizing Replay Save Files">Unit 2 Lesson 21</a></li>
 	      </ul>
-            </div>            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 20 - Manipulating Pause and End Scene Files</h1>	      <p>The video for this lesson is CK Crash's Sanae for the RaNGE 10 contest - it had a super awesome pause menu, and it's an amazing script you should all play.</p>
+            </div>
+            <div class="yui-g">
+	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 20 - Manipulating Pause and End Scene Files</h1>
+	      <p>The video for this lesson is CK Crash's Sanae for the RaNGE 10 contest - it had a super awesome pause menu, and it's an amazing script you should all play.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <div class="ytembed_sm">
 	        <iframe src="https://www.youtube.com/embed/XMo48p-9_Jg" frameborder="0" allowfullscreen></iframe>
@@ -51,7 +70,8 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss Pause and End Scene scripts, which are called on demand upon pause or end of a script, respectfully.</p>
 	      <p>This lesson requires knowledge of render and text objects. For reference, please see <a href="./ph3u2l13.html">Lesson 13</a> and <a href="./ph3u2l17.html">Lesson 17</a> for 2D Sprites and Text, respectively. You must read <a href="./ph3u2l19.html">Lesson 19</a> first before starting with this tutorial, as that tutorial has information that will not be duplicated here.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Pause and End Scene Scripts?</h2>
@@ -146,7 +166,7 @@
 			frameKeyHold = 0;
 		}
 
-		if(selectIndex < 0) 
+		if(selectIndex &lt; 0) 
 		{
 			selectIndex = countMenu - 1;
 		}
@@ -234,7 +254,9 @@
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
-	      <br>            </div>          </div>
+	      <br>
+            </div>
+          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u2l19.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to System Files">Unit 2 Lesson 19</a></li>
@@ -242,7 +264,12 @@
 	      <li><a href="./ph3u2l21.html" title="Sparen's Danmakufu ph3 Tutorials - Customizing Replay Save Files">Unit 2 Lesson 21</a></li>
 	    </ul>
 	    <br>
-          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+      </footer>
+    </div>
     <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
@@ -251,4 +278,6 @@
     <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
-    <script type="text/javascript" src="javascript/dnhdocs.js"></script>  </body></html>
+    <script type="text/javascript" src="javascript/dnhdocs.js"></script>
+  </body>
+</html>
