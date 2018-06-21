@@ -1,5 +1,12 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 28</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
-    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 28 - Implementing Stage Enemies and Familiars. A guide on creating both familiars and stage enemies in Danmakufu ph3."      name="description">
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 28</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 28 - Implementing Stage Enemies and Familiars. A guide on creating both familiars and stage enemies in Danmakufu ph3."
+      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Familiar, Shikigami, Stage, Enemy">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
@@ -10,7 +17,13 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('May 03, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>
+  </head>
+  <body onload="setupENG('May 03, 2018')">
+    <div class="yui-t1" id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -26,14 +39,19 @@
           <li><a href="./docs_system.html">Private Script Fxns</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
         </ul>
-      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+      </div>
+      <div id="bd">
+        <div id="yui-main">
+          <div class="yui-b">
             <div class="tutnavbar">
 	      <ul>
 	        <li><a href="./ph3u3l27.html" title="Sparen's Danmakufu ph3 Tutorials - Basics of Items">Unit 3 Lesson 27</a></li>
 	        <li><span>Navigation Bar</span></li>
 	        <li><span>---</span></li>
 	      </ul>
-            </div>            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 28 - Implementing Stage Enemies and Familiars</h1>
+            </div>
+            <div class="yui-g">
+	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 28 - Implementing Stage Enemies and Familiars</h1>
 	      <div class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
@@ -46,7 +64,8 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
+	      </div>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
 	      <p>In this lesson, we will discuss the primary gameplay component of Stage Scripts - Stage Enemies. In addition, we will cover boss familiars/enemy familiars in general, as they can provide similar or supplementary roles. For this lesson, it is assumed that you have worked with Plural scripts to the extent by which you understand how bullet trajectories affect gameplay, difficulty, and balancing. In addition, you must have a good understanding of ObjMove and ObjRender functions, as we will be using them heavily.</p>
 	      <p>Now, let's briefly review why Familiars and Stage Enemies are important.</p>
 	      <p>First, it is often preferable to have all bullets originating at the boss or at some location relative to the boss (IE ring around boss/spiral from boss). It may even be preferable to have bullets simply spawn at a static position on the screen or in a formation relative to the playing field/player. But in many cases, attaching a bullet spawner to a static or moving object (familiar) can provide depth to gameplay. From a Touhou perspective, Touhou 8 - Imperishable Night has some of the most complex and varied uses of familiars, and it can be said that the combination of familiars and stage enemies is a major component in the richness of the game's overall gameplay.</p>
@@ -222,7 +241,7 @@
 	      <br>
 	      <button type="button" onclick="createNewGame('gamecanvas_3', 'L28: Oscillating Familiars')">Run Danmakanvas Simulation</button>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What are Stage Enemies?</h2>
-	      <p style="text-align:center"><img src="./tutimg/u3l28stgenemyex.png" width="320px"></img></p>
+	      <p style="text-align:center"><img src="./tutimg/u3l28stgenemyex.png" width="320"></p>
 	      <p>Stage enemies are a key component of stages, providing most of the bullets, items, and other gameplay elements present. Just like designing a nonspell or spell for a boss, designing stages is a complex and interesting process. However, a stage is far more complex than a boss Single. Stage enemies, as stated earlier, can appear from anywhere, and can do pretty much anything. Single stage enemies can fire complex patterns. Others can form danmaku in a group. And the interaction between stage enemies, the duration of time they stay on-screen, etc. all matter when designing a good stage.</p>
 	      <p>Here we will only discuss building the stage enemy so it can be created in a Stage script. But keep in mind the role that stage enemies play when designing your stages.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I implement Stage Enemies?</h2>
@@ -271,7 +290,7 @@
 
             if (count == 30) {bulletA;}
 
-            if (GetEnemyX(objEnemy) < Xmin || GetEnemyX(objEnemy) > Xmax || GetEnemyY(objEnemy) < Ymin || GetEnemyY(objEnemy) > Ymax) {
+            if (GetEnemyX(objEnemy) &lt; Xmin || GetEnemyX(objEnemy) > Xmax || GetEnemyY(objEnemy) &lt; Ymin || GetEnemyY(objEnemy) > Ymax) {
                 ObjEnemy_SetLife(objEnemy, -1000);
             }
             count++;
@@ -328,7 +347,7 @@
             ObjEnemy_SetIntersectionCircleToShot(objEnemy, ObjMove_GetX(objEnemy), ObjMove_GetY(objEnemy), 32); 
             ObjEnemy_SetIntersectionCircleToPlayer(objEnemy, ObjMove_GetX(objEnemy), ObjMove_GetY(objEnemy), 8);
 
-            if (GetEnemyX(objEnemy) < Xmin || GetEnemyX(objEnemy) > Xmax || GetEnemyY(objEnemy) < Ymin || GetEnemyY(objEnemy) > Ymax) {
+            if (GetEnemyX(objEnemy) &lt; Xmin || GetEnemyX(objEnemy) > Xmax || GetEnemyY(objEnemy) &lt; Ymin || GetEnemyY(objEnemy) > Ymax) {
                 ObjEnemy_SetLife(objEnemy, -1000);
             }
             count++;
@@ -361,7 +380,9 @@
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
-	      <br>            </div>          </div>
+	      <br>
+            </div>
+          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u3l27.html" title="Sparen's Danmakufu ph3 Tutorials - Basics of Items">Unit 3 Lesson 27</a></li>
@@ -369,7 +390,12 @@
 	      <li><span>---</span></li>
 	    </ul>
 	    <br>
-          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+      </footer>
+    </div>
     <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
@@ -381,4 +407,6 @@
     <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
-    <script type="text/javascript" src="javascript/dnhdocs.js"></script>  </body></html>
+    <script type="text/javascript" src="javascript/dnhdocs.js"></script>
+  </body>
+</html>
