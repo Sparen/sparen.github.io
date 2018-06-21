@@ -25,9 +25,14 @@
 <priority>0.6</priority>
 </url>
 <url>
+<loc>http://sparen.github.io/dnhart-list.html</loc>
+<changefreq>weekly</changefreq>
+<priority>0.6</priority>
+</url>
+<url>
 <loc>http://sparen.github.io/locaafanfiction.html</loc>
 <changefreq>weekly</changefreq>
-<priority>0.5</priority>
+<priority>0.1</priority>
 </url>
 <url>
 <loc>http://sparen.github.io/404.html</loc>
@@ -278,12 +283,12 @@
 <url>
 <loc>http://sparen.github.io/ph3tutorials/ph3uXl2.html</loc>
 <changefreq>monthly</changefreq>
-<priority>0.8</priority>
+<priority>0.7</priority>
 </url>
 <url>
 <loc>http://sparen.github.io/ph3tutorials/ph3uXl3.html</loc>
 <changefreq>monthly</changefreq>
-<priority>0.8</priority>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -415,18 +420,18 @@
 <url>
 <loc>http://sparen.github.io/projects/projectstmddnh_devlog.html</loc>
 <changefreq>monthly</changefreq>
-<priority>0.5</priority>
+<priority>0.3</priority>
 </url>
 
 <url>
 <loc>http://sparen.github.io/projects/contestdatabase.html</loc>
 <changefreq>weekly</changefreq>
-<priority>0.5</priority>
+<priority>0.8</priority>
 </url>
 <url>
 <loc>http://sparen.github.io/projects/contest/contestlocalbackup.html</loc>
 <changefreq>monthly</changefreq>
-<priority>0.3</priority>
+<priority>0.2</priority>
 </url>
 <url>
 <loc>http://sparen.github.io/projects/danmakanvas.html</loc>

@@ -1,0 +1,8 @@
+.videotable {
+  width: 100%;
+}
+
+.videotable th, .videotable td {
+  border: 1px solid white;
+  font-size: 10px;
+}
