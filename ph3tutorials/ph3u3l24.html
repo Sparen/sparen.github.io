@@ -1,5 +1,12 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 24</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
-    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 24 - Introduction to Common Data. A guide on Danmakufu's Common Data."      name="description">
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 24</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 24 - Introduction to Common Data. A guide on Danmakufu's Common Data."
+      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Common, Data">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
@@ -10,7 +17,13 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jan 18, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>
+  </head>
+  <body onload="setupENG('Jan 18, 2018')">
+    <div class="yui-t1" id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -26,14 +39,19 @@
           <li><a href="./docs_system.html">Private Script Fxns</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
         </ul>
-      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+      </div>
+      <div id="bd">
+        <div id="yui-main">
+          <div class="yui-b">
             <div class="tutnavbar">
 	      <ul>
 	        <li><a href="./ph3u3l23.html" title="Sparen's Danmakufu ph3 Tutorials - Basics of Stages in Danmakufu">Unit 3 Lesson 23</a></li>
 	        <li><span>Navigation Bar</span></li>
 	        <li><a href="./ph3u3l25.html" title="Sparen's Danmakufu ph3 Tutorials - Understanding and Manipulating @Event">Unit 3 Lesson 25</a></li>
 	      </ul>
-            </div>            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 24 - Introduction to Common Data</h1>
+            </div>
+            <div class="yui-g">
+	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 24 - Introduction to Common Data</h1>
 	      <div class="tutorialnav">
 	        <h2 style="color:aqua">Table of Contents</h2>
 	        <ul>
@@ -46,7 +64,8 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss Common Data on an introductory level. Area Common Data will be covered in a later guide. Before reading this tutorial, you should be familiar with variables and scoping, including terms such as global and local variables, as well as statements and blocks.</p>
 	      <p>You should also be familiar with the standard scripts that run when you run a Danmakufu script, such as the background script and system script. If you are not familiar with these topics, please refer to earlier lessons to refresh yourself. There is a brief refresher below, but it is important to be familiar with the concepts in order to fully understand the use cases for Common Data.</p>
 	      <p>Besides the basics of Common Data, I will also cover its most common usages in stage-tier scripts, those being configuration settings such as difficulty and communication between scripts - especially the system script and background script. There will be brief discussion on extend systems in a later guide.</p>
@@ -154,7 +173,7 @@ task TStage
         //Menu controls
         if(GetVirtualKeyState(VK_UP) == KEY_PUSH){selection--;}
         if(GetVirtualKeyState(VK_DOWN) == KEY_PUSH){selection++;}
-        if(selection < 0){selection = 1;}
+        if(selection &lt; 0){selection = 1;}
         if(selection > 1){selection = 0;}
 
         //Make it clear to the player which option is selected
@@ -246,7 +265,7 @@ task TStage
         //Menu controls
         if(GetVirtualKeyState(VK_UP) == KEY_PUSH){selection--;}
         if(GetVirtualKeyState(VK_DOWN) == KEY_PUSH){selection++;}
-        if(selection < 0){selection = 1;}
+        if(selection &lt; 0){selection = 1;}
         if(selection > 1){selection = 0;}
 
         //Make it clear to the player which option is selected
@@ -283,12 +302,14 @@ task TStage
 	      <p>As a final note, there are many ways to use Common Data and the examples shown in this lesson are just a few. I suggest experimenting on your own in order to determine what works best for you.</p>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
-	          <li>CommonData can be used to share values between scripts</code></li>
+	          <li>CommonData can be used to share values between scripts</li>
 	          <li>CommonData can be used to set difficulty and other configuration settings for the duration of a script</li>
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
-	      <br>            </div>          </div>
+	      <br>
+            </div>
+          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u3l23.html" title="Sparen's Danmakufu ph3 Tutorials - Basics of Stages in Danmakufu">Unit 3 Lesson 23</a></li>
@@ -296,7 +317,12 @@ task TStage
 	      <li><a href="./ph3u3l25.html" title="Sparen's Danmakufu ph3 Tutorials - Understanding and Manipulating @Event">Unit 3 Lesson 25</a></li>
 	    </ul>
 	    <br>
-          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+      </footer>
+    </div>
     <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
@@ -306,4 +332,6 @@ task TStage
     <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
-    <script type="text/javascript" src="javascript/dnhdocs.js"></script>  </body></html>
+    <script type="text/javascript" src="javascript/dnhdocs.js"></script>
+  </body>
+</html>
