@@ -1,0 +1,1 @@
+REMINDER: Run all of these through an image optimizer before uploading!
