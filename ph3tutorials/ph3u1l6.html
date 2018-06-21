@@ -108,7 +108,7 @@
 	      <p>OK. So we have a Single script and we are using Script Version 3. Now, #Title and #Text.</p>
 	      <p>It's really up to you what to put here. However, remember that they take strings, so everything needs to be in double quotes. For now, let's put the following in #Title: <code>"My First Danmakufu Script!"</code> and the following in #Text: <code>"Code by &lt; Your Name Here &gt;[r]My First Bullet!"</code></p>
 	      <p>Now we can do stuff with the other header items if we want to. #Image and #BGM are the easiest to use, as they require a filepath and not much else. I will explain #BGM because it will make testing your script far more pleasant than with no bgm at all. Take a music file (.mp3 or .ogg) and dump it in the same directory as the script, and then in #BGM, put the following: <code>"./nameofbgm.ogg"</code> or <code>"./nameofbgm.mp3"</code>, whichever you are using.</p>
-	      </p>If you do not know much about OGG Vorbis sound files now, that is fine. Just be aware that .ogg is the standard for sound in Danmakufu among scripters of all skill levels. I highly recommend using .ogg for all bgm in Danmakufu. I will go over how to use Audacity to export a .mp3 to an .ogg in <a href="ph3u2l15.html">Lesson 15</a>.</p>
+	      <p>If you do not know much about OGG Vorbis sound files now, that is fine. Just be aware that .ogg is the standard for sound in Danmakufu among scripters of all skill levels. I highly recommend using .ogg for all bgm in Danmakufu. I will go over how to use Audacity to export a .mp3 to an .ogg in <a href="ph3u2l15.html">Lesson 15</a>.</p>
 	      <p>Now that the header is out of the way, it is time to begin filling our script with things that will allow it to run.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How Do I Set the Boss Life, Spell Bonus and Timer?</h2>
 	      <p>At this stage, a complete explanation of @Event will most likely fly straight over your heads, but it is important to know that when certain processes happen. @Event is automatically called by Danmakufu, and depending on the arguments there when it is called, it will do various things such as spawning the boss magic circle, etc. Below is a sample @Event.</p>
@@ -557,7 +557,9 @@ function wait(n){
           </div>
         </div>
       </div>
-      <footer id="footer">      </footer>    </div>
+      <footer id="footer">
+      </footer>
+    </div>
     <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
