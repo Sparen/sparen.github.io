@@ -1,5 +1,12 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 18</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
-    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 18 - Creating and Using Functions and Libraries. A guide on how to create and use function libraries."      name="description">
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 18</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 18 - Creating and Using Functions and Libraries. A guide on how to create and use function libraries."
+      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Function, Library">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
@@ -10,7 +17,13 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 11, 2017')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>
+  </head>
+  <body onload="setupENG('Jun 11, 2017')">
+    <div class="yui-t1" id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -26,14 +39,20 @@
           <li><a href="./docs_system.html">Private Script Fxns</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
         </ul>
-      </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">
+      </div>
+      <div id="bd">
+        <div id="yui-main">
+          <div class="yui-b">
             <div class="tutnavbar">
 	      <ul>
 	        <li><a href="./ph3u2l17.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Text Functions and Fonts">Unit 2 Lesson 17</a></li>
 	        <li><span>Navigation Bar</span></li>
 	        <li><a href="./ph3u2l19.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to System Files">Unit 2 Lesson 19</a></li>
 	      </ul>
-            </div>            <div class="yui-g">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 18 - Creating and Using Functions and Libraries</h1>	      <p>The video for this lesson is Ephy/Lefkada's Letty X Lily script, an entry for the Contradictory Catastrophe contest.</p>
+            </div>
+            <div class="yui-g">
+	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 18 - Creating and Using Functions and Libraries</h1>
+	      <p>The video for this lesson is Ephy/Lefkada's Letty X Lily script, an entry for the Contradictory Catastrophe contest.</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <div class="ytembed_sm">
 	        <iframe src="https://www.youtube.com/embed/BUYwhw71Xag" frameborder="0" allowfullscreen></iframe>
@@ -52,7 +71,8 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will discuss in great detail functions, subroutines, and function libraries. This lesson assumes that you have read and are familiar with the contents of <a href="./ph3u1l5.html">Lesson 5</a>. <a href="./ph3u2l15.html">Lesson 15</a> is also recommended reading.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Functions?</h2>
 	      <p>Back in Lesson 5, we introduced functions. In Danmakufu ph3, all functions have names - there are built-in functions and of course, user-defined functions. Built-in functions such as <code>GetCurrentScriptDirectory</code> are in CamelCase (PascalCase, to be exact). User defined functions can be literally anything that isn't a reserved keyword.</p>
@@ -102,13 +122,13 @@ function wait(n){
 *Param: objparent (obj) - Shot Object to render effect at
 ************************************************************************* */
 task BulletDeleteEffect(objparent){
-    let path = GetCurrentScriptDirectory~"./img/bulletdelete.png";
+    let path = GetCurrentScriptDirectory() ~ "./img/bulletdelete.png";
     let obj = ObjPrim_Create(OBJ_SPRITE_2D);
     ObjPrim_SetTexture(obj, path);
     ObjRender_SetPosition(obj, ObjMove_GetX(objparent), ObjMove_GetY(objparent), 1);
     ObjRender_SetBlendType(obj, BLEND_ADD_ARGB);
     ObjRender_SetScaleXYZ(obj, 0.5, 0.5, 0);
-    if(ObjShot_GetImageID(objparent) <= 0){return;}
+    if(ObjShot_GetImageID(objparent) &lt;= 0){return;}
     let shotinfo = GetShotDataInfoA1(ObjShot_GetImageID(objparent), TARGET_ENEMY, INFO_DELAY_COLOR);
     ObjRender_SetColor(obj, shotinfo[0], shotinfo[1], shotinfo[2]);
     ascent(i in 0..8){
@@ -228,7 +248,9 @@ function ObjMessageLog_Create(){
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
-	      <br>            </div>          </div>
+	      <br>
+            </div>
+          </div>
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ph3u2l17.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Text Functions and Fonts">Unit 2 Lesson 17</a></li>
@@ -236,7 +258,12 @@ function ObjMessageLog_Create(){
 	      <li><a href="./ph3u2l19.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to System Files">Unit 2 Lesson 19</a></li>
 	    </ul>
 	    <br>
-          </div>        </div>      </div>      <footer id="footer">      </footer>    </div>
+          </div>
+        </div>
+      </div>
+      <footer id="footer">
+      </footer>
+    </div>
     <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
@@ -246,4 +273,6 @@ function ObjMessageLog_Create(){
     <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
-    <script type="text/javascript" src="javascript/dnhdocs.js"></script>  </body></html>
+    <script type="text/javascript" src="javascript/dnhdocs.js"></script>
+  </body>
+</html>
