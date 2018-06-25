@@ -477,9 +477,9 @@
             "duration": [2018.05, 2018.06],
             "host": "ExPorygon/Ozzy840",
             "judges": ["ExPorygon/Ozzy840", "Trickysticks"],
-            "numparticipants": 0,
+            "numparticipants": 7,
             "result": [[],[],[]],
-            "participants": []
+            "participants": ["Umbra", "JDude", "Sparen", "iVAwalys", "Ilwo", "bronxterror/Ultimadragon88", "AchySolrock", "gtbot"]
         }
     ]
 }
