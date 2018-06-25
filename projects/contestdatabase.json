@@ -284,7 +284,7 @@
             "judges": ["ExPorygon/Ozzy840", "AJS"],
             "numparticipants": 17,
             "result": [["Arby26"], ["Darkness1"], ["Trickysticks"]],
-            "participants": ["Ultimadragon88", "Lunarethic", "Aoki Yakumo/1000 Sun Studios", "Lefkada/Ephy", "Arby26", "Trickysticks", "Goldstein Izayoi", "Darkness1", "Baron Blade", "Bob the Tanuki", "Alicirno", "Sariel", "Conarnar", "Yukkurix3", "Kirbio", "TresserT", "Sparen"]
+            "participants": ["bronxterror/Ultimadragon88", "Lunarethic", "Aoki Yakumo/1000 Sun Studios", "Lefkada/Ephy", "Arby26", "Trickysticks", "Goldstein Izayoi", "Darkness1", "Baron Blade", "Bob the Tanuki", "Alicirno", "Sariel", "Conarnar", "Yukkurix3", "Kirbio", "TresserT", "Sparen"]
         },
         {
             "id": "artifact3",
@@ -296,8 +296,8 @@
             "host": "Trickysticks",
             "judges": ["Trickysticks", "ExPorygon/Ozzy840", "Infinite Ultima Wave", "Spectral Nexus"],
             "numparticipants": 3,
-            "result": [["Conarnar"], ["Python"], ["Ultimadragon88"]],
-            "participants": ["Conarnar", "Python", "Ultimadragon88"]
+            "result": [["Conarnar"], ["Python"], ["bronxterror/Ultimadragon88"]],
+            "participants": ["Conarnar", "Python", "bronxterror/Ultimadragon88"]
         },
         {
             "id": "range13",
@@ -411,7 +411,7 @@
             "year": 2017,
             "duration": [2017.03, 2017.03],
             "host": "TresserT",
-            "judges": ["Sparen", "Ultimadragon88", "NecroHeart/Vigor"],
+            "judges": ["Sparen", "bronxterror/Ultimadragon88", "NecroHeart/Vigor"],
             "numparticipants": 9,
             "result": [["Trickysticks", "ExPorygon/Ozzy840"], ["Conarnar"], ["DrytheMeowstic"]],
             "participants": ["Asthmagician", "Conarnar", "Dark/Ran Yakumo", "DrytheMeowstic", "Mr. Gaberson", "Python", "Trickysticks", "ExPorygon/Ozzy840", "The Terrible Bullet Dodger/auto2112", "WishMakers"]
@@ -453,7 +453,7 @@
             "judges": ["WishMakers", "CreepyNinja", "Trickysticks"],
             "numparticipants": 12,
             "result": [["AJS"], ["The Terrible Bullet Dodger/auto2112", "Adam"], ["Junky", "GCP"]],
-            "participants": ["JDude", "Python", "Conarnar", "GenoCraft", "Junky", "GCP", "Ultimadragon88", "TresserT", "The Terrible Bullet Dodger/auto2112", "Adam", "GhostPhanom", "AJS", "Arcvasti", "NecroHeart/Vigor"]
+            "participants": ["JDude", "Python", "Conarnar", "GenoCraft", "Junky", "GCP", "bronxterror/Ultimadragon88", "TresserT", "The Terrible Bullet Dodger/auto2112", "Adam", "GhostPhanom", "AJS", "Arcvasti", "NecroHeart/Vigor"]
         },
         {
             "id": "uwom1",
