@@ -153,6 +153,419 @@ var DNHArtobj = {
             "scripter" : "AJS",
             "scriptname" : "RaNGE Contest 10: Guess Who's Back",
             "dvdb" : ""
+        },
+        {
+            "id": "23",
+            "ytid": "tzoxeiqoQHw",
+            "scripter" : "Miransu Uwabami",
+            "scriptname" : "LOCAA Contest 3: Experiment #354: β∀∩三†τモ",
+            "dvdb" : ""
+        },
+        {
+            "id": "24",
+            "ytid": "m8vBn9hSG_I",
+            "scripter" : "TalosMistake",
+            "scriptname" : "Letty Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "25",
+            "ytid": "3jhILzXy3sU",
+            "scripter" : "Arby26",
+            "scriptname" : "Battle with Toyosatomimi no Miko",
+            "dvdb" : ""
+        },
+        {
+            "id": "26",
+            "ytid": "Of9i3p3ptxY",
+            "scripter" : "Victini Victory",
+            "scriptname" : "Ageless Crusade Extra Stage Boss: Giratina",
+            "dvdb" : ""
+        },
+        {
+            "id": "27",
+            "ytid": "g92BLspLfdc",
+            "scripter" : "TalosMistake",
+            "scriptname" : "Gensei Ruri Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "28",
+            "ytid": "IuKXgQjjJZs",
+            "scripter" : "Victini Victory",
+            "scriptname" : "Hatate Himekaidou Boss Fight",
+            "dvdb" : ""
+        },
+        {
+            "id": "29",
+            "ytid": "B5p1CPHsh3U",
+            "scripter" : "Trickysticks",
+            "scriptname" : "Trickysticks' Eirin Boss",
+            "dvdb" : ""
+        },
+        {
+            "id": "30",
+            "ytid": "OEIAekJ_DCk",
+            "scripter" : "Byzantheryx",
+            "scriptname" : "LOCAA Contest 2: Nitori Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "31",
+            "ytid": "KL7AftZboZA",
+            "scripter" : "Rogus",
+            "scriptname" : "LOCAA Contest 2: Utsuho Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "32",
+            "ytid": "cq0HdwWyBKo",
+            "scripter" : "Miplouf",
+            "scriptname" : "LOCAA Contest 2: Alice Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "33",
+            "ytid": "_cuAlhWit0E",
+            "scripter" : "FondueMaster",
+            "scriptname" : "LOCAA Contest 3: Swampert Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "34",
+            "ytid": "018B7Ot8VFo",
+            "scripter" : "Gusano2314",
+            "scriptname" : "CURSE Contest 1: Aya Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "35",
+            "ytid": "rQnmeh1iBtw",
+            "scripter" : "Miransu Uwabami",
+            "scriptname" : "CURSE Contest 1: Hell's Famous Sisters",
+            "dvdb" : ""
+        },
+        {
+            "id": "36",
+            "ytid": "S67goOT0Gpo",
+            "scripter" : "TalosMistake",
+            "scriptname" : "CURSE Contest 1: Marisa Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "37",
+            "ytid": "OxG04Zcrg1c",
+            "scripter" : "PhantomSong",
+            "scriptname" : "CURSE Contest 1: Remilia Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "38",
+            "ytid": "PQnLMZIlOuc",
+            "scripter" : "NeoxRave",
+            "scriptname" : "CURSE Contest 1: Yuyuko Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "39",
+            "ytid": "UfgBNf-zmYM",
+            "scripter" : "Gungnir",
+            "scriptname" : "CURSE Contest 1: Touhou Miko REX",
+            "dvdb" : ""
+        },
+        {
+            "id": "40",
+            "ytid": "Gh_qps9twv4",
+            "scripter" : "Miplouf Saigyouki",
+            "scriptname" : "CURSE Contest 1: Tenshiku Stage",
+            "dvdb" : ""
+        },
+        {
+            "id": "41",
+            "ytid": "9a_o46Cv7zs",
+            "scripter" : "Spectral Nexus",
+            "scriptname" : "Halloween Contest: Death Fairy of Doom",
+            "dvdb" : ""
+        },
+        {
+            "id": "42",
+            "ytid": "YvSQGwUrWo0",
+            "scripter" : "Sparen",
+            "scriptname" : "Halloween Contest: Sekibanki Boss Battle",
+            "dvdb" : "sparenofiria.html#halloween2013"
+        },
+        {
+            "id": "43",
+            "ytid": "8aHvS3Llvco",
+            "scripter" : "TalosMistake",
+            "scriptname" : "Halloween Contest: Seija Boss Fight",
+            "dvdb" : ""
+        },
+        {
+            "id": "44",
+            "ytid": "u_Rvk2lRyBI",
+            "scripter" : "Miplouf Saigyouki",
+            "scriptname" : "Halloween Contest: Ghost Boss Fight",
+            "dvdb" : ""
+        },
+        {
+            "id": "45",
+            "ytid": "ep3RsiB0yYU",
+            "scripter" : "Infinite Ultima Wave",
+            "scriptname" : "Halloween Contest: Kagerou Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "46",
+            "ytid": "NpeQY_YR0o0",
+            "scripter" : "Darkness1",
+            "scriptname" : "Halloween Contest: Koishi Adventure",
+            "dvdb" : ""
+        },
+        {
+            "id": "47",
+            "ytid": "F0qyCoUqFgA",
+            "scripter" : "GTBot",
+            "scriptname" : "Halloween Contest: Rumia Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "48",
+            "ytid": "1OLK99VzxYc",
+            "scripter" : "Neito",
+            "scriptname" : "Halloween Contest: KaGeRou",
+            "dvdb" : ""
+        },
+        {
+            "id": "49",
+            "ytid": "TY2HuKvigPM",
+            "scripter" : "Infinite Ultima Wave",
+            "scriptname" : "Kochiya Sanae Ph3 Boss",
+            "dvdb" : ""
+        },
+        {
+            "id": "49.5",
+            "ytid": "ATWDMaLNKEQ",
+            "scripter" : "Thaws",
+            "scriptname" : "Thaws Seiga",
+            "dvdb" : ""
+        },
+        {
+            "id": "50",
+            "ytid": "MJQeGkU0nyQ",
+            "scripter" : "PhantomSong",
+            "scriptname" : "Koishi Komeiji Boss Fight",
+            "dvdb" : ""
+        },
+        {
+            "id": "51",
+            "ytid": "17GGCvV2hrk",
+            "scripter" : "TalosMistake",
+            "scriptname" : "Mini Shou Stage",
+            "dvdb" : ""
+        },
+        {
+            "id": "52",
+            "ytid": "12pZKJlOYYk",
+            "scripter" : "GTBot",
+            "scriptname" : "Danmakufu Jam 001: Short Battle Against Parsee",
+            "dvdb" : ""
+        },
+        {
+            "id": "53",
+            "ytid": "ORnxqtyJkZY",
+            "scripter" : "FondueMaster",
+            "scriptname" : "Reimu Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "54",
+            "ytid": "noH_U1xJApA",
+            "scripter" : "TalosMistake",
+            "scriptname" : "Danmakufu Jam 002: Kanako Yasaka Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "55",
+            "ytid": "xdmGzrhbKng",
+            "scripter" : "Darkness1",
+            "scriptname" : "Danmakufu Jam 002: Kanako Boss",
+            "dvdb" : ""
+        },
+        {
+            "id": "56",
+            "ytid": "3RzAd31dKpg",
+            "scripter" : "GTBot",
+            "scriptname" : "Danmakufu Jam 002: Short Battle Against Kanako",
+            "dvdb" : ""
+        },
+        {
+            "id": "57",
+            "ytid": "mF1NHOKhUoc",
+            "scripter" : "Infinite Ultima Wave",
+            "scriptname" : "Christmas Letty Mini Script",
+            "dvdb" : ""
+        },
+        {
+            "id": "58",
+            "ytid": "J7ptLfOq8to",
+            "scripter" : "Byzantheryx",
+            "scriptname" : "LOCAA Contest 1: Koishi Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "59",
+            "ytid": "TaJTB4qaaEc",
+            "scripter" : "Sparen",
+            "scriptname" : "LOCAA Contest 4: Death Match in the Skies",
+            "dvdb" : "sparenofiria.html#locaa4"
+        },
+        {
+            "id": "60",
+            "ytid": "wW6Zuo-y0eU",
+            "scripter" : "PhantomSong",
+            "scriptname" : "Artifact Contest 1: Captain Minamitsu Murasa",
+            "dvdb" : ""
+        },
+        {
+            "id": "61",
+            "ytid": "kLITH2wsT8g",
+            "scripter" : "Kirbio",
+            "scriptname" : "Artifact Contest 1: Raiko Horikawa Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "62",
+            "ytid": "0QHEyBc3hdw",
+            "scripter" : "Sariel",
+            "scriptname" : "LOCAA Contest 4: Power vs. Wisdom",
+            "dvdb" : ""
+        },
+        {
+            "id": "63",
+            "ytid": "7S5CTuHJ-ig",
+            "scripter" : "Gusano2314",
+            "scriptname" : "LOCAA Contest 4: Remilia and Yuyuko Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "64",
+            "ytid": "JsjvPkeTYbo",
+            "scripter" : "PhantomSong",
+            "scriptname" : "Sakuya Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "65",
+            "ytid": "Zqgn8jgGANI",
+            "scripter" : "Supreme Gamesmaster Yddisac",
+            "scriptname" : "Rinnosuke - LoTH",
+            "dvdb" : ""
+        },
+        {
+            "id": "66",
+            "ytid": "pN0pSrhuo98",
+            "scripter" : "Sparen",
+            "scriptname" : "Artifact Contest 2: Of Celestials and Master Sparks",
+            "dvdb" : "sparenofiria.html#artifact2"
+        },
+        {
+            "id": "67",
+            "ytid": "nlvFIZPnmVs",
+            "scripter" : "Lunarethic",
+            "scriptname" : "AAA Contest: Koakuma Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "68",
+            "ytid": "lgCMRRHEMoI",
+            "scripter" : "Rikako Asakura",
+            "scriptname" : "AAA Contest: Chen Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "69",
+            "ytid": "JB5gS4_r2NI",
+            "scripter" : "PhantomSong",
+            "scriptname" : "AAA Contest: Hakkero",
+            "dvdb" : ""
+        },
+        {
+            "id": "70",
+            "ytid": "vE9Gu9y4MTw",
+            "scripter" : "Bob the Tanuki",
+            "scriptname" : "AAA Contest: Murasa Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "71",
+            "ytid": "XQtfXWIIRDQ",
+            "scripter" : "Gusano2314",
+            "scriptname" : "Artifact Contest 2",
+            "dvdb" : ""
+        },
+        {
+            "id": "72",
+            "ytid": "6rie53Kr1RU",
+            "scripter" : "Sparen",
+            "scriptname" : "AAA Contest: Nuclear Hell Raven",
+            "dvdb" : "sparenofiria.html#range11"
+        },
+        {
+            "id": "73",
+            "ytid": "o_q44C1uy-k",
+            "scripter" : "Kirbio",
+            "scriptname" : "AAA Contest: It's about time!",
+            "dvdb" : ""
+        },
+        {
+            "id": "74",
+            "ytid": "zZk1wZsrXOQ",
+            "scripter" : "PhantomSong",
+            "scriptname" : "Flandre Scarlet Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "75",
+            "ytid": "Lt9HLiimow0",
+            "scripter" : "PhantomSong",
+            "scriptname" : "Yuuka Kazami Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "76",
+            "ytid": "bKaKUeq0wCY",
+            "scripter" : "PhantomSong",
+            "scriptname" : "LOCAA Contest 5: Let the Religion War Continue!!",
+            "dvdb" : ""
+        },
+        {
+            "id": "77",
+            "ytid": "buqjGcXLBjE",
+            "scripter" : "AJS",
+            "scriptname" : "LOCAA Contest 5: Celestial Showdown",
+            "dvdb" : ""
+        },
+        {
+            "id": "78",
+            "ytid": "9dTJqRucfYM",
+            "scripter" : "Gusano2314",
+            "scriptname" : "LOCAA Contest 5",
+            "dvdb" : ""
+        },
+        {
+            "id": "79",
+            "ytid": "Wu_dtXK9_7A",
+            "scripter" : "Hunguil",
+            "scriptname" : "Yoshika - Stage 6 Version",
+            "dvdb" : ""
+        },
+        {
+            "id": "80",
+            "ytid": "s6raKTIzfpM",
+            "scripter" : "Lunarethic",
+            "scriptname" : "All Spell Youmu",
+            "dvdb" : ""
         }
     ]
 };
