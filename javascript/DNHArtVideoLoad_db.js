@@ -748,6 +748,90 @@ var DNHArtobj = {
             "scripter" : "Lunarethic",
             "scriptname" : "Seiran Boss Fight",
             "dvdb" : ""
+        },
+        {
+            "id": "107",
+            "ytid": "MSKxdNh9E4A",
+            "scripter" : "Conarnar",
+            "scriptname" : "Youmu Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "108",
+            "ytid": "NIZBegLfKHQ",
+            "scripter" : "PhantomSong",
+            "scriptname" : "Ringo Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "109",
+            "ytid": "pAIqFdPssqo",
+            "scripter" : "Lunarethic",
+            "scriptname" : "Shrine Maiden of Paradise",
+            "dvdb" : ""
+        },
+        {
+            "id": "110",
+            "ytid": "cPbwLy1sypg",
+            "scripter" : "Python",
+            "scriptname" : "RaNGE Contest 14: Human Inferno",
+            "dvdb" : "python.html#range14"
+        },
+        {
+            "id": "111",
+            "ytid": "t6h2J6Oz11c",
+            "scripter" : "TresserT",
+            "scriptname" : "RaNGE Contest 14: Tressert's Reisen",
+            "dvdb" : "tressert.html#range14"
+        },
+        {
+            "id": "112",
+            "ytid": "3G6F8CrDMTQ",
+            "scripter" : "PhantomSong",
+            "scriptname" : "RaNGE Contest 14: Aya Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "113",
+            "ytid": "RPAv0ca2-Hs",
+            "scripter" : "Vigor",
+            "scriptname" : "RaNGE Contest 14: Kogasa Tatara Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "114",
+            "ytid": "v0hHtvVKq5M",
+            "scripter" : "Fondue",
+            "scriptname" : "RaNGE Contest 14: Yukari Yakumo Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "115",
+            "ytid": "xJfH0Wic138",
+            "scripter" : "Sparen",
+            "scriptname" : "Danmakufu Wars Ran Boss Battle",
+            "dvdb" : "sparenofiria.html#dnhwars"
+        },
+        {
+            "id": "116",
+            "ytid": "314GmcSdxE4",
+            "scripter" : "Python",
+            "scriptname" : "ULiL-inspired Kasen Script",
+            "dvdb" : "python.html#kasen"
+        },
+        {
+            "id": "117",
+            "ytid": "QCAdrLzv7C4",
+            "scripter" : "Lunarethic",
+            "scriptname" : "RaNGE Contest 15: Pumpkin of the Afterlife",
+            "dvdb" : ""
+        },
+        {
+            "id": "118",
+            "ytid": "NVHNEBUsK20",
+            "scripter" : "Lefkada",
+            "scriptname" : "Night of Yandere - Nansei Halloween",
+            "dvdb" : ""
         }
     ]
 };
