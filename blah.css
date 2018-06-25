@@ -412,6 +412,16 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   padding-left: 5px; 
 }
 
+/* tocheader: replaces standard aqua text */
+.tocheader {
+  color: aqua;
+  background-color: #002266;
+  border-width: 4px; 
+  border-color: aqua; 
+  border-style: none none none double; 
+  padding-left: 4px; 
+}
+
 /* ph3tutorialheader: replaces boring yellow text h2s on top level pages and in the ph3 tutorials section */
 .ph3tutorialheader {
   color: #FFEECC;
