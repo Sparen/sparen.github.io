@@ -1491,6 +1491,27 @@ var dnhph3docs_object = {
                     "notes": "If set to false, the shot object will not turn into an item.<br>Defaults to true."
                 },
                 {
+                    "fname": "ObjShot_GetDamage",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "damage of shot object associated with objID : bool",
+                    "description": "Returns the damage of the shot object associated with objID.",
+                    "notes": "Player shots only."
+                },
+                {
+                    "fname": "ObjShot_GetPenetration",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "penetration of shot object associated with objID : bool",
+                    "description": "Returns the penetration of the shot object associated with objID.",
+                    "notes": "Player shots only."
+                },
+                {
+                    "fname": "ObjShot_GetDelay",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "delay of shot object associated with objID : bool",
+                    "description": "Returns the delay of the shot object associated with objID.",
+                    "notes": ""
+                },
+                {
                     "fname": "ObjShot_IsSpellResist",
                     "args": ["objID : number (Object ID)"],
                     "returnv": "true if shot object associated with objID is spell resistant; false otherwise : bool",
@@ -1538,6 +1559,13 @@ var dnhph3docs_object = {
                     "returnv": "",
                     "description": "Sets the portion of the laser object associated with objID where there is no collision, in relation to the base and the tip of the laser.",
                     "notes": "By default, the values are 10 (10%)."
+                },
+                {
+                    "fname": "ObjLaser_SetItemDistance",
+                    "args": ["objID : number (Object ID)", "interval : number"],
+                    "returnv": "",
+                    "description": "Sets the item occurrence interval when the laser object associated with objID is deleted and changed into items.",
+                    "notes": ""
                 },
                 {
                     "fname": "ObjLaser_GetLength",
