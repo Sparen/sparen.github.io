@@ -1,8 +1,4 @@
 html{color:#EEEEEE;background:#111111;}
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{
-  margin:0;
-  padding:0;
-}
 table{
   border-collapse:collapse;
   border-spacing:0;
@@ -21,7 +17,6 @@ ul {
 caption,th{text-align:left;}
 h1,h2,h3,h4,h5,h6{
   font-size:100%;
-  font-weight:normal;
 }
 q:before,q:after{content:'';}
 abbr,acronym{
@@ -67,7 +62,6 @@ a:link{color:rgb(192,255,255);}
 a:visited {color:rgb(50,200,200);}
 a:hover {color:rgb(82,235,251);}
 
-#ft{clear:both;}
 footer{clear:both;}
 #top{
   text-align:left;
@@ -76,10 +70,13 @@ footer{clear:both;}
 }
 
 .yui-t1{
-  margin:auto;
-  text-align:left;
 }
-.yui-b{position:relative;}#yui-main .yui-b{position:static;}#yui-main{width:100%;}.yui-t1 #yui-main{float:right;margin-left:-25em;}.yui-t1 .yui-b{float:left;width:12.30769em;}.yui-t1 #yui-main .yui-b{margin-left:13.30769em;}#yui-main .yui-b{float:none;width:auto;}
+.yui-b{position:relative;}
+#yui-main{width:100%;}
+#yui-main{float:right;margin-left:-25em;}
+.yui-b{float:left;width:12.30769em;}
+#yui-main .yui-b{margin-left:13.30769em;}
+#yui-main .yui-b{float:none;width:auto;}
 
 /*Alter things common to all bodies here*/
 .yui-g{
