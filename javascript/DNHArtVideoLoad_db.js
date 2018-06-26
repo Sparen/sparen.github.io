@@ -832,6 +832,111 @@ var DNHArtobj = {
             "scripter" : "Lefkada",
             "scriptname" : "Night of Yandere - Nansei Halloween",
             "dvdb" : ""
+        },
+        {
+            "id": "119",
+            "ytid": "qXjvFX1aJYo",
+            "scripter" : "Sparen",
+            "scriptname" : "RaNGE Contest 16: Descent of the Mochi Hammer",
+            "dvdb" : "sparenofiria.html#range16"
+        },
+        {
+            "id": "120",
+            "ytid": "dVtzxTeOfk4",
+            "scripter" : "Vigor",
+            "scriptname" : "RaNGE Contest 16: Mus Armus",
+            "dvdb" : ""
+        },
+        {
+            "id": "121",
+            "ytid": "0hL6BJCqPPM",
+            "scripter" : "Spectral Nexus",
+            "scriptname" : "RaNGE Contest 16: Letty Whiterock",
+            "dvdb" : ""
+        },
+        {
+            "id": "122",
+            "ytid": "c5tHfz5RYaE",
+            "scripter" : "Conarnar",
+            "scriptname" : "LOCAA Contest 7: Dimentio",
+            "dvdb" : ""
+        },
+        {
+            "id": "123",
+            "ytid": "K-nheMfRzxg",
+            "scripter" : "Vigor",
+            "scriptname" : "LOCAA Contest 7: Cimelio Canto",
+            "dvdb" : ""
+        },
+        {
+            "id": "124",
+            "ytid": "Bm0ibO9FIUI",
+            "scripter" : "Mr. Gaberson",
+            "scriptname" : "LOCAA Contest 7: The Martial Lord of Loyalty",
+            "dvdb" : ""
+        },
+        {
+            "id": "125",
+            "ytid": "jZHSMEbg-ZI",
+            "scripter" : "Lunarethic",
+            "scriptname" : "LOCAA Contest 8: Midnight Crimson",
+            "dvdb" : ""
+        },
+        {
+            "id": "126",
+            "ytid": "BtjFRJ-72ww",
+            "scripter" : "AJS",
+            "scriptname" : "LOCAA Contest 8: Guardian of the Mastermind",
+            "dvdb" : ""
+        },
+        {
+            "id": "127",
+            "ytid": "Q8HgQtnT4So",
+            "scripter" : "Conarnar",
+            "scriptname" : "Len'en Contest 1: Sticky Umbrella",
+            "dvdb" : ""
+        },
+        {
+            "id": "128",
+            "ytid": "Q4_1i_1dOzQ",
+            "scripter" : "Mr. Gaberson",
+            "scriptname" : "LOCAA Contest 10: Skylight Overseer",
+            "dvdb" : ""
+        },
+        {
+            "id": "129",
+            "ytid": "NsiEq_D6GTc",
+            "scripter" : "Python",
+            "scriptname" : "Etarnity Larva",
+            "dvdb" : "python.html#etarnity"
+        },
+        {
+            "id": "130",
+            "ytid": "F1UQy3gPeoA",
+            "scripter" : "Sparen",
+            "scriptname" : "RaNGE Contest 17: Shimmering Cyclochasm",
+            "dvdb" : "sparenofiria.html#range17"
+        },
+        {
+            "id": "131",
+            "ytid": "qQBcZ4zcHyY",
+            "scripter" : "Python",
+            "scriptname" : "Flesh and Stone",
+            "dvdb" : "python.html#narumi"
+        },
+        {
+            "id": "132",
+            "ytid": "vdonpnj4bfM",
+            "scripter" : "Haru & SKN",
+            "scriptname" : "UWoM Contest 1: The Monochrome Orochi",
+            "dvdb" : ""
+        },
+        {
+            "id": "133",
+            "ytid": "s9vgI5BluVQ",
+            "scripter" : "Sparen",
+            "scriptname" : "RaNGE Contest 19: Moonstruck Magician",
+            "dvdb" : "sparenofiria.html#range19"
         }
     ]
 };
