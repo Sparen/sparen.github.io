@@ -265,7 +265,7 @@ var dnhph3docs_standard = {
                     "args": ["value : string"],
                     "returnv": "value as an integer : number (int)",
                     "description": "Parses the string to an integer, truncating decimal components, and returns the integer.",
-                    "notes": "If the string does not represent a valid number, then 0 will be returned."
+                    "notes": "If the string does not represent a valid number, then 0 will be returned.<br>Only works within limits of an int32 - for arbitrarily large numbers, use ator()"
                 },
                 {
                     "fname": "ator",
