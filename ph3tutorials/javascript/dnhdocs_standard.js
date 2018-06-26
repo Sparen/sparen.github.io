@@ -223,14 +223,14 @@ var dnhph3docs_standard = {
                     "args": ["value : number"],
                     "returnv": "value as a string : string",
                     "description": "Returns the value as a string.",
-                    "notes": ""
+                    "notes": "Example: ToString(1) -> '1.000000'<br>Example: ToString(\"Cat\" ~ ToString(1.5)) -> 'Cat1.500000'"
                 },
                 {
                     "fname": "IntToString",
                     "args": ["value : number"],
                     "returnv": "value as a string : string",
                     "description": "Returns the value as a string.",
-                    "notes": "Omits any decimal places if a floating point value is provided."
+                    "notes": "Omits any decimal places if a floating point value is provided.<br>Example: IntToString(1) -> '1'"
                 },
                 {
                     "fname": "itoa",
