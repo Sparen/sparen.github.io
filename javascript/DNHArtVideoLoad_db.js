@@ -940,3 +940,211 @@ var DNHArtobj = {
         }
     ]
 };
+
+var DNHLPobj = {
+    "videos": [
+        {
+            "id": "1",
+            "ytid": "4QZEAkq8TUw",
+            "scripter" : "Python",
+            "scriptname" : "Night at the Hakurei Shrine",
+            "dvdb" : ""
+        },
+        {
+            "id": "2",
+            "ytid": "c_7GzGIpzQU",
+            "scripter" : "Yoshi",
+            "scriptname" : "Reimu vs Sanae",
+            "dvdb" : ""
+        },
+        {
+            "id": "3",
+            "ytid": "HMdwVnz7foU",
+            "scripter" : "AchySolrock",
+            "scriptname" : "Karen Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "4",
+            "ytid": "2iev2AWVK2s",
+            "scripter" : "Conarnar",
+            "scriptname" : "RaNGE Contest 14: Reisen Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "5",
+            "ytid": "kxoX1Yszp6k",
+            "scripter" : "Conarnar",
+            "scriptname" : "Sagume Kishin Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "6",
+            "ytid": "ey72N5L6eOo",
+            "scripter" : "Python",
+            "scriptname" : "The Piece of Junk and the Ball Addict",
+            "dvdb" : "python.html#junkohecatia"
+        },
+        {
+            "id": "7",
+            "ytid": "2XDlw8xwPL0",
+            "scripter" : "TalosMistake",
+            "scriptname" : "Clownpiece Boss Fight",
+            "dvdb" : ""
+        },
+        {
+            "id": "8",
+            "ytid": "8J6HyPg5870",
+            "scripter" : "PhantomSong",
+            "scriptname" : "Touhou x Undertale Project - Muffet",
+            "dvdb" : ""
+        },
+        {
+            "id": "9",
+            "ytid": "8AJioyvQslA",
+            "scripter" : "Kirbio",
+            "scriptname" : "RaNGE Contest 15: Koishitale",
+            "dvdb" : ""
+        },
+        {
+            "id": "10",
+            "ytid": "avw2Ukolz4k",
+            "scripter" : "Gizmo and Python",
+            "scriptname" : "Mitama Magahara",
+            "dvdb" : ""
+        },
+        {
+            "id": "11",
+            "ytid": "bdNMX5ER_uo",
+            "scripter" : "Akakyu",
+            "scriptname" : "Sumireko Usami Extra Boss",
+            "dvdb" : ""
+        },
+        {
+            "id": "12",
+            "ytid": "bcwd6y4-eGo",
+            "scripter" : "Python",
+            "scriptname" : "RaNGE Contest 16: Little Mermaid",
+            "dvdb" : "python.html#range16"
+        },
+        {
+            "id": "13",
+            "ytid": "vJvnMOT0i7A",
+            "scripter" : "Tressert",
+            "scriptname" : "RaNGE Contest 16: Percect Mastermind",
+            "dvdb" : "tressert.html#range16"
+        },
+        {
+            "id": "14",
+            "ytid": "uyHvMQt9Rs8",
+            "scripter" : "Midnight Studios",
+            "scriptname" : "RaNGE Contest 16: Perpetual Winter",
+            "dvdb" : ""
+        },
+        {
+            "id": "15",
+            "ytid": "ELheb4TWjvo",
+            "scripter" : "Dry the Meowstic",
+            "scriptname" : "RaNGE Contest 16: Where the Firefly Flies",
+            "dvdb" : "meowstic.html#range16"
+        },
+        {
+            "id": "16",
+            "ytid": "0HpNnh4o9V0",
+            "scripter" : "Fefnir",
+            "scriptname" : "RaNGE Contest 16: Harvester Season",
+            "dvdb" : ""
+        },
+        {
+            "id": "17",
+            "ytid": "somE2-IF0yA",
+            "scripter" : "Zhan Fox",
+            "scriptname" : "RaNGE Contest 16: Harvest Crisis",
+            "dvdb" : ""
+        },
+        {
+            "id": "18",
+            "ytid": "4sxvJBhL04g",
+            "scripter" : "Haru",
+            "scriptname" : "RaNGE Contest 16: Chang'e's Assassin",
+            "dvdb" : ""
+        },
+        {
+            "id": "19",
+            "ytid": "6UEDO3Cxoeg",
+            "scripter" : "Badz",
+            "scriptname" : "RaNGE Contest 16: Gatekeeper of Makai",
+            "dvdb" : ""
+        },
+        {
+            "id": "20",
+            "ytid": "5de1QI29fKU",
+            "scripter" : "Trickysticks",
+            "scriptname" : "RaNGE Contest 16: Dreams of Ice",
+            "dvdb" : ""
+        },
+        {
+            "id": "21",
+            "ytid": "iTnNmiFWYFc",
+            "scripter" : "PhantomSong",
+            "scriptname" : "RaNGE Contest 16: Shoot for the Moon",
+            "dvdb" : ""
+        },
+        {
+            "id": "22",
+            "ytid": "wTpZx4tkovw",
+            "scripter" : "Arby26",
+            "scriptname" : "RaNGE Contest 16: Seiran Boss Battle",
+            "dvdb" : ""
+        },
+        {
+            "id": "23",
+            "ytid": "-pX0nWGfteo",
+            "scripter" : "AJS",
+            "scriptname" : "MTT-Brand Silly Script",
+            "dvdb" : ""
+        },
+        {
+            "id": "24",
+            "ytid": "HdZWbvrwg-M",
+            "scripter" : "Gizmo the Dragon",
+            "scriptname" : "LOCAA Contest 7: Wolfgang Boss Fight",
+            "dvdb" : ""
+        },
+        {
+            "id": "25",
+            "ytid": "Y65atVZbZIw",
+            "scripter" : "Dry the Meowstic",
+            "scriptname" : "LOCAA Contest 7: Reflection Cave",
+            "dvdb" : "meowstic.html#locaa7"
+        },
+        {
+            "id": "26",
+            "ytid": "gU6JJEfOxHM",
+            "scripter" : "Fluffy8x",
+            "scriptname" : "LOCAA Contest 7: Homura no Neko",
+            "dvdb" : ""
+        },
+        {
+            "id": "27",
+            "ytid": "5jNZK2NoFS0",
+            "scripter" : "TresserT",
+            "scriptname" : "LOCAA Contest 7: End of the Ordinary Witch",
+            "dvdb" : "tressert.html#locaa7"
+        },
+        {
+            "id": "28",
+            "ytid": "GbXDzUFgcKM",
+            "scripter" : "Conarnar",
+            "scriptname" : "Time Stopper Sakuya",
+            "dvdb" : ""
+        },
+        {
+            "id": "29",
+            "ytid": "Cxa0kiaIoj4",
+            "scripter" : "Dry the Meowstic",
+            "scriptname" : "Orin Boss Fight",
+            "dvdb" : "meowstic.html#orin"
+        }
+    ]
+};
