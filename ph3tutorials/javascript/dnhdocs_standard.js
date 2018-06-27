@@ -363,10 +363,10 @@ var dnhph3docs_standard = {
             "fxns": [
                 {
                     "fname": "GetCurrentDateTimeS",
-                    "args": ["date : string"],
+                    "args": [],
                     "returnv": "string containing the current date and time : string (date)",
                     "description": "Returns a string containing the current date and time.",
-                    "notes": "Example: If the current date is 2012/09/16 12:34:56, then \"20120916123456\" will be returned.<br>To convert to a number use atoi like so: <code>let year = atoi(GetCurrentDateTimeS[0..4]);</code>"
+                    "notes": "Example: If the current date is 2012/09/16 12:34:56, then \"20120916123456\" will be returned.<br>To convert to a number use atoi like so: <code>let year = atoi(GetCurrentDateTimeS()[0..4]);</code>"
                 },
                 {
                     "fname": "GetStageTime",
