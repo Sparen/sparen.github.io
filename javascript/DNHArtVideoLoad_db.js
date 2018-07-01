@@ -781,7 +781,7 @@ var DNHArtobj = {
             "id": "111",
             "ytid": "t6h2J6Oz11c",
             "scripter" : "TresserT",
-            "scriptname" : "RaNGE Contest 14: Tressert's Reisen",
+            "scriptname" : "RaNGE Contest 14: TresserT's Reisen",
             "dvdb" : "tressert.html#range14"
         },
         {
@@ -1030,7 +1030,7 @@ var DNHLPobj = {
         {
             "id": "13",
             "ytid": "vJvnMOT0i7A",
-            "scripter" : "Tressert",
+            "scripter" : "TresserT",
             "scriptname" : "RaNGE Contest 16: Percect Mastermind",
             "dvdb" : "tressert.html#range16"
         },
@@ -1145,6 +1145,216 @@ var DNHLPobj = {
             "scripter" : "Dry the Meowstic",
             "scriptname" : "Orin Boss Fight",
             "dvdb" : "meowstic.html#orin"
+        },
+        {
+            "id": "30",
+            "ytid": "4SW41Pw-B8k",
+            "scripter" : "AchySolrock",
+            "scriptname" : "LOCAA Contest 8: Pure Qi",
+            "dvdb" : ""
+        },
+        {
+            "id": "31",
+            "ytid": "p7UWwEKXH4Y",
+            "scripter" : "Agent17",
+            "scriptname" : "LOCAA Contest 8: Esoteric Prayers",
+            "dvdb" : ""
+        },
+        {
+            "id": "32",
+            "ytid": "mHBuwugyXlY",
+            "scripter" : "Akakyu",
+            "scriptname" : "LOCAA Contest 8: Gathering the Power of Zoujou-Ten",
+            "dvdb" : ""
+        },
+        {
+            "id": "33",
+            "ytid": "5svV37fsjiM",
+            "scripter" : "Awalys",
+            "scriptname" : "LOCAA Contest 8: Sweet Dreams: PURIFIED",
+            "dvdb" : ""
+        },
+        {
+            "id": "34",
+            "ytid": "bb6UsDOqySw",
+            "scripter" : "Gizmo",
+            "scriptname" : "LOCAA Contest 8: Who Prefers Only Purest Tastes",
+            "dvdb" : "gizmothedragon.html#locaa8"
+        },
+        {
+            "id": "35",
+            "ytid": "ytS_A2pqSw8",
+            "scripter" : "Kirbio",
+            "scriptname" : "LOCAA Contest 8: Scarlet Devil Chaos",
+            "dvdb" : ""
+        },
+        {
+            "id": "36",
+            "ytid": "YMy2ZDv5dBI",
+            "scripter" : "Lefkada",
+            "scriptname" : "LOCAA Contest 8: Pure Gensokyo - Label Noir",
+            "dvdb" : ""
+        },
+        {
+            "id": "37",
+            "ytid": "NXz3XibygKo",
+            "scripter" : "DrytheMeowstic",
+            "scriptname" : "LOCAA Contest 8: An Unknown White UFO",
+            "dvdb" : "meowstic.html#locaa8"
+        },
+        {
+            "id": "38",
+            "ytid": "JUL49pB8mZM",
+            "scripter" : "PhantomSong",
+            "scriptname" : "LOCAA Contest 8: Pure Judgement",
+            "dvdb" : ""
+        },
+        {
+            "id": "39",
+            "ytid": "zlMyWFVbKNU",
+            "scripter" : "TresserT",
+            "scriptname" : "LOCAA Contest 8: Alice Boss Battle",
+            "dvdb" : "tressert.html#locaa8"
+        },
+        {
+            "id": "40",
+            "ytid": "KNqg6q6LHzI",
+            "scripter" : "Lunarethic",
+            "scriptname" : "Muse",
+            "dvdb" : ""
+        },
+        {
+            "id": "41",
+            "ytid": "86DZGBAs-Wk",
+            "scripter" : "Achy and gtbot",
+            "scriptname" : "Len'en Contest 1: Contest Entry",
+            "dvdb" : ""
+        },
+        {
+            "id": "42",
+            "ytid": "G6av1Q--rMs",
+            "scripter" : "Choon and Adam",
+            "scriptname" : "Len'en Contest 1: Shall We Overhaul",
+            "dvdb" : ""
+        },
+        {
+            "id": "43",
+            "ytid": "1QJ9OfXEkWI",
+            "scripter" : "SKN",
+            "scriptname" : "Len'en Contest 1: General Day in Mugenri",
+            "dvdb" : ""
+        },
+        {
+            "id": "44",
+            "ytid": "jVPtO97tZTY",
+            "scripter" : "Natashi",
+            "scriptname" : "Len'en Contest 1: Blood-Stained Silver Bullet",
+            "dvdb" : ""
+        },
+        {
+            "id": "45",
+            "ytid": "MO8nc8S9fk8",
+            "scripter" : "AJS",
+            "scriptname" : "Queen of Fools",
+            "dvdb" : ""
+        },
+        {
+            "id": "46",
+            "ytid": "V0PvJQBLyrU",
+            "scripter" : "Kirbio",
+            "scriptname" : "東方動揺音 ～ SiIver Sonata",
+            "dvdb" : ""
+        },
+        {
+            "id": "47",
+            "ytid": "O8VyvcHnfxY",
+            "scripter" : "Conarnar",
+            "scriptname" : "Haiji's New SCC",
+            "dvdb" : ""
+        },
+        {
+            "id": "48",
+            "ytid": "fbtCuCi7-L0",
+            "scripter" : "Dark",
+            "scriptname" : "LOCAA Contest 10: Moonlight Butterfly",
+            "dvdb" : ""
+        },
+        {
+            "id": "49",
+            "ytid": "dCVRiDTbNRU",
+            "scripter" : "DrytheMeowstic",
+            "scriptname" : "LOCAA Contest 10: 201X Invasion",
+            "dvdb" : "meowstic.html#locaa10"
+        },
+        {
+            "id": "50",
+            "ytid": "kAOC9hQ8y3I",
+            "scripter" : "Trickygon Productions",
+            "scriptname" : "LOCAA Contest 10: LeBlanc the Deceiver",
+            "dvdb" : ""
+        },
+        {
+            "id": "51",
+            "ytid": "tTs5OsC1YSk",
+            "scripter" : "Conarnar",
+            "scriptname" : "RaNGE Contest 18: Extraordinary Subconscious",
+            "dvdb" : ""
+        },
+        {
+            "id": "52",
+            "ytid": "rcMeMzU2ydE",
+            "scripter" : "Vigor",
+            "scriptname" : "RaNGE Contest 18: Recollection Violet",
+            "dvdb" : ""
+        },
+        {
+            "id": "53",
+            "ytid": "rMFZIoDbKi4",
+            "scripter" : "DrytheMeowstic",
+            "scriptname" : "RaNGE Contest 18: Youkai Road",
+            "dvdb" : "meowstic.html#range18"
+        },
+        {
+            "id": "54",
+            "ytid": "fhVCnH-_ouM",
+            "scripter" : "Umbra",
+            "scriptname" : "RaNGE Contest 18: Overly Spicy Chicken Nugget",
+            "dvdb" : "umbra.html#range18"
+        },
+        {
+            "id": "55",
+            "ytid": "PhsTlqEMn08",
+            "scripter" : "TresserT",
+            "scriptname" : "LOCAA Contest 11: A Legacy of Malice",
+            "dvdb" : "tressert.html#locaa11"
+        },
+        {
+            "id": "56",
+            "ytid": "x39xb64Y3IE",
+            "scripter" : "TTBD & Adam",
+            "scriptname" : "LOCAA Contest 11: The Scarlet Mansion's Master and Servant",
+            "dvdb" : ""
+        },
+        {
+            "id": "57",
+            "ytid": "7s89y3IpHsg",
+            "scripter" : "Junky & GCP",
+            "scriptname" : "LOCAA Contest 11: The Corpse of the Fallout",
+            "dvdb" : ""
+        },
+        {
+            "id": "58",
+            "ytid": "-yNGOlUPl2Y",
+            "scripter" : "DrytheMeowstic",
+            "scriptname" : "UWoM Contest 1: Ink-based Trinity",
+            "dvdb" : "meowstic.html#uwom1"
+        },
+        {
+            "id": "59",
+            "ytid": "QJEmMQfFr9k",
+            "scripter" : "TTBD & Adam",
+            "scriptname" : "UWoM Contest 1: Evanescent Parallel Universe",
+            "dvdb" : ""
         }
     ]
 };
