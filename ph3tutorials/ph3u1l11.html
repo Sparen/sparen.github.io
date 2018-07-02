@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Feb 14, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jul 02, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -51,14 +51,14 @@
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
-	      </div>	      <h2 style="color:yellow" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
 	      <p>In this lesson, I will be explaining Danmakufu's coordinate system in greater detail, and will explain how you can use trigonometry and parametric equations (based off of the angle theta, primarily) to create bullets at points relative to an object such as a boss or relative to coordinates. This lesson will supplement existing tutorials, such as my <a target="_blank" href="https://www.youtube.com/watch?v=6c54DO4gjos">Spawning Danmaku in Circles and Ellipses</a> tutorial.</p>
 	      <p>The main focus of this lesson will be on utilizing trigonometry in Danmakufu and using it to create simple shapes such as circles and ellipses. There is a secondary focus on the general coordinate system, and I will also be covering basic Rotation Matrices (in the future) and Parametric Equations. As much as I would love to cover Polar Equations, it's not meant for this tutorial and if you would like to implement those, you can find information on Polar Equations in Danmakufu in my old tutorials for 0.12m.</p>
-	      <h2 style="color:yellow" id="sub2">Part 2: How Does Touhou Danmakufu ph3's Coordinate System Work?</h2>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: How Does Touhou Danmakufu ph3's Coordinate System Work?</h2>
 	      <p>As stated back in <a href="./ph3u1l6.html">Lesson 6</a>, Danmakufu's coordinate system is not the same as taught in most mathematics courses. Since the origin (for render priorities between 0.20 and 0.80) is in the top left corner, the x direction increases as you move to the right but the y direction increases as you move downwards. Using the same system, angles increase from 0 to 360 starting directly right and increasing in a clockwise direction so that 90 degrees is directly down, 180 degrees is directly left, and 270 degrees is straight up.</p>
 	      <p>For this lesson, we will need to take all three factors into consideration when we deal with angles and coordinate systems.</p>
 	      <p>As shown in previous lessons, we can create a bullet 10 pixels to the left of the boss and 5 pixels above the boss by setting the x parameter of CreateShot to <code>ObjMove_GetX(objBoss)-10</code> and by setting the y parameter to <code>ObjMove_GetY(objBoss)-5</code>. We will use this in the next part.</p>
-	      <h2 style="color:yellow" id="sub3">Part 3: How Can I Use Trigonometry to Create a Ring of Bullets?</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How Can I Use Trigonometry to Create a Ring of Bullets?</h2>
 	      <p>Now we will aim to write a script that will spawn bullets in a circle of radius 90 around the boss, and another circle of radius 60 around the player. We saw this earlier in <a href="./ph3u1l9.html">Lesson 9</a>, when I described a method of creating Non-Directional Lasers.</p>
 	      <p>To begin, we will need to understand the Unit Circle, as well as sine and cosine.</p>
 	      <img alt="Unit Circle" src="tutimg/unitcircle.png" style="max-width:359px;width:100%;height:auto"><br><br>
@@ -84,11 +84,11 @@
     }</code></pre>
 	      <p>This will work correctly for all points in the circle. What the 90* does is basically scale the graph. Therefore, we essentially scale the unit circle so that instead of having a radius of 1, we have a radius of 90. And in the above graph, we scale the vertical axis to go from 90 to -90.</p>
 	      <p>The end result is a ring of bullets of radius 90 centered around the boss.</p>
-	      <p>How about the player? Well, the only real difference is that we will multiply by 60 instead of 90, and will change the base coordinate (currently (ObjMove_GetX(objBoss), ObjMove_GetY(objBoss)) to (GetPlayerX, GetPlayerY)</p>
+	      <p>How about the player? Well, the only real difference is that we will multiply by 60 instead of 90, and will change the base coordinate (currently (<span class="tooltip" onmouseover="getFxnDocs('ObjMove_GetX', 'f_omgx_01');"><code>ObjMove_GetX(objBoss)</code><span class="tooltiptext" id="f_omgx_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('ObjMove_GetY', 'f_omgy_01');"><code>ObjMove_GetY(objBoss)</code><span class="tooltiptext" id="f_omgy_01"></span></span>) to (<span class="tooltip" onmouseover="getFxnDocs('GetPlayerX', 'f_gpx_01');"><code>GetPlayerX()</code><span class="tooltiptext" id="f_gpx_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('GetPlayerY', 'f_gpy_01');"><code>GetPlayerY()</code><span class="tooltiptext" id="f_gpy_01"></span></span>)</p>
 	      <p>And with that, we have made what we planned to make! To see a gif representation of what we are doing, click <a target="_blank" href="http://i.imgur.com/O0b3H2S.gif" title="Sine and Cosine">here</a>.</p>
 	      <div class="tut_checkpoint">CHECKPOINT: How do sine and cosine change as theta goes from 0 to 360? Using the unit circle, how does this translate into the circle of bullets?</div>
 	      <div class="tut_exercise">EXERCISE: Experiment with the provided code. Create rings of bullets, or even rings of rings of bullets. You can also do rings of rings of rings of bullets - if you can pull this off, you are all set!</div>
-	      <h2 style="color:yellow" id="sub4">Part 4: How Can I Use Trigonometry to Create an Ellipse of Bullets?</h2>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How Can I Use Trigonometry to Create an Ellipse of Bullets?</h2>
 	      <p>An ellipse, as static as generically as possible, is a circle stretched in a direction. Technically, it is a conic where the sum of the distances from two foci on the major axis is always equal, but that gets lost when you make ellipses using parametric equations because you don't need to know about the foci to create the ellipse. If you really want to know, here's a <a target="_blank" href="http://giphy.com/gifs/educational-ellipse-Qk5fIr8LRYACI" title="Ellipse GIF">link</a> to a good gif.</p>
 	      <p>Now that that's out of the way, we can move on to what we actually want to do!</p>
 	      <p>Let's say that we want to have an ellipse where half the length of the major axis (we will use the x axis) is 75, and half the length of the minor axis (we will use the y axis) is 30. We will begin by examining our code from earlier, where we created a circle.</p>
@@ -105,7 +105,7 @@
         angleT += 360/30;
     }</code></pre>
 	      <p>Hooray! We now have an ellipse in Danmakufu! It works the same way as with the circle - it's just that the bullets will be more bunched up towards the sides and more spread out at the top. You can bend and contort this ellipse as much as you want, and you can do lots of stretching in the x and y directions. However, if you want to rotate it... well... you're getting into some pretty ugly territory now - specifically, you will need to use rotation matrices. Since I am not yet able to use them effectively myself and therefore cannot write a tutorial for them, I encourage you to study them if you ever decide that you want to use rotated ellipses or other rotated graphs.</p>
-	      <h2 style="color:yellow" id="quiz1">Quiz: Circles and Ellipses in Danmakufu ph3</h2>
+	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Circles and Ellipses in Danmakufu ph3</h2>
 	        <!--Quiz start.-->
 		<p>1) As part of her daily routine, Suwako is retaliating against Cirno using Mishaguji-sama. To do this, she must employ circles. Which of the following will spawn a circle?</p>
 	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
@@ -133,7 +133,7 @@
 	        C. 80.8 pixels<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
-	      <h2 style="color:yellow" id="sub5">Part 5: What are Parametric Equations?</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: What are Parametric Equations?</h2>
 	      <p>Sometimes you can't describe things in math with simple coordinates. And so, you express them in terms of other systems, such as polar coordinates. These are parameterizations, and although the usage of parameterized functions, curves, and surfaces have a significant application in mathematics, we will stick with simple 2D curves. Specifically, we will talk about parameterizing in terms of a single variable t (or the angle theta, for basically everything).</p>
 	      <p>Let's take Danmakufu's coordinate system for Move Objects. You can set the x and y coordinates of an object like so:</p>
 	      <pre class="prettyprint"><code>    ObjMove_SetPosition(obj, 384 / 2, 448 / 2); //place object at center of screen</code></pre>
@@ -150,7 +150,7 @@
 	      <p>\(x = 75\times cos(t)\)<br><br>\(y = 30\times sin(t)\)</p>
 	      <p>Note that I am treating the boss's position as the origin for the purposes of these equations. Above is the parametric equation for an ellipse.</p>
 	      <p>So how exactly does it work? Well, we have our angleT variable, which we initialized to 0 at the start of the code. We then looped through, changing its value. As we changed the parameter angleT, the values of x and y in both equations changed, resulting in bullet placement that formed an ellipse. This is actually quite powerful, because you can use virtually any 2D parametric equation in Danmakufu by simply plugging the equations into a function.</p>
-	      <h2 style="color:yellow" id="sub6">Part 6: How Can I Use Parametric Equations in Danmakufu?</h2>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How Can I Use Parametric Equations in Danmakufu?</h2>
 	      <p>Let's take some ridiculous equation and spawn it in Danmakufu.</p>
 	      <pre class="prettyprint linenums"><code>    task ParametricRing(){
         let angleT = rand(0, 360);
@@ -200,13 +200,13 @@
 	      <p>And that's that. We have an astroid. Of course, with these types of curves, you don't usually want the bullets to just go outwards with the same speed, because it will just look like a square, then a circle as it gets farther from its spawn point. You could do some complex speed alteration, or you could just change the angle and do interesting things with the angle. It's up to you.</p>
 	      <p>That concludes the lesson!</p>
 	      <div class="tut_exercise">EXERCISE: Try to recreate some parametric equations in Danmakufu. Try incrementing the angle at which the bullets are fired as you go around, or experiment with different speeds.</div>
-	      <h2 style="color:yellow" id="subs">Summary</h2>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>Angles in danmakufu increase in clockwise order, and the origin is the top left of the playing field for render priorities between 0.20 and 0.80</li>
 	          <li>Using sine and cosine, it is possible to create circles and ellipses using danmakufu</li>
 	          <li>You can use Parametric Equations in Danmakufu for advanced mathematical patterns</li>
 	        </ul>
-	      <h2 style="color:yellow" id="subf">Sources and External Resources</h2>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p><a target="_blank" href="https://www.youtube.com/watch?v=6c54DO4gjos" title="Sparen's Spawning Danmaku in Circles and Ellipses Tutorial">[1] Touhou Danmakufu ph3 Tutorial - Spawning Danmaku in Circles and Ellipses </a> (Sparen)<br>--&gt;This tutorial is a video supplement to this lesson - it doesn't cover the same things but both lessons depends on each other.</p>
 	      <br>            </div>          </div>
           <div class="tutnavbar">

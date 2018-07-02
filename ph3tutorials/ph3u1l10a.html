@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Oct 18, 2015')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jul 02, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -50,7 +50,7 @@
 	      <p>In this lesson, I will be explaining how to recreate Moonlight Ray, with explanations on how to create and change the angle of straight lasers in Touhou Danmakufu ph3. The end goal of this lesson is for you to better understand how to change the angle of a straight laser.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: How do I Create Moving Straight Lasers?</h2>
 	      <p>In <a href="./ph3u1l9.html">Lesson 9</a>, I discussed (briefly), changing the angle of a laser using non-directional lasers. In this scenario, we will not be doing something as complicated as that, so it should be easier to grasp what we will doing.</p>
-	      <p>Recall from Lesson 9 that we can manipulate the angle of a straight laser using <code>ObjStLaser_SetAngle()</code>. Our goal is to create two lasers, one to the right and one to the left of Rumia, that change angle at a set speed as they enclose the player.</p>
+	      <p>Recall from Lesson 9 that we can manipulate the angle of a straight laser using <span class="tooltip" onmouseover="getFxnDocs('ObjStLaser_SetAngle', 'f_ostsa_01');"><code>ObjStLaser_SetAngle()</code><span class="tooltiptext" id="f_ostsa_01"></span></span>. Our goal is to create two lasers, one to the right and one to the left of Rumia, that change angle at a set speed as they enclose the player.</p>
 	      <p>Therefore, given a set initial angle, we can use a while loop to gradually change the angle of the player. In this case, the right laser goes from approximately -15 degrees clockwise to approximately -75 degrees, and the left laser goes from approximately 165 degrees counterclockwise to approximately -105 degrees.</p>
 	      <p>We will try to use one while loop to control both lasers, since their behavior is similar.</p>
 	      <p>Let us create a task fireLaser that, when called, will create a laser given a parameter passed into the task, in this case a direction - 1 for the right laser and -1 for the left laser. Let's begin with the object itself.</p>
