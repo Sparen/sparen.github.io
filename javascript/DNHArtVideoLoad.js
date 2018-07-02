@@ -1,7 +1,7 @@
 function runDNHArtLoad() {
     videoload("table_dnhart", DNHArtobj, "DNHArt");
     videoload("table_dnhlp", DNHLPobj, "DNHLP");
-    //DNHLP, DNHFart go here
+    videoload("table_dnhfart", DNHFartobj, "DNHFart");
 }
 
 function videoload(domid, objid, cat) {

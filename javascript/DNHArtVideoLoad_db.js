@@ -1358,3 +1358,85 @@ var DNHLPobj = {
         }
     ]
 };
+
+var DNHFartobj = {
+    "videos": [
+        {
+            "id": "1",
+            "ytid": "YnrbEv4Xhf0",
+            "scripter" : "AJS",
+            "scriptname" : "LOCAA Contest 6: Praise the Sun",
+            "dvdb" : ""
+        },
+        {
+            "id": "2",
+            "ytid": "qoTaRIdI8o8",
+            "scripter" : "Sparen",
+            "scriptname" : "LOCAA Contest 6: Danmakufu Troll Stars",
+            "dvdb" : "sparenofiria.html#locaa6"
+        },
+        {
+            "id": "3",
+            "ytid": "xkyXNGlb6lI",
+            "scripter" : "Kirbio",
+            "scriptname" : "LOCAA Contest 6: Lethal Passageway",
+            "dvdb" : ""
+        },
+        {
+            "id": "4",
+            "ytid": "JWQHxYFoGPo",
+            "scripter" : "AJS",
+            "scriptname" : "Cirno Day 2k14",
+            "dvdb" : ""
+        },
+        {
+            "id": "5",
+            "ytid": "FKln_G8zKlI",
+            "scripter" : "AJS",
+            "scriptname" : "Dance of Bird and Beast - Choujuu Gigaku",
+            "dvdb" : ""
+        },
+        {
+            "id": "6",
+            "ytid": "vxL-KH3ZReY",
+            "scripter" : "Conarnar",
+            "scriptname" : "Reimu Fights the Illuminati",
+            "dvdb" : ""
+        },
+        {
+            "id": "7",
+            "ytid": "Px-H5GQPmSI",
+            "scripter" : "AJS",
+            "scriptname" : "The Cacophonous Cadre",
+            "dvdb" : ""
+        },
+        {
+            "id": "8",
+            "ytid": "dYcfcirdcQw",
+            "scripter" : "Trickysticks",
+            "scriptname" : "Trickysticks' Mima Script",
+            "dvdb" : ""
+        },
+        {
+            "id": "9",
+            "ytid": "1ZIbIqItt_M",
+            "scripter" : "AJS",
+            "scriptname" : "RaNGE Contest 14: Koishi Heck",
+            "dvdb" : ""
+        },
+        {
+            "id": "10",
+            "ytid": "zSM6nqlRBcE",
+            "scripter" : "AJS",
+            "scriptname" : "Master of Worlds",
+            "dvdb" : ""
+        },
+        {
+            "id": "11",
+            "ytid": "MOKF1xGSWmo",
+            "scripter" : "Lollipop",
+            "scriptname" : "Fidget Spinner",
+            "dvdb" : ""
+        }
+    ]
+};
