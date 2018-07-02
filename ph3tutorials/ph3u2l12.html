@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Oct 19, 2015')">
+  <body onload="setupENG('Jul 02, 2018')">
     <div class="yui-t1" id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -38,6 +38,7 @@
           <li><a href="./docs_system.html">Player Script Fxns</a></li>
           <li><a href="./docs_system.html">Private Script Fxns</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+	  <li><a href="./docs_object.html#sub16">Boss Scene Obj Fxns</a></li>
         </ul>
       </div>
       <div id="bd">
@@ -94,8 +95,8 @@
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How Do I Create a Boss Scene Object?</h2>
 	      <p>Let's first place a <code>yield;</code> in @MainLoop, as we will be using tasks. Now, let's create an empty task called TPlural. This will handle the creation of our boss scene.</p>
 	      <p>We will call this TPlural in @Initialize. Now let's fill it in.</p>
-	      <p>Firstly, we will declare a variable dir to be equal to <code>GetCurrentScriptDirectory()</code>. This is because we may be calling multiple singles, and the long <code>GetCurrentScriptDirectory()</code> function name is both tedious to write and very long.</p>
-	      <p>Now let's declare a variable obj. We will assign <code>ObjEnemyBossScene_Create()</code> to it. This function creates a boss scene object and returns the ID of given object.</p>
+	      <p>Firstly, we will declare a variable dir to be equal to <span class="tooltip" onmouseover="getFxnDocs('GetCurrentScriptDirectory', 'f_gcsd_01');"><code>GetCurrentScriptDirectory()</code><span class="tooltiptext" id="f_gcsd_01"></span></span>. This is because we may be calling multiple singles, and the long <code>GetCurrentScriptDirectory()</code> function name is both tedious to write and very long.</p>
+	      <p>Now let's declare a variable obj. We will assign <span class="tooltip" onmouseover="getFxnDocs('ObjEnemyBossScene_Create', 'f_oebsc_01');"><code>ObjEnemyBossScene_Create()</code><span class="tooltiptext" id="f_oebsc_01"></span></span> to it. This function creates a boss scene object and returns the ID of given object.</p>
 	      <p>As of now, our code should look like this:</p>
 	      <pre class="prettyprint linenums"><code>#TouhouDanmakufu[Plural]
 #ScriptVersion[3]
@@ -118,17 +119,17 @@ task TPlural{
     let obj = ObjEnemyBossScene_Create();
 }</code></pre>
 	      <p>Now, we will begin adding singles to link on. For you, you will most likely have a bunch of singles you want to link. As long as you like at least one, the plural has a purpose.</p>
-	      <p>Let's add the single script 'Nonspell1.txt' to the boss scene. We will use the function <code>ObjEnemyBossScene_Add()</code>. It takes three parameters: the boss scene object to add to, the lifebar segment (starting from 0) to attach the attack to, and the path to the single script.</p>
+	      <p>Let's add the single script 'Nonspell1.txt' to the boss scene. We will use the function <span class="tooltip" onmouseover="getFxnDocs('ObjEnemyBossScene_Add', 'f_oebsa_01');"><code>ObjEnemyBossScene_Add()</code><span class="tooltiptext" id="f_oebsa_01"></span></span>. It takes three parameters: the boss scene object to add to, the lifebar segment (starting from 0) to attach the attack to, and the path to the single script.</p>
 	      <pre class="prettyprint"><code>ObjEnemyBossScene_Add(obj, 0, dir ~ "./Nonspell1.txt");</code></pre>
 	      <p>Please note that you should always begin from the 0th lifebar and work your way up from there. Otherwise Danmakufu will complain.</p>
-	      <p>Now that we have added Nonspell1.txt to the first lifebar segment, we will load and register the boss scene. To load the boss scene into memory, we will use <code>ObjEnemyBossScene_LoadInThread(obj)</code>, and to register it, we will use <code>ObjEnemyBossScene_Regist(obj)</code>.</p>
+	      <p>Now that we have added Nonspell1.txt to the first lifebar segment, we will load and register the boss scene. To load the boss scene into memory, we will use <span class="tooltip" onmouseover="getFxnDocs('ObjEnemyBossScene_LoadInThread', 'f_oebslit_01');"><code>ObjEnemyBossScene_LoadInThread(obj)</code><span class="tooltiptext" id="f_oebslit_01"></span></span>, and to register it, we will use <span class="tooltip" onmouseover="getFxnDocs('ObjEnemyBossScene_Regist', 'f_oebsreg_01');"><code>ObjEnemyBossScene_Regist(obj)</code><span class="tooltiptext" id="f_oebsreg_01"></span></span>.</p>
 	      <p>Now, what exactly do these do? Well, loading it basically loads the plural into memory so that it can be accessed. And as for registering, it does a number of things which we will get into shortly.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: What does Registering a Boss Scene Object Do?</h2>
 	      <p>First and foremost, registering a boss scene object will run it <b>immediately</b>. You will need the following after registering, within the TPlural task:</p>
 	      <pre class="prettyprint"><code>    while(!Obj_IsDeleted(obj)){
         yield;
     }</code></pre>
-	      <p>This will wait for the Boss Scene to delete itself (it will delete once it has gone through every single that has been added on). After this, use <code>CloseScript(GetOwnScriptID());</code> to close the plural script.</p>
+	      <p>This will wait for the Boss Scene to delete itself (it will delete once it has gone through every single that has been added on). After this, use <span class="tooltip" onmouseover="getFxnDocs('CloseScript', 'f_closescript_01');"><code>CloseScript(GetOwnScriptID())</code><span class="tooltiptext" id="f_closescript_01"></span></span> to close the plural script.</p>
 	      <p>So here's our completed sample plural script.</p>
 	      <pre class="prettyprint linenums"><code>#TouhouDanmakufu[Plural]
 #ScriptVersion[3]
@@ -232,8 +233,8 @@ task TPlural{
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
 	          <li>Boss Scene Objects are the foundation of Plural Scripts</li>
-	          <li><code>ObjEnemyBossScene_Add()</code> is used to add single scripts to a plural script</li>
-	          <li><code>ObjEnemyBossScene_LoadInThread(obj)</code> is used to load a boss scene and <code>ObjEnemyBossScene_Regist(obj)</code> is used to register and begin execution</li>
+	          <li><span class="tooltip" onmouseover="getFxnDocs('ObjEnemyBossScene_Add', 'f_oebsa_02');"><code>ObjEnemyBossScene_Add()</code><span class="tooltiptext" id="f_oebsa_02"></span></span> is used to add single scripts to a plural script</li>
+	          <li><span class="tooltip" onmouseover="getFxnDocs('ObjEnemyBossScene_LoadInThread', 'f_oebslit_02');"><code>ObjEnemyBossScene_LoadInThread(obj)</code><span class="tooltiptext" id="f_oebslit_02"></span></span> is used to load a boss scene and <span class="tooltip" onmouseover="getFxnDocs('ObjEnemyBossScene_Regist', 'f_oebsreg_02');"><code>ObjEnemyBossScene_Regist(obj)</code><span class="tooltiptext" id="f_oebsreg_02"></span></span> is used to register and begin execution</li>
 	          <li>Headers of all Single scripts used in a Plural Script are completely ignored in a Plural Script</li>
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
