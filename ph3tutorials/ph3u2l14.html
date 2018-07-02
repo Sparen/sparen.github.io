@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 22, 2016')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jul 02, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -56,7 +56,7 @@
 	      <p>Back in <a href="./ph3u1l8.html">Lesson 8</a>, I talked about blend types in terms of shotsheets. Today I will go significantly more in depth and explain various uses of the various blend types, as well as what they do.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are the Blend Types in Danmakufu ph3?</h2>
 	      <p>Firstly, what are the blend types present in Danmakufu? Well, there is, of course, the default - Alpha. Then there are two forms of Additive Blending - BLEND_ADD_RGB and BLEND_ADD_ARGB. There are also Multiplicative and Subtractive blends. Also available is Invert, which is commonly abused due to its effects.</p>
-	      <p>You can use <code>ObjRender_SetBlendType()</code> to change blend types.</p>
+	      <p>You can use <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetBlendType', 'f_orsbt_01');"><code>ObjRender_SetBlendType()</code><span class="tooltiptext" id="f_orsbt_01"></span></span> to change blend types.</p>
 	      <p>As of ph3 [.1 pre6a], there is also a BLEND_SHADOW, which is not documented. For more information, see the following thread on Maidens of the Kaleidoscope: <a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,19666.0.html">Figuring out BLEND_SHADOW</a>.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What is Alpha Compositing and How is it Used?</h2>
 	      <p>I'll begin with the simplest 'blend' - Alpha. This is the default and renders the image the exact same way as any graphical editor. Transparency is maintained if present.</p>
@@ -66,7 +66,7 @@
 	      <p>Of the simple arithmetic blend modes, Additive Blending sees the most use in Danmakufu. It adds the pixel values of one layer with the other. This always results in a brighter image. For example, you are rendering one image on top of a background. The pixel values of the image and background underneath will add, resulting in a shinier image.</p>
 	      <p>In Danmakufu, there are two ways to use Additive Blending. One involves a black background - BLEND_ADD_RGB. Everything that is pure black becomes transparent, and everything else becomes shiny. Most bubble bullets and fireball bullets are rendered with ADD because it makes them very shiny and nice to look at, especially when contrasted with a dark background or playing field. Additionally, lasers are rendered by default using BLEND_ADD_RGB.</p>
 	      <p>The other type of Additive Blending is BLEND_ADD_ARGB. Instead of black, you use a partially transparent object. The level of transparency will dictate the level of shininess that results.</p>
-	      <p>Note that when using <code>ObjRender_SetAlpha()</code>, ADD_RGB ignores it and will always display the image the same way, while with ADD_ARGB, the alpha of the image in Danmakufu will change the level of shininess of the image.</p>
+	      <p>Note that when using <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetAlpha', 'f_orsa_01');"><code>ObjRender_SetAlpha()</code><span class="tooltiptext" id="f_orsa_01"></span></span>, ADD_RGB ignores it and will always display the image the same way, while with ADD_ARGB, the alpha of the image in Danmakufu will change the level of shininess of the image.</p>
 	      <div class="tut_exercise">EXERCISE: Render some images with Additive Blending. What kind of images work best? Does ADD_ARGB work better? Worse?</div>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: What is Subtractive Blending and How is it Used?</h2>
 	      <p>In contrast to Additive Blending, Subtractive Blending sees limited usage in Danmakufu, being used mainly for graphical effect. It does the exact opposite as Additive Blending, always darkening the image. If the values end up being negative, black is displayed instead. Subtractive Blending is excellent when used on fog and partially transparent images.</p>
@@ -126,6 +126,7 @@
 	ObjRender_SetBlendType(objInv, BLEND_INV_DESTRGB);
 	Obj_SetRenderPriorityI(objInv, 99);
     }</code></pre>
+		<p>Alternatively, we could use a render target of the entire game screen with a pixel shader, but that's beyond the scope of this lesson.</p>
 	        </div></div>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
