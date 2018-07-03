@@ -1249,7 +1249,7 @@ var DNHLPobj = {
             "ytid": "jVPtO97tZTY",
             "scripter" : "Natashi",
             "scriptname" : "Len'en Contest 1: Blood-Stained Silver Bullet",
-            "dvdb" : ""
+            "dvdb" : "natashi.html#lenen1"
         },
         {
             "id": "45",
