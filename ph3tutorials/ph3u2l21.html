@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Mar 03, 2017')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jul 03, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -54,7 +54,7 @@
 	      <p>You must read the previous lesson - <a href="./ph3u2l20.html">Lesson 20</a> - before starting with this tutorial, as this lesson is its logical continuation. We will assume that you are familiar with menus, manipulating text objects, and other things that have already been covered.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Replay Save Scripts?</h2>
 	      <p>We've discussed many types of scripts already - Pause, End Scene, and so on. Reply Save screens are another integral feature that should be implemented by all scripters. Especially since the default one looks rather horrible and doesn't let you cancel out of a replay once you accidentally hit the 'Save Replay' button in the End Scene.</p>
-	      <p>We set a custom Replay Save Scene in our System file with <code>SetReplaySaveSceneScriptPath()</code>, the same way as with Pause and End Scenes. This will replace the default.</p>
+	      <p>We set a custom Replay Save Scene in our System file with <span class="tooltip" onmouseover="getFxnDocs('SetReplaySaveSceneScriptPath', 'f_srsssp_01');"><code>SetReplaySaveSceneScriptPath()</code><span class="tooltiptext" id="f_srsssp_01"></span></span>, the same way as with Pause and End Scenes. This will replace the default.</p>
 	      <p>The very first thing you should do is change the font. The next thing to do is change the Japanese in the strTextIn and strTextView variables to English or your language of choice (終 translates to 'end', 終了 translates to 'finished').</p>
 	      <p>One thing to note, however, is the presence of brackets [ and ] in strTextIn and strTextView. Unfortunately, I highly recommend removing them and replacing them with spaces " ", because they are highly problematic (Danmakufu recognizes them as special characters, etc.). Simply remove them and add two empty spaces before your new 'End'.</p>
 	      <p>Alternatively, [osb] and [csb] seem to provide the [ and ] characters, respectively if used in a string, similarly to [r]. (Thanks to Uruwi/Fluffy8x)</p>
@@ -74,7 +74,7 @@
     SetEndSceneScriptPath(GetCurrentScriptDirectory() ~ "./EndScene.dnh");
     SetReplaySaveSceneScriptPath(GetCurrentScriptDirectory() ~ "./ReplaySaveScene.dnh");</code></pre>
 	      <p>Some things you will probably want to do are change the font used, allow for the user to cancel out of <code>TNameEntry</code>, etc.</p>
-	      <p>If you decide to handle Replay Comments, however, things get a little hairy. In <code>TNameEntry</code>, you'll have to, before calling <code>SaveReplay()</code>, <code>SetReplayInfo(REPLAY_COMMENT, &lt;your stuff here&gt;)</code>. If you have multiple fields, I suggest delimiting using "/", though this can and will make storing paths difficult. We will likely discuss this in a later tutorial.</p>
+	      <p>If you decide to handle Replay Comments, however, things get a little hairy. In <code>TNameEntry</code>, you'll have to, before calling <span class="tooltip" onmouseover="getFxnDocs('SaveReplay', 'f_sr_01');"><code>SaveReplay()</code><span class="tooltiptext" id="f_sr_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('SetReplayInfo', 'f_sri_01');"><code>SetReplayInfo(REPLAY_COMMENT, &lt;your stuff here&gt;)</code><span class="tooltiptext" id="f_sri_01"></span></span>. If you have multiple fields, I suggest delimiting using "/", though this can and will make storing paths difficult. We will likely discuss this in a later tutorial.</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Replay Save Scripts</h2>
 	        <!--Quiz start.-->
 		<p>1) What is the number of replays that can be stored for a given script? </p>
