@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('May 11, 2016')">
+  <body onload="setupENG('Jul 03, 2018')">
     <div class="yui-t1" id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -81,7 +81,7 @@
 	      <p>Note that with Packages, there will be a different method for handling Pause and End Scenes, but we'll get there when we get there.</p>
 	      <p>Anyways, we'll be working with the defaults, so copy the default pause and end scene scripts from default_system into your system folder or preferred directory, and link them with your System script so that your scripts will hook into them. We're going to take them apart.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What is inside a Pause or End Scene Script?</h2>
-	      <p>When you open up Default_Pause.txt, you are greeted by a wall of code in two main tasks, TBackground and TMain, both of which are called in @Initialize. <code>SetAutoDeleteObject(true);</code> should be left alone - it will make sure that all the objects you create in the pause (or end scene) script will delete when you close the script.</p>
+	      <p>When you open up Default_Pause.txt, you are greeted by a wall of code in two main tasks, TBackground and TMain, both of which are called in @Initialize. <span class="tooltip" onmouseover="getFxnDocs('SetAutoDeleteObject', 'f_sado_01');"><code>SetAutoDeleteObject(true)</code><span class="tooltiptext" id="f_sado_01"></span></span> should be left alone - it will make sure that all the objects you create in the pause (or end scene) script will delete when you close the script.</p>
 	      <p>Anyways, the meat of the task is in TMenu. As for TBackground, it's responsible for that fancy effect above the playing field but below the text. More specifically, it takes a screenshot of the screen with a render target, and then does some fancy vertex stuff to produce the effect. We won't look into this now.</p>
 	      <pre class="prettyprint"><code>task TMenu
 {
