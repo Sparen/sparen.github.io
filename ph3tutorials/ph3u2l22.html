@@ -1,5 +1,5 @@
 <!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 22</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
-    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 22 - Implementing 2D Backgrounds in Background Files. A guide on how to work with Background scripts."      name="description">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 22 - Implementing 2D Backgrounds in Background Scripts. A guide on how to work with Background scripts."      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Background, 2D">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Apr 10, 2017')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jul 09, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -33,7 +33,7 @@
 	          <li><span>Navigation Bar</span></li>
 	          <li><a href="./ph3u2l22a.html" title="Sparen's Danmakufu ph3 Tutorials - Recollection: This Side Down">Extra Lesson 4</a></li>
 	        </ul>
-              </div>	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 22 - Implementing 2D Backgrounds in Background Files</h1>	      <p>The video for this lesson is TalosMistake's Yuyuko. Enjoy the beautiful backgrounds, which you will soon learn to make (or well, the 2D ones).</p>
+              </div>	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 22 - Implementing 2D Backgrounds in Background Scripts </h1>	      <p>The video for this lesson is TalosMistake's Yuyuko. Enjoy the beautiful backgrounds, which you will soon learn to make (or well, the 2D ones).</p>
 	      <!--Embedded video below. Make sure to format the link correctly-->
 	      <div class="ytembed_sm">
 	        <iframe src="https://www.youtube.com/embed/HyBJAhkhOXQ" frameborder="0" allowfullscreen></iframe>
@@ -59,7 +59,7 @@
 	      <p>We've covered a lot of different script types now. System, Replay Save, Pause, End Scene... But now we'll touch on Background scripts. Like System scripts, you link to them in the Danmakufu header, and they run for the duration of a script. You can use the same background script for stages, plurals, and singles, and they generally work well.</p>
 	      <p>Note that although you can *technically* dump whatever you want in a Background script, they are generally used to run tasks for stage/nonspell backgrounds and spell backgrounds. If you have any graphical effects that do not affect gameplay, like falling cherry petals or the like, the Background script is where you put them.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How are Background Scripts structured?</h2>
-	      <p>We will begin our discussion of Background scripts by dissecting the default, located in default_system/Default_Background_IceMountain.txt. Naturally, similarly to System scripts, you can name your Background script however you want, as long as you link to it properly.</p>
+	      <p>We will begin our discussion of Background scripts by dissecting the default, located in <code>default_system/Default_Background_IceMountain.txt</code>. Naturally, similarly to System scripts, you can name your Background script however you want, as long as you link to it properly.</p>
 	      <p>Inside the default Background script, there is a field, <code>bSpell</code>, which is controlled in @MainLoop. Contents of @MainLoop are below:</p>
 	      <pre class="prettyprint linenums"><code>@MainLoop
 {
@@ -83,7 +83,7 @@
 	      <p>For the default background, for example, obj2 is created after obj1. Although they have the same render priority, obj2 will render above obj1.</p>
 	      <p>After creating your textures, a standard loop begins. The default background tasks use the following to fade out the stage background:</p>
 	      <pre class="prettyprint linenums"><code>	let frameInvisible = 0;
-...
+	...
 		if(bSpell)
 		{
 			frameInvisible++;
@@ -218,8 +218,8 @@
 	      <p>In the loop, we edit the source rect. Note the <code>(frame*2) % 512</code> - this is what's scrolling it. As the frame increases, the numbers rise, going up to 512. As a result, the source rect gently moves downwards, and after 256 frames, it resets to its original position without any noticeable teleportation (the number you mod by, in this case 512, must be a multiple of the image dimensions).</p>
 	      <p>And that's one way to scroll 2D images. You do the same for the source rects of 3D images.</p>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I make a rotating 2D background?</h2>
-	      <p>For rotation, instead of changing source rects, we will instead take advantage of <code>ObjRender_SetAngleZ()</code>.</p>
-	      <p>What this function does is rotate a 2D image on the cartesian x-y plane. In other words, it's rotating around the z-axis. Similarly, <code>ObjRender_SetAngleX()</code> and <code>ObjRender_SetAngleY()</code> rotate the image around the X and Y axes, on the y-z and x-z planes respectively.</p>
+	      <p>For rotation, instead of changing source rects, we will instead take advantage of <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetAngleZ', 'f_orsaz_01');"><code>ObjRender_SetAngleZ()</code><span class="tooltiptext" id="f_orsaz_01"></span></span>.</p>
+	      <p>What this function does is rotate a 2D image on the cartesian x-y plane. In other words, it's rotating around the z-axis. Similarly, <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetAngleX', 'f_orsax_01');"><code>ObjRender_SetAngleX()</code><span class="tooltiptext" id="f_orsax_01"></span></span> and <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetAngleY', 'f_orsay_01');"><code>ObjRender_SetAngleY()</code><span class="tooltiptext" id="f_orsay_01"></span></span> rotate the image around the X and Y axes, on the y-z and x-z planes respectively.</p>
 	      <p>Usage is simple. See the following example:</p>
 	      <pre class="prettyprint linenums"><code>task TSpellBackground {
     let path1 = GetCurrentScriptDirectory() ~ "img/sp1bg.png";
@@ -260,7 +260,7 @@
         yield;
     }
 }</code></pre>
-	      <p>In this example, we have two of the same image, rotating around their centers (their position, as set in <code>ObjRender_SetPosition()</code>) with a change of frame degrees. In other words, in 6 seconds, they will make a complete rotation. Usually, it is recommended to have two images rotating in opposite directions to give a feel of balance to your background.</p>
+	      <p>In this example, we have two of the same image, rotating around their centers (their position, as set in <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetPosition', 'f_orsp_01');"><code>ObjRender_SetPosition()</code><span class="tooltiptext" id="f_orsp_01"></span></span>) with a change of frame degrees. In other words, in 6 seconds, they will make a complete rotation. Usually, it is recommended to have two images rotating in opposite directions to give a feel of balance to your background.</p>
 	      <div class="tut_exercise">EXERCISE: In a background script, try out rotating images around different points on the screen. What arrangements are visually appealing? What spin frequencies are distracting?</div>
 	      <div class="tut_exercise">EXERCISE: In a background script, try to rotate images using Border of Wave and Particle style angle incrementation, using a different variable for holding the rotation angle of the images and adding sin(frame*n) to this new variable every frame.</div>
 	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I layer textures with varying Alpha and Blend Types?</h2>
@@ -268,8 +268,8 @@
 	      <p>Anyways, let's say you have two images, each of which have alpha of 255 for every pixel. In Danmakufu, you set the alpha of each to 128, and naively render them on top of each other with BLEND_ALPHA (the default). What do you see? Well, a mess... that's rather dark. What you're essentially doing is adding the rgb of the initial bottom layer (black) with half the rgb of one image and half the rgb of the other. It's not necessarily going to look good.</p>
 	      <p>In more complex backgrounds, you will want to play with different images rendered on top of others, with scrolling effects and rotating objects (as well as scaling objects too, perhaps) being used to enhance the experience. It's very important to consider how much of each image to show - for a fog layer, you may want a low alpha, for example, even if the source image is already mostly transparent. Rendering at 255 alpha is going to be exceptionally rare, unless it's a base background image upon which other things are placed.</p>
 	      <p>Another thing to keep in mind is contrast. You will want good contrast between the background and the bullets. Usually, since bullets tend to be bright, this means that the spell background must be dark. The only exceptions are cases where the background is very bright and the bullets are very dark, such as with Tsurubami Senri and Tsubakura Enraku's attacks in the Len'en Project. However, this is definitely not the norm.</p>
-	      <p>If you start out with a bright base background, you may therefore be tempted to dump a crapton of dark images on top. However, you have blend types to spice things up. In general, ADD_RGB and MULTIPLY are big no-nos for spell backgrounds, as ADD_RGB is not flexible (no matter what alpha you assign to it, it always renders the same way) and MULTIPLY can be unintuitive to control. Also, whatever you do, do NOT use INV_DESTRGB. We don't need more of that eye-scarring invert, especially in a background.</p>
-	      <p>The most useful blend types will be BLEND_ADD_ARGB and BLEND_SUBTRACT. ADD_ARGB provides shininess in a way that can be easily controlled by changing the alpha value of the render object. Subtractive blend is a rather easy way to darken an image - using a white fog background to cast a black fog over everything else, for example. Do be aware that if you choose to change the color of an image with Danmakufu's <code>ObjRender_SetColor()</code>, subtractive blend will not handle those colors the same way as with alpha or add.</p>
+	      <p>If you start out with a bright base background, you may therefore be tempted to dump a large number of dark images on top. However, you have blend types to spice things up. In general, ADD_RGB and MULTIPLY are big no-nos for spell backgrounds, as ADD_RGB is not flexible (no matter what alpha you assign to it, it always renders the same way) and MULTIPLY can be unintuitive to control. Also, whatever you do, do NOT use INV_DESTRGB. We don't need more of that eye-scarring invert, especially in a background.</p>
+	      <p>The most useful blend types will be BLEND_ADD_ARGB and BLEND_SUBTRACT. ADD_ARGB provides shininess in a way that can be easily controlled by changing the alpha value of the render object. Subtractive blend is a rather easy way to darken an image - using a white fog background to cast a black fog over everything else, for example. Do be aware that if you choose to change the color of an image with Danmakufu's <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetColor', 'f_orsc_01');"><code>ObjRender_SetColor()</code><span class="tooltiptext" id="f_orsc_01"></span></span>, subtractive blend will not handle those colors the same way as with ALPHA or ADD.</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Background Scripts</h2>
 	        <!--Quiz start.-->
 		<p>1) Sanae is making a scrolling background with two components - one that should move in the bottom right direction and one that should move in the bottom left direction. However, instead of moving in the bottom right and bottom left directions, they're moving in the top left and top right directions. Why is this?</p>
