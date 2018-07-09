@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 03, 2017')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jul 09, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -25,6 +25,7 @@
           <li><a href="./docs_system.html">Player Script Fxns</a></li>
           <li><a href="./docs_system.html">Private Script Fxns</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+	  <li><a href="./docs_standard.html#sub11">2D Camera Functions</a></li>
         </ul>
       </div>      <div id="bd">        <div id="yui-main">          <div class="yui-b">            <div class="yui-g">
               <div class="tutnavbar">
@@ -59,7 +60,7 @@
 	      <p>The 2D Camera is how the playing field is viewed. If the focus were to be moved to (0,0), it would appear as if the contents of the screen had shifted by 192 pixels to the left and 224 pixels up. Other transforms have their own various effects.</p>
 	      <p>If we want to zoom in on a certain character and rotate the screen like in AJS's Cacophonous Cadre, we can do so. If we want to do a Seija spin, we can do so. That's the functionality that the 2D Camera Provides.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What are the various 2D Camera functions?</h2>
-	      <p>The 2D Camera functions can be found on the Danmakufu Wiki - <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/2D_Camera_Functions">2D Camera Functions</a>. For this portion of the tutorial, we shall focus on the code AJS uses in his Cacophonous Cadre to zoom in on a target on the screen.</p>
+	      <p>The 2D Camera functions can be found here: <a href="./docs_standard.html#sub11">2D Camera Functions</a>. For this portion of the tutorial, we shall focus on the code AJS uses in his Cacophonous Cadre to zoom in on a target on the screen.</p>
 	      <pre class="prettyprint linenums"><code>task ScreenZoom(targX,targY){
 	Set2DCameraFocusX(targX);
 	Set2DCameraFocusY(targY);
@@ -86,10 +87,10 @@
 	Set2DCameraFocusY(GetScreenHeight/2);
 
 }</code></pre>
-	      <p>The 2D Camera's default focus is the center of the playing field, at (384/2, 448/2) by default. It can be changed using <code>Set2DCameraFocusX()</code> and <code>Set2DCameraFocusY()</code>. You can use this to effectively move the 'playing field' wherever you want.</p>
-	      <p>To rotate the view around the Z axis, use <code>Set2DCameraAngleZ()</code>. In the above example, the camera is rotated first to 30 degrees, then to -30, then to 10, and finally back to the default of 0.</p>
-	      <p>To zoom in, use <code>Set2DCameraRatio()</code>, which defaults to a value of 1 (no zoom). In the above example, the camera zooms in 1.5x, then 2x, and finally 2.5x before reverting.</p>
-	      <p>However, the 2D Camera Ratio can be set with <code>Set2DCameraRatioX()</code> and <code>Set2DCameraRatioY()</code> as well. As stated on the Wiki, setting negative values for these will essentially flip them. We'll review this later on.</p>
+	      <p>The 2D Camera's default focus is the center of the playing field, at (384/2, 448/2) by default. It can be changed using <span class="tooltip" onmouseover="getFxnDocs('Set2DCameraFocusX', 'f_s2dcfx_01');"><code>Set2DCameraFocusX()</code><span class="tooltiptext" id="f_s2dcfx_01"></span></span> and <span class="tooltip" onmouseover="getFxnDocs('Set2DCameraFocusY', 'f_s2dcfy_01');"><code>Set2DCameraFocusY()</code><span class="tooltiptext" id="f_s2dcfy_01"></span></span>. You can use this to effectively move the 'playing field' wherever you want.</p>
+	      <p>To rotate the view around the Z axis, use <span class="tooltip" onmouseover="getFxnDocs('Set2DCameraAngleZ', 'f_s2dcaz_01');"><code>Set2DCameraAngleZ()</code><span class="tooltiptext" id="f_s2dcaz_01"></span></span>. In the above example, the camera is rotated first to 30 degrees, then to -30, then to 10, and finally back to the default of 0.</p>
+	      <p>To zoom in, use <span class="tooltip" onmouseover="getFxnDocs('Set2DCameraRatio', 'f_s2dcr_01');"><code>Set2DCameraRatio()</code><span class="tooltiptext" id="f_s2dcr_01"></span></span>, which defaults to a value of 1 (no zoom). In the above example, the camera zooms in 1.5x, then 2x, and finally 2.5x before reverting.</p>
+	      <p>However, the 2D Camera Ratio can be set with <span class="tooltip" onmouseover="getFxnDocs('Set2DCameraRatioX', 'f_s2dcrx_01');"><code>Set2DCameraRatioX()</code><span class="tooltiptext" id="f_s2dcrx_01"></span></span> and <span class="tooltip" onmouseover="getFxnDocs('Set2DCameraRatioY', 'f_s2dcry_01');"><code>Set2DCameraRatioY()</code><span class="tooltiptext" id="f_s2dcry_01"></span></span> as well. Setting negative values for these will essentially flip them. We'll review this later on.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I implement 2D Screenshake?</h2>
 	      <p>Screenshake is simple - for a set duration of time, shake the focus of the 2D camera around, and restore it at the end. In AJS's example, he did the following:</p>
 	      <pre class="prettyprint"><code>	Set2DCameraFocusX(GetScreenWidth/2);
@@ -142,7 +143,7 @@ task ScreenShakeA1(shaketime, intensity){
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I replicate Seija's This Side Down?</h2>
 	      <p>It's finally time to do some Seija replication! First and foremost, the 2D background must be perfectly centered around the horizontal center line (default to 448/2 = 224). Otherwise when we perform the flip, it will be unbalanced and look weird due to there being more of the image above the center line than below. </p>
 	      <p>In the spell, Seija flips the screen, then, from the top, spawns bullets in a -1..2 wave with a 30 degree offset, straight downwards. The bullet spawn pattern is random in the y aspect but preset in the x.</p>
-	      <p>Let us begin with the screen flip. From above we know that <code>Set2DCameraRatioY()</code> can be used to flip the screen. Therefore, if we want the screen to flip, taking one full second, we can do the following:</p>
+	      <p>Let us begin with the screen flip. From above we know that <span class="tooltip" onmouseover="getFxnDocs('Set2DCameraRatioY', 'f_s2dcry_02');"><code>Set2DCameraRatioY()</code><span class="tooltiptext" id="f_s2dcry_02"></span></span> can be used to flip the screen. Therefore, if we want the screen to flip, taking one full second, we can do the following:</p>
 	      <pre class="prettyprint linenums"><code>task MainTask(){
     ascent(i in -30..31){
         Set2DCameraRatioY(1/30*-i);
@@ -168,7 +169,7 @@ task ScreenShakeA1(shaketime, intensity){
 	      <p>As you can see, while the boss is alive we get our x and y positions, and fire the wave. Our y position is between 0 (the top of the screen) and 96. Since the screen has been flipped vertically, though it appears that the bullets are spawning on the bottom half and are moving up, the reality is that they're spawning in the top, moving down, and are simply flipped across the horizontal center axis of the screen.</p>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I make the 2D Camera rotate?</h2>
             <p>To close the lesson, we will have a brief discussion about replicating Seija's last boss spell, where the screen rotates around the center of the screen.</p>
-            <p>As stated earlier, the camera focus defaults to the center, and <code>Set2DCameraAngleZ()</code> can be used to set the rotational angle of the 2D Camera.</p>
+            <p>As stated earlier, the camera focus defaults to the center, and <span class="tooltip" onmouseover="getFxnDocs('Set2DCameraAngleZ', 'f_s2dcaz_02');"><code>Set2DCameraAngleZ()</code><span class="tooltiptext" id="f_s2dcaz_02"></span></span> can be used to set the rotational angle of the 2D Camera.</p>
             <p>Using this, one way to rotate the screen (background and all) is to adjust the angle of the 2D Camera over time using a while loop. We can make a task that handles this:</p>
 	      <pre class="prettyprint linenums"><code>task RotateScreen(change, time, dir) {
     loop(time) {
