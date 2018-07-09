@@ -1020,7 +1020,7 @@ var dnhph3docs_standard = {
                     "notes": "Defaults to center of the playing field."
                 },
                 {
-                    "fname": "Set2DCameraFocusZ",
+                    "fname": "Set2DCameraAngleZ",
                     "args": ["rotation : number (degrees)"],
                     "returnv": "",
                     "description": "Sets the z angle (rotation) of the 2D Camera.",
