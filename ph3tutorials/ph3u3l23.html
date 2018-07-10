@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jan 12, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jul 10, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -103,10 +103,10 @@ task TStage
 }</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I run a Plural Script from a Stage Script?</h2>
 	      <p>We will begin by observing <code>@Initialize</code>, where a single task is called. This TStage task is the main task of the Stage script, and contains essentially everything we will need to run. The <code>@MainLoop</code> has a yield; as is standard to allow the TStage task to run. </p>
-	      <p>In TStage, we define a path to a Plural Script, then run <code>LoadScriptInThread()</code>. This loads the script (blocking, waits for the script to load before doing anything else), and returns the ID of the now-running script. This ID is important for NotifyEvent, which we will cover in a later lesson. </p>
-	      <p><code>StartScript()</code> is used to run the script with the given ID. Note that it doesn't particularly matter whether or not the script was a Plural script - any script can be run this way, hence the versatility of Stage scripts. Note that you can technically load and run scripts elsewhere but Packages, Stages, and System scripts are the three places where external scripts are typically run.</p>
+	      <p>In TStage, we define a path to a Plural Script, then run <span class="tooltip" onmouseover="getFxnDocs('LoadScriptInThread', 'f_lsit_01');"><code>LoadScriptInThread()</code><span class="tooltiptext" id="f_lsit_01"></span></span>. This loads the script (blocking, waits for the script to load before doing anything else), and returns the ID of the now-running script. This ID is important for NotifyEvent, which we will cover in a later lesson. </p>
+	      <p><span class="tooltip" onmouseover="getFxnDocs('StartScript', 'f_sscript_01');"><code>StartScript()</code><span class="tooltiptext" id="f_sscript_01"></span></span> is used to run the script with the given ID. Note that it doesn't particularly matter whether or not the script was a Plural script - any script can be run this way, hence the versatility of Stage scripts. Note that you can technically load and run scripts elsewhere but Packages, Stages, and System scripts are the three places where external scripts are typically run.</p>
 	      <p>After starting the other script, which runs in parallel, the stage scripts waits for two conditions - the player being alive and the plural script being open. Once either ceases to be true, the stage waits a bit and then closes - otherwise it stays open, waiting for the other conditions to be met. Both conditions are important - if there was no check for the plural being open or not, the stage would just close without waiting for the plural to complete. If the player death check is not present, if the player died in the plural the stage script would continue onwards.</p>
-	      <p>At the end of every stage, it will be necessary to <code>CloseStgScene</code>, which closes the stage formally. And with that, we have a simple stage.</p>
+	      <p>At the end of every stage, it will be necessary to <span class="tooltip" onmouseover="getFxnDocs('CloseStgScene', 'f_css_01');"><code>CloseStgScene</code><span class="tooltiptext" id="f_css_01"></span></span>, which closes the stage formally. And with that, we have a simple stage.</p>
 	      <p>Now let's spice things up a bit, shall we?</p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I play music in a Stage Script?</h2>
 	      <p>If you are not familiar with Danmakufu's sound functions, please refer to <a href="./ph3u2l15.html">Lesson 15</a> and refresh yourself.</p>
@@ -214,8 +214,8 @@ task TStage
 		<br>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
-	          <li>Stage Scripts can load Plural Scripts with <code>LoadScriptInThread()</code> and run them with <code>StartScript()</code></li>
-	          <li>Stage Scripts are closed using <code>CloseStgScene()</code></li>
+	          <li>Stage Scripts can load Plural Scripts with <span class="tooltip" onmouseover="getFxnDocs('LoadScriptInThread', 'f_lsit_02');"><code>LoadScriptInThread()</code><span class="tooltiptext" id="f_lsit_02"></span></span> and run them with <span class="tooltip" onmouseover="getFxnDocs('StartScript', 'f_sscript_02');"><code>StartScript()</code><span class="tooltiptext" id="f_sscript_02"></span></span></li>
+	          <li>Stage Scripts are closed using <span class="tooltip" onmouseover="getFxnDocs('CloseStgScene', 'f_css_02');"><code>CloseStgScene</code><span class="tooltiptext" id="f_css_02"></span></span></li>
 	          <li>Stage Scripts can be used to handle graphical effects and music for stages and bosses</li>
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
