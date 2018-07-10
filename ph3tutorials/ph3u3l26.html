@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Feb 10, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jul 10, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -60,8 +60,8 @@
 }</code></pre>
 	      <p>Do note that not all of these constants will be available at any given time - in a package, you may not be able to access EV_USER_PLAYER, for example. That being said, you will not be running out of possible events any time soon.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I use NotifyEvent?</h2>
-	      <p>Now, to use these custom events you must be able to call them somehow, as they are never triggered automatically. Triggering is done via <a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Script_Functions#NotifyEvent">NotifyEvent()</a> or <a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Script_Functions#NotifyEventAll">NotifyEventAll()</a> - for all practical purposes NotifyEvent is never used, as it requires the script ID. NotifyEventAll will hit every currently running script and if they have the given event in their @Event, the code will execute. This does mean that if you accidentally use the same event constant for two different things in two different places, both will get called, so be careful not to reuse event constants for different events.</p>
-	      <p><code>NotifyEventAll()</code> has a number of interesting features. First it takes the event type/constant (I.E. EV_USER_STAGE + 12) and then it takes parameters. Here is where it gets interesting.</p>
+	      <p>Now, to use these custom events you must be able to call them somehow, as they are never triggered automatically. Triggering is done via <a href="docs_standard.html#fxn_NotifyEvent">NotifyEvent()</a> or <a href="docs_standard.html#fxn_NotifyEventAll">NotifyEventAll()</a> - for all practical purposes <span class="tooltip" onmouseover="getFxnDocs('NotifyEvent', 'f_notifyevent_01');"><code>NotifyEvent()</code><span class="tooltiptext" id="f_notifyevent_01"></span></span> is never used, as it requires the script ID. NotifyEventAll will hit every currently running script and if they have the given event in their @Event, the code will execute. This does mean that if you accidentally use the same event constant for two different things in two different places, both will get called, so be careful not to reuse event constants for different events.</p>
+	      <p><span class="tooltip" onmouseover="getFxnDocs('NotifyEventAll', 'f_notifyeventall_01');"><code>NotifyEventAll()</code><span class="tooltiptext" id="f_notifyeventall_01"></span></span> has a number of interesting features. First it takes the event type/constant (I.E. EV_USER_STAGE + 12) and then it takes parameters. Here is where it gets interesting.</p>
 	      <p>Say we want to spawn a boss explosion in the Stage script at the boss's position. In the Single script, before deleting the boss in our cleanup task (e.g. TFinalize), we can do the following:</p>
 		<pre class="prettyprint"><code>NotifyEventAll(EV_USER_STAGE+777, [ObjMove_GetX(objBoss), ObjMove_GetY(objBoss)]);</code></pre>
 	      <p>In the slot reserved for a single argument, we can pass an array of multiple values! Just be aware that arrays in Danmakufu can only hold a single type (i.e. only numbers or only strings), so if you want to pass types of different values, you will need to convert to a String and then parse afterwards.</p>
@@ -70,7 +70,7 @@
         let arg = GetEventArgument(0); //x, y
         BossExplosion(arg[0], arg[1]);
     }</code></pre>
-	      <p>As you can see above, we use <code>GetEventArgument(0)</code> to retrieve the argument passed in <code>NotifyEventAll()</code>. This array can then be indexed to retrieve the boss's coordinates.</p>
+	      <p>As you can see above, we use <span class="tooltip" onmouseover="getFxnDocs('GetEventArgument', 'f_gea_01');"><code>GetEventArgument(0)</code><span class="tooltiptext" id="f_gea_01"></span></span> to retrieve the argument passed in <code>NotifyEventAll()</code>. This array can then be indexed to retrieve the boss's coordinates.</p>
 	      <p>There are many ways to use User Events - we will discuss Items and some other interesting features in following lessons.</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: User Events</h2>
 	        <!--Quiz start.-->
