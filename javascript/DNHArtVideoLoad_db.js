@@ -937,6 +937,13 @@ var DNHArtobj = {
             "scripter" : "Sparen",
             "scriptname" : "RaNGE Contest 19: Moonstruck Magician",
             "dvdb" : "sparenofiria.html#range19"
+        },
+        {
+            "id": "134",
+            "ytid": "mNtd9mJGkq4",
+            "scripter" : "Umbra",
+            "scriptname" : "RaNGE Contest 19: Red Moon Insanity",
+            "dvdb" : "umbra.html#range19"
         }
     ]
 };
