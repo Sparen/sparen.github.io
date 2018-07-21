@@ -1362,6 +1362,13 @@ var DNHLPobj = {
             "scripter" : "TTBD & Adam",
             "scriptname" : "UWoM Contest 1: Evanescent Parallel Universe",
             "dvdb" : ""
+        },
+        {
+            "id": "60",
+            "ytid": "EE-kn_vVs6E",
+            "scripter" : "Adam",
+            "scriptname" : "The Wicked Spirit of Taoism",
+            "dvdb" : ""
         }
     ]
 };
