@@ -944,6 +944,13 @@ var DNHArtobj = {
             "scripter" : "Umbra",
             "scriptname" : "RaNGE Contest 19: Red Moon Insanity",
             "dvdb" : "umbra.html#range19"
+        },
+        {
+            "id": "135",
+            "ytid": "ulrZMWYJPaU",
+            "scripter" : "bronxterror",
+            "scriptname" : "RaNGE Contest 19: Memories of a Pseudo Rabbit",
+            "dvdb" : ""
         }
     ]
 };
