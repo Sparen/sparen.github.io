@@ -83,18 +83,46 @@
 	      <p>Danmakufu supports six types of primitives. Triangle Fan, Triangle Strip, and Triangle List are the primary documented types, while Line List, Line Strip, and Point List are undocumented. We will go through each of these one at a time.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I utilize Primitive Functions in Danmakufu?</h2>
 	      <p>NOTE: In Parts 3 and 4, I will not be setting a texture for each primitive. This will force Danmakufu to default to pure white, which, together with color will better illustrate the behavior of each primitive type. It is highly recommended that if you are copying the code directly, you set a texture and appropriate source + dest rects. In addition, I will be using SVG and screenshots taken from Danmakufu in my examples. Code will be provided for generating the images.</p>
-	      <p>We've already seen most of the basic Primitive Functions.</p>
+	      <p>We've already seen most of the basic Primitive Functions - <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_Create', 'f_opcreate_01');"><code>ObjPrim_Create(OBJ_PRIMITIVE_2D)</code><span class="tooltiptext" id="f_opcreate_01"></span></span> will create a 2D Primitive. We can set textures with <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetTexture', 'f_opsettex_01');"><code>ObjPrim_SetTexture()</code><span class="tooltiptext" id="f_opsettex_01"></span></span>.</p>
+	      <p>Now let's go over some of the ones that don't apply to 2D Sprites.</p>
+	      <p>First, there are various types of Primitives. We will cover those supported by Danmakufu. For Triangle-based Primitives, we have Triangle List, Triangle Strip, and Triangle Fan. For Line-based Primitives we have Line List and Line Strip. For Points we only have Point List - not like you can do much else with just points. These can be set using <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetPrimitiveType', 'f_opspt_01');"><code>ObjPrim_SetPrimitiveType()</code><span class="tooltiptext" id="f_opspt_01"></span></span>. Do note that the Line and Point primitive types are not officially documented in Danmakufu, but they should work appropriately. The following image shows visuals (note that not all of the primitive types in the image are usable in Danmakufu).</p>
+	      <img src="https://blog.lazybee.me/wp-content/uploads/2013/02/primitive.jpg" style="max-width:512px;width:100%;height:auto"><br><br>
+	      <p>Note the numbers - these are the vertices. We will need to set the vertex count for our primitives using <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexCount', 'f_opsvc_01');"><code>ObjPrim_SetVertexCount()</code><span class="tooltiptext" id="f_opsvc_01"></span></span>. It can be retrieved with <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_GetVertexCount', 'f_opgvc_01');"><code>ObjPrim_GetVertexCount()</code><span class="tooltiptext" id="f_opgvc_01"></span></span>.</p>
+	      <p>Each vertex can have a position (relative to the position of the render object as a whole), texture coordinate, color, and alpha. These are set using <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexPosition', 'f_opsvp_01');"><code>ObjPrim_SetVertexPosition()</code><span class="tooltiptext" id="f_opsvp_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexUV', 'f_opsvuv_01');"><code>ObjPrim_SetVertexUV()</code><span class="tooltiptext" id="f_opsvuv_01"></span></span> or <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexUVT', 'f_opsvuvt_01');"><code>ObjPrim_SetVertexUVT()</code><span class="tooltiptext" id="f_opsvuvt_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexColor', 'f_opsvcol_01');"><code>ObjPrim_SetVertexColor()</code><span class="tooltiptext" id="f_opsvcol_01"></span></span>, and <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexAlpha', 'f_opsval_01');"><code>ObjPrim_SetVertexAlpha()</code><span class="tooltiptext" id="f_opsval_01"></span></span>, respectively</p>
+	      <p>In regards to the UV coordinates (texture coordinates), you can think of it as follows: given a 512x512 texture, the top left (0, 0) has a corresponding texture coordinate of (0.0, 0.0) while the bottom right (512, 512) has a corresponding texture coordinate of (1.0, 1.0). So if we wanted to use the top left quadrant of the texture, we could use (0, 0), (0, 256), (256, 0), and (256, 256), or we could use (0.0, 0.0), (0.0, 0.5), (0.5, 0.0), (0.5, 0.5).</p>
+	      <p>For more information, check the function reference for UV and UVT.</p>
+	      <p>Anyways, at this point we should be ready to begin utilizing our primitives.</p>
 	      <h2 class="ph3tutorialheader" id="sub4a">Part 4a: How do I utilize Primitives (PRIMITIVE_TRIANGLELIST)?</h2>
+	      <p>Triangle Lists are, well, lists of triangles. No surprise there. Every three vertices you specify forms a triangle. To have two triangles, use six vertices.</p>
+	      <p>Let's illustrate this with the following:</p>
+	      <p>CANVAS + WEBGL</p>
+	      <p>DANMAKUFU CODE</p>
+	      <p>DANMAKUFU SCREENSHOT</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4b">Part 4b: How do I utilize Primitives (PRIMITIVE_TRIANGLESTRIP)?</h2>
+	      <p>CANVAS + WEBGL</p>
+	      <p>DANMAKUFU CODE</p>
+	      <p>DANMAKUFU SCREENSHOT</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4c">Part 4c: How do I utilize Primitives (PRIMITIVE_TRIANGLEFAN)?</h2>
+	      <p>CANVAS + WEBGL</p>
+	      <p>DANMAKUFU CODE</p>
+	      <p>DANMAKUFU SCREENSHOT</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4d">Part 4d: How do I utilize Primitives (PRIMITIVE_LINELIST)?</h2>
+	      <p>CANVAS + WEBGL</p>
+	      <p>DANMAKUFU CODE</p>
+	      <p>DANMAKUFU SCREENSHOT</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4e">Part 4e: How do I utilize Primitives (PRIMITIVE_LINESTRIP)?</h2>
+	      <p>CANVAS + WEBGL</p>
+	      <p>DANMAKUFU CODE</p>
+	      <p>DANMAKUFU SCREENSHOT</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4f">Part 4f: How do I utilize Primitives (PRIMITIVE_POINT_LIST)?</h2>
+	      <p>CANVAS + WEBGL</p>
+	      <p>DANMAKUFU CODE</p>
+	      <p>DANMAKUFU SCREENSHOT</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How can I create magic circles?</h2>
 	      <p></p>
