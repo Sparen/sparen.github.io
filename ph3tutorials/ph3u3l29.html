@@ -514,9 +514,44 @@ task ExampleE2 {
     ObjPrim_SetVertexColor(obj, 4, 255, 0, 255);
 }</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub4f">Part 4f: How do I utilize Primitives (PRIMITIVE_POINT_LIST)?</h2>
-	      <p>SVG TODO</p>
-	      <p>DANMAKUFU SCREENSHOT</p>
-	      <p>DANMAKUFU CODE</p>
+	      <p>Point Lists are... lists of pixel-size points. They are almost useless in Danmakufu since they can't even serve as particle effects due to their size. However, you can get some pretty interesting animations. I won't be providing a SVG example since it's somewhat <b><i>point</i></b>less (haha), but have an animation :)</p>
+	      <img src="./tutimg/u29-4f.png" width="192" height="192"></img><br><br>
+	      <p>Above image is a still; see code for animation below.</p>
+<pre class="prettyprint linenums"><code>@Initialize{
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    ObjMove_SetPosition(objBoss, 192, -800);
+
+    ExampleF1(64, 1, 6, 0);
+    ExampleF1(64, 1.1, -6, 60);
+    ExampleF1(64, 1.2, 12, 120);
+    ExampleF1(64, 1.3, -12, 180);
+    ExampleF1(64, 1.4, 18, 240);
+    ExampleF1(64, 1.5, -18, 300);
+}
+
+@MainLoop{
+    yield;
+}
+
+task ExampleF1(num, scale, spd, offset) {
+    let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    let radius = 64*scale;
+    let count = offset;
+    ObjPrim_SetPrimitiveType(obj, PRIMITIVE_POINT_LIST);
+    ObjPrim_SetVertexCount(obj, num);
+    ObjRender_SetPosition(obj, 192, 224, 1);
+    loop {
+        radius = scale * (64 + 64*cos(count*3));
+        ascent(i in 0..num) {
+            ObjPrim_SetVertexPosition(obj, i, radius*cos(count*spd + 360/num*i), radius*sin(count*spd + 360/num*i), 0);
+            ObjPrim_SetVertexColor(obj, i, 192 + 64*cos(360/num*i*4), 255, 255);
+            ObjPrim_SetVertexAlpha(obj, i, 192 + 64*cos(360/num*i*4));
+        }
+        count++;
+        yield;
+    }
+}</code></pre>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4g">Part 4g: Which primitive type should I use?</h2>
 	      <p>Now that you have seen the six available primitive types in Danmakufu, we will discuss when you should use each type. First, comparing Triangle List, Triangle Strip and Triangle Fan.</p>
