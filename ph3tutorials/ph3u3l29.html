@@ -67,6 +67,7 @@
 	          <li><a href="#sub4d">Part 4d: How do I utilize Primitives (PRIMITIVE_LINELIST)?</a></li>
 	          <li><a href="#sub4e">Part 4e: How do I utilize Primitives (PRIMITIVE_LINESTRIP)?</a></li>
 	          <li><a href="#sub4f">Part 4f: How do I utilize Primitives (PRIMITIVE_POINT_LIST)?</a></li>
+	          <li><a href="#sub4g">Part 4g: Which primitive type should I use?</a></li>
 	          <li><a href="#sub5">Part 5: How can I create magic circles?</a></li>
 	          <li><a href="#sub6">Part 6: How can I create circular lifebars?</a></li>
 	          <li><a href="#quiz1">Quiz: Primitives</a></li>
@@ -85,9 +86,8 @@
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I utilize Primitive Functions in Danmakufu?</h2>
 	      <p>We've already seen most of the basic Primitive Functions - <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_Create', 'f_opcreate_01');"><code>ObjPrim_Create(OBJ_PRIMITIVE_2D)</code><span class="tooltiptext" id="f_opcreate_01"></span></span> will create a 2D Primitive. We can set textures with <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetTexture', 'f_opsettex_01');"><code>ObjPrim_SetTexture()</code><span class="tooltiptext" id="f_opsettex_01"></span></span>.</p>
 	      <p>Now let's go over some of the ones that don't apply to 2D Sprites.</p>
-	      <p>First, there are various types of Primitives. We will cover those supported by Danmakufu. For Triangle-based Primitives, we have Triangle List, Triangle Strip, and Triangle Fan. For Line-based Primitives we have Line List and Line Strip. For Points we only have Point List - not like you can do much else with just points. These can be set using <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetPrimitiveType', 'f_opspt_01');"><code>ObjPrim_SetPrimitiveType()</code><span class="tooltiptext" id="f_opspt_01"></span></span>. Do note that the Line and Point primitive types are not officially documented in Danmakufu, but they should work appropriately. The following image shows visuals (note that not all of the primitive types in the image are usable in Danmakufu).</p>
-	      <img src="https://blog.lazybee.me/wp-content/uploads/2013/02/primitive.jpg" style="max-width:512px;width:100%;height:auto"><br><br>
-	      <p>Note the numbers - these are the vertices. We will need to set the vertex count for our primitives using <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexCount', 'f_opsvc_01');"><code>ObjPrim_SetVertexCount()</code><span class="tooltiptext" id="f_opsvc_01"></span></span>. It can be retrieved with <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_GetVertexCount', 'f_opgvc_01');"><code>ObjPrim_GetVertexCount()</code><span class="tooltiptext" id="f_opgvc_01"></span></span>.</p>
+	      <p>First, there are various types of Primitives. We will cover those supported by Danmakufu. For Triangle-based Primitives, we have Triangle List, Triangle Strip, and Triangle Fan. For Line-based Primitives we have Line List and Line Strip. For Points we only have Point List - not like you can do much else with just points. These can be set using <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetPrimitiveType', 'f_opspt_01');"><code>ObjPrim_SetPrimitiveType()</code><span class="tooltiptext" id="f_opspt_01"></span></span>. Do note that the Line and Point primitive types are not officially documented in Danmakufu, but they should work appropriately.</p>
+	      <p>Primitives are defined using vertices. We will need to set the vertex count for our primitives using <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexCount', 'f_opsvc_01');"><code>ObjPrim_SetVertexCount()</code><span class="tooltiptext" id="f_opsvc_01"></span></span>. It can be retrieved with <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_GetVertexCount', 'f_opgvc_01');"><code>ObjPrim_GetVertexCount()</code><span class="tooltiptext" id="f_opgvc_01"></span></span>.</p>
 	      <p>Each vertex can have a position (relative to the position of the render object as a whole), texture coordinate, color, and alpha. These are set using <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexPosition', 'f_opsvp_01');"><code>ObjPrim_SetVertexPosition()</code><span class="tooltiptext" id="f_opsvp_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexUV', 'f_opsvuv_01');"><code>ObjPrim_SetVertexUV()</code><span class="tooltiptext" id="f_opsvuv_01"></span></span> or <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexUVT', 'f_opsvuvt_01');"><code>ObjPrim_SetVertexUVT()</code><span class="tooltiptext" id="f_opsvuvt_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexColor', 'f_opsvcol_01');"><code>ObjPrim_SetVertexColor()</code><span class="tooltiptext" id="f_opsvcol_01"></span></span>, and <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexAlpha', 'f_opsval_01');"><code>ObjPrim_SetVertexAlpha()</code><span class="tooltiptext" id="f_opsval_01"></span></span>, respectively</p>
 	      <p>In regards to the UV coordinates (texture coordinates), you can think of it as follows: given a 512x512 texture, the top left (0, 0) has a corresponding texture coordinate of (0.0, 0.0) while the bottom right (512, 512) has a corresponding texture coordinate of (1.0, 1.0). So if we wanted to use the top left quadrant of the texture, we could use (0, 0), (0, 256), (256, 0), and (256, 256), or we could use (0.0, 0.0), (0.0, 0.5), (0.5, 0.0), (0.5, 0.5).</p>
 	      <p>For more information, check the function reference for UV and UVT.</p>
@@ -145,7 +145,7 @@
                   <circle cx="416" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#8888FF"></circle>
                   <text x="416" y="96" stroke="#8888FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v11</text>
               </svg>
-	      <img src="./tutimg/u29-4a.png" width="384" height="448"></img><br><br>
+	      <img src="./tutimg/u29-4a.png" width="384" height="365"></img><br><br>
 	      <p>In Example 1, vertices 1 and 4, 2 and 5 are at the same location with the same color, resulting in the effect you see below. In contrast, in Example 2, vertices 9 and 10 have their colors swapped compared to vertices 6 and 7, resulting in a different effect.</p>
 <pre class="prettyprint linenums"><code>task Example1 {
     let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
@@ -202,29 +202,152 @@ task Example2 {
 }</code></pre>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4b">Part 4b: How do I utilize Primitives (PRIMITIVE_TRIANGLESTRIP)?</h2>
-	      <p>CANVAS + WEBGL</p>
-	      <p>DANMAKUFU CODE</p>
-	      <p>DANMAKUFU SCREENSHOT</p>
+	      <p>For Triangle Strip and Triangle Fan, the types you will be using the most often, it is best to compare the two and see how each of them works. <a target="_blank" href="https://en.wikipedia.org/wiki/Triangle_strip">Triangle Strip</a> is relatively intuitive. You add your first vertex and your second. When you add your third, it forms a triangle with the first and second, just like with Triangle List. However, when you add your fourth vertex, it forms a triangle with the second and third. The fifth vertex will form a triangle with the third and fourth, etc.</p>
+	      <p>As you can see, Triangle Strips are useful when you want to form a triangle with the previous two vertices. No prior knowledge of vertices before the last two is needed... but on the flip side knowledge of the vertices before the last two is not accessible.</p>
+	      <p>Let's illustrate Triangle Strip usage with the following example.</p>
+              <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="200" style="fill:#333333"></rect>
+
+                  <text x="8" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE 4B-1</text>
+		  <!-- OpenGL requires: (v0, v1, v2), (v2, v1, v3), (v2, v3, v4), etc. for drawing order -->
+                  <path d="M 32 32 V 128 L 64 64 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 64 64 L 32 128 L 64 160 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 64 64 L 64 160 L 96 32 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 32 L 64 160 L 96 128 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 32 L 96 128 L 144 32 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 144 32 L 96 128 L 144 128 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <circle cx="32" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0000"></circle>
+                  <text x="32" y="32" stroke="#FF0000" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v0</text>
+                  <circle cx="32" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FF00"></circle>
+                  <text x="32" y="128" stroke="#00FF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v1</text>
+                  <circle cx="64" cy="64" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#4444FF"></circle>
+                  <text x="64" y="64" stroke="#4444FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v2</text>
+                  <circle cx="64" cy="160" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFF00"></circle>
+                  <text x="64" y="160" stroke="#FFFF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v3</text>
+                  <circle cx="96" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF00FF"></circle>
+                  <text x="96" y="32" stroke="#FF00FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v4</text>
+                  <circle cx="96" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FFFF"></circle>
+                  <text x="96" y="128" stroke="#00FFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v5</text>
+                  <circle cx="144" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF8800"></circle>
+                  <text x="144" y="32" stroke="#FF8800" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v6</text>
+                  <circle cx="144" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0088"></circle>
+                  <text x="144" y="128" stroke="#FF0088" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v7</text>
+              </svg>
+	      <img src="./tutimg/u29-4b.png" width="142" height="155"></img><br><br>
+	      <p>As you can see, the colors are all emanating from their vertices without sharp edges. </p>
+<pre class="prettyprint linenums"><code>task ExampleB1 {
+    let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetPrimitiveType(obj, PRIMITIVE_TRIANGLESTRIP);
+    ObjPrim_SetVertexCount(obj, 8);
+
+    ObjPrim_SetVertexPosition(obj, 0, 32, 32, 0);
+    ObjPrim_SetVertexColor(obj, 0, 255, 0, 0);
+    ObjPrim_SetVertexPosition(obj, 1, 32, 128, 0);
+    ObjPrim_SetVertexColor(obj, 1, 0, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 2, 64, 64, 0);
+    ObjPrim_SetVertexColor(obj, 2, 64, 64, 255);
+    ObjPrim_SetVertexPosition(obj, 3, 64, 160, 0);
+    ObjPrim_SetVertexColor(obj, 3, 255, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 4, 96, 32, 0);
+    ObjPrim_SetVertexColor(obj, 4, 255, 0, 255);
+    ObjPrim_SetVertexPosition(obj, 5, 96, 128, 0);
+    ObjPrim_SetVertexColor(obj, 5, 0, 255, 255);
+    ObjPrim_SetVertexPosition(obj, 6, 144, 32, 0);
+    ObjPrim_SetVertexColor(obj, 6, 255, 128, 0);
+    ObjPrim_SetVertexPosition(obj, 7, 144, 128, 0);
+    ObjPrim_SetVertexColor(obj, 7, 255, 0, 128);
+}</code></pre>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4c">Part 4c: How do I utilize Primitives (PRIMITIVE_TRIANGLEFAN)?</h2>
-	      <p>CANVAS + WEBGL</p>
-	      <p>DANMAKUFU CODE</p>
-	      <p>DANMAKUFU SCREENSHOT</p>
-	      <p></p>
+	      <p>As stated earlier, for Triangle Strip and Triangle Fan, the types you will be using the most often, it is best to compare the two and see how each of them works. <a target="_blank" href="https://en.wikipedia.org/wiki/Triangle_fan">Triangle Fan</a> is relatively intuitive. You add your first vertex and your second. When you add your third, it forms a triangle with the first and second, just like with Triangle List and Triangle Strip. Each vertex after this forms a triangle with the previous vertex and the first. In other words, the very first vertex is present in every single triangle.</p>
+	      <p>As you can see, Triangle Fans are useful when organizing a shape around a point (like its namesake, the fan). However, this restriction prevents Triangle Fans from being used effectively outside of this specific niche.</p>
+	      <p>Let's illustrate Triangle Fan usage with the following example.</p>
+              <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="200" style="fill:#333333"></rect>
+
+                  <text x="8" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE 4C-1</text>
+                  <path d="M 96 96 L 96 32 L 140 52 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 96 L 140 52 L 160 96 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 96 L 160 96 L 140 140 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 96 L 140 140 L 96 160 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 96 L 96 160 L 52 140 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 96 L 52 140 L 32 96 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 96 L 32 96 L 52 52 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 96 L 52 52 L 96 32 Z" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <circle cx="96" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#CCCCCC"></circle>
+                  <text x="96" y="96" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v0</text>
+                  <circle cx="96" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0000"></circle>
+                  <text x="96" y="32" stroke="#FF0000" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v1,9</text>
+                  <circle cx="140" cy="52" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FF00"></circle>
+                  <text x="140" y="52" stroke="#00FF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v2</text>
+                  <circle cx="160" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#4444FF"></circle>
+                  <text x="160" y="96" stroke="#4444FF" fill="#FFFFFF" text-anchor="start" dominant-baseline="central" font-size="10px" dx="8" dy="0">v3</text>
+                  <circle cx="140" cy="140" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFF00"></circle>
+                  <text x="140" y="140" stroke="#FFFF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v4</text>
+                  <circle cx="96" cy="160" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF00FF"></circle>
+                  <text x="96" y="160" stroke="#FF00FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v5</text>
+                  <circle cx="52" cy="140" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FFFF"></circle>
+                  <text x="52" y="140" stroke="#00FFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v6</text>
+                  <circle cx="32" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF8800"></circle>
+                  <text x="32" y="96" stroke="#FF8800" fill="#FFFFFF" text-anchor="end" dominant-baseline="central" font-size="10px" dx="-8" dy="">v7</text>
+                  <circle cx="52" cy="52" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0088"></circle>
+                  <text x="52" y="52" stroke="#FF0088" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v8</text>
+              </svg>
+	      <img src="./tutimg/u29-4c.png" width="152" height="152"></img><br><br>
+	      <p>As can be seen above, Triangle Fans are well suited towards radial applications.</p>
+<pre class="prettyprint linenums"><code>task ExampleC1 {
+    let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetPrimitiveType(obj, PRIMITIVE_TRIANGLEFAN);
+    ObjPrim_SetVertexCount(obj, 10);
+
+    ObjPrim_SetVertexPosition(obj, 0, 96, 96, 0);
+    ObjPrim_SetVertexColor(obj, 0, 204, 204, 204);
+    ObjPrim_SetVertexPosition(obj, 1, 96, 32, 0);
+    ObjPrim_SetVertexColor(obj, 1, 255, 0, 0);
+    ObjPrim_SetVertexPosition(obj, 2, 140, 52, 0);
+    ObjPrim_SetVertexColor(obj, 2, 0, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 3, 160, 96, 0);
+    ObjPrim_SetVertexColor(obj, 3, 64, 64, 255);
+    ObjPrim_SetVertexPosition(obj, 4, 140, 140, 0);
+    ObjPrim_SetVertexColor(obj, 4, 255, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 5, 96, 160, 0);
+    ObjPrim_SetVertexColor(obj, 5, 255, 0, 255);
+    ObjPrim_SetVertexPosition(obj, 6, 52, 140, 0);
+    ObjPrim_SetVertexColor(obj, 6, 0, 255, 255);
+    ObjPrim_SetVertexPosition(obj, 7, 32, 96, 0);
+    ObjPrim_SetVertexColor(obj, 7, 255, 128, 0);
+    ObjPrim_SetVertexPosition(obj, 8, 52, 52, 0);
+    ObjPrim_SetVertexColor(obj, 8, 255, 0, 128);
+    ObjPrim_SetVertexPosition(obj, 9, 96, 32, 0);
+    ObjPrim_SetVertexColor(obj, 9, 255, 0, 0);
+}</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub4d">Part 4d: How do I utilize Primitives (PRIMITIVE_LINELIST)?</h2>
-	      <p>CANVAS + WEBGL</p>
-	      <p>DANMAKUFU CODE</p>
+	      <p>Now that we've cleared all of the triangles, it is time for lines! A Line List is, similarly to a Triangle List, just a list of lines. Every pair of vertices forms a line between them.</p>
+	      <p>SVG TODO</p>
 	      <p>DANMAKUFU SCREENSHOT</p>
+	      <p>DANMAKUFU CODE</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4e">Part 4e: How do I utilize Primitives (PRIMITIVE_LINESTRIP)?</h2>
-	      <p>CANVAS + WEBGL</p>
-	      <p>DANMAKUFU CODE</p>
+	      <p>It is now time for Line Strips. Similarly to Triangle Strips, each vertex connects to the previous. Line Strips are incredibly useful for effects and are well-used in main series Touhou games (Seiga's orbs, Sanae's bomb).</p>
+	      <p>SVG TODO</p>
 	      <p>DANMAKUFU SCREENSHOT</p>
+	      <p>DANMAKUFU CODE</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4f">Part 4f: How do I utilize Primitives (PRIMITIVE_POINT_LIST)?</h2>
-	      <p>CANVAS + WEBGL</p>
-	      <p>DANMAKUFU CODE</p>
+	      <p>SVG TODO</p>
 	      <p>DANMAKUFU SCREENSHOT</p>
+	      <p>DANMAKUFU CODE</p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub4g">Part 4g: Which primitive type should I use?</h2>
+	      <p>Now that you have seen the six available primitive types in Danmakufu, we will discuss when you should use each type. First, comparing Triangle List, Triangle Strip and Triangle Fan.</p>
+	      <p>To begin, Triangle List is almost always the least efficient of the three. It requires the most vertices (for a rectangle, Triangle Strip and Triangle Fan require four vertices, while Triangle List requires six!). However, it is the easiest to understand, the easiest to customize, and is extremely versatile.</p>
+	      <p>Triangle Strip, as stated earlier, has the advantage of not referring to any vertices besides the last two. On the other hand, Triangle Fan has every vertex with an edge to the first vertex and the previous vertex. This means that if you want to, say, make an Octagon with a color gradient emitting from the center (refer to Triangle Fan example), it can be done with a total of ten vertices (one for the center, with the second vertex also serving as the last). In comparison, a Triangle Strip requires duplicating over the center vertex multiple times and requires 14 vertices. However, it is impossible to utilize Triangle Fans for anything that explicitly forbids using the first vertex. The sheet example utilized for the Triangle Strip is a clear example.</p>
+	      <p>For a better comparison in regards to how the two work, we will take the examples we used for Triangle Strip and Triangle Fan, and switch the primitive type in Danmakufu without changing any vertices.</p>
+	      <img src="./tutimg/u29-4g.png" width="383" height="347"></img><br><br>
+	      <p>On the left are the examples used in this lesson. On the right are the same vertices, but with the other primitive type. Note how by shifting the starting vertex in the bottom right, it is possible to obtain a 'ribbon' formation, as well as the folding nature of the top right.</p>
+	      <p>There are many different things you can do with Primitives, and it is up to you to do what you find to be the best option.</p>
+	      <p>Do note that Triangle Fans are deprecated in later versions of DirectX and are typically less efficient than Triangle Strips due to the need to refer to the first vertex. As a result, it is recommended that Triangle Strips be used whenever possible.</p>
+	      <p>LINESTRIP VS LINELIST TODO</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How can I create magic circles?</h2>
 	      <p></p>
