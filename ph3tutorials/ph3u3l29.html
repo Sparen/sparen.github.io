@@ -431,10 +431,88 @@ task ExampleD2 {
 }</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub4e">Part 4e: How do I utilize Primitives (PRIMITIVE_LINESTRIP)?</h2>
 	      <p>It is now time for Line Strips. Similarly to Triangle Strips, each vertex connects to the previous. Line Strips are incredibly useful for effects and are well-used in main series Touhou games (Seiga's orbs, Sanae's bomb).</p>
-	      <p>SVG TODO</p>
-	      <p>DANMAKUFU SCREENSHOT</p>
-	      <p>DANMAKUFU CODE</p>
-	      <p></p>
+              <svg width="480" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="480" height="200" style="fill:#333333"></rect>
+                  <path d="M 200 0 V 200" stroke="white" stroke-width="2px"></path>
+
+                  <text x="8" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE 4E-1</text>
+                  <path d="M 96 32 L 140 52 L 160 96 L 140 140 L 96 160 L 52 140 L 32 96 L 52 52 L 96 32" stroke="white" stroke-width="2px" fill="none"></path>
+                  <circle cx="96" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0000"></circle>
+                  <text x="96" y="32" stroke="#FF0000" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v0,8</text>
+                  <circle cx="140" cy="52" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FF00"></circle>
+                  <text x="140" y="52" stroke="#00FF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v1</text>
+                  <circle cx="160" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#4444FF"></circle>
+                  <text x="160" y="96" stroke="#4444FF" fill="#FFFFFF" text-anchor="start" dominant-baseline="central" font-size="10px" dx="8" dy="0">v2</text>
+                  <circle cx="140" cy="140" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFF00"></circle>
+                  <text x="140" y="140" stroke="#FFFF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v3</text>
+                  <circle cx="96" cy="160" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF00FF"></circle>
+                  <text x="96" y="160" stroke="#FF00FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v4</text>
+                  <circle cx="52" cy="140" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FFFF"></circle>
+                  <text x="52" y="140" stroke="#00FFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v5</text>
+                  <circle cx="32" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF8800"></circle>
+                  <text x="32" y="96" stroke="#FF8800" fill="#FFFFFF" text-anchor="end" dominant-baseline="central" font-size="10px" dx="-8" dy="">v6</text>
+                  <circle cx="52" cy="52" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0088"></circle>
+                  <text x="52" y="52" stroke="#FF0088" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v7</text>
+
+                  <text x="208" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE 4E-2</text>
+                  <path d="M 232 96 L 264 64 L 328 128 L 392 64 L 424 96" stroke="white" stroke-width="2px" fill="none"></path>
+                  <circle cx="232" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0000"></circle>
+                  <text x="232" y="96" stroke="#FF0000" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v0</text>
+                  <circle cx="264" cy="64" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FF00"></circle>
+                  <text x="264" y="64" stroke="#00FF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v1</text>
+                  <circle cx="328" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#4444FF"></circle>
+                  <text x="328" y="128" stroke="#4444FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v2</text>
+                  <circle cx="392" cy="64" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFF00"></circle>
+                  <text x="392" y="64" stroke="#FFFF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v3</text>
+                  <circle cx="424" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF00FF"></circle>
+                  <text x="424" y="96" stroke="#FF00FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v4</text>
+
+              </svg>
+	      <br>
+	      <img src="./tutimg/u29-4e.png" width="249" height="328"></img><br><br>
+	      <p>As can be seen above, Line Strips are quite effective at linking consecutive vertices together. Of course each vertex connects to the prior, so if you want cyclic structures with shared vertices, you will, similarly to Triangle Strips, need to duplicate vertices (such as in the first example).</p>
+<pre class="prettyprint linenums"><code>task ExampleE1 {
+    let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetPrimitiveType(obj, PRIMITIVE_LINESTRIP);
+    ObjPrim_SetVertexCount(obj, 9);
+
+    ObjPrim_SetVertexPosition(obj, 0, 96, 32, 0);
+    ObjPrim_SetVertexColor(obj, 0, 255, 0, 0);
+    ObjPrim_SetVertexPosition(obj, 1, 140, 52, 0);
+    ObjPrim_SetVertexColor(obj, 1, 0, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 2, 160, 96, 0);
+    ObjPrim_SetVertexColor(obj, 2, 64, 64, 255);
+    ObjPrim_SetVertexPosition(obj, 3, 140, 140, 0);
+    ObjPrim_SetVertexColor(obj, 3, 255, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 4, 96, 160, 0);
+    ObjPrim_SetVertexColor(obj, 4, 255, 0, 255);
+    ObjPrim_SetVertexPosition(obj, 5, 52, 140, 0);
+    ObjPrim_SetVertexColor(obj, 5, 0, 255, 255);
+    ObjPrim_SetVertexPosition(obj, 6, 32, 96, 0);
+    ObjPrim_SetVertexColor(obj, 6, 255, 128, 0);
+    ObjPrim_SetVertexPosition(obj, 7, 52, 52, 0);
+    ObjPrim_SetVertexColor(obj, 7, 255, 0, 128);
+    ObjPrim_SetVertexPosition(obj, 8, 96, 32, 0);
+    ObjPrim_SetVertexColor(obj, 8, 255, 0, 0);
+}
+
+task ExampleE2 {
+    let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetPrimitiveType(obj, PRIMITIVE_LINESTRIP);
+    ObjPrim_SetVertexCount(obj, 5);
+    ObjRender_SetY(obj, 200);
+
+    ObjPrim_SetVertexPosition(obj, 0, 32, 96, 0);
+    ObjPrim_SetVertexColor(obj, 0, 255, 0, 0);
+    ObjPrim_SetVertexPosition(obj, 1, 64, 64, 0);
+    ObjPrim_SetVertexColor(obj, 1, 0, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 2, 128, 128, 0);
+    ObjPrim_SetVertexColor(obj, 2, 64, 64, 255);
+    ObjPrim_SetVertexPosition(obj, 3, 192, 64, 0);
+    ObjPrim_SetVertexColor(obj, 3, 255, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 4, 224, 96, 0);
+    ObjPrim_SetVertexColor(obj, 4, 255, 0, 255);
+}</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub4f">Part 4f: How do I utilize Primitives (PRIMITIVE_POINT_LIST)?</h2>
 	      <p>SVG TODO</p>
 	      <p>DANMAKUFU SCREENSHOT</p>
@@ -449,8 +527,7 @@ task ExampleD2 {
 	      <p>On the left are the examples used in this lesson. On the right are the same vertices, but with the other primitive type. Note how by shifting the starting vertex in the bottom right, it is possible to obtain a 'ribbon' formation, as well as the folding nature of the top right.</p>
 	      <p>There are many different things you can do with Primitives, and it is up to you to do what you find to be the best option.</p>
 	      <p>Do note that Triangle Fans are deprecated in later versions of DirectX and are typically less efficient than Triangle Strips due to the need to refer to the first vertex. As a result, it is recommended that Triangle Strips be used whenever possible.</p>
-	      <p>LINESTRIP VS LINELIST TODO</p>
-	      <p></p>
+	      <p>In regards to Line List vs Line Strip, Line List has almost no practical usage in Danmakufu, while Line Strip is primarily used for effects (such as the aforementioned Sanae bomb/Seiga orb graphics). As a result, Line Strip will almost always be the one that you use.</p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How can I create magic circles?</h2>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How can I create circular lifebars?</h2>
