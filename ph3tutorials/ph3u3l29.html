@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Aug 23, 2018')">
+  <body onload="setupENG('Aug 24, 2018')">
     <div class="yui-t1" id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -171,33 +171,34 @@ task Example2 {
     let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
     ObjPrim_SetPrimitiveType(obj, PRIMITIVE_TRIANGLELIST);
     ObjPrim_SetVertexCount(obj, 12);
+    ObjRender_SetY(obj, 200);
 
-    ObjPrim_SetVertexPosition(obj, 0, 32, 232, 0);
+    ObjPrim_SetVertexPosition(obj, 0, 32, 32, 0);
     ObjPrim_SetVertexColor(obj, 0, 255, 0, 0);
-    ObjPrim_SetVertexPosition(obj, 1, 32, 328, 0);
+    ObjPrim_SetVertexPosition(obj, 1, 32, 128, 0);
     ObjPrim_SetVertexColor(obj, 1, 0, 255, 0);
-    ObjPrim_SetVertexPosition(obj, 2, 64, 264, 0);
+    ObjPrim_SetVertexPosition(obj, 2, 64, 064, 0);
     ObjPrim_SetVertexColor(obj, 2, 64, 64, 255);
 
-    ObjPrim_SetVertexPosition(obj, 3, 136, 264, 0);
+    ObjPrim_SetVertexPosition(obj, 3, 136, 64, 0);
     ObjPrim_SetVertexColor(obj, 3, 255, 255, 0);
-    ObjPrim_SetVertexPosition(obj, 4, 232, 280, 0);
+    ObjPrim_SetVertexPosition(obj, 4, 232, 80, 0);
     ObjPrim_SetVertexColor(obj, 4, 255, 0, 255);
-    ObjPrim_SetVertexPosition(obj, 5, 200, 232, 0);
+    ObjPrim_SetVertexPosition(obj, 5, 200, 32, 0);
     ObjPrim_SetVertexColor(obj, 5, 0, 255, 255);
 
-    ObjPrim_SetVertexPosition(obj, 6, 200, 328, 0);
+    ObjPrim_SetVertexPosition(obj, 6, 200, 128, 0);
     ObjPrim_SetVertexColor(obj, 6, 255, 128, 0);
-    ObjPrim_SetVertexPosition(obj, 7, 264, 360, 0);
+    ObjPrim_SetVertexPosition(obj, 7, 264, 160, 0);
     ObjPrim_SetVertexColor(obj, 7, 255, 0, 128);
-    ObjPrim_SetVertexPosition(obj, 8, 168, 372, 0);
+    ObjPrim_SetVertexPosition(obj, 8, 168, 172, 0);
     ObjPrim_SetVertexColor(obj, 8, 128, 255, 0);
 
-    ObjPrim_SetVertexPosition(obj, 9, 200, 328, 0);
+    ObjPrim_SetVertexPosition(obj, 9, 200, 128, 0);
     ObjPrim_SetVertexColor(obj, 9, 255, 0, 128);
-    ObjPrim_SetVertexPosition(obj, 10, 264, 360, 0);
+    ObjPrim_SetVertexPosition(obj, 10, 264, 160, 0);
     ObjPrim_SetVertexColor(obj, 10, 255, 128, 0);
-    ObjPrim_SetVertexPosition(obj, 11, 296, 296, 0);
+    ObjPrim_SetVertexPosition(obj, 11, 296, 96, 0);
     ObjPrim_SetVertexColor(obj, 11, 128, 128, 255);
 }</code></pre>
 	      <p></p>
@@ -323,10 +324,111 @@ task Example2 {
 }</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub4d">Part 4d: How do I utilize Primitives (PRIMITIVE_LINELIST)?</h2>
 	      <p>Now that we've cleared all of the triangles, it is time for lines! A Line List is, similarly to a Triangle List, just a list of lines. Every pair of vertices forms a line between them.</p>
-	      <p>SVG TODO</p>
-	      <p>DANMAKUFU SCREENSHOT</p>
-	      <p>DANMAKUFU CODE</p>
-	      <p></p>
+	      <p>Let's illustrate Line List usage with the following example.</p>
+              <svg width="480" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="480" height="200" style="fill:#333333"></rect>
+                  <path d="M 200 0 V 200" stroke="white" stroke-width="2px"></path>
+
+                  <text x="8" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE 4D-1</text>
+                  <path d="M 96 32 L 140 52" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 160 96 L 140 140" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 96 160 L 52 140" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 32 96 L 52 52" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <circle cx="96" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0000"></circle>
+                  <text x="96" y="32" stroke="#FF0000" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v0</text>
+                  <circle cx="140" cy="52" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FF00"></circle>
+                  <text x="140" y="52" stroke="#00FF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v1</text>
+                  <circle cx="160" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#4444FF"></circle>
+                  <text x="160" y="96" stroke="#4444FF" fill="#FFFFFF" text-anchor="start" dominant-baseline="central" font-size="10px" dx="8" dy="0">v2</text>
+                  <circle cx="140" cy="140" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFF00"></circle>
+                  <text x="140" y="140" stroke="#FFFF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v3</text>
+                  <circle cx="96" cy="160" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF00FF"></circle>
+                  <text x="96" y="160" stroke="#FF00FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v4</text>
+                  <circle cx="52" cy="140" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FFFF"></circle>
+                  <text x="52" y="140" stroke="#00FFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v5</text>
+                  <circle cx="32" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF8800"></circle>
+                  <text x="32" y="96" stroke="#FF8800" fill="#FFFFFF" text-anchor="end" dominant-baseline="central" font-size="10px" dx="-8" dy="">v6</text>
+                  <circle cx="52" cy="52" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0088"></circle>
+                  <text x="52" y="52" stroke="#FF0088" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v7</text>
+
+                  <text x="208" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE 4D-2</text>
+                  <path d="M 264 64 L 296 128" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 360 32 L 256 140" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 320 160 L 400 32" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 416 96 L 448 52" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <path d="M 400 32 L 448 128" stroke="white" stroke-width="2px" fill="#666666"></path>
+                  <circle cx="264" cy="64" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0000"></circle>
+                  <text x="264" y="64" stroke="#FF0000" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v0</text>
+                  <circle cx="296" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FF00"></circle>
+                  <text x="296" y="128" stroke="#00FF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v1</text>
+                  <circle cx="360" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#4444FF"></circle>
+                  <text x="360" y="32" stroke="#4444FF" fill="#FFFFFF" text-anchor="start" dominant-baseline="central" font-size="10px" dx="8" dy="0">v2</text>
+                  <circle cx="256" cy="140" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFF00"></circle>
+                  <text x="256" y="140" stroke="#FFFF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v3</text>
+                  <circle cx="320" cy="160" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF00FF"></circle>
+                  <text x="320" y="160" stroke="#FF00FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v4</text>
+                  <circle cx="400" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#00FFFF"></circle>
+                  <text x="400" y="32" stroke="#00FFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v5,8</text>
+                  <circle cx="416" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF8800"></circle>
+                  <text x="416" y="96" stroke="#FF8800" fill="#FFFFFF" text-anchor="end" dominant-baseline="central" font-size="10px" dx="-8" dy="">v6</text>
+                  <circle cx="448" cy="52" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0088"></circle>
+                  <text x="448" y="52" stroke="#FF0088" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v7</text>
+                  <circle cx="448" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#88FF00"></circle>
+                  <text x="448" y="128" stroke="#88FF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v9</text>
+              </svg>
+	      <br>
+	      <img src="./tutimg/u29-4d.png" width="300" height="372"></img><br><br>
+	      <p>As can be seen above, Line Lists behave exactly as you might expect. Each pair of vertices forms a line. As with other primitive types, portions drawn later will cover portions drawn earlier, as visible with the line crossings.</p>
+<pre class="prettyprint linenums"><code>task ExampleD1 {
+    let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetPrimitiveType(obj, PRIMITIVE_LINELIST);
+    ObjPrim_SetVertexCount(obj, 8);
+
+    ObjPrim_SetVertexPosition(obj, 0, 96, 32, 0);
+    ObjPrim_SetVertexColor(obj, 0, 255, 0, 0);
+    ObjPrim_SetVertexPosition(obj, 1, 140, 52, 0);
+    ObjPrim_SetVertexColor(obj, 1, 0, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 2, 160, 96, 0);
+    ObjPrim_SetVertexColor(obj, 2, 64, 64, 255);
+    ObjPrim_SetVertexPosition(obj, 3, 140, 140, 0);
+    ObjPrim_SetVertexColor(obj, 3, 255, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 4, 96, 160, 0);
+    ObjPrim_SetVertexColor(obj, 4, 255, 0, 255);
+    ObjPrim_SetVertexPosition(obj, 5, 52, 140, 0);
+    ObjPrim_SetVertexColor(obj, 5, 0, 255, 255);
+    ObjPrim_SetVertexPosition(obj, 6, 32, 96, 0);
+    ObjPrim_SetVertexColor(obj, 6, 255, 128, 0);
+    ObjPrim_SetVertexPosition(obj, 7, 52, 52, 0);
+    ObjPrim_SetVertexColor(obj, 7, 255, 0, 128);
+}
+
+task ExampleD2 {
+    let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetPrimitiveType(obj, PRIMITIVE_LINELIST);
+    ObjPrim_SetVertexCount(obj, 10);
+    ObjRender_SetY(obj, 200);
+
+    ObjPrim_SetVertexPosition(obj, 0, 64, 64, 0);
+    ObjPrim_SetVertexColor(obj, 0, 255, 0, 0);
+    ObjPrim_SetVertexPosition(obj, 1, 96, 128, 0);
+    ObjPrim_SetVertexColor(obj, 1, 0, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 2, 160, 32, 0);
+    ObjPrim_SetVertexColor(obj, 2, 64, 64, 255);
+    ObjPrim_SetVertexPosition(obj, 3, 56, 140, 0);
+    ObjPrim_SetVertexColor(obj, 3, 255, 255, 0);
+    ObjPrim_SetVertexPosition(obj, 4, 120, 160, 0);
+    ObjPrim_SetVertexColor(obj, 4, 255, 0, 255);
+    ObjPrim_SetVertexPosition(obj, 5, 200, 32, 0);
+    ObjPrim_SetVertexColor(obj, 5, 0, 255, 255);
+    ObjPrim_SetVertexPosition(obj, 6, 216, 96, 0);
+    ObjPrim_SetVertexColor(obj, 6, 255, 128, 0);
+    ObjPrim_SetVertexPosition(obj, 7, 248, 52, 0);
+    ObjPrim_SetVertexColor(obj, 7, 255, 0, 128);
+    ObjPrim_SetVertexPosition(obj, 8, 200, 32, 0);
+    ObjPrim_SetVertexColor(obj, 8, 0, 255, 255);
+    ObjPrim_SetVertexPosition(obj, 9, 248, 128, 0);
+    ObjPrim_SetVertexColor(obj, 9, 128, 255, 0);
+}</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub4e">Part 4e: How do I utilize Primitives (PRIMITIVE_LINESTRIP)?</h2>
 	      <p>It is now time for Line Strips. Similarly to Triangle Strips, each vertex connects to the previous. Line Strips are incredibly useful for effects and are well-used in main series Touhou games (Seiga's orbs, Sanae's bomb).</p>
 	      <p>SVG TODO</p>
