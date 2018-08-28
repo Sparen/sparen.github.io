@@ -951,6 +951,13 @@ var DNHArtobj = {
             "scripter" : "bronxterror",
             "scriptname" : "RaNGE Contest 19: Memories of a Pseudo Rabbit",
             "dvdb" : ""
+        },
+        {
+            "id": "136",
+            "ytid": "IL2J6xrao4w",
+            "scripter" : "Awalys",
+            "scriptname" : "RaNGE Contest 19: Wingshooting",
+            "dvdb" : ""
         }
     ]
 };
