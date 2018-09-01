@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Aug 24, 2018')">
+  <body onload="setupENG('Aug 31, 2018')">
     <div class="yui-t1" id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -564,9 +564,98 @@ task ExampleF1(num, scale, spd, offset) {
 	      <p>Do note that Triangle Fans are deprecated in later versions of DirectX and are typically less efficient than Triangle Strips due to the need to refer to the first vertex. As a result, it is recommended that Triangle Strips be used whenever possible.</p>
 	      <p>In regards to Line List vs Line Strip, Line List has almost no practical usage in Danmakufu, while Line Strip is primarily used for effects (such as the aforementioned Sanae bomb/Seiga orb graphics). As a result, Line Strip will almost always be the one that you use.</p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How can I create magic circles?</h2>
-	      <p></p>
+	      <p>Magic Circles are a good example of what Primitives are capable of. In this section, I will provide a standard Magic Circle implementation based on built-in Magic Circles that come with Danmakufu (though edited slightly).</p>
+	      <p>We will use the following texture: <a href="tutimg/u3l29sample.png">u3l29sample.png</a>. NOTE: Depending on your browser, it may render as a white texture on a white background like the French Flag from the 1820s. I swear it's actually there.</p>
+	      <p>First thing's first. What is our end goal? Our end goal is a Primitive Magic Circle, which takes a rectangular texture and renders it as a closed loop. Immediately, we can rule out Triangle Fan as an option, as we cannot use a shared vertex for a Magic Circle.</p>
+	      <p>And so we must use Triangle Strips.</p>
+<pre class="prettyprint linenums"><code>task MagicCircle {
+    let imgpath = GetCurrentScriptDirectory() ~ "./img/u3l29sample.png"; // Path for the texture to use
+    let NUM_VERTEX = 32; // Number of vertices we will use for this Magic Circle. 
+    // 32 vertices => 15 edges on the outside, as the last two vertices are duplicated over the first two to close the ring.
+    let MC_RADIUS = 96; // Maximum radius of our Magic Circle, in pixels
+    let MC_SCALE = 1; // Scaling of our entire Magic Circle
+    
+    // Keep track of the distances from the origin for each vertex
+    let listRadius = [];
+    loop(NUM_VERTEX) {
+        listRadius = listRadius ~ [0];
+    }
+
+    // Create our primitive
+    let objCirc = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetTexture(objCirc, imgpath); // Set the texture.
+    ObjPrim_SetPrimitiveType(objCirc, PRIMITIVE_TRIANGLESTRIP);
+    ObjPrim_SetVertexCount(objCirc, NUM_VERTEX);
+    ObjRender_SetScaleXYZ(objCirc, MC_SCALE, MC_SCALE, 1);
+    // When using a Triangle Strip for a ring structure, every pair of vertices must alternate outer then inner
+    // v0 (outer) - v1 (inner) - v2 (outer) forms a triangle. 
+    // Adding v3 (inner) adds a triangle with v1 and v2, resulting in a quadrilateral with vertices v0..3
+    // This pattern is repeated for the entire structure
+    ascent(iVert in 0..NUM_VERTEX / 2){
+        let left = iVert * 240/NUM_VERTEX; // 240 is the length of the texture I am currently using
+        let indexVert = iVert * 2; // indexVert refers to a PAIR of vertices
+        // 125 and 141 are the y coordinates for the part of the texture I want to use. 
+        // Even vertices are 'outer' and Odd vertices are 'inner' in this case.
+        ObjPrim_SetVertexUVT(objCirc, indexVert + 0, left, 125);
+        ObjPrim_SetVertexUVT(objCirc, indexVert + 1, left, 141);
+    }
+
+    // To have our magic circle rotate and handle control over time, we provide an angle and a counter
+    let angleRender = 0;
+
+    // The magic circle exists as long as the boss does
+    while(!Obj_IsDeleted(objBoss)) {
+        angleRender += 360 / NUM_VERTEX / 8; // Last number is best way to control rotation speed. Lower is faster
+        Obj_SetVisible(objCirc, true);
+
+        // Similar to when we set the UV (Texture) coordinates
+        ascent(iVert in 0..NUM_VERTEX / 2) {
+            // Set vertex positions for current iteration of loop
+            let indexVert = iVert * 2;
+            // The '- 1' for the angle is since we must duplicate a pair of vertices. 
+            // So if we have 32 vertices, only 15 edges will be formed.
+            let angle = 360 / (NUM_VERTEX / 2 - 1) * iVert;
+            // listRadius stores the current distance from the position of the render object to the position of each vertex. 
+            let vx1 = listRadius[indexVert] * cos(angle);
+            let vy1 = listRadius[indexVert] * sin(angle);
+            ObjPrim_SetVertexPosition(objCirc, indexVert + 0, vx1, vy1, 0);
+            let vx2 = listRadius[indexVert+1] * cos(angle);
+            let vy2 = listRadius[indexVert+1] * sin(angle);
+            ObjPrim_SetVertexPosition(objCirc, indexVert + 1, vx2, vy2, 0);
+
+            // Calculate vertex positions for next iteration of loop
+            // First, animate expansion of outer vertices
+            // Note that once listRadius[indexVert] reaches MC_RADIUS, listRadius for the vertex remains the same.
+            let drOut = (MC_RADIUS - listRadius[indexVert]) / 8;
+            listRadius[indexVert] = listRadius[indexVert] + drOut;
+            // Next, animate expansion of inner vertices
+            // rRateIn controls the width of magic circle. 
+            // Values are a factor of MC_RADIUS. Value of 1 is very thin; value of 0 has inner vertices at position of magic circle
+            let rRateIn = 1 - 0.12;
+            let drIn = (MC_RADIUS * rRateIn - listRadius[indexVert + 1]) / 8;
+            listRadius[indexVert + 1] = listRadius[indexVert + 1] + drIn;
+        }
+        // Update position and angle of magic circle as a whole
+        ObjRender_SetPosition(objCirc, ObjRender_GetX(objBoss), ObjRender_GetY(objBoss), 1);
+        ObjRender_SetAngleZ(objCirc, angleRender);
+
+        yield;
+    }
+    // Delete the magic circle.
+    Obj_Delete(objCirc);
+}</code></pre>
+	      <p>Let's go over the code. First, we declare our object and set our texture. This example uses 32 vertices, but feel free to use more as long as you use an even number. Just be aware that more vertices = more lag.</p>
+	      <p>This implementation is interesting because of <code>listRadius</code>, an array that stores the distance from the location of the Render Object to the position of each vertex. Note that we don't actually have a single number for the distance since we want our texture to form a loop. In other words, our vertices will be different distances from the center of the Magic Circle (located at the position of the render object). We will have two sets of points - the outer points and the inner points.</p>
+	      <p>Before we run our main loop, we first run a basic loop to set the texture coordinates for each vertex. There are some magic numbers in the example since my texture has a specific size. You will need to change these values to match your texture's dimensions.</p>
+	      <p>In this loop we work with pairs of vertices. Each pair will be the same angle from the center of the magic circle, but one will be farther out while one will be closer in. Refer to the section on Triangle Strips for the visualization of how Triangle Strips work. Hopefully the reason why we pair vertices will make itself clear to you - it's important to understand why we do so if you want to work with more complex primitives.</p>
+	      <p>Within the main while loop, we first set the vertex positions of the outer and inner vertices using data from <code>listRadius</code>. After this, we set <code>listRadius</code>'s values for the next iteration of the loop. Here the division by 8 just controls the speed. Of particular note is <code>rRateIn</code>, which controls the thickness of our loop.</p>
+	      <p>So what does our final magic circle look like?</p>
+	      <img src="./tutimg/u3l29magcirc.png" width="384" height="448"></img><br><br>
+	      <p>And that's all for the magic circle. Feel free to assign colors to the entire Render Object or the vertices. It is common to have a plain white texture and color it however you want to using functions in Danmakufu, or to precolor the texture and simply use it as-is.</p>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How can I create circular lifebars?</h2>
+	      <p>Circular lifebars are done very similarly to Magic Circles, except with one key difference - they have multiple components including one that renders based on enemy health in the current step.</p>
 	      <p></p>
+	      <p>TODO</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Primitives</h2>
 	        <!--Quiz start.-->
 		<p>1) Tewi is setting up a stage enemy with the following code, but it never appears. Why is it not appearing?</p>
