@@ -151,6 +151,9 @@ function Single_1(currgame) {
 	      <h2 class="projectheader">Changelog</h2>
 	      <p>Only versions past 2.1 have their changes documented here.</p>
 	      <p>Source code and usage examples can be found on <a target="_blank" href="https://github.com/Sparen/sparen.github.io/tree/master/ph3tutorials/javascript/Danmakanvas">Github</a>.</p>
+	      <h4>v2.1.2 [Sep 10, 2018]</h4>
+	      <p>* <code>isinbounds</code> now uses canvas dimensions instead of hardcoding.</p>
+	      <p>* Version number now stored at top of file as variable for easy access and reference.</p>
 	      <h4>v2.1.1 [May 03, 2018]</h4>
 	      <p>* Fixed issue where clicking 'Run Danmakanvas Simulation' multiple times would start new instances of the simulation on the same canvas. Issue was a porting issue from 2.0, where startedplurals was not global and was accidentally made local to a game instance (where it was effectively useless). New clicks no longer boot up a new instance. [Thanks to Arcvasti]</p>
 	      <p>* Note that the 2.0 behavior of reset-on-click is not implemented in 2.1.1 and will require more changes in order to work. Whether or not this feature is necessary is a different issue entirely.</p>

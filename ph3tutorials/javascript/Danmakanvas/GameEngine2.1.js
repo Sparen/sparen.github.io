@@ -18,6 +18,9 @@
 //Global variables (use sparingly)
 var startedplurals = []; //array containing IDs of all canvases that have already initiated.
 
+//Version number
+var VERSION_NUMBER_DANMAKANVAS = "Danmakanvas v2.1.2";
+
 /* *****
  * void createNewGame(string canvasid)
  * -- Creates a new game
@@ -91,7 +94,7 @@ function NewGame(canvasid, title) {
         var i;
         for (i = 0; i < currobj.bullets.length; i += 1) {
             currobj.bullets[i].update();
-            if (!isinbounds(currobj.bullets[i])) {
+            if (!isinbounds(currobj.bullets[i], currobj.canvas.width, currobj.canvas.height)) {
                 objtoremove.push(i);
             } else if (currobj.bullets[i].vanishtime > 0 && currobj.bullets[i].existtime > currobj.bullets[i].vanishtime) {
                 objtoremove.push(i);
@@ -104,7 +107,7 @@ function NewGame(canvasid, title) {
         currobj.draw_main(canvasid); //draw updated things 
 
         currobj.context.font = "12px Arial";
-        currobj.context.fillText("Danmakanvas v2.1.1 ~ " + title, 4, 12);
+        currobj.context.fillText(VERSION_NUMBER_DANMAKANVAS + " ~ " + title, 4, 12);
         currobj.context.fillText("Bullet Count: " + (currobj.bullets.length).toString(), 4, 444);
     };
 
@@ -187,8 +190,8 @@ function Player(x, y) {
 
 /* **************** Accessory Functions **************** */
 
-function isinbounds(obj) {
-    if (obj.x < -32 || obj.x > 672 || obj.y < -32 || obj.y > 512) {
+function isinbounds(obj, wd, ht) {
+    if (obj.x < -32 || obj.x > wd + 32 || obj.y < -32 || obj.y > ht + 32) {
         return false;
     }
     return true;
