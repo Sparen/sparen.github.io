@@ -19,7 +19,7 @@
 var startedplurals = []; //array containing IDs of all canvases that have already initiated.
 
 //Version number
-var VERSION_NUMBER_DANMAKANVAS = "Danmakanvas v2.1.2";
+var VERSION_NUMBER_DANMAKANVAS = "Danmakanvas v2.1.3";
 
 /* *****
  * void createNewGame(string canvasid)
@@ -108,7 +108,7 @@ function NewGame(canvasid, title) {
 
         currobj.context.font = "12px Arial";
         currobj.context.fillText(VERSION_NUMBER_DANMAKANVAS + " ~ " + title, 4, 12);
-        currobj.context.fillText("Bullet Count: " + (currobj.bullets.length).toString(), 4, 444);
+        currobj.context.fillText("Bullet Count: " + (currobj.bullets.length).toString(), 4, currobj.canvas.height - 4);
     };
 
     //Main draw loop. Handles render order.
