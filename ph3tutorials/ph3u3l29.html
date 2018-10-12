@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Aug 31, 2018')">
+  <body onload="setupENG('Oct 12, 2018')">
     <div class="yui-t1" id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -259,6 +259,7 @@ task Example2 {
 }</code></pre>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4c">Part 4c: How do I utilize Primitives (PRIMITIVE_TRIANGLEFAN)?</h2>
+	      <p style="color:red"><strong>TriangleFan is deprecated in Direct3D10 and later. While Danmakufu ph3 will continue to support it, many modern game engines will not. It is recommended that you use TriangleStrip instead wherever possible, especially if you plan to do game development outside of Danmakufu.</strong></p>
 	      <p>As stated earlier, for Triangle Strip and Triangle Fan, the types you will be using the most often, it is best to compare the two and see how each of them works. <a target="_blank" href="https://en.wikipedia.org/wiki/Triangle_fan">Triangle Fan</a> is relatively intuitive. You add your first vertex and your second. When you add your third, it forms a triangle with the first and second, just like with Triangle List and Triangle Strip. Each vertex after this forms a triangle with the previous vertex and the first. In other words, the very first vertex is present in every single triangle.</p>
 	      <p>As you can see, Triangle Fans are useful when organizing a shape around a point (like its namesake, the fan). However, this restriction prevents Triangle Fans from being used effectively outside of this specific niche.</p>
 	      <p>Let's illustrate Triangle Fan usage with the following example.</p>
@@ -653,25 +654,96 @@ task ExampleF1(num, scale, spd, offset) {
 	      <p>And that's all for the magic circle. Feel free to assign colors to the entire Render Object or the vertices. It is common to have a plain white texture and color it however you want to using functions in Danmakufu, or to precolor the texture and simply use it as-is.</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Primitives</h2>
 	        <!--Quiz start.-->
-		<p>1) Tewi is setting up a stage enemy with the following code, but it never appears. Why is it not appearing?</p>
-		<pre class="prettyprint linenums"><code></code></pre>
-	        <form method="POST" onSubmit="return checkAnswerA1(this, 'B');">
+		<p>1) How many triangles are there in a Triangle Fan with 8 vertices?</p>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'B');">
 	        <input type="RADIO" value="A" name="cc">
-	        A. The enemy needs an @Event with EV_REQUEST_LIFE.<br>
+	        A. 4<br>
 	        <input type="RADIO" value="B" name="cc">
-	        B. The enemy's life is not being set explicitly and therefore defaults to 0, resulting in TFinalize deleting the enemy.<br>
+	        B. 6<br>
 	        <input type="RADIO" value="C" name="cc">
-	        C. The enemy is being spawned outside of its assigned bounds and is automatically deleted.<br>
+	        C. 7<br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. 8<br>
+	        <input type="SUBMIT" value="Submit">
+	        </form>
+		<br>
+		<p>2) How many vertices are required for a Line Strip with six edges?</p>
+	        <form method="POST" onSubmit="return checkAnswerGENERIC(this, 'C');">
+	        <input type="RADIO" value="A" name="cc">
+	        A. 4<br>
+	        <input type="RADIO" value="B" name="cc">
+	        B. 6<br>
+	        <input type="RADIO" value="C" name="cc">
+	        C. 7<br>
+	        <input type="RADIO" value="D" name="cc">
+	        D. 8<br>
 	        <input type="SUBMIT" value="Submit">
 	        </form>
 		<br>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: What is a 2D Sprite List?</h2>
-	      <p></p>
+	      <p>As an addendum to this guide to understanding Primitives in Danmakufu, we will cover the basics of 2D Sprite Lists. 2D Sprite Lists are a convenient way to render multiple sprites from a common spritesheet in a single draw, using only one object. Common uses of Sprite Lists include numbers or text stored as sprites (refer to the default system script), sprites made up of various components, etc.</p>
 	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I utilize 2D Sprite Lists?</h2>
-	      <p></p>
+	      <p>Actual usage of Sprite Lists is quite simple assuming you're familiar with sprites.</p>
+	      <p>You create Sprite Lists with <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_Create', 'f_opcreate_02');"><code>ObjPrim_Create(OBJ_SPRITE_LIST_2D)</code><span class="tooltiptext" id="f_opcreate_02"></span></span>, and set your texture (the spritesheet) with <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetTexture', 'f_opsettex_02');"><code>ObjPrim_SetTexture()</code><span class="tooltiptext" id="f_opsettex_02"></span></span>. After this, it is necessary to add the individual sprite components, referred to as 'vertices'.</p>
+	      <p>To reset a Sprite List (for example, if your sprite list is moving or if you are updating the content of your sprite list each frame), you will want to call <span class="tooltip" onmouseover="getFxnDocs('ObjSpriteList2D_ClearVertexCount', 'f_osl2dcvc_01');"><code>ObjSpriteList2D_ClearVertexCount()</code><span class="tooltiptext" id="f_osl2dcvc_01"></span></span>. This function will clear all the stored vertices in the sprite list - essentially resetting the contents. At this point, actually adding vertices is simple.</p>
+	      <p>Similar to regular 2D and 3D Sprites, you set your source and dest rects. There is also an option to use DestCenter. Functions include <span class="tooltip" onmouseover="getFxnDocs('ObjSpriteList2D_SetSourceRect', 'f_osl2dssr_01');"><code>ObjSpriteList2D_SetSourceRect()</code><span class="tooltiptext" id="f_osl2dssr_01"></span></span>, which does exactly what you think it does. Once you've set the rects, you can use ObjRender_SetX/Y/Position to set the position of the vertex and <span class="tooltip" onmouseover="getFxnDocs('ObjSpriteList2D_AddVertex', 'f_osl2dav_01');"><code>ObjSpriteList2D_AddVertex()</code><span class="tooltiptext" id="f_osl2dav_01"></span></span> tpo add the vertex to the sprite list. <strong>These positions are NOT relative to the 'position' of the Sprite List. When you change the position of the sprite list, previous vertices keep their positions while new vertices use the new position.</strong>. For example, refer to the following, which consists of a number of same-sized sprites being rendered one below the other in a vertical line:</p>
+<pre class="prettyprint linenums"><code>    task DrawItems {
+        let x = 16;
+        let y = 113;
+        let obj = ObjPrim_Create(OBJ_SPRITE_LIST_2D);
+        ObjPrim_SetTexture(obj, GetCurrentScriptDirectory() ~ "./img/STTJ_Item.png");
+        Obj_SetRenderPriority(obj, 0.95);
+        ObjRender_SetPosition(obj, x, y, 1);
+        ObjSpriteList2D_ClearVertexCount(obj);
+
+        ObjSpriteList2D_SetSourceRect(obj, 0, 18, 18, 36);
+        ObjSpriteList2D_SetDestCenter(obj);
+        ObjSpriteList2D_AddVertex(obj);
+
+        ObjSpriteList2D_SetSourceRect(obj, 0, 0, 18, 18);
+        ObjSpriteList2D_SetDestCenter(obj);
+        ObjRender_SetY(obj, y + 20);
+        ObjSpriteList2D_AddVertex(obj);
+
+        ObjSpriteList2D_SetSourceRect(obj, 18, 18, 36, 36);
+        ObjSpriteList2D_SetDestCenter(obj);
+        ObjRender_SetY(obj, y + 40);
+        ObjSpriteList2D_AddVertex(obj);
+
+        ObjSpriteList2D_SetSourceRect(obj, 18, 0, 36, 18);
+        ObjSpriteList2D_SetDestCenter(obj);
+        ObjRender_SetY(obj, y + 60);
+        ObjSpriteList2D_AddVertex(obj);
+
+        ObjSpriteList2D_SetSourceRect(obj, 36, 0, 54, 18);
+        ObjSpriteList2D_SetDestCenter(obj);
+        ObjRender_SetY(obj, y + 80);
+        ObjSpriteList2D_AddVertex(obj);
+
+        ObjSpriteList2D_SetSourceRect(obj, 54, 0, 72, 18);
+        ObjSpriteList2D_SetDestCenter(obj);
+        ObjRender_SetY(obj, y + 100);
+        ObjSpriteList2D_AddVertex(obj);
+
+        ObjSpriteList2D_SetSourceRect(obj, 72, 0, 90, 18);
+        ObjSpriteList2D_SetDestCenter(obj);
+        ObjRender_SetY(obj, y + 120);
+        ObjSpriteList2D_AddVertex(obj);
+    }</code></pre>
+	      <p>Put simply, when a new vertex is added, it keeps all the aspects of the Sprite List object at the time it was added - position being the most important.</p>
+	      <p>And that's all. It is recommended to refer to the default System script for further reference on Sprite List usage</p>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
-	          <li></li>
+	          <li>Danmakufu supports a variety of primitive types, whose vertices can be textured or colored</li>
+	          <li>Triangle List uses sets of three vertices to draw triangles</li>
+	          <li>Triangle Strip draws triangles using the previous two vertices, if they exist</li>
+	          <li>Triangle Fan draws triangles using the previous vertex and the first vertex, if they exist</li>
+	          <li>Line List uses sets of two vertices to draw lines</li>
+	          <li>Line Strip draws lines using the previous vertex, if it exists</li>
+	          <li>Point List uses single vertices to draw points</li>
+	          <li>Triangle Strip should be used instead of Triangle Fan and Triangle List</li>
+	          <li>Primitives in Danmakufu have vertices set relative to the object's position</li>
+	          <li>Sprite Lists provide a way to batch draw calls for sprites within the same spritesheet</li>
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
@@ -694,7 +766,6 @@ task ExampleF1(num, scale, spd, offset) {
     <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
     <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
-    <script type="text/javascript" src="javascript/U3L28Quiz1.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
     <script type="text/javascript" src="javascript/Danmakanvas/GameEngine2.1.js"></script>
