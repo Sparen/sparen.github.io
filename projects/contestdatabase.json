@@ -480,6 +480,19 @@
             "numparticipants": 7,
             "result": [["bronxterror/Ultimadragon88"],["Sparen"],["AchySolrock", "gtbot"]],
             "participants": ["Umbra", "JDude", "Sparen", "iVAwalys", "Ilwo", "bronxterror/Ultimadragon88", "AchySolrock", "gtbot"]
+        },
+        {
+            "id": "locaa12",
+            "location": "locaa",
+            "loc_category": "locaa",
+            "name": "make the old new",
+            "year": 2018,
+            "duration": [2018.10, 2018.11],
+            "host": "Trickysticks",
+            "judges": ["Trickysticks", "ExPorygon/Ozzy840", "WishMakers"],
+            "numparticipants": 0,
+            "result": [[], [], []],
+            "participants": []
         }
     ]
 }
