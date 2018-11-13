@@ -490,9 +490,9 @@
             "duration": [2018.10, 2018.11],
             "host": "Trickysticks",
             "judges": ["Trickysticks", "ExPorygon/Ozzy840", "WishMakers"],
-            "numparticipants": 0,
+            "numparticipants": 9,
             "result": [[], [], []],
-            "participants": []
+            "participants": ["Green Dinobot", "JDude", "Python", "iVAwalys", "NecroHeart/Vigor", "Zinochan/Lathios", "Adam", "Umbra", "gtbot"]
         }
     ]
 }
