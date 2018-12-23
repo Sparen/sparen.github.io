@@ -98,6 +98,18 @@
   background-color: rgb(128,96,32);
 }
 
+.indexupdwinter2018{
+  border-width: 4px 6px; 
+  border-color: #2299FF #22CCFF; 
+  border-style: solid double; 
+  padding-left: 8px; 
+  padding-right: 8px; 
+  padding-bottom: 8px; 
+  padding-top: 4px; 
+  border-radius: 2px; 
+  background-color: #226688;
+}
+
 .indexupdsp2015title{
   padding: 5px;
 }
