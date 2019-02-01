@@ -761,15 +761,15 @@ var dnhph3docs_standard = {
                     "fname": "RenderToTextureA1",
                     "args": ["targetname : string", "start : number", "end : number", "rendertargetclear : bool"],
                     "returnv": "",
-                    "description": "Renders the specified range of invalid render priority drawings to a texture.",
-                    "notes": "TODO: What does rendertargetclear do?"
+                    "description": "Renders the specified range of invalid render priority drawings to a texture.<br>Set rendertargetclear to true in order to clear the render target after each frame. If set to false, the render target will remain into the next frame.",
+                    "notes": ""
                 },
                 {
                     "fname": "RenderToTextureB1",
                     "args": ["targetname : string", "obj : number (Object ID)", "rendertargetclear : bool"],
                     "returnv": "",
-                    "description": "Renders the specified object to texture.",
-                    "notes": "TODO: What does rendertargetclear do?"
+                    "description": "Renders the specified object to texture.<br>Set rendertargetclear to true in order to clear the render target after each frame. If set to false, the render target will remain into the next frame.",
+                    "notes": ""
                 },
                 {
                     "fname": "SaveRenderedTextureA1",
