@@ -493,6 +493,19 @@
             "numparticipants": 9,
             "result": [["iVAwalys"], ["Adam"], ["Python"]],
             "participants": ["Green Dinobot", "JDude", "Python", "iVAwalys", "NecroHeart/Vigor", "Zinochan/Lathios", "Adam", "Umbra", "gtbot"]
+        },
+        {
+            "id": "range20",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "new stars of four seasons",
+            "year": 2019,
+            "duration": [2019.03, 2019.04],
+            "host": "Trickysticks",
+            "judges": ["Trickysticks", "yeashie", "CrestedPeak9"],
+            "numparticipants": 0,
+            "result": [[""],[""],[""]],
+            "participants": []
         }
     ]
 }
