@@ -958,6 +958,13 @@ var DNHArtobj = {
             "scripter" : "Awalys",
             "scriptname" : "RaNGE Contest 19: Wingshooting",
             "dvdb" : ""
+        },
+        {
+            "id": "137",
+            "ytid": "KwCA1HcZx_s",
+            "scripter" : "Sparen",
+            "scriptname" : "RaNGE Contest 20: Seasonal Rabbit",
+            "dvdb" : "sparenofiria.html#range20"
         }
     ]
 };
