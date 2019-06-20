@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jul 02, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jun 20, 2019')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -141,7 +141,7 @@
         }
     }</code></pre>
 	      <p>Above, all I did was implement the animframe changing code, as well as the resetting the source rect based on the animframe. In the current case, animframe/8 will always be between 0 and 3, which corresponds to the four sprites in the animation as they are located on the spritesheet. Using this, we can successfully render and animate the numbers 1-4.</p>
-	      <p>Of course, to implement movement, etc. you would need movement angle and speed, and you can include if statements that will take care of that. Just be aware that if you decide to flip the sprite when the enemy moves in one direction, you may need to flip it back when it moves in the other direction.</p>
+	      <p>Of course, to implement movement, etc. you would need to either track movement angle and speed or track the x position of an enemy in order to determine when to use a movement sprite. You can include if statements that will take care of that - if using movement angle and speed, you should utilize the speed to determine if the boss is idle or moving, and you should utilize the movement angle to determine which direction the enemy is moving in. Just be aware that if you decide to flip the sprite when the enemy moves in one direction, you may need to flip it back when it moves in the other direction. If using the x position tracking method, you would store the current and previous x coordinates. If the current x coordinate is different from the previous, you know that the enemy has moved and are also able to determine which direction the enemy moved in, allowing for you to determine which set of animations to use (credits for this method go to Gizmo the Dragon).</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: 2D Sprites</h2>
 	        <!--Quiz start.-->
 		<p>1) We have a 32x32 image with a 24x24 sprite. Which of the following will render the sprite as a 48x48 image? There are multiple correct answers.</p>
