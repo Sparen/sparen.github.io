@@ -499,7 +499,7 @@ var dnhph3docs_object = {
                 },
                 {
                     "fname": "ObjSprite3D_SetSourceDestRect",
-                    "args": ["objID : number (Object ID)"],
+                    "args": ["objID : number (Object ID)", "left : number", "top : number", "right : number", "bottom : number"],
                     "returnv": "",
                     "description": "Sets the texture rectangle for the sprite, and maps the center of the rectangle to the destination coordinates (0, 0).",
                     "notes": ""
