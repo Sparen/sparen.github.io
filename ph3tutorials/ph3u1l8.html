@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 19, 2018')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jul 11, 2019')">    <div class="yui-t1" id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -120,7 +120,7 @@ ShotData{
 	      <p>Now to discuss the other properties. Firstly, render. This sets the Blend Type. The default is <a target="_blank" href="https://en.wikipedia.org/wiki/Alpha_compositing" title="Alpha Blending on Wikipedia">ALPHA</a>, which renders the graphic as-is, including transparency from the Alpha channel. You can also do <a target="_blank" href="https://en.wikipedia.org/wiki/Blend_modes#Addition" title="Add Blending on Wikipedia">ADD and ADD_ARGB</a>, which makes the bullet shiny. ADD requires a black background to make things shiny - otherwise it looks hideous. ADD_ARGB is based on the Alpha channel instead, and makes partially transparent bullets shiny. You can also use Subtractive and Multiplicative blends with SUBTRACT and MULTIPLY, but these are not usually used. Most of the time, you will use a function that will be discussed in <a href="./ph3u2l14.html">Lesson 14</a>, <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetBlendType', 'f_orsbt_01');"><code>ObjRender_SetBlendType()</code><span class="tooltiptext" id="f_orsbt_01"></span></span>, to change the render type of the graphic, and shotsheets therefore tend to contain only ALPHA and either ADD or ADD_ARGB shots. If render is not filled out, it defaults to ALPHA.</p>
 	      <p>Next is angular_velocity. This controls the rotation of the bullet graphic. Default is 0, for no rotation.</p>
 	      <p>Next is fixed_angle, which takes a boolean. True means that the bullet will always take the shape in the shotsheet and will never rotate. Default is false.</p>
-	      <p>Finally, we have collision, which is the hitbox. By default, the hitbox is a percentage of the bullet graphic (in a circle), but by setting a value to collision (in pixels), you can specify a different radius for the hitbox, which originates from the center of the LTRB rectangle.</p>
+	      <p>Finally, we have collision, which is the hitbox. By default, the hitbox is a percentage of the bullet graphic (in a circle, specifically <code>max(min(width, height) / 3 - 3, 3)</code>), but by setting a value to collision (in pixels), you can specify a different radius for the hitbox, which originates from the center of the LTRB rectangle. It is also possible to set collision at an offset from the center of the bullet using <code>collision = (r, x, y)</code>.</p>
 	      <p>Below are more examples of shot definitions.</p>
 	      <pre class="prettyprint linenums"><code>ShotData{ id=335 render=ALPHA  delay_color= (64,255,255) 
 	AnimationData{ 
