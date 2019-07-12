@@ -352,11 +352,6 @@
 <priority>0.5</priority>
 </url>
 <url>
-<loc>http://sparen.github.io/projects/projectsphase4.html</loc>
-<changefreq>monthly</changefreq>
-<priority>0.2</priority>
-</url>
-<url>
 <loc>http://sparen.github.io/projects/projectsphase4_locaa6.html</loc>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
@@ -390,11 +385,6 @@
 <loc>http://sparen.github.io/projects/projectsphase5_range19.html</loc>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
-</url>
-<url>
-<loc>http://sparen.github.io/projects/projectsphase6.html</loc>
-<changefreq>monthly</changefreq>
-<priority>0.2</priority>
 </url>
 <url>
 <loc>http://sparen.github.io/projects/projectsphase6_range20.html</loc>
