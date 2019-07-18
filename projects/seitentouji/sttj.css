@@ -171,6 +171,7 @@ p, fieldset, table, pre {
 
 /*SeitenTouji stuff*/
 
+/* Primary Navigation System */
 .sttjnavbar{
   text-align:center;
 }
@@ -204,6 +205,7 @@ p, fieldset, table, pre {
   border-radius: 6px;
 }
 
+/* Within-Page Navigation System. Uses narrower elements */
 .sttjtocnav{
   text-align:center;
 }
@@ -225,7 +227,7 @@ p, fieldset, table, pre {
   float: center;
   list-style-type: none;
   display:inline-block;
-  width: 240px;
+  width: 160px;
   font-weight: bold;
   background-color: #002222;
   text-align: center;
