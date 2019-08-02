@@ -2,11 +2,10 @@
 
 var database_obj;
 
-var NUMLOCATIONS = 3; //hardcoded. Refers to the location field in the JSON
-
 //JSON NOTES:
 //NUMBERS THAT ARE UNKNOWN DEFAULT TO -1. OTHER UNKNOWNS DEFAULT TO NOTHING
 
+// Create dropdown menu for query box, providing options to run other functions
 function createDropdown() {
     console.log("createDropdown(): Running");
     return "<form method='POST' onSubmit='return execute();'>" +
@@ -21,6 +20,7 @@ function createDropdown() {
             "</form>";
 }
 
+// Obtains the contents of the specified JSON file
 function getFileContents() {
     console.log("getFileContents(): Running");
     var filepath = "contestdatabase.json";
@@ -55,7 +55,7 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     }
     for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
-        values = values.concat([[0, 0, 0]]);
+        values = values.concat([[0, 0, 0, 0]]);
     }
 
     for (i = 0; i < contests.length; i += 1) {
@@ -64,6 +64,7 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
             var tempindex = 0;
             if (contests[i].location == "locaa") {tempindex = 1;}
             if (contests[i].location == "uwom") {tempindex = 2;}
+            if (contests[i].location == "bhe") {tempindex = 3;}
             values[years.indexOf(temp)][tempindex] ++;
         } else if (temp != -1) { //Failsafe
             alert("ERROR");
@@ -75,8 +76,8 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     var displaystring = "";
     for (i = 0; i < years.length; i += 1) {
         displaystring = displaystring + years[i] + " - " +
-        "MotK: " + values[i][0] + "   |   LOCAA: " + values[i][1] + "   |   UWoM: " + values[i][2] +
-        "   |   Total: " + (values[i][0] + values[i][1] + values[i][2]) + "<br>";
+        "MotK: " + values[i][0] + "   |   LOCAA: " + values[i][1] + "   |   UWoM: " + values[i][2] + "   |   BHE: " + values[i][3] +
+        "   |   Total: " + (values[i][0] + values[i][1] + values[i][2] + values[i][3]) + "<br>";
     }
 
     console.log("contestsPerYear(): Preparing SVG Display"); //NOTE: The SVG height is hardcoded to a max of 23 contests/year
@@ -95,11 +96,13 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
         var temp_cpy_svg_motkcount = 10*values[i][0];
         var temp_cpy_svg_locaacount = 10*values[i][1];
         var temp_cpy_svg_uwomcount = 10*values[i][2];
+        var temp_cpy_svg_bhecount = 10*values[i][3];
         cpy_svg += '<path d="M ' + (48 + i*16) + ' 230 V ' + (230 - temp_cpy_svg_motkcount) + '" stroke="#66AAFF" stroke-width="12" fill="none"></path>';
         cpy_svg += '<path d="M ' + (48 + i*16) + ' ' + (230 - temp_cpy_svg_motkcount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount) + '" stroke="#66FFAA" stroke-width="12" fill="none"></path>';
         cpy_svg += '<path d="M ' + (48 + i*16) + ' ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount) + '" stroke="#CCCCCC" stroke-width="12" fill="none"></path>';
-        cpy_svg += '<text x="' + (48 + i*16) + '" y="' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount - 2)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="white"' +
-          'text-anchor="middle" dominant-baseline="alphabetic">' + (values[i][0] + values[i][1] + values[i][2]) + '</text>';
+        cpy_svg += '<path d="M ' + (48 + i*16) + ' ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount - temp_cpy_svg_bhecount) + '" stroke="#e0115f" stroke-width="12" fill="none"></path>';
+        cpy_svg += '<text x="' + (48 + i*16) + '" y="' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount - temp_cpy_svg_bhecount - 2)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="white"' +
+          'text-anchor="middle" dominant-baseline="alphabetic">' + (values[i][0] + values[i][1] + values[i][2] + values[i][3]) + '</text>';
         cpy_svg += '<text x="' + (48 + i*16) + '" y="250" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
           'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[i] + '</text>';
     }
@@ -113,6 +116,9 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     cpy_svg += '<rect x="' + (cpy_svg_width - 96) + '" y="156" height="8" width="8" fill="#CCCCCC"></rect>';
     cpy_svg += '<text x="' + (cpy_svg_width - 80) + '" y="160" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="start" dominant-baseline="central">UWoM</text>';
+    cpy_svg += '<rect x="' + (cpy_svg_width - 96) + '" y="186" height="8" width="8" fill="#e0115f"></rect>';
+    cpy_svg += '<text x="' + (cpy_svg_width - 80) + '" y="190" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+          'text-anchor="start" dominant-baseline="central">BHE</text>';
 
     cpy_svg += '<text x="' + (cpy_svg_width - 4) + '" y="274" font-family="Andale Mono, Monospace" font-size="6px" fill="#DDDDDD"' +
           'text-anchor="end" dominant-baseline="central">This graph was generated by sparen.github.io</text>';
@@ -140,8 +146,8 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     }
     for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
-        anpl_numcontests = anpl_numcontests.concat([[0, 0, 0]]); //range, locaa, uwom
-        anpl_numparts = anpl_numparts.concat([[0, 0, 0]]);
+        anpl_numcontests = anpl_numcontests.concat([[0, 0, 0, 0]]); //range, locaa, uwom, bhe
+        anpl_numparts = anpl_numparts.concat([[0, 0, 0, 0]]);
     }
 
     for (i = 0; i < contests.length; i += 1) {
@@ -150,6 +156,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
             var tempindex = 0;
             if (contests[i].location == "locaa") {tempindex = 1;}
             else if (contests[i].location == "uwom") {tempindex = 2;}
+            else if (contests[i].location == "bhe") {tempindex = 3;}
             anpl_numcontests[years.indexOf(temp)][tempindex] ++;
             anpl_numparts[years.indexOf(temp)][tempindex] += contests[i].numparticipants;
         } else if (temp != -1) { //Failsafe
@@ -160,10 +167,11 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     //assemble averages
     var anpl_averages = [];
     for (i = 0; i < years.length; i += 1) {
-        var temp_avg = [(anpl_numparts[i][0]/anpl_numcontests[i][0]).toFixed(2), (anpl_numparts[i][1]/anpl_numcontests[i][1]).toFixed(2), (anpl_numparts[i][2]/anpl_numcontests[i][2]).toFixed(2)];
+        var temp_avg = [(anpl_numparts[i][0]/anpl_numcontests[i][0]).toFixed(2), (anpl_numparts[i][1]/anpl_numcontests[i][1]).toFixed(2), (anpl_numparts[i][2]/anpl_numcontests[i][2]).toFixed(2), (anpl_numparts[i][3]/anpl_numcontests[i][3]).toFixed(2)];
         if (isNaN(temp_avg[0])) {temp_avg[0] = 0; console.log("anps(): 0 contests at " + years[i] + " at MotK");}
         if (isNaN(temp_avg[1])) {temp_avg[1] = 0; console.log("anps(): 0 contests at " + years[i] + " at LOCAA");}
         if (isNaN(temp_avg[2])) {temp_avg[2] = 0; console.log("anps(): 0 contests at " + years[i] + " at UWoM");}
+        if (isNaN(temp_avg[3])) {temp_avg[3] = 0; console.log("anps(): 0 contests at " + years[i] + " at BHE");}
         anpl_averages = anpl_averages.concat([temp_avg]);
     }
 
@@ -172,7 +180,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     var displaystring = "";
     for (i = 0; i < years.length; i += 1) {
         displaystring = displaystring + years[i] + " - " +
-        "MotK: #C: " + anpl_numcontests[i][0] + ", #P: " + anpl_numparts[i][0] + ", #Avg: " + anpl_averages[i][0] + "   |   LOCAA: #C: " + anpl_numcontests[i][1] + ", #P: " + anpl_numparts[i][1] + ", #Avg: " + anpl_averages[i][1] + "   |   UWoM: #C: " + anpl_numcontests[i][2] + ", #P: " + anpl_numparts[i][2] + ", #Avg: " + anpl_averages[i][2] + "<br>";
+        "MotK: #C: " + anpl_numcontests[i][0] + ", #P: " + anpl_numparts[i][0] + ", #Avg: " + anpl_averages[i][0] + "   |   LOCAA: #C: " + anpl_numcontests[i][1] + ", #P: " + anpl_numparts[i][1] + ", #Avg: " + anpl_averages[i][1] + "   |   UWoM: #C: " + anpl_numcontests[i][2] + ", #P: " + anpl_numparts[i][2] + ", #Avg: " + anpl_averages[i][2] + "   |   BHE: #C: " + anpl_numcontests[i][3] + ", #P: " + anpl_numparts[i][3] + ", #Avg: " + anpl_averages[i][3] + "<br>";
     }
 
     console.log("averageNumParticipantsLocation(): Preparing SVG Display");
@@ -193,20 +201,25 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
         var temp_anpl_svg_motkcount = 10*anpl_averages[i][0];
         var temp_anpl_svg_locaacount = 10*anpl_averages[i][1];
         var temp_anpl_svg_uwomcount = 10*anpl_averages[i][2];
+        var temp_anpl_svg_bhecount = 10*anpl_averages[i][3];
         var temp_anpl_svg_motkcount2 = 10*anpl_averages[i+1][0];
         var temp_anpl_svg_locaacount2 = 10*anpl_averages[i+1][1];
         var temp_anpl_svg_uwomcount2 = 10*anpl_averages[i+1][2];
+        var temp_anpl_svg_bhecount2 = 10*anpl_averages[i+1][3];
         anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_motkcount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_motkcount2) + '" stroke="#66AAFF" stroke-width="2" fill="none"></path>';
         anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_locaacount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_locaacount2) + '" stroke="#66FFAA" stroke-width="2" fill="none"></path>';
         anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_uwomcount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_uwomcount2) + '" stroke="#CCCCCC" stroke-width="2" fill="none"></path>';
+        anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_bhecount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_bhecount2) + '" stroke="#e0115f" stroke-width="2" fill="none"></path>';
     }
     for (i = 0; i < years.length; i += 1) { //points and years
         var temp_anpl_svg_motkcount = 10*anpl_averages[i][0];
         var temp_anpl_svg_locaacount = 10*anpl_averages[i][1];
         var temp_anpl_svg_uwomcount = 10*anpl_averages[i][2];
+        var temp_anpl_svg_bhecount = 10*anpl_averages[i][3];
         anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_motkcount) + '" r="2" stroke="white" stroke-width="0.5" fill="#66AAFF"></circle>';
         anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_locaacount) + '" r="2" stroke="white" stroke-width="0.5" fill="#66FFAA"></circle>';
         anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_uwomcount) + '" r="2" stroke="white" stroke-width="0.5" fill="#CCCCCC"></circle>';
+        anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_bhecount) + '" r="2" stroke="white" stroke-width="0.5" fill="#e0115f"></circle>';
         anpl_svg += '<text x="' + (48 + i*32) + '" y="290" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
           'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[i] + '</text>';
     }
@@ -221,6 +234,9 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     anpl_svg += '<rect x="' + (anpl_svg_width - 96) + '" y="156" height="8" width="8" fill="#CCCCCC"></rect>';
     anpl_svg += '<text x="' + (anpl_svg_width - 80) + '" y="160" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="start" dominant-baseline="central">UWoM</text>';
+    anpl_svg += '<rect x="' + (anpl_svg_width - 96) + '" y="186" height="8" width="8" fill="#e0115f"></rect>';
+    anpl_svg += '<text x="' + (anpl_svg_width - 80) + '" y="190" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+          'text-anchor="start" dominant-baseline="central">BHE</text>';
 
     anpl_svg += '<text x="' + (anpl_svg_width - 4) + '" y="314" font-family="Andale Mono, Monospace" font-size="6px" fill="#DDDDDD"' +
           'text-anchor="end" dominant-baseline="central">This graph was generated by sparen.github.io</text>';
@@ -228,8 +244,8 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     anpl_svg += '</svg>';
 
     //OVERALL STATS
-    var anpl_totalnumcontests = [0, 0, 0];
-    var anpl_totalnumparts = [0, 0, 0];
+    var anpl_totalnumcontests = [0, 0, 0, 0];
+    var anpl_totalnumparts = [0, 0, 0, 0];
     for (i = 0; i < years.length; i += 1){
         anpl_totalnumcontests[0] += anpl_numcontests[i][0];
         anpl_totalnumparts[0] += anpl_numparts[i][0];
@@ -237,12 +253,15 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
         anpl_totalnumparts[1] += anpl_numparts[i][1];
         anpl_totalnumcontests[2] += anpl_numcontests[i][2];
         anpl_totalnumparts[2] += anpl_numparts[i][2];
+        anpl_totalnumcontests[3] += anpl_numcontests[i][3];
+        anpl_totalnumparts[3] += anpl_numparts[i][3];
     }
-    var anpl_overallaverages = [(anpl_totalnumparts[0]/anpl_totalnumcontests[0]).toFixed(2), (anpl_totalnumparts[1]/anpl_totalnumcontests[1]).toFixed(2), (anpl_totalnumparts[2]/anpl_totalnumcontests[2]).toFixed(2)];
+    var anpl_overallaverages = [(anpl_totalnumparts[0]/anpl_totalnumcontests[0]).toFixed(2), (anpl_totalnumparts[1]/anpl_totalnumcontests[1]).toFixed(2), (anpl_totalnumparts[2]/anpl_totalnumcontests[2]).toFixed(2), (anpl_totalnumparts[3]/anpl_totalnumcontests[3]).toFixed(2)];
 
     var displaystring2 = "MotK Overall: " + anpl_overallaverages[0] + " participants/contest<br>" + 
     "LOCAA Overall: " + anpl_overallaverages[1] + " participants/contest<br>" + 
-    "UWoM Overall: " + anpl_overallaverages[2] + " participants/contest<br>";
+    "UWoM Overall: " + anpl_overallaverages[2] + " participants/contest<br>" +
+    "BHE Overall: " + anpl_overallaverages[3] + " participants/contest<br>";
 
     document.getElementById("displaybox").innerHTML = displaystring + "<br>" + anpl_svg + "<br>" + displaystring2;
 }
@@ -298,6 +317,9 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
     pot_svg += '<rect x="' + (pot_svg_width - 96) + '" y="191" height="8" width="8" fill="#CCCCCC"></rect>';
     pot_svg += '<text x="' + (pot_svg_width - 80) + '" y="195" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="start" dominant-baseline="central">UWoM</text>';
+    pot_svg += '<rect x="' + (pot_svg_width - 96) + '" y="221" height="8" width="8" fill="#e0115f"></rect>';
+    pot_svg += '<text x="' + (pot_svg_width - 80) + '" y="225" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+          'text-anchor="start" dominant-baseline="central">BHE</text>';
     
 
     pot_svg += '<text x="' + (pot_svg_width - 4) + '" y="390" font-family="Andale Mono, Monospace" font-size="10px" fill="#DDDDDD"' +
@@ -598,6 +620,8 @@ function fetchstartendcolor(contestobj) {
         fsec_color = "#66FFAA";
     } else if (contestobj.location == "uwom") {
         fsec_color = "#CCCCCC";
+    } else if (contestobj.location == "bhe") {
+        fsec_color = "#e0115f";
     }
     return {
         startval: fsec_start,
