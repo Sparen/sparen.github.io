@@ -168,11 +168,14 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   display: inline-block;
 }
 
-#yui-main .yui-b{margin-left:13.30769em;}
+#pagecontentwrapper_tut {
+  margin-left:13.30769em;
+}
 
-/*Alter things common to all bodies here*/
-.yui-g{
-  max-width: 850px;
+/* Page content. Uses inline block in order to render properly. */
+#pagecontent_tut {
+  text-align: left;
+  max-width: 1000px;
   width: 100%;
 }
 
