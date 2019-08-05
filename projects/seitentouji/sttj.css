@@ -19,21 +19,6 @@ h1,h2,h3,h4,h5,h6{
   font-size:100%;
   font-weight:normal;
 }
-q:before,q:after{content:'';}
-abbr,acronym{
-  border:0;
-  font-variant:normal;
-}
-sup{vertical-align:text-top;}
-sub{vertical-align:text-bottom;}
-input,textarea,select{
-  font-family:inherit;
-  font-size:inherit;
-  font-weight:inherit;
-}
-input,textarea,select{font-size:100%;}
-legend{color:#000;}
-del,ins{text-decoration:none;}
 body{/*Font size: The /1.25 refers to the spacing between lines*/
   font:13.5px/1.25 arial,helvetica,clean,sans-serif;
 }
@@ -81,12 +66,6 @@ h1, h2, h3 {
 }
 h1, h2, h3, h4, h5, h6, strong {  
   font-weight: bold;
-}
-abbr, acronym {  
-  border-bottom-width: 1px;  
-  border-bottom-style: dotted;  
-  border-bottom-color: black;  
-  cursor: help;
 }
 em {font-style: italic;}
 blockquote, ul, ol, dl {  
