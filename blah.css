@@ -56,18 +56,11 @@ a:visited {color:rgb(50,200,200);}
 a:hover {color:rgb(82,235,251);}
 
 footer{clear:both;}
+
 #top{
-  text-align:left;
+  text-align: left;
   margin:auto 10px;
   width:auto;
-}
-
-#yui-main .yui-b{margin-left:13.30769em;}
-
-/*Alter things common to all bodies here*/
-.yui-g{
-  max-width: 850px;
-  width: 100%;
 }
 
 h1 {font-size: 138.5%;}
@@ -80,12 +73,6 @@ h1, h2, h3 {
   margin-left: 0px;
 }
 h1, h2, h3, h4, h5, h6, strong {font-weight: bold;}
-abbr, acronym {  
-  border-bottom-width: 1px;  
-  border-bottom-style: dotted;  
-  border-bottom-color: black;  
-  cursor: help;
-}
 em {font-style: italic;}
 blockquote, ul, ol, dl {  
   margin-top: 1em;  
@@ -127,10 +114,6 @@ th {
   font-weight: bold;  
   text-align: center;
 }
-caption {  
-  margin-bottom: 0.5em;  
-  text-align: center;
-}
 p, fieldset, table, pre {margin-bottom: 1em;}
 
 /* ----- TUTORIAL ASSIST BY SPAREN ----- */
@@ -170,15 +153,35 @@ p, fieldset, table, pre {margin-bottom: 1em;}
     -ms-interpolation-mode: nearest-neighbor;  /* IE (non-standard property) */
 }
 
+/* ----- MAIN WEBSITE COMPONENTS ----- */
+
+/* Wrapper for page content. Centers content. */
+#pagecontentwrapper {
+  text-align: center;
+}
+
+/* Page content. Uses inline block in order to render properly. */
+#pagecontent {
+  text-align: left;
+  max-width: 1000px;
+  width: 100%;
+  display: inline-block;
+}
+
+#yui-main .yui-b{margin-left:13.30769em;}
+
+/*Alter things common to all bodies here*/
+.yui-g{
+  max-width: 850px;
+  width: 100%;
+}
+
 /* ----- MENUS BY SPAREN. PLACED AT BOTTOM IN ORDER TO OVERRIDE ALL DEFAULTS ----- */
 
 /* ----- Main Menu: Origianlly on the left side; shifted to float center for better mobile support ----- */
 #menubar {
   padding: 2px;
-  border-style: solid;
-  border-width: 2px 2px 2px 2px;
-  border-color: #00DDAA;
-  border-radius: 4px;
+  text-align: center;
 }
 #menubar ul {
   text-align:center;
@@ -186,6 +189,8 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   margin: 0px; 
   padding: 0px; 
   overflow: hidden; 
+  max-width: 1000px;
+  display: inline-block;
 }
 #menubar li {
   float: center;
