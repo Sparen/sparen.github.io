@@ -965,6 +965,13 @@ var DNHArtobj = {
             "scripter" : "Sparen",
             "scriptname" : "RaNGE Contest 20: Seasonal Rabbit",
             "dvdb" : "sparenofiria.html#range20"
+        },
+        {
+            "id": "138",
+            "ytid": "4_MTawf-3lw",
+            "scripter" : "Sparen",
+            "scriptname" : "Bullet Hell Artistry Contest 1: Elemental Shapes",
+            "dvdb" : "sparenofiria.html#bha1"
         }
     ]
 };
