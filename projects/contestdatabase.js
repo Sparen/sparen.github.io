@@ -157,10 +157,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     for (i = 0; i < contests.length; i += 1) {
         var temp = contests[i].year;
         if (contains(years, temp)) { //This statement is necessary for the -1 case
-            var tempindex = 0;
-            if (contests[i].location == "locaa") {tempindex = 1;}
-            else if (contests[i].location == "uwom") {tempindex = 2;}
-            else if (contests[i].location == "bhe") {tempindex = 3;}
+            var tempindex = getIndexInArr(contests[i].location, location_names_lc); // Determine index for location the contest was hosted at
             anpl_numcontests[years.indexOf(temp)][tempindex] ++;
             anpl_numparts[years.indexOf(temp)][tempindex] += contests[i].numparticipants;
         } else if (temp != -1) { //Failsafe
@@ -171,9 +168,11 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     //assemble averages
     var anpl_averages = [];
     for (i = 0; i < years.length; i += 1) {
-        var temp_avg = [(anpl_numparts[i][0]/anpl_numcontests[i][0]).toFixed(2), (anpl_numparts[i][1]/anpl_numcontests[i][1]).toFixed(2), (anpl_numparts[i][2]/anpl_numcontests[i][2]).toFixed(2), (anpl_numparts[i][3]/anpl_numcontests[i][3]).toFixed(2)];
-        for (j = 0; j < num_locations; j += 1) { // Checks if a location had zero contests in a year and outputs to console
-        	if (isNaN(temp_avg[j])) {temp_avg[j] = 0; console.log("anps(): 0 contests at " + years[i] + " at " + location_names[j]);}	
+    	var temp_avg = [];
+    	for (j = 0; j < num_locations; j += 1) {
+    		temp_avg.push((anpl_numparts[i][j]/anpl_numcontests[i][j]).toFixed(2));
+    		// Checks if a location had zero contests in a year and outputs to console
+        	if (isNaN(temp_avg[j])) {temp_avg[j] = 0; console.log("anps(): 0 contests at " + years[i] + " at " + location_names[j]);}
         }
         anpl_averages = anpl_averages.concat([temp_avg]);
     }
@@ -201,14 +200,16 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
           'text-anchor="middle" dominant-baseline="central">' + (5*i) + '</text>';
     }
 
-    for (i = 0; i < years.length - 1; i += 1) { //paths
+    // Plot line segments for the path
+    for (i = 0; i < years.length - 1; i += 1) {
     	for (j = 0; j < num_locations; j += 1) {
     		var anpl_start = 10*anpl_averages[i][j]; // start of path segment
     		var anpl_end = 10*anpl_averages[i + 1][j]; // end of path segment
     		anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - anpl_start) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - anpl_end) + '" stroke="' + location_colors[j] + '" stroke-width="2" fill="none"></path>';
     	}
     }
-    for (i = 0; i < years.length; i += 1) { //points and years
+    // Plot points and years
+    for (i = 0; i < years.length; i += 1) {
     	for (j = 0; j < num_locations; j += 1) {
     		var anpl_start = 10*anpl_averages[i][j]; // location of point to plot
     		anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - anpl_start) + '" r="2" stroke="white" stroke-width="0.5" fill="' + location_colors[j] + '"></circle>';
