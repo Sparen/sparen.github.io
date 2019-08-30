@@ -5,11 +5,15 @@ var database_obj;
 //JSON NOTES:
 //NUMBERS THAT ARE UNKNOWN DEFAULT TO -1. OTHER UNKNOWNS DEFAULT TO NOTHING
 
-// Common variables here
+// Common variables here. USE VAR - NO SUPPORT FOR IE IF LET/CONST USED
 var color_motk = "#66AAFF";
 var color_locaa = "#66FFAA";
 var color_uwom = "#CCCCCC";
 var color_bhe = "#e0115f";
+
+var num_locations = 4; // Used in select for loops
+var location_names = ["MotK", "LOCAA", "UWoM", "BHE"]; // This allows for for loops. ALL STRUCTURES USE THIS ORDER.
+var location_colors = [color_motk, color_locaa, color_uwom, color_bhe];
 
 // Create dropdown menu for query box, providing o`ptions to run other functions
 function createDropdown() {
@@ -120,7 +124,7 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
 
     cpy_svg += '</svg>';
 
-    document.getElementById("displaybox").innerHTML = displaystring + "<br><br>" + cpy_svg + 
+    document.getElementById("displaybox").innerHTML = displaystring + "<br>" + cpy_svg + 
     "<br><br>Disclaimer: This information may not be up to date, and some contests lack start and/or end dates.<br>" +
     "All contests here are listed by end year. Contests with no date information are not shown.";
 }
@@ -163,20 +167,20 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     var anpl_averages = [];
     for (i = 0; i < years.length; i += 1) {
         var temp_avg = [(anpl_numparts[i][0]/anpl_numcontests[i][0]).toFixed(2), (anpl_numparts[i][1]/anpl_numcontests[i][1]).toFixed(2), (anpl_numparts[i][2]/anpl_numcontests[i][2]).toFixed(2), (anpl_numparts[i][3]/anpl_numcontests[i][3]).toFixed(2)];
-        if (isNaN(temp_avg[0])) {temp_avg[0] = 0; console.log("anps(): 0 contests at " + years[i] + " at MotK");}
-        if (isNaN(temp_avg[1])) {temp_avg[1] = 0; console.log("anps(): 0 contests at " + years[i] + " at LOCAA");}
-        if (isNaN(temp_avg[2])) {temp_avg[2] = 0; console.log("anps(): 0 contests at " + years[i] + " at UWoM");}
-        if (isNaN(temp_avg[3])) {temp_avg[3] = 0; console.log("anps(): 0 contests at " + years[i] + " at BHE");}
+        for (j = 0; j < num_locations; j += 1) { // Checks if a location had zero contests in a year and outputs to console
+        	if (isNaN(temp_avg[j])) {temp_avg[j] = 0; console.log("anps(): 0 contests at " + years[i] + " at " + location_names[j]);}	
+        }
         anpl_averages = anpl_averages.concat([temp_avg]);
     }
 
     console.log("averageNumParticipantsLocation(): Preparing Result");
-    //var displaystring = "This feature is under construction";
+
     var displaystring = "";
+    /* // This feature is commented out since the only thing it does is dump raw data prior to the graph
     for (i = 0; i < years.length; i += 1) {
         displaystring = displaystring + years[i] + " - " +
         "MotK: #C: " + anpl_numcontests[i][0] + ", #P: " + anpl_numparts[i][0] + ", #Avg: " + anpl_averages[i][0] + "   |   LOCAA: #C: " + anpl_numcontests[i][1] + ", #P: " + anpl_numparts[i][1] + ", #Avg: " + anpl_averages[i][1] + "   |   UWoM: #C: " + anpl_numcontests[i][2] + ", #P: " + anpl_numparts[i][2] + ", #Avg: " + anpl_averages[i][2] + "   |   BHE: #C: " + anpl_numcontests[i][3] + ", #P: " + anpl_numparts[i][3] + ", #Avg: " + anpl_averages[i][3] + "<br>";
-    }
+    }*/
 
     console.log("averageNumParticipantsLocation(): Preparing SVG Display");
     var anpl_svg_width = 168 + years.length * 32;
@@ -193,28 +197,18 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     }
 
     for (i = 0; i < years.length - 1; i += 1) { //paths
-        var temp_anpl_svg_motkcount = 10*anpl_averages[i][0];
-        var temp_anpl_svg_locaacount = 10*anpl_averages[i][1];
-        var temp_anpl_svg_uwomcount = 10*anpl_averages[i][2];
-        var temp_anpl_svg_bhecount = 10*anpl_averages[i][3];
-        var temp_anpl_svg_motkcount2 = 10*anpl_averages[i+1][0];
-        var temp_anpl_svg_locaacount2 = 10*anpl_averages[i+1][1];
-        var temp_anpl_svg_uwomcount2 = 10*anpl_averages[i+1][2];
-        var temp_anpl_svg_bhecount2 = 10*anpl_averages[i+1][3];
-        anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_motkcount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_motkcount2) + '" stroke="' + color_motk + '" stroke-width="2" fill="none"></path>';
-        anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_locaacount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_locaacount2) + '" stroke="' + color_locaa + '" stroke-width="2" fill="none"></path>';
-        anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_uwomcount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_uwomcount2) + '" stroke="' + color_uwom + '" stroke-width="2" fill="none"></path>';
-        anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - temp_anpl_svg_bhecount) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - temp_anpl_svg_bhecount2) + '" stroke="' + color_bhe + '" stroke-width="2" fill="none"></path>';
+    	for (j = 0; j < num_locations; j += 1) {
+    		var anpl_start = 10*anpl_averages[i][j]; // start of path segment
+    		var anpl_end = 10*anpl_averages[i + 1][j]; // end of path segment
+    		anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - anpl_start) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - anpl_end) + '" stroke="' + location_colors[j] + '" stroke-width="2" fill="none"></path>';
+    	}
     }
     for (i = 0; i < years.length; i += 1) { //points and years
-        var temp_anpl_svg_motkcount = 10*anpl_averages[i][0];
-        var temp_anpl_svg_locaacount = 10*anpl_averages[i][1];
-        var temp_anpl_svg_uwomcount = 10*anpl_averages[i][2];
-        var temp_anpl_svg_bhecount = 10*anpl_averages[i][3];
-        anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_motkcount) + '" r="2" stroke="white" stroke-width="0.5" fill="' + color_motk + '"></circle>';
-        anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_locaacount) + '" r="2" stroke="white" stroke-width="0.5" fill="' + color_locaa + '"></circle>';
-        anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_uwomcount) + '" r="2" stroke="white" stroke-width="0.5" fill="' + color_uwom + '"></circle>';
-        anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - temp_anpl_svg_bhecount) + '" r="2" stroke="white" stroke-width="0.5" fill="' + color_bhe + '"></circle>';
+    	for (j = 0; j < num_locations; j += 1) {
+    		var anpl_start = 10*anpl_averages[i][j]; // location of point to plot
+    		anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - anpl_start) + '" r="2" stroke="white" stroke-width="0.5" fill="' + location_colors[j] + '"></circle>';
+    	}
+    	// Now add text for years
         anpl_svg += '<text x="' + (48 + i*32) + '" y="290" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
           'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[i] + '</text>';
     }
