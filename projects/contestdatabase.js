@@ -13,6 +13,7 @@ var color_bhe = "#e0115f";
 
 var num_locations = 4; // Used in select for loops
 var location_names = ["MotK", "LOCAA", "UWoM", "BHE"]; // This allows for for loops. ALL STRUCTURES USE THIS ORDER.
+var location_names_lc = ["motk", "locaa", "uwom", "bhe"]; // Valid locations from JSON, in proper order
 var location_colors = [color_motk, color_locaa, color_uwom, color_bhe];
 
 // Create dropdown menu for query box, providing o`ptions to run other functions
@@ -65,16 +66,13 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     }
     for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
-        values = values.concat([[0, 0, 0, 0]]);
+        values = values.concat([createZeroArray(num_locations)]);
     }
 
     for (i = 0; i < contests.length; i += 1) {
         var temp = contests[i].year;
         if (contains(years, temp)) { //This statement is necessary for the -1 case
-            var tempindex = 0;
-            if (contests[i].location == "locaa") {tempindex = 1;}
-            if (contests[i].location == "uwom") {tempindex = 2;}
-            if (contests[i].location == "bhe") {tempindex = 3;}
+            var tempindex = getIndexInArr(contests[i].location, location_names_lc); // Determine index for location the contest was hosted at
             values[years.indexOf(temp)][tempindex] ++;
         } else if (temp != -1) { //Failsafe
             alert("ERROR");
@@ -82,12 +80,15 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     }
 
     console.log("contestsPerYear(): Preparing Result");
-    //var displaystring = "This feature is under construction";
     var displaystring = "";
     for (i = 0; i < years.length; i += 1) {
-        displaystring = displaystring + years[i] + " - " +
-        "MotK: " + values[i][0] + "   |   LOCAA: " + values[i][1] + "   |   UWoM: " + values[i][2] + "   |   BHE: " + values[i][3] +
-        "   |   Total: " + (values[i][0] + values[i][1] + values[i][2] + values[i][3]) + "<br>";
+    	var yearsum = 0; // Sum of all contests this year
+        displaystring = displaystring + years[i] + " - ";
+        for (j = 0; j < num_locations; j += 1) {
+        	displaystring += location_names[j] + ": " + values[i][j] + "   |   ";
+        	yearsum += values[i][j];
+        }
+        displaystring += "Total: " + yearsum + "<br>";
     }
 
     console.log("contestsPerYear(): Preparing SVG Display"); //NOTE: The SVG height is hardcoded to a max of 23 contests/year
@@ -102,18 +103,22 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
         cpy_svg += '<text x="24" y="' + (230 - i*50)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
           'text-anchor="middle" dominant-baseline="central">' + (5*i) + '</text>';
     }
+    // Draw components of bar charts per year, with the total counts as well
     for (i = 0; i < years.length; i += 1) { //paths and text
-        var temp_cpy_svg_motkcount = 10*values[i][0];
-        var temp_cpy_svg_locaacount = 10*values[i][1];
-        var temp_cpy_svg_uwomcount = 10*values[i][2];
-        var temp_cpy_svg_bhecount = 10*values[i][3];
-        cpy_svg += '<path d="M ' + (48 + i*16) + ' 230 V ' + (230 - temp_cpy_svg_motkcount) + '" stroke="' + color_motk + '" stroke-width="12" fill="none"></path>';
-        cpy_svg += '<path d="M ' + (48 + i*16) + ' ' + (230 - temp_cpy_svg_motkcount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount) + '" stroke="' + color_locaa + '" stroke-width="12" fill="none"></path>';
-        cpy_svg += '<path d="M ' + (48 + i*16) + ' ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount) + '" stroke="#CCCCCC" stroke-width="12" fill="none"></path>';
-        cpy_svg += '<path d="M ' + (48 + i*16) + ' ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount) + ' V ' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount - temp_cpy_svg_bhecount) + '" stroke="#e0115f" stroke-width="12" fill="none"></path>';
-        cpy_svg += '<text x="' + (48 + i*16) + '" y="' + (230 - temp_cpy_svg_motkcount - temp_cpy_svg_locaacount - temp_cpy_svg_uwomcount - temp_cpy_svg_bhecount - 2)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="white"' +
-          'text-anchor="middle" dominant-baseline="alphabetic">' + (values[i][0] + values[i][1] + values[i][2] + values[i][3]) + '</text>';
-        cpy_svg += '<text x="' + (48 + i*16) + '" y="250" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
+    	var cpy_svg_barbase = 230; // Bottom of bar segment
+    	var barx = 48 + i*16;
+    	var yearsum = 0; // Sum of all contests this year
+    	for (j = 0; j < num_locations; j += 1) {
+    		var temp_cpy_svg_count = 10*values[i][j];
+    		cpy_svg += '<path d="M ' + barx + ' ' + (cpy_svg_barbase) + ' V ' + (cpy_svg_barbase - temp_cpy_svg_count) + '" stroke="' + location_colors[j] + '" stroke-width="12" fill="none"></path>';
+    		cpy_svg_barbase -= temp_cpy_svg_count; // Shift next segment up by current segment's length
+    		yearsum += values[i][j];
+    	}
+
+    	// Year text
+        cpy_svg += '<text x="' + barx + '" y="' + (cpy_svg_barbase - 2)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="white"' +
+          'text-anchor="middle" dominant-baseline="alphabetic">' + yearsum + '</text>';
+        cpy_svg += '<text x="' + barx + '" y="250" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
           'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[i] + '</text>';
     }
     //key
@@ -145,8 +150,8 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     }
     for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
-        anpl_numcontests = anpl_numcontests.concat([[0, 0, 0, 0]]); //range, locaa, uwom, bhe
-        anpl_numparts = anpl_numparts.concat([[0, 0, 0, 0]]);
+        anpl_numcontests = anpl_numcontests.concat([createZeroArray(num_locations)]);
+        anpl_numparts = anpl_numparts.concat([createZeroArray(num_locations)]);
     }
 
     for (i = 0; i < contests.length; i += 1) {
@@ -222,24 +227,17 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     anpl_svg += '</svg>';
 
     //OVERALL STATS
-    var anpl_totalnumcontests = [0, 0, 0, 0];
-    var anpl_totalnumparts = [0, 0, 0, 0];
-    for (i = 0; i < years.length; i += 1){
-        anpl_totalnumcontests[0] += anpl_numcontests[i][0];
-        anpl_totalnumparts[0] += anpl_numparts[i][0];
-        anpl_totalnumcontests[1] += anpl_numcontests[i][1];
-        anpl_totalnumparts[1] += anpl_numparts[i][1];
-        anpl_totalnumcontests[2] += anpl_numcontests[i][2];
-        anpl_totalnumparts[2] += anpl_numparts[i][2];
-        anpl_totalnumcontests[3] += anpl_numcontests[i][3];
-        anpl_totalnumparts[3] += anpl_numparts[i][3];
+    var displaystring2 = "";
+    for (j = 0; j < num_locations; j += 1) {
+    	var anpl_totalnumcontests = 0; // Number of contests in this category
+    	var anpl_totalnumparts = 0; // Number of participants in this category
+    	for (i = 0; i < years.length; i += 1) {
+    		anpl_totalnumcontests +=  anpl_numcontests[i][j];
+    		anpl_totalnumparts += anpl_numparts[i][j];
+    	}
+    	var anpl_overallaverage = (anpl_totalnumparts/anpl_totalnumcontests).toFixed(2);
+    	displaystring2 += location_names[j] + " Overall: " + anpl_overallaverage + " participants/contest<br>";
     }
-    var anpl_overallaverages = [(anpl_totalnumparts[0]/anpl_totalnumcontests[0]).toFixed(2), (anpl_totalnumparts[1]/anpl_totalnumcontests[1]).toFixed(2), (anpl_totalnumparts[2]/anpl_totalnumcontests[2]).toFixed(2), (anpl_totalnumparts[3]/anpl_totalnumcontests[3]).toFixed(2)];
-
-    var displaystring2 = "MotK Overall: " + anpl_overallaverages[0] + " participants/contest<br>" + 
-    "LOCAA Overall: " + anpl_overallaverages[1] + " participants/contest<br>" + 
-    "UWoM Overall: " + anpl_overallaverages[2] + " participants/contest<br>" +
-    "BHE Overall: " + anpl_overallaverages[3] + " participants/contest<br>";
 
     document.getElementById("displaybox").innerHTML = displaystring + "<br>" + anpl_svg + "<br>" + displaystring2;
 }
@@ -654,4 +652,25 @@ function contains(a, obj) {
        }
     }
     return false;
+}
+
+// Returns the index of the value in the array or -1 if it is not present
+function getIndexInArr(val, arr) {
+	var giiactr = 0; 
+	for (giiactr = 0; giiactr < arr.length; giiactr += 1) {
+		if (arr[giiactr] === val) {
+			return giiactr;
+		}
+	}
+	return -1;
+}
+
+// Creates an array with l zeros
+function createZeroArray(l) {
+	var cza_toreturn = [];
+	var czactr = 0;
+	for (czactr = 0; czactr < l; czactr += 1) {
+		cza_toreturn.push(0);
+	}
+	return cza_toreturn;
 }
