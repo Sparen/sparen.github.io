@@ -134,6 +134,18 @@
   background-color: #AA6622;
 }
 
+.indexupdfall2019{
+  border-width: 4px 6px; 
+  border-color: #EE9900 #BBEE00; 
+  border-style: solid double; 
+  padding-left: 8px; 
+  padding-right: 8px; 
+  padding-bottom: 8px; 
+  padding-top: 4px; 
+  border-radius: 2px; 
+  background-color: #AA4400;
+}
+
 .indexupdsp2015title{
   padding: 5px;
 }

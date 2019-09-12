@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Extra Lesson 5</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Extra Lesson 5 - Libraries: Circular Lifebar. A guide on creating and using circular lifebars in Touhou Danmakufu ph3."      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, Circular, Lifebar">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Sept 12, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+        <ul>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
+          <li><a href="./ph3style.html" title="ph3 Style Guidelines">ph3 Style Guidelines</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
+          <li><a href="./docs.html">Function List</a></li>
+          <li><a href="./docs_standard.html">General Functions</a></li>
+          <li><a href="./docs_object.html">Object Functions</a></li>
+          <li><a href="./docs_system.html">Player Script Fxns</a></li>
+          <li><a href="./docs_system.html">Private Script Fxns</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+        </ul>
+      </div>      <div id="pagecontentwrapper_tut">
+          <div id="pagecontent_tut">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ph3u3l29.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Primitive Objects and 2D Sprite Lists">Unit 3 Lesson 29</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Extra Lesson 5 - Libraries: Circular Lifebar</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be Covered in this Lesson?</a></li>
+	          <li><a href="#sub2">Part 2: How does the basic lifebar work?</a></li>
+	          <li><a href="#sub3">Part 3: How do I make a circular lifebar?</a></li>
+	          <li><a href="#sub3a">Part 3a: Circular Lifebar Graphical Enhancement</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be Covered in this Lesson?</h2>
+	      <p>In this lesson, I will discuss the existing boss lifebar as well as how it can be adapted into a circular lifebar. Please note that there are multiple ways to do circular lifebars and that this is just one method.</p>
+	      <p>This lesson requires understanding of 2D primitives in Danmakufu - especially Triangle Strip. If you are not familiar with Triangle Strips, Sprite Lists and other 2D primitive functions, please refer to <a href="./ph3u3l29.html">Lesson 29</a>.</p>
+	      <p>For this lesson, please prepare an 'empty' single script and a plural script that calls the Single script. These can be pretty barebones since they just need to show differing HP amounts. I'll post samples below.</p>
+	      <p>For the Single, make two variations - one with 500 HP and one with 1000 HP.</p>
+	      <pre class="prettyprint linenums"><code>//#TouhouDanmakufu[Single]
+#ScriptVersion[3]
+#Title["U3L29A Circular Lifebar"]
+#System["U3L29A.dnh"]
+
+let objBoss;
+
+@Event{
+    alternative(GetEventType())
+    case(EV_REQUEST_LIFE){
+        SetScriptResult(500);
+    }
+    case(EV_REQUEST_TIMER){
+        SetScriptResult(120);
+    }
+}
+
+@Initialize{
+    objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
+    ObjEnemy_Regist(objBoss);
+    ObjMove_SetPosition(objBoss, 192, 64);
+}
+
+@MainLoop{
+    ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
+
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0) {
+        Obj_Delete(objBoss);
+        CloseScript(GetOwnScriptID());
+    }
+    yield;
+}
+</code></pre>
+	      <p>For the Plural, we'll test out three different combinations of the two Singles.</p>
+	      <pre class="prettyprint linenums"><code>#TouhouDanmakufu[Plural]
+#ScriptVersion[3]
+#Title["U3L29A Circular Lifebar Plural"]
+#System["U3L29A.dnh"]
+
+let objBoss;
+
+@Initialize{
+    TPlural;
+}
+
+@MainLoop{
+    yield;
+}
+
+task TPlural{
+    let dir=GetCurrentScriptDirectory();
+    let obj=ObjEnemyBossScene_Create();
+    ObjEnemyBossScene_Add(obj,0,dir~"./Unit 3 Lesson 29A-CLB SingleA.dnh");
+    ObjEnemyBossScene_Add(obj,1,dir~"./Unit 3 Lesson 29A-CLB SingleA.dnh");
+    ObjEnemyBossScene_Add(obj,1,dir~"./Unit 3 Lesson 29A-CLB SingleB.dnh");
+    ObjEnemyBossScene_Add(obj,2,dir~"./Unit 3 Lesson 29A-CLB SingleA.dnh");
+    ObjEnemyBossScene_Add(obj,2,dir~"./Unit 3 Lesson 29A-CLB SingleA.dnh");
+    ObjEnemyBossScene_Add(obj,2,dir~"./Unit 3 Lesson 29A-CLB SingleB.dnh");
+    ObjEnemyBossScene_LoadInThread(obj);
+    ObjEnemyBossScene_Regist(obj);
+    while(!Obj_IsDeleted(obj)){
+        yield;
+    }
+    CloseScript(GetOwnScriptID());
+}
+</code></pre>
+	      <p>Note the <code>#System</code> file - the entirety of the work we do in this tutorial will occur in a system script - I suggest copying the default one for now.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: How does the basic lifebar work?</h2>
+	      <p>First, let's start with the basics - what exactly is a lifebar? Well, to put it simply, it's the visual indicator of how much HP the boss has and is usually depicted with a bar or circle that starts full and begins to empty out over time.</p>
+	      <p>With regards to linear vs. circular, it's really just a matter of style - linear is more efficient but some like the circular lifebar since it's easier to see due to its position relative to the boss.</p>
+	      <p>Let's first dive into the default lifebar code (note that I've adjusted filepaths).</p>
+	      <pre class="prettyprint linenums"><code>task TBossLife
+{
+	let path = GetCurrentScriptDirectory() ~ "img-clb/Default_System.png";
+	let obj = ObjPrim_Create(OBJ_SPRITE_LIST_2D);
+	ObjPrim_SetTexture(obj, path);
+	Obj_SetRenderPriority(obj, 0.7);
+
+	let lastRemStep = -1;
+	let lifeRateRender = 0;
+
+	let objScene = ID_INVALID;
+	loop
+	{
+		objScene = GetEnemyBossSceneObjectID();
+		ObjSpriteList2D_ClearVertexCount(obj);
+		if(objScene != ID_INVALID)
+		{
+			RenderLife();
+		}
+		yield;
+	}
+
+
+	function RenderLife()
+	{
+		let countRemStep = ObjEnemyBossScene_GetInfo(objScene, INFO_REMAIN_STEP_COUNT);
+		if(lastRemStep != countRemStep)
+		{
+			lifeRateRender = 0;
+		}
+
+		let lifeTotalMax = ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_TOTAL_MAX_LIFE);
+		let lifeTotal = ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_TOTAL_LIFE);
+		let lifeRate = min(lifeTotal / lifeTotalMax, lifeRateRender);
+		ObjSpriteList2D_SetSourceRect(obj, 1, 1, 127, 11);
+		ObjSpriteList2D_SetDestRect(obj, 72, 8, 72 + 270 * lifeRate, 12);
+		ObjSpriteList2D_AddVertex(obj);
+
+		ObjSpriteList2D_SetSourceRect(obj, 132, 1, 137, 11);
+		let listLifeDiv = [0] ~ ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_LIFE_RATE_LIST);
+		ascent(iDiv in 0 .. length(listLifeDiv))
+		{
+			let rate = listLifeDiv[iDiv];
+			let x = 72 + 270 * (1-rate);
+			ObjSpriteList2D_SetDestRect(obj, x-1, 4, x + 1, 14);
+			ObjSpriteList2D_AddVertex(obj);
+		}
+
+		ObjSpriteList2D_SetSourceRect(obj, 1, 1, 127, 11);
+		ascent(iStep in 0 .. countRemStep)
+		{
+			let remStepRate = 58 / countRemStep;
+			ObjSpriteList2D_SetDestRect(obj, 4 + iStep * remStepRate + 2, 8,
+				4 + (iStep + 1) * remStepRate, 12);
+			ObjSpriteList2D_AddVertex(obj);
+		}
+
+		lifeRateRender += 0.01;
+		lifeRateRender = min(lifeRateRender, 1);
+		lastRemStep = countRemStep;
+	}
+}</code></pre>
+	      <p>Pretty hefty, huh. But it's not too bad once we break it down. The code itself is broken up into a nested function <code>RenderLife()</code> and the code that calls this function. The main purpose of the outer code is to set the texture for the lifebar image and create the sprite list, store some variables to be used later on, and check in a constant loop if there is a boss scene - the lifebar only renders if there's a boss, after all.</p>
+	      <p><code>RenderLife()</code> only runs when a boss scene is active. Note that it will run <em>every frame</em> when a boss scene is active. Let's walk through this line by line. See <span class="tooltip" onmouseover="getFxnDocs('ObjEnemyBossScene_GetInfo', 'f_oebsgi_01');"><code>ObjEnemyBossScene_GetInfo()</code><span class="tooltiptext" id="f_oebsgi_01"></span></span>'s docs for some quick reference, but I'll briefly note the components used here.</p>
+	      <ul>
+	        <li><code>INFO_REMAIN_STEP_COUNT</code>: Returns number of steps (lifebars) left in current boss scene</li>
+	        <li><code>INFO_ACTIVE_STEP_TOTAL_MAX_LIFE</code>: Returns initial life set in <code> EV_REQUEST_LIFE </code> for the current lifebar</li>
+	        <li><code>INFO_ACTIVE_STEP_TOTAL_LIFE</code>: Returns the current life remaining in the current lifebar</li>
+	        <li><code>INFO_ACTIVE_STEP_LIFE_RATE_LIST</code>: Returns the proportion of life for the Singles in the current lifebar</li>
+	      </ul>
+	      <p>As you can see from the above, Danmakufu's lifebar code operates on 'steps' and only knows about the current active step. First, <code>RenderLife</code> calls <code>ObjEnemyBossScene_GetInfo(objScene, INFO_REMAIN_STEP_COUNT);</code>, which gets the number of remaining lifebars. This is what appears in the top left as small bars, or stars if a scripter decides to use stars to indicate lifebars instead.</p>
+	      <p>After checking if there are any steps left, <code>RenderLife</code> does a brief check used for animations (see end of this section) and then obtains the max life and the current life, then calculates the percentage to display, storing it in <code>lifeRate</code>. For example, let's say that we have two Singles - one with 1000 HP and one with 500 HP. If the player shoots down 500 off of the first, then the lifebar will be 2/3 full.</p>
+	      <p>The main lifebar is drawn, with its dest rect showing that it starts from 72 pixels off the left of the playing field and extends up to 270 pixels, which is its total length. <code>ObjSpriteList2D_SetDestRect</code> works well here as the image is uniform horizontally.</p>
+	      <p>After adding the main lifebar, the source rect shifts to the dividers. The <code>listLifeDiv</code> starts out with 0 and then concatenates the rate list to obtain the relative locations on the lifebar to insert the dividers. As noted before, the length of the lifebar is 270 pixels, and for each break between Singles, including the start at 0, the divider is added as another Sprite in the Sprite List.</p>
+	      <p>Once the dividers have been added, for every remaining lifebar, the location and length (dependent on how many there are) is determined and the segments are added.</p>
+	      <p>At the very end of <code>RenderLife</code>, <code>lifeRateRender</code> is incremented. This provides the animation of the lifebar 'filling up' at the start of each new lifebar. This is capped at 1 since it's a rate from 0 to 1. It is for this reason that the check at the start of <code>RenderLife</code> is run - when a new lifebar starts, the animation must start from 0 again.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I make a circular lifebar?</h2>
+	      <p>We will now begin changing the code. First, please note that <strong>we will be ignoring the display for the number of remaining lifebars</strong> as the way this is handled is not integral to the circular lifebar and is often implemented differently depending on the scripter's UI design preferences.</p>
+	      <p>We are left with the lifebar itself as well as the dividers. We will keep the dividers as a Sprite List but will use a Linestrip Primitive for the lifebar itself.</p>
+	      <p>We'll start with the lifebar. The first major change is that we need to determine how many vertices to use. Naturally, more vertices means that we'll get closer to a circle. However, more vertices also means that this expensive operation will put more of a burden on the computer of the person playing your script, causing potential lag. For now, we'll divide the lifebar into 32 chunks, which requires 66 vertices.</p>
+	      <p>Wait, what? <em>66 vertices?</em> Where did THAT come from?! Well, think about what we are doing - we want to imitate a circle. However, our lifebar isn't just a line - we're wrapping a rectangular structure, so for every point where it turns, we need a PAIR of vertices.</p>
+              <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="200" style="fill:#333333"></rect>
+
+                  <text x="8" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE - Lifebar Image</text>
+                  <path d="M 32 32 L 32 128 L 48 32 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 48 32 L 32 128 L 48 128 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 48 32 L 48 128 L 64 32 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 64 32 L 48 128 L 64 128 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 64 32 L 64 128 L 80 32 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 80 32 L 64 128 L 80 128 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 80 32 L 80 128 L 96 32 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 96 32 L 80 128 L 96 128 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 96 32 L 96 128 L 112 32 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 112 32 L 96 128 L 112 128 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 112 32 L 112 128 L 128 32 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 128 32 L 112 128 L 128 128 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 128 32 L 128 128 L 144 32 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 144 32 L 128 128 L 144 128 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 144 32 L 144 128 L 160 32 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 160 32 L 144 128 L 160 128 Z" stroke="white" stroke-width="2px" fill="none"></path>
+
+                  <circle cx="32" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="32" y="32" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v0</text>
+                  <circle cx="32" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="32" y="128" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v1</text>
+                  <circle cx="48" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="48" y="32" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v2</text>
+                  <circle cx="48" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="48" y="128" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v3</text>
+                  <circle cx="64" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="64" y="32" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v4</text>
+                  <circle cx="64" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="64" y="128" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v5</text>
+                  <circle cx="80" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="80" y="32" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v6</text>
+                  <circle cx="80" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="80" y="128" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v7</text>
+                  <circle cx="96" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="96" y="32" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v8</text>
+                  <circle cx="96" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="96" y="128" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v9</text>
+                  <circle cx="112" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="112" y="32" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v10</text>
+                  <circle cx="112" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="112" y="128" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v11</text>
+                  <circle cx="128" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="128" y="32" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v12</text>
+                  <circle cx="128" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="128" y="128" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v13</text>
+                  <circle cx="144" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="144" y="32" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v14</text>
+                  <circle cx="144" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="144" y="128" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v15</text>
+                  <circle cx="160" cy="32" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="160" y="32" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v16</text>
+                  <circle cx="160" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="160" y="128" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v17</text>
+
+              </svg>
+              <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="200" style="fill:#333333"></rect>
+
+                  <text x="8" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE - Fitted Lifebar</text>
+                  <path d="M 96 24 L 96 40 L 146.9 45.1 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 146.9 45.1 L 96 40 L 135.6 56.4 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 146.9 45.1 L 135.6 56.4 L 168 96 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 168 96 L 135.6 56.4 L 152 96 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 168 96 L 152 96 L 146.9 146.9 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 146.9 146.9 L 152 96 L 135.6 135.6 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 146.9 146.9 L 135.6 135.6 L 96 168 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 96 168 L 135.6 135.6 L 96 152 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 96 168 L 96 152 L 45.1 146.9 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 45.1 146.9 L 96 152 L 56.4 135.6 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 45.1 146.9 L 56.4 135.6 L 24 96 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 24 96 L 56.4 135.6 L 40 96 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 24 96 L 40 96 L 45.1 45.1 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 45.1 45.1 L 40 96 L 56.4 56.4 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 45.1 45.1 L 56.4 56.4 L 96 24 Z" stroke="white" stroke-width="2px" fill="none"></path>
+                  <path d="M 96 24 L 56.4 56.4 L 96 40 Z" stroke="white" stroke-width="2px" fill="none"></path>
+
+		  <!-- Center: 96, 96 with radius 64 +/- 8. Angles: 56 -> 39.6; 72 -> 50.9 -->
+                  <circle cx="96" cy="24" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="96" y="24" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v0,16</text>
+                  <circle cx="96" cy="40" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="96" y="40" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v1,17</text>
+                  <circle cx="146.9" cy="45.1" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="146.9" y="45.1" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="10" dy="-10">v2</text>
+                  <circle cx="135.6" cy="56.4" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="135.6" y="56.4" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="-10" dy="10">v3</text>
+                  <circle cx="168" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="168" y="96" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="12" dy="0">v4</text>
+                  <circle cx="152" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="152" y="96" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="-12" dy="0">v5</text>
+                  <circle cx="146.9" cy="146.9" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="146.9" y="146.9" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="10" dy="10">v6</text>
+                  <circle cx="135.6" cy="135.6" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="135.6" y="135.6" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="-10" dy="-10">v7</text>
+                  <circle cx="96" cy="168" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="96" y="168" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v8</text>
+                  <circle cx="96" cy="152" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="96" y="152" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v9</text>
+                  <circle cx="45.1" cy="146.9" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="45.1" y="146.9" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="-10" dy="10">v10</text>
+                  <circle cx="56.4" cy="135.6" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="56.4" y="135.6" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="10" dy="-10">v11</text>
+                  <circle cx="24" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="24" y="96" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="-12" dy="0">v12</text>
+                  <circle cx="40" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="40" y="96" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="12" dy="0">v13</text>
+                  <circle cx="45.1" cy="45.1" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FFFFFF"></circle>
+                  <text x="45.1" y="45.1" stroke="#FFFFFF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="-10" dy="-10">v14</text>
+                  <circle cx="56.4" cy="56.4" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#000000"></circle>
+                  <text x="56.4" y="56.4" stroke="#CCCCCC" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="10" dy="10">v15</text>
+              </svg>
+	      <p>In the above example, we divide our source image as such, and then wrap it into a circle. The two edges connect, so we need those vertices to be duplicated. In addition, we want depth, so every location where there is an angle change requires two vertices. This is the same method as with Magic Circles - we will utilize the magic circle code from <a href="./ph3u3l29.html">Lesson 29</a> in order to pull off the lifebar. For now, here's what we have, though it's effectively just a magic circle. I haven't moved the Single dividers yet - we'll handle that later.</p>
+	      <pre class="prettyprint linenums"><code>task TBossLife {
+    let path = GetCurrentScriptDirectory() ~ "img-clb/Default_System.png";
+    let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetPrimitiveType(obj, PRIMITIVE_TRIANGLESTRIP);
+    ObjPrim_SetTexture(obj, path);
+    Obj_SetRenderPriority(obj, 0.7);
+
+    let NUM_VERTEX = 66; // Number of vertices we will use for this lifebar. 
+    let LB_RADIUS = 96; // Maximum radius of our lifebar, in pixels
+    let LB_WIDTH = 4; // Width of our lifebar, in pixels
+
+    ObjPrim_SetVertexCount(obj, NUM_VERTEX);
+
+    let objDiv = ObjPrim_Create(OBJ_SPRITE_LIST_2D);
+    ObjPrim_SetTexture(objDiv, path);
+    Obj_SetRenderPriority(objDiv, 0.7);
+    let objRemLB = ObjPrim_Create(OBJ_SPRITE_LIST_2D);
+    ObjPrim_SetTexture(objRemLB, path);
+    Obj_SetRenderPriority(objRemLB, 0.7);
+
+    let lastRemStep = -1;
+    let lifeRateRender = 0;
+
+    let objScene = ID_INVALID;
+    loop {
+        objScene = GetEnemyBossSceneObjectID();
+        ObjSpriteList2D_ClearVertexCount(objDiv);
+        ObjSpriteList2D_ClearVertexCount(objRemLB);
+        if(objScene != ID_INVALID) {
+            RenderLife();
+            RenderRemainingLifebars();
+        }
+        yield;
+    }
+
+    function RenderLife() {
+        // Information on boss. If no boss, don't run the code!
+        let objBosses = GetEnemyBossObjectID();
+        let objBoss = ID_INVALID;
+        if (length(objBosses) == 0) {return;} // No bosses in scene; don't adjust rendering
+        else {objBoss = objBosses[0];}
+
+        // Remaining steps
+        let countRemStep = ObjEnemyBossScene_GetInfo(objScene, INFO_REMAIN_STEP_COUNT);
+        if(lastRemStep != countRemStep) {
+            lifeRateRender = 0;
+        }
+
+        let lifeTotalMax = ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_TOTAL_MAX_LIFE);
+        let lifeTotal = ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_TOTAL_LIFE);
+        let lifeRate = min(lifeTotal / lifeTotalMax, lifeRateRender);
+        // Set the Texture Coordinates
+        ascent(iVert in 0..NUM_VERTEX / 2) {
+            let left = 1 + iVert * 126/NUM_VERTEX; // 128 is the length of the default lifebar image, but we want to not use the edges
+            let indexVert = iVert * 2; // indexVert refers to a PAIR of vertices
+            // Even vertices are 'outer' and Odd vertices are 'inner' in this case.
+            ObjPrim_SetVertexUVT(obj, indexVert + 0, left, 1);
+            ObjPrim_SetVertexUVT(obj, indexVert + 1, left, 11);
+        }
+
+        // Lifebar centered around boss. Update position
+        ObjRender_SetPosition(obj, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 1);
+
+        // Set the locations of the vertices
+        ascent(iVert in 0..NUM_VERTEX / 2) {
+            // Set vertex positions for current iteration of loop
+            let indexVert = iVert * 2;
+            // The '- 1' for the angle is since we must duplicate a pair of vertices. 
+            // So if we have 34 vertices, only 16 edges will be formed.
+            let angle = 360 / (NUM_VERTEX / 2 - 1) * iVert;
+            // listRadius stores the current distance from the position of the render object to the position of each vertex. 
+            let vx1 = (LB_RADIUS + LB_WIDTH/2) * cos(angle);
+            let vy1 = (LB_RADIUS + LB_WIDTH/2) * sin(angle);
+            ObjPrim_SetVertexPosition(obj, indexVert + 0, vx1, vy1, 0);
+            let vx2 = (LB_RADIUS - LB_WIDTH/2) * cos(angle);
+            let vy2 = (LB_RADIUS - LB_WIDTH/2) * sin(angle);
+            ObjPrim_SetVertexPosition(obj, indexVert + 1, vx2, vy2, 0);
+        }
+
+        ObjSpriteList2D_SetSourceRect(objDiv, 132, 1, 137, 11);
+        let listLifeDiv = [0] ~ ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_LIFE_RATE_LIST);
+        ascent(iDiv in 0 .. length(listLifeDiv)) {
+            let rate = listLifeDiv[iDiv];
+            let x = 72 + 270 * (1-rate);
+            ObjSpriteList2D_SetDestRect(objDiv, x-1, 4, x + 1, 14);
+            ObjSpriteList2D_AddVertex(objDiv);
+        }
+
+        lifeRateRender += 0.01;
+        lifeRateRender = min(lifeRateRender, 1);
+        lastRemStep = countRemStep;
+    }
+
+    function RenderRemainingLifebars() {
+        let countRemStep = ObjEnemyBossScene_GetInfo(objScene, INFO_REMAIN_STEP_COUNT);
+        ObjSpriteList2D_SetSourceRect(objRemLB, 1, 1, 127, 11);
+        ascent(iStep in 0 .. countRemStep) {
+            let remStepRate = 58 / countRemStep;
+            ObjSpriteList2D_SetDestRect(objRemLB, 4 + iStep * remStepRate + 2, 8, 4 + (iStep + 1) * remStepRate, 12);
+            ObjSpriteList2D_AddVertex(objRemLB);
+        }
+    }
+}</code></pre>
+	      <p>Some things to note about the above: First, we're not animating the lifebar yet, and the lifebar does not expand like the magic circle, so that code has been removed. Second, we aren't using the entire lifebar image, similar to the default. This avoids the 'endings' looking ugly due to blur.</p>
+	      <p>Now, the key difference of course is that a lifebar doesn't always show its full length. And that is where the code required for a magic circle diverges further from that of a lifebar. We already know that <code>lifeRate</code> represents, on a 0 to 1 scale, how much of the lifebar is filled. We can apply the same to vertex pairs, and use <span class="tooltip" onmouseover="getFxnDocs('ObjPrim_SetVertexAlpha', 'f_opsva_01');"><code> ObjPrim_SetVertexAlpha()</code><span class="tooltiptext" id="f_opsva_01"></span></span> to simulate the damage done. However, note that this requires a lot of vertices to be precise!</p>
+	      <pre class="prettyprint linenums"><code>        // Set the locations of the vertices
+        ascent(iVert in 0..NUM_VERTEX / 2) {
+            // Set vertex positions for current iteration of loop
+            let indexVert = iVert * 2;
+            // The '- 1' for the angle is since we must duplicate a pair of vertices. 
+            // So if we have 34 vertices, only 16 edges will be formed.
+            let angle = -360 / (NUM_VERTEX / 2 - 1) * iVert;
+            // listRadius stores the current distance from the position of the render object to the position of each vertex. 
+            let vx1 = (LB_RADIUS + LB_WIDTH/2) * cos(angle*lifeRate);
+            let vy1 = (LB_RADIUS + LB_WIDTH/2) * sin(angle*lifeRate);
+            ObjPrim_SetVertexPosition(obj, indexVert + 0, vx1, vy1, 0);
+            let vx2 = (LB_RADIUS - LB_WIDTH/2) * cos(angle*lifeRate);
+            let vy2 = (LB_RADIUS - LB_WIDTH/2) * sin(angle*lifeRate);
+            ObjPrim_SetVertexPosition(obj, indexVert + 1, vx2, vy2, 0);
+        }</code></pre>
+	      <p>Note that we've attached a negative sign to the angle. This allows the animation to proceed from 'base' to 'end' of the lifebar. In order to simulate the life, we have multiplied the angle by the <code>lifeRate</code>, effectively 'squeezing' our lifebar into a smaller angle range in order to simulate the lifebar. As always, more vertices = more lag = better graphical performance, so feel free to adjust that to improve the animation as well.</p>
+	      <p>Now we have two more things to do - first, add the Single dividers, and second, replace the graphics with graphics that are actually suitable for a circular lifebar instead of the defaults, where the gradient is suitable for a straight lifebar but not for a curved one.</p>
+	      <pre class="prettyprint linenums"><code>        ObjSpriteList2D_SetSourceRect(objDiv, 132, 1, 137, 11);
+        let listLifeDiv = [0] ~ ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_LIFE_RATE_LIST);
+        ascent(iDiv in 0 .. length(listLifeDiv)) {
+            let rate = listLifeDiv[iDiv];
+            let targetangle = 360 * rate;
+            ObjSpriteList2D_SetDestCenter(objDiv);
+            ObjRender_SetAngleZ(objDiv, targetangle + 90);
+            ObjRender_SetPosition(objDiv, ObjMove_GetX(objBoss) + LB_RADIUS * cos(targetangle), ObjMove_GetY(objBoss) + LB_RADIUS * sin(targetangle), 1);
+            ObjSpriteList2D_AddVertex(objDiv);
+        }</code></pre>
+	      <p>For the dividers, it's quite simple to adjust them. All we need to do is determine where on the circle they will be using the <code>rate</code> array, and then put them there. Of course we also want to rotate them so that they're perpendicular to the lifebar.</p>
+	      <p>And with that, the basics are done.</p>
+	      <h2 class="ph3tutorialheader" id="sub3a">Part 3a: Circular Lifebar Graphical Enhancement</h2>
+	      <p>In this last section, we'll do the graphic replacement mentioned prior. Here we will replace the graphics used and will add a simple border. Grab the image at <a href="tutimg/u3l29asample.png">u3l29asample.png</a></p>
+	      <p>Once you've replaced the texture, we'll add the border. In this image I've put both the main lifebar and border into the area formerly occupied by the lifebar. It's white, so you can change the color of either as well.</p>
+	      <pre class="prettyprint linenums"><code>task TBossLife {
+    let path = GetCurrentScriptDirectory() ~ "img-clb/Default_System_new.png";
+    let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetPrimitiveType(obj, PRIMITIVE_TRIANGLESTRIP);
+    ObjPrim_SetTexture(obj, path);
+    Obj_SetRenderPriority(obj, 0.7);
+
+    let objBorder = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetPrimitiveType(objBorder, PRIMITIVE_TRIANGLESTRIP);
+    ObjPrim_SetTexture(objBorder, path);
+    Obj_SetRenderPriority(objBorder, 0.7);
+
+    let NUM_VERTEX = 66; // Number of vertices we will use for this lifebar. 
+    let LB_RADIUS = 96; // Maximum radius of our lifebar, in pixels
+    let LB_WIDTH = 4; // Width of our lifebar, in pixels
+    let LB_WIDTH_BORDER = 5; // Width of our lifebar border, in pixels
+
+    ObjPrim_SetVertexCount(obj, NUM_VERTEX);
+    ObjPrim_SetVertexCount(objBorder, NUM_VERTEX);
+
+    let objDiv = ObjPrim_Create(OBJ_SPRITE_LIST_2D);
+    ObjPrim_SetTexture(objDiv, path);
+    Obj_SetRenderPriority(objDiv, 0.7);
+    let objRemLB = ObjPrim_Create(OBJ_SPRITE_LIST_2D);
+    ObjPrim_SetTexture(objRemLB, path);
+    Obj_SetRenderPriority(objRemLB, 0.7);
+
+    let lastRemStep = -1;
+    let lifeRateRender = 0;
+
+    let objScene = ID_INVALID;
+    loop {
+        objScene = GetEnemyBossSceneObjectID();
+        ObjSpriteList2D_ClearVertexCount(objDiv);
+        ObjSpriteList2D_ClearVertexCount(objRemLB);
+        if(objScene != ID_INVALID) {
+            RenderLife();
+            RenderRemainingLifebars();
+        }
+        yield;
+    }
+
+    function RenderLife() {
+        // Information on boss. If no boss, don't run the code!
+        let objBosses = GetEnemyBossObjectID();
+        let objBoss = ID_INVALID;
+        if (length(objBosses) == 0) {return;} // No bosses in scene; don't adjust rendering
+        else {objBoss = objBosses[0];}
+
+        // Remaining steps
+        let countRemStep = ObjEnemyBossScene_GetInfo(objScene, INFO_REMAIN_STEP_COUNT);
+        if(lastRemStep != countRemStep) {
+            lifeRateRender = 0;
+        }
+
+        let lifeTotalMax = ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_TOTAL_MAX_LIFE);
+        let lifeTotal = ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_TOTAL_LIFE);
+        let lifeRate = min(lifeTotal / lifeTotalMax, lifeRateRender);
+        // Set the Texture Coordinates
+        ascent(iVert in 0..NUM_VERTEX / 2) {
+            let left = 1 + iVert * 62/NUM_VERTEX; // Avoid edges
+            let indexVert = iVert * 2; // indexVert refers to a PAIR of vertices
+            // Even vertices are 'outer' and Odd vertices are 'inner' in this case.
+            ObjPrim_SetVertexUVT(obj, indexVert + 0, left, 0);
+            ObjPrim_SetVertexUVT(obj, indexVert + 1, left, 12);
+            ObjPrim_SetVertexUVT(objBorder, indexVert + 0, 64 + left, 0);
+            ObjPrim_SetVertexUVT(objBorder, indexVert + 1, 64 + left, 12);
+        }
+
+        // Lifebar centered around boss. Update position
+        ObjRender_SetPosition(obj, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 1);
+        ObjRender_SetPosition(objBorder, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 1);
+        ObjRender_SetColor(objBorder, 255, 0, 0);
+        ObjRender_SetAlpha(objBorder, 128);
+
+        // Set the locations of the vertices
+        ascent(iVert in 0..NUM_VERTEX / 2) {
+            // Set vertex positions for current iteration of loop
+            let indexVert = iVert * 2;
+            // The '- 1' for the angle is since we must duplicate a pair of vertices. 
+            // So if we have 34 vertices, only 16 edges will be formed.
+            let angle = -360 / (NUM_VERTEX / 2 - 1) * iVert;
+            // listRadius stores the current distance from the position of the render object to the position of each vertex. 
+            let vx1 = (LB_RADIUS + LB_WIDTH/2) * cos(angle*lifeRate);
+            let vy1 = (LB_RADIUS + LB_WIDTH/2) * sin(angle*lifeRate);
+            ObjPrim_SetVertexPosition(obj, indexVert + 0, vx1, vy1, 0);
+            let vx2 = (LB_RADIUS - LB_WIDTH/2) * cos(angle*lifeRate);
+            let vy2 = (LB_RADIUS - LB_WIDTH/2) * sin(angle*lifeRate);
+            ObjPrim_SetVertexPosition(obj, indexVert + 1, vx2, vy2, 0);
+
+            let vx1b = (LB_RADIUS + LB_WIDTH_BORDER/2) * cos(angle);
+            let vy1b = (LB_RADIUS + LB_WIDTH_BORDER/2) * sin(angle);
+            ObjPrim_SetVertexPosition(objBorder, indexVert + 0, vx1b, vy1b, 0);
+            let vx2b = (LB_RADIUS - LB_WIDTH_BORDER/2) * cos(angle);
+            let vy2b = (LB_RADIUS - LB_WIDTH_BORDER/2) * sin(angle);
+            ObjPrim_SetVertexPosition(objBorder, indexVert + 1, vx2b, vy2b, 0);
+        }
+
+        ObjSpriteList2D_SetSourceRect(objDiv, 132, 1, 137, 11);
+        let listLifeDiv = [0] ~ ObjEnemyBossScene_GetInfo(objScene, INFO_ACTIVE_STEP_LIFE_RATE_LIST);
+        ascent(iDiv in 0 .. length(listLifeDiv)) {
+            let rate = listLifeDiv[iDiv];
+            let targetangle = 360 * rate;
+            ObjSpriteList2D_SetDestCenter(objDiv);
+            ObjRender_SetAngleZ(objDiv, targetangle + 90);
+            ObjRender_SetPosition(objDiv, ObjMove_GetX(objBoss) + LB_RADIUS * cos(targetangle), ObjMove_GetY(objBoss) + LB_RADIUS * sin(targetangle), 1);
+            ObjSpriteList2D_AddVertex(objDiv);
+        }
+
+        lifeRateRender += 0.02;
+        lifeRateRender = min(lifeRateRender, 1);
+        lastRemStep = countRemStep;
+    }
+
+    function RenderRemainingLifebars() {
+        let countRemStep = ObjEnemyBossScene_GetInfo(objScene, INFO_REMAIN_STEP_COUNT);
+        ObjSpriteList2D_SetSourceRect(objRemLB, 1, 1, 127, 11);
+        ascent(iStep in 0 .. countRemStep) {
+            let remStepRate = 58 / countRemStep;
+            ObjSpriteList2D_SetDestRect(objRemLB, 4 + iStep * remStepRate + 2, 8, 4 + (iStep + 1) * remStepRate, 12);
+            ObjSpriteList2D_AddVertex(objRemLB);
+        }
+    }
+}</code></pre>
+	      <p>The border maintains the same system as our original lifebar without the life adjustment for its positioning. These graphics are a quick replacement but you should find it convenient to replace and adjust the graphics to fit your needs.</p>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li>Circular Lifebars can be implemented with TriangleStrips similar to Magic Circles</li>
+	          <li>Shrinking the angle range available can simulate damage taken to the boss when applied to a lifebar</li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>
+            </div>
+          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l29.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Primitive Objects and 2D Sprite Lists">Unit 3 Lesson 29</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs.js"></script>  </body></html>
