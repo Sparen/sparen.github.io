@@ -914,84 +914,84 @@ var dnhph3docs_standard = {
                     "args": [],
                     "returnv": "camera x coordinate : number",
                     "description": "Returns the x coordinate of the camera.",
-                    "notes": ""
+                    "notes": "Defaults to 341.506348"
                 },
                 {
                     "fname": "GetCameraY",
                     "args": [],
                     "returnv": "camera y coordinate : number",
                     "description": "Returns the y coordinate of the camera.",
-                    "notes": ""
+                    "notes": "Defaults to 353.553375"
                 },
                 {
                     "fname": "GetCameraZ",
                     "args": [],
                     "returnv": "camera z coordinate : number",
                     "description": "Returns the z coordinate of the camera.",
-                    "notes": ""
+                    "notes": "Default to 91.506348"
                 },
                 {
                     "fname": "GetCameraFocusX",
                     "args": [],
                     "returnv": "camera focus x coordinate : number",
                     "description": "Returns the x coordinate of the camera focus point.",
-                    "notes": ""
+                    "notes": "Defaults to 0"
                 },
                 {
                     "fname": "GetCameraFocusY",
                     "args": [],
                     "returnv": "camera focus y coordinate : number",
                     "description": "Returns the y coordinate of the camera focus point.",
-                    "notes": ""
+                    "notes": "Defaults to 0"
                 },
                 {
                     "fname": "GetCameraFocusZ",
                     "args": [],
                     "returnv": "camera focus z coordinate : number",
                     "description": "Returns the z coordinate of the camera focus point.",
-                    "notes": ""
+                    "notes": "Defaults to 0"
                 },
                 {
                     "fname": "GetCameraRadius",
                     "args": [],
                     "returnv": "distance from focus point to camera : number",
                     "description": "Returns the distance from the focus point to the camera.",
-                    "notes": ""
+                    "notes": "Defaults to 500"
                 },
                 {
                     "fname": "GetCameraAzimuthAngle",
                     "args": [],
                     "returnv": "azimuth angle from focus point to camera : number (degrees)",
                     "description": "Returns the azimuth angle from the focus point to the camera.",
-                    "notes": ""
+                    "notes": "Defaults to 15"
                 },
                 {
                     "fname": "GetCameraElevationAngle",
                     "args": [],
                     "returnv": "elevation angle from focus point to camera : number (degrees)",
                     "description": "Returns the elevation angle from the focus point to the camera.",
-                    "notes": ""
+                    "notes": "Defaults to 45"
                 },
                 {
                     "fname": "GetCameraYaw",
                     "args": [],
                     "returnv": "camera yaw angle : number",
                     "description": "Returns the horizontal Yaw angle of the camera.",
-                    "notes": ""
+                    "notes": "Defaults to 0"
                 },
                 {
                     "fname": "GetCameraPitch",
                     "args": [],
                     "returnv": "camera pitch angle : number",
                     "description": "Returns the vertical Pitch angle of the camera.",
-                    "notes": ""
+                    "notes": "Defaults to 0"
                 },
                 {
                     "fname": "GetCameraRoll",
                     "args": [],
                     "returnv": "camera roll angle : number",
                     "description": "Returns the rotational Roll angle of the camera.",
-                    "notes": ""
+                    "notes": "Defaults to 0"
                 },
                 {
                     "fname": "SetCameraPerspectiveClip",
