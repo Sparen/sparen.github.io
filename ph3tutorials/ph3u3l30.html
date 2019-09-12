@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 30</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 30 - Introduction to 3D Sprites and 3D Backgrounds. A guide on utilizing 3D sprites and creating 3D backgrounds in Danmakufu ph3."
+      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Single, 3D, Sprite, Background">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </head>
+  <body onload="setupENG('Sept 12, 2019')">
+    <div id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div class="docsmenubar">
+        <ul>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
+          <li><a href="./ph3style.html" title="ph3 Style Guidelines">ph3 Style Guidelines</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
+          <li><a href="./docs.html">Function List</a></li>
+          <li><a href="./docs_standard.html">General Functions</a></li>
+          <li><a href="./docs_object.html">Object Functions</a></li>
+          <li><a href="./docs_system.html">Player Script Fxns</a></li>
+          <li><a href="./docs_system.html">Private Script Fxns</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+	  <li><a href="./docs_standard.html#sub10">3D Camera Fxns</a></li>
+	  <li><a href="./docs_object.html#sub2">Render Obj Fxns</a></li>
+	  <li><a href="./docs_object.html#sub6">3D Sprite Obj Fxns</a></li>
+        </ul>
+      </div>
+      <div id="pagecontentwrapper_tut">
+          <div id="pagecontent_tut">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ph3u3l29a.html" title="Sparen's Danmakufu ph3 Tutorials - Libraries: Circular Lifebar">Extra Lesson 5</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>
+	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 30 - Introduction to 3D Sprites and 3D Backgrounds</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are 3D Sprites?</a></li>
+	          <li><a href="#sub3">Part 3: How do I use 3D Sprites in Danmakufu?</a></li>
+	          <li><a href="#sub4">Part 4: How do the 3D Coordinate System and Camera work?</a></li>
+	          <li><a href="#sub5">Part 5: How do I create static 3D Backgrounds?</a></li>
+	          <li><a href="#sub6">Part 6: How do I create scrolling 3D Backgrounds?</a></li>
+	          <li><a href="#sub7">Part 7: How do I utilize fog?</a></li>
+	          <li><a href="#quiz1">Quiz: 3D Backgrounds</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
+	      <p>In this lesson, we will cover 3D Sprites and basic 3D backgrounds in Danmakufu ph3. It is expected that you are already familiar with 2D sprites and backgrounds. If you are not familiar with these, refer to <a href="./ph3u2l13.html">Lesson 13</a> and <a href="./ph3u2l22.html">Lesson 22</a>.</p>
+	      <p>This lesson will go into depth with regards to camera functionality and will cover other miscellaneous topics with regards to 3D in Danmakufu ph3. <strong>Please note that 3D Camera guides are located throughout this guide and are not all located in Part 4</strong>.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are 3D Sprites?</h2>
+	      <p>We've already worked with 2D Sprites that render on the screen in a rather boring manner. You can set a Z coordinate to these but it doesn't actually do anything. 3D Sprites work similarly but you can now work with that extra coordinate.</p>
+	      <p>3D Sprites have the standard Source and Dest rect functionalities but instead of having an automatic centering system such as <code>ObjSprite2D_SetDestCenter()</code>, they instead have <span class="tooltip" onmouseover="getFxnDocs('ObjSprite3D_SetSourceDestRect', 'f_os3dssdr_01');"><code>ObjSprite3D_SetSourceDestRect()</code><span class="tooltiptext" id="f_os3dssdr_01"></span></span>. This function is different in that it does center the sprite, but it centers the sprite at the origin - (0, 0, 0). And where exactly is this origin?</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I use 3D Sprites in Danmakufu?</h2>
+	      <p>For this tutorial, we will be working in a Background Script. I will attempt to have a double panel with code on one side and a screenshot on the other but in many cases it will be necessary for you, the student, to run the code samples yourself and see how things function.</p>
+	      <p>Let's start by trying to render a boring 2D sprite on the screen.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task Experiment0{
+    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
+
+    let cameracount = 0;
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_2D);
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite2D_SetSourceRect(obj1, 0, 0, 368, 460);
+    ObjSprite2D_SetDestRect(obj1, -184, -230, 184, 230);
+    loop{
+
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-ex0.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>As expected, the image renders and centers itself at (0, 0), the default position. Now let's convert it to a 3D sprite.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task Experiment1{
+    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
+
+    let cameracount = 0;
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D);
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetSourceRect(obj1, 0, 0, 368, 460);
+    ObjSprite3D_SetDestRect(obj1, -184, -230, 184, 230);
+    loop{
+
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-ex1.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p><strong>WHAT.</strong> is a pretty accurate description. <code>ObjSprite3D_SetSourceDestRect(obj1, 0, 0, 368, 460);</code> gives you the same result. Obviously, something strange is going on here. Let's find out what it is.</p>
+	      <p>So far, we've been working with 2D sprites. Bullets, text, 2D sprites, etc. have all used a standard coordinate system - (0, 0) is in the top left of the playing field for render priorities between 0.20 and 0.80, and they increase to the right and down such that the bottom right of the playing field, (<code>GetStgFrameWidth</code>, <code>GetStgFrameHeight</code>), is (384, 448). However, the 3D coordinate system does NOT function in this same way as we have just observed, and the 3D Camera system has some other tricks up its sleeve...</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do the 3D Coordinate System and Camera work?</h2>
+	      <p>Now, I can assure you that Raiko is ACTUALLY positioned at (0, 0, 0). There are just some... fun defaults we need to work with.</p>
+	      <p>First, the coordinate system (<strong>assuming elevation and azimuth are set to 0, which they are not by default</strong>). Z is horizontal and Y remains vertical, while the X axis goes into the screen. Notably, (0, 0, 0) is not in the top left by any stretch - it's dead center in the playing field in all three axes.</p>
+	      <p>By default, (0, 0, 0) happens to be the focal point of the camera as well. The camera itself is what controls the display. The camera has a default unchangeable position in Danmakufu and from that position always faces the Focal Point. <strong>Note that Danmakufu calls the Focal Point the Focus Point in its functions</strong>.</p>
+	      <p>Next we need to describe Azimuth and Elevation angles. Let's first say that the X (depth)-Z (width) plane is the ground. The camera lying flat on the ground pointing forwards and aligned the way we see it has an elevation and azimuth of 0.</p>
+		<img src="tutimg/u30-elevazim.png"></img>
+	      <p>Imagine a sphere as shown above (thanks to Drake on MotK). If we rotate the camera on that sphere, it will continue to point at the focal point, but since it's above the ground, it has an angle of elevation compared to where it was before. Alternatively, let's say that there's a circle drawn on the ground and the camera is on the circle. If we move the camera along the circle, the Azimuth angle changes. Like before, it still points at the focal point.</p>
+	      <p>OK. So we know some more about how these angles and coordinate systems work. Why does Raiko appear like that?</p>
+	      <p>Short answer: Danmakufu's default Azimuth angle is 15, and its default Elevation angle is 45. </p>
+	      <p>Now, we've run into a problem. Danmakufu's default Azimuth is 15. If we set it to zero, we get the following:</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task Experiment2{
+    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
+
+    let cameracount = 0;
+
+    SetCameraAzimuthAngle(0);
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D);
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetSourceRect(obj1, 0, 0, 368, 460);
+    ObjSprite3D_SetDestRect(obj1, -184, -230, 184, 230);
+    loop{
+
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-ex2.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>Intuitively, this makes sense. If the azimuth is zero, then we're looking straight at the 3D sprite, which is flat, from the side. The rects we provided rendered the image in the X-Y plane, where X is depth and Y is height. There's no Z (width) component. And therefore, it's basically invisible. Therefore, let's instead try setting Azimuth to 90, which is the de facto standard for most stage backgrounds. Do not that this means the default axis we are looking down will change.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task Experiment3{
+    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
+
+    let cameracount = 0;
+
+    SetCameraAzimuthAngle(90);
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D);
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetSourceRect(obj1, 0, 0, 368, 460);
+    ObjSprite3D_SetDestRect(obj1, -184, -230, 184, 230);
+    loop{
+
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-ex3.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>OK. She's fixed in one angle. Positive azimuth moves the camera to the right, while negative azimuth moves the camera to the left. Now let's set elevation to 0.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
+
+    let cameracount = 0;
+
+    SetCameraAzimuthAngle(90);
+    SetCameraElevationAngle(0);
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D);
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetSourceRect(obj1, 0, 0, 368, 460);
+    ObjSprite3D_SetDestRect(obj1, -184, -230, 184, 230);
+    loop{
+
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-ex4.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>So now things seem to be OK, if you ignore the fact that she's rotated 180 degrees.</p>
+		<pre class="prettyprint linenums"><code>task LearningElevationAzimuth{
+    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
+
+    let cameracount = 0;
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D);
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetSourceRect(obj1, 0, 0, 368, 460);
+    ObjSprite3D_SetDestRect(obj1, -184, -230, 184, 230);
+
+    let obj2 = ObjText_Create();
+    ObjRender_SetPosition(obj2, 32, 32, 1);
+    loop{
+
+        SetCameraAzimuthAngle(GetPlayerX - GetStgFrameWidth()/2);
+        SetCameraElevationAngle(GetStgFrameHeight()/2 - GetPlayerY);
+
+        ObjText_SetText(obj2, "Azimuth: " ~ ToString(GetPlayerX - GetStgFrameWidth()/2) ~ "[r]" ~ "Elevation: " ~ ToString(GetStgFrameHeight()/2 - GetPlayerY));
+
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+	      <p>Try out the above code. Especially try out setting one of the angles to 0 or 90 and varying the other exclusively. The player's position will determine the Elevation and Azimuth angles for the camera. Note that it's simply impossible to get Raikou into her standard 2D sprite positioning using this example.</p>
+	      <div class="tut_checkpoint">CHECKPOINT: How is the reverse side of a 3D sprite rendered?</div>
+	      <p>OK, OK. Your head probably hurts now. Let's flip her right side up... err, which axis do we rotate around?</p>
+		<pre class="prettyprint linenums"><code>task Learning3DSpriteAngleXY{
+    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
+
+    let cameracount = 0;
+
+    SetCameraAzimuthAngle(90);
+    SetCameraElevationAngle(0);
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D);
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetSourceRect(obj1, 0, 0, 368, 460);
+    ObjSprite3D_SetDestRect(obj1, -184, -230, 184, 230);
+
+    let obj2 = ObjText_Create();
+    ObjRender_SetPosition(obj2, 32, 32, 1);
+    loop{
+
+        ObjRender_SetAngleX(obj1, GetPlayerX - GetStgFrameWidth()/2);
+        ObjRender_SetAngleY(obj1, GetStgFrameHeight()/2 - GetPlayerY);
+
+        ObjText_SetText(obj2, "X Angle: " ~ ToString(GetPlayerX - GetStgFrameWidth()/2) ~ "[r]" ~ "Y Angle: " ~ ToString(GetStgFrameHeight()/2 - GetPlayerY));
+
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+	      <p>In this example, if you move up, Raikou rotates about the y axis (vertical). Perhaps counter-intuitively, this makes her spin like a sign attached to a stick. And indeed, that's a great way to think about this. Think about holding a flat sign vertically. The vertical axis (the y axis) is aligned along the thing you hold - the stick? Pole? Whatever its called. All that matters is that when you rotate the sign/flip it to show the other side, you're rotating about the y axis.</p>
+	      <p>But what happened to the x axis? It's as if Raikou is flipping into the ground.</p>
+	      <p>Recall the configuration where elevation and azimuth were set to 0. The x axis represents depth in that view. However, we've set Azimuth to 90, meaning we're now looking at that view from a different angle. In fact, it's as if the x and z axes have switched places.</p>
+	      <p>There are other configurations that we can try out for elevation and azimuth, but setting azimuth into a space we are familiar with is most important.</p>
+	      <p><strong>For the remainder of this tutorial and in all future tutorials referencing 3D backgrounds, we will utilize an Azimuth angle of -90 in order to maintain the x axis being horizontal, the y axis being vertical, and the z axis being the depth axis.</strong> Using -90 for Azimuth instead of 90 means that the X axis will increase as we move to the right and decrease as we move to the left. The y direction will behave the same way as with 2D sprites. The following example should feel like you're working with 2D sprites.</p>
+		<pre class="prettyprint linenums"><code>task Learning3DSpriteDirXY{
+    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
+
+    let cameracount = 0;
+
+    SetCameraAzimuthAngle(-90);
+    SetCameraElevationAngle(0);
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D);
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetSourceRect(obj1, 0, 0, 368, 460);
+    ObjSprite3D_SetDestRect(obj1, -184, -230, 184, 230);
+    ObjRender_SetAngleX(obj1, 180); // Flip
+
+    let obj2 = ObjText_Create();
+    ObjRender_SetPosition(obj2, 32, 32, 1);
+    loop{
+
+        ObjRender_SetX(obj1, GetStgFrameWidth()/2 - GetPlayerX);
+        ObjRender_SetY(obj1, GetStgFrameHeight()/2 - GetPlayerY);
+
+        ObjText_SetText(obj2, "X: " ~ ToString(ObjRender_GetX(obj1)) ~ "[r]" ~ "Y: " ~ ToString(ObjRender_GetY(obj1)));
+
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I create static 3D Backgrounds?</h2>
+	      <p>Congratulations on getting through all of that stuff above. We've exited the introduction to the coordinate system and camera without discussing Yaw/Pitch/Roll, but those can wait a little while since they involve manipulating the actual camera rather than the camera's relation to the scene. For now, we'll do a simple 3D background comprised of 3D sprites, and will discuss camera radius and perspective clipping.</p>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I create scrolling 3D Backgrounds?</h2>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I utilize fog?</h2>
+	      <p></p>
+	      <p></p>
+<pre class="prettyprint linenums"><code></code></pre>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li></li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>3D Camera images and content thanks to Drake on MotK. <a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,16584.msg1190637.html#msg1190637">Source (Yaw/Pitch/Roll, Elevation/Azimuth)</a></p>
+	      <br>
+            </div>
+          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l29a.html" title="Sparen's Danmakufu ph3 Tutorials - Libraries: Circular Lifebar">Extra Lesson 5</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>
+      <footer id="footer">
+      </footer>
+    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs.js"></script>
+  </body>
+</html>
