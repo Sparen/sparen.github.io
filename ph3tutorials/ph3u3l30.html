@@ -366,7 +366,33 @@
 		</div><div style="flex: 1;text-align:center">
 		<img src="tutimg/u30-sstg2.png" style="max-height:320px"></img>
 	      </div></div>
-	      <p>The main thing to note here is render order. As mentioned in prior guides, within the same render priority the things spawned later render over the things spawned before. In addition, when calculating the position, I incorporate a 90 into the angle in order to ensure that they all face the center.</p>
+	      <p>The main thing to note here is render order. As mentioned in prior guides, within the same render priority the things spawned later render over the things spawned before. In addition, when calculating the position, I incorporate a 90 into the angle in order to ensure that they all face the center. This is actually a very hackish solution that takes advantage of the ring nature of images - without the 90 degree shift, the Y rotation of the individual sprites all face away from the center. However, by keeping the angles they are at but moving them a quarter of the way around the circle, all of the sprites become perpendicular to the lines from the camera focus to them. In the diagram below, each colored line in the example without shifting becomes the same colored line in the example with the 90 degree clockwise shift.</p>
+              <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="200" style="fill:#333333"></rect>
+
+                  <text x="8" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE - Without shift</text>
+                  <path d="M 96 24 L 96 40" stroke="#FF0000" stroke-width="8px" fill="none"></path>
+                  <path d="M 146.9 45.1 L 135.6 56.4 Z" stroke="#FFAA00" stroke-width="8px" fill="none"></path>
+                  <path d="M 168 96 L 152 96 Z" stroke="#FFFF00" stroke-width="8px" fill="none"></path>
+                  <path d="M 146.9 146.9 L 135.6 135.6 Z" stroke="#AAFFAA" stroke-width="8px" fill="none"></path>
+                  <path d="M 96 168 L 96 152 Z" stroke="#00FFFF" stroke-width="8px" fill="none"></path>
+                  <path d="M 45.1 146.9 L 56.4 135.6 Z" stroke="#0000FF" stroke-width="8px" fill="none"></path>
+                  <path d="M 24 96 L 40 96 Z" stroke="#AA00AA" stroke-width="8px" fill="none"></path>
+                  <path d="M 45.1 45.1 L 56.4 56.4 Z" stroke="#FF00AA" stroke-width="8px" fill="none"></path>
+              </svg>
+              <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="200" style="fill:#333333"></rect>
+
+                  <text x="8" y="192" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE - With 90 degree shift</text>
+                  <g transform="translate(64, 64)"><path d="M 96 24 L 96 40" stroke="#FF0000" stroke-width="8px" fill="none"></path></g>
+                  <g transform="translate(0, 90.2)"><path d="M 146.9 45.1 L 135.6 56.4 Z" stroke="#FFAA00" stroke-width="8px" fill="none"></path></g>
+                  <g transform="translate(-64, 64)"><path d="M 168 96 L 152 96 Z" stroke="#FFFF00" stroke-width="8px" fill="none"></path></g>
+                  <g transform="translate(-90.2, 0)"><path d="M 146.9 146.9 L 135.6 135.6 Z" stroke="#AAFFAA" stroke-width="8px" fill="none"></path></g>
+                  <g transform="translate(-64, -64)"><path d="M 96 168 L 96 152 Z" stroke="#00FFFF" stroke-width="8px" fill="none"></path></g>
+                  <g transform="translate(0, -90.2)"><path d="M 45.1 146.9 L 56.4 135.6 Z" stroke="#0000FF" stroke-width="8px" fill="none"></path></g>
+                  <g transform="translate(64, -64)"><path d="M 24 96 L 40 96 Z" stroke="#AA00AA" stroke-width="8px" fill="none"></path></g>
+                  <g transform="translate(90.2, 0)"><path d="M 45.1 45.1 L 56.4 56.4 Z" stroke="#FF00AA" stroke-width="8px" fill="none"></path></g>
+              </svg>
 	      <p>Now let's add some extras in the scene. Since the camera stays in the same position, I'm only going to put up the front side of these, like the play example mentioned earlier. No point in including the walls of the houses if the camera never has a chance to see them! For now, I'll consider Aya to be a mobile building given that she can be quite persistent as she watches over your shoulder trying to extract a scoop from you. <a href="./tutimg/u3l30sample3.png">Aya</a>.</p>
 	      <div style="display: flex;"><div style="flex: 1">
 		<pre class="prettyprint linenums"><code>task MainBG{
@@ -405,7 +431,7 @@ task CreateAyaA1(dist, ID, dir, rp) {
 		</div><div style="flex: 1;text-align:center">
 		<img src="tutimg/u30-sstg3.png" style="max-height:320px"></img>
 	      </div></div>
-	      <p>Here we need to do some work to allow for the Aya army to move while maintaining the intended angle. However, it's not something that can't be done with some angle offsets.</p>
+	      <p>Here we need to do some work to allow for the Aya army to move while maintaining the intended angle. However, it's not something that can't be done with some angle offsets. We maintain the 90 degree offset and the primary base angle, but the angle of the Ayas needs to change over time, so we have to set the Y angle as well. In this case, if the Ayas rotate clockwise by subtracting <code>objcount*dir</code>, we add the <code>objcount*dir</code> to the Y rotation in order to cancel out the effect. The <code>90 + 90*dir</code> is only used to flip the sprites for the Ayas moving in the other direction.</p>
 	      <p>As a final component to this static stage, we'll add some bouncing <a href="./tutimg/u3l30sample4.png">Yukkuris</a>.</p>
 	      <div style="display: flex;"><div style="flex: 1">
 		<pre class="prettyprint linenums"><code>task MainBG{
@@ -452,6 +478,7 @@ task CreateYukkuriA1(ID, offset) {
 		</div><div style="flex: 1;text-align:center">
 		<img src="tutimg/u30-sstg4.png" style="max-height:320px"></img>
 	      </div></div>
+	      <p>Here we use a distance based system where the objects spawn at a given distance and last for a certain distance before deleting. This technique is commonly used in endlessly scrolling backgrounds to delete sprites that have  moved past the camera's range - something we will take a look at in the next section. I have also set the Y coordinate to oscillate over time using a sine wave (well, cosine in this case).</p>
 	      <p>Finally, to see what our setup looks from afar (the 'floating camera') view...</p>
 	      <div style="display: flex;"><div style="flex: 1">
 		<pre class="prettyprint linenums"><code>task MainBG{
@@ -471,7 +498,7 @@ task CreateYukkuriA1(ID, offset) {
 	      </div></div>
 	      <p>There are a few things to note here. First, the 'background' and floor were on the same render priority layer. As a result, the floor covers most of the former background from this distance and angle. When designing stages in 3D, it is important to keep this in mind as you determine what components are shown to the player and which components are cleverly hidden. In addition, various components may interact in unwanted ways - for example, you may want certain different types of object to render behind one another in a very specific way - these concepts require careful thought and consideration when designing the background from a code perspective.</p>
 	      <p>In addition, we utilize two new functions here, one of which sets the radius of the camera (the distance between the focal point of the camera and the camera itself) and one which sets the perspective clip. The default max perspective clip is something you will probably want to override when manipulating the camera radius, but again, careful tuning can allow you to cover up some unwanted components while showing the parts you do want. </p>
-	      <p>That's all for the Yukkuris.</p>
+	      <p>That's all for the Yukkuris. Now back to a more serious example.</p>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I create scrolling 3D Backgrounds?</h2>
 	      <p>To close off this guide we will cover scrolling 3D backgrounds, yaw pitch and roll, and fog.</p>
 	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I utilize fog?</h2>
