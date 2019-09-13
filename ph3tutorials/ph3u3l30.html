@@ -128,7 +128,7 @@
 	      <p>By default, (0, 0, 0) happens to be the focal point of the camera as well. The camera itself is what controls the display. The camera has a default unchangeable position in Danmakufu and from that position always faces the Focal Point. <strong>Note that Danmakufu calls the Focal Point the Focus Point in its functions</strong>.</p>
 	      <p>Next we need to describe Azimuth and Elevation angles. Let's first say that the X (depth)-Z (width) plane is the ground. The camera lying flat on the ground pointing forwards and aligned the way we see it has an elevation and azimuth of 0.</p>
 		<img src="tutimg/u30-elevazim.png"></img>
-	      <p>Imagine a sphere as shown above (thanks to Drake on MotK). If we rotate the camera on that sphere, it will continue to point at the focal point, but since it's above the ground, it has an angle of elevation compared to where it was before. Alternatively, let's say that there's a circle drawn on the ground and the camera is on the circle. If we move the camera along the circle, the Azimuth angle changes. Like before, it still points at the focal point.</p>
+	      <p>Imagine a sphere as shown above (thanks to Drake on MotK). If we rotate the camera upwards on that sphere, it will continue to point at the focal point, but since it's above the ground, it has an angle of elevation compared to where it was before. Alternatively, let's say that there's a circle drawn on the ground and the camera is on the circle. If we move the camera along the circle, the Azimuth angle changes. Like before, it still points at the focal point.</p>
 	      <p>OK. So we know some more about how these angles and coordinate systems work. Why does Raiko appear like that?</p>
 	      <p>Short answer: Danmakufu's default Azimuth angle is 15, and its default Elevation angle is 45. </p>
 	      <p>Now, we've run into a problem. Danmakufu's default Azimuth is 15. If we set it to zero, we get the following:</p>
@@ -155,7 +155,7 @@
 		</div><div style="flex: 1;text-align:center">
 		<img src="tutimg/u30-ex2.png" style="max-height:320px"></img>
 	      </div></div>
-	      <p>Intuitively, this makes sense. If the azimuth is zero, then we're looking straight at the 3D sprite, which is flat, from the side. The rects we provided rendered the image in the X-Y plane, where X is depth and Y is height. There's no Z (width) component. And therefore, it's basically invisible. Therefore, let's instead try setting Azimuth to 90, which is the de facto standard for most stage backgrounds. Do not that this means the default axis we are looking down will change.</p>
+	      <p>Intuitively, this makes sense. If the azimuth is zero, then we're looking straight at the 3D sprite, which is flat, from the side. The rects we provided rendered the image in the X-Y plane, where X is depth and Y is height. There's no Z (width) component. And therefore, it's basically invisible. Therefore, let's instead try setting Azimuth to 90, which is a common standard for many stage backgrounds (the alternative is -90, which we will discuss later). Do note that this means the default axis we are looking down will change.</p>
 	      <div style="display: flex;"><div style="flex: 1">
 		<pre class="prettyprint linenums"><code>task Experiment3{
     let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
@@ -181,7 +181,8 @@
 	      </div></div>
 	      <p>OK. She's fixed in one angle. Positive azimuth moves the camera to the right, while negative azimuth moves the camera to the left. Now let's set elevation to 0.</p>
 	      <div style="display: flex;"><div style="flex: 1">
-		<pre class="prettyprint linenums"><code>    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
+		<pre class="prettyprint linenums"><code>task Experiment4{
+    let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
 
     let cameracount = 0;
 
@@ -229,8 +230,8 @@
         yield;
     }
 }</code></pre>
-	      <p>Try out the above code. Especially try out setting one of the angles to 0 or 90 and varying the other exclusively. The player's position will determine the Elevation and Azimuth angles for the camera. Note that it's simply impossible to get Raikou into her standard 2D sprite positioning using this example.</p>
-	      <div class="tut_checkpoint">CHECKPOINT: How is the reverse side of a 3D sprite rendered?</div>
+	      <p>Try out the above code. Especially try out setting one of the angles to 0 or 90 and varying the other exclusively. The player's position will determine the Elevation and Azimuth angles for the camera. Note that it's simply impossible to get Raiko into her standard 2D sprite positioning using this example.</p>
+	      <div class="tut_exercise">EXERCISE: How is the reverse side of a 3D sprite rendered?</div>
 	      <p>OK, OK. Your head probably hurts now. Let's flip her right side up... err, which axis do we rotate around?</p>
 		<pre class="prettyprint linenums"><code>task Learning3DSpriteAngleXY{
     let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
@@ -260,11 +261,11 @@
         yield;
     }
 }</code></pre>
-	      <p>In this example, if you move up, Raikou rotates about the y axis (vertical). Perhaps counter-intuitively, this makes her spin like a sign attached to a stick. And indeed, that's a great way to think about this. Think about holding a flat sign vertically. The vertical axis (the y axis) is aligned along the thing you hold - the stick? Pole? Whatever its called. All that matters is that when you rotate the sign/flip it to show the other side, you're rotating about the y axis.</p>
-	      <p>But what happened to the x axis? It's as if Raikou is flipping into the ground.</p>
+	      <p>In this example, if you move up, Raiko rotates about the y axis (vertical). Perhaps counter-intuitively, this makes her spin like a sign attached to a stick. And indeed, that's a great way to think about this. Think about holding a flat sign vertically. The vertical axis (the y axis) is aligned along the thing you hold - the stick? Pole? Whatever its called. All that matters is that when you rotate the sign/flip it to show the other side, you're rotating about the y axis.</p>
+	      <p>But what happened to the x axis? It's as if Raiko is flipping into the ground.</p>
 	      <p>Recall the configuration where elevation and azimuth were set to 0. The x axis represents depth in that view. However, we've set Azimuth to 90, meaning we're now looking at that view from a different angle. In fact, it's as if the x and z axes have switched places.</p>
 	      <p>There are other configurations that we can try out for elevation and azimuth, but setting azimuth into a space we are familiar with is most important.</p>
-	      <p><strong>For the remainder of this tutorial and in all future tutorials referencing 3D backgrounds, we will utilize an Azimuth angle of -90 in order to maintain the x axis being horizontal, the y axis being vertical, and the z axis being the depth axis.</strong> Using -90 for Azimuth instead of 90 means that the X axis will increase as we move to the right and decrease as we move to the left. The y direction will behave the same way as with 2D sprites. The following example should feel like you're working with 2D sprites.</p>
+	      <p><strong>For the remainder of this tutorial and in all future tutorials referencing 3D backgrounds, we will utilize an Azimuth angle of -90 in order to maintain the x axis being horizontal, the y axis being vertical, and the z axis being the depth axis.</strong> Using -90 for Azimuth instead of 90 means that the X axis will increase as we move to the right and decrease as we move to the left like with 2D sprites. The y direction will note behave the same way as with 2D sprites, but since increasing the y coordinate increases the height, it shouldn't be too much of a stretch given that we're thinking in 3D. The following example should feel like you're working with 2D sprites if you ignore the y coordinate being opposite.</p>
 		<pre class="prettyprint linenums"><code>task Learning3DSpriteDirXY{
     let path1 = GetCurrentScriptDirectory ~ "img/RaikoCutIn.png";
 
@@ -296,10 +297,185 @@
 }</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I create static 3D Backgrounds?</h2>
 	      <p>Congratulations on getting through all of that stuff above. We've exited the introduction to the coordinate system and camera without discussing Yaw/Pitch/Roll, but those can wait a little while since they involve manipulating the actual camera rather than the camera's relation to the scene. For now, we'll do a simple 3D background comprised of 3D sprites, and will discuss camera radius and perspective clipping.</p>
+	      <p>For now, let's imagine a scene. Think of a location - maybe a small village, or a building, etc. Now imaging you're flying in the air with a camera. Your camera is pointing straight at a location in the village. The distance between your camera and that point is the camera radius, which in Danmakufu defaults to 500 pixels. For convenience's sake, the camera can't really capture anything *too* far away, say over the horizon. So that stuff, as well as stuff too close to the camera, aren't captured. That's the perspective clip - the parts of the scene in the direction the camera is facing where it just can't capture.</p>
+	      <p>Now, back to the scene. You can fly around it and the only restriction (for now) is that the camera must face a single point in the scene. Where are the objects relative to one another? How high are they? Those are the kinds of things to think about when designing a 3D stage background. Typically you'd have a never-ending path with trees or the like, but for now we'll have a simple background that behaves more like the set of a play - you have cardboard or otherwise static objects placed in the scene and you look at it from a single angle. </p>
+	      <p>Of course to lighten the mood our example will be a Yukkuri village with bouncing Yukkuris. We'll have a closed area made with 3D sprites, and will rotate the camera around while Yukkuri bounce at us. What fun!</p>
+	      <p>Let's start with the floor. I'm using <a href="./tutimg/u3l30sample1.png">this image</a> for flooring, with the following code to start:</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task MainBG{
+    let path1 = GetCurrentScriptDirectory ~ "img/spcdbkgd3.png";
+
+    let cameracount = 0;
+
+    SetCameraAzimuthAngle(-90);
+    SetCameraElevationAngle(10);
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D); // Flooring
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetSourceDestRect(obj1, 0, 0, 512*32, 512*32);
+    ObjRender_SetAngleX(obj1, 90);
+
+    loop{
+        SetCameraAzimuthAngle(-90 + cameracount/8);
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg1.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>Note that we've changed the Elevation Angle. We don't want the camera to be looking straight along the ground - we want to simulate someone above ground. And so we have an elevation angle. I've also set the source and dest rect to a rather large number. This is because you want the image to cover a large space. Typically this much is overkill, however. I've also rotated the 3D sprite 90 degrees about the X axis such that it's the floor and not a wall.  Finally, in the loop I've set the Azimuth Angle to change over time - gradually as to not make the viewer feel motion sickness.</p>
+	      <p>Next, let's add some background to replace the boring black background and add some color. I'm using <a href="./tutimg/u3l30sample2.jpg">this image</a>.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task MainBG{
+    let path1 = GetCurrentScriptDirectory ~ "img/u3l30sample1.png";
+    let path2 = GetCurrentScriptDirectory ~ "img/u3l30sample2.jpg";
+
+    let cameracount = 0;
+
+    SetCameraAzimuthAngle(-90);
+    SetCameraElevationAngle(10);
+
+    ascent(i in 0..12) {
+        let distance = 1480;
+        let objHouse = ObjPrim_Create(OBJ_SPRITE_3D); // Background
+        ObjRender_SetBlendType(objHouse, BLEND_ALPHA);
+        Obj_SetRenderPriority(objHouse, 0.21);
+        ObjPrim_SetTexture(objHouse, path2);
+        ObjSprite3D_SetSourceDestRect(objHouse, 0, 0, 850, 917);
+        ObjRender_SetAngleY(objHouse, 360/12*i);
+        ObjRender_SetAngleX(objHouse, 180);
+        ObjRender_SetPosition(objHouse, distance*cos(90 - 360/12*i), 300, distance*sin(90 - 360/12*i));
+    }
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D); // Flooring
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetSourceDestRect(obj1, 0, 0, 413*32, 407*32);
+    ObjRender_SetAngleX(obj1, 90);
+
+    loop{
+        SetCameraAzimuthAngle(-90 + cameracount/8);
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg2.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>The main thing to note here is render order. As mentioned in prior guides, within the same render priority the things spawned later render over the things spawned before. In addition, when calculating the position, I incorporate a 90 into the angle in order to ensure that they all face the center.</p>
+	      <p>Now let's add some extras in the scene. Since the camera stays in the same position, I'm only going to put up the front side of these, like the play example mentioned earlier. No point in including the walls of the houses if the camera never has a chance to see them! For now, I'll consider Aya to be a mobile building given that she can be quite persistent as she watches over your shoulder trying to extract a scoop from you. <a href="./tutimg/u3l30sample3.png">Aya</a>.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task MainBG{
+    ...
+
+    ascent(i in 0..6) {
+        let distance1 = 512;
+        let distance2 = 1024;
+        CreateAyaA1(distance1, i, 1, 0.22); // Forcibly render closer ones higher
+        CreateAyaA1(distance2, i, -1, 0.21);
+    }
+
+    loop{
+        SetCameraAzimuthAngle(-90 + cameracount/8);
+        cameracount++;
+        yield;
+    }
+}
+
+task CreateAyaA1(dist, ID, dir, rp) {
+    let objcount = 0;
+    let pathAya = GetCurrentScriptDirectory ~ "img/u3l30sample3.png";
+    let objAya = ObjPrim_Create(OBJ_SPRITE_3D); // Aya
+    ObjRender_SetBlendType(objAya, BLEND_ALPHA);
+    Obj_SetRenderPriority(objAya, rp);
+    ObjPrim_SetTexture(objAya, pathAya);
+    ObjSprite3D_SetSourceDestRect(objAya, 0, 0, 320, 250);
+    ObjRender_SetAngleX(objAya, 180);
+    loop {
+        ObjRender_SetAngleY(objAya, 360/6*ID + dir*objcount + 90 + 90*dir); // Offset + change over time + reflections to face direction
+        ObjRender_SetPosition(objAya, dist*cos(90 - 360/6*ID - objcount*dir), 0, dist*sin(90 - 360/6*ID - objcount*dir)); // Base + Offset + change over time
+        objcount += 1/6;
+        yield;
+    }
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg3.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>Here we need to do some work to allow for the Aya army to move while maintaining the intended angle. However, it's not something that can't be done with some angle offsets.</p>
+	      <p>As a final component to this static stage, we'll add some bouncing <a href="./tutimg/u3l30sample4.png">Yukkuris</a>.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task MainBG{
+    ...
+
+    loop{
+        SetCameraAzimuthAngle(-90 + cameracount/8);
+
+        if (cameracount % 72 == 0) {
+            ascent(i in 0..12) {
+                CreateYukkuriA1(i, cameracount);
+            }
+        }
+
+        cameracount++;
+        yield;
+    }
+}
+
+task CreateYukkuriA1(ID, offset) {
+    let objcount = 0;
+    let dist = 1520;
+    let pathYuk = GetCurrentScriptDirectory ~ "img/u3l30sample4.png";
+    let objYuk = ObjPrim_Create(OBJ_SPRITE_3D); // Yukkuri
+    ObjRender_SetBlendType(objYuk, BLEND_ALPHA);
+    Obj_SetRenderPriority(objYuk, 0.21);
+    ObjPrim_SetTexture(objYuk, pathYuk);
+    ObjSprite3D_SetSourceRect(objYuk, 0, 0, 494, 384);
+    ObjSprite3D_SetDestRect(objYuk, -494/4, -384/4, 494/4, 384/4);
+    ObjRender_SetAngleX(objYuk, 180);
+    ObjRender_SetZTest(objYuk, true);
+    loop {
+        if (dist < -1520) {
+            Obj_Delete(objYuk);
+        }
+        ObjRender_SetAngleY(objYuk, 360/12*ID - offset);
+        ObjRender_SetPosition(objYuk, dist*cos(90 - 360/12*ID + offset), 540 + 270*cos(objcount*6), dist*sin(90 - 360/12*ID + offset));
+        objcount += 1;
+        dist -= 5;
+        yield;
+    }
+}
+</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg4.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>Finally, to see what our setup looks from afar (the 'floating camera') view...</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task MainBG{
+    let path1 = GetCurrentScriptDirectory ~ "img/u3l30sample1.png";
+    let path2 = GetCurrentScriptDirectory ~ "img/u3l30sample2.jpg";
+
+    let cameracount = 0;
+
+    SetCameraAzimuthAngle(-90);
+    SetCameraElevationAngle(10);
+    SetCameraPerspectiveClip(0, 50000);
+    SetCameraRadius(8000);
+
+    ...</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg5.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>There are a few things to note here. First, the 'background' and floor were on the same render priority layer. As a result, the floor covers most of the former background from this distance and angle. When designing stages in 3D, it is important to keep this in mind as you determine what components are shown to the player and which components are cleverly hidden. In addition, various components may interact in unwanted ways - for example, you may want certain different types of object to render behind one another in a very specific way - these concepts require careful thought and consideration when designing the background from a code perspective.</p>
+	      <p>In addition, we utilize two new functions here, one of which sets the radius of the camera (the distance between the focal point of the camera and the camera itself) and one which sets the perspective clip. The default max perspective clip is something you will probably want to override when manipulating the camera radius, but again, careful tuning can allow you to cover up some unwanted components while showing the parts you do want. </p>
+	      <p>That's all for the Yukkuris.</p>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I create scrolling 3D Backgrounds?</h2>
-	      <p></p>
+	      <p>To close off this guide we will cover scrolling 3D backgrounds, yaw pitch and roll, and fog.</p>
 	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I utilize fog?</h2>
-	      <p></p>
+	      <p>TODO</p>
 	      <p></p>
 <pre class="prettyprint linenums"><code></code></pre>
 	      <p></p>
