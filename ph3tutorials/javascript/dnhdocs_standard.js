@@ -403,9 +403,9 @@ var dnhph3docs_standard = {
             "fxns": [
                 {
                     "fname": "WriteLog",
-                    "args": ["value : free"],
+                    "args": ["value : string"],
                     "returnv": "",
-                    "description": "Outputs given value to log window.",
+                    "description": "Outputs given string to log window.",
                     "notes": ""
                 },
                 {

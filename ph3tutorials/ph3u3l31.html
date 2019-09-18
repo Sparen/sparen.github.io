@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 31</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 31 - Utilizing the Log Window and Debug Functions. A guide on the Log Window and debug functionality in Danmakufu ph3."
+      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Log, Window, assert, Debug, Functions">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </head>
+  <body onload="setupENG('Sept 17, 2019')">
+    <div id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div class="docsmenubar">
+        <ul>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
+          <li><a href="./ph3style.html" title="ph3 Style Guidelines">ph3 Style Guidelines</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
+          <li><a href="./docs.html">Function List</a></li>
+          <li><a href="./docs_standard.html">General Functions</a></li>
+          <li><a href="./docs_object.html">Object Functions</a></li>
+          <li><a href="./docs_system.html">Player Script Fxns</a></li>
+          <li><a href="./docs_system.html">Private Script Fxns</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+	  <li><a href="./docs_standard.html#sub2">Text Functions</a></li>
+	  <li><a href="./docs_standard.html#sub5">Debug Functions</a></li>
+        </ul>
+      </div>
+      <div id="pagecontentwrapper_tut">
+          <div id="pagecontent_tut">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ph3u3l30.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to 3D Sprites and 3D Backgrounds">Unit 3 Lesson 30</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>
+	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 31 - Utilizing the Log Window and Debug Functions</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What is the Log Window and how do I use it?</a></li>
+	          <li><a href="#sub3">Part 3: How do I use Danmakufu's Debug Functions?</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
+	      <p>In this lesson, we will cover usage of the Log Window as well as usage of the debug functions in Danmakufu. We will also discuss data type conversion in the context of generating strings for debug statements.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What is the Log Window and how do I use it?</h2>
+	      <p>Let's begin our discussion with the Log Window. If you have not yet enabled it, I recommend opening Danmakufu's config.exe and selecting the relevant checkbox as seen below:</p>
+	      <img src="tutimg/u3l31img1.png" alt="Danmakufu Config" style="max-height:320px"><br>
+	      <p>The Log Window itself has 8 tabs - Log, Info, Task, Texture, Mesh, Sound, Common Data, and Script.</p>
+	      <p><strong>Log</strong> is the default tab and contains timestamps for all key happenings in Danmakufu - it logs when textures are loaded, logs when scripts starts, etc. All calls to <code>WriteLog</code>, which we will discuss later, output their content here.</p>
+	      <p><strong>Info</strong> is the most useful tab for general purposes. Work and Draw FPS is displayed here as well as screen data and cache data. However, the script task count, object count, shot count, and enemy counts are what are really important. It is not uncommon to leave out edge cases in a script, allowing for a task to not end. In short scripts, this generally isn't a problem. However, in long scripts where object IDs get reused internally by Danmakufu, unterminated tasks (e.g. tasks waiting for an object to be at X position) may suddenly come back to life, doing unintended and unpredictable things. Object count and shot count should always be monitored to ensure that spellcards and other attacks always clean up after themselves. In short, when developing, check to see if there are any undeleted objects or unterminated tasks, as they may cause problems later.</p>
+	      <p><strong>Task</strong> is the second least useful tab in the log window. It displays Danmakufu's internal task system - however, these are not the tasks that scripters make and the information here is generally useless unless something goes horribly wrong with Danmakufu.</p>
+	      <p><strong>Texture, Mesh, and Sound</strong> all display assets in use by Danmakufu. Each has the memory location, name, full path, and number of references (IE number of objects using those in addition to manual load calls). Textures also have their dimensions listed. It is recommended to access these tabs if you have weird crashes or lag - too many references to an object may be a sign that objects aren't being deleted, and if your image dimensions are very large you may run into issues with memory. Unloading resources you no longer need is a common technique that is more relevant to full games and very long scripts, but it's something that these three tabs can help with.</p>
+	      <p><strong>Common Data</strong> is one of the most useful tabs in the Log Window, showing the current values of all Common Data in use in a script. These are grouped by Common Data Area, with the very first row (with no text) being reserved for the default Common Data Area. When debugging larger projects, this tab will prove immensely useful. Note that if your CommonData is too complex however (e.g. large 2D arrays), opening this tab can cause Danmakufu to crash or freeze.</p>
+	      <img src="tutimg/u3l31img2.png" alt="Danmakufu Config" style="max-height:320px"><br>
+	      <p>Finally, the <code>Script</code> tab only has an option to quit the current script by force. This is generally useless.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I use Danmakufu's Debug Functions?</h2>
+	      <p>Now that we've discussed the Log Window, let's talk about the three debug functions available in Danmakufu. These are <span class="tooltip" onmouseover="getFxnDocs('WriteLog', 'f_writelog_01');"><code> WriteLog()</code><span class="tooltiptext" id="f_writelog_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('RaiseError', 'f_rerror_01');"><code> RaiseError()</code><span class="tooltiptext" id="f_rerror_01"></span></span>, and <span class="tooltip" onmouseover="getFxnDocs('assert', 'f_assert_01');"><code> assert()</code><span class="tooltiptext" id="f_assert_01"></span></span>.</p>
+	      <p>All three of these allow for a string message. The difference is delivery - <code>WriteLog</code> writes to the Log Window, requiring that you have it open in order to view the output. <code>RaiseError</code> throws an error and terminates the script, allowing for only one error. And finally, <code>assert</code> allows you to check a condition and on failure, throws the error message similar to <code>RaiseError</code>. Of these, <code>assert</code> is only useful if you're writing a library for someone else to use. <code>WriteLog</code> and <code>RaiseError</code> are useful for testing if code is running or checking what a given variable's value is. However, it is worth noting that since they only take strings, you will need to typecast all of your numbers to string and will need to use <code>~</code> to concatenate everything together, resulting in some pretty aggravating logging.</p>
+	      <p>The Go-To method for casting will be <span class="tooltip" onmouseover="getFxnDocs('ToString', 'f_tostring_01');"><code> ToString()</code><span class="tooltiptext" id="f_tostring_01"></span></span>. While <span class="tooltip" onmouseover="getFxnDocs('IntToString', 'f_inttostring_01');"><code>IntToString()</code><span class="tooltiptext" id="f_inttostring_01"></span></span> also exists, it truncates decimal places and takes more time to write if you are not using a text editor with autocompletion. <span class="tooltip" onmouseover="getFxnDocs('itoa', 'f_itoa_01');"><code> itoa()</code><span class="tooltiptext" id="f_itoa_01"></span></span> is equally useless unless you are specifically testing for that functionality. The other text functions have their purposes but unless you are doing nice formatting with your numbers, they are typically not used in debugging.</p>
+	      <p>And with that, we've covered the Log Window and Danmakufu's debug functions. Of course, it is possible expand upon these and build tools to make the debug experience better, but those are beyond the immediate scope of this particular guide.</p>
+	      <br>
+            </div>
+          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l30.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to 3D Sprites and 3D Backgrounds">Unit 3 Lesson 30</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>
+      <footer id="footer">
+      </footer>
+    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs.js"></script>
+  </body>
+</html>
