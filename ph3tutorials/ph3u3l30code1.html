@@ -1,0 +1,177 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 30 Code Sample</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 30 Code Sample"      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Code">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Sept 17, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+        <ul>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
+          <li><a href="./ph3style.html" title="ph3 Style Guidelines">ph3 Style Guidelines</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
+          <li><a href="./docs.html">Function List</a></li>
+          <li><a href="./docs_standard.html">General Functions</a></li>
+          <li><a href="./docs_object.html">Object Functions</a></li>
+          <li><a href="./docs_system.html">Player Script Fxns</a></li>
+          <li><a href="./docs_system.html">Private Script Fxns</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+        </ul>
+      </div>      <div id="pagecontentwrapper_tut">
+          <div id="pagecontent_tut">	      <!--Embedded code below. Whitespace actually matters for this because it is in a pre block-->
+	      <h2 class="ph3tutorialheader" id="cp2">Background Script (Scrolling)</h2>
+	      <pre class="prettyprint linenums"><code>let bSpell = false;
+
+@Initialize {
+    SetCameraElevationAngle(15);
+    SetCameraAzimuthAngle(-90);
+
+    SetCameraPerspectiveClip(0, 4000);
+
+    TNormalBackground();
+    TSpellBackground();
+}
+
+@MainLoop {
+    let objScene = GetEnemyBossSceneObjectID();
+    if(objScene != ID_INVALID && ObjEnemyBossScene_GetInfo(objScene, INFO_IS_SPELL)) {
+        bSpell = true;
+    } else {
+        bSpell = false;
+    }
+
+    yield;
+}
+
+
+task TNormalBackground() {
+    let frameInvisible = 0;
+    let cameracount = 0;
+    let scrollspeed = 8;
+    let walldistance = 256; // Distance from path
+
+    let path1 = GetCurrentScriptDirectory ~ "img/u3l30sampleB1.png";
+    let path2 = GetCurrentScriptDirectory ~ "img/u3l30sampleB2.png";
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D); // Flooring
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetDestRect(obj1, -1024, -1024 * 4, 1024, 1024 * 4); // Output ratio is 1x4
+    ObjRender_SetAngleX(obj1, 90);
+
+    let obj2 = ObjPrim_Create(OBJ_SPRITE_3D); // Path
+    ObjRender_SetBlendType(obj2, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj2, 0.21);
+    ObjPrim_SetTexture(obj2, path2);
+    ObjSprite3D_SetDestRect(obj2, -128, -1024 * 4, 128, 1024 * 4); // Output ratio is 1x32
+    ObjRender_SetAngleX(obj2, 90);
+
+    ascent(i in 0..5) {
+        CreateWall(-walldistance, -75, 2, 512 + i*512);
+        CreateWall(walldistance, 75, 2, 512 + i*512);
+        CreateWall(-walldistance, 75, 2, 256 + i*512);
+        CreateWall(walldistance, -75, 2, 256 + i*512);
+    }
+
+    loop {
+        if(bSpell) {
+            frameInvisible++;
+            if(frameInvisible >= 60) {
+                Obj_SetVisible(obj1, false);
+                Obj_SetVisible(obj2, false);
+            }
+        } else {
+            frameInvisible = 0;
+            Obj_SetVisible(obj1, true);
+            Obj_SetVisible(obj2, true);
+        }
+
+        if (cameracount % 512 == 0) {
+            CreateWall(-walldistance, -75, 2, 0);
+            CreateWall(walldistance, 75, 2, 0);
+        }
+        if (cameracount % 512 == 256) {
+            CreateWall(-walldistance, 75, 2, 0);
+            CreateWall(walldistance, -75, 2, 0);
+        }
+
+        SetCameraAzimuthAngle(-90 + 20*sin(cameracount*0.5));
+
+        // Scroll by setting the source rects
+        ObjSprite3D_SetSourceRect(obj1, 0, 0 + cameracount*scrollspeed, 1024*8, 1024 * 32 + cameracount*scrollspeed);
+        ObjSprite3D_SetSourceRect(obj2, 0, 0 + cameracount*scrollspeed, 1024  , 1024 * 32 + cameracount*scrollspeed);
+
+        cameracount++;
+        yield;
+    }
+}
+
+task CreateWall(x, angle, movespeed, objcount) {
+    let path3 = GetCurrentScriptDirectory ~ "img/u3l30sampleB3.png";
+
+    let totallength = GetTotalWallLength(512, angle);
+
+    let obj3 = ObjPrim_Create(OBJ_SPRITE_3D); // Wall
+    ObjRender_SetBlendType(obj3, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj3, 0.21);
+    ObjPrim_SetTexture(obj3, path3);
+    ObjSprite3D_SetSourceRect(obj3, 0, 0, 1024*2, 1024);
+    ObjSprite3D_SetDestRect(obj3, -totallength/2, 0, totallength/2, totallength/2);
+
+    ObjRender_SetX(obj3, x);
+    ObjRender_SetAngleY(obj3, angle);
+    ObjRender_SetZWrite(obj3, true);
+
+    loop {
+        if(bSpell) {
+            Obj_SetVisible(obj3, false);
+        } else {
+            Obj_SetVisible(obj3, true);
+        }
+
+        ObjRender_SetZ(obj3, 4096 - objcount*movespeed);
+
+        if (objcount > 4096) {
+            Obj_Delete(obj3);
+        }
+
+        objcount += 1;
+        yield;
+    }
+}
+
+// Given the length of a line, returns the length if that segment were rotated at the specified angle and extended to meet the bounding square
+function GetTotalWallLength(seglen, angle) {
+    return seglen/max(absolute(sin(angle)), absolute(cos(angle)));
+}
+
+task TSpellBackground {
+    let alpha = 0;
+    let frame = 0;
+    loop {
+        if(bSpell) {
+            alpha += 4;
+        } else {
+            alpha = 0;
+        }
+
+        frame++;
+        yield;
+    }
+
+}
+</code></pre>
+	      <br>          </div>      </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>  </body></html>

@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Sept 12, 2019')">
+  <body onload="setupENG('Sept 17, 2019')">
     <div id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -61,9 +61,9 @@
 	          <li><a href="#sub3">Part 3: How do I use 3D Sprites in Danmakufu?</a></li>
 	          <li><a href="#sub4">Part 4: How do the 3D Coordinate System and Camera work?</a></li>
 	          <li><a href="#sub5">Part 5: How do I create static 3D Backgrounds?</a></li>
-	          <li><a href="#sub6">Part 6: How do I create scrolling 3D Backgrounds?</a></li>
-	          <li><a href="#sub7">Part 7: How do I utilize fog?</a></li>
-	          <li><a href="#quiz1">Quiz: 3D Backgrounds</a></li>
+	          <li><a href="#sub6">Part 6: How do yaw, pitch, and roll work in Danmakufu?</a></li>
+	          <li><a href="#sub7">Part 7: How do I create scrolling 3D Backgrounds?</a></li>
+	          <li><a href="#sub8">Part 8: How do I utilize fog?</a></li>
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
@@ -393,6 +393,7 @@
                   <g transform="translate(64, -64)"><path d="M 24 96 L 40 96 Z" stroke="#AA00AA" stroke-width="8px" fill="none"></path></g>
                   <g transform="translate(90.2, 0)"><path d="M 45.1 45.1 L 56.4 56.4 Z" stroke="#FF00AA" stroke-width="8px" fill="none"></path></g>
               </svg>
+	      <p>Do note that the positioning of the background panels was done haphazardly and so some of the panels may intersect with others and render over those improperly due to render order.</p>
 	      <p>Now let's add some extras in the scene. Since the camera stays in the same position, I'm only going to put up the front side of these, like the play example mentioned earlier. No point in including the walls of the houses if the camera never has a chance to see them! For now, I'll consider Aya to be a mobile building given that she can be quite persistent as she watches over your shoulder trying to extract a scoop from you. <a href="./tutimg/u3l30sample3.png">Aya</a>.</p>
 	      <div style="display: flex;"><div style="flex: 1">
 		<pre class="prettyprint linenums"><code>task MainBG{
@@ -498,20 +499,456 @@ task CreateYukkuriA1(ID, offset) {
 	      </div></div>
 	      <p>There are a few things to note here. First, the 'background' and floor were on the same render priority layer. As a result, the floor covers most of the former background from this distance and angle. When designing stages in 3D, it is important to keep this in mind as you determine what components are shown to the player and which components are cleverly hidden. In addition, various components may interact in unwanted ways - for example, you may want certain different types of object to render behind one another in a very specific way - these concepts require careful thought and consideration when designing the background from a code perspective.</p>
 	      <p>In addition, we utilize two new functions here, one of which sets the radius of the camera (the distance between the focal point of the camera and the camera itself) and one which sets the perspective clip. The default max perspective clip is something you will probably want to override when manipulating the camera radius, but again, careful tuning can allow you to cover up some unwanted components while showing the parts you do want. </p>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do yaw, pitch, and roll work in Danmakufu?</h2>
+	      <p>The last thing we will do with the Yukkuri example is cover yaw, pitch, and roll. Before we covered setting the camera focus and the elevation/azimuth, which changes the camera's location within the scene. Now we'll cover manipulating the camera itself.</p>
+		<img src="tutimg/u30-ypr.png"></img>
+	      <p>Let's cover these one by one. First, yaw. Let's say that the camera is attached to the top of a vertical pole, facing to the side. Rotating the pole rotates the camera, giving you a 360 degree view of the landscape. This rotation parallel to the ground is a change in yaw and is great for panoramic views.</p>
+	      <p>A good way to try out yaw is to change the camera yaw instead of changing the azimuth over time.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>    ...
+
+    loop{
+        SetCameraYaw(-90 + cameracount/8);
+
+        if (cameracount % 72 == 0) {
+            ascent(i in 0..12) {
+                CreateYukkuriA1(i, cameracount);
+            }
+        }
+
+        cameracount++;
+        yield;
+    }
+
+    ...</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg6.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>Note how close the Ayas are. We created the Ayas at a distance of 512. However, keep the camera's radius in mind. Before, the camera was rotating AROUND the focus at a distance of 500, but now the camera isn't pointing at the camera focus - it's keeping its position and rotating around its own axis, so it ends up staring the Ayas straight in the face. And indeed, when the camera turns to face the Ayas that were previously just 12 units behind the camera, the Ayas are <em>very close</em>.</p>
+	      <p>See the animation below.</p>
+	      <p class="danmakanvasdisc">Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
+	      <canvas id="gamecanvas_1" width="640" height="256" style="border:1px solid #DDDDDD;">
+	      </canvas>
+	      <br>
+	      <button type="button" onclick="createNewGame('gamecanvas_1', 'L30: `SetCameraAzimuthAngle()` (Left) vs `SetCameraYaw()` (Right)')">Run Danmakanvas Simulation</button>
+	      <p>In the above animation, the red bullets are the Ayas, while the blue bullet is the camera. The small green bullets show the direction the camera is facing. The white bullet in the center denotes the focus. Note that the location of the camera is not the same as in DNH, but the example should still be relevant. Bullet trails note the previous positions. Note how the visible arc for changing Azimuth differs from that of changing Yaw.</p>
+	      <p>Besides Yaw, there are also Pitch and Roll. For Roll, the easiest way to imagine it is to use the standard airplane example - if the airplane rotates around its primary axis, that's roll. Now just imagine the airplane as a camera. </p>
+		<img src="https://www.grc.nasa.gov/www/k-12/airplane/Images/rotations.gif" style="max-height:320px"></img>
+		<img src="https://media1.tenor.com/images/79dd7ce2b47b28b4df240e129e83a6f4/tenor.gif?itemid=12953391" style="max-height:320px"></img>
+	      <p>Alternatively, imagine attaching a camera to Umaru's head in the above gif. As she rolls, so does the camera.</p>
+	      <p>Roll is typically useful in tubular and symmetric backgrounds. In other cases, it's more likely to make the people playing your game want to vomit, so please use carefully. <strong>However, please note that this extends to Pitch as well. Depending on your Azimuth angle, Roll and Pitch may have their effects swapped, similar to how the horizontal axis changed back when we were working with Raiko earlier in this tutorial.</strong> In general, Pitch will rotate the camera towards the ground, then back up towards the sky.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>    ...
+
+    loop{
+        SetCameraRoll(-90 + cameracount/8);
+
+        if (cameracount % 72 == 0) {
+            ascent(i in 0..12) {
+                CreateYukkuriA1(i, cameracount);
+            }
+        }
+
+        cameracount++;
+        yield;
+    }
+
+    ...</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg7.png" style="max-height:320px"></img>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>    ...
+
+    loop{
+        SetCameraPitch(-90 + cameracount/8);
+
+        if (cameracount % 72 == 0) {
+            ascent(i in 0..12) {
+                CreateYukkuriA1(i, cameracount);
+            }
+        }
+
+        cameracount++;
+        yield;
+    }
+
+    ...</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg8.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>As usual, there's no better teacher than experience, so try the above substitutions and feel free to experiment with the scene.</p>
 	      <p>That's all for the Yukkuris. Now back to a more serious example.</p>
-	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I create scrolling 3D Backgrounds?</h2>
-	      <p>To close off this guide we will cover scrolling 3D backgrounds, yaw pitch and roll, and fog.</p>
-	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I utilize fog?</h2>
-	      <p>TODO</p>
-	      <p></p>
-<pre class="prettyprint linenums"><code></code></pre>
-	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I create scrolling 3D Backgrounds?</h2>
+	      <p>To close off this guide we will cover scrolling 3D backgrounds and fog. Here we will build the kind of background script that you will actually be able to use, and will therefore work off of the default background script. In addition, we will be utilizing free graphics from the <a target="_blank" href="https://renderman.pixar.com/pixar-one-twenty-eight">Pixar 128</a> texture library, which provides a large number of beautiful 1024x1024 graphics. For this tutorial, I will only assume that you have converted these to a jpg from a tif.</p>
+	      <p>Let's start by copying over the default Danmakufu Ice Mountain background and removing the Ice Mountain from it. Note that I have also set the Azimuth to -90 and am no longer setting the camera focus, camera radius, and fog - fog will not be used in this example, while the others are not needed at the moment.</p>
+		<pre class="prettyprint linenums"><code>let bSpell = false;
+
+@Initialize {
+    SetCameraElevationAngle(35);
+    SetCameraAzimuthAngle(-90);
+
+    TNormalBackground();
+    TSpellBackground();
+}
+
+@MainLoop {
+    let objScene = GetEnemyBossSceneObjectID();
+    if(objScene != ID_INVALID && ObjEnemyBossScene_GetInfo(objScene, INFO_IS_SPELL)) {
+        bSpell = true;
+    } else {
+        bSpell = false;
+    }
+    
+    yield;
+}
+
+
+task TNormalBackground() {
+    let frameInvisible = 0;
+    let cameracount = 0;
+    loop {
+        if(bSpell) {
+            frameInvisible++;
+            if(frameInvisible >= 60) {
+                //Obj_SetVisible(obj, false);
+            }
+        } else {
+            frameInvisible = 0;
+            //Obj_SetVisible(obj, true);
+        }
+
+        cameracount++;
+        yield;
+    }
+}
+
+task TSpellBackground {
+    let alpha = 0;
+    let frame = 0;
+    loop {
+        if(bSpell) {
+            alpha += 4;
+        } else {
+            alpha = 0;
+        }
+
+        frame++;
+        yield;
+    }
+
+}</code></pre>
+	      <p>For this guide we will only fill out <code>TNormalBackground</code>, as this is the stage background. Spell backgrounds are typically generated by standard 2D sprites and are not the focus of this guide.</p>
+	      <p>Now, a 3D scrolling stage background. We will want some kind of ground, maybe some trees or the like, and a background at the far end. Remember the play analogy from before - there's a set of static objects, and the camera is looking at the set.</p>
+	      <p>Let's begin with the flooring. We'll lay down some flooring and scroll it. How to scroll it? Recall <a href="ph3u2l22.html#sub5">Lesson 22</a>. We'll use the same strategy here. For this part I will use a large flat background in conjunction with another texture for a path in the center. I'm using the Dirt and Gravel, and Lawn Grass textures for this guide. Note that I've set the Elevation Angle to 30.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task TNormalBackground() {
+    let frameInvisible = 0;
+    let cameracount = 0;
+    let scrollspeed = 8;
+
+    let path1 = GetCurrentScriptDirectory ~ "img/u3l30sampleB1.png";
+    let path2 = GetCurrentScriptDirectory ~ "img/u3l30sampleB2.png";
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D); // Flooring
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetDestRect(obj1, -1024, -1024 * 2, 1024, 1024 * 2); // Output ratio is 1x2
+    ObjRender_SetAngleX(obj1, 90);
+
+    let obj2 = ObjPrim_Create(OBJ_SPRITE_3D); // Path
+    ObjRender_SetBlendType(obj2, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj2, 0.21);
+    ObjPrim_SetTexture(obj2, path2);
+    ObjSprite3D_SetDestRect(obj2, -128, -1024 * 2, 128, 1024 * 2); // Output ratio is 1x16
+    ObjRender_SetAngleX(obj2, 90);
+
+    loop {
+        if(bSpell) {
+            frameInvisible++;
+            if(frameInvisible >= 60) {
+                Obj_SetVisible(obj1, false);
+                Obj_SetVisible(obj2, false);
+            }
+        } else {
+            frameInvisible = 0;
+            Obj_SetVisible(obj1, true);
+            Obj_SetVisible(obj2, true);
+        }
+
+        // Scroll by setting the source rects
+        ObjSprite3D_SetSourceRect(obj1, 0, 0 + cameracount*scrollspeed, 1024*8, 1024 * 16 + cameracount*scrollspeed);
+        ObjSprite3D_SetSourceRect(obj2, 0, 0 + cameracount*scrollspeed, 1024  , 1024 * 16 + cameracount*scrollspeed);
+
+        cameracount++;
+        yield;
+    }
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg9.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>There are some things to note. First, the elevation angle makes a big difference in how much of the background is visible. You could do with a birds-eye view and not need a static background on the horizon, or you could look forwards, requiring something in the background. In addition, the dest rect controls <em>where</em> the background renders, while the source rect controls <em>scale</em>. Feel free to scale up or scale down your graphics by using the tiling. And here's the key part - tiling. You will want seamless textures for these kinds of backgrounds - textures where if you were to tile the graphics together, you wouldn't be able to tell where the individual components were.</p>
+	      <p>In the example we're using a scrolling speed to control how fast the background scrolls. Just keep the number reasonable! There is a chance that the numbers could get very high and overflow, but as long as the stage length and scrolling speed are relatively short, there won't be a need to use % (mod) to keep those numbers under control.</p>
+	      <p>From here, there are a number of things that we can do - cloud shadows, trees, etc. Typically you would use meshes for any complex constructs. For now, we'll use the Shale rock graphic to create some walls. In this case, we will also angle them by 15 degrees. As a result, we will need to do some math to determine how large they should be.</p>
+	      <p>In this case, we'll start out with a base of 512, where the objects are 512 units long when adjacent. We will be spawning them as 3D sprites every 512/scrollspeed frames to provide this illusion.</p>
+	      <p>However, once we rotate them, we have two issues - first, render order. They render over one another based on render order, which causes problems. Second, once rotated, to connect at the edges they need to be more than 512 units wide. And that's where good 'ol math comes in. Imagine a square surrounding the wall unit. The circle below shows the red segment when rotated, while the square represents what we actually want.</p>
+              <svg width="200" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="400" style="fill:#333333"></rect>
+
+                  <text x="8" y="392" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE - Inscribed as-is</text>
+
+		  <g transform="translate(0, 32)">
+                  <path d="M 32 32 H 160 V 160 H 32 Z" stroke="#FFFFFF" stroke-width="1px" fill="none"></path>
+                  <circle cx="96" cy="96" r="64" stroke="#FFFFFF" stroke-width="1px" fill="none"></circle>
+		  <path d="M 96 32 V 160 Z" stroke="#FF4444" stroke-width="2px" fill="none"></path>
+		  </g>
+		  <g transform="translate(0, 160)">
+                  <path d="M 32 32 H 160 V 160 H 32 Z" stroke="#FFFFFF" stroke-width="1px" fill="none"></path>
+                  <circle cx="96" cy="96" r="64" stroke="#FFFFFF" stroke-width="1px" fill="none"></circle>
+		  <path d="M 96 32 V 160 Z" stroke="#FF4444" stroke-width="2px" fill="none"></path>
+		  </g>
+              </svg>
+              <svg width="200" height="400" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                  <rect width="200" height="400" style="fill:#333333"></rect>
+
+                  <text x="8" y="392" stroke="none" fill="#FFFFFF" text-anchor="start" font-size="12px">EXAMPLE - Rotated as-is</text>
+
+		  <g transform="translate(0, 32)">
+                  <path d="M 32 32 H 160 V 160 H 32 Z" stroke="#FFFFFF" stroke-width="1px" fill="none"></path>
+                  <circle cx="96" cy="96" r="64" stroke="#FFFFFF" stroke-width="1px" fill="none"></circle>
+		  <path d="M 96 32 V 160 Z" stroke="#FF4444" stroke-width="2px" fill="none" transform="rotate(45, 96 96)"></path>
+		  </g>
+		  <g transform="translate(0, 160)">
+                  <path d="M 32 32 H 160 V 160 H 32 Z" stroke="#FFFFFF" stroke-width="1px" fill="none"></path>
+                  <circle cx="96" cy="96" r="64" stroke="#FFFFFF" stroke-width="1px" fill="none"></circle>
+		  <path d="M 96 32 V 160 Z" stroke="#FF4444" stroke-width="2px" fill="none" transform="rotate(-45, 96 96)"></path>
+		  </g>
+              </svg>
+	      <p>We want the extended distance from the circle to the square. So what is this distance? Well... the formula is <code>diameter/max(|sin(angle)|, |cos(angle)|)</code>.</p>
+	      <p class="danmakanvasdisc">Danmakanvas is a Javascript Danmaku simulation made by Sparen. It does NOT work the same way as Danmakufu. Please be advised that the speed at which the simulation runs is therefore not equivalent to the speed that the code would run in Danmakufu.</p>
+	      <canvas id="gamecanvas_2" width="256" height="256" style="border:1px solid #DDDDDD;">
+	      </canvas>
+	      <br>
+	      <button type="button" onclick="createNewGame('gamecanvas_2', '')">Run Danmakanvas Simulation</button>
+	      <div style="display: flex;"><div style="flex: 1">
+		<pre class="prettyprint linenums"><code>task TNormalBackground() {
+    let frameInvisible = 0;
+    let cameracount = 0;
+    let scrollspeed = 8;
+    let walldistance = 256; // Distance from path
+
+    let path1 = GetCurrentScriptDirectory ~ "img/u3l30sampleB1.png";
+    let path2 = GetCurrentScriptDirectory ~ "img/u3l30sampleB2.png";
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D); // Flooring
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetDestRect(obj1, -1024, -1024 * 2, 1024, 1024 * 2); // Output ratio is 1x2
+    ObjRender_SetAngleX(obj1, 90);
+
+    let obj2 = ObjPrim_Create(OBJ_SPRITE_3D); // Path
+    ObjRender_SetBlendType(obj2, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj2, 0.21);
+    ObjPrim_SetTexture(obj2, path2);
+    ObjSprite3D_SetDestRect(obj2, -128, -1024 * 2, 128, 1024 * 2); // Output ratio is 1x16
+    ObjRender_SetAngleX(obj2, 90);
+
+    loop {
+        if(bSpell) {
+            frameInvisible++;
+            if(frameInvisible >= 60) {
+                Obj_SetVisible(obj1, false);
+                Obj_SetVisible(obj2, false);
+            }
+        } else {
+            frameInvisible = 0;
+            Obj_SetVisible(obj1, true);
+            Obj_SetVisible(obj2, true);
+        }
+
+        if (cameracount % 512 == 0) {
+            CreateWall(-walldistance, -75, 2);
+            CreateWall(walldistance, 75, 2);
+        }
+        if (cameracount % 512 == 256) {
+            CreateWall(-walldistance, 75, 2);
+            CreateWall(walldistance, -75, 2);
+        }
+
+        // Scroll by setting the source rects
+        ObjSprite3D_SetSourceRect(obj1, 0, 0 + cameracount*scrollspeed, 1024*8, 1024 * 16 + cameracount*scrollspeed);
+        ObjSprite3D_SetSourceRect(obj2, 0, 0 + cameracount*scrollspeed, 1024  , 1024 * 16 + cameracount*scrollspeed);
+
+        cameracount++;
+        yield;
+    }
+}
+
+task CreateWall(x, angle, movespeed) {
+    let path3 = GetCurrentScriptDirectory ~ "img/u3l30sampleB3.png";
+    let objcount = 0;
+
+    let totallength = GetTotalWallLength(512, angle);
+
+    let obj3 = ObjPrim_Create(OBJ_SPRITE_3D); // Wall
+    ObjRender_SetBlendType(obj3, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj3, 0.21);
+    ObjPrim_SetTexture(obj3, path3);
+    ObjSprite3D_SetSourceRect(obj3, 0, 0, 1024*2, 1024);
+    ObjSprite3D_SetDestRect(obj3, -totallength/2, 0, totallength/2, totallength/2);
+
+    ObjRender_SetX(obj3, x);
+    ObjRender_SetAngleY(obj3, angle);
+    ObjRender_SetZWrite(obj3, true);
+
+    loop {
+        if(bSpell) {
+            Obj_SetVisible(obj3, false);
+        } else {
+            Obj_SetVisible(obj3, true);
+        }
+
+        ObjRender_SetZ(obj3, 2048 - objcount*movespeed);
+
+        if (objcount > 2048) {
+            Obj_Delete(obj3);
+        }
+
+        objcount += 1;
+        yield;
+    }
+}
+
+// Given the length of a line, returns the length if that segment were rotated at the specified angle and extended to meet the bounding square
+function GetTotalWallLength(seglen, angle) {
+    return seglen/max(absolute(sin(angle)), absolute(cos(angle)));
+}</code></pre>
+		</div><div style="flex: 1;text-align:center">
+		<img src="tutimg/u30-sstg10.png" style="max-height:320px"></img>
+	      </div></div>
+	      <p>Note that I have set the elevation angle to 15 in order to better demonstrate the effect we have here, and it will remain that way for the rest of this script.</p>
+	      <p>Here we create a pair of walls every 256 frames. Each wall calculates its length based on the rules we mentioned above. We're performing scaling here as well, with the 2:1 ratio being maintained. Note that we use <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetZWrite', 'f_orszw_01');"><code>ObjRender_SetZWrite()</code><span class="tooltiptext" id="f_orszw_01"></span></span> - this function sets things up so that newer walls don't render in front of older ones.</p>
+	      <p>For this example, we use the Z coordinate to position the walls. We're initially positioning them 2048 units away in the Z direction, and they move closer to the camera with a specified movement speed. Note that the movement speed and spawn rate don't actually line up with the movement speed of the ground - getting the speeds just right is very difficult since we're using different methods for handling the 3D sprites.</p>
+	      <p>Finally, we delete the objects after a certain amount of time has passed. The number used here is fairly arbitrary - it depends on how you use the camera.</p>
+	      <p>Now, let's add the final touches to this stage background.</p>
+	      <p>Our final step will consist of two parts: Side-sweep via Azimuth manipulation, and Perspective Clip modification.</p>
+	      <p>First, side-sweeping. In the prior example, we change Azimuth over time. This time we will set the Azimuth based off of the sine of the counter. Note that we will use our initial value of -90 as our pivot point. I will use <code>SetCameraAzimuthAngle(-90 + 20*sin(cameracount*0.5))</code> for now - feel free to change the values and see what works well.</p>
+	      <p>Next, Perspective Clip. In this case, we will set the max to 4000, allowing us to see a bit farther. However, we will need to extend the background once more, and this also brings up another problem - the walls currently begin spawning at the start of the stage. It's preferable to have the player either enter the area or already be surrounded by walls. We will attempt the latter. For this, we will allow greater customization with the parameters provided to the walls.</p>
+		<pre class="prettyprint linenums"><code>task TNormalBackground() {
+    let frameInvisible = 0;
+    let cameracount = 0;
+    let scrollspeed = 8;
+    let walldistance = 256; // Distance from path
+
+    let path1 = GetCurrentScriptDirectory ~ "img/u3l30sampleB1.png";
+    let path2 = GetCurrentScriptDirectory ~ "img/u3l30sampleB2.png";
+
+    let obj1 = ObjPrim_Create(OBJ_SPRITE_3D); // Flooring
+    ObjRender_SetBlendType(obj1, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj1, 0.21);
+    ObjPrim_SetTexture(obj1, path1);
+    ObjSprite3D_SetDestRect(obj1, -1024, -1024 * 4, 1024, 1024 * 4); // Output ratio is 1x4
+    ObjRender_SetAngleX(obj1, 90);
+
+    let obj2 = ObjPrim_Create(OBJ_SPRITE_3D); // Path
+    ObjRender_SetBlendType(obj2, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj2, 0.21);
+    ObjPrim_SetTexture(obj2, path2);
+    ObjSprite3D_SetDestRect(obj2, -128, -1024 * 4, 128, 1024 * 4); // Output ratio is 1x32
+    ObjRender_SetAngleX(obj2, 90);
+
+    ascent(i in 0..5) {
+        CreateWall(-walldistance, -75, 2, 512 + i*512);
+        CreateWall(walldistance, 75, 2, 512 + i*512);
+        CreateWall(-walldistance, 75, 2, 256 + i*512);
+        CreateWall(walldistance, -75, 2, 256 + i*512);
+    }
+
+    loop {
+        if(bSpell) {
+            frameInvisible++;
+            if(frameInvisible >= 60) {
+                Obj_SetVisible(obj1, false);
+                Obj_SetVisible(obj2, false);
+            }
+        } else {
+            frameInvisible = 0;
+            Obj_SetVisible(obj1, true);
+            Obj_SetVisible(obj2, true);
+        }
+
+        if (cameracount % 512 == 0) {
+            CreateWall(-walldistance, -75, 2, 0);
+            CreateWall(walldistance, 75, 2, 0);
+        }
+        if (cameracount % 512 == 256) {
+            CreateWall(-walldistance, 75, 2, 0);
+            CreateWall(walldistance, -75, 2, 0);
+        }
+
+        SetCameraAzimuthAngle(-90 + 20*sin(cameracount*0.5));
+
+        // Scroll by setting the source rects
+        ObjSprite3D_SetSourceRect(obj1, 0, 0 + cameracount*scrollspeed, 1024*8, 1024 * 32 + cameracount*scrollspeed);
+        ObjSprite3D_SetSourceRect(obj2, 0, 0 + cameracount*scrollspeed, 1024  , 1024 * 32 + cameracount*scrollspeed);
+
+        cameracount++;
+        yield;
+    }
+}
+
+task CreateWall(x, angle, movespeed, objcount) {
+    let path3 = GetCurrentScriptDirectory ~ "img/u3l30sampleB3.png";
+
+    let totallength = GetTotalWallLength(512, angle);
+
+    let obj3 = ObjPrim_Create(OBJ_SPRITE_3D); // Wall
+    ObjRender_SetBlendType(obj3, BLEND_ALPHA);
+    Obj_SetRenderPriority(obj3, 0.21);
+    ObjPrim_SetTexture(obj3, path3);
+    ObjSprite3D_SetSourceRect(obj3, 0, 0, 1024*2, 1024);
+    ObjSprite3D_SetDestRect(obj3, -totallength/2, 0, totallength/2, totallength/2);
+
+    ObjRender_SetX(obj3, x);
+    ObjRender_SetAngleY(obj3, angle);
+    ObjRender_SetZWrite(obj3, true);
+
+    loop {
+        if(bSpell) {
+            Obj_SetVisible(obj3, false);
+        } else {
+            Obj_SetVisible(obj3, true);
+        }
+
+        ObjRender_SetZ(obj3, 4096 - objcount*movespeed);
+
+        if (objcount > 4096) {
+            Obj_Delete(obj3);
+        }
+
+        objcount += 1;
+        yield;
+    }
+}</code></pre>
+	      <p>As seen above, we've manipulated things to simulate walls spawning like usual, but with their counters pre-incremented.</p>
+	      <p>With that, we've created our background. The complete script can be found <a href="./ph3u3l30code1.html">here</a>. Note that it suffers from a few rendering issues with render order.</p>
+	      <h2 class="ph3tutorialheader" id="sub8">Part 8: How do I utilize fog?</h2>
+	      <p>And finally, fog. If we were to apply fog with <span class="tooltip" onmouseover="getFxnDocs('SetFogParam', 'f_setfogp_01');"><code>SetFogParam()</code><span class="tooltiptext" id="f_setfogp_01"></span></span>, we spawn radial fog around the camera starting from the provided start parameter and moving outwards to the provided end parameter. Note that for our current background, this function will backfire spectacularly - this is because our floor is a single object. (NOTE: Fact check required)</p>
+	      <p>In stages using meshes and a variety of objects, the built-in fog effect may indeed prove useful, and it may have some interesting uses...</p>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
-	          <li></li>
+	          <li>3D sprites utilize the 3D camera and coordinate system</li>
+	          <li>Azimuth and Elevation angles control the camera position relative to the focus/focal point</li>
+	          <li>Yaw, Pitch, and Roll control the camera's rotation around its own axes</li>
+	          <li>3D backgrounds can be generated using 3D sprites placed within the scene</li>
+	          <li>Depending on the Azimuth angle set, axes and rotations around axes such as those of Pitch and Roll may behave differently</li>
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>3D Camera images and content thanks to Drake on MotK. <a target="_blank" href="https://www.shrinemaiden.org/forum/index.php/topic,16584.msg1190637.html#msg1190637">Source (Yaw/Pitch/Roll, Elevation/Azimuth)</a></p>
+	      <p>I'd like to thank Dr. Misha Kazhdan for giving me enough experience with OpenGL to not puke when I was haphazardly experimenting with Danmakufu's camera during the production of this guide</p>
+	      <p>I'd like to thank the creator of the Yukkuri for blessing me with the inspiration needed to decide that making a Yukkuri background was a good idea. Also, thanks to the Bullet Hell Engines server for showering me with enough Discord Nitro to actually write this thing to completion and draw the Yukkuris out of the recesses of my brain</p>
 	      <br>
             </div>
           </div>
@@ -531,6 +968,8 @@ task CreateYukkuriA1(ID, offset) {
     <script type="text/javascript" src="javascript/QReviewP.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="javascript/Danmakanvas/GameEngine2.1.js"></script>
+    <script type="text/javascript" src="javascript/Danmakanvas/PluralModule_L30.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
     <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
