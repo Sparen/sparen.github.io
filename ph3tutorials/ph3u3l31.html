@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Sept 17, 2019')">
+  <body onload="setupENG('Sept 18, 2019')">
     <div id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -48,7 +48,7 @@
 	        <ul>
 	          <li><a href="./ph3u3l30.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to 3D Sprites and 3D Backgrounds">Unit 3 Lesson 30</a></li>
 	          <li><span>Navigation Bar</span></li>
-	          <li><span>---</span></li>
+	          <li><a href="./ph3u3l32.html" title="Sparen's Danmakufu ph3 Tutorials - Using Virtual Keys and Mouse Input">Unit 3 Lesson 32</a></li>
 	        </ul>
               </div>
 	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 31 - Utilizing the Log Window and Debug Functions</h1>
@@ -80,6 +80,16 @@
 	      <p>All three of these allow for a string message. The difference is delivery - <code>WriteLog</code> writes to the Log Window, requiring that you have it open in order to view the output. <code>RaiseError</code> throws an error and terminates the script, allowing for only one error. And finally, <code>assert</code> allows you to check a condition and on failure, throws the error message similar to <code>RaiseError</code>. Of these, <code>assert</code> is only useful if you're writing a library for someone else to use. <code>WriteLog</code> and <code>RaiseError</code> are useful for testing if code is running or checking what a given variable's value is. However, it is worth noting that since they only take strings, you will need to typecast all of your numbers to string and will need to use <code>~</code> to concatenate everything together, resulting in some pretty aggravating logging.</p>
 	      <p>The Go-To method for casting will be <span class="tooltip" onmouseover="getFxnDocs('ToString', 'f_tostring_01');"><code> ToString()</code><span class="tooltiptext" id="f_tostring_01"></span></span>. While <span class="tooltip" onmouseover="getFxnDocs('IntToString', 'f_inttostring_01');"><code>IntToString()</code><span class="tooltiptext" id="f_inttostring_01"></span></span> also exists, it truncates decimal places and takes more time to write if you are not using a text editor with autocompletion. <span class="tooltip" onmouseover="getFxnDocs('itoa', 'f_itoa_01');"><code> itoa()</code><span class="tooltiptext" id="f_itoa_01"></span></span> is equally useless unless you are specifically testing for that functionality. The other text functions have their purposes but unless you are doing nice formatting with your numbers, they are typically not used in debugging.</p>
 	      <p>And with that, we've covered the Log Window and Danmakufu's debug functions. Of course, it is possible expand upon these and build tools to make the debug experience better, but those are beyond the immediate scope of this particular guide.</p>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li>The Log Window contains information on current task and object counts</li>
+	          <li>The Log Window contains information on asset paths and references</li>
+	          <li>The Log Window lists current values of common data including area common data</li>
+	          <li><code>WriteLog</code> and <code>RaiseError</code> can be used for debugging</li>
+	          <li><code>ToString</code> can be used to convert integers and other data types to strings</li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
 	      <br>
             </div>
           </div>
@@ -87,7 +97,7 @@
 	    <ul>
 	      <li><a href="./ph3u3l30.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to 3D Sprites and 3D Backgrounds">Unit 3 Lesson 30</a></li>
 	      <li><span>Navigation Bar</span></li>
-	      <li><span>---</span></li>
+	      <li><a href="./ph3u3l32.html" title="Sparen's Danmakufu ph3 Tutorials - Using Virtual Keys and Mouse Input">Unit 3 Lesson 32</a></li>
 	    </ul>
 	    <br>
           </div>

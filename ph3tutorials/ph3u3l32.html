@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 32</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 32 - Using Virtual Keys and Mouse Input. A guide on keys, virtual keys, and replay-compatible input functions in Danmakufu ph3."
+      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Boss, Log, Window, assert, Debug, Functions">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </head>
+  <body onload="setupENG('Sept 18, 2019')">
+    <div id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div class="docsmenubar">
+        <ul>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
+          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
+          <li><a href="./ph3style.html" title="ph3 Style Guidelines">ph3 Style Guidelines</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
+          <li><a href="./docs.html">Function List</a></li>
+          <li><a href="./docs_standard.html">General Functions</a></li>
+          <li><a href="./docs_object.html">Object Functions</a></li>
+          <li><a href="./docs_system.html">Player Script Fxns</a></li>
+          <li><a href="./docs_system.html">Private Script Fxns</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+	  <li><a href="./docs_standard.html#sub8">Input Functions</a></li>
+        </ul>
+      </div>
+      <div id="pagecontentwrapper_tut">
+          <div id="pagecontent_tut">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ph3u3l31.html" title="Sparen's Danmakufu ph3 Tutorials - Utilizing the Log Window and Debug Functions">Unit 3 Lesson 31</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>
+	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 32 - Using Virtual Keys and Mouse Input</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are Keys and Key States?</a></li>
+	          <li><a href="#sub3">Part 3: What are Virtual Keys and why are they useful?</a></li>
+	          <li><a href="#sub4">Part 4: What are Danmakufu's Key Input Functions?</a></li>
+	          <li><a href="#sub5">Part 5: How do I use the mouse position in Danmakufu?</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
+	      <p>In this lesson, we will cover Danmakufu's <a href="./docs_standard.html#sub8">Input Functions</a>, including key states, key and virtual key IDs, and mouse-based functions. This lesson expects that the reader has an understanding of what replays are and is familiar with the Danmakufu playing field. This lesson expects that the reader is aware of Danmakufu's built-in configuration, as we will be discussing virtual keys and virtual key mapping.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are Keys and Key States?</h2>
+	      <p>Keys are pretty much any type of on/off input - keyboard presses, controller buttons, etc. In Danmakufu, constants exist for all standard Windows keyboard keys (see the Input Functions).</p>
+	      <p>There are four states any key can be in at any time - <code>KEY_FREE</code>, <code>KEY_PUSH</code>, <code>KEY_HOLD</code>, <code>KEY_PULL</code>. A key will only be one one state at a time.</p>
+	      <p><code>KEY_FREE</code> is the basic state where a key is not being pressed.</p>
+	      <p>The next three states are in order when you press a key. First, <code>KEY_PUSH</code> occurs when the player presses downwards on the key. Once the key has been pressed, the key's state is <code>KEY_HOLD</code>, which lasts as long as the key is pressed. Once the key is released, the key's state turns to <code>KEY_PULL</code> briefly before returning to <code>KEY_FREE</code>.</p>
+	      <p>In the next lesson, where we will build a dialogue system, we will go further in depth with regards to how these four states are used and how to choose which one to utilize for a given objective.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What are Virtual Keys and why are they useful?</h2>
+	      <p>Now we've discussed regular keys and key states. However, we've been mentioning Virtual Keys for a while. What are these, and why use them?</p>
+	      <p>There are three key differences between Virtual Keys and regular keys. First, Virtual Keys do not correspond to a physical key like regular keys - instead, they are an abstraction that allows *any* key to be a specified virtual key. Second, they can correspond to any number of keys, and multiple virtual keys can correspond to a single physical key. And third, Virtual Key presses are saved to replays, while regular key presses are not.</p>
+	      <img src="tutimg/u3l32img1.png" alt="Key Config" style="max-height:320px"><br>
+	      <p>Above is a screenshot of the Danmakufu Config Key tab. For each action, there are two associated keys that are assigned to the virtual key. Virtual keys exist for the four movement directions (<code>VK_LEFT</code>, <code>VK_RIGHT</code>, <code>VK_UP</code>, and <code>VK_DOWN</code>), menu operations (<code>VK_OK</code>, <code>VK_CANCEL</code>), gameplay (<code>VK_SHOT</code>, <code>VK_BOMB</code>, <code>VK_SPELL</code>, <code>VK_SLOWMOVE</code>), user defined actions (<code>VK_USER1</code>, <code>VK_USER2</code>), and for pause (<code>VK_PAUSE</code>).</p>
+	      <p>Note that by default, the X key is used for both <code>VK_BOMB</code>/<code>VK_SPELL</code> (which are just aliases) and <code>VK_CANCEL</code> - something similar happens for the Z key. As you can see, multiple virtual keys can access the same key press. However, the power here is that you could technically map cancel to be a different set of physical keys than spell/bomb, or remap the arrow keys to WASD. </p>
+	      <p>However, to highlight the importance of virtual keys, let's assume for a moment that we didn't have them.</p>
+	      <p>Let's say, for sake of example, that we've been working on a platformer. It uses space for jump, WASD for movement, K for attacking, and M for opening a menu. The developers have hardcoded every single key in the location where it is used. Let's say that enemies behave differently when the player is attacking and that there are 20 different kinds of enemies.</p>
+	      <p>Now let's say that players find that they're hitting K when they want to hit M instead. They want to be able to use a different key for attacking - for example, P. Without virtual keys, the developers need to find all occurrences where the K key was used and switch to P.</p>
+	      <p>Alternatively, let's say that someone wants to play on a currently unsupported controller. To access the controller inputs, the devs need to import a library and add controller buttons to every statement a la <code>Input.GetKeyDown(KeyCode.M) | *insert custom controller key access*</code>. Now let's say that we have 20 different controllers to support. Suddenly, adding a new key press handler becomes a mess.</p>
+	      <p>Virtual Keys to the rescue! In the game logic, you can just check if the virtual key has been pressed. It doesn't matter which keys are mapped to the virtual key, it doesn't matter which controller buttons are mapped to the virtual key, and it doesn't matter what the player has chosen to map the virtual keys to - the game logic doesn't need to know, and this makes the code much simpler.</p>
+	      <p>But now back to Danmakufu. How do you access key states in Danmakufu?</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: What are Danmakufu's Key Input Functions?</h2>
+	      <p>In this section, we will cover Danmakufu's key-based input functions.</p>
+	      <p><span class="tooltip" onmouseover="getFxnDocs('GetKeyState', 'f_gks_01');"><code>GetKeyState()</code><span class="tooltiptext" id="f_gks_01"></span></span> and <span class="tooltip" onmouseover="getFxnDocs('GetVirtualKeyState', 'f_gvks_01');"><code>GetVirtualKeyState()</code><span class="tooltiptext" id="f_gvks_01"></span></span> behave as you would expect. Provided with a key or virtual key, they will return the key state - <code>KEY_FREE</code>, <code>KEY_HOLD</code>, etc. </p>
+	      <p>Next, <span class="tooltip" onmouseover="getFxnDocs('SetVirtualKeyState', 'f_svks_01');"><code>SetVirtualKeyState()</code><span class="tooltiptext" id="f_svks_01"></span></span>. This function allows you to set the state of the specified virtual key for the current frame (after which it will return to its actual state). This function may have niche uses depending on the scenario.</p>
+	      <p>To add a virtual key, use <span class="tooltip" onmouseover="getFxnDocs('AddVirtualKey', 'f_avk_01');"><code>AddVirtualKey()</code><span class="tooltiptext" id="f_avk_01"></span></span>. This takes three parameters - the name of your new key as a string, the key const for the target key, and the keypad const for the target keypad key. If you don't want to use the keypad, use <code>KEY_INVALID</code>. The main quirk with this function is that if you use it with a key already mapped in Danmakufu's config, it will <em>replace</em> that definition for the remainder of that script. You will need to re-add the definition of the original key in order to maintain its usage for both virtual keys. <strong>We recommend only using <code>AddVirtualKey</code> to add additional functionality that is unrelated to core gameplay, such as in menus or in custom setups. Danmakufu provides two user virtual keys for use in your scripts, so please make use of those two first</strong>.</p>
+	      <p>Finally, we have <span class="tooltip" onmouseover="getFxnDocs('AddReplayTargetVirtualKey', 'f_artvk_01');"><code>AddReplayTargetVirtualKey()</code><span class="tooltiptext" id="f_artvk_01"></span></span>, which, when used with an existing key ID, registers the virtual key to replays. This is used for newly created virtual keys that need to be tracked in replays.</p>
+	      <p>As an additional note, Danmakufu provides <span class="tooltip" onmouseover="getFxnDocs('SetSkipModeKey', 'f_ssmk_01');"><code>SetSkipModeKey()</code><span class="tooltiptext" id="f_ssmk_01"></span></span>. This function is used to either remap the fast-forward/skip mode key (which notably is NOT saved in replays) or to disable it. In most games, it is customary to enable it only in replays. How you handle this is up to you.</p>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I use the mouse position in Danmakufu?</h2>
+	      <p>We'll close off this guide by talking about the mouse. The mouse has three buttons - <code>MOUSE_LEFT</code>, <code>MOUSE_MIDDLE</code>, and <code>MOUSE_RIGHT</code>. <span class="tooltip" onmouseover="getFxnDocs('GetMouseState', 'f_gms_01');"><code> GetMouseState()</code><span class="tooltiptext" id="f_gms_01"></span></span> behaves similarly to <code>GetKeyState</code> but works for mouse buttons.</p>
+	      <p>Besides these, there are three other functions that return information from the mouse. These are <span class="tooltip" onmouseover="getFxnDocs('GetMouseX', 'f_gmx_01');"><code> GetMouseX()</code><span class="tooltiptext" id="f_gmx_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('GetMouseY', 'f_gmy_01');"><code> GetMouseY()</code><span class="tooltiptext" id="f_gmy_01"></span></span>, and <span class="tooltip" onmouseover="getFxnDocs('GetMouseMoveZ', 'f_gmmz_01');"><code> GetMouseMoveZ()</code><span class="tooltiptext" id="f_gmmz_01"></span></span>. The first two do what you'd expect and use the top left of the Danmakufu window as their (0, 0) origin. The last one uses the middle mouse scroller and notes change in position.</p>
+	      <p>While it may be nice to use the mouse, there are a few things to note. First, <strong>replays do not support logging mouse inputs</strong>. Second, middle mouse rollers don't really exist on all computers anymore, so it is not recommended that you use them.</p>
+	      <p>And with that, we've covered virtual keys and input functions. In the next lesson, we'll take everything we've learned with 2D sprites, text, control statements, virtual key inputs to build a dialogue library.</p>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li>Virtual Keys are an abstraction for physical keys that allow for remapping and multiple mapping</li>
+	          <li>Virtual Key states can be saved to replays while regular key states cannot</li>
+	          <li>Mouse functions are not saved to replays</li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>
+            </div>
+          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l31.html" title="Sparen's Danmakufu ph3 Tutorials - Utilizing the Log Window and Debug Functions">Unit 3 Lesson 31</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>
+      <footer id="footer">
+      </footer>
+    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <script type="text/javascript" src="javascript/GenericQuiz.js"></script>
+    <script type="text/javascript" src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_standard.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_object.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs_system.js"></script>
+    <script type="text/javascript" src="javascript/dnhdocs.js"></script>
+  </body>
+</html>
