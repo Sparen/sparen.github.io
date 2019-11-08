@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>Sparen's Danmaku Design Studio - Guide 0</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmaku Design Studio - Guide 0 - Introduction to Danmaku Theory. A guide covering the basics of Danmaku Theory as well as necessary information for further guides."      name="description">
+    <meta name="keywords" content="Sparen, Danmaku, Design, Theory, Studio, Introduction">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Nov 07, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+      <div id="menubar">
+        <ul>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
+          <li><a href="./danmakudesign.html" title="Sparen's Danmaku Design Studio">Danmaku Design</a></li>
+        </ul>
+      </div>      <div id="pagecontentwrapper">
+          <div id="pagecontent">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><span>---</span></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>	      <h1 class="toplevelheadera">Sparen's Danmaku Design Studio - Guide 0 - Introduction to Danmaku Theory</h1>	      <p>Welcome to the first Danmaku Theory Guide! In this guide, I will describe this project in further depth and will describe notation, terminology, and more.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_2" width="640" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_2', '')">Run Danmakanvas</button></div>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: Danmaku Theory Overview</a></li>
+	          <li><a href="#sub2">Part 2: Guide Overview</a></li>
+	          <li><a href="#sub3">Part 3: Danmakanvas Overview</a></li>
+	          <li><a href="#sub4">Part 4: Terminology Overview</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: Danmaku Theory Overview</h2>
+	      <p>Coming to these guides, you may be thinking something along the following: "Danmaku Theory? What's that?!" If so, that's perfectly fine.</p>
+	      <p>As of the time of writing, there is no set standard for Danmaku Theory. As a result, we will be explicitly defining our terminology here and will continue utilizing that terminology throughout these guides. We also hope to gradually bubble the terminology backwards into the ph3 tutorials over time.</p>
+	      <p>Anyways, Danmaku Theory. Danmaku Theory is an attempt to understand the components of Danmaku Patterns and break them down into a standard and well understood form that is all-encompassing and flexible, allowing for most patterns to be broken down and described in terms of simpler, common concepts. In particular, Danmaku Theory has a focus on the visuals of the Danmaku. The idea for a unified theory came out of the Blender Danmaku community, which notably builds danmaku with complete disregard for the player. Without the player, it is possible to view danmaku from a much broader perspective and gain additional insight.</p>
+	      <p>Throughout these guides, we will primarily focus on danmaku, disregarding the player. In certain sections where we discuss applications, it will be necessary to include the player. In all cases, we will describe danmaku with complete disregard for the engine used to implement the danmaku itself.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: Guide Overview</h2>
+	      <p>This series of guides will cover various topics in Danmaku Design. Naturally, there is no one correct way to learn how to design anything, let alone danmaku. We do recommend reading guides in order, but after the fundamentals have been covered, most topics are standalone.</p>
+	      <p>These guides will attempt to cover all of the pure danmaku-centric aspects of Danmaku Theory. Sound integration and the like will not be covered. All feedback is welcome, so please feel free to send feedback via Discord.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Danmakanvas Overview</h2>
+		<div style="text-align:center"><canvas id="gamecanvas_1" width="640" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', '')">Run Danmakanvas</button></div>
+	      <p>For all guides, we will integrate the latest development version of <a target="_blank" href="https://github.com/Sparen/Danmakanvas">Danmakanvas</a>. As we are sourcing directly from the development version, it is possible that some examples may break or work improperly, unlike in the ph3 tutorials where fixed Danmakanvas versions are in use. In the event that a Danmakanvas canvas fails to load, please send a bug report to <a target="_blank" href="https://github.com/Sparen/sparen.github.io">sparen.github.io (GitHub)</a> or via my <a target="_blank" href="https://discord.gg/vXpr7Mw">Discord Server</a>.</p>
+	      <p>We will be using Danmakanvas for all of our demonstrations in these guides. We will try our best to add buttons/input fields that can update variables within the simulations to change their behavior.</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: Terminology Overview</h2>
+	      <p>In this section of the introductory guide, we will briefly describe the terminology that we will be using throughout this guide. Please note that Danmaku Theory does not focus on gameplay element of danmaku and so does not reference hitbox size - while this is of concern to pattern design, it will be covered in the ph3 Shotsheet Tutorial instead.</p>
+	      <p><strong>Bullet</strong> - The most fundamental unit of danmaku, which can be portrayed with any sprite or model. The position of a Bullet can be represented by a single set of coordinates.</p>
+	      <p><strong>Laser</strong> - A Bullet stretched in both directions. The primary coordinate of the Laser is the midpoint.</p>
+	      <p><strong>Spawner</strong> - The spawn location of a Group or Bullet, or a position relative to the spawn locations. May or may not have a visual representation and may not necessarily be a point (may be a line or other shape).</p>
+	      <p><strong>Group</strong> - The fundamental component of a pattern, consisting of any number of Bullets sharing a Spawner. All Bullets in a Group have the same Controller but may have minor differences (e.g. angle, speed, etc). A Group can consist of anything from a single Bullet to an entire Pattern, and can be composed of smaller Groups separated temporally and/or spatially.</p>
+	      <p><strong>Controller</strong> - The controller of animations and transformations of not just a Spawner but also the members of the Group created by the Spawner. All Bullets in a group use the same Controller to dictate their animation and transformation. Handles all logic applied to a Group.</p>
+	      <p><strong>Subpattern</strong> - Top level Group that is often composed of smaller Groups. Often one of any number of highly distinct components of a Pattern.</p>
+	      <p><strong>Pattern</strong> - A complete danmaku animation over a specified period of time, composed of one or more Subpatterns.</p>
+	      <p>Each one of these will receive a more in depth explanation with examples in the various guides to follow this one. Note the versatility - Eternal Meek consists of a single Pattern with a single Subpattern consisting of a single Group. Curvy lasers are a Group of Bullets where a single Controller has them follow the same trajectory from the same Spawner, simply offset by time.</p>
+	      <p></p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><span>---</span></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="https://sparen.github.io/Danmakanvas/Danmakanvas.js"></script>
+    <script type="text/javascript" src="./dds_danmakanvas/DDSG0.js"></script>  </body></html>
