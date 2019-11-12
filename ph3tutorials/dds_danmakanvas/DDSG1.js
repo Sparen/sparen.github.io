@@ -52,7 +52,9 @@ function Single_1(currgame) {
     CreateText(4, 40, "#FFFFFF", 12, "Monospace", "start", "Non-Directional (Standard)", currgame);
     CreateText(4, 60, "#FFFFFF", 12, "Monospace", "start", "Non-Directional (w/ Rotation)", currgame);
     CreateText(4, 80, "#FFFFFF", 12, "Monospace", "start", "Directional", currgame);
-    CreateText(4, 100, "#FFFFFF", 12, "Monospace", "start", "Vector", currgame);
+    CreateText(4, 100, "#FFFFFF", 12, "Monospace", "start", "Directional", currgame);
+    CreateText(4, 120, "#FFFFFF", 12, "Monospace", "start", "Vector", currgame);
+    CreateText(4, 140, "#FFFFFF", 12, "Monospace", "start", "Vector", currgame);
     this.update = function () { // Main Loop for a given Danmakanvas Instance
         if (currgame.everyinterval(20)) { 
             CreateShotA1(240, 36, 2, 0, "#FF8888", 4, 8, 1, 0, currgame);
@@ -60,8 +62,12 @@ function Single_1(currgame) {
             SetShotGraphic(objB, "DIAMOND", "#00FFFF", 4, 8, 8, 1, false, 0.125);
             let objC = CreateShotA1(240, 76, 2, 0, "#FF00FF", 4, 8, 1, 0, currgame);
             SetShotGraphic(objC, "DIAMOND", "#FF00FF", 4, 12, 6, 1, true, 0);
-            let objD = CreateShotA1(240, 96, 2, 0, "#FF00FF", 4, 8, 1, 0, currgame);
-            SetShotGraphic(objD, "TRIANGLE", "#FFFF00", 4, 12, 10, 1, true, 0);
+            let objD = CreateShotA1(240, 96, 2, 0, "#FFFF00", 4, 8, 1, 0, currgame);
+            SetShotGraphic(objD, "OVAL", "#FFFF00", 4, 12, 8, 1, true, 0);
+            let objE = CreateShotA1(240, 116, 2, 0, "#88FF88", 4, 8, 1, 0, currgame);
+            SetShotGraphic(objE, "TRIANGLE", "#88FF88", 4, 12, 10, 1, true, 0);
+            let objF = CreateShotA1(240, 136, 2, 0, "#8888FF", 4, 8, 1, 0, currgame);
+            SetShotGraphic(objF, "ARROWHEAD", "#AAAAFF", 4, 12, 8, 1, true, 0);
         }
         // Remove completed tasks
         let tasktoremove = [];
