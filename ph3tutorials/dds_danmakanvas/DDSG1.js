@@ -1,5 +1,4 @@
 //Plural Module - DDS Guide 1
-//Contents of the two canvases based off of examples from Danmakanvas Repository but trimmed down to not wreck processors since both are running at once
 
 "use strict";
 

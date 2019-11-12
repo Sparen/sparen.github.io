@@ -1,0 +1,83 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>Sparen's Danmaku Design Studio - Guide A2</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmaku Design Studio - Guide A2 - Danmaku and the Player - Aesthetics and Gameplay. A guide covering bullet movement and how bullet hell games differ from other shmups."      name="description">
+    <meta name="keywords" content="Sparen, Danmaku, Design, Theory, Studio, Angle, Player">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Nov 12, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+      <div id="menubar">
+        <ul>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
+          <li><a href="./danmakudesign.html" title="Sparen's Danmaku Design Studio">Danmaku Design</a></li>
+        </ul>
+      </div>      <div id="pagecontentwrapper">
+          <div id="pagecontent">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ddsga2.html" title="The Humble Bullet - The Fundamental Unit of Danmaku">Guide A2</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>	      <h1 class="toplevelheadera">Sparen's Danmaku Design Studio - Guide A2 - Danmaku and the Player - Aesthetics and Gameplay</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: Guide Introduction</a></li>
+	          <li><a href="#sub2">Part 2: Directed Bullets</a></li>
+	          <li><a href="#sub3">Part 3: Usage of angles</a></li>
+	          <li><a href="#sub4">Part 4: Bullet Hell (Danmaku) vs. other shmups</a></li>
+	          <li><a href="#sub5">Part 5: Mental Filtering - Bullets designed to NOT hit you</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: Guide Introduction</h2>
+	      <p>In this guide, we will discuss the role angles play in bullet movement as well as how bullet graphic choice affects the aesthetics of a pattern, as well as how Bullet Hell games differ from other shmups.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: Directed Bullets</h2>
+	      <p>In the previous guide, we discussed bullet graphics, including Directional and Vector Bullets. These bullets have a graphic that changes depending on the angle of the bullet. Play the two canvases below.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_1" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_2" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', 'Directed Bullets');createNewGame('gamecanvas_2', 'Non-Directional Bullets')">Run Danmakanvas</button></div>
+	      <p>Note how by looking at these bullets in the first canvas, you can immediately tell which direction they are moving in. From a gameplay perspective, this allows the player to better understand how the pattern functions, and also has aesthetic value. On the second canvas, the bullets themselves have no 'directionality' to them. The type of bullet used is down to the designer, but for patterns where one wants to clearly portray movement, the directed bullets offer some benefit.</p>
+	      <p>Now, let's add in some angular velocity to further demonstrate how directed bullets can be useful in a pattern. We will go into this topic in depth in later detail in a later guide, but for now all you need to know is that angular velocity is defined as a change in movement angle over time.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_3" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_4" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_3', 'Directed Bullets');createNewGame('gamecanvas_4', 'Non-Directional Bullets')">Run Danmakanvas</button></div>
+	      <p>As can be observed in the first example, it is quite clear how the bullets turn over time. In contrast, the round non-directional bullets do not telegraph their movement direction at all. If it weren't for the fact that the bullets were in a pattern, it may be difficult to tell the trajectory of a bullet in the second example.</p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Usage of angles</h2>
+	      <p>Now that we've discussed the visual direction of bullets, it's now time for a discussion on bullet angles.</p>
+	      <p>In general, there are three types of bullet angles - <strong>Fixed Angle</strong>, <strong>Random Angle</strong>, and <strong>Aimed Angle</strong>.</p>
+	      <p>Let's discuss these in order. First, the Fixed Angle. The Fixed Angle is rarely used but can make for some interesting patterns. Typical use cases include firing straight down with additional bullets, for example. One of the best known fixed angle patterns in Touhou is Icicle Fall -Easy- (the ice component). In this case, from Cirno's static position, bullets spawn in a predefined fashion with fixed angles, then change their angle by a predefined amount. Check out the following pattern for an example of a fixed angle pattern.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_5" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_5', 'Fixed Angle');">Run Danmakanvas</button></div>
+	      <p>This Pattern is composed of two Subpatterns (we will cover these concepts further in later guides). One Subpattern has blue and yellow groups, of which the blue is composed of two groups of bullets and the yellow is composed of three groups of bullets. This subpattern is entirely fixed, with all bullets being fired a constant angle away from straight downwards. The other subpattern (purple) is similar, though it uses a sine wave to determine the spacing between the bullet stacks (we will discuss this in the next guide).</p>
+	      <p>As can be observed, fixed angle patterns can be quite powerful. However, their true value is by incorporating fixed angle systems into patterns where the initial angle is random or aimed (instead of straight downwards, like in this example). We'll discuss random angles next.</p>
+	      <p>In the shmup community, random angles get a bad reputation. When done at its extreme (together with random speed), you get a swarm of bullets where it feels like there was no effort put into the pattern. Of course, balancing these and getting the proper density is actually a very difficult task requiring a great deal of effort and experience, but that's besides the point.</p>
+	      <p>We can use random angles for Eternal Meek, but we can also use them as seeding angles as mentioned above. Consider the following example: We want to fire a continuous stream of bullet rings (we will cover rings in more detail in the next guide). If we use a fixed angle to seed, then when the pattern repeats we will cover the exact same ground. However, if we use a random angle as the initial angle as the seed, then the rings will appear in a different position each time. See the below examples.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_6a" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_7a" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><br><canvas id="gamecanvas_6b" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_7b" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_6a', 'Fixed Seed');createNewGame('gamecanvas_7a', 'Random Seed'); createNewGame('gamecanvas_6b', 'Fixed Seed (Trail)');createNewGame('gamecanvas_7b', 'Random Seed (Trail)')">Run Danmakanvas</button></div>
+	      <p>In the first example, the initial seed never changes, resulting in a patten where there is a lot of space that is never touched. The latter two canvases show the trails left by the bullets (Note that the colors and angles don't match up, but the comparison should be sufficient for demonstrating the point). If this is a component of a pattern, it may be OK, but if making danmaku for dodging, only using fixed angle seeds leaves potential for blind spots. In contrast, on the right, every part of the screen is touched at some point.</p>
+	      <p>Now, we'll discuss aimed angles. In these cases, bullets spawned from a Spawner move towards a location on the screen. In standard gameplay, this is almost always a familiar or the player. In pure Danmaku Theory, aimed angles play a very minor role.</p>
+	      <p>In the following examples, we will first have a 'player' oscillating on the bottom of the screen while bullets are aimed at the 'player'. Then we will have an example where the single aimed bullet is accompanied by two others with relative angles, in order to demonstrate the power of aimed angles.</p>
+	      <p>TODO</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: Bullet Hell (Danmaku) vs. other shmups</h2>
+	      <p></p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: Mental Filtering - Bullets designed to NOT hit you</h2>
+	      <p></p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ddsga2.html" title="The Humble Bullet - The Fundamental Unit of Danmaku">Guide A2</a></li>
+
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="./dds_danmakanvas/Danmakanvas.js"></script>
+    <script type="text/javascript" src="./dds_danmakanvas/DDSG2.js"></script>  </body></html>
