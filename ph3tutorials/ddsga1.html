@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>Sparen's Danmaku Design Studio - Guide A1</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmaku Design Studio - Guide A1 - The Humble Bullet - The Fundamental Unit of Danmaku. A guide covering the properties of a single bullet as well as their relation to spawners."      name="description">
+    <meta name="keywords" content="Sparen, Danmaku, Design, Theory, Studio, Introduction">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Nov 11, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+      <div id="menubar">
+        <ul>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
+          <li><a href="./danmakudesign.html" title="Sparen's Danmaku Design Studio">Danmaku Design</a></li>
+        </ul>
+      </div>      <div id="pagecontentwrapper">
+          <div id="pagecontent">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ddsg0.html" title="Sparen's Danmaku Design Studio - Introduction to Danmaku Theory">Guide 0</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>	      <h1 class="toplevelheadera">Sparen's Danmaku Design Studio - Guide A1 - The Humble Bullet - The Fundamental Unit of Danmaku</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: Guide Introduction</a></li>
+	          <li><a href="#sub2">Part 2: Bullet Components and Characteristics</a></li>
+	          <li><a href="#sub3">Part 3: Bullets and Spawners</a></li>
+	          <li><a href="#sub4">Part 4: Spawn Rate vs Speed</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: Guide Introduction</h2>
+	      <p>In this guide, we will cover the bare fundamentals of Bullets and Spawners and will cover types of bullets from a visual standpoint. We will explore different graphical styles of Bullets as well as considerations with regards to Spawners. We will close with a discussion on Spawn Rate and Speed. Angles will be covered in Guide A2. Multiple Bullets in a Group will be covered in Guide A3.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: Bullet Components and Characteristics</h2>
+	      <p>The Bullet. They come in many forms and are an integral component of any danmaku pattern. As the most fundamental unit in a pattern, it is essential that their capabilities be well understood.</p>
+	      <p>Every Bullet has coordinates in space, a movement speed, and and a movement angle. Some bullets may also have acceleration, min/max speed, and angular velocity. Depending on the graphic, we can break bullets down into four graphical categories - <strong>Non-Directional Bullets</strong> (e.g. circles) that exhibit point symmetry and have no clear render-movement angle correlation, <strong>Directional Bullets</strong> (e.g. ellipses) that have a sprite indicating their movement direction (though the sprite may not have a clear direction in itself), <strong>Vector Bullets</strong> (e.g. arrows) where their sprite dictates movement direction, and <strong>Static-Angled Bullets</strong> where there is no rotation at all.</p>
+	      <p>Loose and Straight Lasers fall under the category of Directional Bullets, while bullets that rotate independently of their movement direction are considered Non-Directional Bullets. Curvy Lasers are considered strings of Bullets, so the individual components fit into the Directional Bullets category. Run the below example to see examples of these bullet types.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_1" width="640" height="160" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', '')">Run Danmakanvas</button></div>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Bullets and Spawners</h2>
+	      <p>Now that we've covered types of bullets, we'll take a (very) brief look at Spawners.</p>
+	      <p>As mentioned in the previous guide, a Spawner (or Emitter) is where a bullet spawns. This is generally true, though we will go into greater depth with this when we discuss radial offset spawning and line spawning.</p>
+	      <p>Spawners can be static, or they can move. In general, spawners either stay in the same fixed location, travel along a predetermined mathematically-defined path (e.g. rotating around a point), and/or are attached to another object, such as an enemy or boss if there is one. We will discuss these in a later guide.</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: Spawn Rate vs Speed</h2>
+	      <p>We will close this brief introductory guide with a brief discussion on spawn rate and bullet speed. We will revisit this topic in the future when we have more complex patterns, but for now, we will observe these concepts with respect to single bullets.</p>
+	      <p>The spawn rate is how frequently bullets are spawned from a Spawner. For example, if the spawn rate is 10 bullets/second, then in a 60 FPS system we have a bullet every six frames, or a bullet every 100 ms. We refer to the time between bullets as the spawn interval.</p>
+	      <p>The speed is how far a bullet moves in a timeframe. For example, if the speed is 60 pixels/second, then in a 60 FPS system the bullet travels at 1 pixel every frame.</p>
+	      <p>While the link between these two aspects of bullet spawning may not seem obvious at first glance, from an aesthetic perspective and from a gameplay perspective, there is a key link - density.</p>
+	      <p>If the spawn rate is high and speeds are slow, bullets will be bunched closely together. If the spawn rate is low and speeds are high, bullets will be far apart. The implications of this mean that a careful balance must be maintained to have the appropriate number of bullets on the screen at any given time.</p>
+	      <p>Try out the following interactive example below. Please note that it runs at 50 FPS, so a rate of 5 will result in 10 bullets/second. The last two rows are user controlled - after changing a value, click outside of the box for the changes to take effect. Please note that rate values must be integers, as internally, Danmakanvas computes a modulus.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_2" width="640" height="240" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_2', '')">Run Danmakanvas</button>
+	      <p>Row 5 Speed; Interval: <input type="number" id="speed1" step="0.1" value="4.5" onchange="updateSpeedAndRate()"> <input type="number" id="rate1" min="1" step="1" value="6" onchange="updateSpeedAndRate()"></p>
+	      <p>Row 6 Speed; Interval: <input type="number" id="speed2" step="0.1" value="1" onchange="updateSpeedAndRate()"> <input type="number" id ="rate2" min="1" step="1" value="12" onchange="updateSpeedAndRate()"></p></div>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>Four-type bullet graphic classification originally created by Virtlux</p>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ddsg0.html" title="Sparen's Danmaku Design Studio - Introduction to Danmaku Theory">Guide 0</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="https://sparen.github.io/Danmakanvas/Danmakanvas.js"></script>
+    <script type="text/javascript" src="./dds_danmakanvas/DDSG1.js"></script>  </body></html>
