@@ -41,8 +41,8 @@
 	      <p>Every Bullet has coordinates in space, a movement speed, and and a movement angle. Some bullets may also have acceleration, min/max speed, and angular velocity. Depending on the graphic, we can break bullets down into four graphical categories:</p>
 	      <ul>
 		<li><strong>Non-Directional Bullets</strong> (e.g. circles) that exhibit point symmetry and have no clear render-movement angle correlation</li>
-		<li><strong>Directional Bullets</strong> (e.g. ellipses) that have a sprite indicating their movement direction (though the sprite may not have a clear direction in itself). These are often symmetric.</li>
-		<li><strong>Vector Bullets</strong> (e.g. arrows and arrowheads) where their sprite visually indicates movement direction</li>
+		<li><strong>Directional Bullets</strong> (e.g. ellipses) that have a sprite indicating their axis of movement direction (though the sprite may not have a clear direction in itself). These are often symmetric (i.e. it would make sense if the bullet were moving forwards or backwards given the sprite).</li>
+		<li><strong>Vector Bullets</strong> (e.g. arrows and arrowheads) where their sprite visually indicates movement direction. Put differently, the vector of direction (including the exact angle) can be easily inferred by looking at the bullet.</li>
 		<li><strong>Static-Angled Bullets</strong> where there is no rotation at all.</li>
 	      </ul>
 	      <p>Loose and Straight Lasers fall under the category of Directional Bullets, while bullets that rotate independently of their movement direction are considered Non-Directional Bullets. Curvy Lasers are considered strings of Bullets, so the individual components fit into the Directional Bullets category. Run the below example to see examples of these bullet types.</p>
