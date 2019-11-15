@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Nov 12, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupENG('Nov 15, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div id="menubar">
         <ul>
           <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
@@ -57,14 +57,20 @@
 		<div style="text-align:center"><canvas id="gamecanvas_6a" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_7a" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><br><canvas id="gamecanvas_6b" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_7b" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_6a', 'Fixed Seed');createNewGame('gamecanvas_7a', 'Random Seed'); createNewGame('gamecanvas_6b', 'Fixed Seed (Trail)');createNewGame('gamecanvas_7b', 'Random Seed (Trail)')">Run Danmakanvas</button></div>
 	      <p>In the first example, the initial seed never changes, resulting in a patten where there is a lot of space that is never touched. The latter two canvases show the trails left by the bullets (Note that the colors and angles don't match up, but the comparison should be sufficient for demonstrating the point). If this is a component of a pattern, it may be OK, but if making danmaku for dodging, only using fixed angle seeds leaves potential for blind spots. In contrast, on the right, every part of the screen is touched at some point.</p>
 	      <p>Now, we'll discuss aimed angles. In these cases, bullets spawned from a Spawner move towards a location on the screen. In standard gameplay, this is almost always a familiar or the player. In pure Danmaku Theory, aimed angles play a very minor role.</p>
-	      <p>In the following examples, we will first have a 'player' oscillating on the bottom of the screen while bullets are aimed at the 'player'. Then we will have an example where the single aimed bullet is accompanied by two others with relative angles, in order to demonstrate the power of aimed angles.</p>
-	      <p>TODO</p>
+	      <p>In the following examples, we will first have a 'player' oscillating on the bottom of the screen while bullets are aimed at the 'player'. Then we will have an example where the single aimed bullet is accompanied by two others with relative angles, in order to demonstrate the power of aimed angles. Finally we will have stacks in the spread to showcase how aimed bullets can form a meaningful subpattern.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_8a" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_8b" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_8c" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_8a', 'Aimed Angle');createNewGame('gamecanvas_8b', 'Aimed Angle (Spread)');createNewGame('gamecanvas_8c', 'Aimed Angle (Spread Stack)');">Run Danmakanvas</button></div>
+	      <p>In these examples, note that even if the player moves to dodge some bullets, the spread of bullets adds more complexity to the dodging - note that the firing rate doesn't need to be this high to have the intended effect. The third example is much clearer in how aimed groups of bullets can add value to the aesthetics and gameplay of a pattern.</p>
+	      <p>By thoughtfully using angle types in your patterns, you will be able to create a wide variety of interesting patterns without blind spots and with aesthetic value derived from variation. Experiment!</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: Bullet Hell (Danmaku) vs. other shmups</h2>
-	      <p></p>
-	      <p></p>
+	      <p>We will continue our discussion of danmaku aesthetics with regards to the player by comparing danmaku games against other shmups. What makes danmaku, well, danmaku? What differentiates a bullet hell from a standard shooter?</p>
+	      <p>The first thing to note is that the differentiating factor is NOT the number of bullets. You can have a lot of bullets, but if they aren't thoughtfully used, the pattern isn't exactly a bullet hell.</p>
+	      <p>Some translations refer to danmaku as 'curtain fire', which fits better with the distinguishing factors. 'Curtain fire' implies a space or range filled with danmaku, and this is where we get some insight.</p>
+	      <p>In particular, the entire screen is the playing field. The entire screen is a stage upon which your bullets may dance. The bullets don't need to be aimed straight downwards at the player. Heck, they don't need to be aimed at the player at all, as we mentioned prior.</p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: Mental Filtering - Bullets designed to NOT hit you</h2>
-	      <p></p>
-	      <p></p>
+	      <p>In the next guide, we will cover rings. By definition, most of the bullets in a ring will never come near the player. In fact, when dodging danmaku, it is common to entirely ignore bullets going in directions away from the player. To put this into practice, play the following animation. First, follow the movement of the orb at the bottom. Pretend it is the player, dodging the bullets. Then, look at the entire screen, not focusing on the orb. Observe how you automatically filtered out most of the bullets on the screen while 'playing'.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_9" width="640" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_9', 'Mental Filtering');">Run Danmakanvas</button></div>
+	      <p>In the above, our pattern consists of three independent subpatterns - a ring stack, a set of bullets that fly up and accelerate at the player, and ring stacks that accelerate backwards while slightly changing their angle. Note how most of the bullets go in directions away from of the player. In a regular shmup, those probably wouldn't be there at all. Yet as part of a danmaku pattern, they can be appreciated for their visuals and beauty.</p>
+	      <p>This is the beauty of danmaku. Independently of playing the game, the patterns have aesthetic value, and as someone who crafts danmaku, it is up to you to provide an experience that satisfies the player from a gameplay perspective while also providing a beautiful barrage of bullets that can be enjoyed both while playing and while watching.</p>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <br>            </div>          </div>
           <div class="tutnavbar">

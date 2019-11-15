@@ -260,65 +260,65 @@ function EnemyShot(x, y, speed, angle, accel, maxspeed, color, brad, srad, swid,
             ctx.lineWidth = this.swid;
             ctx.stroke();
         } else if (this.graphic == "OVAL") {
-        	// Code Source for ellipse: https://stackoverflow.com/questions/14169234 (PokatilovArt)
+            // Code Source for ellipse: https://stackoverflow.com/questions/14169234 (PokatilovArt)
             ctx.strokeStyle = this.color;
             let width_two_thirds = this.srad * 4 / 3;
 
-			let dx1 = Math.sin(this.graphicangle) * this.srad2;
-			let dy1 = Math.cos(this.graphicangle) * this.srad2;
-			let dx2 = Math.cos(this.graphicangle) * width_two_thirds;
-			let dy2 = Math.sin(this.graphicangle) * width_two_thirds;
+            let dx1 = Math.sin(this.graphicangle) * this.srad2;
+            let dy1 = Math.cos(this.graphicangle) * this.srad2;
+            let dx2 = Math.cos(this.graphicangle) * width_two_thirds;
+            let dy2 = Math.sin(this.graphicangle) * width_two_thirds;
 
-			let topCenterX = this.x - dx1;
-			let topCenterY = this.y + dy1;
-			let topRightX = topCenterX + dx2;
-			let topRightY = topCenterY + dy2;
-			let topLeftX = topCenterX - dx2;
-			let topLeftY = topCenterY - dy2;
+            let topCenterX = this.x - dx1;
+            let topCenterY = this.y + dy1;
+            let topRightX = topCenterX + dx2;
+            let topRightY = topCenterY + dy2;
+            let topLeftX = topCenterX - dx2;
+            let topLeftY = topCenterY - dy2;
 
-			let bottomCenterX = this.x + dx1;
-			let bottomCenterY = this.y - dy1;
-			let bottomRightX = bottomCenterX + dx2;
-			let bottomRightY = bottomCenterY + dy2;
-			let bottomLeftX = bottomCenterX - dx2;
-			let bottomLeftY = bottomCenterY - dy2;
+            let bottomCenterX = this.x + dx1;
+            let bottomCenterY = this.y - dy1;
+            let bottomRightX = bottomCenterX + dx2;
+            let bottomRightY = bottomCenterY + dy2;
+            let bottomLeftX = bottomCenterX - dx2;
+            let bottomLeftY = bottomCenterY - dy2;
 
-			ctx.beginPath();
-			ctx.moveTo(bottomCenterX, bottomCenterY);
-			ctx.bezierCurveTo(bottomRightX, bottomRightY, topRightX, topRightY, topCenterX, topCenterY);
-			ctx.bezierCurveTo(topLeftX, topLeftY, bottomLeftX, bottomLeftY, bottomCenterX, bottomCenterY);
-			ctx.closePath();
+            ctx.beginPath();
+            ctx.moveTo(bottomCenterX, bottomCenterY);
+            ctx.bezierCurveTo(bottomRightX, bottomRightY, topRightX, topRightY, topCenterX, topCenterY);
+            ctx.bezierCurveTo(topLeftX, topLeftY, bottomLeftX, bottomLeftY, bottomCenterX, bottomCenterY);
+            ctx.closePath();
             ctx.lineWidth = this.swid;
             ctx.stroke();
         } else if (this.graphic == "ARROWHEAD") {
-        	// Code adapted from Ellipse (As it is half an ellipse)
-        	// Note that we move 1/3 of srad downwards towards the bullet
+            // Code adapted from Ellipse (As it is half an ellipse)
+            // Note that we move 1/3 of srad downwards towards the bullet
             ctx.strokeStyle = this.color;
             let width_two_thirds = this.srad * 4 / 3;
 
-			let dx1 = Math.sin(this.graphicangle) * this.srad2;
-			let dy1 = Math.cos(this.graphicangle) * this.srad2;
-			let dx2 = Math.cos(this.graphicangle) * width_two_thirds;
-			let dy2 = Math.sin(this.graphicangle) * width_two_thirds;
+            let dx1 = Math.sin(this.graphicangle) * this.srad2;
+            let dy1 = Math.cos(this.graphicangle) * this.srad2;
+            let dx2 = Math.cos(this.graphicangle) * width_two_thirds;
+            let dy2 = Math.sin(this.graphicangle) * width_two_thirds;
 
-			let topCenterX = this.x - dx1 + this.srad/3*Math.cos(this.graphicangle + Math.PI);
-			let topCenterY = this.y + dy1 + this.srad/3*Math.sin(this.graphicangle + Math.PI);
-			let topRightX = topCenterX + dx2;
-			let topRightY = topCenterY + dy2;
-			let topLeftX = topCenterX - dx2;
-			let topLeftY = topCenterY - dy2;
+            let topCenterX = this.x - dx1 + this.srad/3*Math.cos(this.graphicangle + Math.PI);
+            let topCenterY = this.y + dy1 + this.srad/3*Math.sin(this.graphicangle + Math.PI);
+            let topRightX = topCenterX + dx2;
+            let topRightY = topCenterY + dy2;
+            let topLeftX = topCenterX - dx2;
+            let topLeftY = topCenterY - dy2;
 
-			let bottomCenterX = this.x + dx1 + this.srad/3*Math.cos(this.graphicangle + Math.PI);
-			let bottomCenterY = this.y - dy1 + this.srad/3*Math.sin(this.graphicangle + Math.PI);
-			let bottomRightX = bottomCenterX + dx2;
-			let bottomRightY = bottomCenterY + dy2;
-			let bottomLeftX = bottomCenterX - dx2;
-			let bottomLeftY = bottomCenterY - dy2;
+            let bottomCenterX = this.x + dx1 + this.srad/3*Math.cos(this.graphicangle + Math.PI);
+            let bottomCenterY = this.y - dy1 + this.srad/3*Math.sin(this.graphicangle + Math.PI);
+            let bottomRightX = bottomCenterX + dx2;
+            let bottomRightY = bottomCenterY + dy2;
+            let bottomLeftX = bottomCenterX - dx2;
+            let bottomLeftY = bottomCenterY - dy2;
 
-			ctx.beginPath();
-			ctx.moveTo(bottomCenterX, bottomCenterY);
-			ctx.bezierCurveTo(bottomRightX, bottomRightY, topRightX, topRightY, topCenterX, topCenterY);
-			
+            ctx.beginPath();
+            ctx.moveTo(bottomCenterX, bottomCenterY);
+            ctx.bezierCurveTo(bottomRightX, bottomRightY, topRightX, topRightY, topCenterX, topCenterY);
+            
             ctx.lineWidth = this.swid;
             ctx.stroke();
         }
@@ -338,7 +338,7 @@ function EnemyShot(x, y, speed, angle, accel, maxspeed, color, brad, srad, swid,
  * Param: currgame - game/Danmakanvas Instance the bullet belongs to
  * *****/
 function DMKText(x, y, fillStyle, fontsize, font, textAlign, content, currgame) {
-	this.x = x;
+    this.x = x;
     this.y = y;
     this.fillStyle = fillStyle;
     this.fontsize = fontsize;
@@ -408,7 +408,73 @@ function DeleteShot(bullet, currgame) {
     }
 }
 
-/* **************** Bullet Creation Functions **************** */
+/* *****
+ * float GetDistanceObjObj(obj a, obj b)
+ * -- Returns the distance from object a to object b
+ * Param: a - Object 1
+ * Param: b - Object 2
+ * *****/
+function GetDistanceObjObj(a, b) {
+    return Math.sqrt(Math.pow(b.x - a.x, 2) + Math.pow(b.y - a.y, 2));
+}
+
+/* *****
+ * float GetDistanceCoordObj(float x1, float y1, obj b)
+ * -- Returns the distance from (x1, y1) to object b
+ * Param: x1 - X coordinate of first point
+ * Param: y1 - Y coordinate of first point
+ * Param: b - Target Object
+ * *****/
+function GetDistanceCoordObj(x1, y1, b) {
+    return Math.sqrt(Math.pow(b.x - x1, 2) + Math.pow(b.y - y1, 2));
+}
+
+/* *****
+ * float GetDistanceCoordCoord(float x1, float y1, float x2, float y2)
+ * -- Returns the distance from (x1, y1) to (x2, y2)
+ * Param: x1 - X coordinate of first point
+ * Param: y1 - Y coordinate of first point
+ * Param: x2 - X coordinate of second point
+ * Param: y2 - Y coordinate of second point
+ * *****/
+function GetDistanceCoordCoord(x1, y1, x2, y2) {
+    return Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
+}
+
+/* *****
+ * float GetAngleObjObj(obj a, obj b)
+ * -- Returns the angle from object a to object b
+ * Param: a - Object 1
+ * Param: b - Object 2
+ * *****/
+function GetAngleObjObj(a, b) {
+    return Math.atan2(b.y - a.y, b.x - a.x);
+}
+
+/* *****
+ * float GetAngleCoordObj(float x1, float y1, obj b)
+ * -- Returns the angle from (x1, x2) to object b
+ * Param: x1 - X coordinate of first point
+ * Param: y1 - Y coordinate of first point
+ * Param: b - Target Object
+ * *****/
+function GetAngleCoordObj(x1, y1, b) {
+    return Math.atan2(b.y - y1, b.x - x1);
+}
+
+/* *****
+ * float GetAngleCoordCoord(float x1, float y1, float x2, float y2)
+ * -- Returns the angle from (x1, x2) to object b
+ * Param: x1 - X coordinate of first point
+ * Param: y1 - Y coordinate of first point
+ * Param: x2 - X coordinate of second point
+ * Param: y2 - Y coordinate of second point
+ * *****/
+function GetAngleCoordCoord(x1, y1, x2, y2) {
+    return Math.atan2(y2 - y1, x2 - x1);
+}
+
+/* **************** Bullet Object Creation Functions **************** */
 
 /* *****
  * obj CreateShotA1(float x, float y, float speed, float angle, hex/rgb color, float brad, float srad, float swid, int hitbox, obj currgame)
@@ -426,8 +492,8 @@ function DeleteShot(bullet, currgame) {
  * *****/
 function CreateShotA1(x, y, speed, angle, color, brad, srad, swid, hitbox, currgame) {
     let newshot = new EnemyShot(x, y, speed, angle, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
-	currgame.bullets.push(newshot);
-	return newshot;
+    currgame.bullets.push(newshot);
+    return newshot;
 }
 
 /* *****
@@ -445,8 +511,8 @@ function CreateShotA1(x, y, speed, angle, color, brad, srad, swid, hitbox, currg
  * *****/
 function CreateShotA2(x, y, speed, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame) {
     let newshot = new EnemyShot(x, y, speed, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
-	currgame.bullets.push(newshot);
-	return newshot;
+    currgame.bullets.push(newshot);
+    return newshot;
 }
 
 /* *****
@@ -463,14 +529,14 @@ function CreateShotA2(x, y, speed, angle, accel, maxspeed, color, brad, srad, sw
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateRingA1(n, x, y, speed, angle, color, brad, srad, swid, hitbox, currgame) {
-	let i = 0;
-	let ringbullets = [];
-	for (i = 0; i < n; i += 1) {
-		let newshot = new EnemyShot(x, y, speed, angle + Math.PI*2/n*i, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
-		currgame.bullets.push(newshot);
-		ringbullets.push(newshot);
-	}
-	return ringbullets;
+    let i = 0;
+    let ringbullets = [];
+    for (i = 0; i < n; i += 1) {
+        let newshot = new EnemyShot(x, y, speed, angle + Math.PI*2/n*i, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
+        currgame.bullets.push(newshot);
+        ringbullets.push(newshot);
+    }
+    return ringbullets;
 }
 
 /* *****
@@ -488,14 +554,14 @@ function CreateRingA1(n, x, y, speed, angle, color, brad, srad, swid, hitbox, cu
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateRingA2(n, x, y, speed, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame) {
-	let i = 0;
-	let ringbullets = [];
-	for (i = 0; i < n; i += 1) {
-		let newshot = new EnemyShot(x, y, speed, angle + Math.PI*2/n*i, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
-		currgame.bullets.push(newshot);
-		ringbullets.push(newshot);
-	}
-	return ringbullets;
+    let i = 0;
+    let ringbullets = [];
+    for (i = 0; i < n; i += 1) {
+        let newshot = new EnemyShot(x, y, speed, angle + Math.PI*2/n*i, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
+        currgame.bullets.push(newshot);
+        ringbullets.push(newshot);
+    }
+    return ringbullets;
 }
 
 /* *****
@@ -513,14 +579,14 @@ function CreateRingA2(n, x, y, speed, angle, accel, maxspeed, color, brad, srad,
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateSpreadA1(n, angoffset, x, y, speed, angle, color, brad, srad, swid, hitbox, currgame) {
-	let i = 0;
-	let spreadbullets = [];
-	for (i = -(n-1)/2; i < (n-1)/2 + 1; i += 1) {
-		let newshot = new EnemyShot(x, y, speed, angle + angoffset*i, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
-		currgame.bullets.push(newshot);
-		spreadbullets.push(newshot);
-	}
-	return spreadbullets;
+    let i = 0;
+    let spreadbullets = [];
+    for (i = -(n-1)/2; i < (n-1)/2 + 1; i += 1) {
+        let newshot = new EnemyShot(x, y, speed, angle + angoffset*i, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
+        currgame.bullets.push(newshot);
+        spreadbullets.push(newshot);
+    }
+    return spreadbullets;
 }
 
 /* *****
@@ -539,14 +605,14 @@ function CreateSpreadA1(n, angoffset, x, y, speed, angle, color, brad, srad, swi
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateSpreadA2(n, angoffset, x, y, speed, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame) {
-	let i = 0;
-	let spreadbullets = [];
-	for (i = -(n-1)/2; i < (n-1)/2 + 1; i += 1) {
-		let newshot = new EnemyShot(x, y, speed, angle + angoffset*i, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
-		currgame.bullets.push(newshot);
-		spreadbullets.push(newshot);
-	}
-	return spreadbullets;
+    let i = 0;
+    let spreadbullets = [];
+    for (i = -(n-1)/2; i < (n-1)/2 + 1; i += 1) {
+        let newshot = new EnemyShot(x, y, speed, angle + angoffset*i, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
+        currgame.bullets.push(newshot);
+        spreadbullets.push(newshot);
+    }
+    return spreadbullets;
 }
 
 /* *****
@@ -564,14 +630,14 @@ function CreateSpreadA2(n, angoffset, x, y, speed, angle, accel, maxspeed, color
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateStackA1(n, spdoffset, x, y, speed, angle, color, brad, srad, swid, hitbox, currgame) {
-	let i = 0;
-	let stackbullets = [];
-	for (i = 0; i < n; i += 1) {
-		let newshot = new EnemyShot(x, y, speed + spdoffset*i, angle, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
-		currgame.bullets.push(newshot);
-		stackbullets.push(newshot);
-	}
-	return stackbullets;
+    let i = 0;
+    let stackbullets = [];
+    for (i = 0; i < n; i += 1) {
+        let newshot = new EnemyShot(x, y, speed + spdoffset*i, angle, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
+        currgame.bullets.push(newshot);
+        stackbullets.push(newshot);
+    }
+    return stackbullets;
 }
 
 /* *****
@@ -590,14 +656,14 @@ function CreateStackA1(n, spdoffset, x, y, speed, angle, color, brad, srad, swid
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateStackA2(n, spdoffset, x, y, speed, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame) {
-	let i = 0;
-	let stackbullets = [];
-	for (i = 0; i < n; i += 1) {
-		let newshot = new EnemyShot(x, y, speed + spdoffset*i, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
-		currgame.bullets.push(newshot);
-		stackbullets.push(newshot);
-	}
-	return stackbullets;
+    let i = 0;
+    let stackbullets = [];
+    for (i = 0; i < n; i += 1) {
+        let newshot = new EnemyShot(x, y, speed + spdoffset*i, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
+        currgame.bullets.push(newshot);
+        stackbullets.push(newshot);
+    }
+    return stackbullets;
 }
 
 /* *****
@@ -616,17 +682,17 @@ function CreateStackA2(n, spdoffset, x, y, speed, angle, accel, maxspeed, color,
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateRingStackA1(n, m, spdoffset, x, y, speed, angle, color, brad, srad, swid, hitbox, currgame) {
-	let i = 0;
-	let j = 0;
-	let ringbullets = [];
-	for (i = 0; i < n; i += 1) {
-		for (j = 0; j < m; j += 1) {
-			let newshot = new EnemyShot(x, y, speed + spdoffset*j, angle + Math.PI*2/n*i, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
+    let i = 0;
+    let j = 0;
+    let ringbullets = [];
+    for (i = 0; i < n; i += 1) {
+        for (j = 0; j < m; j += 1) {
+            let newshot = new EnemyShot(x, y, speed + spdoffset*j, angle + Math.PI*2/n*i, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
             currgame.bullets.push(newshot);
-			ringbullets.push(newshot);
-		}
-	}
-	return ringbullets;
+            ringbullets.push(newshot);
+        }
+    }
+    return ringbullets;
 }
 
 /* *****
@@ -646,17 +712,17 @@ function CreateRingStackA1(n, m, spdoffset, x, y, speed, angle, color, brad, sra
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateRingStackA2(n, m, spdoffset, x, y, speed, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame) {
-	let i = 0;
-	let j = 0;
-	let ringbullets = [];
-	for (i = 0; i < n; i += 1) {
-		for (j = 0; j < m; j += 1) {
-			let newshot = new EnemyShot(x, y, speed + spdoffset*j, angle + Math.PI*2/n*i, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
+    let i = 0;
+    let j = 0;
+    let ringbullets = [];
+    for (i = 0; i < n; i += 1) {
+        for (j = 0; j < m; j += 1) {
+            let newshot = new EnemyShot(x, y, speed + spdoffset*j, angle + Math.PI*2/n*i, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
             currgame.bullets.push(newshot);
-			ringbullets.push(newshot);
-		}
-	}
-	return ringbullets;
+            ringbullets.push(newshot);
+        }
+    }
+    return ringbullets;
 }
 
 /* *****
@@ -676,17 +742,17 @@ function CreateRingStackA2(n, m, spdoffset, x, y, speed, angle, accel, maxspeed,
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateSpreadStackA1(n, m, angoffset, spdoffset, x, y, speed, angle, color, brad, srad, swid, hitbox, currgame) {
-	let i = 0;
-	let j = 0;
-	let spreadbullets = [];
-	for (i = -(n-1)/2; i < (n-1)/2 + 1; i += 1) {
-		for (j = 0; j < m; j += 1) {
-			let newshot = new EnemyShot(x, y, speed + spdoffset*j, angle + angoffset*i, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
-			currgame.bullets.push(newshot);
-			spreadbullets.push(newshot);
-		}
-	}
-	return spreadbullets;
+    let i = 0;
+    let j = 0;
+    let spreadbullets = [];
+    for (i = -(n-1)/2; i < (n-1)/2 + 1; i += 1) {
+        for (j = 0; j < m; j += 1) {
+            let newshot = new EnemyShot(x, y, speed + spdoffset*j, angle + angoffset*i, 0, 0, color, brad, srad, swid, hitbox, -1, currgame);
+            currgame.bullets.push(newshot);
+            spreadbullets.push(newshot);
+        }
+    }
+    return spreadbullets;
 }
 
 /* *****
@@ -707,17 +773,36 @@ function CreateSpreadStackA1(n, m, angoffset, spdoffset, x, y, speed, angle, col
  * Param: currgame - game/Danmakanvas Instance
  * *****/
 function CreateSpreadStackA2(n, m, angoffset, spdoffset, x, y, speed, angle, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame) {
-	let i = 0;
-	let j = 0;
-	let spreadbullets = [];
-	for (i = -(n-1)/2; i < (n-1)/2 + 1; i += 1) {
-		for (j = 0; j < m; j += 1) {
-			let newshot = new EnemyShot(x, y, speed + spdoffset*j, angle + angoffset*i, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
-			currgame.bullets.push(newshot);
-			spreadbullets.push(newshot);
-		}
-	}
-	return spreadbullets;
+    let i = 0;
+    let j = 0;
+    let spreadbullets = [];
+    for (i = -(n-1)/2; i < (n-1)/2 + 1; i += 1) {
+        for (j = 0; j < m; j += 1) {
+            let newshot = new EnemyShot(x, y, speed + spdoffset*j, angle + angoffset*i, accel, maxspeed, color, brad, srad, swid, hitbox, vanishtime, currgame);
+            currgame.bullets.push(newshot);
+            spreadbullets.push(newshot);
+        }
+    }
+    return spreadbullets;
+}
+
+/* **************** Other Object Creation Functions **************** */
+
+/* *****
+ * obj CreateText(float x, float y, hex/rgb fillStyle, int fontsize, string font, string textAlign, string content, obj currgame)
+ * -- Creates a text object and adds it to the current danmakanvas instance. Returns created Danmakanvas Text Object
+ * Param: x, y - the location of the text
+ * Param: fillStyle - the color of the text
+ * Param: fontsize - the font size of the text
+ * Param: font - the font of the text
+ * Param: textAlign - the text alignment of the text. Possible values are start, end, left, center, and right
+ * Param: content - the content of the text
+ * Param: currgame - game/Danmakanvas Instance the bullet belongs to
+ * *****/
+function CreateText(x, y, fillStyle, fontsize, font, textAlign, content, currgame) {
+    let newtext = new DMKText(x, y, fillStyle, fontsize, font, textAlign, content, currgame);
+    currgame.text.push(newtext);
+    return newtext;
 }
 
 /* **************** Object Functions **************** */
@@ -743,21 +828,4 @@ function SetShotGraphic(shot, graphic, color, brad, srad, srad2, swid, directed,
     shot.swid = swid;
     shot.directed = directed;
     shot.rotation = rotation;
-}
-
-/* *****
- * obj CreateText(float x, float y, hex/rgb fillStyle, int fontsize, string font, string textAlign, string content, obj currgame)
- * -- Creates a text object and adds it to the current danmakanvas instance. Returns created Danmakanvas Text Object
- * Param: x, y - the location of the text
- * Param: fillStyle - the color of the text
- * Param: fontsize - the font size of the text
- * Param: font - the font of the text
- * Param: textAlign - the text alignment of the text. Possible values are start, end, left, center, and right
- * Param: content - the content of the text
- * Param: currgame - game/Danmakanvas Instance the bullet belongs to
- * *****/
-function CreateText(x, y, fillStyle, fontsize, font, textAlign, content, currgame) {
-	let newtext = new DMKText(x, y, fillStyle, fontsize, font, textAlign, content, currgame);
-	currgame.text.push(newtext);
-	return newtext;
 }
