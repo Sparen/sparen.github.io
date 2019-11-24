@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Nov 15, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupENG('Nov 22, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div id="menubar">
         <ul>
           <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
@@ -22,7 +22,7 @@
 	        <ul>
 	          <li><a href="./ddsga1.html" title="The Humble Bullet - The Fundamental Unit of Danmaku">Guide A1</a></li>
 	          <li><span>Navigation Bar</span></li>
-	          <li><span>---</span></li>
+	          <li><a href="./ddsga3.html" title="The Ring, The Spread, and The Stack - Combinations with You">Guide A3</a></li>
 	        </ul>
               </div>	      <h1 class="toplevelheadera">Sparen's Danmaku Design Studio - Guide A2 - Danmaku and the Player - Aesthetics and Gameplay</h1>
 	      <div class="tutorialnav">
@@ -55,7 +55,7 @@
 	      <p>In the shmup community, random angles get a bad reputation. When done at its extreme (together with random speed), you get a swarm of bullets where it feels like there was no effort put into the pattern. Of course, balancing these and getting the proper density is actually a very difficult task requiring a great deal of effort and experience, but that's besides the point.</p>
 	      <p>We can use random angles for patterns such as Eternal Meek, but we can also use them as seeding angles as mentioned above. Consider the following example: We want to fire a continuous stream of bullet rings (we will cover rings in more detail in the next guide). If we use a fixed angle to seed, then when the pattern repeats we will cover the exact same ground. However, if we use a random angle as the initial angle as the seed, then the rings will appear in a different position each time. See the below examples.</p>
 		<div style="text-align:center"><canvas id="gamecanvas_6a" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_7a" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><br><canvas id="gamecanvas_6b" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_7b" width="240" height="240" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_6a', 'Fixed Seed');createNewGame('gamecanvas_7a', 'Random Seed'); createNewGame('gamecanvas_6b', 'Fixed Seed (Trail)');createNewGame('gamecanvas_7b', 'Random Seed (Trail)')">Run Danmakanvas</button></div>
-	      <p>In the first example, the initial seed never changes, resulting in a patten where there is a lot of space that is never touched. The latter two canvases show the trails left by the bullets (Note that the colors and angles don't match up, but the comparison should be sufficient for demonstrating the point). If this is a component of a pattern, it may be OK, but if making danmaku for dodging, only using fixed angle seeds leaves potential for blind spots. In contrast, on the right, every part of the screen is touched at some point.</p>
+	      <p>In the first example, the initial seed never changes, resulting in a patten where there is a lot of space that is never touched. The latter two canvases show the trails left by the bullets (Note that the colors and angles don't match up, but the comparison should be sufficient for demonstrating the point). If this is a component of a pattern, it may be OK, but if making danmaku for dodging, only using fixed angle seeds leaves potential for blind spots. In contrast, in the second example, every part of the screen is touched at some point.</p>
 	      <p>Now, we'll discuss aimed angles. In these cases, bullets spawned from a Spawner move towards a location on the screen. In standard gameplay, this is almost always a familiar or the player. In pure Danmaku Theory, aimed angles play a very minor role.</p>
 	      <p>In the following examples, we will first have a 'player' oscillating on the bottom of the screen while bullets are aimed at the 'player'. Then we will have an example where the single aimed bullet is accompanied by two others with relative angles, in order to demonstrate the power of aimed angles. Finally we will have stacks in the spread to showcase how aimed bullets can form a meaningful subpattern.</p>
 		<div style="text-align:center"><canvas id="gamecanvas_8a" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_8b" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_8c" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_8a', 'Aimed Angle');createNewGame('gamecanvas_8b', 'Aimed Angle (Spread)');createNewGame('gamecanvas_8c', 'Aimed Angle (Spread Stack)');">Run Danmakanvas</button></div>
@@ -76,9 +76,8 @@
           <div class="tutnavbar">
 	    <ul>
 	      <li><a href="./ddsga1.html" title="The Humble Bullet - The Fundamental Unit of Danmaku">Guide A1</a></li>
-
 	      <li><span>Navigation Bar</span></li>
-	      <li><span>---</span></li>
+	      <li><a href="./ddsga3.html" title="The Ring, The Spread, and The Stack - Combinations with You">Guide A3</a></li>
 	    </ul>
 	    <br>
           </div>      <footer id="footer">      </footer>    </div>

@@ -1,0 +1,97 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>Sparen's Danmaku Design Studio - Guide A3</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmaku Design Studio - Guide A3 - The Ring, The Spread, and The Stack - Combinations with You. A guide covering bullet groups and subpatterns, including rings, spreads, and stacks."      name="description">
+    <meta name="keywords" content="Sparen, Danmaku, Design, Theory, Studio, Group, Subpattern, Ring, Spread, Stack">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Nov 23, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+      <div id="menubar">
+        <ul>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
+          <li><a href="./danmakudesign.html" title="Sparen's Danmaku Design Studio">Danmaku Design</a></li>
+        </ul>
+      </div>      <div id="pagecontentwrapper">
+          <div id="pagecontent">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ddsga2.html" title="Danmaku and the Player - Aesthetics and Gameplay">Guide A2</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>	      <h1 class="toplevelheadera">Sparen's Danmaku Design Studio - Guide A3 - The Ring, The Spread, and The Stack - Combinations with You</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: Guide Introduction</a></li>
+	          <li><a href="#sub2">Part 2: Groups and Subpatterns</a></li>
+	          <li><a href="#sub3">Part 3: Rings and their usage</a></li>
+	          <li><a href="#sub4">Part 4: N-way notation</a></li>
+	          <li><a href="#sub5">Part 5: Bullet Spreads and Walls</a></li>
+	          <li><a href="#sub6">Part 6: N-stack notation</a></li>
+	          <li><a href="#sub7">Part 7: Stacks and their usage</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: Guide Introduction</h2>
+	      <p>In the previous guide, we covered angles, bullet graphics, and the concept of bullets that add aesthetic value to a pattern while not directly impacting how the pattern is played. In this guide we will dive deep into Bullet Groups and Subpatterns, and will cover the three fundamental Bullet Groups and some of the ways in which they can be used. These are Rings, Spreads, and Stacks, and while they may seem awfully boring, they are important building blocks for more complex patterns that require significant time for mastery.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: Groups and Subpatterns</h2>
+	      <p>In our <a href="./ddsg0.html">Guide 0</a>, we gave a brief introduction to Patterns, Subpatterns, and Groups. With the Pattern being the all-encompassing term for a complete danmaku animation over a specified period of time, we used the term Subpattern to refer to specific parts of the pattern. These were top-level Groups, where Groups were noted as being the fundamental component of a pattern. This terminology can be a little confusing, but it will provide one way of thinking about the components of a danmaku pattern. </p>
+	      <p>To discuss this further, we'll start at the bottom, with Groups. Every Bullet in a Group shares many characteristics - a common relative spawner, similar graphics, angle, speed, etc. Not every bullet in a group must share all of these characteristics, but they typically share many things in common. In addition, Groups can be spacial or temporal in nature when forming larger Groups.</p>
+	      <p>A single Bullet can be a Group. However, it is much more common to have a set of Bullets with most aspects in common. For example, a ring of bullets - typically, all members of the ring will have the same speed, graphic, etc, and will only differ in their angle. Alternatively, a stack of bullets. Here they have different speeds but otherwise have similar parameters.</p>
+	      <p>These smaller groups can be grouped together into larger groups. For example, spawning six rings at the same time with positions relative to a fixed point. Here there are six rings, so we have a group containing six other groups. And when repeated over time, we end up with a Subpattern.</p>
+	      <p>We will now discuss the foundational groups, starting with the Ring.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Rings and their usage</h2>
+	      <p>Rings have a reputation for being incredibly simple and incredibly boring. By definition, they are just Groups of bullets spawned at the same time relative to the same Spawner, with a common angle difference between them. Yet rings are capable of so much more than one might expect. We'll go into some crazier Subpatterns in later guides but for now check out AJS's Everlasting Purity script, where every pattern uses Rings for every Subpattern.</p>
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/YzkecHtaqfI" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <p>Now, the creative aspects of Ring usage, like with any component of a danmaku pattern, depend on usage of Controllers in an effective fashion as well as understanding how to balance the temporal and spacial density and positioning of the rings. Still, even without complex Controllers and simple behavior, rings can be incredibly powerful.</p>
+	      <p>Anyways, let's first go over the fundamentals. Every ring starts with a 'seed' angle and a number of components. For the ring to feel like an actual ring, you typically need at least three bullets per ring. The seed angle can be random, aimed, or fixed. The structure of a ring dictates a common angle between the bullets, so if there are n bullets in the ring, the angle between them will be 360 degrees divided by n bullets. The more bullets are added, the smaller this difference becomes, gradually forming a circle as n goes to infinity.</p>
+	      <p>In the following canvas, you can experiment with how many bullets are in a given ring. The default for this example is 3 and the range goes from 1 to 100.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_1" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', 'n-rings');">Run Danmakanvas</button></div>
+		<div style="background: #202020; outline: none; text-align:center;">
+		  <input type="range" min="1" max="100" value="3" style="background: #4CAF50; width: 100%" id="canvas1n">
+		  <p id="canvas1nvalue">Value: </p>
+		</div>
+	      <p>For the sake of terminology, we will refer to a ring with n bullets as an n-ring regardless of where it is spawned.</p>
+	      <p>Now that we've covered this, we'll talk about some more ways you can spawn rings spatially. We will cover temporal changes in Guide A5 where we will discuss ring-based patterns such as spirals and BoWaP.</p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: N-way notation</h2>
+	      <p></p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: Bullet Spreads and Walls</h2>
+	      <p></p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: N-stack notation</h2>
+	      <p></p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub7">Part 7: Stacks and their usage</h2>
+	      <p></p>
+	      <p></p>
+		<div style="text-align:center"><canvas id="gamecanvas_1" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_2" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', 'Directed Bullets');createNewGame('gamecanvas_2', 'Non-Directional Bullets')">Run Danmakanvas</button></div>
+	      <p></p>
+	      <p></p>
+	      <p></p>
+	      <p></p>
+		<div style="text-align:center"><canvas id="gamecanvas_5" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_5', 'Fixed Angle');">Run Danmakanvas</button></div>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ddsga2.html" title="Danmaku and the Player - Aesthetics and Gameplay">Guide A2</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>      <footer id="footer">      </footer>    </div>
+    <script type="text/javascript" src="javascript/ph3tutorialcommon.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script type="text/javascript" src="./dds_danmakanvas/Danmakanvas.js"></script>
+    <script type="text/javascript" src="./dds_danmakanvas/DDSG3.js"></script>  </body></html>
