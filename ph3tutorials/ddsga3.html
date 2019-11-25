@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Nov 24, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupENG('Nov 25, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div id="menubar">
         <ul>
           <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
@@ -62,7 +62,7 @@
 	      <p>Now that we've covered the basic definition, we'll talk about some more ways you can spawn rings spatially. We will cover temporal changes in Guide A5 where we will discuss ring-based patterns such as spirals and BoWaP, so for now we will limit ourselves to spacial changes.</p>
 	      <p>First, we'll demonstrate a Subpattern where there are two primary Groups, one per direction. There are two Spawners which are moving away from the center. Each Spawner plants a ring of Bullets at a set interval.</p>
 		<div style="text-align:center"><canvas id="gamecanvas_2" width="480" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_2', 'Distance Offset');">Run Danmakanvas</button><br><button type="button" onclick="Single_2_SetMode('FIXED')">Fixed Angle</button><button type="button" onclick="Single_2_SetMode('RANDOM')">Random Angle</button><button type="button" onclick="Single_2_SetMode('CHANGING')">Changing Angle</button><button type="button" onclick="Single_2_SetMode('AIMED')">Aimed Angle</button></div>
-	      <p>This example has three angle settings - Fixed (Default, Green), Random (Orange), Changing (Purple), and Aimed (Blue). These show some of the ways in which the firing angle can change over time. This example does changes symmetrically for the Changing mode, with a change of 1.5 degrees per ring. Note that this example has acceleration to clear the screen faster.</p>
+	      <p>This example has four angle settings - Fixed (Default, Green), Random (Orange), Changing (Purple), and Aimed (Blue). These show some of the ways in which the firing angle can change over time. This example does changes symmetrically for the Changing mode, with a change of 1.5 degrees per ring. Note that this example has acceleration to clear the screen faster.</p>
 	      <p>In the Fixed setting, we are effectively firing a static ring multiple times, just at a different location. Note how this creates 'lines' of a sort, except that the lines are offset by time as well as space. That's not a line a player can graze! This kind of technique can be put to good use, as seen in the clip from Subterranean Extra below where stage enemies enter the screen and stop moving. The opening is a little rough-looking since the bullets are not aligned, but the fact that the angles are fixed allows for the pattern to proceed at a high speed.</p>
 	      <div>
 	        <iframe width="560" height="315" src="https://www.youtube.com/embed/sqfhyd0V08E?start=115" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
