@@ -3,8 +3,13 @@
 "use strict";
 
 let CANVAS_1_N = 3;
+let CANVAS_5_N = 64;
+let CANVAS_6S_N = 64;
+let CANVAS_6P_N = 128;
 let CANVAS_2_MODE = "FIXED";
 let CANVAS_4_MODE = "FIXED";
+let CANVAS_5_MODE = "FIXED";
+let CANVAS_6_MODE = "FIXED";
 
 // Controller that determines which attacks to display
 function getPluralController(currgame, canvasid) {
@@ -20,6 +25,12 @@ function getPluralController(currgame, canvasid) {
             break;
         case "gamecanvas_4":
             return new Plural_4(currgame);
+            break;
+        case "gamecanvas_5":
+            return new Plural_5(currgame);
+            break;
+        case "gamecanvas_6":
+            return new Plural_6(currgame);
             break;
         default:
             console.log("getPluralController(): Canvas ID " + canvasid + " could not be recognized. Please check to make sure that the canvas ID is correct and/or supported.");
@@ -71,6 +82,28 @@ function Plural_4(currgame) {
     }
 }
 
+function Plural_5(currgame) {
+    this.step = 0; // Default to first single in array
+    this.singles = [new Single_5(currgame)];
+    this.update = function () {
+        this.singles[this.step].update();
+    }
+    this.remove = function () {
+        this.singles = [];
+    }
+}
+
+function Plural_6(currgame) {
+    this.step = 0; // Default to first single in array
+    this.singles = [new Single_6(currgame)];
+    this.update = function () {
+        this.singles[this.step].update();
+    }
+    this.remove = function () {
+        this.singles = [];
+    }
+}
+
 // Constructor for a Single
 function Single_1(currgame) {
     this.tasks = [];
@@ -78,7 +111,7 @@ function Single_1(currgame) {
         if (currgame.everyinterval(20)) { 
             CreateRingA1(CANVAS_1_N, GetCenterX(currgame), GetCenterY(currgame), 2, 0, "#FF8888", 4, 8, 1, 0, currgame);
             CANVAS_1_N = document.getElementById("canvas1n").value;
-            document.getElementById("canvas1nvalue").innerHTML = "Value: " + CANVAS_1_N;
+            document.getElementById("canvas1nvalue").innerHTML = "Number of Bullets in Ring: " + CANVAS_1_N;
         }
         // Remove completed tasks
         let tasktoremove = [];
@@ -239,10 +272,6 @@ function Single_4(cg) {
                 graphic = "#FF8000";
                 dang = Math.random()*Math.PI*2;
             }
-            if (CANVAS_4_MODE === "RANDOM") {
-                graphic = "#FF8000";
-                dang = Math.random()*Math.PI*2;
-            }
             if (CANVAS_4_MODE === "AIMED") {
                 graphic = "#0080F0";
                 angleBase1 = GetAngleCoordCoord(GetCenterX(cg) + 160, GetCenterY(cg) + 160, GetCenterX(cg), GetCenterY(cg));
@@ -276,4 +305,115 @@ function Single_4(cg) {
 
 function Single_4_SetMode(val) {
     CANVAS_4_MODE = val;
+}
+
+function Single_5(cg) {
+    this.tasks = [];
+    let mainshot = CreateShotA1(GetCenterX(cg) + 128*Math.cos(cg.frameNo/80), 360, 0, 0, "#FF0000", 8, 12, 2, 0, cg);
+    let angleBase = Math.PI/2; // 90
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        CANVAS_5_N = document.getElementById("canvas5n").value;
+        document.getElementById("canvas5nvalue").innerHTML = "Distance from Center (px): " + CANVAS_5_N;
+        mainshot.x = GetCenterX(cg) + 128*Math.cos(cg.frameNo/80);
+        if (cg.everyinterval(5)) { 
+            let dang = 0;
+            let graphic = "#00FF80";
+            if (CANVAS_5_MODE === "CHANGING") {
+                dang = 0.01;
+                graphic = "#8000FF";
+            }
+            if (CANVAS_5_MODE === "RANDOM") {
+                graphic = "#FF8000";
+                dang = Math.random()*Math.PI*2;
+            }
+            if (CANVAS_5_MODE === "AIMED") {
+                graphic = "#0080F0";
+                // Use fixed position for seed
+                angleBase = GetAngleCoordCoord(GetCenterX(cg), GetCenterY(cg), mainshot.x, 360);
+            }
+            let i = 0;
+            for (i = 0; i < 32; i += 1) {
+                let tgtang = angleBase + dang * cg.frameNo + Math.PI*2/32*i;
+                CreateShotA2(GetCenterX(cg) + CANVAS_5_N*Math.cos(tgtang), GetCenterY(cg) + CANVAS_5_N*Math.sin(tgtang), 0, tgtang, 0.02, 20, graphic, 3, 4, 1, 1, -1, cg);
+            }
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () {
+        this.tasks = [];
+    }
+}
+
+function Single_6(cg) {
+    this.tasks = [];
+    let mainshot = CreateShotA1(GetCenterX(cg) + CANVAS_6P_N*Math.cos(cg.frameNo/80), GetCenterY(cg) + CANVAS_6P_N*Math.sin(cg.frameNo/80), 0, 0, "#FF0000", 8, 12, 2, 0, cg);
+    let angleBase = Math.PI/2; // 90
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        CANVAS_6S_N = document.getElementById("canvas6sn").value;
+        CANVAS_6P_N = document.getElementById("canvas6pn").value;
+        document.getElementById("canvas6snvalue").innerHTML = "Spawn Distance from Center (px): " + CANVAS_6S_N;
+        document.getElementById("canvas6pnvalue").innerHTML = "Player Distance from Center (px): " + CANVAS_6P_N;
+        mainshot.x = GetCenterX(cg) + CANVAS_6P_N*Math.cos(cg.frameNo/80);
+        mainshot.y = GetCenterX(cg) + CANVAS_6P_N*Math.sin(cg.frameNo/80);
+        if (cg.everyinterval(6)) { 
+            let dang = 0;
+            let graphic = "#00FF80";
+            if (CANVAS_6_MODE === "CHANGING") {
+                dang = 0.01;
+                graphic = "#8000FF";
+            }
+            if (CANVAS_6_MODE === "RANDOM") {
+                graphic = "#FF8000";
+                dang = Math.random()*Math.PI*2;
+            }
+            let i = 0;
+            for (i = 0; i < 32; i += 1) {
+                let tgtang = angleBase + dang * cg.frameNo + Math.PI*2/32*i;
+                let fireang = GetAngleCoordCoord(GetCenterX(cg) + CANVAS_6S_N*Math.cos(tgtang), GetCenterY(cg) + CANVAS_6S_N*Math.sin(tgtang), mainshot.x, mainshot.y);
+                let currbullet = CreateShotA2(GetCenterX(cg) + CANVAS_6S_N*Math.cos(tgtang), GetCenterY(cg) + CANVAS_6S_N*Math.sin(tgtang), 0, fireang, 0.025, 20, graphic, 3, 4, 1, 1, -1, cg);
+                currbullet.customupdate = function() {applyfade(currbullet);}
+            }
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () {
+        this.tasks = [];
+    }
+}
+
+// Function lowering brad over time
+function applyfade(target) {
+    target.brad *= 0.995;
+}
+
+function Single_5_SetMode(val) {
+    CANVAS_5_MODE = val;
+}
+
+function Single_6_SetMode(val) {
+    CANVAS_6_MODE = val;
 }

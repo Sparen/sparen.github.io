@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 20, 2018')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Dec 04, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -161,7 +161,7 @@
 	      <h2 class="ph3tutorialheader" id="sub9">Part 9: How Do I Create Snaking Lasers and Bullet Lines?</h2>
 	      <p>Now we will discuss snake lasers and snaking bullet lines.</p>
 	      <p>First thing's first - what exactly are we doing? Well, we are going to create a laser/bullet string that changes its angular velocity every set number of frames to -1 * its original value. This creates a snaking bullet string, which has its applications.</p>
-	      <p>To do this, we will want to use ObjMove_AddPattern with a variable, which I will name wvel (for omega, angular velocity).</p>
+	      <p>To do this, we will want to use ObjMove_AddPattern with a variable, which I will name wvel (for omega, angular velocity). Note that this task takes an existing object as a parameter.</p>
 	      <pre class="prettyprint linenums"><code>    task SnakePattern(obj){
 	let wvel = 1;
     }</code></pre>

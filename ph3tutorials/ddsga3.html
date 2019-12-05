@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Nov 25, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupENG('Dec 04, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div id="menubar">
         <ul>
           <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
@@ -31,17 +31,17 @@
 	          <li><a href="#sub1">Part 1: Guide Introduction</a></li>
 	          <li><a href="#sub2">Part 2: Groups and Subpatterns</a></li>
 	          <li><a href="#sub3">Part 3: Rings and their usage</a></li>
-	          <li><a href="#sub4">Part 4: N-way notation</a></li>
-	          <li><a href="#sub5">Part 5: Bullet Spreads and Walls</a></li>
-	          <li><a href="#sub6">Part 6: N-stack notation</a></li>
-	          <li><a href="#sub7">Part 7: Stacks and their usage</a></li>
+	          <li><a href="#sub4">Part 4: Bullet Spreads and Walls</a></li>
+	          <li><a href="#sub5">Part 5: Stacks and their usage</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: Guide Introduction</h2>
 	      <p>In the previous guide, we covered angles, bullet graphics, and the concept of bullets that add aesthetic value to a pattern while not directly impacting how the pattern is played. In this guide we will dive deep into Bullet Groups and Subpatterns, and will cover three common Bullet Groups and some of the ways in which they can be used. These are Rings, Spreads, and Stacks, and while they may seem boring at first glance, they are important building blocks for more complex patterns that require significant time for mastery.</p>
+	      <p>From here on out, a major goal will be to not only break down patterns into their component parts but also to provide numerous techniques and concepts that can be melded together or expanded upon in order to create new, original patterns as well as patterns that make effective use of the fundamentals. It is therefore of the utmost importance that you as the reader have at least some experience with a danmaku engine so that you can experiment and brainstorm.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: Groups and Subpatterns</h2>
-	      <p>In our <a href="./ddsg0.html">Guide 0</a>, we gave a brief introduction to Patterns, Subpatterns, and Groups. With the Pattern being the all-encompassing term for a complete danmaku animation over a specified period of time, we used the term Subpattern to refer to specific parts of the pattern. These were top-level Groups, where Groups were noted as being a fundamental component of a pattern right above individual Bullets themselves. This terminology can be a little confusing, but it will provide one way of thinking about the components of a danmaku pattern.</p>
-	      <p>To discuss this further, we'll start at the bottom of this three-level heirarchy with Groups. Every Bullet in a Group shares many characteristics - a common relative spawner, similar graphics, angle, speed, etc. Not every bullet in a group must share all of these characteristics, but they typically share many things in common. In addition, Groups can be spacial or temporal in nature when forming larger Groups.</p>
+	      <p>In our <a href="./ddsg0.html">Guide 0</a>, we gave a brief introduction to Patterns, Subpatterns, and Groups. With the Pattern being the all-encompassing term for a complete danmaku animation over a specified period of time, we used the term Subpattern to refer to specific parts of the pattern. These were top-level Groups, where Groups were noted as being a fundamental component of a pattern right above individual Bullets themselves. This terminology can be a little confusing, but it will provide one way of thinking about the components of a danmaku pattern - that of patterns as being of a tree structure.</p>
+	      <p>In this tree structure, which we must emphasize is only one possible way to conceptualize a danmaku pattern, the entire tree is the pattern, with the trunk forming the core. This trunk is fed by large branches - our Subpatterns. On their own, they are comprised of smaller parts, but together they form the Pattern, which is greater than the sum of its constituent parts. These Subpatterns are further comprised of different groups of bullets, spawned over time as well as in different parts of the playing field. Groups are comprised of smaller groups until we arrive at the smallest groups of all - the leaves of the tree. These are the individual bullets.</p>
+	      <p>We can also think of this in the opposite direction. We'll start at the bottom of this hierarchy with Groups. Every Bullet in a Group shares many characteristics - a common relative spawner, similar graphics, angle, speed, etc. Not every bullet in a group must share all of these characteristics, but they typically share many things in common. In addition, Groups can be spacial or temporal in nature when forming larger Groups.</p>
 	      <p>A single Bullet can be a Group. However, it is much more common to have a set of Bullets with most aspects in common rather than just a single bullet (though there are some ways in which single Bullets can add significant value to a Pattern). As an example, take a ring of bullets - typically, all members of the ring will have the same speed, graphic, etc, and will only differ in their angle. Alternatively, consider a stack of bullets. Here they have different speeds but otherwise have similar parameters.</p>
 	      <p>These smaller groups can be grouped together into larger groups. For example, spawning six rings at the same time with positions relative to a fixed point. Here there are six rings, so we have a group containing six other groups. Alternatively, if five rings are spawned in quick succession with a break, those five rings can also be considered a larger Group. And when these groups are repeated over time, we end up with a Subpattern.</p>
 	      <p>We will now discuss the foundational groups, starting with the Ring.</p>
@@ -56,7 +56,7 @@
 		<div style="text-align:center"><canvas id="gamecanvas_1" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', 'n-rings');">Run Danmakanvas</button></div>
 		<div style="background: #202020; outline: none; text-align:center;">
 		  <input type="range" min="1" max="100" value="3" style="background: #4CAF50; width: 100%" id="canvas1n">
-		  <p id="canvas1nvalue">Value: </p>
+		  <p id="canvas1nvalue">Number of Bullets in Ring: </p>
 		</div>
 	      <p>For the sake of terminology, we will refer to a ring with n bullets as an n-ring regardless of where it is spawned.</p>
 	      <p>Now that we've covered the basic definition, we'll talk about some more ways you can spawn rings spatially. We will cover temporal changes in Guide A5 where we will discuss ring-based patterns such as spirals and BoWaP, so for now we will limit ourselves to spacial changes.</p>
@@ -74,21 +74,32 @@
 	      <p>With this, we have provided one example of how rings can be fired at positions relative to a static point. We'll now give another example with the same four angle modes as before. This time, we will spawn from four static locations in the corner of the screen.</p>
 		<div style="text-align:center"><canvas id="gamecanvas_4" width="480" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_4', 'Static Positions');">Run Danmakanvas</button><br><button type="button" onclick="Single_4_SetMode('FIXED')">Fixed Angle</button><button type="button" onclick="Single_4_SetMode('RANDOM')">Random Angle</button><button type="button" onclick="Single_4_SetMode('CHANGING')">Changing Angle</button><button type="button" onclick="Single_4_SetMode('AIMED')">Aimed Angle</button></div>
 	      <p>Note how adding the rings at different locations adds a form of symmetry. This results in a nicer looking Subpattern in general. As for specific notes on the modes, our angle for the Changing mode has been adjusted so that the angle does not divide nicely into 360 degrees. This way, the bullets don't run on the exact same path for a very long time, avoiding the creation of blind spots.</p>
-	      <p>The Aimed mode would be more interesting if the player were moving, but that's an exercise for you, the scripter, to try out.</p>
-	      <p>We'll conclude the ring section by discussing rings offset from the Spawner by a set radius. This is an incredibly popular and powerful technique, especially when combined with an interesting Controller. Advanced versions of this technique often manifest when discussing familiars. But for now, a basic definition.</p>
-	      <p>Put simply, if our spawner is at (x, y), and we want to spawn bullets at a radius r away, we will spawn our bullets like so: `(x + r*cos(360/n), y + r*sin(360/n))`, where n is the number of bullets in the ring.</p>
-	      <p>We can visualize this like so:</p>
+	      <p>The Aimed mode would be more interesting if the player were moving, but that's an exercise for you, the scripter, to try out. Consider both use cases where each ring in sequence aims at the player as well as use cases where the first ring aims at the player but the rings after use that same angle instead of calculating a new one.</p>
+	      <p>We'll conclude the ring section by discussing rings offset from the Spawner by a set radius. This is an incredibly popular and powerful technique, especially when combined with an interesting Controller. Advanced versions of this technique often manifest when discussing familiars and will be discussed later in greater detail (as well as in <a href="./ph3u3l28.html">ph3 Tutorials Lesson 28</a>). But for now, a basic definition.</p>
+	      <p>Put simply, if our spawner is at (x, y), and we want to spawn bullets at a radius r away, we will spawn our bullets like so: <code>(x + r*cos(360/n), y + r*sin(360/n))</code>, where n is the number of bullets in the ring.</p>
+	      <p>We can visualize this like so..</p>
+		<div style="text-align:center"><canvas id="gamecanvas_5" width="480" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_5', 'Offset');">Run Danmakanvas</button><br><button type="button" onclick="Single_5_SetMode('FIXED')">Fixed Angle</button><button type="button" onclick="Single_5_SetMode('RANDOM')">Random Angle</button><button type="button" onclick="Single_5_SetMode('CHANGING')">Changing Angle</button><button type="button" onclick="Single_5_SetMode('AIMED')">Aimed Angle</button></div>
+		<div style="background: #202020; outline: none; text-align:center;">
+		  <input type="range" min="0" max="240" value="64" style="background: #4CAF50; width: 100%" id="canvas5n">
+		  <p id="canvas5nvalue">Distance from Center (px): </p>
+		</div>
+	      <p>Above, in aimed mode, the angle is based off of the location of the Spawner at the center of the screen, as if there were a boss in the center. However, now that the bullets in the rings are no longer based at the spawner's location, it is possible to have them individually aim at the player from their new locations. In the following example, all of the bullets are aimed. Note that the player is now rotating. This is for aesthetic effect in order to showcase how aiming at a target from different locations can create unintended aesthetic effects. Don't see anything interesting with the defaults? Try adjusting the two radii to see what kinds of insights can be extracted from this example. Experiment with the player inside the spawn radius, for example. Spawn Radius of 192 and Player Radius of 128 is a good preset, especially with the changing angle.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_6" width="480" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_6', 'Offset + Aiming');">Run Danmakanvas</button><br><button type="button" onclick="Single_6_SetMode('FIXED')">Fixed Angle</button><button type="button" onclick="Single_6_SetMode('RANDOM')">Random Angle</button><button type="button" onclick="Single_6_SetMode('CHANGING')">Changing Angle</button></div>
+		<div style="background: #202020; outline: none; text-align:center;">
+		  <input type="range" min="0" max="240" value="64" style="background: #4CAF50; width: 100%" id="canvas6sn">
+		  <p id="canvas6snvalue">Spawn Distance from Center (px): </p>
+		  <input type="range" min="0" max="240" value="128" style="background: #4CAF50; width: 100%" id="canvas6pn">
+		  <p id="canvas6pnvalue">Player Distance from Center (px): </p>
+		</div>
+	      <p>Observe how the player consistently moves and how the pattern has a delay before reaching the player's position. There are many techniques we will cover in the future that make use of this delay. And hopefully, you have come to learn that there are all kinds of techniques that you can employ with simple rings. Take the tools you have learned and apply them to build even more interesting patterns!</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: Bullet Spreads and Walls</h2>
+	      <p>In this section, we will cover spreads and walls, two very important formations of bullets.</p>
+	      <p>Sometimes, you don't need a ring. Perhaps you just want several bullets in an arc. Just like rings, there is a common angle between them. If you want n of these bullets in an arc, we can call this an n-way spread.</p>
+	      <p>Similar to the ring example earlier, experiment with the total angle and number of bullets in the following interactive example.</p>
 	      <p>TODO</p>
-	      <h2 class="ph3tutorialheader" id="sub4">Part 4: N-way notation</h2>
 	      <p></p>
 	      <p></p>
-	      <h2 class="ph3tutorialheader" id="sub5">Part 5: Bullet Spreads and Walls</h2>
-	      <p></p>
-	      <p></p>
-	      <h2 class="ph3tutorialheader" id="sub6">Part 6: N-stack notation</h2>
-	      <p></p>
-	      <p></p>
-	      <h2 class="ph3tutorialheader" id="sub7">Part 7: Stacks and their usage</h2>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: Stacks and their usage</h2>
 	      <p></p>
 	      <p></p>
 	      <p></p>
