@@ -96,16 +96,38 @@
 	      <p>In this section, we will cover spreads and walls, two very important formations of bullets.</p>
 	      <p>Sometimes, you don't need a ring. Perhaps you just want several bullets in an arc. Just like rings, there is a common angle between them. If you want n of these bullets in an arc, we can call this an n-way spread.</p>
 	      <p>Similar to the ring example earlier, experiment with the total angle and number of bullets in the following interactive example.</p>
-	      <p>TODO</p>
-	      <p></p>
-	      <p></p>
+		<div style="text-align:center"><canvas id="gamecanvas_7" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_7', 'n-way spread');">Run Danmakanvas</button></div>
+		<div style="background: #202020; outline: none; text-align:center;">
+		  <input type="range" min="2" max="100" value="3" style="background: #4CAF50; width: 100%" id="canvas7n">
+		  <p id="canvas7nvalue">Number of Bullets in Spread: </p>
+		  <input type="range" min="0" max="360" value="30" style="background: #4CAF50; width: 100%" id="canvas7arc">
+		  <p id="canvas7arcvalue">Arc Angle (Total): </p>
+		</div>
+	      <p>Similar to with rings, the more bullets, the denser. However, decreasing the arc in which the bullets spawn also increases density. And when the density grows too high, the n-way stack becomes a wall. The typical definition of a wall is any Group or formation of bullets where a player cannot move through the constituent bullets. In terms of danmaku dodging, this introduces the concepts of <strong>micrododging</strong> and <strong>macrododging</strong>. In the former, there is a dense cloud of bullets where the player navigates carefully between bullets. In the latter, there are large formations of bullets where the player cannot move straight through and so the player moves around the objects. A good combination of the two can create dynamic danmaku patterns such as those of Utsuho's spellcards in Subterranean Animism, which combine large suns with waves of smaller bullets.</p>
+	      <p>So what can we do with spreads? As before, we can use a variety of angles to fire them. However, the most important when designing danmaku for gameplay comes down to two fundamental types of spreads and the aimed angle.</p>
+	      <p>By this, I am referring to streaming. Streaming is possible with consecutively fired aimed rings as well as strings of aimed bullets (as well as stacks, which we will cover next). However, with spreads, there are two different types - spreads with even numbers of bullets and those with odd numbers of bullets.</p>
+	      <p>The key difference is that with odd numbers of bullets, the player is trapped and must carefully navigate while with even numbers, <strong>the bullets in the spread all avoid the player.</strong></p>
+	        <iframe width="560" height="315" src="https://www.youtube.com/embed/KlWLBB6lYFI?start=743" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	      <p>In the opening of Mountain of Faith Stage 5 on Lunatic with the Ultra patch, the entire opening pattern avoids the player. Of course this is an Ultra patch so it's not as good of an example for how this technique can be applied practically - good practical examples come from Youmu.</p>
+	        <iframe width="560" height="315" src="https://www.youtube.com/embed/qgcICN5DmHY?start=96" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	      <p>The key to using an even n-way spread is that it provides a set angle range in which the player is trapped <strong>without actually hitting the player</strong>. This forces the player to focus on the range inside and whatever danmaku is utilized to take advantage of that focus on one part of the screen. Note that there is nothing explicitly preventing this from being done with rings, but it is most commonly applied with spreads.</p>
+	      <p>On their own, n-way spreads don't do much more in isolation. However, we will now discuss stacks, where n-way spreads truly shine.</p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: Stacks and their usage</h2>
-	      <p></p>
-	      <p></p>
-	      <p></p>
-	      <p></p>
-	      <p></p>
-	      <p></p>
+	      <p>The concept of a stack is simple. Instead of firing a single bullet with a given angle and a single speed, you fire multiple bullets with that same angle at the same time. The catch is that each has a different speed - typically a speed offset between the bullets in the stack.</p>
+	      <p>We will define an n-stack as being a Group of Bullets with the same angle, Spawner and spawn point, and Controller where the bullets have speeds evenly spread out between a minimum velocity and a maximum velocity. Try out the example below. Note that the angles are adjusted to better show each stack.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_8" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_8', 'n-stack');">Run Danmakanvas</button></div>
+		<div style="background: #202020; outline: none; text-align:center;">
+		  <input type="range" min="2" max="50" value="3" style="background: #4CAF50; width: 100%" id="canvas8n">
+		  <p id="canvas8nvalue">Number of Bullets in Stack: </p>
+		  <input type="range" min="0.25" max="8" value="2" step="0.25" style="background: #4CAF50; width: 100%" id="canvas8min">
+		  <p id="canvas8minvalue">Minimum Speed: </p>
+		  <input type="range" min="0.25" max="8" value="5" step="0.25" style="background: #4CAF50; width: 100%" id="canvas8max">
+		  <p id="canvas8maxvalue">Maximum Speed: </p>
+		</div>
+	      <p>Try setting the bullet count to be very high. What do you notice? How about having a large difference between the two speeds? A small difference?</p>
+	      <p>Long walls perfect for streaming and lines of bullets allowing for micrododging are both possible with stacks. But of course, the real power comes when combining the fundamental groups together into larger groups.</p>
+	      <p>We will first consider stacks of rings, and then stacks of spreads. We will close by combining everything we've covered in this guide.</p>
+	      <p>TODO</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <br>            </div>          </div>

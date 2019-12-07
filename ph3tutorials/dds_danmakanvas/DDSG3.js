@@ -6,6 +6,11 @@ let CANVAS_1_N = 3;
 let CANVAS_5_N = 64;
 let CANVAS_6S_N = 64;
 let CANVAS_6P_N = 128;
+let CANVAS_7_N = 3;
+let CANVAS_7_ARC = 30;
+let CANVAS_8_N = 3;
+let CANVAS_8_MIN = 2.0;
+let CANVAS_8_MAX = 5.0;
 let CANVAS_2_MODE = "FIXED";
 let CANVAS_4_MODE = "FIXED";
 let CANVAS_5_MODE = "FIXED";
@@ -31,6 +36,12 @@ function getPluralController(currgame, canvasid) {
             break;
         case "gamecanvas_6":
             return new Plural_6(currgame);
+            break;
+        case "gamecanvas_7":
+            return new Plural_7(currgame);
+            break;
+        case "gamecanvas_8":
+            return new Plural_8(currgame);
             break;
         default:
             console.log("getPluralController(): Canvas ID " + canvasid + " could not be recognized. Please check to make sure that the canvas ID is correct and/or supported.");
@@ -96,6 +107,28 @@ function Plural_5(currgame) {
 function Plural_6(currgame) {
     this.step = 0; // Default to first single in array
     this.singles = [new Single_6(currgame)];
+    this.update = function () {
+        this.singles[this.step].update();
+    }
+    this.remove = function () {
+        this.singles = [];
+    }
+}
+
+function Plural_7(currgame) {
+    this.step = 0; // Default to first single in array
+    this.singles = [new Single_7(currgame)];
+    this.update = function () {
+        this.singles[this.step].update();
+    }
+    this.remove = function () {
+        this.singles = [];
+    }
+}
+
+function Plural_8(currgame) {
+    this.step = 0; // Default to first single in array
+    this.singles = [new Single_8(currgame)];
     this.update = function () {
         this.singles[this.step].update();
     }
@@ -416,4 +449,65 @@ function Single_5_SetMode(val) {
 
 function Single_6_SetMode(val) {
     CANVAS_6_MODE = val;
+}
+
+// Constructor for a Single
+function Single_7(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(20)) { 
+            CreateSpreadA1(CANVAS_7_N, Math.PI / 180 * CANVAS_7_ARC/(CANVAS_7_N - 1), GetCenterX(currgame), GetCenterY(currgame)/4, 2, Math.PI/2, "#FF8888", 4, 8, 1, 0, currgame);
+            CANVAS_7_N = document.getElementById("canvas7n").value;
+            CANVAS_7_ARC = document.getElementById("canvas7arc").value;
+            document.getElementById("canvas7nvalue").innerHTML = "Number of Bullets in Spread: " + CANVAS_7_N;
+            document.getElementById("canvas7arcvalue").innerHTML = "Arc Angle (Total): " + CANVAS_7_ARC;
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () {
+        this.tasks = [];
+    }
+}
+
+function Single_8(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(20)) { 
+            CreateStackA1(CANVAS_8_N, (CANVAS_8_MAX - CANVAS_8_MIN)/(CANVAS_8_N-1), GetCenterX(currgame), GetCenterY(currgame)/4, CANVAS_8_MIN, Math.PI/2 + Math.PI/4*Math.cos(currgame.frameNo/80), "#FF8888", 4, 8, 1, 0, currgame);
+            CANVAS_8_N = document.getElementById("canvas8n").value;
+            CANVAS_8_MIN = parseFloat(document.getElementById("canvas8min").value);
+            CANVAS_8_MAX = parseFloat(document.getElementById("canvas8max").value);
+            document.getElementById("canvas8nvalue").innerHTML = "Number of Bullets in Stack: " + CANVAS_8_N;
+            document.getElementById("canvas8minvalue").innerHTML = "Minimum Speed: " + CANVAS_8_MIN;
+            document.getElementById("canvas8maxvalue").innerHTML = "Maximum Speed: " + CANVAS_8_MAX;
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () {
+        this.tasks = [];
+    }
 }
