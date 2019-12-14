@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Dec 07, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupENG('Dec 13, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div id="menubar">
         <ul>
           <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
@@ -128,8 +128,19 @@
 	      <p>Try setting the bullet count to be very high. What do you notice? How about having a large difference between the two speeds? A small difference?</p>
 	      <p>Long walls perfect for streaming and lines of bullets allowing for micrododging are both possible with stacks. But of course, the real power comes when combining the fundamental groups together into larger groups.</p>
 	      <p>We will first consider stacks of rings, and then stacks of spreads. We will close by combining everything we've covered in this guide.</p>
-	      <p>TODO</p>
-	      <p></p>
+	      <p>Stacks of rings. Inherently they don't sound too interesting. After all, you can just fire rings at a constant rate and get something similar. However, there are advantages - first, each stack of rings functions as a very visible group and is often a subpattern due to its impact within a pattern. Second, the component rings grow farther apart over time since the speed changes due to stack properties. And third, the rings are all fired at the same time, and therefore have the same angle.</p>
+	      <p>Observe the following two examples. We are only providing Changing and Aimed angles for these but they should serve to demonstrate the differences between constant rings and infrequent stacks of rings.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_9a" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_9b" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_9a', 'Constant Rings');createNewGame('gamecanvas_9b', 'Stacks of Rings')">Run Danmakanvas</button><br><button type="button" onclick="Single_9_SetMode('CHANGING')">Changing Angle</button><button type="button" onclick="Single_9_SetMode('AIMED')">Aimed Angle</button></div>
+	      <p>There are a few things to note that we have not yet mentioned. First, with regards to speeds. When using stacks of rings, it is possible for the faster bullets of a later Group to pass slower bullets of an earlier Group, resulting in pattern overlap and higher complexity. When done thoughtfully, this becomes an incredibly powerful technique that adds difficulty in different ways depending on how it is implemented as well as a juxtoposition of multiple potential types of bullets if different colors or shapes (or even gradients) are utilized for the bursts of bullets. Experiment and extract the full potential of this technique!</p>
+	      <p>Second, you may notice that in these examples, stacks of rings grant steadily changing angles more depth due to both graphical overlay and visible pattern adjustment. Of course this is also visible with regular rings, but the temporal and spacial adjustment is different - the stacks are clearer at first but the visible angle decays over time. This provides an orderly and symmetric pattern despite the decayed angle, which can result in a more dynamic pattern.</p>
+	      <p>And in addition to these, in our examples, the player is moving. As mentioned prior, you can use aimed angles to force a player to stream bullets. In the case of the stacks, the timing adds more complexity to this and provides a different set of opportunities for the player to switch directions as well as the potential for temporary walls perpendicular to the typical horizontal direction of movement.</p>
+	      <p>As for stacks of spreads, they provide a number of use cases - for example, aimed bursts that are quite visible to the player despite high speeds. </p>
+		<div style="text-align:center"><canvas id="gamecanvas_10" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_10', 'Burst Spread Stacks')">Run Danmakanvas</button></div>
+	      <p>Stacks of spreads provide a constraining functionality just like their component spreads, but the stack nature provides openings between the stacks farther from the spawn point, allowing the player to 'escape' the confinement before the next spread stack approaches. </p>
+	      <p>And of course, unlike a ring stack, spread stacks have clear boundaries where they are applicable and where they are not, especially with low n-way spread stacks. Take advantage of this and you will be able to create patterns where the different components work together.</p>
+	      <p>To close this guide, we will display a pattern comprising of only these basic building blocks. No acceleration or angular velocity or player - just a danmaku pattern.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_11" width="480" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_11', '')">Run Danmakanvas</button></div>
+	      <p>And with that, we conclude this guide. Remember that everything starts from the fundamentals, and that by experimenting with and adapting upon the techniques you have learned, you can create more beautiful and intriguing danmaku patterns.</p>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <br>            </div>          </div>
           <div class="tutnavbar">

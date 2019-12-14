@@ -15,6 +15,7 @@ let CANVAS_2_MODE = "FIXED";
 let CANVAS_4_MODE = "FIXED";
 let CANVAS_5_MODE = "FIXED";
 let CANVAS_6_MODE = "FIXED";
+let CANVAS_9_MODE = "CHANGING";
 
 // Controller that determines which attacks to display
 function getPluralController(currgame, canvasid) {
@@ -43,6 +44,18 @@ function getPluralController(currgame, canvasid) {
         case "gamecanvas_8":
             return new Plural_8(currgame);
             break;
+        case "gamecanvas_9a":
+            return new Plural_9a(currgame);
+            break;
+        case "gamecanvas_9b":
+            return new Plural_9b(currgame);
+            break;
+        case "gamecanvas_10":
+            return new Plural_10(currgame);
+            break;
+        case "gamecanvas_11":
+            return new Plural_11(currgame);
+            break;
         default:
             console.log("getPluralController(): Canvas ID " + canvasid + " could not be recognized. Please check to make sure that the canvas ID is correct and/or supported.");
     }
@@ -52,92 +65,87 @@ function getPluralController(currgame, canvasid) {
 function Plural_1(currgame) {
     this.step = 0; // Default to first single in array
     this.singles = [new Single_1(currgame)];
-    this.update = function () {
-        this.singles[this.step].update();
-    }
-    this.remove = function () {
-        this.singles = [];
-    }
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
 }
 
 function Plural_2(currgame) {
     this.step = 0; // Default to first single in array
     this.singles = [new Single_2(currgame)];
-    this.update = function () {
-        this.singles[this.step].update();
-    }
-    this.remove = function () {
-        this.singles = [];
-    }
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
 }
 
 function Plural_3(currgame) {
     this.step = 0; // Default to first single in array
     this.singles = [new Single_3(currgame)];
-    this.update = function () {
-        this.singles[this.step].update();
-    }
-    this.remove = function () {
-        this.singles = [];
-    }
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
 }
 
 function Plural_4(currgame) {
     this.step = 0; // Default to first single in array
     this.singles = [new Single_4(currgame)];
-    this.update = function () {
-        this.singles[this.step].update();
-    }
-    this.remove = function () {
-        this.singles = [];
-    }
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
 }
 
 function Plural_5(currgame) {
     this.step = 0; // Default to first single in array
     this.singles = [new Single_5(currgame)];
-    this.update = function () {
-        this.singles[this.step].update();
-    }
-    this.remove = function () {
-        this.singles = [];
-    }
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
 }
 
 function Plural_6(currgame) {
     this.step = 0; // Default to first single in array
     this.singles = [new Single_6(currgame)];
-    this.update = function () {
-        this.singles[this.step].update();
-    }
-    this.remove = function () {
-        this.singles = [];
-    }
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
 }
 
 function Plural_7(currgame) {
     this.step = 0; // Default to first single in array
     this.singles = [new Single_7(currgame)];
-    this.update = function () {
-        this.singles[this.step].update();
-    }
-    this.remove = function () {
-        this.singles = [];
-    }
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
 }
 
 function Plural_8(currgame) {
     this.step = 0; // Default to first single in array
     this.singles = [new Single_8(currgame)];
-    this.update = function () {
-        this.singles[this.step].update();
-    }
-    this.remove = function () {
-        this.singles = [];
-    }
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
 }
 
-// Constructor for a Single
+function Plural_9a(currgame) {
+    this.step = 0; // Default to first single in array
+    this.singles = [new Single_9a(currgame)];
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
+}
+
+function Plural_9b(currgame) {
+    this.step = 0; // Default to first single in array
+    this.singles = [new Single_9b(currgame)];
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
+}
+
+function Plural_10(currgame) {
+    this.step = 0; // Default to first single in array
+    this.singles = [new Single_10(currgame)];
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
+}
+
+function Plural_11(currgame) {
+    this.step = 0; // Default to first single in array
+    this.singles = [new Single_11(currgame)];
+    this.update = function () { this.singles[this.step].update(); }
+    this.remove = function () { this.singles = []; }
+}
+
 function Single_1(currgame) {
     this.tasks = [];
     this.update = function () { // Main Loop for a given Danmakanvas Instance
@@ -160,12 +168,9 @@ function Single_1(currgame) {
             this.tasks.splice(tasktoremove[i], 1);
         }
     }
-    this.remove = function () {
-        this.tasks = [];
-    }
+    this.remove = function () { this.tasks = []; }
 }
 
-// Constructor for a Single
 function Single_2(currgame) {
     this.tasks = [];
     CreateShotA1(GetCenterX(currgame), 400, 0, 0, "#FF0000", 8, 12, 2, 0, currgame);
@@ -187,9 +192,7 @@ function Single_2(currgame) {
             this.tasks.splice(tasktoremove[i], 1);
         }
     }
-    this.remove = function () {
-        this.tasks = [];
-    }
+    this.remove = function () { this.tasks = []; }
 }
 
 function Single_2_Helper(mode, cg) {
@@ -228,8 +231,7 @@ function Single_2_Helper(mode, cg) {
             this.finished = true;
         }
     }
-    this.remove = function () { // Deconstructor. Called by the Single object. Destroy any subtasks or objects created by the task here.
-    }
+    this.remove = function () {}
 }
 
 function Single_2_SetMode(val) {
@@ -256,9 +258,7 @@ function Single_3(currgame) {
             this.tasks.splice(tasktoremove[i], 1);
         }
     }
-    this.remove = function () {
-        this.tasks = [];
-    }
+    this.remove = function () { this.tasks = []; }
 }
 
 function Single_3_Helper(cg) {
@@ -281,11 +281,9 @@ function Single_3_Helper(cg) {
             this.finished = true;
         }
     }
-    this.remove = function () { // Deconstructor. Called by the Single object. Destroy any subtasks or objects created by the task here.
-    }
+    this.remove = function () {}
 }
 
-// Constructor for a Single
 function Single_4(cg) {
     this.tasks = [];
     CreateShotA1(GetCenterX(cg), GetCenterY(cg), 0, 0, "#FF0000", 8, 12, 2, 0, cg);
@@ -331,9 +329,7 @@ function Single_4(cg) {
             this.tasks.splice(tasktoremove[i], 1);
         }
     }
-    this.remove = function () {
-        this.tasks = [];
-    }
+    this.remove = function () { this.tasks = []; }
 }
 
 function Single_4_SetMode(val) {
@@ -384,9 +380,7 @@ function Single_5(cg) {
             this.tasks.splice(tasktoremove[i], 1);
         }
     }
-    this.remove = function () {
-        this.tasks = [];
-    }
+    this.remove = function () { this.tasks = []; }
 }
 
 function Single_6(cg) {
@@ -433,9 +427,7 @@ function Single_6(cg) {
             this.tasks.splice(tasktoremove[i], 1);
         }
     }
-    this.remove = function () {
-        this.tasks = [];
-    }
+    this.remove = function () { this.tasks = []; }
 }
 
 // Function lowering brad over time
@@ -451,7 +443,6 @@ function Single_6_SetMode(val) {
     CANVAS_6_MODE = val;
 }
 
-// Constructor for a Single
 function Single_7(currgame) {
     this.tasks = [];
     this.update = function () { // Main Loop for a given Danmakanvas Instance
@@ -476,9 +467,7 @@ function Single_7(currgame) {
             this.tasks.splice(tasktoremove[i], 1);
         }
     }
-    this.remove = function () {
-        this.tasks = [];
-    }
+    this.remove = function () { this.tasks = []; }
 }
 
 function Single_8(currgame) {
@@ -507,7 +496,178 @@ function Single_8(currgame) {
             this.tasks.splice(tasktoremove[i], 1);
         }
     }
-    this.remove = function () {
-        this.tasks = [];
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_9_SetMode(val) {
+    CANVAS_9_MODE = val;
+}
+
+function Single_9a(cg) {
+    this.tasks = [];
+    let mainshot = CreateShotA1(GetCenterX(cg) + 128*Math.cos(cg.frameNo/80), 240, 0, 0, "#FF0000", 8, 12, 2, 0, cg);
+    let angleBase = Math.PI/2; // 90
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        mainshot.x = GetCenterX(cg) + 128*Math.cos(cg.frameNo/80);
+        if (cg.everyinterval(15)) { 
+            let dang = 0;
+            let graphic = "#00FF80";
+            if (CANVAS_9_MODE === "CHANGING") {
+                dang = 0.017;
+                graphic = "#8000FF";
+            }
+            if (CANVAS_9_MODE === "AIMED") {
+                graphic = "#0080F0";
+                // Use fixed position for seed
+                angleBase = GetAngleCoordCoord(GetCenterX(cg), GetCenterY(cg), mainshot.x, 240);
+            }
+            CreateRingA1(20, GetCenterX(cg), GetCenterY(cg), 2, angleBase + dang * cg.frameNo, graphic, 3, 4, 1, 1, cg);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
     }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_9b(cg) {
+    this.tasks = [];
+    let mainshot = CreateShotA1(GetCenterX(cg) + 128*Math.cos(cg.frameNo/80), 240, 0, 0, "#FF0000", 8, 12, 2, 0, cg);
+    let angleBase = Math.PI/2; // 90
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        mainshot.x = GetCenterX(cg) + 128*Math.cos(cg.frameNo/80);
+        if (cg.everyinterval(30)) { 
+            let dang = 0;
+            let graphic = "#00FF80";
+            if (CANVAS_9_MODE === "CHANGING") {
+                dang = 0.017;
+                graphic = "#8000FF";
+            }
+            if (CANVAS_9_MODE === "AIMED") {
+                graphic = "#0080F0";
+                // Use fixed position for seed
+                angleBase = GetAngleCoordCoord(GetCenterX(cg), GetCenterY(cg), mainshot.x, 240);
+            }
+            CreateRingStackA1(20, 3, 0.33, GetCenterX(cg), GetCenterY(cg), 2, angleBase + dang * cg.frameNo, graphic, 3, 4, 1, 1, cg);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_10(cg) {
+    this.tasks = [];
+    let mainshot = CreateShotA1(GetCenterX(cg) + 128*Math.cos(cg.frameNo/80), 240, 0, 0, "#FF0000", 8, 12, 2, 0, cg);
+    let angleBase = Math.PI/2; // 90
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        mainshot.x = GetCenterX(cg) + 128*Math.cos(cg.frameNo/80);
+        if (cg.everyinterval(60)) { 
+            let graphic = "#0080F0";
+            // Use fixed position for seed
+            angleBase = GetAngleCoordCoord(GetCenterX(cg), 40, mainshot.x, 240);
+            CreateSpreadStackA1(5, 18, Math.PI/8, 0.33, GetCenterX(cg), 40, 0.67, angleBase, graphic, 3, 4, 1, 1, cg);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_11(cg) {
+    this.tasks = [];
+    let angleBase1 = Math.PI/2; // 90
+    let angleBase2 = Math.PI/2 + Math.PI/3; // 90 + 60
+    let angleBase3 = Math.PI/2; // 90
+    let iterct1 = 0;
+    let iterct2 = 0;
+    let iterct3 = 0;
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+/*        if (cg.everyinterval(20)) { 
+            // Use fixed position for seed
+            let i = 0;
+            for (i = 0; i < 3; i += 1) {
+	            let newshots = CreateSpreadStackA1(3, 2, Math.PI/8, 0.5, GetCenterX(cg) + 32*Math.cos(angleBase3+Math.PI*2/3*i), GetCenterY(cg) + 32*Math.sin(angleBase3+Math.PI*2/3*i), 3 + 1.5*Math.cos(iterct1*0.25), angleBase1 + i*Math.PI*2/3, "#0080F0", 3, 4, 1, 1, cg);
+	            let objctr = 0;
+	            for (objctr = 0; objctr < newshots.length; objctr += 1) {
+	                let currbullet = newshots[objctr];
+	                SetShotGraphic(currbullet, "ARROWHEAD", "#FFFF00", 0, 8, 2, 4, true, 0);
+	            }
+	        }
+            angleBase1 += 0.17;
+            iterct1 += 1;
+        }*/
+        if (cg.everyinterval(20)) { 
+            // Use fixed position for seed
+            let i = 0;
+            for (i = 0; i < 3; i += 1) {
+	            let newshots = CreateSpreadStackA1(2, 2, Math.PI/12, 0.5, GetCenterX(cg), GetCenterY(cg), 1.5 + 1*Math.cos(iterct2*0.25), angleBase2 + i*Math.PI*2/3, "#0080F0", 3, 4, 1, 1, cg);
+	            let objctr = 0;
+	            for (objctr = 0; objctr < newshots.length; objctr += 1) {
+	                let currbullet = newshots[objctr];
+	                SetShotGraphic(currbullet, "ARROWHEAD", "#FF44AA", 0, 8, 8, 2, true, 0);
+	            }
+	        }
+            angleBase2 += 0.17;
+            iterct2 += 1;
+        }
+        if (cg.everyinterval(30)) { 
+            let i = 0;
+            for (i = 0; i < 5; i += 1) {
+	            let newshots = CreateRingStackA1(5, 8, 0.5, GetCenterX(cg) + 200*Math.cos(angleBase3+Math.PI*2/5*i), GetCenterY(cg) + 200*Math.sin(angleBase3+Math.PI*2/5*i), 1, angleBase3+Math.PI*2/5*i, "#0080F0", 3, 4, 1, 1, cg);
+	            let objctr = 0;
+	            for (objctr = 0; objctr < newshots.length; objctr += 1) {
+	                let currbullet = newshots[objctr];
+	                SetShotGraphic(currbullet, "DIAMOND", "#00FFFF", 0, 4, 2, 2, true, 0);
+	            }
+	        }
+            angleBase3 -= 0.17;
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
 }
