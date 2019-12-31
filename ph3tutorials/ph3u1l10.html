@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Dec 04, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Dec 30, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -80,7 +80,7 @@
 	      <p>The default is 1, where the tip is not visible at all, and the function allows a range from 0 (no fading) to 1 (full fading). The value is a percentage, so 0.5 will have 50% fading of the laser tips.</p>
 	      <pre class="prettyprint"><code>    let objLaser = CreateCurveLaserA1(ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 4, GetAngleToPlayer(objBoss),
         60, 18, 1018, 10);
-    ObjCrLaser_SetTipDecrement(objLaser, 1); //make the tip of the laser visible</code></pre>
+    ObjCrLaser_SetTipDecrement(objLaser, 0); //make the tip of the laser visible</code></pre>
 	      <div class="tut_exercise">EXERCISE: Experiment with ObjCrLaser_SetTipDecrement. What effect does it have on how curved lasers are displayed?</div>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: Why Does Using Curved Lasers Lag So Much?</h2>
 	      <p>It's the question you've all been asking - why is there so much lag when using curved lasers?</p>
