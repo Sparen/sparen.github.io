@@ -1,99 +1,169 @@
-//use strict will result in unwanted problems. Don't use it here.
+// use strict causes issues.
 
-var database_obj;
+let database_obj;
 
 //JSON NOTES:
 //NUMBERS THAT ARE UNKNOWN DEFAULT TO -1. OTHER UNKNOWNS DEFAULT TO NOTHING
 
-// Common variables here. USE VAR - NO SUPPORT FOR IE IF LET/CONST USED
-var color_motk = "#66AAFF";
-var color_locaa = "#66FFAA";
-var color_uwom = "#CCCCCC";
-var color_bhe = "#e0115f";
+// Common letiables here. USE VAR - NO SUPPORT FOR IE IF LET/CONST USED
+const color_motk = "#66AAFF";
+const color_locaa = "#66FFAA";
+const color_uwom = "#CCCCCC";
+const color_bhe = "#e0115f";
 
-var num_locations = 4; // Used in select for loops
-var location_names = ["MotK", "LOCAA", "UWoM", "BHE"]; // This allows for for loops. ALL STRUCTURES USE THIS ORDER.
-var location_names_lc = ["motk", "locaa", "uwom", "bhe"]; // Valid locations from JSON, in proper order
-var location_colors = [color_motk, color_locaa, color_uwom, color_bhe];
+const num_locations = 4; // Used in select for loops
+const location_names = ["MotK", "LOCAA", "UWoM", "BHE"]; // This allows for for loops. ALL STRUCTURES USE THIS ORDER.
+const location_names_lc = ["motk", "locaa", "uwom", "bhe"]; // Valid locations from JSON, in proper order
+const location_colors = [color_motk, color_locaa, color_uwom, color_bhe];
 
-// Create dropdown menu for query box, providing o`ptions to run other functions
-function createDropdown() {
-    console.log("createDropdown(): Running");
-    return "<form method='POST' onSubmit='return execute();'>" +
-            "<select id='dropdown'>" +
-            "<option value='none' name='opt'> - Please make a selection - </option>" +
-            "<option value='cpy' name='opt'>Contests per Year</option>" +
-            "<option value='avgnumpartloc' name='opt'>Avg. Num. of Participants by Loc.</option>" +
-            "<option value='participateovertime' name='opt'>Participants Over Time</option>" +
-            "<option value='participanthistory' name='opt'>Participant History</option>" +
-            "</select>" +
-            "<input type='SUBMIT' value='Submit'>" +
-            "</form>";
+/* ---------- Helper Functions ---------- */
+// Given the starting x and y coordinates, generates the common key for color-location matching
+function generatekey(xstart, ystart) {
+    let output = "";
+    output += '<rect x="' + (xstart - 96) + '" y="' + (ystart) + '" height="8" width="8" fill="' + color_motk + '"></rect>';
+    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 4) + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+          'text-anchor="start" dominant-baseline="central">MotK</text>';
+    output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 30) + '" height="8" width="8" fill="' + color_locaa + '"></rect>';
+    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 34) + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+          'text-anchor="start" dominant-baseline="central">LOCAA</text>';
+    output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 60) + '" height="8" width="8" fill="' + color_uwom + '"></rect>';
+    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 64) + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+          'text-anchor="start" dominant-baseline="central">UWoM</text>';
+    output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 90) + '" height="8" width="8" fill="' + color_bhe + '"></rect>';
+    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 94) + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
+          'text-anchor="start" dominant-baseline="central">BHE</text>';
+    return output;
 }
 
-// Obtains the contents of the specified JSON file
-function getFileContents() {
-    console.log("getFileContents(): Running");
-    var filepath = "contestdatabase.json";
-    var client = new XMLHttpRequest();
-    client.open("GET", filepath, true);
-    client.onreadystatechange = function () { //callback
-        if (client.readyState == 4) {
-            if (client.status == 200 || client.status == 0) {
-                document.getElementById("queryselect").innerHTML = createDropdown();
-                database_obj = JSON.parse(client.responseText);
-            }
-        }
+// Given a contest object, returns an object with the start and end dates as well as the color to be used
+function fetchstartendcolor(contestobj) {
+    let fsec_start = [0, 0]; //year, month (1-12)
+    let fsec_end = [0, 0]; //year, month (1-12)
+    let cleared = true;
+    let displaystring = "";
+    fsec_end[0] = Math.trunc(contestobj.duration[1]);
+    if (fsec_end[0] === -1) {
+        fsec_end[1] = -1;
+        displaystring += "Note: Contest ID " + contestobj.id + " does not have a valid end date.<br>";
+        cleared = false; //NO GO IF NO END DATE
+    } else {
+        fsec_end[1] = Math.trunc((contestobj.duration[1] - fsec_end[0]) * 100);
+    }
+    fsec_start[0] = Math.trunc(contestobj.duration[0]);
+    if (fsec_start[0] === -1) {
+        fsec_start[1] = -1;
+        displaystring += "Note: Contest ID " + contestobj.id + " does not have a valid start date.<br>";
+        fsec_start = fsec_end; //so that the rectangle centers on the end date only
+    } else {
+        fsec_start[1] = Math.trunc((contestobj.duration[0] - fsec_start[0]) * 100);
+    }
+    //console.log("Start: " + fsec_start + " | End: " + fsec_end);
+    let fsec_color = color_motk;
+    if (contestobj.location === "locaa") {
+        fsec_color = color_locaa;
+    } else if (contestobj.location === "uwom") {
+        fsec_color = color_uwom;
+    } else if (contestobj.location === "bhe") {
+        fsec_color = color_bhe;
+    }
+    return {
+        startval: fsec_start,
+        endval: fsec_end,
+        cleared: cleared,
+        colorval: fsec_color,
+        dstring: displaystring
     };
-
-    client.send();
-    console.log("getFileContents(): Request Sent");
 }
+
+// Returns true if a is in the specified object
+function contains(a, obj) {
+    let i = a.length;
+    while (i--) {
+       if (a[i] === obj) {
+           return true;
+       }
+    }
+    return false;
+}
+
+// Returns true if the player is a participant, host, or judge; false otherwise
+function didParticipatePlayer(player, contestobj) {
+    return contains(contestobj.participants, player) || contains(contestobj.judges, player) || contestobj.host === player;
+}
+
+// Returns the index of the value in the array or -1 if it is not present
+function getIndexInArr(val, arr) {
+    let giiactr = 0;
+    for (giiactr = 0; giiactr < arr.length; giiactr += 1) {
+        if (arr[giiactr] === val) {
+            return giiactr;
+        }
+    }
+    return -1;
+}
+
+// Creates an array with l zeros
+function createZeroArray(l) {
+    let cza_toreturn = [];
+    let czactr = 0;
+    for (czactr = 0; czactr < l; czactr += 1) {
+        cza_toreturn.push(0);
+    }
+    return cza_toreturn;
+}
+
+/* ---------- Primary Operational Functions ---------- */
 
 function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCODED
     console.log("contestsPerYear(): Running");
-    var contests = database_obj.contests; //array of contests
-    var years = [];
-    var values = []; //nD array storing contests per category
+
+    let i = 0;
+    let contestctr = 0;
+    let yearctr = 0;
+    let locationctr = 0;
+
+    let contests = database_obj.contests; //array of contests
+    let years = [];
+    let values = []; //nD array storing contests per category
 
     //First, find range of years and prepare arrays accordingly. This shows skipped years
-    var min = contests[0].year;
-    var max = contests[0].year;
-    for (i = 0; i < contests.length; i += 1) {
-        var temp = contests[i].year;
+    let min = contests[0].year;
+    let max = contests[0].year;
+    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
+        let temp = contests[contestctr].year;
         if (temp > max) {max = temp;}
-        if (temp < min && temp != -1) {min = temp;}
+        if (temp < min && temp !== -1) {min = temp;}
     }
     for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
         values = values.concat([createZeroArray(num_locations)]);
     }
 
-    for (i = 0; i < contests.length; i += 1) {
-        var temp = contests[i].year;
+    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
+        let temp = contests[contestctr].year;
         if (contains(years, temp)) { //This statement is necessary for the -1 case
-            var tempindex = getIndexInArr(contests[i].location, location_names_lc); // Determine index for location the contest was hosted at
+            let tempindex = getIndexInArr(contests[contestctr].location, location_names_lc); // Determine index for location the contest was hosted at
             values[years.indexOf(temp)][tempindex] ++;
-        } else if (temp != -1) { //Failsafe
+        } else if (temp !== -1) { //Failsafe
             alert("ERROR");
         }
     }
 
     console.log("contestsPerYear(): Preparing Result");
-    var displaystring = "";
-    for (i = 0; i < years.length; i += 1) {
-    	var yearsum = 0; // Sum of all contests this year
-        displaystring = displaystring + years[i] + " - ";
-        for (j = 0; j < num_locations; j += 1) {
-        	displaystring += location_names[j] + ": " + values[i][j] + "   |   ";
-        	yearsum += values[i][j];
+    let displaystring = "";
+    for (yearctr = 0; yearctr < years.length; yearctr += 1) {
+        let yearsum = 0; // Sum of all contests this year
+        displaystring = displaystring + years[yearctr] + " - ";
+        for (locationctr = 0; locationctr < num_locations; locationctr += 1) {
+            displaystring += location_names[locationctr] + ": " + values[yearctr][locationctr] + "   |   ";
+            yearsum += values[yearctr][locationctr];
         }
         displaystring += "Total: " + yearsum + "<br>";
     }
 
     console.log("contestsPerYear(): Preparing SVG Display"); //NOTE: The SVG height is hardcoded to a max of 23 contests/year
-    var cpy_svg_width = 168 + years.length * 16;
-    var cpy_svg = '<svg xmlns="http://www.w3.org/2000/svg"' +
+    let cpy_svg_width = 168 + years.length * 16;
+    let cpy_svg = '<svg xmlns="http://www.w3.org/2000/svg"' +
         'width="' + cpy_svg_width + '" height="280" version="1.1"' +
         'xmlns:xlink="http://www.w3.org/1999/xlink">';
         //border
@@ -104,22 +174,22 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
           'text-anchor="middle" dominant-baseline="central">' + (5*i) + '</text>';
     }
     // Draw components of bar charts per year, with the total counts as well
-    for (i = 0; i < years.length; i += 1) { //paths and text
-    	var cpy_svg_barbase = 230; // Bottom of bar segment
-    	var barx = 48 + i*16;
-    	var yearsum = 0; // Sum of all contests this year
-    	for (j = 0; j < num_locations; j += 1) {
-    		var temp_cpy_svg_count = 10*values[i][j];
-    		cpy_svg += '<path d="M ' + barx + ' ' + (cpy_svg_barbase) + ' V ' + (cpy_svg_barbase - temp_cpy_svg_count) + '" stroke="' + location_colors[j] + '" stroke-width="12" fill="none"></path>';
-    		cpy_svg_barbase -= temp_cpy_svg_count; // Shift next segment up by current segment's length
-    		yearsum += values[i][j];
-    	}
+    for (yearctr = 0; yearctr < years.length; yearctr += 1) { //paths and text
+        let cpy_svg_barbase = 230; // Bottom of bar segment
+        let barx = 48 + yearctr*16;
+        let yearsum = 0; // Sum of all contests this year
+        for (locationctr = 0; locationctr < num_locations; locationctr += 1) {
+            let temp_cpy_svg_count = 10*values[yearctr][locationctr];
+            cpy_svg += '<path d="M ' + barx + ' ' + (cpy_svg_barbase) + ' V ' + (cpy_svg_barbase - temp_cpy_svg_count) + '" stroke="' + location_colors[locationctr] + '" stroke-width="12" fill="none"></path>';
+            cpy_svg_barbase -= temp_cpy_svg_count; // Shift next segment up by current segment's length
+            yearsum += values[yearctr][locationctr];
+        }
 
-    	// Year text
+        // Year text
         cpy_svg += '<text x="' + barx + '" y="' + (cpy_svg_barbase - 2)  + '" font-family="Andale Mono, Monospace" font-size="14px" fill="white"' +
           'text-anchor="middle" dominant-baseline="alphabetic">' + yearsum + '</text>';
         cpy_svg += '<text x="' + barx + '" y="250" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
-          'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[i] + '</text>';
+          'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[yearctr] + '</text>';
     }
     //key
     cpy_svg += generatekey(cpy_svg_width, 96);
@@ -136,59 +206,60 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
 
 function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCODED
     console.log("averageNumParticipantsLocation(): Running");
-    var contests = database_obj.contests; //array of contests
-    var years = []; //contains years
-    var anpl_numcontests = [];
-    var anpl_numparts = []; //number of participants per year
+
+    let i = 0;
+    let contestctr = 0;
+    let yearctr = 0;
+    let locationctr = 0;
+
+    let contests = database_obj.contests; //array of contests
+    let years = []; //contains years
+    let anpl_numcontests = [];
+    let anpl_numparts = []; //number of participants per year
     //First, find range of years and prepare arrays accordingly. This shows skipped years
-    var min = contests[0].year;
-    var max = contests[0].year;
-    for (i = 0; i < contests.length; i += 1) {
-        var temp = contests[i].year;
+    let min = contests[0].year;
+    let max = contests[0].year;
+    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
+        let temp = contests[contestctr].year;
         if (temp > max) {max = temp;}
-        if (temp < min && temp != -1) {min = temp;}
+        if (temp < min && temp !== -1) {min = temp;}
     }
-    for (i = min; i <= max; i += 1) {
-        years = years.concat([i]);
+    for (yearctr = min; yearctr <= max; yearctr += 1) {
+        years = years.concat([yearctr]);
         anpl_numcontests = anpl_numcontests.concat([createZeroArray(num_locations)]);
         anpl_numparts = anpl_numparts.concat([createZeroArray(num_locations)]);
     }
 
-    for (i = 0; i < contests.length; i += 1) {
-        var temp = contests[i].year;
+    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
+        let temp = contests[contestctr].year;
         if (contains(years, temp)) { //This statement is necessary for the -1 case
-            var tempindex = getIndexInArr(contests[i].location, location_names_lc); // Determine index for location the contest was hosted at
+            let tempindex = getIndexInArr(contests[contestctr].location, location_names_lc); // Determine index for location the contest was hosted at
             anpl_numcontests[years.indexOf(temp)][tempindex] ++;
-            anpl_numparts[years.indexOf(temp)][tempindex] += contests[i].numparticipants;
-        } else if (temp != -1) { //Failsafe
+            anpl_numparts[years.indexOf(temp)][tempindex] += contests[contestctr].numparticipants;
+        } else if (temp !== -1) { //Failsafe
             alert("ERROR");
         }
     }
 
     //assemble averages
-    var anpl_averages = [];
-    for (i = 0; i < years.length; i += 1) {
-    	var temp_avg = [];
-    	for (j = 0; j < num_locations; j += 1) {
-    		temp_avg.push((anpl_numparts[i][j]/anpl_numcontests[i][j]).toFixed(2));
-    		// Checks if a location had zero contests in a year and outputs to console
-        	if (isNaN(temp_avg[j])) {temp_avg[j] = 0; console.log("anps(): 0 contests at " + years[i] + " at " + location_names[j]);}
+    let anpl_averages = [];
+    for (yearctr = 0; yearctr < years.length; yearctr += 1) {
+        let temp_avg = [];
+        for (locationctr = 0; locationctr < num_locations; locationctr += 1) {
+            temp_avg.push((anpl_numparts[yearctr][locationctr]/anpl_numcontests[yearctr][locationctr]).toFixed(2));
+            // Checks if a location had zero contests in a year and outputs to console
+            if (isNaN(temp_avg[locationctr])) {temp_avg[locationctr] = 0; console.log("anps(): 0 contests at " + years[yearctr] + " at " + location_names[locationctr]);}
         }
         anpl_averages = anpl_averages.concat([temp_avg]);
     }
 
     console.log("averageNumParticipantsLocation(): Preparing Result");
 
-    var displaystring = "";
-    /* // This feature is commented out since the only thing it does is dump raw data prior to the graph
-    for (i = 0; i < years.length; i += 1) {
-        displaystring = displaystring + years[i] + " - " +
-        "MotK: #C: " + anpl_numcontests[i][0] + ", #P: " + anpl_numparts[i][0] + ", #Avg: " + anpl_averages[i][0] + "   |   LOCAA: #C: " + anpl_numcontests[i][1] + ", #P: " + anpl_numparts[i][1] + ", #Avg: " + anpl_averages[i][1] + "   |   UWoM: #C: " + anpl_numcontests[i][2] + ", #P: " + anpl_numparts[i][2] + ", #Avg: " + anpl_averages[i][2] + "   |   BHE: #C: " + anpl_numcontests[i][3] + ", #P: " + anpl_numparts[i][3] + ", #Avg: " + anpl_averages[i][3] + "<br>";
-    }*/
+    let displaystring = "";
 
     console.log("averageNumParticipantsLocation(): Preparing SVG Display");
-    var anpl_svg_width = 168 + years.length * 32;
-    var anpl_svg = '<svg xmlns="http://www.w3.org/2000/svg"' +
+    let anpl_svg_width = 168 + years.length * 32;
+    let anpl_svg = '<svg xmlns="http://www.w3.org/2000/svg"' +
         'width="' + anpl_svg_width + '" height="320" version="1.1"' +
         'xmlns:xlink="http://www.w3.org/1999/xlink">';
         //border
@@ -201,22 +272,22 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     }
 
     // Plot line segments for the path
-    for (i = 0; i < years.length - 1; i += 1) {
-    	for (j = 0; j < num_locations; j += 1) {
-    		var anpl_start = 10*anpl_averages[i][j]; // start of path segment
-    		var anpl_end = 10*anpl_averages[i + 1][j]; // end of path segment
-    		anpl_svg += '<path d="M ' + (48 + i*32) + ' ' + (270 - anpl_start) + ' L ' + (48 + (i+1)*32) + ' ' + (270 - anpl_end) + '" stroke="' + location_colors[j] + '" stroke-width="2" fill="none"></path>';
-    	}
+    for (yearctr = 0; yearctr < years.length - 1; yearctr += 1) {
+        for (locationctr = 0; locationctr < num_locations; locationctr += 1) {
+            let anpl_start = 10*anpl_averages[yearctr][locationctr]; // start of path segment
+            let anpl_end = 10*anpl_averages[yearctr + 1][locationctr]; // end of path segment
+            anpl_svg += '<path d="M ' + (48 + yearctr*32) + ' ' + (270 - anpl_start) + ' L ' + (48 + (yearctr+1)*32) + ' ' + (270 - anpl_end) + '" stroke="' + location_colors[locationctr] + '" stroke-width="2" fill="none"></path>';
+        }
     }
     // Plot points and years
-    for (i = 0; i < years.length; i += 1) {
-    	for (j = 0; j < num_locations; j += 1) {
-    		var anpl_start = 10*anpl_averages[i][j]; // location of point to plot
-    		anpl_svg += '<circle cx="' + (48 + i*32) + '" cy="' + (270 - anpl_start) + '" r="2" stroke="white" stroke-width="0.5" fill="' + location_colors[j] + '"></circle>';
-    	}
-    	// Now add text for years
-        anpl_svg += '<text x="' + (48 + i*32) + '" y="290" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
-          'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[i] + '</text>';
+    for (yearctr = 0; yearctr < years.length; yearctr += 1) {
+        for (locationctr = 0; locationctr < num_locations; locationctr += 1) {
+            let anpl_start = 10*anpl_averages[yearctr][locationctr]; // location of point to plot
+            anpl_svg += '<circle cx="' + (48 + yearctr*32) + '" cy="' + (270 - anpl_start) + '" r="2" stroke="white" stroke-width="0.5" fill="' + location_colors[locationctr] + '"></circle>';
+        }
+        // Now add text for years
+        anpl_svg += '<text x="' + (48 + yearctr*32) + '" y="290" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
+          'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + years[yearctr] + '</text>';
     }
 
     //key
@@ -228,16 +299,16 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     anpl_svg += '</svg>';
 
     //OVERALL STATS
-    var displaystring2 = "";
-    for (j = 0; j < num_locations; j += 1) {
-    	var anpl_totalnumcontests = 0; // Number of contests in this category
-    	var anpl_totalnumparts = 0; // Number of participants in this category
-    	for (i = 0; i < years.length; i += 1) {
-    		anpl_totalnumcontests +=  anpl_numcontests[i][j];
-    		anpl_totalnumparts += anpl_numparts[i][j];
-    	}
-    	var anpl_overallaverage = (anpl_totalnumparts/anpl_totalnumcontests).toFixed(2);
-    	displaystring2 += location_names[j] + " Overall: " + anpl_overallaverage + " participants/contest<br>";
+    let displaystring2 = "";
+    for (locationctr = 0; locationctr < num_locations; locationctr += 1) {
+        let anpl_totalnumcontests = 0; // Number of contests in this category
+        let anpl_totalnumparts = 0; // Number of participants in this category
+        for (yearctr = 0; yearctr < years.length; yearctr += 1) {
+            anpl_totalnumcontests +=  anpl_numcontests[yearctr][locationctr];
+            anpl_totalnumparts += anpl_numparts[yearctr][locationctr];
+        }
+        let anpl_overallaverage = (anpl_totalnumparts/anpl_totalnumcontests).toFixed(2);
+        displaystring2 += location_names[locationctr] + " Overall: " + anpl_overallaverage + " participants/contest<br>";
     }
 
     document.getElementById("displaybox").innerHTML = displaystring + "<br>" + anpl_svg + "<br>" + displaystring2;
@@ -245,16 +316,23 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
 
 function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCODED
     console.log("participantsOverTime(): Running");
-    var contests = database_obj.contests; //array of contests
-    var years = []; //contains years
+
+    let i = 0;
+    let contestctr = 0;
+    let monthctr = 0;
+    let yearctr = 0;
+    let locationctr = 0;
+
+    let contests = database_obj.contests; //array of contests
+    let years = []; //contains years
 
     //First, find range of years and prepare arrays accordingly. This shows skipped years
-    var min = contests[0].year;
-    var max = contests[0].year;
-    for (i = 0; i < contests.length; i += 1) {
-        var temp = contests[i].year;
+    let min = contests[0].year;
+    let max = contests[0].year;
+    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
+        let temp = contests[contestctr].year;
         if (temp > max) {max = temp;}
-        if (temp < min && temp != -1) {min = temp;}
+        if (temp < min && temp !== -1) {min = temp;}
     }
     for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
@@ -262,8 +340,8 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
 
     //Now that we know how big the graph is going to be, let's begin setting up the graph. First, the grid
     console.log("participantsOverTime(): Preparing SVG Display");
-    var pot_svg_width = 168 + years.length * 32 * 6;
-    var pot_svg = '<svg xmlns="http://www.w3.org/2000/svg"' +
+    let pot_svg_width = 168 + years.length * 32 * 6;
+    let pot_svg = '<svg xmlns="http://www.w3.org/2000/svg"' +
         'width="' + pot_svg_width + '" height="400" version="1.1"' +
         'xmlns:xlink="http://www.w3.org/1999/xlink">';
         //border
@@ -276,11 +354,11 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
     }
 
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
-    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    for (i = 0; i < years.length; i += 1) { //years
-        for (j = 0; j < 12; j += 1) {
-            pot_svg += '<text x="' + (48 + i*32*6 + j*16) + '" y="350" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
-            'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + (months[j] + " " + years[i]) + '</text>';
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    for (yearctr = 0; yearctr < years.length; yearctr += 1) { //years
+        for (monthctr = 0; monthctr < 12; monthctr += 1) {
+            pot_svg += '<text x="' + (48 + yearctr*32*6 + monthctr*16) + '" y="350" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
+            'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + (months[monthctr] + " " + years[yearctr]) + '</text>';
         }
     }
 
@@ -291,25 +369,25 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
           'text-anchor="end" dominant-baseline="central">This graph was generated by sparen.github.io</text>';
 
     //And now, the data points. Rectangles will be used here.
-    var displaystring = ""; //to log when contest data is unknown
-    var textlabels = ""; //so that all text rendered on a higher layer
-    for (i = 0; i < contests.length; i += 1) { //for each contest
-        var results = fetchstartendcolor(contests[i]);
-        var pot_start = results.startval;
-        var pot_end = results.endval;
-        var cleared = results.cleared;
-        var pot_color = results.colorval;
+    let displaystring = ""; //to log when contest data is unknown
+    let textlabels = ""; //so that all text rendered on a higher layer
+    for (contestctr = 0; contestctr < contests.length; contestctr += 1) { //for each contest
+        let results = fetchstartendcolor(contests[contestctr]);
+        let pot_start = results.startval;
+        let pot_end = results.endval;
+        let cleared = results.cleared;
+        let pot_color = results.colorval;
         displaystring = displaystring + results.dstring;
-        var pot_participants = contests[i].numparticipants; //for height
+        let pot_participants = contests[contestctr].numparticipants; //for height
 
         //Now create the SVG rectangle iff there is an end date
         if (cleared) {
-            var pot_basestart = ((pot_start[0]-min)*12 + pot_start[1])*16; //does not include 48 pixel left and 4 pixel buffer
-            var pot_basewidth = ((pot_end[0] - pot_start[0])*12 + pot_end[1] - pot_start[1])*16; //does not include 8 pixel base rect width
+            let pot_basestart = ((pot_start[0]-min)*12 + pot_start[1])*16; //does not include 48 pixel left and 4 pixel buffer
+            let pot_basewidth = ((pot_end[0] - pot_start[0])*12 + pot_end[1] - pot_start[1])*16; //does not include 8 pixel base rect width
             pot_svg += '<rect x="' + (48 + pot_basestart - 4) + '" y="' + (320 - (pot_participants * 10)) + 
             '" height="' + (pot_participants * 10) + '" width="' + (8 + pot_basewidth) + '" fill="' + pot_color + '" fill-opacity="0.75"></rect>';
             textlabels += '<text x="' + (48 + pot_basestart + pot_basewidth/2) + '" y="' + (320 - (pot_participants * 10)) + 
-            '" fill="' + pot_color + '" text-anchor="end" dominant-baseline="central" writing-mode="tb" font-family="Andale Mono, Monospace" font-size="10px">' + contests[i].id + '</text>';
+            '" fill="' + pot_color + '" text-anchor="end" dominant-baseline="central" writing-mode="tb" font-family="Andale Mono, Monospace" font-size="10px">' + contests[contestctr].id + '</text>';
         }
     }
 
@@ -322,65 +400,71 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
 
 function participantHistory() {
     console.log("participantHistory(): Running");
-    var allparticipants = [];
-    var contests = database_obj.contests; //array of contests
 
-    var ph_displaystring = "Please select people from the following lists in order to generate histories.<br><br>" + 
+    let i = 0;
+    let contestctr = 0;
+    let judgectr = 0;
+    let participantctr = 0;
+
+    let allparticipants = [];
+    let contests = database_obj.contests; //array of contests
+
+    let ph_displaystring = "Please select people from the following lists in order to generate histories.<br><br>" + 
     "This feature allows you to select any number of participants, and a chart will be generated showing their participation, top three placement, and judging and hosting history over the span of multiple contests.<br><br>";
 
     ph_displaystring = ph_displaystring + "<form method='POST' onSubmit='return participantHistory_graphgen();'><input type='SUBMIT' value='Generate Histories'></form>";
     ph_displaystring = ph_displaystring + '<input type="checkbox" name="ph_controlmaster" defaultChecked="false" onclick="return participantHistory_toggleall(this, this.checked);"> Toggle All<br><br>';
 
     //first, obtain list of all chartable people
-    for (i = 0; i < contests.length; i += 1) {
-        var ph_judges = contests[i].judges;
-        var ph_host = contests[i].host;
-        var ph_participants = contests[i].participants;
+    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
+        let ph_judges = contests[contestctr].judges;
+        let ph_host = contests[contestctr].host;
+        let ph_participants = contests[contestctr].participants;
 
         //For obtaining all participants, dropdown list
-        var ph_temp;
-        for (j = 0; j < ph_judges.length; j += 1) {
-            ph_temp = ph_judges[j];
-            if(!contains(allparticipants, ph_temp)) {
+        let ph_temp;
+        for (judgectr = 0; judgectr < ph_judges.length; judgectr += 1) {
+            ph_temp = ph_judges[judgectr];
+            if (!contains(allparticipants, ph_temp)) {
                 allparticipants = allparticipants.concat(ph_temp);
             }
         }
-        if(!contains(allparticipants, ph_host)) {
+        if (!contains(allparticipants, ph_host)) {
             allparticipants = allparticipants.concat(ph_host);
         }
-        for (j = 0; j < ph_participants.length; j += 1) {
-            ph_temp = ph_participants[j];
-            if(!contains(allparticipants, ph_temp)) {
+        for (participantctr = 0; participantctr < ph_participants.length; participantctr += 1) {
+            ph_temp = ph_participants[participantctr];
+            if (!contains(allparticipants, ph_temp)) {
                 allparticipants = allparticipants.concat(ph_temp);
             }
         }
 
         //for listings by contest
-        var contestdisplay = "<div>" + contests[i].id + ": " + contests[i].name + "</div>";
-        contestdisplay = contestdisplay + '<input type="checkbox" name="ph_control" defaultChecked="false" onclick="return participantHistory_selectbycontest(\'' + contests[i].id + '\', this, this.checked);"> Check All<br>';
-        if (ph_host != "") {
-            contestdisplay = contestdisplay + "Host: " + '<input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_host + '" defaultChecked="false">' + ph_host + '<br>';
+        let contestdisplay = "<div>" + contests[contestctr].id + ": " + contests[contestctr].name + "</div>";
+        contestdisplay = contestdisplay + '<input type="checkbox" name="ph_control" defaultChecked="false" onclick="return participantHistory_selectbycontest(\'' + contests[contestctr].id + '\', this, this.checked);"> Check All<br>';
+        if (ph_host !== "") {
+            contestdisplay = contestdisplay + "Host: " + '<input type="checkbox" name="ph_participant" class="ph_' + contests[contestctr].id + '" id="' + ph_host + '" defaultChecked="false">' + ph_host + '<br>';
         } else {
             contestdisplay = contestdisplay + "Host: N/A" + '<br>';
         }
         contestdisplay = contestdisplay + "Judges: <br>";
-        for (j = 0; j < ph_judges.length; j += 1) {
-            ph_temp = ph_judges[j];
-            if(ph_temp != "COMMUNITY" && ph_temp != "GUEST" && ph_temp != "") {
-                contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_temp + '" defaultChecked="false">' + ph_temp + '<br>';
+        for (judgectr = 0; judgectr < ph_judges.length; judgectr += 1) {
+            ph_temp = ph_judges[judgectr];
+            if (ph_temp !== "COMMUNITY" && ph_temp !== "GUEST" && ph_temp !== "") {
+                contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" name="ph_participant" class="ph_' + contests[contestctr].id + '" id="' + ph_temp + '" defaultChecked="false">' + ph_temp + '<br>';
             } else {
                 contestdisplay = contestdisplay + '&nbsp;&nbsp;&nbsp;&nbsp;' + ph_temp + '<br>';
             }
         }
         contestdisplay = contestdisplay + 'Participants: <br><table style="width:100%"><tr>'; //DON'T SHOW THE MISSHAPEN BORDER PLZ
-        for (j = 0; j < ph_participants.length; j += 1) {
-            ph_temp = ph_participants[j];
-            contestdisplay = contestdisplay + '<td><input type="checkbox" name="ph_participant" class="ph_' + contests[i].id + '" id="' + ph_temp + '" defaultChecked="false">' + ph_temp + '</td>';
-            if (j % 5 == 4) {
+        for (participantctr = 0; participantctr < ph_participants.length; participantctr += 1) {
+            ph_temp = ph_participants[participantctr];
+            contestdisplay = contestdisplay + '<td><input type="checkbox" name="ph_participant" class="ph_' + contests[contestctr].id + '" id="' + ph_temp + '" defaultChecked="false">' + ph_temp + '</td>';
+            if (participantctr % 5 === 4) { // Show five per line
                 contestdisplay = contestdisplay + '</tr><tr>';
             }
         }
-        for (j = ph_participants.length; j % 5 != 0; j += 1) { //buffer space
+        for (participantctr = ph_participants.length; participantctr % 5 !== 0; participantctr += 1) { //buffer space
             contestdisplay = contestdisplay + '<td></td>';
         }
         contestdisplay = contestdisplay + "</tr></table>";
@@ -393,9 +477,10 @@ function participantHistory() {
 
 function participantHistory_selectbycontest(contestid, parent, newval) {
     console.log("participantHistory_selectbycontest(): Running");
-    var ph_checked = document.getElementsByClassName("ph_" + contestid);
-    for (i = 0; i < ph_checked.length; i += 1) {
-        ph_checked[i].checked = newval;
+    let ph_checked = document.getElementsByClassName("ph_" + contestid);
+    let parthistctr = 0;
+    for (parthistctr = 0; parthistctr < ph_checked.length; parthistctr += 1) {
+        ph_checked[parthistctr].checked = newval;
     }
     parent.checked = newval; //Some weird error where it stays unchecked when you check it. whelp.
     return false;
@@ -403,9 +488,10 @@ function participantHistory_selectbycontest(contestid, parent, newval) {
 
 function participantHistory_toggleall(parent, newval) {
     console.log("participantHistory_toggleall(): Running");
-    var ph_checked = document.getElementsByName("ph_participant");
-    for (i = 0; i < ph_checked.length; i += 1) {
-        ph_checked[i].checked = newval;
+    let ph_checked = document.getElementsByName("ph_participant");
+    let parthistctr = 0;
+    for (parthistctr = 0; parthistctr < ph_checked.length; parthistctr += 1) {
+        ph_checked[parthistctr].checked = newval;
     }
     parent.checked = newval; //Some weird error where it stays unchecked when you check it. whelp.
     return false;
@@ -413,36 +499,46 @@ function participantHistory_toggleall(parent, newval) {
 
 function participantHistory_graphgen() { //call with a button call
     console.log("participantHistory_graphgen(): Running");
+
+    let i = 0;
+    let contestctr = 0;
+    let monthctr = 0;
+    let yearctr = 0;
+    let locationctr = 0;
+    let judgectr = 0;
+    let participantctr = 0;
+    let parthistctr = 0;
+
     //Read and obtain all selected names
-    var ph_checked = document.getElementsByName("ph_participant");
-    var phgg_selpartic = [];
-    for (i = 0; i < ph_checked.length; i += 1) {
-        var phggtemp = ph_checked[i].id;
-        if(!contains(phgg_selpartic, phggtemp) && ph_checked[i].checked) {
-                phgg_selpartic = phgg_selpartic.concat(phggtemp);
+    let ph_checked = document.getElementsByName("ph_participant");
+    let phgg_selpartic = []; // List of selected participants
+    for (parthistctr = 0; parthistctr < ph_checked.length; parthistctr += 1) {
+        let phggtemp = ph_checked[parthistctr].id;
+        if (!contains(phgg_selpartic, phggtemp) && ph_checked[parthistctr].checked) {
+            phgg_selpartic = phgg_selpartic.concat(phggtemp);
         }
     }
 
     //Prepare SVG using Participants over Time as the base
-    var contests = database_obj.contests; //array of contests
-    var years = []; //contains years
+    let contests = database_obj.contests; //array of contests
+    let years = []; //contains years
 
     //First, find range of years and prepare arrays accordingly. This shows skipped years
-    var min = contests[0].year;
-    var max = contests[0].year;
-    for (i = 0; i < contests.length; i += 1) {
-        var temp = contests[i].year;
+    let min = contests[0].year;
+    let max = contests[0].year;
+    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
+        let temp = contests[contestctr].year;
         if (temp > max) {max = temp;}
-        if (temp < min && temp != -1) {min = temp;}
+        if (temp < min && temp !== -1) {min = temp;}
     }
     for (i = min; i <= max; i += 1) {
         years = years.concat([i]);
     }
 
     console.log("participantHistory_graphgen(): Preparing SVG Display");
-    var phgg_svg_width = 264 + years.length * 32 * 6;
-    var phgg_svg_height = 164 + 16 * phgg_selpartic.length;
-    var phgg_svg = '<svg xmlns="http://www.w3.org/2000/svg"' +
+    let phgg_svg_width = 264 + years.length * 32 * 6;
+    let phgg_svg_height = 164 + 16 * phgg_selpartic.length;
+    let phgg_svg = '<svg xmlns="http://www.w3.org/2000/svg"' +
         'width="' + phgg_svg_width + '" height="' + phgg_svg_height + '" version="1.1"' +
         'xmlns:xlink="http://www.w3.org/1999/xlink">';
         //border
@@ -451,11 +547,11 @@ function participantHistory_graphgen() { //call with a button call
 
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
     //144 is the buffer on the left (for names). 128 is the buffer on the right (for the key)
-    var months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    for (i = 0; i < years.length; i += 1) { //years
-        for (j = 0; j < 12; j += 1) {
-            phgg_svg += '<text x="' + (144 + i*32*6 + j*16) + '" y="' + (phgg_svg_height - 108) + '" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
-            'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + (months[j] + " " + years[i]) + '</text>';
+    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+    for (yearctr = 0; yearctr < years.length; yearctr += 1) { //years
+        for (monthctr = 0; monthctr < 12; monthctr += 1) {
+            phgg_svg += '<text x="' + (144 + yearctr*32*6 + monthctr*16) + '" y="' + (phgg_svg_height - 108) + '" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
+            'text-anchor="middle" dominant-baseline="central" writing-mode="tb">' + (months[monthctr] + " " + years[yearctr]) + '</text>';
         }
     }
 
@@ -477,22 +573,22 @@ function participantHistory_graphgen() { //call with a button call
           'text-anchor="end" dominant-baseline="central">This graph was generated by sparen.github.io</text>';
 
     //And now, the data points. Rectangles will be used here.
-    var displaystring = ""; //to log when contest data is unknown
-    var textlabels = ""; //so that all text rendered on a higher layer
-    for (i = 0; i < contests.length; i += 1) { //for each contest
-        var results = fetchstartendcolor(contests[i]);
-        var phgg_start = results.startval;
-        var phgg_end = results.endval;
-        var cleared = results.cleared;
-        var phgg_color = results.colorval;
+    let displaystring = ""; //to log when contest data is unknown
+    let textlabels = ""; //so that all text rendered on a higher layer
+    for (contestctr = 0; contestctr < contests.length; contestctr += 1) { //for each contest
+        let results = fetchstartendcolor(contests[contestctr]);
+        let phgg_start = results.startval;
+        let phgg_end = results.endval;
+        let cleared = results.cleared;
+        let phgg_color = results.colorval;
         displaystring = displaystring + results.dstring;
 
         //Now create the SVG rectangle iff there is an end date
         if (cleared) {
-            var phgg_basestart = ((phgg_start[0]-min)*12 + phgg_start[1])*16; //does not include 144 pixel left and 4 pixel buffer
-            var phgg_basewidth = ((phgg_end[0] - phgg_start[0])*12 + phgg_end[1] - phgg_start[1])*16; //does not include 8 pixel base rect width
+            let phgg_basestart = ((phgg_start[0]-min)*12 + phgg_start[1])*16; //does not include 144 pixel left and 4 pixel buffer
+            let phgg_basewidth = ((phgg_end[0] - phgg_start[0])*12 + phgg_end[1] - phgg_start[1])*16; //does not include 8 pixel base rect width
             textlabels += '<text x="' + (144 + phgg_basestart + phgg_basewidth/2) + '" y="' + (phgg_svg_height - 80) + 
-            '" fill="' + phgg_color + '" text-anchor="start" dominant-baseline="central" writing-mode="tb" font-family="Andale Mono, Monospace" font-size="10px">' + contests[i].id + '</text>';
+            '" fill="' + phgg_color + '" text-anchor="start" dominant-baseline="central" writing-mode="tb" font-family="Andale Mono, Monospace" font-size="10px">' + contests[contestctr].id + '</text>';
             textlabels += '<path d="M' + (144 + phgg_basestart + phgg_basewidth/2) + ' 4 V' + (phgg_svg_height - 156) + '" stroke-width="1" stroke="#333333"></path>'; //contest guideline
         }
     }
@@ -500,52 +596,53 @@ function participantHistory_graphgen() { //call with a button call
     phgg_svg += textlabels; //labels with contest ID
 
     //Now it's time to add the participants! Oh boy what a... uh... treat!
-    for (j = 0; j < phgg_selpartic.length; j += 1) { //for each and every player.
-    	var phgg_curry = 16 + j*16;
-        var phgg_player = phgg_selpartic[j];
-        var phggplay_start = 0; //start pixel of line
-        var phggplay_end = 0; //end pixel of line
-        var phgg_string = '<text x="8" y="' + phgg_curry + '" fill="#DDDDDD" text-anchor="start" dominant-baseline="central" font-family="Andale Mono, Monospace" font-size="10px">' + phgg_player + '</text>';
-        var phgg_startendpath = '<path d="M 4 ' + (phgg_curry - 8) + ' H ' + (phgg_svg_width - 128) + '" stroke-width="1" stroke="#333333"></path>'; //default guide lines
+    for (participantctr = 0; participantctr < phgg_selpartic.length; participantctr += 1) { //for each and every player.
+        let phgg_curry = 16 + participantctr*16;
+        let phgg_player = phgg_selpartic[participantctr];
+        let phggplay_start = 0; //start pixel of line
+        let phggplay_end = 0; //end pixel of line
+        let phgg_string = '<text x="8" y="' + phgg_curry + '" fill="#DDDDDD" text-anchor="start" dominant-baseline="central" font-family="Andale Mono, Monospace" font-size="10px">' + phgg_player + '</text>';
+        let phgg_startendpath = '<path d="M 4 ' + (phgg_curry - 8) + ' H ' + (phgg_svg_width - 128) + '" stroke-width="1" stroke="#333333"></path>'; //default guide lines
         phgg_startendpath = phgg_startendpath + '<path d="M 4 ' + (phgg_curry + 8) + ' H ' + (phgg_svg_width - 128) + '" stroke-width="1" stroke="#333333"></path>'; //default guide lines
-        var phgg_nodes = "";
+        let phgg_nodes = "";
 
         //Now to iterate over all the contests in search of the name!
-        for (k = 0; k < contests.length; k += 1) { //for each contest
-            var contestobj = contests[k];
-            var phggindiv_results = fetchstartendcolor(contests[k]);
-            var phggindiv_start = phggindiv_results.startval;
-            var phggindiv_end = phggindiv_results.endval;
-            var phgg_basestart = ((phggindiv_start[0] - contests[0].year)*12 + phggindiv_start[1])*16; //does not include 144 pixel left and 4 pixel buffer
-            var phgg_basewidth = ((phggindiv_end[0] - phggindiv_start[0])*12 + phggindiv_end[1] - phggindiv_start[1])*16; //does not include 8 pixel base rect width
-            var nodelocation = 144 + phgg_basestart + phgg_basewidth/2;
+        for (contestctr = 0; contestctr < contests.length; contestctr += 1) { //for each contest
+            let contestobj = contests[contestctr];
+            let phggindiv_results = fetchstartendcolor(contests[contestctr]);
+            let phggindiv_start = phggindiv_results.startval;
+            let phggindiv_end = phggindiv_results.endval;
+            let phgg_basestart = ((phggindiv_start[0] - contests[0].year)*12 + phggindiv_start[1])*16; //does not include 144 pixel left and 4 pixel buffer
+            let phgg_basewidth = ((phggindiv_end[0] - phggindiv_start[0])*12 + phggindiv_end[1] - phggindiv_start[1])*16; //does not include 8 pixel base rect width
+            let nodelocation = 144 + phgg_basestart + phgg_basewidth/2;
 
-            if(contains(contestobj.participants, phgg_player) || contains(contestobj.judges, phgg_player) || contestobj.host == phgg_player) {
-                if(phggplay_start > nodelocation || phggplay_start == 0){phggplay_start = nodelocation;} //if first contest, mark it!
-                if(contestobj.host == phgg_player) {
+            if (contains(contestobj.participants, phgg_player) || contains(contestobj.judges, phgg_player) || contestobj.host === phgg_player) {
+                if (phggplay_start > nodelocation || phggplay_start === 0) {phggplay_start = nodelocation;} //if first contest, mark it!
+                if (contestobj.host === phgg_player) {
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + phgg_curry + '" r="6" stroke="#FF6688" stroke-width="1" fill="#222222"></circle>';
                 }
-                if(contains(contestobj.participants, phgg_player)) {
+                if (contains(contestobj.participants, phgg_player)) {
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + phgg_curry + '" r="5" stroke="#FFFFFF" stroke-width="1" fill="#222222"></circle>';
                 }
-                var topthree = false;
-                for(l = 0; l < contestobj.result.length; l += 1) {
-                    if(contains(contestobj.result[l], phgg_player)){
+                let topthree = false;
+                let k = 0;
+                for (k = 0; k < contestobj.result.length; k += 1) {
+                    if (contains(contestobj.result[k], phgg_player)) {
                         topthree = true;
                     }
                 }
-                if(topthree) {
+                if (topthree) {
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + phgg_curry + '" r="4" fill="#FFCC88"></circle>';
                 }
-                if(contains(contestobj.judges, phgg_player)) {
+                if (contains(contestobj.judges, phgg_player)) {
                     phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + phgg_curry + '" r="2" fill="#44FFCC"></circle>';
                 }
-                if(phggplay_end < nodelocation){phggplay_end = nodelocation;} //if first contest, mark it!
+                if (phggplay_end < nodelocation) {phggplay_end = nodelocation;} //if first contest, mark it!
             }
         }
         phgg_startendpath = phgg_startendpath + '<path d="M ' + phggplay_start + ' ' + phgg_curry + ' H ' + phggplay_end + '" stroke-width="1" stroke="#666666"></path>';
 
-        if(phgg_player != "") { //Exclude NULL players - i.e. no judge for a contest
+        if (phgg_player !== "") { //Exclude NULL players - i.e. no judge for a contest
             phgg_svg = phgg_svg + phgg_string;
             phgg_svg = phgg_svg + phgg_startendpath;
             phgg_svg = phgg_svg + phgg_nodes;
@@ -554,75 +651,52 @@ function participantHistory_graphgen() { //call with a button call
 
     phgg_svg += '</svg>';
 
-    document.getElementById("displaybox").innerHTML = "Selected participants: " + phgg_selpartic + phgg_svg + "<br><br>Contests without a valid end date are not displayed. Contests without a valid start date only show their end month and year.";
+    document.getElementById("displaybox").innerHTML = phgg_svg + "<br><br>Contests without a valid end date are not displayed. Contests without a valid start date only show their end month and year.";
 
     return false;
 }
 
-/* ---------- Helper Functions ---------- */
-// Given the starting x and y coordinates, generates the common key for color-location matching
-function generatekey(xstart, ystart) {
-	var output = "";
-	output += '<rect x="' + (xstart - 96) + '" y="' + (ystart) + '" height="8" width="8" fill="' + color_motk + '"></rect>';
-    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 4) + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
-          'text-anchor="start" dominant-baseline="central">MotK</text>';
-    output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 30) + '" height="8" width="8" fill="' + color_locaa + '"></rect>';
-    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 34) + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
-          'text-anchor="start" dominant-baseline="central">LOCAA</text>';
-    output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 60) + '" height="8" width="8" fill="' + color_uwom + '"></rect>';
-    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 64) + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
-          'text-anchor="start" dominant-baseline="central">UWoM</text>';
-    output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 90) + '" height="8" width="8" fill="' + color_bhe + '"></rect>';
-    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 94) + '" font-family="Andale Mono, Monospace" font-size="14px" fill="#DDDDDD"' +
-          'text-anchor="start" dominant-baseline="central">BHE</text>';
-    return output;
+/* ---------- User-Facing and File Utility Functions ---------- */
+
+// Create dropdown menu for query box, providing options to run other functions
+function createDropdown() {
+    console.log("createDropdown(): Running");
+    return "<form method='POST' onSubmit='return execute();'>" +
+            "<select id='dropdown'>" +
+            "<option value='none' name='opt'> - Please make a selection - </option>" +
+            "<option value='cpy' name='opt'>Contests per Year</option>" +
+            "<option value='avgnumpartloc' name='opt'>Avg. Num. of Participants by Loc.</option>" +
+            "<option value='participateovertime' name='opt'>Participants Over Time</option>" +
+            "<option value='participanthistory' name='opt'>Participant History</option>" +
+            "</select>" +
+            "<input type='SUBMIT' value='Submit'>" +
+            "</form>";
 }
 
-// Given a contest object, returns an object with the start and end dates as well as the color to be used
-function fetchstartendcolor(contestobj) {
-    var fsec_start = [0, 0]; //year, month (1-12)
-    var fsec_end = [0, 0]; //year, month (1-12)
-    var cleared = true;
-    var displaystring = "";
-    fsec_end[0] = Math.trunc(contestobj.duration[1]);
-    if (fsec_end[0] == -1) {
-        fsec_end[1] = -1;
-        displaystring += "Note: Contest ID " + contestobj.id + " does not have a valid end date.<br>";
-        cleared = false; //NO GO IF NO END DATE
-    } else {
-        fsec_end[1] = Math.trunc((contestobj.duration[1] - fsec_end[0]) * 100);
-    }
-    fsec_start[0] = Math.trunc(contestobj.duration[0]);
-    if (fsec_start[0] == -1) {
-        fsec_start[1] = -1;
-        displaystring += "Note: Contest ID " + contestobj.id + " does not have a valid start date.<br>";
-        fsec_start = fsec_end; //so that the rectangle centers on the end date only
-    } else {
-        fsec_start[1] = Math.trunc((contestobj.duration[0] - fsec_start[0]) * 100);
-    }
-    //console.log("Start: " + fsec_start + " | End: " + fsec_end);
-    var fsec_color = color_motk;
-    if (contestobj.location == "locaa") {
-        fsec_color = color_locaa;
-    } else if (contestobj.location == "uwom") {
-        fsec_color = color_uwom;
-    } else if (contestobj.location == "bhe") {
-        fsec_color = color_bhe;
-    }
-    return {
-        startval: fsec_start,
-        endval: fsec_end,
-        cleared: cleared,
-        colorval: fsec_color,
-        dstring: displaystring
+// Obtains the contents of the specified JSON file
+function getFileContents() {
+    console.log("getFileContents(): Running");
+    let filepath = "contestdatabase.json";
+    let client = new XMLHttpRequest();
+    client.open("GET", filepath, true);
+    client.onreadystatechange = function () { //callback
+        if (client.readyState === 4) {
+            if (client.status === 200 || client.status === 0) {
+                document.getElementById("queryselect").innerHTML = createDropdown();
+                database_obj = JSON.parse(client.responseText);
+            }
+        }
     };
+
+    client.send();
+    console.log("getFileContents(): Request Sent");
 }
 
 function execute() {
     console.log("execute(): Running");
-    var s = "none";
-    var selectdd = document.getElementById("dropdown");
-    var index = selectdd.selectedIndex;
+    let s = "none";
+    let selectdd = document.getElementById("dropdown");
+    let index = selectdd.selectedIndex;
     s = selectdd.options[index].value;
 
     console.log("execute(): Checking Selection");
@@ -642,37 +716,6 @@ function execute() {
     }
 
     console.log("execute(): End");
-    
+
     return false;
-}
-
-function contains(a, obj) {
-    var i = a.length;
-    while (i--) {
-       if (a[i] === obj) {
-           return true;
-       }
-    }
-    return false;
-}
-
-// Returns the index of the value in the array or -1 if it is not present
-function getIndexInArr(val, arr) {
-	var giiactr = 0; 
-	for (giiactr = 0; giiactr < arr.length; giiactr += 1) {
-		if (arr[giiactr] === val) {
-			return giiactr;
-		}
-	}
-	return -1;
-}
-
-// Creates an array with l zeros
-function createZeroArray(l) {
-	var cza_toreturn = [];
-	var czactr = 0;
-	for (czactr = 0; czactr < l; czactr += 1) {
-		cza_toreturn.push(0);
-	}
-	return cza_toreturn;
 }
