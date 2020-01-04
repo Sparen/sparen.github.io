@@ -35,27 +35,27 @@
 	      <h2 class="projectheader">What is the APM?</h2>
 	      <p>DNHAPM is a Danmakufu ph3 script that can be run in any stage/plural/single (recommended that you use a stage). It monitors playthroughs of your script, logs data, and on request, will spit out a report.<br><br>What do I mean by report? Well, take a look below!</p>
           <h3 class="projectheader">FPS Monitoring</h3>
-          <img src="https://sparen.github.io/img-hoster/public/dnhapm/fpsexample.png" style="max-width:100%; width:640px; text-align:center">
+          <img src="https://sparen.github.io/img-hoster/public/dnhapm/fpsexample.png" style="max-width:100%; width:640px; text-align:center" alt="FPS Graph from the APM">
           <p>Look at those lag spikes! At the S# notes (spell card declarations), the FPS tanks due to all of the fancy primitive effects in my spell card cutin animation. And the lag spike at 3m20s is probably the boss explosion - enough particle effects to knock any computer below 60 FPS!</p>
           <p>But this FPS profiler also catches some less savory issues - gradual FPS drops near the ends of Nonspells 2 and 3. Maybe I should check those out and see if there are objects that aren't being deleted, hmm...</p>
           <h3 class="projectheader">Graze Monitoring</h3>
-          <img src="https://sparen.github.io/img-hoster/public/dnhapm/grazeexample2.png" style="max-width:100%; width:640px; text-align:center">
+          <img src="https://sparen.github.io/img-hoster/public/dnhapm/grazeexample2.png" style="max-width:100%; width:640px; text-align:center" alt="Graze Graph from the APM">
           <p>70 graze in the first nonspell?! Wow! The graze graph shows which spell cards the player grazed in. Interesting for level design, that's for sure!</p>
           <p>Here you can see where heavy grazing occurred, or where grazing was particularly low.</p>
           <h3 class="projectheader">Score Monitoring</h3>
-          <img src="https://sparen.github.io/img-hoster/public/dnhapm/scoreexample2.png" style="max-width:100%; width:640px; text-align:center">
+          <img src="https://sparen.github.io/img-hoster/public/dnhapm/scoreexample2.png" style="max-width:100%; width:640px; text-align:center" alt="Score Graph from the APM">
           <p>Here you can see where your players are getting their score from (assuming score is enabled). This will probably correlate strongly with the graze graph, though with spikes for spell card captures, bullet clear bonuses, and other bonuses, like the stage clear bonus at the end.</p>
           <h3 class="projectheader">Enemy Bullet Count Monitoring</h3>
-          <img src="https://sparen.github.io/img-hoster/public/dnhapm/bulletcountexample2.png" style="max-width:100%; width:640px; text-align:center">
+          <img src="https://sparen.github.io/img-hoster/public/dnhapm/bulletcountexample2.png" style="max-width:100%; width:640px; text-align:center" alt="Enemy Bullet Count Graph from the APM">
           <p>Another interesting graph comes our way. With the enemy bullet count graph, you can see every time the player bombs (to an extent), as well as now the bullet count fluctuates over time.</p>
           <p>In spells 2 and 3, the peaks are all around the same height - that's really good, since it means that all the bullets are deleting properly. But maybe having 1200 bullets on screen at once is a little problematic? Hmm... the graph still beats dredging through the lag-inducing log window.</p>
           <h3 class="projectheader">Death & Bomb Monitoring</h3>
-          <img src="https://sparen.github.io/img-hoster/public/dnhapm/deathexample.png" style="max-width:100%; width:640px; text-align:center">
+          <img src="https://sparen.github.io/img-hoster/public/dnhapm/deathexample.png" style="max-width:100%; width:640px; text-align:center" alt="Death and Bomb Graph from the APM">
           <p>This graph shows where the player died and bombed (image does not show bombs or prior runs). Taking a look at the graph gives a good sense of which parts are the deadliest. Some attacks are easier than others~</p>
           <h3 class="projectheader">User-Defined Monitoring</h3>
-          No graph for this one, unfortunately, as this depends on what <i>you</i> need. Want to log points? Power? Your custom game-specific feature? If someone's cheating during an all-horizontal script? This is the tool for you :)</p>
+          <p>No graph for this one, unfortunately, as this depends on what <i>you</i> need. Want to log points? Power? Your custom game-specific feature? If someone's cheating during an all-horizontal script? This is the tool for you :)</p>
           <h3 class="projectheader">Usage</h3>
-          So what is this, really? It's a tool - for scripters - that takes data from the game and displays it in HTML + CSS + SVG for you to analyze. It's highly customizable, and more features are coming soon!</p>
+          <p>So what is this, really? It's a tool - for scripters - that takes data from the game and displays it in HTML + CSS + SVG for you to analyze. It's highly customizable, and more features are coming soon!</p>
           <p>To use the project, head over to the <a target="_blank" href="https://github.com/Sparen/Sparen-DNH-APM">GitHub page</a> and go to Releases. The SparenDNHAPM_#.#.tar.gz file contains the project README as well as the .dnh file. The README on GitHub gives the full rundown of the project + configuration and usage and other details, but to summarize here:</p>
           <ul><li>Run the SparenDNHAPM.dnh script via @Loading in your target script</li>
           <li>Ensure that you've configured everything the way you like</li>
@@ -69,7 +69,7 @@
           <li>... and many more.</li></ul></p>
           <p>LATEST VERSION: 1.0 [2018 JUL 23]</p>
           <p>Have feedback, comments, bug reports, suggestions, etc? Please feel free to post here or create an issue on GitHub. This project is in continuous development and knowing what best helps other scripters make balanced, optimized games will help me tailor the project/add features that benefit the Danmakufu community.</p>
-          <p>--Sparen of Iria</p>          </div>      </div>      <footer>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2019 by Andrew Fan</p>      </footer>    </div>
+          <p>--Sparen of Iria</p>          </div>      </div>      <footer>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2019-2020 by Andrew Fan</p>      </footer>    </div>
     <script src="../ph3tutorials/javascript/dnhdocs_standard.js"></script>
     <script src="../ph3tutorials/javascript/dnhdocs_object.js"></script>
     <script src="../ph3tutorials/javascript/dnhdocs_system.js"></script>
