@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Sept 17, 2019')">
+  <body onload="setupENG('Jan 04, 2020')">
     <div id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -96,7 +96,7 @@
     }
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-ex0.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-ex0.png" style="max-height:320px" alt="Raikou cutin centered at 0 0">
 	      </div></div>
 	      <p>As expected, the image renders and centers itself at (0, 0), the default position. Now let's convert it to a 3D sprite.</p>
 	      <div style="display: flex;"><div style="flex: 1">
@@ -118,7 +118,7 @@
     }
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-ex1.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-ex1.png" style="max-height:320px" alt="Raikou cutin with an intriguingly unusual transformation incapable of being described in words - only mathematics">
 	      </div></div>
 	      <p><strong>WHAT.</strong> is a pretty accurate description. <code>ObjSprite3D_SetSourceDestRect(obj1, 0, 0, 368, 460);</code> gives you the same result. Obviously, something strange is going on here. Let's find out what it is.</p>
 	      <p>So far, we've been working with 2D sprites. Bullets, text, 2D sprites, etc. have all used a standard coordinate system - (0, 0) is in the top left of the playing field for render priorities between 0.20 and 0.80, and they increase to the right and down such that the bottom right of the playing field, (<code>GetStgFrameWidth</code>, <code>GetStgFrameHeight</code>), is (384, 448). However, the 3D coordinate system does NOT function in this same way as we have just observed, and the 3D Camera system has some other tricks up its sleeve...</p>
@@ -127,7 +127,7 @@
 	      <p>First, the coordinate system (<strong>assuming elevation and azimuth are set to 0, which they are not by default</strong>). Z is horizontal and Y remains vertical, while the X axis goes into the screen. Notably, (0, 0, 0) is not in the top left by any stretch - it's dead center in the playing field in all three axes.</p>
 	      <p>By default, (0, 0, 0) happens to be the focal point of the camera as well. The camera itself is what controls the display. The camera has a default unchangeable position in Danmakufu and from that position always faces the Focal Point. <strong>Note that Danmakufu calls the Focal Point the Focus Point in its functions</strong>.</p>
 	      <p>Next we need to describe Azimuth and Elevation angles. Let's first say that the X (depth)-Z (width) plane is the ground. The camera lying flat on the ground pointing forwards and aligned the way we see it has an elevation and azimuth of 0.</p>
-		<img src="tutimg/u30-elevazim.png"></img>
+		<img src="tutimg/u30-elevazim.png" alt="Elevation and Azimuth angle definitions with respect to a sphere">
 	      <p>Imagine a sphere as shown above (thanks to Drake on MotK). If we rotate the camera upwards on that sphere, it will continue to point at the focal point, but since it's above the ground, it has an angle of elevation compared to where it was before. Alternatively, let's say that there's a circle drawn on the ground and the camera is on the circle. If we move the camera along the circle, the Azimuth angle changes. Like before, it still points at the focal point.</p>
 	      <p>OK. So we know some more about how these angles and coordinate systems work. Why does Raiko appear like that?</p>
 	      <p>Short answer: Danmakufu's default Azimuth angle is 15, and its default Elevation angle is 45. </p>
@@ -153,7 +153,7 @@
     }
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-ex2.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-ex2.png" style="max-height:320px" alt="Raikou cutin except it's not there">
 	      </div></div>
 	      <p>Intuitively, this makes sense. If the azimuth is zero, then we're looking straight at the 3D sprite, which is flat, from the side. The rects we provided rendered the image in the X-Y plane, where X is depth and Y is height. There's no Z (width) component. And therefore, it's basically invisible. Therefore, let's instead try setting Azimuth to 90, which is a common standard for many stage backgrounds (the alternative is -90, which we will discuss later). Do note that this means the default axis we are looking down will change.</p>
 	      <div style="display: flex;"><div style="flex: 1">
@@ -177,7 +177,7 @@
     }
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-ex3.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-ex3.png" style="max-height:320px" alt="Raikou cutin upside down at at a strange angle">
 	      </div></div>
 	      <p>OK. She's fixed in one angle. Positive azimuth moves the camera to the right, while negative azimuth moves the camera to the left. Now let's set elevation to 0.</p>
 	      <div style="display: flex;"><div style="flex: 1">
@@ -202,7 +202,7 @@
     }
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-ex4.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-ex4.png" style="max-height:320px" alt="Raikou cutin but upside down">
 	      </div></div>
 	      <p>So now things seem to be OK, if you ignore the fact that she's rotated 180 degrees.</p>
 		<pre class="prettyprint linenums"><code>task LearningElevationAzimuth{
@@ -324,7 +324,7 @@
     }
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg1.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg1.png" style="max-height:320px" alt="Sample boring background from the code">
 	      </div></div>
 	      <p>Note that we've changed the Elevation Angle. We don't want the camera to be looking straight along the ground - we want to simulate someone above ground. And so we have an elevation angle. I've also set the source and dest rect to a rather large number. This is because you want the image to cover a large space. Typically this much is overkill, however. I've also rotated the 3D sprite 90 degrees about the X axis such that it's the floor and not a wall.  Finally, in the loop I've set the Azimuth Angle to change over time - gradually as to not make the viewer feel motion sickness.</p>
 	      <p>Next, let's add some background to replace the boring black background and add some color. I'm using <a href="./tutimg/u3l30sample2.jpg">this image</a>.</p>
@@ -364,7 +364,7 @@
     }
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg2.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg2.png" style="max-height:320px" alt="Sample boring background from the code but now with a Yukkuri wallpaper for spice">
 	      </div></div>
 	      <p>The main thing to note here is render order. As mentioned in prior guides, within the same render priority the things spawned later render over the things spawned before. In addition, when calculating the position, I incorporate a 90 into the angle in order to ensure that they all face the center. This is actually a very hackish solution that takes advantage of the ring nature of images - without the 90 degree shift, the Y rotation of the individual sprites all face away from the center. However, by keeping the angles they are at but moving them a quarter of the way around the circle, all of the sprites become perpendicular to the lines from the camera focus to them. In the diagram below, each colored line in the example without shifting becomes the same colored line in the example with the 90 degree clockwise shift.</p>
               <svg width="200" height="200" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -430,7 +430,7 @@ task CreateAyaA1(dist, ID, dir, rp) {
     }
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg3.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg3.png" style="max-height:320px" alt="Sample boring background from the code but now with weird Ayadogs patrolling the area">
 	      </div></div>
 	      <p>Here we need to do some work to allow for the Aya army to move while maintaining the intended angle. However, it's not something that can't be done with some angle offsets. We maintain the 90 degree offset and the primary base angle, but the angle of the Ayas needs to change over time, so we have to set the Y angle as well. In this case, if the Ayas rotate clockwise by subtracting <code>objcount*dir</code>, we add the <code>objcount*dir</code> to the Y rotation in order to cancel out the effect. The <code>90 + 90*dir</code> is only used to flip the sprites for the Ayas moving in the other direction.</p>
 	      <p>As a final component to this static stage, we'll add some bouncing <a href="./tutimg/u3l30sample4.png">Yukkuris</a>.</p>
@@ -465,7 +465,7 @@ task CreateYukkuriA1(ID, offset) {
     ObjRender_SetAngleX(objYuk, 180);
     ObjRender_SetZTest(objYuk, true);
     loop {
-        if (dist < -1520) {
+        if (dist &lt; -1520) {
             Obj_Delete(objYuk);
         }
         ObjRender_SetAngleY(objYuk, 360/12*ID - offset);
@@ -477,7 +477,7 @@ task CreateYukkuriA1(ID, offset) {
 }
 </code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg4.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg4.png" style="max-height:320px" alt="Sample boring background from the code but now with bouncing Yukkuris in the sky">
 	      </div></div>
 	      <p>Here we use a distance based system where the objects spawn at a given distance and last for a certain distance before deleting. This technique is commonly used in endlessly scrolling backgrounds to delete sprites that have  moved past the camera's range - something we will take a look at in the next section. I have also set the Y coordinate to oscillate over time using a sine wave (well, cosine in this case).</p>
 	      <p>Finally, to see what our setup looks from afar (the 'floating camera') view...</p>
@@ -495,13 +495,13 @@ task CreateYukkuriA1(ID, offset) {
 
     ...</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg5.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg5.png" style="max-height:320px" alt="Our manufactured Yukkuri hellscape from a safe distance">
 	      </div></div>
 	      <p>There are a few things to note here. First, the 'background' and floor were on the same render priority layer. As a result, the floor covers most of the former background from this distance and angle. When designing stages in 3D, it is important to keep this in mind as you determine what components are shown to the player and which components are cleverly hidden. In addition, various components may interact in unwanted ways - for example, you may want certain different types of object to render behind one another in a very specific way - these concepts require careful thought and consideration when designing the background from a code perspective.</p>
 	      <p>In addition, we utilize two new functions here, one of which sets the radius of the camera (the distance between the focal point of the camera and the camera itself) and one which sets the perspective clip. The default max perspective clip is something you will probably want to override when manipulating the camera radius, but again, careful tuning can allow you to cover up some unwanted components while showing the parts you do want. </p>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do yaw, pitch, and roll work in Danmakufu?</h2>
 	      <p>The last thing we will do with the Yukkuri example is cover yaw, pitch, and roll. Before we covered setting the camera focus and the elevation/azimuth, which changes the camera's location within the scene. Now we'll cover manipulating the camera itself.</p>
-		<img src="tutimg/u30-ypr.png"></img>
+		<img src="tutimg/u30-ypr.png" alt="Yaw, pitch, and roll relative to a camera">
 	      <p>Let's cover these one by one. First, yaw. Let's say that the camera is attached to the top of a vertical pole, facing to the side. Rotating the pole rotates the camera, giving you a 360 degree view of the landscape. This rotation parallel to the ground is a change in yaw and is great for panoramic views.</p>
 	      <p>A good way to try out yaw is to change the camera yaw instead of changing the azimuth over time.</p>
 	      <div style="display: flex;"><div style="flex: 1">
@@ -522,7 +522,7 @@ task CreateYukkuriA1(ID, offset) {
 
     ...</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg6.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg6.png" style="max-height:320px" alt="Ayas at a close distance">
 	      </div></div>
 	      <p>Note how close the Ayas are. We created the Ayas at a distance of 512. However, keep the camera's radius in mind. Before, the camera was rotating AROUND the focus at a distance of 500, but now the camera isn't pointing at the camera focus - it's keeping its position and rotating around its own axis, so it ends up staring the Ayas straight in the face. And indeed, when the camera turns to face the Ayas that were previously just 12 units behind the camera, the Ayas are <em>very close</em>.</p>
 	      <p>See the animation below.</p>
@@ -533,8 +533,8 @@ task CreateYukkuriA1(ID, offset) {
 	      <button type="button" onclick="createNewGame('gamecanvas_1', 'L30: `SetCameraAzimuthAngle()` (Left) vs `SetCameraYaw()` (Right)')">Run Danmakanvas Simulation</button>
 	      <p>In the above animation, the red bullets are the Ayas, while the blue bullet is the camera. The small green bullets show the direction the camera is facing. The white bullet in the center denotes the focus. Note that the location of the camera is not the same as in DNH, but the example should still be relevant. Bullet trails note the previous positions. Note how the visible arc for changing Azimuth differs from that of changing Yaw.</p>
 	      <p>Besides Yaw, there are also Pitch and Roll. For Roll, the easiest way to imagine it is to use the standard airplane example - if the airplane rotates around its primary axis, that's roll. Now just imagine the airplane as a camera. </p>
-		<img src="https://www.grc.nasa.gov/www/k-12/airplane/Images/rotations.gif" style="max-height:320px"></img>
-		<img src="https://media1.tenor.com/images/79dd7ce2b47b28b4df240e129e83a6f4/tenor.gif?itemid=12953391" style="max-height:320px"></img>
+		<img src="https://www.grc.nasa.gov/www/k-12/airplane/Images/rotations.gif" style="max-height:320px" alt="Aircraft rotation for Yaw, Pitch, and Roll from NASA">
+		<img src="https://media1.tenor.com/images/79dd7ce2b47b28b4df240e129e83a6f4/tenor.gif?itemid=12953391" style="max-height:320px" alt="Umaru-chan rotating relative to the floor">
 	      <p>Alternatively, imagine attaching a camera to Umaru's head in the above gif. As she rolls, so does the camera.</p>
 	      <p>Roll is typically useful in tubular and symmetric backgrounds. In other cases, it's more likely to make the people playing your game want to vomit, so please use carefully. <strong>However, please note that this extends to Pitch as well. Depending on your Azimuth angle, Roll and Pitch may have their effects swapped, similar to how the horizontal axis changed back when we were working with Raiko earlier in this tutorial.</strong> In general, Pitch will rotate the camera towards the ground, then back up towards the sky.</p>
 	      <div style="display: flex;"><div style="flex: 1">
@@ -555,7 +555,7 @@ task CreateYukkuriA1(ID, offset) {
 
     ...</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg7.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg7.png" style="max-height:320px" alt="Not-so-boring background with some camera rotation for nausea">
 	      </div></div>
 	      <div style="display: flex;"><div style="flex: 1">
 		<pre class="prettyprint linenums"><code>    ...
@@ -575,7 +575,7 @@ task CreateYukkuriA1(ID, offset) {
 
     ...</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg8.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg8.png" style="max-height:320px" alt="Not-so-boring background but pointed at the sky filled with bouncing Yukkuris">
 	      </div></div>
 	      <p>As usual, there's no better teacher than experience, so try the above substitutions and feel free to experiment with the scene.</p>
 	      <p>That's all for the Yukkuris. Now back to a more serious example.</p>
@@ -686,7 +686,7 @@ task TSpellBackground {
     }
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg9.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg9.png" style="max-height:320px" alt="An ordinary path background">
 	      </div></div>
 	      <p>There are some things to note. First, the elevation angle makes a big difference in how much of the background is visible. You could do with a birds-eye view and not need a static background on the horizon, or you could look forwards, requiring something in the background. In addition, the dest rect controls <em>where</em> the background renders, while the source rect controls <em>scale</em>. Feel free to scale up or scale down your graphics by using the tiling. And here's the key part - tiling. You will want seamless textures for these kinds of backgrounds - textures where if you were to tile the graphics together, you wouldn't be able to tell where the individual components were.</p>
 	      <p>In the example we're using a scrolling speed to control how fast the background scrolls. Just keep the number reasonable! There is a chance that the numbers could get very high and overflow, but as long as the stage length and scrolling speed are relatively short, there won't be a need to use % (mod) to keep those numbers under control.</p>
@@ -812,7 +812,7 @@ task CreateWall(x, angle, movespeed) {
 
         ObjRender_SetZ(obj3, 2048 - objcount*movespeed);
 
-        if (objcount > 2048) {
+        if (objcount &gt; 2048) {
             Obj_Delete(obj3);
         }
 
@@ -826,7 +826,7 @@ function GetTotalWallLength(seglen, angle) {
     return seglen/max(absolute(sin(angle)), absolute(cos(angle)));
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u30-sstg10.png" style="max-height:320px"></img>
+		<img src="tutimg/u30-sstg10.png" style="max-height:320px" alt="An ordinary path background, but now with walls on both sides">
 	      </div></div>
 	      <p>Note that I have set the elevation angle to 15 in order to better demonstrate the effect we have here, and it will remain that way for the rest of this script.</p>
 	      <p>Here we create a pair of walls every 256 frames. Each wall calculates its length based on the rules we mentioned above. We're performing scaling here as well, with the 2:1 ratio being maintained. Note that we use <span class="tooltip" onmouseover="getFxnDocs('ObjRender_SetZWrite', 'f_orszw_01');"><code>ObjRender_SetZWrite()</code><span class="tooltiptext" id="f_orszw_01"></span></span> - this function sets things up so that newer walls don't render in front of older ones.</p>
@@ -924,7 +924,7 @@ task CreateWall(x, angle, movespeed, objcount) {
 
         ObjRender_SetZ(obj3, 4096 - objcount*movespeed);
 
-        if (objcount > 4096) {
+        if (objcount &gt; 4096) {
             Obj_Delete(obj3);
         }
 

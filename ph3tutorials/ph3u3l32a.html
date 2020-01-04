@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Sept 27, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jan 04, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -232,7 +232,7 @@ function DestroyDialogueEvent(objects) {
 	      <p>For the textbox, I've defined a buffer size that determines the buffer between the text box and the edges of the playing field. The width of the box is determined accordingly. I've set the box to fade in over time - this provides a visual cue of the event. I haven't set a texture for this box, so it will render as pure white - as a result I've set a color to get it to black.</p>
 	      <p>The text itself follows relatively similar constraints as the text box. We want to set the position nicely inside the box so I've defined some margins. As for the Y position (based off of the top margin), it depends on the font and font size - customize based off of what looks good.</p>
 	      <p>All of this can be rendered by calling <code>CreateDialogueEvent</code> in <code>StageEvent</code>. Below is a sample rendering - note that it will look slightly different on different computers due to font rendering (we will cover this later).</p>
-	      <img src="tutimg/u3l32aimg1.png" alt="Key Config" style="max-height:320px"><br>
+	      <img src="tutimg/u3l32aimg1.png" alt="Danmakufu Screenshot showing Reisen on the left, Reimu on the right, and a textbox saying Default twice, each on a different line" style="max-height:320px"><br>
 	      <p>Now that we have a basic framework, we need to be able to actually have an event. To do this, we will need three things: The ability to progress in an event, the ability to change the graphics, and the ability to change the text. We'll cover these in order.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I handle player input and event control in dialogue events?</h2>
 	      <p>In the previous lesson we discussed virtual key states. Any key can be free, pushed, held, or pulled. Generally, there are three cases in an event - the first is the standard 'press the key to proceed'. In this case, as long as the OK virtual key is not free or being held, the dialogue is free to proceed. The next case is a forced wait, common with extra stage midbosses. Here the user's input doesn't matter at all - the dialogue is fully timed. And finally, the case at the very start of an event. Here you want to prevent anything from being skipped. As such, if the OK virtual key is being held at the start of the event, you want to wait for it to be released first and <em>then</em> pressed. We will define these three checks as functions in our library. Note that in each case, we will pass a parameter to these - how many frames to wait for. All of these will be blocking and will prevent execution of the rest of the event until they have passed.</p>
@@ -325,7 +325,7 @@ function SetPortraitToForeground(portrait) {
     SetForbidPlayerShot(false);
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u3l32aimg2.png" style="max-height:320px"></img>
+		<img src="tutimg/u3l32aimg2.png" style="max-height:320px" alt="Danmakufu Screenshot with Reisen speaking and Reimu faded out. Text box says Reisen Text">
 	      </div></div>
 	      <p>There are a few things to note here. First, I've set the border color of the text object based on the character. The other is that I'm manually setting the portraits to foreground or background. There are many other things you can do - the portraits are 2D sprites, so you can make them spin, flip, etc.</p>
 	      <p>Before we switch to text discussion, there's one last thing to do - actually changing the portraits. Currently we're working off of the defaults, but we'll want to use actual portraits. Let's set those textures.</p>
@@ -465,7 +465,7 @@ task TEnd {
     CloseScript(GetOwnScriptID());
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u3l32aimg3.png" style="max-height:320px"></img>
+		<img src="tutimg/u3l32aimg3.png" style="max-height:320px" alt="Danmakufu Screenshot showing Reisen speaking with so much text that it spills beyond the text box">
 	      </div></div>
 	      <p>First, there is one issue with the code here - the Single script's timer. At the moment there is nothing preventing the timer from ending and the event along with it. Make sure to keep the timer set, or perform another workaround to ensure that the single doesn't end with the event still rolling. And no, setting the timer to something very large is not an acceptable workaround.</p>
 	      <p>And the second issue - the text <em>doesn't fit</em>. In addition, nothing we do aside from expanding the text box will let it fit. And so we come to a dialogue design point - each line of dialogue should be short and easy to understand. Use multiple lines, and use multiple chunks of dialogue.</p>
@@ -527,7 +527,7 @@ task TEnd {
     ObjEnemy_SetLife(objEnemy, -1); // Trigger script end
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u3l32aimg4.png" style="max-height:320px"></img>
+		<img src="tutimg/u3l32aimg4.png" style="max-height:320px" alt="Danmakufu Screenshot demonstrating manual line breaks">
 	      </div></div>
 	      <p>However, for some dialogue it may become annoying to manually insert line breaks. In addition, since fonts render with different widths and spacing on different computers, the only real way to test if the line breaks work as intended is to check the width of each text sequence and insert line breaks automatically based on the local computer's rendering system. The big benefit here is that we can perform line breaks at words rather than at the character level as Danmakufu does by default.</p>
 	      <p>For this, I'll shove some self promotion in and recommend the <a target="_blank" href="https://github.com/Sparen/Sparen-DNH-STL/blob/master/lib_autoformat.dnh">Text AutoFormat Library</a>. In particular, <code> autoformLineInsertionA2 </code> will be useful here. Note that if you use this library, you <strong>must disable setting max width on the Text Object in lib_dialogue.dnh</strong>. Otherwise the function will not function properly (since it depends on Danmakufu not automatically performing its own text wrapping first).</p>
@@ -590,7 +590,7 @@ task TEnd {
     ObjEnemy_SetLife(objEnemy, -1); // Trigger script end
 }</code></pre>
 		</div><div style="flex: 1;text-align:center">
-		<img src="tutimg/u3l32aimg5.png" style="max-height:320px"></img>
+		<img src="tutimg/u3l32aimg5.png" style="max-height:320px" alt="Danmakufu Screenshot demonstrating usage of the Text AutoFormat Library for automatic line breaks">
 	      </div></div>
 	      <p>And with that, we've produced a functional dialogue library for you to use as a base for further iteration. There are a whole range of things that can be done with dialogue libraries, and it's up to you to see where things will take you.</p>
 	      <p>Our final library is as follows:</p>

@@ -76,7 +76,7 @@ let objBoss;
 @MainLoop{
     ObjEnemy_SetIntersectionCircleToShot(objBoss, ObjMove_GetX(objBoss), ObjMove_GetY(objBoss), 32); 
 
-    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) <= 0) {
+    if(ObjEnemy_GetInfo(objBoss, INFO_LIFE) &lt;= 0) {
         Obj_Delete(objBoss);
         CloseScript(GetOwnScriptID());
     }

@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Oct 12, 2018')">
+  <body onload="setupENG('Jan 04, 2020')">
     <div id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -142,7 +142,7 @@
                   <circle cx="416" cy="96" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#8888FF"></circle>
                   <text x="416" y="96" stroke="#8888FF" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v11</text>
               </svg>
-	      <img src="./tutimg/u29-4a.png" width="384" height="365"></img><br><br>
+	      <img src="./tutimg/u29-4a.png" width="384" height="365" alt="Danmakufu Screenshot displaying triangle lists and color gradients from their vertices."><br><br>
 	      <p>In Example 1, vertices 1 and 4, 2 and 5 are at the same location with the same color, resulting in the effect you see below. In contrast, in Example 2, vertices 9 and 10 have their colors swapped compared to vertices 6 and 7, resulting in a different effect.</p>
 <pre class="prettyprint linenums"><code>task Example1 {
     let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
@@ -231,7 +231,7 @@ task Example2 {
                   <circle cx="144" cy="128" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0088"></circle>
                   <text x="144" y="128" stroke="#FF0088" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v7</text>
               </svg>
-	      <img src="./tutimg/u29-4b.png" width="142" height="155"></img><br><br>
+	      <img src="./tutimg/u29-4b.png" width="142" height="155" alt="Danmakufu Screenshot displaying Triangle Strip behavior"><br><br>
 	      <p>As you can see, the colors are all emanating from their vertices without sharp edges. </p>
 <pre class="prettyprint linenums"><code>task ExampleB1 {
     let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
@@ -292,7 +292,7 @@ task Example2 {
                   <circle cx="52" cy="52" r="4px" stroke="#FFFFFF" stroke-width="1px" fill="#FF0088"></circle>
                   <text x="52" y="52" stroke="#FF0088" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="-12">v8</text>
               </svg>
-	      <img src="./tutimg/u29-4c.png" width="152" height="152"></img><br><br>
+	      <img src="./tutimg/u29-4c.png" width="152" height="152" alt="Danmakufu Screenshot displaying Triangle Fan behavior with a color gradient wheel"><br><br>
 	      <p>As can be seen above, Triangle Fans are well suited towards radial applications.</p>
 <pre class="prettyprint linenums"><code>task ExampleC1 {
     let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
@@ -375,7 +375,7 @@ task Example2 {
                   <text x="448" y="128" stroke="#88FF00" fill="#FFFFFF" text-anchor="middle" dominant-baseline="central" font-size="10px" dx="0" dy="12">v9</text>
               </svg>
 	      <br>
-	      <img src="./tutimg/u29-4d.png" width="300" height="372"></img><br><br>
+	      <img src="./tutimg/u29-4d.png" width="300" height="372" alt="Danmakufu Screenshot displaying Line List behavior"><br><br>
 	      <p>As can be seen above, Line Lists behave exactly as you might expect. Each pair of vertices forms a line. As with other primitive types, portions drawn later will cover portions drawn earlier, as visible with the line crossings.</p>
 <pre class="prettyprint linenums"><code>task ExampleD1 {
     let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
@@ -467,7 +467,7 @@ task ExampleD2 {
 
               </svg>
 	      <br>
-	      <img src="./tutimg/u29-4e.png" width="249" height="328"></img><br><br>
+	      <img src="./tutimg/u29-4e.png" width="249" height="328" alt="Danmakufu Screenshot displaying Line Strip behavior"><br><br>
 	      <p>As can be seen above, Line Strips are quite effective at linking consecutive vertices together. Of course each vertex connects to the prior, so if you want cyclic structures with shared vertices, you will, similarly to Triangle Strips, need to duplicate vertices (such as in the first example).</p>
 <pre class="prettyprint linenums"><code>task ExampleE1 {
     let obj = ObjPrim_Create(OBJ_PRIMITIVE_2D);
@@ -513,7 +513,7 @@ task ExampleE2 {
 }</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub4f">Part 4f: How do I utilize Primitives (PRIMITIVE_POINT_LIST)?</h2>
 	      <p>Point Lists are... lists of pixel-size points. They are almost useless in Danmakufu since they can't even serve as particle effects due to their size. However, you can get some pretty interesting animations. I won't be providing a SVG example since it's somewhat <b><i>point</i></b>less (haha), but have an animation :)</p>
-	      <img src="./tutimg/u29-4f.png" width="192" height="192"></img><br><br>
+	      <img src="./tutimg/u29-4f.png" width="192" height="192" alt="Danmakufu Screenshot displaying Point List behavior"><br><br>
 	      <p>Above image is a still; see code for animation below.</p>
 <pre class="prettyprint linenums"><code>@Initialize{
     objBoss = ObjEnemy_Create(OBJ_ENEMY_BOSS);
@@ -556,7 +556,7 @@ task ExampleF1(num, scale, spd, offset) {
 	      <p>To begin, Triangle List is almost always the least efficient of the three. It requires the most vertices (for a rectangle, Triangle Strip and Triangle Fan require four vertices, while Triangle List requires six!). However, it is the easiest to understand, the easiest to customize, and is extremely versatile.</p>
 	      <p>Triangle Strip, as stated earlier, has the advantage of not referring to any vertices besides the last two. On the other hand, Triangle Fan has every vertex with an edge to the first vertex and the previous vertex. This means that if you want to, say, make an Octagon with a color gradient emitting from the center (refer to Triangle Fan example), it can be done with a total of ten vertices (one for the center, with the second vertex also serving as the last). In comparison, a Triangle Strip requires duplicating over the center vertex multiple times and requires 14 vertices. However, it is impossible to utilize Triangle Fans for anything that explicitly forbids using the first vertex. The sheet example utilized for the Triangle Strip is a clear example.</p>
 	      <p>For a better comparison in regards to how the two work, we will take the examples we used for Triangle Strip and Triangle Fan, and switch the primitive type in Danmakufu without changing any vertices.</p>
-	      <img src="./tutimg/u29-4g.png" width="383" height="347"></img><br><br>
+	      <img src="./tutimg/u29-4g.png" width="383" height="347" alt="Danmakufu Screenshot comparing the same vertices but with Triangle Strip vs Triangle Fan"><br><br>
 	      <p>On the left are the examples used in this lesson. On the right are the same vertices, but with the other primitive type. Note how by shifting the starting vertex in the bottom right, it is possible to obtain a 'ribbon' formation, as well as the folding nature of the top right.</p>
 	      <p>There are many different things you can do with Primitives, and it is up to you to do what you find to be the best option.</p>
 	      <p>Do note that Triangle Fans are deprecated in later versions of DirectX and are typically less efficient than Triangle Strips due to the need to refer to the first vertex. As a result, it is recommended that Triangle Strips be used whenever possible.</p>
@@ -648,7 +648,7 @@ task ExampleF1(num, scale, spd, offset) {
 	      <p>In this loop we work with pairs of vertices. Each pair will be the same angle from the center of the magic circle, but one will be farther out while one will be closer in. Refer to the section on Triangle Strips for the visualization of how Triangle Strips work. Hopefully the reason why we pair vertices will make itself clear to you - it's important to understand why we do so if you want to work with more complex primitives.</p>
 	      <p>Within the main while loop, we first set the vertex positions of the outer and inner vertices using data from <code>listRadius</code>. After this, we set <code>listRadius</code>'s values for the next iteration of the loop. Here the division by 8 just controls the speed. Of particular note is <code>rRateIn</code>, which controls the thickness of our loop.</p>
 	      <p>So what does our final magic circle look like?</p>
-	      <img src="./tutimg/u3l29magcirc.png" width="384" height="448"></img><br><br>
+	      <img src="./tutimg/u3l29magcirc.png" width="384" height="448" alt="Danmakufu Screenshot displaying the magic circle created with the earlier code"><br><br>
 	      <p>And that's all for the magic circle. Feel free to assign colors to the entire Render Object or the vertices. It is common to have a plain white texture and color it however you want to using functions in Danmakufu, or to precolor the texture and simply use it as-is.</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Primitives</h2>
 	        <!--Quiz start.-->
