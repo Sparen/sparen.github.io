@@ -16,6 +16,8 @@ const location_names = ["MotK", "LOCAA", "UWoM", "BHE"]; // This allows for for 
 const location_names_lc = ["motk", "locaa", "uwom", "bhe"]; // Valid locations from JSON, in proper order
 const location_colors = [color_motk, color_locaa, color_uwom, color_bhe];
 
+const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
 /* ---------- Helper Functions ---------- */
 // Given the starting x and y coordinates, generates the common key for color-location matching
 function generatekey(xstart, ystart) {
@@ -112,6 +114,32 @@ function createZeroArray(l) {
     return cza_toreturn;
 }
 
+// Given a contest object, returns an object containing the following:
+// array of years from min to max, zeroed ND array of contests per year, zeroed ND array of partipants per year, first/min year, last/max year
+// Zeroed arrays are for convenience's sake and are based on the number of locations available
+function getYearArrays(contestobj) {
+    let contestctr = 0;
+
+    // First, find range of years and prepare arrays accordingly. The output includes skipped years
+    let min = contestobj[0].year;
+    let max = contestobj[0].year;
+
+    let years = [];
+    let cploc = []; //nD array storing contests per year, per location
+    let pploc = []; //nD array storing partipants per year, per location
+    for (contestctr = 0; contestctr < contestobj.length; contestctr += 1) {
+        let temp = contestobj[contestctr].year;
+        if (temp > max) {max = temp;}
+        if (temp < min && temp !== -1) {min = temp;}
+    }
+    for (i = min; i <= max; i += 1) {
+        years = years.concat([i]);
+        cploc = cploc.concat([createZeroArray(num_locations)]);
+        pploc = pploc.concat([createZeroArray(num_locations)]);
+    }
+    return {"years": years, "cploc": cploc, "pploc": pploc, "firstyear": min, "lastyear": max};
+}
+
 /* ---------- Primary Operational Functions ---------- */
 
 function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCODED
@@ -123,21 +151,11 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     let locationctr = 0;
 
     let contests = database_obj.contests; //array of contests
-    let years = [];
-    let values = []; //nD array storing contests per category
 
-    //First, find range of years and prepare arrays accordingly. This shows skipped years
-    let min = contests[0].year;
-    let max = contests[0].year;
-    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
-        let temp = contests[contestctr].year;
-        if (temp > max) {max = temp;}
-        if (temp < min && temp !== -1) {min = temp;}
-    }
-    for (i = min; i <= max; i += 1) {
-        years = years.concat([i]);
-        values = values.concat([createZeroArray(num_locations)]);
-    }
+    // Get year range array and any related helper data
+    let yeararrays = getYearArrays(contests);
+    let years = yeararrays.years;
+    let values = yeararrays.cploc;
 
     for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
         let temp = contests[contestctr].year;
@@ -213,22 +231,12 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     let locationctr = 0;
 
     let contests = database_obj.contests; //array of contests
-    let years = []; //contains years
-    let anpl_numcontests = [];
-    let anpl_numparts = []; //number of participants per year
-    //First, find range of years and prepare arrays accordingly. This shows skipped years
-    let min = contests[0].year;
-    let max = contests[0].year;
-    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
-        let temp = contests[contestctr].year;
-        if (temp > max) {max = temp;}
-        if (temp < min && temp !== -1) {min = temp;}
-    }
-    for (yearctr = min; yearctr <= max; yearctr += 1) {
-        years = years.concat([yearctr]);
-        anpl_numcontests = anpl_numcontests.concat([createZeroArray(num_locations)]);
-        anpl_numparts = anpl_numparts.concat([createZeroArray(num_locations)]);
-    }
+
+    // Get year range array and any related helper data
+    let yeararrays = getYearArrays(contests);
+    let years = yeararrays.years;
+    let anpl_numcontests = yeararrays.cploc;
+    let anpl_numparts = yeararrays.pploc;
 
     for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
         let temp = contests[contestctr].year;
@@ -324,19 +332,11 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
     let locationctr = 0;
 
     let contests = database_obj.contests; //array of contests
-    let years = []; //contains years
 
-    //First, find range of years and prepare arrays accordingly. This shows skipped years
-    let min = contests[0].year;
-    let max = contests[0].year;
-    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
-        let temp = contests[contestctr].year;
-        if (temp > max) {max = temp;}
-        if (temp < min && temp !== -1) {min = temp;}
-    }
-    for (i = min; i <= max; i += 1) {
-        years = years.concat([i]);
-    }
+    // Get year range array and any related helper data
+    let yeararrays = getYearArrays(contests);
+    let years = yeararrays.years;
+    let min = yeararrays.firstyear;
 
     //Now that we know how big the graph is going to be, let's begin setting up the graph. First, the grid
     console.log("participantsOverTime(): Preparing SVG Display");
@@ -354,7 +354,6 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
     }
 
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     for (yearctr = 0; yearctr < years.length; yearctr += 1) { //years
         for (monthctr = 0; monthctr < 12; monthctr += 1) {
             pot_svg += '<text x="' + (48 + yearctr*32*6 + monthctr*16) + '" y="350" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
@@ -521,19 +520,11 @@ function participantHistory_graphgen() { //call with a button call
 
     //Prepare SVG using Participants over Time as the base
     let contests = database_obj.contests; //array of contests
-    let years = []; //contains years
 
-    //First, find range of years and prepare arrays accordingly. This shows skipped years
-    let min = contests[0].year;
-    let max = contests[0].year;
-    for (contestctr = 0; contestctr < contests.length; contestctr += 1) {
-        let temp = contests[contestctr].year;
-        if (temp > max) {max = temp;}
-        if (temp < min && temp !== -1) {min = temp;}
-    }
-    for (i = min; i <= max; i += 1) {
-        years = years.concat([i]);
-    }
+    // Get year range array and any related helper data
+    let yeararrays = getYearArrays(contests);
+    let years = yeararrays.years;
+    let min = yeararrays.firstyear;
 
     console.log("participantHistory_graphgen(): Preparing SVG Display");
     let phgg_svg_width = 264 + years.length * 32 * 6;
@@ -547,7 +538,6 @@ function participantHistory_graphgen() { //call with a button call
 
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
     //144 is the buffer on the left (for names). 128 is the buffer on the right (for the key)
-    let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
     for (yearctr = 0; yearctr < years.length; yearctr += 1) { //years
         for (monthctr = 0; monthctr < 12; monthctr += 1) {
             phgg_svg += '<text x="' + (144 + yearctr*32*6 + monthctr*16) + '" y="' + (phgg_svg_height - 108) + '" font-family="Andale Mono, Monospace" font-size="10px" fill="white"' +
