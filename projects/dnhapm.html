@@ -1,5 +1,12 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Danmakufu APM</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
-    <link rel="stylesheet" type="text/css" href="../ph3tutorials/docs.css">    <meta content="AFCDTech - Danmakufu APM"      name="description">
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Danmakufu APM</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="../ph3tutorials/docs.css">
+    <meta content="AFCDTech - Danmakufu APM"
+      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Project, Wine">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <script>
@@ -10,8 +17,13 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body>
-    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div id="menubar">
+  </script>
+  </head>
+  <body>
+    <div id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div id="menubar">
         <ul>
           <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
           <li><a href="../aboutme.html">About Me</a></li>
@@ -24,8 +36,11 @@
           <li><a href="../ph3tutorials/docs.html" title="ph3 Function Reference">ph3 Function Ref.</a></li>
           <li><a href="./seitentouji/index.html" title="SeitenTouji">SeitenTouji Project</a></li>
         </ul>
-      </div>      <div id="pagecontentwrapper">
-          <div id="pagecontent">	      <h1 class="toplevelheadera">Danmakufu APM</h1>	      <p>This page details the Danmakufu APM in general, covering much of the content from the <a target="_blank" href="https://www.shrinemaiden.org/forum/index.php?topic=21502.0">MotK thread</a>. For documentation or downloads, refer to <a target="_blank" href="https://github.com/Sparen/Sparen-DNH-APM">GitHub</a></p>
+      </div>
+      <div id="pagecontentwrapper">
+          <div id="pagecontent">
+	      <h1 class="toplevelheadera">Danmakufu APM</h1>
+	      <p>This page details the Danmakufu APM in general, covering much of the content from the <a target="_blank" href="https://www.shrinemaiden.org/forum/index.php?topic=21502.0">MotK thread</a>. For documentation or downloads, refer to <a target="_blank" href="https://github.com/Sparen/Sparen-DNH-APM">GitHub</a></p>
 	      <h2 class="projectheader">Why the APM?</h2>
 	      <p>Touhou Danmakufu ph3 is a language with many features that make it easy for new scripters to start coding and building games. Layers of abstraction and a clean (though occasionally limited) API make development easy, with the programmer not needing to understand the internals to build simple projects. However, when building full games, some of these abstractions and limitations become problematic issues requiring workarounds.</p>
 	      <p>One major issue with Danmakufu is that it has terrible support for logging and debugging via error codes. There are only three debug functions - <span class="tooltip" onmouseover="getFxnDocs('WriteLog', 'f_writelog_01');"><code>WriteLog()</code><span class="tooltiptext" id="f_writelog_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('RaiseError', 'f_raiseerror_01');"><code>RaiseError()</code><span class="tooltiptext" id="f_raiseerror_01"></span></span>, and <span class="tooltip" onmouseover="getFxnDocs('assert', 'f_assert_01');"><code>assert()</code><span class="tooltiptext" id="f_assert_01"></span></span>.</p>
@@ -63,14 +78,23 @@
           <li>Add annotations in your spells/wherever you want to add notes</li>
           <li>Run! voila!</li></ul>
           <p>There are some quirks that are detailed in the README, especially in regards to aggregating multiple runs, but this tool (still in development!) should be helpful to some scripters.</p>
-          <p>Potential use cases:<br>
+          <p>Potential use cases:</p>
           <ul><li>Embed into your release, distribute to beta testers, have them return the .csv files. Run the script on aggregate mode and look for trends in the graph (i.e. everyone is lagging here; something went wrong here; etc). Analyze, fix bugs, and profit.</li>
           <li>Log runs to look for specific ways to optimize/find pain points in your script. For example, there is a bomb & death profiler that logs player deaths and bombs - should be interesting to see where players tend to die.
-          <li>... and many more.</li></ul></p>
+          <li>... and many more.</li></ul>
           <p>LATEST VERSION: 1.0 [2018 JUL 23]</p>
           <p>Have feedback, comments, bug reports, suggestions, etc? Please feel free to post here or create an issue on GitHub. This project is in continuous development and knowing what best helps other scripters make balanced, optimized games will help me tailor the project/add features that benefit the Danmakufu community.</p>
-          <p>--Sparen of Iria</p>          </div>      </div>      <footer>        <p style="text-align: center;"><a href="#top">Top</a></p>        <p style="text-align: center;">Copyright © 2019-2020 by Andrew Fan</p>      </footer>    </div>
+          <p>--Sparen of Iria</p>
+          </div>
+      </div>
+      <footer>
+        <p style="text-align: center;"><a href="#top">Top</a></p>
+        <p style="text-align: center;">Copyright © 2019-2020 by Andrew Fan</p>
+      </footer>
+    </div>
     <script src="../ph3tutorials/javascript/dnhdocs_standard.js"></script>
     <script src="../ph3tutorials/javascript/dnhdocs_object.js"></script>
     <script src="../ph3tutorials/javascript/dnhdocs_system.js"></script>
-    <script src="../ph3tutorials/javascript/dnhdocs.js"></script>  </body></html>
+    <script src="../ph3tutorials/javascript/dnhdocs.js"></script>
+  </body>
+</html>
