@@ -147,6 +147,11 @@ function getYearArrays(contestobj) {
     return {"years": years, "cploc": cploc, "pploc": pploc, "firstyear": min, "lastyear": max};
 }
 
+// Returns a SVG rect for the border
+function createBorder(height, width) {
+    return '<rect x="0" y="0" height="' + height + '" width="' + width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
+}
+
 /* ---------- Primary Operational Functions ---------- */
 
 function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCODED
@@ -192,7 +197,7 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
         'xmlns:xlink="http://www.w3.org/1999/xlink">' + styles;
     
     //border
-    cpy_svg += '<rect x="0" y="0" height="280" width="' + cpy_svg_width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
+    cpy_svg += createBorder(280, cpy_svg_width);
     for (i = 0; i < 6; i += 1) { //lines
         cpy_svg += '<path d="M 48 ' + (230 - i*50) + ' H ' + (cpy_svg_width - 120) + '" stroke="#666666" stroke-width="1" fill="none"></path>';
         cpy_svg += '<text x="24" y="' + (230 - i*50)  + '" class="cdb_horiztext_b">' + (5*i) + '</text>';
@@ -274,7 +279,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
         'xmlns:xlink="http://www.w3.org/1999/xlink">' + styles;
         //border
 
-    anpl_svg += '<rect x="0" y="0" height="320" width="' + anpl_svg_width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
+    anpl_svg += createBorder(320, anpl_svg_width);
     for (i = 0; i < 6; i += 1) { //lines
         anpl_svg += '<path d="M 48 ' + (270 - i*50) + ' H ' + (anpl_svg_width - 120) + '" stroke="#666666" stroke-width="1" fill="none"></path>';
         anpl_svg += '<text x="24" y="' + (270 - i*50)  + '" class="cdb_horiztext_b">' + (5*i) + '</text>';
@@ -344,7 +349,7 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
         'xmlns:xlink="http://www.w3.org/1999/xlink">' + styles;
         //border
 
-    pot_svg += '<rect x="0" y="0" height="400" width="' + pot_svg_width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
+    pot_svg += createBorder(400, pot_svg_width);
     for (i = 0; i < 7; i += 1) { //lines
         pot_svg += '<path d="M 48 ' + (320 - i*50) + ' H ' + (pot_svg_width - 120) + '" stroke="#666666" stroke-width="1" fill="none"></path>';
         pot_svg += '<text x="24" y="' + (320 - i*50)  + '" class="cdb_horiztext_b">' + (5*i) + '</text>';
@@ -528,7 +533,7 @@ function participantHistory_graphgen() { //call with a button call
         'xmlns:xlink="http://www.w3.org/1999/xlink">' + styles;
         //border
 
-    phgg_svg += '<rect x="0" y="0" height="' + phgg_svg_height + '" width="' + phgg_svg_width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
+    phgg_svg += createBorder(phgg_svg_height, phgg_svg_width);
 
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
     //144 is the buffer on the left (for names). 128 is the buffer on the right (for the key)
@@ -539,14 +544,16 @@ function participantHistory_graphgen() { //call with a button call
     }
 
     //Now the key.
-    phgg_svg += '<circle cx="' + (phgg_svg_width - 96) + '" cy="' + (phgg_svg_height/2 - 50) + '" r="6" stroke="#FF6688" stroke-width="1" fill="#222222"></circle>';
-    phgg_svg += '<text x="' + (phgg_svg_width - 80) + '" y="' + (phgg_svg_height/2 - 50) + '" class="cdb_horiztext_a">Host</text>';
-    phgg_svg += '<circle cx="' + (phgg_svg_width - 96) + '" cy="' + (phgg_svg_height/2 - 20) + '" r="2" fill="#44FFCC"></circle>';
-    phgg_svg += '<text x="' + (phgg_svg_width - 80) + '" y="' + (phgg_svg_height/2 - 20) + '" class="cdb_horiztext_a">Judge</text>';
-    phgg_svg += '<circle cx="' + (phgg_svg_width - 96) + '" cy="' + (phgg_svg_height/2 + 10) + '" r="4" fill="#FFCC88"></circle>';
-    phgg_svg += '<text x="' + (phgg_svg_width - 80) + '" y="' + (phgg_svg_height/2 + 10) + '" class="cdb_horiztext_a">Top 3</text>';
-    phgg_svg += '<circle cx="' + (phgg_svg_width - 96) + '" cy="' + (phgg_svg_height/2 + 40) + '" r="5" stroke="#FFFFFF" stroke-width="1" fill="#222222"></circle>';
-    phgg_svg += '<text x="' + (phgg_svg_width - 80) + '" y="' + (phgg_svg_height/2 + 40) + '" class="cdb_horiztext_a">Participant</text>';
+    let keycirclex = (phgg_svg_width - 96);
+    let keytextx = (phgg_svg_width - 80);
+    phgg_svg += '<circle cx="' + keycirclex + '" cy="' + (phgg_svg_height/2 - 50) + '" r="6" stroke="#FF6688" stroke-width="1" fill="#222222"></circle>';
+    phgg_svg += '<text x="' + keytextx + '" y="' + (phgg_svg_height/2 - 50) + '" class="cdb_horiztext_a">Host</text>';
+    phgg_svg += '<circle cx="' + keycirclex + '" cy="' + (phgg_svg_height/2 - 20) + '" r="2" fill="#44FFCC"></circle>';
+    phgg_svg += '<text x="' + keytextx + '" y="' + (phgg_svg_height/2 - 20) + '" class="cdb_horiztext_a">Judge</text>';
+    phgg_svg += '<circle cx="' + keycirclex + '" cy="' + (phgg_svg_height/2 + 10) + '" r="4" fill="#FFCC88"></circle>';
+    phgg_svg += '<text x="' + keytextx + '" y="' + (phgg_svg_height/2 + 10) + '" class="cdb_horiztext_a">Top 3</text>';
+    phgg_svg += '<circle cx="' + keycirclex + '" cy="' + (phgg_svg_height/2 + 40) + '" r="5" stroke="#FFFFFF" stroke-width="1" fill="#222222"></circle>';
+    phgg_svg += '<text x="' + keytextx + '" y="' + (phgg_svg_height/2 + 40) + '" class="cdb_horiztext_a">Participant</text>';
 
     phgg_svg += '<text x="' + (phgg_svg_width - 4) + '" y="' + (phgg_svg_height - 10) + '" class="cdb_horiztext_c">This graph was generated by sparen.github.io</text>';
 
