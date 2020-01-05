@@ -36,17 +36,32 @@ const styles = '<style>' +
 
 
 /* ---------- Helper Functions ---------- */
+// Returns a SVG rect for the border
+function createBorder(height, width) {
+    return '<rect x="0" y="0" height="' + height + '" width="' + width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
+}
+
+// Returns a SVG text object with the specified classes and content
+function createCDBSVGText(textx, texty, textclass, textcontent) {
+    return '<text x="' + textx + '" y="' + texty  + '" class="' + textclass + '">' + textcontent + '</text>';
+}
+
+// Returns a SVG circle object with the specified classes
+function createCDBSVGCircle(cx, cy, circleclass) {
+    return '<circle cx="' + cx + '" cy="' + cy  + '" class="' + circleclass + '"></circle>';
+}
+
 // Given the starting x and y coordinates, generates the common key for color-location matching
 function generatekey(xstart, ystart) {
     let output = "";
     output += '<rect x="' + (xstart - 96) + '" y="' + (ystart) + '" height="8" width="8" fill="' + color_motk + '"></rect>';
-    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 4) + '" class="cdb_horiztext_a">MotK</text>';
+    output += createCDBSVGText(xstart - 80, ystart + 4, "cdb_horiztext_a", "MotK");
     output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 30) + '" height="8" width="8" fill="' + color_locaa + '"></rect>';
-    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 34) + '" class="cdb_horiztext_a">LOCAA</text>';
+    output += createCDBSVGText(xstart - 80, ystart + 34, "cdb_horiztext_a", "LOCAA");
     output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 60) + '" height="8" width="8" fill="' + color_uwom + '"></rect>';
-    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 64) + '" class="cdb_horiztext_a">UWoM</text>';
+    output += createCDBSVGText(xstart - 80, ystart + 64, "cdb_horiztext_a", "UWoM");
     output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 90) + '" height="8" width="8" fill="' + color_bhe + '"></rect>';
-    output += '<text x="' + (xstart - 80) + '" y="' + (ystart + 94) + '" class="cdb_horiztext_a">BHE</text>';
+    output += createCDBSVGText(xstart - 80, ystart + 94, "cdb_horiztext_a", "BHE");
     return output;
 }
 
@@ -82,11 +97,11 @@ function fetchstartendcolor(contestobj) {
         fsec_color = color_bhe;
     }
     return {
-        startval: fsec_start,
-        endval: fsec_end,
-        cleared: cleared,
-        colorval: fsec_color,
-        dstring: displaystring
+        "startval": fsec_start,
+        "endval": fsec_end,
+        "cleared": cleared,
+        "colorval": fsec_color,
+        "dstring": displaystring
     };
 }
 
@@ -132,6 +147,7 @@ function createZeroArray(l) {
 // Zeroed arrays are for convenience's sake and are based on the number of locations available
 function getYearArrays(contestobj) {
     let contestctr = 0;
+    let yearctr = 0;
 
     // First, find range of years and prepare arrays accordingly. The output includes skipped years
     let min = contestobj[0].year;
@@ -145,17 +161,12 @@ function getYearArrays(contestobj) {
         if (temp > max) {max = temp;}
         if (temp < min && temp !== -1) {min = temp;}
     }
-    for (i = min; i <= max; i += 1) {
-        years = years.concat([i]);
+    for (yearctr = min; yearctr <= max; yearctr += 1) {
+        years = years.concat([yearctr]);
         cploc = cploc.concat([createZeroArray(num_locations)]);
         pploc = pploc.concat([createZeroArray(num_locations)]);
     }
     return {"years": years, "cploc": cploc, "pploc": pploc, "firstyear": min, "lastyear": max};
-}
-
-// Returns a SVG rect for the border
-function createBorder(height, width) {
-    return '<rect x="0" y="0" height="' + height + '" width="' + width + '" fill="#222222" stroke="#CCCCCC" stroke-width="2"></rect>';
 }
 
 /* ---------- Primary Operational Functions ---------- */
@@ -201,12 +212,11 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
     let cpy_svg_width = 168 + years.length * 16;
     let cpy_svg = '<svg xmlns="http://www.w3.org/2000/svg" width="' + cpy_svg_width + '" height="280" version="1.1"' +
         'xmlns:xlink="http://www.w3.org/1999/xlink">' + styles;
-    
-    //border
+
     cpy_svg += createBorder(280, cpy_svg_width);
     for (i = 0; i < 6; i += 1) { //lines
         cpy_svg += '<path d="M 48 ' + (230 - i*50) + ' H ' + (cpy_svg_width - 120) + '" stroke="#666666" stroke-width="1" fill="none"></path>';
-        cpy_svg += '<text x="24" y="' + (230 - i*50)  + '" class="cdb_horiztext_b">' + (5*i) + '</text>';
+        cpy_svg += createCDBSVGText(24, 230 - i*50, "cdb_horiztext_b", 5*i);
     }
     // Draw components of bar charts per year, with the total counts as well
     for (yearctr = 0; yearctr < years.length; yearctr += 1) { //paths and text
@@ -221,13 +231,13 @@ function contestsPerYear() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HARDCOD
         }
 
         // Year text
-        cpy_svg += '<text x="' + barx + '" y="' + (cpy_svg_barbase - 10)  + '" class="cdb_horiztext_b">' + yearsum + '</text>';
-        cpy_svg += '<text x="' + barx + '" y="250" class="cdb_verttext_a">' + years[yearctr] + '</text>';
+        cpy_svg += createCDBSVGText(barx, cpy_svg_barbase - 10, "cdb_horiztext_b", yearsum);
+        cpy_svg += createCDBSVGText(barx, 250, "cdb_verttext_a", years[yearctr]);
     }
     //key
     cpy_svg += generatekey(cpy_svg_width, 96);
 
-    cpy_svg += '<text x="' + (cpy_svg_width - 4) + '" y="270" class="cdb_horiztext_c">This graph was generated by sparen.github.io</text>';
+    cpy_svg += createCDBSVGText(cpy_svg_width - 4, 280 - 10, "cdb_horiztext_c", "This graph was generated by sparen.github.io");
 
     cpy_svg += '</svg>';
 
@@ -288,7 +298,7 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
     anpl_svg += createBorder(320, anpl_svg_width);
     for (i = 0; i < 6; i += 1) { //lines
         anpl_svg += '<path d="M 48 ' + (270 - i*50) + ' H ' + (anpl_svg_width - 120) + '" stroke="#666666" stroke-width="1" fill="none"></path>';
-        anpl_svg += '<text x="24" y="' + (270 - i*50)  + '" class="cdb_horiztext_b">' + (5*i) + '</text>';
+        anpl_svg += createCDBSVGText(24, 270 - i*50, "cdb_horiztext_b", 5*i);
     }
 
     // Plot line segments for the path
@@ -306,13 +316,13 @@ function averageNumParticipantsLocation() { //WARNING: NUMBER OF LOCATIONS IS CU
             anpl_svg += '<circle cx="' + (48 + yearctr*32) + '" cy="' + (270 - anpl_start) + '" r="2" stroke="white" stroke-width="0.5" fill="' + location_colors[locationctr] + '"></circle>';
         }
         // Now add text for years
-        anpl_svg += '<text x="' + (48 + yearctr*32) + '" y="290" class="cdb_verttext_a">' + years[yearctr] + '</text>';
+        anpl_svg += createCDBSVGText(48 + yearctr*32, 290, "cdb_verttext_a", years[yearctr]);
     }
 
     //key
     anpl_svg += generatekey(anpl_svg_width, 96);
 
-    anpl_svg += '<text x="' + (anpl_svg_width - 4) + '" y="310" class="cdb_horiztext_c">This graph was generated by sparen.github.io</text>';
+    anpl_svg += createCDBSVGText(anpl_svg_width - 4, 320 - 10, "cdb_horiztext_c", "This graph was generated by sparen.github.io");
 
     anpl_svg += '</svg>';
 
@@ -358,20 +368,20 @@ function participantsOverTime() { //WARNING: NUMBER OF LOCATIONS IS CURRENTLY HA
     pot_svg += createBorder(400, pot_svg_width);
     for (i = 0; i < 7; i += 1) { //lines
         pot_svg += '<path d="M 48 ' + (320 - i*50) + ' H ' + (pot_svg_width - 120) + '" stroke="#666666" stroke-width="1" fill="none"></path>';
-        pot_svg += '<text x="24" y="' + (320 - i*50)  + '" class="cdb_horiztext_b">' + (5*i) + '</text>';
+        pot_svg += createCDBSVGText(24, 320 - i*50, "cdb_horiztext_b", 5*i);
     }
 
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
     for (yearctr = 0; yearctr < years.length; yearctr += 1) { //years
         for (monthctr = 0; monthctr < 12; monthctr += 1) {
-            pot_svg += '<text x="' + (48 + yearctr*32*6 + monthctr*16) + '" y="350" class="cdb_verttext_a">' + (months[monthctr] + " " + years[yearctr]) + '</text>';
+            pot_svg += createCDBSVGText(48 + yearctr * 32 * 6 + monthctr * 16, 400 - 50, "cdb_verttext_a", months[monthctr] + " " + years[yearctr]);
         }
     }
 
     //Now the key.
     pot_svg += generatekey(pot_svg_width, 131);
 
-    pot_svg += '<text x="' + (pot_svg_width - 4) + '" y="390" class="cdb_horiztext_c">This graph was generated by sparen.github.io</text>';
+    pot_svg += createCDBSVGText(pot_svg_width - 4, 400 - 10, "cdb_horiztext_c", "This graph was generated by sparen.github.io");
 
     //And now, the data points. Rectangles will be used here.
     let displaystring = ""; //to log when contest data is unknown
@@ -545,23 +555,23 @@ function participantHistory_graphgen() { //call with a button call
     //144 is the buffer on the left (for names). 128 is the buffer on the right (for the key)
     for (yearctr = 0; yearctr < years.length; yearctr += 1) { //years
         for (monthctr = 0; monthctr < 12; monthctr += 1) {
-            phgg_svg += '<text x="' + (144 + yearctr*32*6 + monthctr*16) + '" y="' + (phgg_svg_height - 108) + '" class="cdb_verttext_a" g>' + (months[monthctr] + " " + years[yearctr]) + '</text>';
+            phgg_svg += createCDBSVGText(144 + yearctr*32*6 + monthctr*16, (phgg_svg_height - 108), "cdb_verttext_a", months[monthctr] + " " + years[yearctr]);
         }
     }
 
     //Now the key.
     let keycirclex = (phgg_svg_width - 96);
     let keytextx = (phgg_svg_width - 80);
-    phgg_svg += '<circle cx="' + keycirclex + '" cy="' + (phgg_svg_height/2 - 50) + '" class="cdb_ph_hostcircle"></circle>';
-    phgg_svg += '<text x="' + keytextx + '" y="' + (phgg_svg_height/2 - 50) + '" class="cdb_horiztext_a">Host</text>';
-    phgg_svg += '<circle cx="' + keycirclex + '" cy="' + (phgg_svg_height/2 - 20) + '" class="cdb_ph_judgecircle"></circle>';
-    phgg_svg += '<text x="' + keytextx + '" y="' + (phgg_svg_height/2 - 20) + '" class="cdb_horiztext_a">Judge</text>';
-    phgg_svg += '<circle cx="' + keycirclex + '" cy="' + (phgg_svg_height/2 + 10) + '" class="cdb_ph_topthreecircle"></circle>';
-    phgg_svg += '<text x="' + keytextx + '" y="' + (phgg_svg_height/2 + 10) + '" class="cdb_horiztext_a">Top 3</text>';
-    phgg_svg += '<circle cx="' + keycirclex + '" cy="' + (phgg_svg_height/2 + 40) + '" class="cdb_ph_partcircle"></circle>';
-    phgg_svg += '<text x="' + keytextx + '" y="' + (phgg_svg_height/2 + 40) + '" class="cdb_horiztext_a">Participant</text>';
+    phgg_svg += createCDBSVGCircle(keycirclex, (phgg_svg_height/2 - 50), "cdb_ph_hostcircle");
+    phgg_svg += createCDBSVGText(keytextx, (phgg_svg_height/2 - 50), "cdb_horiztext_a", "Host");
+    phgg_svg += createCDBSVGCircle(keycirclex, (phgg_svg_height/2 - 20), "cdb_ph_judgecircle");
+    phgg_svg += createCDBSVGText(keytextx, (phgg_svg_height/2 - 20), "cdb_horiztext_a", "Judge");
+    phgg_svg += createCDBSVGCircle(keycirclex, (phgg_svg_height/2 + 10), "cdb_ph_topthreecircle");
+    phgg_svg += createCDBSVGText(keytextx, (phgg_svg_height/2 + 10), "cdb_horiztext_a", "Top 3");
+    phgg_svg += createCDBSVGCircle(keycirclex, (phgg_svg_height/2 + 40), "cdb_ph_partcircle");
+    phgg_svg += createCDBSVGText(keytextx, (phgg_svg_height/2 + 40), "cdb_horiztext_a", "Participant");
 
-    phgg_svg += '<text x="' + (phgg_svg_width - 4) + '" y="' + (phgg_svg_height - 10) + '" class="cdb_horiztext_c">This graph was generated by sparen.github.io</text>';
+    phgg_svg += createCDBSVGText(phgg_svg_width - 4, phgg_svg_height - 10, "cdb_horiztext_c", "This graph was generated by sparen.github.io");
 
     //And now, the data points. Rectangles will be used here.
     let displaystring = ""; //to log when contest data is unknown
@@ -592,7 +602,7 @@ function participantHistory_graphgen() { //call with a button call
         let phgg_player = phgg_selpartic[participantctr];
         let phggplay_start = 0; //start pixel of line
         let phggplay_end = 0; //end pixel of line
-        let phgg_string = '<text x="8" y="' + phgg_curry + '" class="cdb_horiztext_a">' + phgg_player + '</text>';
+        let phgg_string = createCDBSVGText(8, phgg_curry, "cdb_horiztext_a", phgg_player);
         let phgg_startendpath = '<path d="M 4 ' + (phgg_curry - 8) + ' H ' + (phgg_svg_width - 128) + '" stroke-width="1" stroke="#333333"></path>'; //default guide lines
         phgg_startendpath = phgg_startendpath + '<path d="M 4 ' + (phgg_curry + 8) + ' H ' + (phgg_svg_width - 128) + '" stroke-width="1" stroke="#333333"></path>'; //default guide lines
         let phgg_nodes = "";
@@ -610,10 +620,10 @@ function participantHistory_graphgen() { //call with a button call
             if (contains(contestobj.participants, phgg_player) || contains(contestobj.judges, phgg_player) || contestobj.host === phgg_player) {
                 if (phggplay_start > nodelocation || phggplay_start === 0) {phggplay_start = nodelocation;} //if first contest, mark it!
                 if (contestobj.host === phgg_player) {
-                    phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + phgg_curry + '" class="cdb_ph_hostcircle"></circle>';
+                    phgg_nodes += createCDBSVGCircle(nodelocation, phgg_curry, "cdb_ph_hostcircle");
                 }
                 if (contains(contestobj.participants, phgg_player)) {
-                    phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + phgg_curry + '" class="cdb_ph_partcircle"></circle>';
+                    phgg_nodes += createCDBSVGCircle(nodelocation, phgg_curry, "cdb_ph_partcircle");
                 }
                 let topthree = false;
                 let k = 0;
@@ -623,10 +633,10 @@ function participantHistory_graphgen() { //call with a button call
                     }
                 }
                 if (topthree) {
-                    phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + phgg_curry + '" class="cdb_ph_topthreecircle"></circle>';
+                    phgg_nodes += createCDBSVGCircle(nodelocation, phgg_curry, "cdb_ph_topthreecircle");
                 }
                 if (contains(contestobj.judges, phgg_player)) {
-                    phgg_nodes = phgg_nodes + '<circle cx="' + nodelocation + '" cy="' + phgg_curry + '" class="cdb_ph_judgecircle"></circle>';
+                    phgg_nodes += createCDBSVGCircle(nodelocation, phgg_curry, "cdb_ph_judgecircle");
                 }
                 if (phggplay_end < nodelocation) {phggplay_end = nodelocation;} //if first contest, mark it!
             }
