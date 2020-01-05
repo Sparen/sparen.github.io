@@ -1575,6 +1575,20 @@ var dnhph3docs_object = {
                     "notes": ""
                 },
                 {
+                    "fname": "ObjLaser_GetRenderWidth",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "render width of laser object associated with objID : number",
+                    "description": "Returns the render width of the laser object associated with objID.",
+                    "notes": ""
+                },
+                {
+                    "fname": "ObjLaser_GetIntersectionWidth",
+                    "args": ["objID : number (Object ID)"],
+                    "returnv": "intersection width of laser object associated with objID : number",
+                    "description": "Returns the intersection width of the laser object associated with objID.",
+                    "notes": ""
+                },
+                {
                     "fname": "ObjStLaser_SetAngle",
                     "args": ["objID : number (Object ID)", "angle : number (degrees)"],
                     "returnv": "",
