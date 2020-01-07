@@ -19,12 +19,6 @@ function checkAnswerGENERIC(quizForm, theAnswer){
     alert("'"+s+"' is incorrect.");
   }
 
-  // return "false" to indicate not to
-  // submit the form.
-  // change this to "true" if the form
-  // "action" is valid,
-  // i.e. points to a valid CGI script
-  //
   return false;
 }
 
@@ -49,11 +43,5 @@ function checkAnswerGENERICESP(quizForm, theAnswer){
     alert("La " + "'"+s+"' es incorrecta.");
   }
 
-  // return "false" to indicate not to
-  // submit the form.
-  // change this to "true" if the form
-  // "action" is valid,
-  // i.e. points to a valid CGI script
-  //
   return false;
 }
