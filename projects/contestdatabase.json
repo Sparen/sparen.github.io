@@ -519,6 +519,19 @@
             "numparticipants": 2,
             "result": [["Sparen"], ["JDude"], []],
             "participants": ["Sparen", "JDude"]
+        },
+        {
+            "id": "range21",
+            "location": "motk",
+            "loc_category": "range",
+            "name": "beast-expelling geometric creatures",
+            "year": 2020,
+            "duration": [2020.01, 2020.02],
+            "host": "Adam",
+            "judges": ["Trickysticks", "WishMakers", "Adam"],
+            "numparticipants": 0,
+            "result": [[], [], []],
+            "participants": []
         }
     ]
 }
