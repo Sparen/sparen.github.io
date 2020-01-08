@@ -1404,6 +1404,20 @@ var DNHLPobj = {
             "scripter" : "Lunarethic",
             "scriptname" : "History Maker",
             "dvdb" : ""
+        },
+        {
+            "id": "62",
+            "ytid": "mjkz37OZArU",
+            "scripter" : "Python",
+            "scriptname" : "Hidden Spice in Four Seasonings",
+            "dvdb" : "python.html#hsifs6"
+        },
+        {
+            "id": "62",
+            "ytid": "BM6k-6NKHDw",
+            "scripter" : "TresserT",
+            "scriptname" : "Eastern Sacred Path ~ Sudden Onset of Masculinity",
+            "dvdb" : "tressert.html#sandy2019"
         }
     ]
 };
