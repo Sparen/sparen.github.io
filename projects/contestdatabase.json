@@ -529,9 +529,9 @@
             "duration": [2020.01, 2020.02],
             "host": "Adam",
             "judges": ["Trickysticks", "WishMakers", "Adam"],
-            "numparticipants": 0,
+            "numparticipants": 5,
             "result": [[], [], []],
-            "participants": []
+            "participants": ["JDude", "Bagoum", "Lusus", "Foxigami", "ExPorygon/Ozzy840"]
         }
     ]
 }
