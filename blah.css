@@ -348,7 +348,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   padding: 5px;
 }
 
-/* ----- DIV STYLING FOR VARIOUS SUBSITES ----- */
+/* ----- STYLING FOR VARIOUS SUBSITES ----- */
 .dnhstylediv{
   padding: 10px;
   border-style: solid;
@@ -362,6 +362,14 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   border-radius: 16px; 
   border-color: #7FFFD4;
   background-color: #001122;
+}
+
+.contestdbtable {
+  border-color: white;
+}
+
+.contestdbtable td, .contestdbtable th {
+  border-color: white;
 }
 
 /* ----- HEADER STYLING ----- */
