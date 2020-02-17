@@ -11,7 +11,7 @@
             "judges": ["CK Crash/Onthenet", "Drake", "Naut", "Stuffman"],
             "numparticipants": 15,
             "result": [["Helepolis"], ["Stuffman"], ["Thaws"]],
-            "participants": ["Helepolis", "Stuffman", "Thaws", "rdj", "Kylesky", "puremrz", "Garlyle", "Nimble", "Iryan", "Demonbman", "Wingz", "Gamecubic", "CK Crash/Onthenet", "Bluemoon and Lishy", "Naut"]
+            "participants": ["Helepolis", "Stuffman", "Thaws", "rdj", "Kylesky/kyle_090594", "puremrz", "Garlyle", "Nimble", "Iryan", "Demonbman", "Wingz", "Gamecubic", "CK Crash/Onthenet", "Bluemoon and Lishy", "Naut"]
         },
         {
             "id": "range2",
@@ -24,7 +24,7 @@
             "judges": ["Stuffman"],
             "numparticipants": 14,
             "result": [["VideoGameCrack"], ["Blargel"], ["Kayorei"]],
-            "participants": ["Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "VideoGameCrack/Patrick Alexander", "Iryan", "Blargel", "Kayorei", "Nimble", "Nuclear Cheese", "UltimaRepman", "Kylesky", "Thaws", "Blue Wolf", "Demonbman", "rdj", "Drake"]
+            "participants": ["Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "VideoGameCrack/Patrick Alexander", "Iryan", "Blargel", "Kayorei", "Nimble", "Nuclear Cheese", "Lawence Codye/UltimaRepman", "Kylesky/kyle_090594", "Thaws", "Blue Wolf", "Demonbman", "rdj", "Drake"]
         },
         {
             "id": "range3",
@@ -37,7 +37,7 @@
             "judges": ["Naut"],
             "numparticipants": 20,
             "result": [["Thaws"], ["Iryan"], ["DgBarca"]],
-            "participants": ["Thaws", "Iryan", "DgBarca", "CK Crash/Onthenet", "Gamecubic", "NovaRaven", "Demonbman", "Shockman", "AweStrikerNova", "VideoGameCrack/Patrick Alexander", "Danielu", "Dennislol", "Dr. Katz", "Karanum", "kris", "Furu", "Nimble", "Kylesky", "Flashtirade", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"]
+            "participants": ["Thaws", "Iryan", "DgBarca", "CK Crash/Onthenet", "Gamecubic", "NovaRaven", "Demonbman", "Shockman", "AweStrikerNova", "VideoGameCrack/Patrick Alexander", "Danielu", "Dennislol", "Dr. Katz", "Karanum", "kris", "Furu", "Nimble", "Kylesky/kyle_090594", "Flashtirade", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"]
         },
         {
             "id": "range4",
@@ -63,7 +63,7 @@
             "judges": ["Helepolis", "Blargel", "Kefit"],
             "numparticipants": 17,
             "result": [["Dr. Katz", "Nimble"], ["Furienfify", "Johnny Walker"], ["Nobu", "Ravenlock"]],
-            "participants": ["Bark", "Blue Spoiler", "Dr. Katz", "Furienfify", "Dennislol", "Pozeal", "Nobu", "Suikama", "Furu", "Johnny Walker", "Karanum", "Kylesky", "VideoGameCrack/Patrick Alexander", "Naut", "Nimble", "DgBarca", "Ravenlock"]
+            "participants": ["Bark", "Blue Spoiler", "Dr. Katz", "Furienfify", "Dennislol", "Pozeal", "Nobu", "Suikama", "Furu", "Johnny Walker", "Karanum", "Kylesky/kyle_090594", "VideoGameCrack/Patrick Alexander", "Naut", "Nimble", "DgBarca", "Ravenlock"]
         },
         {
             "id": "range6",
@@ -76,7 +76,7 @@
             "judges": ["Naut", "Drake"],
             "numparticipants": 12,
             "result": [["Stuffman"], ["Foremoster"], ["Bitz"]],
-            "participants": ["Stuffman", "Foremoster", "Bitz", "Iryan", "KrackoCloud", "Bark", "Demonbman", "Polaris", "Thaws", "Kylesky", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "Suikama"]
+            "participants": ["Stuffman", "Foremoster", "Bitz", "Iryan", "KrackoCloud", "Bark", "Demonbman", "Polaris", "Thaws", "Kylesky/kyle_090594", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "Suikama"]
         },
         {
             "id": "range7",
@@ -88,8 +88,8 @@
             "host": "Drake",
             "judges": ["COMMUNITY"],
             "numparticipants": 13,
-            "result": [["Sasupoika"], ["Thaws"], ["Kylesky"]],
-            "participants": ["GenericTouhouFan", "Iryan", "Kylesky", "Suikama", "Chau", "Schezo", "Grumskiz", "Foremoster", "Zerro", "Naut", "CK Crash/Onthenet", "Sasupoika", "Thaws"]
+            "result": [["Sasupoika"], ["Thaws"], ["Kylesky/kyle_090594"]],
+            "participants": ["GenericTouhouFan", "Iryan", "Kylesky/kyle_090594", "Suikama", "Chau", "Schezo", "Grumskiz", "Foremoster", "Zerro", "Naut", "CK Crash/Onthenet", "Sasupoika", "Thaws"]
         },
         {
             "id": "range8",
@@ -102,7 +102,7 @@
             "judges": ["COMMUNITY"],
             "numparticipants": 6,
             "result": [["Naut"], ["Azure"], ["Stuffman"]],
-            "participants": ["Kylesky", "Naut", "Thaws", "Stuffman", "Drake", "Azure"]
+            "participants": ["Kylesky/kyle_090594", "Naut", "Thaws", "Stuffman", "Drake", "Azure"]
         },
         {
             "id": "range9",
