@@ -48,9 +48,9 @@
             "duration": [2010.02, 2010.02],
             "host": "Naut",
             "judges": ["Naut"],
-            "numparticipants": 14,
+            "numparticipants": 15,
             "result": [["Iryan"], ["Azure"], ["Nimble"]],
-            "participants": ["Bark", "Hoppefrosk", "Azure", "Kayorei", "Iryan", "Demonbman", "GBZero", "rdj", "Shockman", "Stuffman", "Suikama", "Torpedo", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "VideoGameCrack/Patrick Alexander"]
+            "participants": ["Bark", "Hoppefrosk", "Azure", "Kayorei", "Iryan", "Demonbman", "GBZero", "Nimble", "rdj", "Shockman", "Stuffman", "Suikama", "Torpedo", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9", "VideoGameCrack/Patrick Alexander"]
         },
         {
             "id": "range5",
