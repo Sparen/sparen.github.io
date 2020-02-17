@@ -37,7 +37,7 @@
             "judges": ["Naut"],
             "numparticipants": 20,
             "result": [["Thaws"], ["Iryan"], ["DgBarca"]],
-            "participants": ["Thaws", "Iryan", "DgBarca", "CK Crash/Onthenet", "Gamecubic", "NovaRaven", "Demonbman", "Shockman", "AweStrikerNova", "VideoGameCrack/Patrick Alexander", "Danielu", "Dennislol", "Dr. Katz", "Karanum", "kris", "Furu", "Nimble", "Kylesky/kyle_090594", "Flashtirade", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"]
+            "participants": ["Thaws", "Iryan", "DgBarca", "CK Crash/Onthenet", "Gamecubic", "NovaRaven", "Demonbman", "Shockman", "AweStrikerNova", "VideoGameCrack/Patrick Alexander", "Danielu", "Dennislol", "Dr. Katz", "Hyouga Kazu/Karanum", "kris", "Furu", "Nimble", "Kylesky/kyle_090594", "Flashtirade", "Miransu/Byzantheryx/Mewkyuu/alwaysthe9"]
         },
         {
             "id": "range4",
@@ -63,7 +63,7 @@
             "judges": ["Helepolis", "Blargel", "Kefit"],
             "numparticipants": 17,
             "result": [["Dr. Katz", "Nimble"], ["Furienfify", "Johnny Walker"], ["Nobu", "Ravenlock"]],
-            "participants": ["Bark", "Blue Spoiler", "Dr. Katz", "Furienfify", "Dennislol", "Pozeal", "Nobu", "Suikama", "Furu", "Johnny Walker", "Karanum", "Kylesky/kyle_090594", "VideoGameCrack/Patrick Alexander", "Naut", "Nimble", "DgBarca", "Ravenlock"]
+            "participants": ["Bark", "Blue Spoiler", "Dr. Katz", "Furienfify", "Dennislol", "Pozeal", "Nobu", "Suikama", "Furu", "Johnny Walker", "Hyouga Kazu/Karanum", "Kylesky/kyle_090594", "VideoGameCrack/Patrick Alexander", "Naut", "Nimble", "DgBarca", "Ravenlock"]
         },
         {
             "id": "range6",
@@ -100,9 +100,9 @@
             "duration": [2011.03, 2011.04],
             "host": "Drake",
             "judges": ["COMMUNITY"],
-            "numparticipants": 6,
+            "numparticipants": 7,
             "result": [["Naut"], ["Azure"], ["Stuffman"]],
-            "participants": ["Kylesky/kyle_090594", "Naut", "Thaws", "Stuffman", "Drake", "Azure"]
+            "participants": ["Kylesky/kyle_090594", "Naut", "Thaws", "Stuffman", "Drake", "Azure", "Helepolis"]
         },
         {
             "id": "range9",
@@ -114,8 +114,8 @@
             "host": "Helepolis",
             "judges": ["Helepolis"],
             "numparticipants": 4,
-            "result": [["Sasupoika"], ["Kazu"], ["Schezo"]],
-            "participants": ["SFN", "Schezo", "Kazu", "Sasupoika"]
+            "result": [["Sasupoika"], ["Hyouga Kazu/Karanum"], ["Schezo"]],
+            "participants": ["SFN", "Schezo", "Hyouga Kazu/Karanum", "Sasupoika"]
         },
         {
             "id": "locaa1",
