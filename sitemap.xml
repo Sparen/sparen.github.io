@@ -505,6 +505,11 @@
 <priority>0.2</priority>
 </url>
 <url>
+<loc>http://sparen.github.io/projects/contest/judging.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.2</priority>
+</url>
+<url>
 <loc>http://sparen.github.io/projects/danmakanvas.html</loc>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>

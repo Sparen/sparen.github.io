@@ -1,0 +1,103 @@
+/////////////////////////////////////////////////////////////////////
+Mewkyuu's judgments
+/////////////////////////////////////////////////////////////////////
+
+GenericTouhouFan
+Difficulty: Lunatic
+Shot type: Homing
+... :V
+Hm... This has more effort put into this one than the others... but...
+(Sure, the graphics are good, but hey. You probably didn't make 10% of these, did you? :V)
+Ok, so this one is really great. Probably the only part that needs working on is the one type of fairy that fires YAYENCLOSEDRINGSOFBULLETSYEAAAAH
+I mean, there's even a time system! Holy shit, did you put lots of effort into this.
+The second stages and midbosses need lots of work, though. Almost all of these patterns are pretty much stolen from ZUN :V
+Then there's Remilia. Right off the bat we have this Byakuren-pattern, except it's a million times easier...
+Then after that we have QED, Reimu's Last Spell from Imperishable Night, then Scarlet Meister.
+Not much left to really talk about, is there...
+Ok, so there's the time system and cutin... then there's the stream of recollectionpatterns (:V).
+I'd give you a 7.6875/10.
+Also, this happened. Never mind the fact that I have Font.png as a single transparent pixel...
+http://b.imagehost.org/0854/wat.png
+
+Iryan
+How the fuck do you make that wavy effect with the boss?!
+* Mewkyuu looks into the code
+Anyways, the stage took way longer than 2:20 (7:45!!), you sure you played at 60 (or rather, 57) FPS?
+The stage is really repetitive, and a lot of the time, you put lots of walls (not really) and holyshitturning bullets, which generally is a bad idea, if said bullets turn indefinitely (StB-Wriggle style).
+7/10.
+
+Kylesky
+Holy shit, the background! I want to see how you ma-
+* look in code
+Anyways, good job on making the difficulty close enough to ZUN's stages. At least I could barely 1cc it now! :3
+Then there's the boss fight.
+Cheesy dialogue. I expected as much. Though, I really wanna see how you made the animated event box...
+* look in code
+7.25/10
+
+Suikama
+Oh shi- this thing. Where are the last two souls must look at Nautreplay.
+insert many more "rage argharghargh" and "holy shit this is nice" comments here.
+5.25/10 in the end.
+
+Chau
+Everything appears too suddenly. Then... Walls! Walls every 5 seconds! 'specially at the midboss and after.
+I never actually finished the stage, so, yeah...
+Also, what the!? > http://d.imagehost.org/0021/what_the.png
+I had to give up on this one after like, 3 tries. This entry is just... ??? level.
+3/10
+
+Schezo
+I want to be disappointed...
+The danmaku is quite slow and boring, and then there's the boss fight, which was pretty much "slip through this little ring and stay put. slip through that and go back to where I started," etc.
+The sprites are stolen from a handful of Kirby games so...
+I'll give you a 6/10.
+
+Grumskiz
+Anyways, there's quite a nice stage, but there's one problem. The enemies are practically indestructible without the use of a bomb. That's not too nice on the player. :( Also, it's way too short, which sorta irritates me... a bit.
+Then there's the boss... Is that Mokou and Kaguya?
+Nice first two patterns, but the spell card is a bit iffy. With a bit of fooling around, it's impossible to shoot down the boss. A survival spell that's a full minute long would not work, like, at all. Hot tip, never allow a survival that's longer than 45 seconds.
+Here, I'll give you... how does a 6.25/10 sound?
+
+Foremoster
+Anyways, holyshit the background it's so trippy
+* Mewkyuu spazzes happily
+Anyways the stage is fucking longer than PCB Stage 4 for me. Massive amount of points taken off. *rageragerage*
+This is made up for by Reimu dressing like fucking Shinki.
+Then there's the boss battle.
+Since you use Paint.NET, you can tile Reimu over Marisa or something and have all three of them (Reimu, Marisa, and Wriggle) be visible at the same time.  Just a suggestion. (Also, why is Wriggle randomly skipping around instantly? Suggestion: Draw the fireflies separately and make them revolve around Wriggle instead of in the same sprite as her.)
+*Insert long review here that was in the original post*
+Rating: 6/10
+
+Zerro
+I want to hug your Kogasa. :3
+Anyways, the bullets. There are no bullets in your spell cards. What kind of shot data do I need now?!
+(Also lol I captured Unexpected Assault)
+Erm. It seems I can't really fix the problem... I guess I'll have to go without a midboss and boss... :(
+4.75/10.
+
+Naut
+Best ending ever.
+How did you get the orbs to home like that? Also, lolconstantly shooting so I can focus on dodging. However, NO BOMBS
+7/10
+
+Onthenet
+Great stage and midboss sans Meiling because she does not have fucking spell cards.
+Then the entire boss fight ruins it, as I can pull references from "Periphery of Power" from this one. More specifically, Suyo (nonspell), LKA (Infinite Blue), and Booman (Cyberspace Kick).
+I'm just gonna give you a 6/10.
+
+Sasupoika
+- Fu-... how do you even make the scoring system?
+- This is easy. 1cc'd the script on my first try (by the way, I tried Outer God first)
+- The nice darkening effect and the enemies is fucking beautiful. I want to steal your skills.
+- Anyways, it's a nice entry. Let's see what everyone else has to present.
+8.5/10 (God this one is easy)
+
+Thaws
+Why the hell did you take a picture of your toilet? :V
+Pop pop pop pop pop pop pop p(ry
+Well, the stage... wasn't too surprising. Slip through this... Slide across the screen, roll a dice and hope I get a ?...
+What really caught my attention was the midboss and boss. More the midboss, though. Is that Kogasa in there?
+The boss is sorta nice too, but the dialogue... Is that all?
+Spell cards are quite replayable, wouldn't hurt to play it through a nice 15 times.
+7/10
