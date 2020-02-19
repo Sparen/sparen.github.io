@@ -1,0 +1,7 @@
+TresserT --
+
+Danmaku Quality: 4/8  For someone like me who's never played an official touhougame, (or fangame for that matter) the stage is too hard for me, even on easyish. I didn't make it past Cirno's first spell. I found a glitch in your player script though, it could let me cheese the whole script if I had the patience for it. Basically the umbrella item doesn't have a cooldown on when you can warp, so you can warp repeatedly and keep yourself invincible.
+
+Contest Theme: 6.8/8 "I think you did pretty good at keeping true to Marisa's style while having her use more scientific based attacks. Cirno's spell wasn't bad either."
+
+Music, Graphics, and Appeal: 2/4 "Your player script needs a lot more fine tuning, the bomb isn't that great since it doesn't do damage, and the screen doing a flip actually hinders the players and as soon as you can see what's happening again, your invincibility frames are over.  I had to change to an invincible character, and it got progressively laggier at the end of the script (though that might be the substitute player's fault maybe? I'm not sure)."

@@ -1,0 +1,78 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant : Lefkada
+Script : Popular Popularity ~ Koishi [RaNGE 14 entry]  version 1.0c (Koishi )
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Nonspell 1 :
+A good opening non-spell. If only you can get rid of bullets that spawned outside StgFrame (and killed me twice), I would like this more [11/15]
+
+Paranoia "Fear of Fans' Crowd H-"
+This is more like a fast-pace version of original Paranoia. While it suffered from unoriginality, it provied an innovative danmaku. Kinda like it.
+[15.5/20]
+
+Nonspell 2 :
+Solid non-spell. Nuff said.
+[12/15]
+
+Schizophrenia Crisis "Distorted Reality H-"
+Wow, I really like concept in this spell card. Damaku is also fair and fun
+[18/20]
+
+Non-spell 3 :
+Decent non-spell. Kind of out of place for her character.
+[10.5/15]
+
+Perversion "Stalkers Standing in Your Shadow H-"
+A good streaming pattern, a little bit too much with purple bullets though. (they're too fast)
+[16.5/20]
+
+Non-spell 4 :
+I have some unfocused skill so I've no problems to dodge these kind of danmaku, and I found it quite fun & challenging.
+[13/15]
+
+Oversized Ego "Deified Personality -H-"
+This is an interesting way to fire bullets. I've a fun moment when I've to dodge by finding the gaps between them.
+However, I still got walls sometimes.
+[16/20]
+
+I'm going To Call you. EVERYTIME. H-"
+A replicate version of ULiL, and it's done nicely. I don't have any complaint, except it's a bid long
+[17/20]
+
+"Philosophy of a Loved Idol H-"
+Not much originality here.Still fun to dodge
+[16/20]
+
+Overall, for the main boss fight you get 12.125 points out of 15
+
+-Visual & Effect- (3 point)
+Visual is really good, the StgFrame, background, UI are perfect.
+Effects are quite nice.
+[2.75/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+I feel like normal difficulty should be better, it's a bit bland compare to hard difficulty.
+I want to like the music, but I cannot. After replaying this script for the 3rd time, I started to get a headache.
+[0.75/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+Players are pretty good! Will you release them in the future?
+[0.75/1]
+
+##### Final Score = 12.125+2.75+0.75+0.75 = 16.375 #####

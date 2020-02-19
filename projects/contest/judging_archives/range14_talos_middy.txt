@@ -1,0 +1,56 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant : Midnight Sparkle          
+Script : RaNGE 144 Popular Popularity (Mokou)
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Non-spell 1 :
+Generic non-spell.Nuff said  [12/15]
+
+Great Flare : -Let This World Burn To Nothing-
+What an arousing name.
+Blue fires are random, and the burst is very intimidated on the first try. [13/20]
+
+Non-spell 2 :
+Another generic non-spell. I think it's much better to create your own pattern, while still make it feel true to character rather than follow Zun's pattern every step. [11.5/15]
+
+Pheonix's Immortality : -The Firey Curse-
+Nice pattern here, but it suffered from unoriginality. [10.5/20]
+
+Magestic Wings : -Immortal Feather-
+Now this is something original. The aimed Pheonix did a good job. However, it's too easy compare to the entire fight.
+[14/20]
+
+Overall, for the main boss fight you get 10.17 points out of 15
+
+-Visual & Effect- (3 point)
+At least you managed to animated Mokou's sprite & wings.
+Charge effect could be better,though.
+[1/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+Difficulty is more like an easy version of extra mode. (except spell 3 which is too easy.)
+The lack of sound effect & music hurt aesthetics a lot.
+[0.25/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+This is supposed to be a bonus score, so I won't minus your point because your engine has a ton of bugs/glitchs
+At least you made a player and it's somewhat...decent.
+[0.2/1]
+
+##### Final Score = 10.17+1+0.25+0.2 = 11.62 #####

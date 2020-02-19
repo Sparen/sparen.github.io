@@ -1,0 +1,30 @@
+LettyXLily v1.0b by Ephy/Lefkada
+
+Spells: Worth 20 points each. If has multiple phases, each phase counts as 10 points.
+Nonspells: Worth 10 points each
+Stages: Worth 10 points per phase (determined by self)
+
+Backgrounds, music, sound and effects: Counted as part of "Other"
+Organization: Counted as part of "Other"
+Replayability: Counted as part of "Other"
+
+My Player: Aki Sisters
+
+Difficulty: Normal
+
+Nonspell 1 (Lily): I greatly appreciate how you have the bullets return at different speeds to form flower shapes. It's quite pretty and reminds me of autumn, yet the danmaku style is still that of Lily. [10/10]
+Nonspell 2 (Lily): The first two phases of this attack are overly repetitive. The flower of autumnal bullets is the highlight of this attack, but it feels like it's been shoved elsewhere. Varying it up a bit would have been nice, and replacing the second wave of splitting bullets would have been a good idea. [8/10]
+Spell 1: Once again, an excellent job with the theme. However, Letty's pattern is what stands out to me here - I really do like it. However, Lily seems to be shoved to the side, as he patterns are underwhelming. [17/20] 
+Nonspell 3 (Letty): I cannot express how much I love this nonspell. You have brought out Letty's inner summer in a way that is beautiful and still accurate to the character's style. [10/10]
+Spell 2 (Letty): This spell is somewhat underwhelming - Letty's base pattern is meh and the flame clouds are somewhat tricky. Interesting, yes. Amazing, no. [15/20]
+Spell 3: Once again, an excellent job. The spell is beautiful, with its rotating autumn leaves and snowflakes that melt with the heat of summer. However, it's very slow paced and gets monotonous after a while. [17/20]
+Spell 4: A medley of color and various things. It's hard to see who's doing what, although the theme is strong here. Dodging is very simple though - you just move left now, right later. Could use something that makes the player dodge in a more interesting way. Danmaku here is not bad, but feels slightly generic. [16/20]
+Last Spell (Letty): Once again, I really do love the usage of colors and the overlapping arrowheads. While a slow spell, it brings out some very nice components, and I appreciate the touches you have put on it. [18/20]
+
+Danmaku Raw Score: [111/130] ~ 13.7/16
+Other Raw Score: 04/04
+Overall: 17.7/20
+
+
+Comments
+-I love your script, and I love the player. The effects on the spellcard names are also amazing - I love how each character has snowflakes/flowers/something that represents who they are. It's a nice touch that I appreciate. Also, I can see that you put a lot of effort into this script, as shown by the spell history. This script is aesthetically pleasing and I would love to replay it.

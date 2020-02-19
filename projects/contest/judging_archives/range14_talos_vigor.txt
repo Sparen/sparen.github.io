@@ -1,0 +1,61 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant : Vigor            
+Script : RaNGE #14 VigorX (Kogasa)
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Non-spell 1 :
+An intermediate pattern. Red waves almost got me on the first run. (I also noticed their speed shift between fast and slow, nice detail here.) [12/15]
+
+Spell 1 :
+A good looking pattern. Danmaku seem fine and well balanced. Although, there's not much content here except rainbow bullets everywhere [16/20]
+
+Non-spell 2 :
+Those cycle bullets are a bit too fast. Otherwise, another good pattern [11.5/15]
+
+Spell 2 :
+I like the way you spawn bullets, then they collapse together and spawn more bubbles. Very cool looking pattern [16.5/20]
+
+Non-spell 3 :
+Look like a recreated of non-spell 2 , with more speedy bullets and more cheapshots. I don't approve. [9/15]
+
+Spell 3 :
+The first phase is well done, not much in the second phase ,though. I always get instantly killed by purple lasers.
+It would be a lot better if you increase the delay of lasers in the second phase.[13/20]
+
+Spell 4 :
+It's good, but it look a lot like the recreated of spell 2. [13.5/20]
+
+Spell 5 :
+Again, it look like you merge spell 2 and spell 3 together.The result is somewhat pleasing,but things are starting to get repetitive. [15/20]
+
+Overall, for the main boss fight you get 11.02 points out of 15
+
+-Visual & Effect- (3 point)
+Amazing background & amazing charge/burst effect. Nice job here
+[2.75/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+Difficulty is varied between normal-hard with some cheapshots here and there.
+There is no boss aura, magic circle, or enemy marker, making it very hard to keep track of the boss while dodging danmaku
+[0.5/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+Don't seem to have any. 
+
+##### Final Score = 11.02+2.75+0.5 = 14.27 #####

@@ -1,0 +1,29 @@
+PatchynTewi vFinal by HopeMetal/Rumia w/ a Chest Mouth
+
+Spells: Worth 20 points each. If has multiple phases, each phase counts as 10 points.
+Nonspells: Worth 10 points each
+Stages: Worth 10 points per phase (determined by self)
+
+Backgrounds, music, sound and effects: Counted as part of "Other"
+Organization: Counted as part of "Other"
+Replayability: Counted as part of "Other"
+
+My Player: A2 Marisa
+
+Difficulty: Default
+
+Nonspell 1: As stated before, I have no idea what is happening to Patchy's sprite. Anyways, that laser from Tewi takes a long time to fully disappear, and although the attack is not bad, it is not particularly amazing either. Of particular note is the fact that Tewi has already moved when the laser is deleting, resulting in a deleting laser with its owner having left already [7/10]
+Spell 1: The magic circles are nice and the way the bullets behave is interesting. However, there is no charge/sound effect/anything to tell the player that the bullets are about to split. There are many ways to do this and it is a detriment to gameplay, so I will be docking points. The delay is good, but it's not enough given the speed the red bullets start out at. [13/20]
+Nonspell 2: Having bullets go at a relatively medium speed and then suddenly have extremely high speeds is cheap, especially to experienced players who are trying to stream. The bullets are way too fast when they enter this state. The lasers feel like Tewi in that they are straight versions of otherwise curved lasers, but I don't exactly see what you were trying to do in regards to the theme of the contest. [6/10]
+Spell 2: The spell opens in a very cheap way, with a laser immediately spawning. Once again, I fail to grasp what the spell has to do with the theme, and the lasers stay on screen for too long, resulting in the player oftentimes being pushed against a wall. [14/20]
+Nonspell 3 (Patchouli): Now this attack is nice. I like the pattern, as well as how you handled the angular velocity. It can get a little fast and the bullets aren't exactly spell resistant, but it's nice to play. [9/10]
+Spell 3 (Tewi): For Five Leaf Clover, I do have to say that adding those giant green bullets ruined the pattern. It makes it hard to pay attention to the actual clover, and the bullets are also numerous and can get fast. Still, it's quite a good pattern, despite its flaws. [16/20]
+
+Danmaku Raw Score: [65/90] ~ 11.5/16
+Other Raw Score: 02/04
+Overall: 13.5/20
+
+
+Comments
+-Overall, this has improved since the stream. Despite it not having much in terms of sound effects and other aesthetics, it is by no means not enjoyable on some level. Some attacks are good in execution, while others could use some improvements. I would consider playing this script again if you happen to update it in the future, and I can see that you put effort into it - the ending detail stuck with me. 
+-However, you seem to have left the theme of the contest elsewhere - it's not apparent from the danmaku, and although Tewi's change is more pronounced due to the spell names, the theme is sort of lost.

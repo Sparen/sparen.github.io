@@ -1,0 +1,29 @@
+Choujuu Gigaku Reverse v1.00R by Kirbio
+
+Spells: Worth 20 points each. If has multiple phases, each phase counts as 10 points.
+Nonspells: Worth 10 points each
+Stages: Worth 10 points per phase (determined by self)
+
+Backgrounds, music, sound and effects: Counted as part of "Other"
+Organization: Counted as part of "Other"
+Replayability: Counted as part of "Other"
+
+My Player: Seija
+
+Difficulty: Default
+
+Nonspell 1: I love how you approached Kyouko's ability, especially with Kyouko no longer reflecting bullets but making them point downwards. Execution is good as well, even if it's a little repetitive (though the short lifebar deals with that effectively). [8/10]
+Spell 1: I like how Kyoko's attacks act differently, as well as how Mystia's bullets are all bright and shiny. The spell is good in terms of gameplay as well. [18/20]
+Nonspell 2: Nonspell 2 does an even better job than Nonspell 1 when it comes to making use of Kyoko's new *ability*. [9/10]
+Spell 2: I find this spell to be amazing in terms of originality and how you treat the bullets when they reach a certain point on the screen. It's not all micrododge either, Nice job with the execution of this spell. [20/20]
+Nonspell 3: Once again, good job. There's more pattern variety here than in the other nonspells, but this one can get a little dense and is significantly harder. [10/10]
+Spell 3: I love how you take advantage of Mystia's Light Blindness and turn it into a spell that is not only possible but also features bullets that are actually used by Choujuu Gigaku. It can be a little hard on the eyes, but it's a good spell that I like. [18/20]
+Spell 4: I like the spell, but the screenshake is strong, there's not much time to dodge the spark, and there are a LOT of bullets. You did a good job with Mystia's ability, but it's a little too difficult, in my opinion. [16/20]
+
+Danmaku Raw Score: [99/110] ~ 14.4/16
+Other Raw Score: 04/04
+Overall: 18.4/20
+
+
+Comments
+-I managed to trigger an error at the end of the script: http://puu.sh/g5YDk/686fb75179.png

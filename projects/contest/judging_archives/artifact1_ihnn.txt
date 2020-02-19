@@ -1,0 +1,95 @@
+PhantomSong: PSTContest (0.12m)
+Nazrin NS1: Arrowheads exactly like Nazrin always shoots them, but to make it a little more interesting than dodging bullets that just move down, Nazrin adds some aimed bubbles.  This simple addition adds a lot to the pattern, both in challenge and complexity.
+Nazrin S1: The effect of the 'mice' scurrying down the screen quickly is nice and all...but the dodging you end up having to do is limited to slow moving bullets from the sides.  It's a nice idea, but not very interesting.
+Murasa NS1: Aside from how much she jumps around (minor nitpick), I have problems with this nonspell.  Simple, but very active.
+Murasa S1: The random movements and large walls of bullets make getting damage impossible sometimes, but it's creative, thematic and most of all, fun.
+Murasa NS2: This plays exactly like scene 5-2 in Double Spoiler, only toned down a bit.
+Murasa S2: It's so much easier to write detailed things on potential problems and fixes, so when I find myself with nothing to say on the pattern itself...
+Murasa NS3: I take it back, THIS is DS 5-2, complete with wave density.  I sort of wish some overlapping was done between waves, as that would be a way to make Murasa's nonspell type a bit more interesting.
+Murasa S3: No complaints again.
+Murasa S4: The special wave is a bit sudden, so when I went to redirect the next anchro then dashed under Murasa for damage, I instantly died :V
+NS1: 8/10 | S1: 6/10 | NS2: 8/10 | S2: 9/10 | NS3: 6/10 | S3: 10/10 | NS4: 7/10 | S4: 10/10 | S5: 9/10
+Total: 74/90, or 8.22/10
+Final words: I wish Murasa's nonspells had been gone a bit farther with, but on the whole my biggest problem is that there wasn't enough of this script to play :P
+
+Shadow: Pagoda Contest Entry (engine)
+Marisa's speed is...very fast.
+NS1: Fairly hectic pattern, the curvy lasers bounce which can result in some nasty waves-but nothing unavoidable or unforseeable.
+S1: Way too much life, also fairly simple.  However, simple isn't bad as the macrododging required to avoid the comet streams is also rather fun.  Could definitely have been improved by making it easier to hit Mima, though.
+NS2: Just like Mima from SoEW, this cycles through a few patterns.  My only complaint here is the laser that is sometimes fired after a wave is incredibly sudden-I was never hit by it, but it was a close call every time.
+S2: Same problem with life as the first spell, though not to the extent as Mima chases you.  Definitely an enjoyable pattern for sure, even if I think it overstays its welcome by a bit.
+NS3: Streaming through garbage.  Simple, but effective.
+S3: The rotating lasers are really really cheap-they can go offscreen with Marisa trapped in a range that is completely eliminated by the departure, though staying between the red and yellow lasers prevents this, it'd have been nice to allow the purple-red range to be safe as well.  The burst like in the 2nd spell is very dense, almost too much so.  The 3rd attack acts just like the one she has in SoEW, with the spinning orbs that eventually shoot bullets.  This is fairly tricky due to the barrage from all sides, but still manageable.  
+NS1: 7/10 | S1: 6/10 | NS2: 8/10 | S2: 7/10 | NS3: 7/10 | S3: 9/10
+Total: 44/60, or 7.33/10
+Final words: This was really fun-a nice mix of Mima's own attacks from the PC-98 era brought into Windows era style, and what she'd likely do with the pagoda if she found it.  It's definitely difficult, though unfortunately a lot of the difficulty comes from Marisa's focused movement speed being...roughly Reimu unfocused.  The danmaku is strong though, and this is a very fun "script".
+
+Ran Yakumo: BakaDan (engine)
+I played this script on hard mode first.
+NS1: Very erratically moving bullets, borderline impossible to dodge without getting lucky.  Also, the sound effects are ear rape with how much they're spammed.  The fact that you're completely safe in front of Cirno could be a deliberate nod to Icicle Fall Easy, but that shouldn't be borderline required.
+S1: Very simple laser pattern.  Also completely static, so dodging it is as simple as safespotting.  Even without the safespot, it's not very interesting to dodge either.
+NS2: Looks like a copy-paste of the first nonspell-complete with its erratic bullet issue.  The only difference I can see is the bullet type, which doesn't help.
+S2: Bullets spawning from the bottom of the screen combined with allowing the player to sit there is kind of cheap, especially when those bullets just end up going straight offscreen anyways.  The lasers also seem to move randomly, and the random shower of bullets can result in some very nasty situations sometimes.  Still, when the RNG is nice it is actually quite fun.
+NS3: It's something different!  It's just simple arrowhead dodging, nothing too special, but it's at least avoidable without relying on the erratic movements going around you.  This is about the time I noticed Cirno's back and forth pattern being used on everything-with a very narrow forward focused Koishi player, it's a big problem on the nonspells.
+S3: The Pagoda flies around the screen and shoots AIMED LASERS.  The first one is fired FROM THE BOTTOM OF THE SCREEN.  This is a pretty big problem >_>, especially since you have no invincibility frames on respawning.  I died, and then immediately died again several times testing this card.  I was eventually able to capture it, however, that doesn't make it well designed or fun.
+S4: Something that was actually fun.  It might just be (seemingly) random lasers overlaid onto a pattern not unlike Milky Way/Asteroid Belt, but it works.  Provides a small challenge without being cheap (except when the lasers are rendered under the bullets so you get hit by something you couldn't even see).  Nothing memorable, but at least it wasn't painful to listen to or unenjoyable.
+I then went to go play easy to see if that was balanced better, and was rewarded with nothing spawning, and my score/lives carried over from the hard mode test.  Hilariously, the patterns are identical, the only difference is that Cirno drops a 1up after each pattern (and you start with more lives).
+NS1: 2/10 | S1: 4/10 | NS2: 2/10 | S2: 6/10 | NS3: 3/10 | S3: 1/10 | S4: 6/10
+Total: 24/70, or 3.42/10.
+Final words: This script was riddled with flaws, and the attacks ranged from borderline impossible with cheap elements to overly simple.  The only things I feel were in a finalized state were the 2nd and last spells, which I did enjoy.  Everything is possible to dodge, though sometimes only just barely and if the RNG plays nice or by abusing a safespot.
+
+kirbio: Raiko_Pagoda (ph3)
+I had to use AppLocale to run this script.
+NS1: It's Raiko, but with dodging through the 'beat' waves instead of following through lanes.  Simple, but effective.
+S1: Not sure if anyone else has this problem, but there was a stutter as the spell started and the nonspell faded away, resulting in a death as the patterns switched over.  It's minor, but a nuisance nontheless-though it's probably just my craptop.  Either way, fun spell, biggest problem is the yellow notes blend in a little too well with the lasers sometimes.
+NS2: Again, it's just a Raiko nonspell, a nice clone of her 2nd one from DDC...only slowed down, removing any threat from it.  I would have liked to seen some curving bullets here, maybe clusters breaking apart and merging into new clusters, something to show the pagoda in use.
+S2: I...don't know how you're supposed to damage Raiko here.  Dodging the note rings is easy enough with circling, and Nazrin is powerful enough to take out the pendulums...but it leaves no time for shooting Raiko?  Upon a further play, I discovered redirecting the pendulums  to the side of Raiko, then firing at her not only dodges all the bullets, but allows enough fire time for a reasonably quick capture.  This is a good spell, albeit on the difficult side!  However...it has a major flaw in that if you die, the pendulums end up in completely undodgable positions.
+NS3: Same issue as the 2nd nonspell, though mercifully it's faster paced.
+S3: Nothing new, plays exactly like Raiko's 5th spell in DDC extra, only sparser and a bit less time between waves.  Due to Raiko's use of lightning curvy lasers and glowing bullets in this way already...the new part in the rest bullets is a nice touch though.
+NS4: Bit of a trap PoCing here, heheh...THIS is the kind of thing I expected to see, take the characters own pattern and do something new with it.  It's also a bit tricky due to the blue waves.
+S4: Weaving through rings of notes while being pushed by lasers.  It works, though the 'timeout/low HP' phase may be too dense to reasonably do?  It does seem to kick in only at the end when the card is about to die, but if it doesn't, it likely spells death.  On a second play, I found that it is damage based, and that it is avoidable...albeit with a lot of difficulty, and getting back under Raiko is nigh-impossible.
+S5: First impression- "WHOA!".  That said, it combines all of the other spells in a hectic mess, and though I usually like this sort of pattern...it feels a bit much here.  It combines a pattern where you have to use the whole screen with 2 different patterns that limit your movement.  A couple more plays did nothing to affect this-it's a good idea, but in execution, it's a walling mess.
+SUDDENLY LAST SPELL
+Last Spell: Why couldn't this have been Raiko's final.  Seriously.  It's hard for sure, but whenever I die to it, it was my fault.  It's a pagoda pattern, fitting the theme.  This is what I like to see.
+NS1: 7/10 | S1: 8/10 | NS2: 5/10 | S2: 8/10 | NS3: 6/10 | S3: 7/10 | NS4: 8/10 | S4: 8/10 | S5: 5/10 | LS: 10/10
+Total: 72/100, or 7.2/10
+Final words: I wish a bit more had been done with the nonspells, and that the 5th spell was simply replaced by the last one.  However, this was a very fun script, and one that I'll likely keep playing in the future...maybe skipping the 5th spell, though :/
+
+TresserT: The Pagoda of Bishamonten (ph3)
+I had to use AppLocale to run this script.  There's a Nazrin player and a Shou player, and the Nazrin player is just all around better.  Further, there's no player script names, and the 'cutin' images are way out of proportion too...I used Nazrin for all tests below.
+Sukuna1: Easily exploitable safespot above the spawning point, not too hard to dodge the raining lasers either.  That said, the green ones reallllly blend into the UFO Stage 1 background.
+Sukuna2: I like this a lot more than ZUN's Thorny Path-not that that says too much.  The black background visible over the red lasers is...distracting, and the green bullets do pile up over time.  Still, I like it.
+Suika1: Double Spoiler 6-2.  No pagoda influence visible, but it does take a working pattern that's fun and go with it.  A common theme, though, is that I wish more patterns used the pagoda, since that is the contest objective.
+Suika2: This is a cool spell, but its first flaw is apparent in bullets spawning at the bottom of the screen with no warning.  However, once you get past that point it does play well and is fun.
+Suika3: Visually impressive at the start, but in the end it does boil down to dodging 1 ring of bullets every 4 seconds or so-and sometimes the ring retreats before it reaches you.
+Suika4: SUIKA IS NOT YUUGI but the pattern works as a pattern...but couldn't Yuugi have shown up to use it?  There are 4 characters in this script, after all.
+Suika5: I don't know what to think.  It looks like a static pattern thrown over another static pattern in the style of Rorschach in Danmaku without the randomness of spawn point moving, with an aimed bullet thrown in every once in a while to cover this fact.  Not fun.
+Reimu1: You have to be careful with inverse ratios-they tend to spiral out of control at the extremes.  This nonspell starts off too slow, gets to a comfortable level and then goes way too fast, especially with the random spawn point for the card rings-I had to dash off to a corner just to wait for the ring to spread enough to go through at a few points.
+Reimu2: I've never really had to dodge anything like this.  In this case, that's a very good thing.
+Reimu3: First batch of lasers has no warning.  Outside of that, I like the concept and the execution.
+Reimu4: I expected a spin around the boss pattern, and this was that pattern.  However, the butterflies end up creating awkward laser walls that I'm not sure how to deal with-it's very easy to get walled and I'm not sure it's because I was missing some master strategy as in RaikoS2.
+Reimu5: Classic Reimu, with lasers added.  Only complaint is the yin-yang orbs move a touch fast-it's impossible to outrun them, which can make some nasty walls sometimes.
+Reimu6: No amount of delay cloud can save you from bottom of the screen dodging with bullets spawning at the bottom of the screen.  Outside of that fatal design flaw, fun spell.
+Reimu7: 90 second survival card.  Depending on what's done in that timeframe, the length isn't necessarily a bad thing...but here, it is.  The bullets fly out of the lasers way too fast, resulting in either a cheap death or a lucky dodge on every wave past the 70 second mark, when multiple lasers overlap.  The last 5 seconds seem random and...again, luck reliant.  I'm not against survival cards, or long survival cards even-but this is not a good one.
+Reimu8: I think the gimmick here is really cool-giving the player permanent gaphax on all sides.  However, I do think it could have been explained better, as I found out by complete accident while trying to abuse the diagonal movement at the bottom for 0.717 (sqrt 2/2) speed to try to micrododge the initial wave...that said, there's a fatal flaw in the design.  Shou can't kill phase 2.  Phase 3 is a mindscrew that I relied on luck for, and Phase 4...well, it's sudden and took me a moment and a death to realize what had changed.  I then micrododged the entire rest right below Reimu, as the cards are in the same relative positions every time.  On the whole, this is a very creative spell, but it just doesn't work too well.
+Genji: Wait this is still going?  Static dark green curvy lasers with black bleed-in background move in and out...and random lasers and aimed lasers and boring survival card.  It takes until 20 seconds left to get interesting, with bullets spawning from the aimed lasers, but it's in such a way that you pick a side and pray that the wave spawns the nearby bullets moving the opposite direction.
+Suk1: 5/10 | Suk2: 7/10 | Sui1: 6/10 | Sui2: 8/10 | Sui3: 5/10 | Sui4: 8/10 | Sui5: 4/10
+Rei1: 6/10 | Rei2: 10/10 | Rei3: 8/10 | Rei4: 5/10 | Rei5: 8/10 | Rei6: 7/10 | Rei7: 4/10 | Rei8: 4/10 | Genji: 3/10
+Total: 98/160, or 6.13/10
+Final words: Quality over quantity, there's a lot of really cool ideas here, and a lot of stuff that should have been cut.  Notably, I think this would have worked better as a progression of "ok I beat this character, but they dropped the pagoda and this other character wants to fight over it now" type things, rather than 2 minibosses and 2 bosses in a random order.  Reimu's 8th pattern could have used more balance testing, Genji could have been cut altogether or had a team pattern with Reimu, there's so much that could have been done with this to make it great...but instead, it's a mediocre boss rush.
+
+ExPorygon: The Plundered Pagoda (ph3)
+Stage1: Fairies powered by the pagoda.  Scary, but quite manageable with some fast kills from Marisa.  The section gets out of control fairly quickly and requires some fast curvy laser reads, but it doesn't feel out of place for an extra stage type portion.
+PatchS1: It's a bit hard to track how the pattern is moving, but once I figured it out it was simple enough to avoid.
+PatchS2: Despite Patchy already using lasers before, this still feels like a pagoda fueled pattern.
+PatchS3: At first I thought this was going to be a Devil's Recitation ripoff, then I thought it would be simple dodging from below, then Patchy started firing rings of bullets and it became something all its own.
+Death fairy: Obligatory spinning pattern :V  This is similar to the one TresserT had, only instead of walling lasers it's simply bullet waves spawning from the walls.  It works much better, and provides a fair challenge with keeping the fun factor.  However, one time I did die and have Flandre show up with the death fairy at half health still...it stopped shooting, but it still blocked shots from hitting Flandre.
+FlanNS1: Flandre's nonspells were all simple in EoSD, and this one keeps the style of that while still adding in pagoda influence in the pattern unfolding-and the laser barrages.  I'd slow the lasers down a touch, but aside from that this is a perfect nonspell.
+FlanS1: At first glance this looked very threatening, but once I determined the descending curvy lasers followed the same path every single time, it turned into micrododging the gold bullets in a small cage.
+FlanNS2: Similar to the first nonspell, but sparser and with curving lasers instead of straight bursts.
+FlanS2: Flawless outside of the curvy lasers being a bit hard to read and the red bullets being a touch on the fast side, especially on the first wave.  That being said, the curvy lasers are on me and the red bullets aren't threatening once you know to give a bit more space.  Flan+Pagoda is represented very well.
+FlanS3: Phase 1 has an aimed curving laser, something I don't think I've seen done before, and a nice pattern to dodge it through.  Phase 2 has multiple, forcing a larger distance to be traversed, though through less bullets.  Phase 3 relies more on the bullet speed than the lasers, which is a bit fast for my liking but not too difficult at all.
+Stage1: 9/10 | PatchS1: 9/10 | PatchS2: 8/10 | PatchS3: 8/10 | DFairy: 9-1/10 (8/10, pattern-bug)
+FlanNS1: 10/10 | FlanS1: 7/10 | FlanNS2: 9/10 | FlanS2: 9/10 | FlanS3: 8/10
+Total: 85/100, or 8.5/10
+Final words: The entire script is pagoda influenced.  Some of the patterns feel much more like lunatic than "hard", and some others seem a bit unbalanced in their difficulty (Patchy3 and FlanS3 come to mind).

@@ -1,0 +1,29 @@
+[Auto2112] Rumia (Default Difficulty)
+
+[Danmaku = 4.90/10]
+I dont know if your trying to make pretty patterns but...
+the nons have Poison Nail in them which is for Yoshika and the first rainbow non is very off character
+Next is the mist gimmick which is..uninteresting , try including a twist when it comes to things like this
+the first spell just had it dim out , yet you can still see the patterns
+second spell just tried covering up rand bullets and the first pattern can cause walling
+for the last spell, you were going for SCC Mystia , which goes out of character AND causes cheapshot
+remember Rumia's ability is darkness not blindness
+
+[Balancing = 0.90/2]
+The difficulty is going everywhere, non 1 makes you squeeze through rainbow
+spell 1 has macrododging, I was lucky while playing marisa on this one
+considering she doesnt have the smaller hitbox reimu has
+either way try to make difficulty ramp up if you will even if this is one difficulty
+
+[Aesthetics = 2.6/5]
+This is...too simple..theres no spell card bg to spice things up
+All im seeing is the scrolling water background from MoF
+I wont mind the lack of cutin but here's the thing, rumia doesnt animate
+you should never neglect boss animation, rumia looks like a statue
+
+[Overall Enjoyment = 1.20/3]
+
+[Final Score = 9.6/20]
+this script is too simple for my taste and the patterns dont fit rumia at all
+you could have atleast made it interesting. I reccomend experimenting a bit
+with the gimmick you plan to use

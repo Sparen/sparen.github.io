@@ -1,0 +1,78 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant : Darkness
+Script : RaNGE 14 - Yuuka Boss Fight version 1.2 (Yuuka)
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Non-spell 1 :
+It's a good nonspell, if only purple waves don't kill me a lot.
+[10/15]
+
+Magic Sign "Nightmaric Growth"
+A tricky spell card here. It caught me off guard on the first try (when those purple things started to spawn at the bottom). Well, it's not like it's a bad spell card.
+Once I learnt how to dodge this. It becomes very fun.
+[16.5/20]
+
+Non-spell 2 :
+This one is solid. I like it.
+[13/15]
+
+Love Sign "Sunflower Spark"
+Hmm, I have seen this before, but I will pretend I didn't.
+Nice pattern here, the execution is great. One complaint is that the lasers' are too large than I though (well, the delays are very thin, so I didn't expect the actual lasers will be THAT wide.)
+[17/20]
+
+Non-spell 3 :
+Nice effect here, and danmaku is good,too.
+[13.5/15]
+
+Symbol "Withering Away in Emptiness"
+I don't know how to describe this, I can only say that this is how you make a fair & fun spell card.
+[19/20]
+
+Non-spell 4 :
+The color is a bit off here, and pattern doesn't seem to fit Yuuka well.
+[11/15]
+
+Phantasm "Flower of Forgetfulness"
+At first I though that standing in white circle will also remove bullets hitbos.
+Well, I was dumb there, but I began to understand the gimmick after my second death.
+Yay, the gimmick is very fresh, and danmaku seem to fit with it well. Nice work.
+[18/20]
+
+Dream Sign "Purity Seed"
+The pattern isn't that intuitive on the first try, but I'm getting good at it.
+I think it would be more fun, if I didn't easily get cornered by a flower that keep following me.
+[17/20]
+
+Overall, for the main boss fight you get 12.66 points out of 15
+
+-Visual & Effect- (3 point)
+The stage background , spell background, as well as StgFrame, are decent.
+Effects are very appealing.Nice job here.
+[2.25/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+I can't say that difficulty is balanced enough, there are quite a few spell cards there...which are first-run killer.
+Music is good. Not much to say.
+[1.25/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+Don't seem to have any.
+
+##### Final Score = 12.66+2.25+1.25 = 16.16  #####

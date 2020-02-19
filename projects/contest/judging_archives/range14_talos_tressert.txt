@@ -1,0 +1,71 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant : TresserT            
+Script : Tressert's Popular Popularity version 1.2 (Reisen)
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+It's nice to see you included Tewi as a midboss here. Her opening non-spell is good, but the bouncing red things caught me off guard for the first time. I don't think they're supposed to bounce at the bottom of screen, as I saw them bounce at the left/right side of screen already.
+Tewi spell is quite good. I've a lot of fun dodging semi-wallmaku coming from above and below.
+
+And now, our main boss is here, Reisen
+
+Non-spell 1 :
+Open with a simple pattern, then it gradually speed up, which is a nice touch. Aim bullets here work well [13/15]
+
+Red Eyes "Eyesight Clearing (Lunatic Stare)" :
+The way the patterns are introduced is very good. I can capture it in the first run. The concept is nice,too. [18/20]
+
+Non-spell 2 :
+This remind me of Lunatic Gaze "Illusion Seeker" from IN. It's fun and a bit challenging,though. [13.5/15]
+
+Illusion Sign "Violet Eye (Shadow Cloning)" :
+Again, you executed Reisen's gimmick very well.
+At first, I have some trouble with illusion Reisen's movement (there's no charge effect to tell whether she will move), but I get used to it after a while [17/20]
+
+Non-spell 3 :
+I found this is somewhat an easy pattern when you constantly move left to right and vice versa, so Reisen's familiars won't have a chance to fire white bullets, leaving only purple bullets on a screen. It's pretty neat concept,though. I like it [13/15]
+
+Rabbit Sign "Mind Break (Inaba Shooter)"
+Another great concept, now with a bit poor in execution.
+There is a problem with red-eyes gimmick here. When Reisen active it to turn off bullets' hitbox, it doesn't affect red bullets or blue bullets (I know this might be intention, but it's quite confusing)
+And maybe it's just me, but an easy version of this card seem to harder than normal version. [16/20]
+
+"Red Moon Delusion (Hyper Red Moon)"
+I don't know how to describe this. The gimmick is very fresh, and danmaku suit it very well. My only complaint is that it's tad long. [19/20]
+
+Overall, for the main boss fight you get 13.14 points out of 15
+
+-Visual & Effect- (3 point)
+Visual look good as it should be.
+There's not much effect here. Anyway,it looks fine already.
+[2.5/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+Difficulty seem to be harder than it stated (didn't try overdrive difficulty,though, because you said you didn't test it)
+Great choice for music, and it sync with battle very well.
+[1.5/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+Tewi midboss is neat, as I mentioned above
+Koishi player is very well done.
+[0.75/1]
+
+##### Final Score = 13.44+2.5+1.5+0.75 = 17.89 #####
+
+PS :
+I must say I really love your package. Everything seem to work fine, with a nice scrolling background and pretty music. I love how you let me adjust BGM/SE volume, as well as other minor things (I usually find BGM/SE too loud or too low in some scripts, so I have to manually fix it,which is annoying.)

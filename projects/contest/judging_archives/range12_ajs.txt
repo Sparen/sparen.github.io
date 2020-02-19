@@ -1,0 +1,951 @@
+Entries:
+[x] - 8.0 - Lefkada's Konngara(PH3, Engine Included)
+[x] - 9.3 - Arby26's Mima(PH3)
+[x] - 8.2 - TrickySticks' Yuuka(.12m)
+[x] - 6.0 - Goldstein-Izayoi's Yuuka(.12m)
+[x] - 8.3 - Darkness1's Shinki(PH3)
+[x] - 6.4 - Baron Blade's Remilia(PH3)
+[x] - 5.5 - Bob the Tanuki's Eirin(.12m)
+[x] - 7.7 - Alicirno's Yuyuko(PH3)
+[x] - 7.2 - Sariel's Shikieiki(PH3)
+[x] - 6.9 - 100-sun-studios' Yuyuko (PH3)
+[x] - 8.3 - Conarnar's Yuyuko(PH3)
+[x] - 6.9 - Yukkuri_Yukkuri_Yukkuri's Remilia(.12m) 
+[x] - 7.0 - Kirbio's Utsuho(PH3; Engine Included)
+[x] - 7.9 - TresserT's Kanako(PH3)
+[x] - 6.9 - Ultimadragon88's Konngara(PH3)
+[x] - 9.0 - Lunartic's Yumemi(PH3)
+[x] - 6.4 - Sparen's Kanako(PH3)
+
+1st - Arby26 (Mima) - 9.3
+2nd - Lunartic (Yumemi) - 9.0
+3rd - Conarnar (Yuyuko) - 8.3
+3rd - Darkness1 (Shinki) - 8.3
+4th - Trickysticks (Yuuka) - 8.2
+5th - Lefkada (Konngara) - 8.0
+
+===========================
+Konngara by Ultimadragon88
+===========================
+
+Nonspell 1:
+	-The gathering-white-stars phase is a biiiit cheap in my mind
+	-The red knife phase doesn't serve much purpose
+	-Still, the multi phases keep things from getting stale, and it's definitely interesting
+Score: 7/10
+
+Spell 1:
+	-A bit dull.  I never really felt like I was in immediate danger, just dodging stray shots that went near me
+	-The lasers form very fast.  Not sure if they're purposely aimed around me, but they could potentially cheapshot
+Score: 6/10
+
+Nonspell 2:
+	-Not much to say here.  It wasn't too good, but not too bad either
+Score: 7/10
+
+Spell 2:
+	-The knife phase is interesting, but could stand to be more threatening
+	-The laser phase wasn't too bad the second time around, but the lasers form rather fast
+	-The saving grace is the phase with the people.  It's an interesting pattern, albeit simple
+Score: 7/10
+
+Nonspell 3:
+	-I really like it!  It's a fun challenge, and rather interesting even if it's simple
+	-It could've used a bit more though, it felt like it was missing something
+Score: 8/10
+
+Spell 3:
+	-Fun and challenging.  I'd rate it higher if the stars and lasers weren't so cheapshotty
+Score: 8/10
+
+Nonspell 4:
+	-Simple misdirection nonspell.  Not too interesting, but at least it's not too dull
+Score: 7/10
+
+Spell 4:
+	-The slash gimmick with the gravitational pull was really cheap.  It made me die a LOT, plus you don't give much warning
+	-Aside from the artificial difficulty this creates, this spell in general's kinda dull
+Score: 4/10
+
+Overall presentation:
+	-The custom player's decent, and I like the PC98-ish effect you used for her bomb.  Very fitting for this boss battle
+	-Charge effect for Konngara's simple, but gets the job done
+	-There's a bit of a glitch with Reimu's homing amulets where they get stuck in place when they don't have a target, though.  Might wanna fix that if you wish to use this player for future scripts
+Score: 8/10
+
+
+FINAL SCORE: 62/90 ==> 68.9% 
+
+==> 6.9/10
+
+=============================
+Yumemi Okazaki by Lunarethic
+=============================
+
+**This entry was judged on the Lunatic difficulty**
+
+Nonspell 1:
+	-Kind of underwhelming, but it at least keeps you moving and doesn't last too long
+Score: 8/10
+
+Spell 1:
+	-Fun and relatively simple spell.  Forces micro and macro dodging, I love it.
+Score: 9/10
+
+Nonspell 2:
+	-Simple and repetitive, but still manages to be very fun. Thankfully the health bar's not too big
+Score: 9/10
+
+Spell 2:
+	-Yumemi crosses, all my yes.  And the bullet pattern supplements it nicely
+Score: 10/10
+
+Nonspell 3:
+	-Effective, not much to say here
+Score: 9/10
+
+Spell 3:
+	-I love the concept, but the bullets (especially the red ones) speed up a bit too quickly.  I got cheapshotted several times
+	-Still though, great execution
+Score: 9/10
+
+Nonspell 4:
+	-Beautiful and challenging. I would've liked it if perhaps there were a bit more bullets flying around when the lasers were spawning
+Score: 8/10
+
+Spell 4:
+	-Fun, but sometimes the laser placement can screw you over
+Score: 9/10
+
+Spell 5:
+	-Very challenging spell.  A biiit too challenging for my liking considering the difficulty level, but it's a great spell nonetheless
+	-Do the crosses serve any purpose?  I'm guessing if you're trying to circle around Yumemi, they're supposed to get in your way?
+	-Personally I stayed below her and moved through the waves when I needed to, so the crosses posed 0 threat to me
+	-Maybe see if you can do something else with them.  Other than that, the spell's not bad
+Score: 8/10
+
+Last Spell:
+	-Spectacular and challenging.  I captured it on my first go, but just barely--I had several close calls--but this was likely due to the significant lag I experienced
+	-I won't count that against you too much though, you couldn't have known.  I'm guessing it must've run fine on your computer.  Just be mindful to not use too many effects in the future, okay? :)
+Score: 9.5/10
+
+Overall Presentation:
+	-Right off the bat, I'm extremely impressed by your presentation and graphics.  It feels like I'm playing an actual fangame
+	-There were a few glitches regarding music while viewing replays (though it could've just been me).  I'm not counting that against you, just thought you'd want a heads up
+	-Difficulty levels seem fair
+Score: 10/10
+
+
+FINAL SCORE: 98.8/110 ==> 89.81%
+
+==> 9.0/10
+
+
+====================================
+Yuyuko Saigyouji by 100-sun-studios
+====================================
+
+Nonspell 1:
+	-Underwhelming pattern, but it's at least nice aesthetic wise, and presents some challenge
+Score: 7/10
+
+Spell 1:
+	-Fairly slow pattern, so it's not too challenging, but it's definitely fun
+Score: 8/10
+
+Nonspell 2: 
+	-Kinda a ripoff of Yuyuko's second nonspell from PCB.  Still manages to be a decent challenge though
+Score: 7/10
+
+Spell 2:
+	-Another ripoff, and rather underwhelming
+Score: 6/10
+
+Nonspell 3:
+	-Not too bad.  Lifebar was a biiit longer than I would've liked though
+Score: 7/10
+
+Spell 3:
+	-Unremarkable pattern.  It was slow and easy to dodge
+Score: 5/10
+
+Spell 4:
+	-The patterns are a bit bland, but they go together nicely at least for a decently fun final spell
+Score: 8/10
+
+Overall Presentation:
+	-Graphics aren't very special, though the butterfly flapping its wings in the spell backgrounds is a very lovely touch
+	-On multiple occasions, Yuyuko will appear to still be attacking (without firing bullets) for a few seconds after a spell has ended
+	-Simple overall, but nothing that's an eyesore or distracting to the gameplay
+Score: 7/10
+
+
+FINAL SCORE: 55/80 ==> 68.75%
+
+==> 6.9/10
+
+====================
+Konngara by Lefkada
+====================
+
+Nonspell 1:
+	-Pretty simple and fitting, but kind of boring
+Score: 7/10
+
+Spell 1:
+	-Decently challenging, but kind of underwhelming otherwise
+Score: 7/10
+
+Nonspell 2:
+	-Fun and challenging to dodge
+Score: 9/10
+
+Spell 2:
+	-Not a fan of the random bullet spam, but the lasers and bullet bursts aren't too bad
+Score: 7/10
+
+Nonspell 3:
+	-Fun to dodge and to watch
+Nonspell: 9/10
+
+Spell 3:
+	-Cool concept, it could stand to be more challening though
+Score: 8/10
+
+Spell 4:
+	-Even at 30 FPS, it was a pretty spectacular pattern and a challenge to dodge
+	-I'm giving you the benefit of the doubt and scoring you based on what this might've looked like at 60 FPS
+Score: 9/10
+
+Overall Presentation:
+	-The Reimu player is a nice touch, but I feel her bomb is a tad overpowered
+	-Graphics are beautiful, but cause massive lag.  I was at 30-40 FPS for most of the script
+Score: 8/10
+
+
+FINAL SCORE: 64/80 ==> 80%
+
+==> 8.0/10
+
+
+===============
+Mima by arby26
+===============
+
+Stage:
+	-Oh my goodness, the stage.  It was the perfect blend of fun, challenging, and stressful
+Score: 10/10
+
+Nonspell 1:
+	-Dynamic, challenging, but simple and fun
+Score: 10/10
+
+Spell 1:
+	-Starts off relatively easy and gradually gets harder.  Very fun
+Score: 10/10
+
+Nonspell 2:
+	-Really fun.  The knives part caught me off-guard the first time around, but otherwise not too difficult a nonspell
+Score: 10/10
+
+Spell 2:
+	-Some of the swirls are a biiiit too fast for my liking, but otherwise great!
+Score: 9/10
+
+Nonspell 3:
+	-Really fun and challenging. Again, caught me a bit off-guard the first time but this nonspell is otherwise extremely fun
+Score: 10/10
+
+Spell 3:
+	-The later parts get a tad hard, but I still like it otherwise
+Score: 9/10
+
+Nonspell 4:
+	-The orbs chasing you while shooting bullets caught me off-guard and even when I figured it out was rather challenging and a tad unfair in my mind
+Score: 8/10
+
+Spell 4:
+	-There's just too much going on in this spell for it to be fun. I've nearly had to use two continues on this spell alone
+	-It's a significant spike from the rest of the script which was mostly "hard but fair". This one's just "hard"
+Score: 7/10
+
+Overall Presentation:
+	-The script is extremely well put together, and is generally very challenging but otherwise fair for the most part
+	-The whole screen moving with the character is pretty trippy, but it adds a nice feel to the dodging, and an extra challenging element
+Score: 10/10
+
+
+FINAL SCORE: 93/100 ==> 93%
+
+==> 9.3/10
+
+
+=============================
+Yuuka Kazami by Trickysticks
+=============================
+
+Spell 1:
+	-Very easy, but I like that it's musically synced :v
+Score: 8/10
+
+Nonspell 1:
+	-Suitably dense and not too challenging
+Score: 8/10
+
+Spell 2:
+	-Difficult to keep up with the spinning at times, especially with all the semi-random bullets falling
+	-Not a bad spell idea (that pattern looks familiar :V)
+	-Very fitting for Yuuka
+Score: 8/10
+
+Nonspell 2:
+	-Not a bad nonspell. Not too easy, not too hard. Annoying to hit Yuuka sometimes, so the nonspell drags on a bit
+Score: 8/10
+
+Spell 3:
+	-A decently challenging spell in its own rite, but the idea's been done to death a million times over I'm afraid
+	-Still, I liked it
+Score: 8/10
+
+Nonspell 3:
+	-Intimidating, but it's not a very compelling nonspell
+	-Very pretty though
+Score: 7.5/10
+
+Nonspell 4:
+	-Very good call not putting the Yuukas at the same elevation--it adds a degree of disorientation to the danmaku
+	-Challenging, but very fun
+	-Health is a bit on the high side, but I'm okay with that
+Score: 9/10
+
+Spell 4:
+	-Ahh yes, it was inevitable. The infamous Double Spark
+	-Very fitting, and challenging but fair, and fun to dodge
+Score: 9/10
+
+Spell 5:
+	-Kind of disappointing for a final spell. None of the phases in themselves (other than the criss-crossing bullets phase) was particularly challenging or interesting
+Score: 7/10
+
+Overall Presentation:
+	-Nice background, and everything looks nice. The danmaku is very fitting for Yuuka herself.
+	-And of course, dat opening
+Score: 9/10
+
+
+FINAL SCORE: 81.5/100 ==> 81.5%
+
+==> 8.2/10
+
+
+=================================
+Yuuka Kazami by Goldstein-Izayoi
+=================================
+
+Nonspell 1:
+	-Fairly easy, but interesting at least
+Score: 7/10
+
+Spell 1:
+	-Simple streaming spell. Not much else to say
+Score: 6/10
+
+Nonspell 2:
+	-Yuuka's hard to hit and the danmaku isn't particularly challenging
+Score: 6/10
+
+Spell 2:
+	-Repetitive and lasts too long, but at least it's challenging
+Score: 7/10
+
+Nonspell 3:
+	-Now she's hard to hit AND she shoots annoying aimed semi-random danmaku
+Score: 6/10
+
+Spell 3:
+	-Not very interesting and kind of cheapshotty
+Score: 4/10
+
+Spell 4:
+	-Static pattern.  Very lazy
+Score: 3/10
+
+Spell 5:
+	-I really love the idea (even if it's a QED ripoff), but the pattern is beautiful and adds a new dimension to the QED pattern
+	-I only think you're selling yourself short by deleting bullets between the waves.  If you let them stack it could make for a very hectic and fun final spell!
+Score: 8/10
+
+Overall presentation:
+	-Sprite is pretty, even though it's not animated (I won't count that against you though)
+	-Background is beautiful, and most importantly does not clash with the danmaku.
+	-Music adds an air of epicness to the battle.  Not sure how well music with vocals works with danmakufu though
+Score: 7/10
+
+
+FINAL SCORE: 54/90 ==> 60%
+
+==> 6.0/10
+
+
+====================
+Shinki by Darkness1
+====================
+
+Nonspell 1:
+	-Pretty standard, and befitting of Shinki
+	-I would've liked it more if the tiny bullet firing phase was shorter, to allow more cycles of the grey walls to form
+Score: 7/10
+
+Spell 1:
+	-Very creative spell, the application of the familiars surrounding you definitely made it quite fun
+	-I was not a big fan of the walls closing in on you. Plus it looks kinda tacky
+	-Perhaps you could've had them swaying back and forth, a la Devil's Recitation?
+Score: 8/10
+
+Nonspell 2:
+	-Not particularly challenging, and not very interesting
+Score: 6/10
+
+Spell 2:
+	-Creative use of familiars. The lasers were a bit annoying though, I got clipped a lot
+Score: 7/10
+
+Nonspell 3:
+	-Very fun and threatening nonspell
+Score: 9/10
+
+Spell 3:
+	-Cool spell, but the placement of the bubbles can screw you over sometimes
+Score: 8/10
+
+Nonspell 4:
+	-Simple, but fun
+Score: 8/10
+
+Spell 4:
+	-Beautiful, challenging, and fun
+Score: 10/10
+
+Nonspell 5:
+	-Very fun and challenging. A tad long-winded though
+Score: 10/10
+
+Spell 5:
+	-Kinda Marisa-ish, but still a fun spell
+Score: 8/10
+
+Spell 6:
+	-Really cool idea, and gets very fun later on
+	-Kind of a slow startup
+Score: 9/10
+
+Overall Presentation:
+	-Damn, you found my weakness. That's my favorite remix of Shinki's theme :v
+	-Graphics are beautiful, and the spells are really cool-looking
+	-The spell ideas were really excellent.  Some of them could've used a few tweaks, but I'm rather happy with this regardless
+Score: 10/10
+
+
+FINAL SCORE: 100/120 ==> 83.3%
+
+==> 8.3/10
+
+
+==============================
+Remilia Scarlet by BaronBlade
+==============================
+
+Nonspell 1:
+	-Not a bad nonspell, but there's lots of randomness and it's generally rather slow and boring
+Score: 6/10
+
+Spell 1:
+	-The lasers are a bit difficult to see at times, and the first wave fires off quickly without warning--I got cheapshotted
+	-Generally a ripoff of Remi's first spell from EoSD
+	-Pattern's kind of interesting though at least
+Score: 6/10
+
+Nonspell 2:
+	-Pretty cool-looking, and not too bad a pattern
+Score: 7/10
+
+Spell 2:
+	-Decent pattern, but the bullets start moving immediately--it can have a nasty tendency to cheapshot you
+Score: 7/10
+
+Nonspell 3:
+	-Decently challenging nonspell, not much to say
+Score: 7/10
+
+Spell 3:
+	-Now THIS is what I'm talking about! This was fun AND cool-looking!
+	-Unfortunately it gets stale rather quick since the pattern is the same every time. Maybe try varying up how she shoots the Gungnirs?
+Score: 8/10
+
+Nonspell 4:
+	-Pretty fun. The knives are fun to dodge, though perhaps you could've changed it up a bit instead of having them shoot the same way each time
+Score: 8/10
+
+Spell 4:
+	-Gets dull pretty fast. Otherwise, the density makes up for it, and it's somewhat fun to dodge
+Score: 8/10
+
+Spell 5:
+	-Extremely boring.  The bubble bullets' shots are static
+	-Not to mention the bigass safespot up at the top
+	-Lifebar is WAY too long. I've actually timed it out while trying to kill Remi
+	-For such a long lifebar, the spell never intensifies or changes
+Score: 2/10
+
+Overall Presentation:
+	-Generally pretty bland and boring, appearance-wise
+	-Some of the danmaku patterns have potential, but otherwise the danmaku's boring
+	-ABSOLUTE PATHING!!!
+Score: 5/10
+
+
+FINAL SCORE: 64/100 ==> 64%
+
+==> 6.4/10
+
+
+========================
+Utsuho Reiuji by Kirbio
+========================
+
+Stage:
+	-Well put together, but actually rather boring
+	-Hardly any original patterns--everything's taken from SA
+Score: 6/10
+
+Midboss:
+	-Interesting spell, but repetitive and not too challenging
+Score: 7/10
+
+Nonspell 1:
+	-Not too particularly challenging, but it works as an homage to Utsuho I suppose
+Score: 7/10
+
+Spell 1:
+	-Not too difficult, but still a decent challenge
+	-Even though it's basically a Nuclear Fusion redo :P
+Score: 8/10
+
+Nonspell 2:
+	-Kind of boring, and again a ripoff
+score: 6/10
+
+Spell 2:
+	-Not a bad idea, but very boring in execution
+Score: 4/10
+
+Nonspell 3:
+	-Something original at least. Bit reminiscent of Mamizou. At least it's fun to dodge
+Score: 8/10
+
+Spell 3:
+	-Again not a bad spell, but it's just not very interesting in practice
+Score: 7/10
+
+Nonspell 4:
+	-More of the same, but at least it's denser
+Score: 7/10
+
+Spell 4:
+	-Reminds me of a spell from Marine Benefit
+	-Not bad, but I feel the deletion radius for the red dwarf should've been smaller
+	-If you just circle around it, you'll never have to dodge a single blue bullet
+Score: 7/10
+
+Spell 5:
+	-Really really cool idea, but rather boring in execution
+	-Not too difficult, and the ending is extremely anticlimactic
+Score: 7/10
+
+Spell 6:
+	-Subterranean Sun ripoff, and not a very interesting one at that
+Score: 7/10
+
+Overall Presentation:
+	-Showmanship is excellent, and the game looks beautiful. And most importantly, there aren't so many graphics that it causes lag
+Score: 10/10
+
+
+FINAL SCORE: 91/130 ==> 70%
+
+==> 7.0/10
+
+
+===============================
+Shikieiki Yamaxanadu by Sariel
+===============================
+
+Nonspell 1:
+	-Not too difficult, but reasonably fun to dodge
+Score: 7/10
+
+Spell 1:
+	-I feel the vortices could've been used a bit better, but otherwise not a bad opening spell
+Score: 8/10
+
+Nonspell 2:
+	-WHOA the laser doesn't leave you much time to react
+	-Fun once you figure it out, but repetitive and otherwise dull, and very short
+Score: 6/10
+
+Spell 2:
+	-Not very original or fun--just two ripped-off spells with some random bullets thrown in
+Score: 5/10
+
+Nonspell 3:
+	-Not too difficult, but at least more fast-paced and somewhat fun to dodge
+Score: 7/10
+
+Spell 3:
+	-Gets really dull
+Score: 5/10
+
+Nonspell 4:
+	-Not very hard, but at least somewhat interesting
+Score: 7/10
+
+Spell 4:
+	-Cool pattern. Not too hard, but somewhat fun
+Score: 8/10
+
+Spell 5:
+	-Either her health is too high or your timer is too low--either way, I ended up timing her out while shooting at her the whole time
+	-Not too bad, but it takes a while for it to get interesting
+Score: 8/10
+
+Spell 6:
+	-Very fun and cool patterns
+	-Not all too original though. I've seen this pattern in use before in Len's spells
+Score: 9/10
+
+Overall Presentation:
+	-Nice fullscreen HUD
+	-Cool charging effects
+	-Beautiful background
+Score: 9/10
+
+
+FINAL SCORE: 79/110 ==> 71.8%
+
+==> 7.2/10
+
+
+=================================
+Eirin Yagokoro by Bob the Tanuki
+=================================
+
+Nonspell 1:
+	-Boring, and super cheap
+Score: 2/10
+
+Spell 1:
+	-Not too bad. Somewhat pretty, and interesting
+Score: 7/10
+
+Nonspell 2:
+	-Ummm, what? Ooookay, weird deleting bullets gimmick aside, this nonspell's pretty boring
+Score: 5/10
+
+Spell 2:
+	-Random bullet spam with Mystia's night-blind mechanic. And the darkness forces you to get closer to the random spam...
+Score: 4/10
+
+Spell 3:
+	-Actually somewhat fun!  I wish the tiny bullets weren't so random though
+Score: 8/10
+
+Overall Presentation:
+	-Graphics are adequate. Eirin's animation is a bit glitched, though
+Score: 7/10
+
+
+FINAL SCORE: 33/60 ==> 55%
+
+==> 5.5/10
+
+
+===========================================
+Remilia Scarlet by Yukkuri_Yukkuri_Yukkuri
+===========================================
+
+Nonspell 1:
+	-Really difficult, but also very fun!
+Score: 9/10
+
+Spell 1:
+	-The high amount of randomness and the very short break between waves makes it easy to get walled
+Score: 7/10
+
+Nonspell 2:
+	-Difficult, and the density can wall or put you in tough spots sometimes
+	-But otherwise, it's actually quite fun
+Score: 8/10
+
+Spell 2:
+	-The lasers cause MASSIVE lag, and the bullets can very easily wall you (even on Normal)
+Score: 6/10
+
+Nonspell 3:
+	-Simple. Not too hard, or easy
+Score: 7/10
+
+Spell 3:
+	-Uninteresting and over way too quickly
+Score: 5/10
+
+Spell 4:
+	-Blech a Last Spell.  I had to use invincibility to judge this
+	-It's really tedious and not much happens, and lasts really long
+	-It's not very original either
+Score: 5/10
+
+Overall Presentation:
+	-Nice choice of music, and the model is...interesting
+	-Overall the danmaku pattern designs and the graphics are decent
+Score: 8/10
+
+
+FINAL SCORE: 55/80 ==> 68.75%
+
+==> 6.9/10
+
+
+=============================
+Yuyuko Saigyouji by Alicirno
+=============================
+
+Nonspell 1:
+	-Not a bad nonspell, but it drags on too long
+Score: 8/10
+
+Spell 1:
+	-Pretty simple, but challenging
+Score: 8/10
+
+Nonspell 2:
+	-Interesting nonspell, pulls some ideas from PCB
+	-Not a bad idea, but a bit boring aside from having to stream the bubbles
+Score: 7/10
+
+Spell 2:
+	-Decent spell, but sometimes the massive burst can wall
+Score: 8/10
+
+Nonspell 3:
+	-Kinda cheap. The bullets from the lasers caught me off-guard, and Yuyuko moving didn't help much either
+Score: 6/10
+
+Spell 3:
+	-Reaaaaally cool, but I felt it was a bit too difficult
+Score: 9/10
+
+Nonspell 4:
+	-The first and last phases are boring, and the second phase is kind of cheapshotty when they bounce off the sides at that speed
+Score: 5/10
+
+Spell 4:
+	-Really nice.  Simple pattern, but it picks up very nicely
+Score: 9/10
+
+Spell 5:
+	-Interesting spell, but it drags on waaaaayyyy too long and doesn't really intensify or change much to make it more interesting
+Score: 7/10
+
+Overall Presentation:
+	-Beautiful graphics, and THREE DEE tree!
+Score: 10/10
+
+
+FINAL SCORE: 77/100 ==> 77%
+
+==> 7.7/10
+
+
+=============================
+Yuyuko Saigyouji by Conarnar
+=============================
+
+Nonspell 1:
+	-Unremarkable, but gets the job done
+Score: 7/10
+
+Spell 1:
+	-WHOA THIS IS WILD. It's fun, but kinda drags, and it's hard to get a shot off on Yuyuko
+Score: 8/10
+
+Nonspell 2:
+	-Beautiful, dazzling, intimidating, and very Yuyuko-ish
+	-It could be a bit harder, but I love it nonetheless
+Score: 9/10
+
+Spell 2:
+	-I'm a sucker for cool gimmicks like this
+	-And more importantly, the danmaku is challenging too
+Score: 10/10
+
+Nonspell 3:
+	-Simple, yet challenging and very fun to dodge
+Score: 10/10
+
+Spell 3:
+	-The gimmick is cool, but the danmaku pattern just isn't very threatening other than that
+Score: 7/10
+
+Nonspell 4:
+	-Great nonspell.  Beautiful, Yuyuko-ish, and challenging and fun
+Score: 10/10
+
+Spell 4:
+	-Pretty boring, to be honest. And not very pretty either
+Score: 5/10
+
+Nonspell 5:
+	-Challenging and decent, but not quite as great as the previous nonspells
+Score: 8/10
+
+Spell 5:
+	-Trippy! Really cool pattern, but gets repetitive and the spell can last too long
+	-Perhaps if Yuyuko's hitbox was bigger (say, as big as the fan), that would be remedied
+Score: 9/10
+
+Nonspell 6:
+	-Cool patterns, and the curvy butterflies section is frightening, but the streaming part is kinda boring
+Score: 8/10
+
+Spell 6:
+	-Interesting concept, though I wasn't really sold until the very final phases
+Score: 8/10
+
+Overall Presentation:
+	-Graphics are decent, music is awesome, and the patterns are beautiful
+Score: 9/10
+
+
+FINAL SCORE: 108/130 ==> 83%
+
+==> 8.3/10
+
+
+========================
+Kanako Yasaka by Sparen
+========================
+
+Nonspell 1:
+	-It's cool that you've incorporated so many elements into a single nonspell
+	-However, none of them are particularly...interesting?
+Score: 8/10
+
+Spell 1:
+	-There's no warning for the "seas", and I got cheapshotted
+	-The pattern itself is actually rather boring
+Score: 5/10
+
+Nonspell 2:
+	-Super easy and rather boring
+Score: 5/10
+
+Spell 2:
+	-Once again, no warning for bullets coming up from the bottom of the screen, and I got cheapshotted
+	-THe pattern itself isn't too interesting
+	-It's hard to get under Kanako if she's in the middle of an area with a lot of bullet walls--I would appreciate it if she moved with you, perhaps
+Score: 5/10
+
+Nonspell 3:
+	-Simple streaming, not much to it
+Score: 6/10
+
+Spell 3:
+	-Not much happens before her health runs out, and the pattern is slow and not too compelling
+Score: 5/10
+
+Nonspell 4:
+	-Fairly fun, but not too interesting and gets repetitive
+Score: 7/10
+
+Spell 4:
+	-IT'S THREE DEE!.... yet again. Honestly the novelty's wearing thin at this point
+	-Decent spell, it's fun to dodge through the shapes, but not too challenging
+Score: 7/10
+
+Spell 5:
+	-Yet another VoWG knockoff
+	-Not too compelling a pattern, and easy to get clipped
+	-Not very fun
+Score: 6/10
+
+Overall Presentation:
+	-Graphically impressive, and the atmosphere and the options you present at the front are fantastic
+Score: 10/10
+
+
+FINAL SCORE: 64/100 ==> 64%
+
+==> 6.4/10
+
+
+==========================
+Kanako Yasaka by TresserT
+==========================
+
+Suwako nonspell:
+	-Simple, yet nicely forces macrododging of the dense amulets while also providing micrododging in the form of the reflecting bullets
+Score: 9/10
+
+Suwako spell:
+	-Again, simple yet great execution. A fun, short little spell
+Score: 9/10
+
+Nonspell 1:
+	-What is it with you and making simple patterns fun and challenging
+	-Not much else to say here
+Score: 9/10
+
+Spell 1:
+	-Cool idea, but feels really cheap
+	-Can easily wall and cheapshot you
+Score: 6/10
+
+Nonspell 2:
+	-Really simple, just streaming. Not much else to say
+Score: 7/10
+
+Spell 2:
+	-The turns those rainbows force you to make are pretty extreme
+Score: 6/10
+
+Nonspell 3:
+	-Simple, but effective
+Score: 8/10
+
+Spell 3:
+	-Challenging, but annoying to hit Kanako and kinda drags
+Score: 7/10
+
+Nonspell 4:
+	-Challenging and fun
+Score: 9/10
+
+Spell 4:
+	-Nitori's waterfall spell with a small tweak
+	-At least it doesn't cheapshot you, but not very original
+	-It is however quite fun
+Score: 7/10
+
+Spell 5:
+	-Yet another VoWG clone
+	-Nice mix of macro and micrododging
+Score: 9/10
+
+Overall Presentation:
+	-Nice graphics and overall presentation
+Score: 9/10
+
+
+FINAL SCORE: 95/120 ==> 79.2%
+
+==> 7.9/10

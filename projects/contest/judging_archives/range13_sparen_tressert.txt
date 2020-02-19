@@ -1,0 +1,39 @@
+Marisa Boss Battle v1 by TresserT
+
+Spells: Worth 20 points each. If has multiple phases, each phase counts as 10 points.
+Nonspells: Worth 10 points each
+Stages: Worth 10 points per phase (determined by self)
+
+Backgrounds, music, sound and effects: Counted as part of "Other"
+Organization: Counted as part of "Other"
+Replayability: Counted as part of "Other"
+
+My Player: Seija
+
+Difficulty: Easyish
+
+Stage Phase 1: Well, it's not BAD. But I tried the hardest difficulty first and Easy is not much easier. Anyways, it's OK as a stage - the streaming portion is generic, the large fairies sometimes shoot offscreen, and the yellow bullet enemies are meh. [6/10]
+Cirno: It feels like something else (the first part) but I can't remember what it is. The second part is more Cirno-like. Not bad as a midboss. [7/10]
+Stage Phase 2: The first part of this, with the yin-yang orbs, is simply put... NO. It's not terrible, but they move fast and it feels meh. It doesn't get that much better, although it's ... meh. [6/10]
+Cirno: Cirno controls fire. Cirno is da strongest. The lasers are a little cheap though. [7/10]
+Cirno Spell 1: My god that was easier than the nonspell. [9/9] (Counts as 10/10 for scoring)
+
+Boss Nonspell 1: Since the second wave is not honing but uses the same color bullets, it can be sort of cheap. Also not very interesting of an attack. [6/10]
+Boss Spell 1: I love how the spell background works, and the danmaku is very nice, although the bullets are very slow and may stay into the next wave. [17/20]
+Boss Nonspell 2: While not bad, it has a very high change of walling. Does not feel Marisa-ish. [7/10]
+Boss Spell 2: I like the spell but bullets can blend into the spell background. What is it supposed to be though? [16/20]
+Boss Nonspell 3: This nonspell feels sort of Marisa-ish yet different, which I appreciate. Also very easy once you've died to it before and know how it works. [8/10]
+Boss Spell 3: I have to admit that I like this spell a lot. It feels sort of Marisa-ish and sort of Marine-Benefit ish. I still have no idea what the opposite ability of Marisa is supposed to be though... [17/20]
+Boss Spell 4: This is a good spell, and I love the reference. However, it's not particularly easy... [18/20]
+
+Boss Spell 5: (From Stream, Spell Practice) - This spell is amazing in execution and idea, and although I have no idea what Marisa's theme is, the survival is pretty good. [16/20]
+Boss Spell 6: (From Stream, Spell Practice) - The GFW spell... well, let's say that although it's a lot better now than with INV_DESTRGB, the shadows need to be much darker. It's amazing what you managed to do here, but the execution is... meh. [14/20]
+
+Danmaku Raw Score: [155/200] ~ 12.4/16
+Other Raw Score: 03/04
+Overall: 15.4/20
+
+Comments
+-The moment Marisa appeared, it lagged to 16 FPS from 60. It was temporary though.
+-I managed to get up to Spell 4 with the default number of lives on my first and second runs. Everything after that point is from the stream and/or spell practice (I entered the stage/boss and played the attacks there)
+-With the exception of the mat, I have absolutely no idea how to practically use any of the items. -_-

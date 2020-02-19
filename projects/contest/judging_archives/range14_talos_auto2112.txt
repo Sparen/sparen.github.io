@@ -1,0 +1,62 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant :  auto2112              
+Script : RaNGE 14 Entry - Youkai of The Dusk version 1.01  (Rumia)
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Non-spell 1 :
+This nonspell is impossible. Unless Rumia move to the upper of screen, you always die to the rainbow waves.
+[7/15]
+
+Creeping Darkness "Black Shadow in the Mist"
+It's an alright spell card. Sadly, Rumia isn't last long enough, making a gimmick in this card seem kind of pointless.
+[15/20]
+
+Non-spell 2 :
+I love this kind of nonspell.
+[13/15]
+
+Shadow Sign "What Lurks in the Deep Fog"
+An ok gimmick, but bullets are too random. Not fun.
+[12/20]
+
+Nonspell 3 :
+No. Please don't make this. It's not Rumia, more like a copy of Yuyuko's non-spell from TD.
+[8/15]
+
+Darkness Sign "Light in the Cold Abyss"
+Now this is a big no no. I got killed instantly when spell started, and then I've absolutely no idea how to dodge this (yeah, I understand the gimmick,but that doesn't help me to survive)
+This kind of pattern should be in a camera game, or something like single script , where you can trial and error it until you can pass them, otherwise, NO.
+[5/15]
+
+Overall, for the main boss fight you get 8.57 points out of 15
+
+-Visual & Effect- (3 point)
+Visual & effect are nice. I can tell you didn't make some of them, but it isn't against the rules. Anyway, you should give the creators a credit. Do not claim it as your own. (I say this because I look up at your folder and can't find any credit file.)
+[1.5/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+Difficulty is pretty bullshit in non-spell 1 and spell 3. Others are good.
+Music fit the fight well.
+[0.75/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+I would give you some score if you made the players by yourself. Sadly, you didn't.
+wait...you have a last word, but I can't play it. Don't know why.
+
+##### Final Score = 8.57+1.5+0.75 = 10.82 #####

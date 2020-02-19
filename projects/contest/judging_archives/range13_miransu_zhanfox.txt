@@ -1,0 +1,19 @@
+I find the sound effects during the opening dialogue to be extraneous and slightly annoying. ._.
+At least it shows what's going on~
+
+I like how Mokou's bullets all become drops of water. That's nice and it shows clearly even in the first nonspell. One thing though, I couldn't shoot it down. Maybe the DPS rate was too low or something. Most nonspells shouldn't take more than 15 seconds.
+The first spell is nice, but the curvy lasers are near impossible to see. Curvy lasers in general have a weird hitbox, so besides the possible lag issues (which are thankfully not present), there's that to think about, too.
+
+The second nonspell is a bit less obvious with what it's supposed to be. Maybe you'd like to bring out the change in ability again? Trying to do something with nonspells from the original games would be a good idea, too. Not that trying to do something original is bad, though. By all means, be creative! Just make sure the danmaku stays "relevant", more or less.
+It seems like Mokou's part is a lot more threatening than Kaguya's, which I suppose would be fine, since I've always seen Mokou to be more active as a character as compare to the more passive Kaguya. Oh well.
+
+In the second spell, black bullets on a really dark background are never a good idea. If I have to strain my eyes to see bullets, it's safe to say it's not really fun. That's all I could really say.
+Well, I guess the background was nice to watch, but that doesn't really amount to much, if anything at all.
+
+This third nonspell is completely Mokou-centric, with Kaguya doing virtually nothing. Just because her new ability is "manipulation of emptiness" (or so it is interpreted as in this script), doesn't mean she can just stay at the top doing nothing. If it's a jab at the "lazy NEET" depiction of Kaguya, then I'm rather disappointed. Sure, Mokou's throwing water balloons at you now, but is that all? On top of that, the fireballs are... really fast. I got surprise-killed the first time I tried this. Not fun.
+The third spell is a take on Possessed by Phoenix, I suppose. Nice in concept, but you've got to figure out a way to execute it a bit better. This spellcard can go in so many ways, I can't really give any specific suggestions on this. However, I'll say this: the phoenix seems to be purely visual. All this is, is dodging random circles from the sides while in a rather constricted area. Meh.
+
+In this fourth nonspell, the water bullets come from a really weird angle. I can't really figure out how they're supposed to be dodged.  Also, I can imagine if anyone were to redirect the fireballs to the top of the screen, they'd be punished horrifically, since each bullet dissolves into so many fireballs as they touch the edge.
+The final spell is ... rather threatening. It's not the lanes that the amulets create, but rather, I can't really see with things like stars moving around, criss-crossing with one another. Also, being pushed to the bottom of the screen made me run into a bullet without me even pressing any of the arrow keys. That was cheap.
+
+All in all, this script was... not too memorable. You've got something going for most of the spells, but the patterns themselves are not executed in the best way that they can be. As for visuals... Well, there's a lack of extra effects besides the default v0.12m ones, and the visual aspect of the danmaku is rather questionable. You might want to consider that while creating the script.

@@ -1,0 +1,18 @@
+CC Review - Seary Noxus (Searinox's Rumia and Mystia)
+ia.
+
+Danmaku Quality: The first nonspell is more of the same, I suppose. Kinda short but decently fun. The first spell, though an interesting idea, is really...silly to play. The white lasers caught me by surprise but I guess are dodgable if you're playing attention. This is where sound effects come in handy! Overall an okay pattern but I think the lasers are overbearing. 
+
+The second nonspell is more Rumia-shooting-spellcards and Mystia shooting...stuff. The second spell is kinda neat but there's no indication that Mystia is going to ram you which makes it quite cheap. 
+
+The third nonspell is cool but still feels like more of the same, while the third spell represents a rather large difficulty spike near the end. Cool idea but executed in a rather boring manner, all things considered.
+
+This earns a 5.75/8 for Danmaku Quality. Some attacks are borderline overbearing or actually cheap, but overall fun enough to play.
+
+Originality/Creativity: Nonspells are basically generic Mystia + Rumia's spellcards condensed, so not particularly original there. The Light-Blindness gimmick is quite neat but could've been executed better. This earns you a 4/8 for this category. 
+
+Visuals, etc: Not many visuals to speak of. The Light-blindness is done well enough but otherwise it's unimpressive in this regard. 1.5/4.
+
+Misc not-factored-into-score comments: You really should see about adding music and sfx to your scripts! They make scripts much more interesting!
+
+Totals core: 5.75+4+1.5 = 11.25.

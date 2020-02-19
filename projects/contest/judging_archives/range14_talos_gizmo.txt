@@ -1,0 +1,66 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant : Gizmo The Dragon             
+Script : RaNGE Popular Popularity Entry: Momiji!! [1.8.0]  (Momiji)
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Non-spell 1 :
+Such a decent opening nonspell.
+[12/15]
+
+Tengu Blade "Claw of the White Wolf"
+I must say I love this. It give me the feeling of "White Wolf" very well, and it's the best spell in this script.
+[17.5/20]
+
+Non-spell 2 :
+Now this is such a big no-no. It's just a replicate version of non-spell 1 with the new pattern on the top (actually, it's from Double Spoiler). It looks very silly...and cheap.
+[7/15]
+
+Tengu Sign "White Wolf,Black Wolf"
+I didn't know Momiji can do something like this, oh well.
+Danmaku is fine, the "Illusion Momiji" should fire more danmaku,though. Right now, it's pretty lackluster.
+[14/20]
+
+Tengu Sign "Year of the Wolf-NewYear's Dawn-"
+This looks a lot like Suwako's survival spell card, suffering unoriginality, but it has some potential, and it suit Momiji.
+[14.5/20]
+
+I Had to do this "Yam of the Wolf -I'm So Sorry!-"
+What is this?. xD
+I don't have any idea about this meme, so let's move to danmaku.
+Momiji's shots are very brutal. They will definitely kill you on the first run (because 99% of player have no idea what to do)
+The...umm...Yam is ok, though.
+[13/20]
+
+Overall, for the main boss fight you get 10.64 points out of 15
+
+-Visual & Effect- (3 point)
+Visual is ok. (Although, I'm surprise that you animated Tarumi sprite and left Momiji be a statue.
+Effect is ok,too.
+[1.5/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+Difficulty is fair (except nonspell 2)
+Good choice for music
+[1/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+At least you made 2 ending, one of them is pretty hilarious.
+[0.2/1]
+
+##### Final Score = 10.64+1.5+1+0.2 = 13.34 #####

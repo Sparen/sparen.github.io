@@ -1,0 +1,13 @@
+I felt that there's a general theme here that both Suwako and Sanae can bring about "disaster". On top of that, I can see Sanae using the spells in this script, for real.
+
+All of the nonspells stay close to what they do in Mountain of Faith, which is nice. I kinda liked the small modifications you made to Sanae's "star" pattern -- though, it would have been nice if the hexagram one didn't dissolve solely into randomness. The square version was very nice, though.
+
+I don't understand what "Friable ground" is supposed to do, because it seemed to create a lot of walls after a while, forcing me to use a spell card. Maybe I was just using too weak a player script? Also, "underwater threat" seems a bit... strange? I understand that you're trying to pull the player into the dangerous part of the screen, but I find it a bit silly how they're floating up instead of being pulled down. On top of that, I thought the familiars that circled around you were simply supposed to chase you, so I ran away from them for a long while. Then I realized their true purpose. Whoops... Oh well. It's still a pretty spell.
+
+As for the last "duo" spell(s), "changing" from one spell to the next is a nice touch, but if the spells are not related in any way to each other, It would be better to just make them into separate attacks completely instead of forcing them to be phases of the same attack. I don't really understand the meaning behind Suwako's last spell. It's still nice, though. Multiple-phase spells are always welcome in my book, especially if they don't just simply build upon each other like Border of Life and Death does.
+
+Finally, I would like to note that there is really not much going on effects-wise. I know Danmakufu v0.12m does most of the "base" effects for you, but it doesn't hurt to be more adventurous in that regard.
+
+
+
+P.S. illuminati confirmed

@@ -1,0 +1,134 @@
+Criteria:
+
+Fun: 9
+-Variety
+-Fairness
+-Balancing
+-Pattern Length
+Creativity: 7
+Pattern Aesthetics: 2
+Overall Aesthetics: 2
+
+Penalties
+-Script Error: -1
+-Missing Shot Sheet: -2
+
+Tricky - Yuuka
+	Fun: 8
+	Creativity: 6
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 1
+	Total: 17/20
+
+Arby - Mima
+	Fun: 7
+	Creativity: 6
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 17/20
+
+Darkness1 - Shinki
+	Fun: 7
+	Creativity: 6
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 17/20
+
+Sparen - Kanako
+	Fun: 7
+	Creativity: 5
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 16/20
+
+Tresser - Kanako
+	Fun: 7
+	Creativity: 6
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 1
+	Total: 16/20
+
+Sariel - Eiki
+	Fun: 5
+	Creativity: 6
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 15/20
+
+Kirbio - Utsuho
+	Fun: 6
+	Creativity: 4
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 14/20
+
+Lefkada - Kongarra
+	Fun: 5
+	Creativity: 6
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 2
+	Total: 14/20
+
+Lunarethic - Yumemi
+	Fun: 5
+	Creativity: 5
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 14/20
+
+Yukurri Yukurri Yukurri (Baka94)- Remilia
+	Fun: 6
+	Creativity: 6
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 1
+	Missing Shot Sheet: -1
+	Total: 13/20
+
+Aoki Yakumo - Yuyuko
+	Fun: 5
+	Creativity: 5
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 1
+	Total: 13/20
+
+Cornarnar - Yuyuko
+	Fun: 7
+	Creativity: 4
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 1
+	Total: 14/20
+
+Goldstein - Yuuka
+	Fun: 6
+	Creativity: 4
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 1
+	Total: 12/20
+
+Jake - Kongarra
+	Fun: 5
+	Creativity: 5
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 1
+	Total: 12/20
+
+BobTheTanuki - Eirin
+	Fun: 5
+	Creativity: 5
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 1
+	Total: 12/20
+
+Alicirno - Yuyuko
+	Fun: 5
+	Creativity: 4
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 2
+	Total: 12/20
+
+BaronBlade - Remilia
+	Fun: 5
+	Creativity: 4
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 1
+	Total: 11/20

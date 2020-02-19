@@ -1,0 +1,59 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant :  Fondue/Benwolf
+Script : Yukari Yakumo version 1 (Yukari)
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Non-spell 1 :
+Simple, yet effective nonspell. I don't have any complaint except Yukari's movement is a bit too frequent, making it hard to hit her with non-homing player. [12.5/15]
+
+Inversion "Reality and Fantasy" :
+Interesting concept.It suits Yukari's power very well.
+If only Yukari shoot less butterfly bullets, I would enjoy this a bit more. [15/20]
+
+Non-spell 2 :
+Again, Yukari moves too much. Sometimes she's on the edge of the screen. Pretty frustrating for non-homing player [11.5/15]
+
+Boundary Sign "Border of Zone and Apathy" :
+This is a very luck-based spell card. Yukari movement is completely random. For the first phase she can wall you easily by her pellets and large bullets.
+The second phase where she fire volley of bullets to you is ok. Still, I don't understand the purpose of this spell card. [13/20]
+
+Non-spell 3 :
+I have seen a pattern like this before, in a well-known script, but I will pretend I didn't see it.
+And yeah...I like it. [13/15]
+
+Yakumo Spirit "Her Playful Psyche"
+Yeah, it's a good pattern.Although I dislike the lasers. You could have done better without have to randomly fire them.
+And if use a player with homing shot, you can pretty much stand still at the left/right side of screen and dodge only butterfly/dot bullets, since there isn't any laser there.[16/20]
+
+Overall, for the main boss fight you get 11.57 points out of 15
+
+-Visual & Effect- (3 point)
+Visual look fine.
+The charge effect is pretty. I quite like it.
+[2.25/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+Difficulty seem to be around hard. It's very well balanced (except spell 1)
+The boss fight is very flow. I enjoy it until the end
+[1.75/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+Don't seem to have any.
+
+##### Final Score = 11.57+2.25+1.75 = 15.57 #####

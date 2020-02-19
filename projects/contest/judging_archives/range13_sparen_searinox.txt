@@ -1,0 +1,28 @@
+Rumia&Mystia v1.1 by Searinox
+
+Spells: Worth 20 points each. If has multiple phases, each phase counts as 10 points.
+Nonspells: Worth 10 points each
+Stages: Worth 10 points per phase (determined by self)
+
+Backgrounds, music, sound and effects: Counted as part of "Other"
+Organization: Counted as part of "Other"
+Replayability: Counted as part of "Other"
+
+My Player: A2 Marisa
+
+Difficulty: Default
+
+Nonspell 1: Simple but effective. I like how Mystia's bullets go in the opposite direction, although Rumia still feels like Rumia, to an extent. [7/10]
+Spell 1: The idea here is good but the execution isn't. Since the hitbox can't be seen depending on its render priority, it's basically impossible to dodge sometimes. The main issue is when you have high speed bullets packed very closely to one another. Honestly, Mystia's attacks are significantly better than Rumia's lasers, although using a variety of colors in one stream was somewhat unexpected. [13/20]
+Nonspell 2: A solid nonspell, although Rumia feels like Rumia and Mystia's bullets no longer align into lines of bullets. [7/10]
+Spell 2: A lot of stuff is happening here. The main irk here is the speed at which the giant ball of light travels. It would be fine if it were slower, but it suddenly jumps at you. I like the way you executed the idea here, but you need to tone it down a bit with the speed of the giant light ball. [15/20]
+Nonspell 3: Personally speaking, the jaggedness of the anti-homing bullets doesn't look good - you should have made Rumia's movement smoother. Additionally, the entire attack is left-right-left-right dodging. It's not interesting to play or to look at. [5/10]
+Spell 3: I like the way you stacked the arrowhead bullets here, as well as the usage of light. However, it gets very hard very quickly after Rumia begins spawning her rainbow bullets (which are pretty and make the player move in a different way, which is good) and it is monotonous to dodge. [16/20]
+
+Danmaku Raw Score: [63/90] ~ 11.2/16
+Other Raw Score: 03/04
+Overall: 14.2/20
+
+
+Comments
+-Your script was not bad, but there are a lot of things that can be improved.

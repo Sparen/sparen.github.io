@@ -1,0 +1,73 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant : Bob the Tanuki
+Script : Popular Popularity contest entry - Parsee version 1 (Parsee)
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Non-spell 1 :
+A really good opening non-spell. The bubbles which turn into bullets are interesting, and it end up with boss spamming the traditional circle bullets, to give a parsee-ish.
+[13/15]
+
+Green-eyes guide "A Problem for a Happy Traveler"
+While I don't understand the concept of pattern, the bubbles make up for it, as well as the trail bullets, which are extremely a good use.
+[17.5/20]
+
+Non-spell 2 :
+Again, you're very good at Parsee non-spell. The bullets from bubbles are quite fun to dodge, along with traditional blue circle of bullets.
+[13.5/15]
+
+Grandpa Hanasaka "The fate of an envious person"
+Man, this is amazing. The maze, the traditional bubble with flower trails. Everything seem to fit together perfectly fine.Oh, I forgot to mention that you introduced the first phase of this spell card nicely,too.
+[18.5/20]
+
+Non-spell 3 :
+Well, another good non-spell. This one is a bit intimidate, but still good.
+[12/15]
+
+Travel Sign "Separating bridge"
+A bit chaotic for Parsee spell card. I didn't quite know what's going on in the first run. There're some bullets that already left the screen, but still come back (and yay, I got hit). Overall, you could lower the amount of chaos in this pattern. It would be much better
+[15/20]
+
+Non-spell 4 :
+This one is pretty good, a bit too much on micrododging though (oh well I'm good at it, so this is not considered as a con right?)
+[12.5/15]
+
+Envy "Demon's Presence"
+I kind of like the gimmick Honestly, this card would be really bland if not that gimmick. (where Parsee shoot expanding circle, which slow you when you touch it)
+[18/20]
+
+Seal "Deep Seal of Jealousy"
+The pattern is decent, the gimmick is ok, but there's a problem here. Those Bubbles can wrap through the wall, without any warning. This is a bit cheap. Overall, a good ending spell card with some flaws , and a little bit too easy compare to the entire fight.
+[16/20]
+
+Overall, for the main boss fight you get 12.75 points out of 15
+
+-Visual & Effect- (3 point)
+Visual is decent. My only complaints is that...I can't see my own score. You shouldn't remove it. It's supposed to be here, on StgFrame, to show the players how good when they finish the script.
+Effect is pretty pretty. Although, it's overdone in some part (like burst effect, too many maples on screen)
+[2/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+Difficulty is around hard (for stage 2 boss), and very consistent to the rest of fight (except final spell)
+Music is good, but it should loop, not end and start over.
+[1.25/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+Don't seem to have any.
+
+##### Final Score = 12.75+2+1.25 = 16 #####

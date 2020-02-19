@@ -1,0 +1,34 @@
+Contradictory Catastrophe vFinal by Lunarethic
+
+Spells: Worth 20 points each. If has multiple phases, each phase counts as 10 points.
+Nonspells: Worth 10 points each
+Stages: Worth 10 points per phase (determined by self)
+
+Backgrounds, music, sound and effects: Counted as part of "Other"
+Organization: Counted as part of "Other"
+Replayability: Counted as part of "Other"
+
+My Player: ILS Reimu
+
+Difficulty: Normal
+
+Nonspell 1: It starts simple but it feels correct, so I will go along with that intuition. Somewhat boring though, although since there's no more 'THE DPS IS CRYING", it's fine the way it is. [7/10]
+Spell 1: This spell is nice and in-character. However, there is a long wait period between shooting, and I took out this attack with no trouble whatsoever. The danmaku is good and thoughtful but could use some variety. [17/20]
+Nonspell 2 (Daiyousei): I like how you took a spin on Daiyousei with the bubbles, lines changing direction, and angular velocity bullets. However, the angular velocity bullets can be a little hard and the lines seem to change direction at random, which gives the possibility of cheapshots. [8/10]
+Spell 2 (Daiyousei): UNLIMITED DAIYOUSEI WORKS!!! ...That aside, I appreciate bullets not spawning on top of the player. However, you could really use some color variety. Maybe some green bullets to accompany the blue ones? [18/20]
+Nonspell 3 (Daiyousei): I find this spell to be sort of... off. The lines of round bullets feel more like Sanae than Daiyousei, and the ring of knives is... overly simple and uninteresting. [6/10]
+Spell 3 (Daiyousei): This spell is nice, if not overused. The angular velocity rings add some spice to it, but in the end, it's not amazing - it's just pretty and somewhat challenging to dodge. [16/20]
+Nonspell 4 (Koakuma): Once more, I love this nonspell. It feels so... correct. I love how you manipulated the speed of the bullets as well as their direction to give them a little something that looks unique yet fitting for one who lives in Patchy's Library. [10/10]
+Spell 4 (Koakuma): This spell is beautiful and creative, and I love the concept and execution, even if there isn't much time to get away from the exploding lightdroplets and cheapshots are somewhat common. [18/20]
+Nonspell 5 (Koakuma): I like the pattern here, but it feels more like it belongs in a Wriggle script than a Koakuma one... [7/10]
+Spell 5 (Koakuma): I love the way the bullets split, as well as how you approach the delay lasers and the crystallization effect. It's nice to look at and interesting to dodge. [19/20]
+Spell 6: I love how you used Daiyousei's signature knives and Koakuma's lightbursts in an aesthetically pleasing way. The danamaku quality in this spell is very good. [20/20]
+
+Danmaku Raw Score: [146/170] ~ 13.7/16
+Other Raw Score: 04/04
+Overall: 17.7/20
+
+
+Comments
+-Right after Spell 5, Danmakufu went to 0.30 FPS. I don't know how you treat those crystal bullets, but when they enter bullet delete mode, my processor cried for help.
+-UNLIMITED DAIYOUSEI WORKS!!!

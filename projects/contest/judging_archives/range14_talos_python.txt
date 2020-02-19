@@ -1,0 +1,82 @@
+RaNGE Danmaku Contest 14 ~ Popular Popularity!
+Contestant : Python
+Script : Human Inferno - RaNGE 14 Entry by Python version 1.1 (Mokou)
+Judged by TalosMistake
+
+My Judging Criteria
+Danmaku - Worth 15 points
+Visual & Effect - Worth 3 points
+Others (Difficulty,Aesthetics) - Worth 2 points
+Total Score = 20
+
+// Extra Credit (Stage,Midboss,Player,Gimmick,etc) Worth 1 points. Will count to your final score
+
+
+Important Note
+I'm not a native english speaker,so I apologize in advance for any grammatical mistakes and/or uncleared words or phases I use. If you have any questions about my judging, feel free to PM me via MotK forum.
+
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Note : Some patterns are slightly different between normal and hard mode,but I only judged hard mode.
+
+Non-spell 1 :
+Good modification from the original.
+[12/15]
+
+Blaze "Phoenix's Molt"
+Pretty nice pattern here, those shiny red things are pretty. 
+[17/20]
+
+Non-spell 2 :
+A bit easy, but still fun.
+[12.5/15]
+
+Flame Sign "Phoenix's Curse"
+I've fun moving around the screen,dodging all of bullets that spawn near me.
+Yay, you executed this pattern very nicely.
+[18.5/20]
+
+Non-spell 3 :
+A decent non-spell. Look like the original with circle bullets throw in. It works,though.
+[12/15]
+
+Hourai "Reawakening Mt. Fuji"
+Wow, this one is great.The pattern,the effects, are done nicely.
+The screen-shake effect is good ,too.
+[18/20]
+
+Non-spell 4 :
+Nice work on multiple phases. They're flow well together.
+[14/15]
+
+Fire Bird "The Twin Phoenixes"
+There is a difficulty spike in this one when Mokou shoot a blue phoenixe to you at the start of next wave, because there're still many bullets on screen, making it quite troublesome to misdirect.
+Nevertheless, this pattern is really well done.
+[17.5/20]
+
+Immortality "Countless Deaths"
+The patterns are nice and fun to dodge.
+Killing Mokou again and again is very satisfying.
+[18/20]
+
+Overall, for the main boss fight you get 13.08 points out of 15
+
+-Visual & Effect- (3 point)
+Nice work on stage background, spell card background and StgFrame.
+Effects are quite pretty,too.
+[2.5/3]
+
+-Others (Difficulty,Aesthetics) - (2 point)
+Difficulty is either too easy or too hard in some patterns, but it isn't that noticeable.
+Mokou's theme is ok, even I don't like this kind of music
+[1.25/2]
+
+Extra Credit (Stage,Midboss,Player,Gimmick,etc) (1 points).
+A simple but effective midboss.
+Both of player are good. I like them
+Dialoguee are funny. xD
+[0.75/1]
+
+##### Final Score = 13.08+2.5+1.25+0.75 = 17.58  #####
