@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap'); /* MotK's font */
+
 html{color:#EEEEEE;background:#111111;}
 table{
   border-collapse:collapse;
@@ -370,6 +372,29 @@ p, fieldset, table, pre {margin-bottom: 1em;}
 
 .contestdbtable td, .contestdbtable th {
   border-color: white;
+}
+
+/* ----- MOTK ARCHIVE STYLING (most styles copied from MotK v2 CSS) ----- */
+
+.motkdiv {
+  font-family: 'Open Sans', sans-serif;
+  color: black;
+  background-color: #DEDEDE;
+  padding: 16px 32px;
+  border-radius: 4px;
+}
+
+.motkdiv a {
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.motkdiv a:link, .motkdiv a:visited {
+  color: #0F6800;
+}
+
+.motkdiv a:hover {
+  color: #000000;
 }
 
 /* ----- HEADER STYLING ----- */
