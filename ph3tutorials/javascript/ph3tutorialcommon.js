@@ -7,7 +7,6 @@ function setupENG(lastupd){
     '<p style="text-align: center;">Copyright © 2014-2019 by Andrew Fan</p>' + 
     '<p style="text-align: center;"><span style="font-weight: bold;">Other Sites/Affiliates</span></p>' + 
     '<div style="text-align: center;">' + 
-    '<a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img alt="&quot;Maidens of the Kaleidoscope&quot;" src="../images/afflogomotk.png"></a>' + 
     '<a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;" src="../images/afflogobulletforge.png"></a>' + 
     '</div>';
   document.getElementById("footer").innerHTML = newfooter;
@@ -23,7 +22,6 @@ function setupESP(lastupd){
     '<p style="text-align: center;">Esta página fue traducido por Paty y Andrew Fan.</p>' +
     '<p style="text-align: center;"><span style="font-weight: bold;">Otros Sitios/Afiliados</span></p>' + 
     '<div style="text-align: center;">' + 
-    '<a target="_blank" href="http://www.shrinemaiden.org/forum/index.php"><img alt="&quot;Maidens of the Kaleidoscope&quot;" src="../images/afflogomotk.png"></a>' + 
     '<a target="_blank" href="http://www.bulletforge.org"><img alt="&quot;Bulletforge&quot;" src="../images/afflogobulletforge.png"></a>' + 
     '</div>';
   document.getElementById("footer").innerHTML = newfooter;
