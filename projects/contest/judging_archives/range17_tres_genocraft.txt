@@ -1,0 +1,57 @@
+ANGELIC BATTLE by GENOCRAFT
+(judged by TresserT)
+ 
+Saraka Nonspell: (3/10)
+    A bit bland.
+    There's nothing particularly interesting in this first laser spammy part.
+    The red laser in the second part occasionally spawns right next to you, but that's not really a big deal since by that point there's nothing else to dodge.
+    There's nothing hard about moving slowly away from a single point.
+    I'd recommend maybe meshing the two parts together, that way there's some hazards preventing you from getting away from the red laser. 
+    I'd also recomment making the way the laser spawns less random. As it is, sometimes it can be kind of interesting to dodge, other times its just a non-hazard.
+ 
+Saraka Spell 1: (4/10)
+    This one is basically a more visually interesting version of the nonspell.
+    And that's totally okay in principle. But all the issues I had with the nonspell apply here too, minus the random spawning.
+    Basically, dodging spammy lasers isn't all too fun in and of itself. Maybe add something on top of it, to make the dodging more interesting.
+    Additionally, once you know how the moon-explosions work, dodging those are extremely trivial as there's nothing stopping you from just moving out of the way.
+   
+Saraka Spell 2: (8/10)
+    Now thiiiis is an interesting pattern. Its simple in concept, but very fun to dodge.
+    My biggest complaint is that the blue lasers seem like they can hurt you. The first time I saw the pattern I thought "how am I supposed to dodge this? The lasers criss cross".
+    Then I remembered Saraka's gimmick.
+ 
+Tamako Nonspell: (6/10)
+    This is how the first nonspell should have been.
+    The laser rain is uninteresting by itself, but with the walls you can't just micrododge between them. It makes it very interesting.
+    However, there are issues.
+    Tamako's random movement drags it down. Sometimes Tamako she moves in a certain way that makes it more interesting, other times she moves in a way that makes it just annoying.
+    Its also a tad repetitive, and the rain lasers sometimes blend into the background.
+ 
+Tamako Spell 1: (3/10)
+    The "walking" white and black lasers cheapshotted me the first time. It isn't apparent at all that they'll spawn right next to you.
+    Once you get past that, its just a neat looking, very basic spell.
+    The only way I can think to improve this is by adding something else for the player to dodge.
+ 
+Tamako Spell 2: (7/10)
+    It isn't very clear that the lasers are going to despawn... I thought this was a "circle around" type spell at first, then got punched in the face by Tamako's fast curvy lasers.
+    Once you get past that, its pretty much a slightly less interesting version of Saraka's second spell.
+ 
+Survival: (Total: 14/30 = 4.3/10)
+    Wave 1: (1/5)
+        This wave is pretty unpredictable, and can be completely safespotted by just not getting close to the bosses.
+    Wave 2: (2/5)
+        This is more or less just dodging basic rings, but with lasers instead of bullets. Booooooriiiiiiiing.
+    Wave 3: (3/5)
+        This is more interesting I guess... but the lasers blend into Tamako so you can't see them until they're right up your butt.
+    Wave 4: (3/5)
+        This is pretty boring, but the restricted space helps. However the lasers continue to blend into the background, making an otherwise decent pattern pretty frustrating.
+    Wave 5: (3/5)
+        Its bland, but its a short wave so I guess its not supposed to be super interesting.
+    Wave 6: (1/5)
+        The red lasers spawn quickly and unpredictably. Not all that interesting.  
+ 
+Overall: (35.3/70 = 50%)
+    Tbh my biggest issue with this script is the blending. For a lot of the patterns its hard to tell what's going on because I can't see the lasers.
+    Besides that, quite a few of your patterns don't require the player to actually do anything special as far as dodging goes.
+    Tamako's nonspell got it right, having you move all over the place to avoid the walls while having to be careful to avoid the rain.
+    In general, patterns that the player can beat by staying in one part of the screen and just tap dodging (patterns like Saraka's non or Tamako's first spell) tend to feel less interesting than ones that have you moving all over the place or in weird directions.

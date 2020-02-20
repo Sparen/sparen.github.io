@@ -1,0 +1,43 @@
+RaNGE 15 Judgment: auto1112121212121212's Sans Yakumo
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 12/20
+Character Relevance, Creativity, Originality: 4/20
+Aesthetics: 4/20
+ 
+*Is it fun to play? Cheap shots, boring sections, all things danmaku. Individual patterns will be graded out of 12 points, and then will be averaged.
+ 
+Anyway, let's get started.
+ 
+Nonspell 1: Kunai rings that aren't quite rings I guess. Fine. Not much to say. Difficulty seems dependent a lot on where she warps to. 6.25/12.
+ 
+Spell 1: Hello Sans. This is essentially an undertale pattern + some extra spirally stuff. Not bad but not all that interesting, I find. The bullets Yukari shoots might be too hard, but I found it tolerable. 7/12.
+ 
+Nonspell 2: Kunai city. I know they're patterned but by the time they reach the bounding box it just devolves into spam everywhere. Not very interesting. Hard to read because the bullets overlap and go every-which way. Don't like it much. 5.5/12.
+ 
+Spell 2: This must be one step up from double death, right? Unfortunately it feels like a step down. It's random swirly stuff with bullet graphic changes every once in a while. This also seems somewhat dependent on her random movement patterns, the higher she moves the better for you. Rather uninteresting. No tricks, no underlying pattern, just dodge. 5/12.
+ 
+Nonspell 3: Spirals from two directions. Yay. Not all that much to say honestly. Not bad, not good. Average. 6/12.
+ 
+Spell 3: The stars seem to devolve into more spam, which isn't inherently bad I guess. The blue kunai are too fast and will catch the player off guard, though. Their speed and randomness make them hard to read and cause huge problems with the pattern. Not very structured, not very fun. Especially annoying when the kunai waves stack due to her movements. 4/12.
+
+Spell 4: I like this attempt at a multiple phase card, but I don't think this was executed very well. The card is extremely trivial for the first half of the lifebar, then the addition of bubbles marks an abrupt difficulty change. The card just gets faster from there, but by the time I feel it would be super challenging it's nearly dead. Has pacing problems. I do like the idea of the amulets curving in such a way, but could benefit from better execution. 5/12. 
+
+Spell 5: This seems to be another pacing issue. Lasers have nearly no delay once they stop, blue butterflies accelerate way too quickly. Yellow butterflies are surprising but a bit managable once you're aware of what they do. Considering how much the pattern repeats itself, the lifebar just seems to long. This could be a good pattern with some tweaks, but it drags on entirely too long. Resurrection Butterfly at least gets harder after a while and has thematic reasons why it's awesome; this doesn't really.
+5/12.
+
+
+ 
+ 
+ 
+Danmaku Total: (6.25+7+5.5+5+6+4+5+5)/8 = 5.47/12
+ 
+As for creativity, it doesn't feel all that creative to be honest. The UNDERTALE-style bounding box doesn't really serve any special purpose; it just limits your movement further. You could've been move creative with its use. There's a neat pattern idea here and there but for the most part it's typical.
+ 
+Creativity: 2/4.
+ 
+Aesthetics-wise, this script is above average. A good portion of the danmaku is aesthetically pleasing, the background is simple yet appropriate. Effects and sounds are used appropriately. Great.
+ 
+Aesthetics: 2.75/4.
+ 
+Total Score: 5.47+2+2.75 = 10.22

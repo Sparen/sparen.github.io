@@ -1,0 +1,87 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Descent of the Mochi Hammer, by Sparen
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Non-spell #1 : 8/10
+Another Seiran script, yay ! This first non-spell is pretty good and suits Seiran very well. A good start, I must say !
+
+Spell card #1 : Gun Sign "Raging Eagle Dive" : 8,5/10
+What a fun and surprising spell card. I find it very cool, yet not too hard to beat despite the little and tricky bullets. Let's now see what comes next.
+
+Non-spell #2 : 7/10
+Well, it follows the same pattern as the first non-spell. I think another colour than dark blue for the straight-lined bullets would have been nice, though.
+
+Spell card #2 : Moonview "Scintillating Lunatic Ray" : 8,5/10
+I don't have something particular to say about this attack, apart from it's good... It's an idea, but why not making rainbow lasers instead of colouring them all in blue ? I think the attack could have been more cool with this, no ? (..no ?...)
+
+Non-spell #3 : 6/10
+Eerrrm, well, I think I find the problem with your non-spells. It's always in the same, and so that makes them quite repetitive. There's blue everywhere, at anytime ; at the beginning it's cool, but now it makes the attack plain, that's a shame. :/
+
+Spell card #3 : Hawk Sign "Five-Pronged Target" : 7/10
+The concept behind the spell card is good, but you should vary the bullets and their colours. It's not really amusing to fight always the same projectiles with the same colours, don't hesitate to change it to make your script more diversified !
+
+Non-spell #4 : 6,5/10
+Finally, another colour in a non-spell. ...Well, bullets are still the same. You should be more original to make fabulously entertaining non-spell !
+
+Spell card #4 : Evil Bullet "Blazing Strike of the Moon Rabbit" : 7/10
+This is really an interesting attack. But again, since we had only purple, red and blue attacks until now, I feel like I already saw it before. Making everything in the same colours wasn't a good idea, really. :/
+
+Spell card #5 : Bullet Sign "Rapid Cleanwater of the Lunar Peach" : 6,5/10
+I have exactly the same comment as above. At least, the strange and round projectiles are fun to avoid. But seriously, it's truly a pity because I can't think about anything other than the colours' attacks...
+
+Spell card #6 : Mochi Pounding "Ceremonial Mallet of Moonview" : 7/10
+I'll give you credit for this original and very innovative attack. Otherwise, it's hard, but not really overwhelming in comparison of the final boss' final spell cards. I mean, look at Utsuho's or Junko's last spell : the first time I fought them, I was like "dammit I can't lose, not now !" ; here, I'm like "oh, that's cool, mochi mallet.". Even if your attack forces the player to get close to Seiran, it doesn't tense me or anything like that. Analyze your (or other players') comportement when you fight the last spell card of a stage 6 boss in order to recreate the same feeling in your script !
+
+Total : (8 + 8,5 + 7 + 8,5 + 6 + 7 + 6,5 + 7 + 6,5 + 7 ) / 5 = 14,4
+=> 14,4/20
+
+Aesthetics : 30/40
+Your script is very pretty, I can't deny it. It really gives a "modern" feeling, and I particularly like the space background when the fight is loading. However, you lose points on the bullets you used and their colours. Despite being a stage 1 boss, Seiran is tuck with an incredible ability that you can use to add a lot of things in your script ; since she can fire bullets from other dimensions, it actually gives you a lot of freedom to create awesome spell cards with awesome projectiles. Here, it's practically always the same, and colours aren't varied. That's a great shame, because there's a lot of creative attacks to make with Seiran. :/ Oh and by the way, the boss marker is really... not good.
+
+Balancing and difficulty : 9/10 (played in Normal mode)
+Ah, you know how to balance your game, that's nice. Difficulties are very accurate, you made a great job here !
+
+Overall enjoyment, creativity and originality : 7/10
+I enjoyed fighting Seiran, and your spell cards were also creative. But again, you should vary the shape of your attacks, that can only be of benefit for your script. Seiran has a lot of potential, try to use at hundred percent next time !
+
+Musics ans sounds : 4/10
+Sounds are accurate, but the music is terrible. It does fit Seiran, but it's completely unappropriate in that context. A loud and epic music would have been much better here (even if it's non-Touhou).
+
+Adherence to the theme (and to the whole contest in general) : 4/10
+I first played with Reimu, and when I saw her speech, I thought : "Oh, then Seiran must be the mastermind behind LoLK's events, or something like that !". Instead of that, I just got a blue rabbit who is on her yandere period. Bleh. And it's even worse with Marisa. You could have done an interesting plot but you fabulously missed your chance, that's disappointing. :(
+
+Others : 13,5/20
+I like your menu, it's very pleasant. However, I don't understand why we see Gensokyo's surface while the fight is happening above the Sea of Tranquility... Also, the music is kinda out of place, a more "spatial" theme would have been better here, because it might have been more suitable to your fight !
+
+FINAL SCORE : (14,4 + 30 + 9 + 7 + 4 + 4 + 13,5) / 6 = 13,65
+=> 13,65/20
+
+Final comment :
+It was really a good fight, but some elements ruin it and make you lose a lot of points. When you have tested your script, did you really sensed like Seiran has a stage 6 boss feeling ? From the spell cards' point of view, yeah, even if you didn't used all of Seiran's potential ; but apart from that, musics, dialog and other stuffs like that clearly say no. Next time, concentrate on what the player is supposed to feel when he plays your script ; like that, you should be able to make a more astonishing script with incredible attacks and epic sequences with our favorite Touhou girls !

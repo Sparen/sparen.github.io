@@ -1,0 +1,36 @@
+RaNGE 15 Judgment: Lunarethic's Lunar Ethics
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 12/20
+Character Relevance, Creativity, Originality: 4/20
+Aesthetics: 4/20
+ 
+*Is it fun to play? Cheap shots, boring sections, all things danmaku. Individual patterns will be graded out of 12 points, and then will be averaged.
+ 
+Anyway, let's get started.
+ 
+Nonspell 1: Youmu nonspell with some extra. Fine, fine. Thematically fits with Halloween and stuff. 8/12.
+ 
+Spell 1: Pretty cool. I like how the cherry petal slowdown effect is now a spider web. Danmaku wise, this is fine. Seems to devolve into a mess everywhere but it's reasonably fun to dodge. So SLOW, though. 8.25/12.
+ 
+Nonspell 2: Very multilayered attack, nice. Keeps a standard Youmu nonspell element while adding quite a bit of new flavors to the script. Thoroughly enjoyed this.  9.5/12.
+ 
+Spell 2: Slashy slashy. Youmu-esque with the cherry-petalish formations, also has her shoot out some other bullets to follow. I like the boss movement for some odd reason. Great. 8.5/12.
+ 
+Nonspell 3: Another excellent multilayered attack. Many elements, much fun, such wow. Etc. 9.5/12.
+ 
+Spell 3: Slashy slashy revisited! This time the slowdown heralds the appearance of a really, really scary bullet formation! Fortunately they slow down to allow the player to read them better. Really good design, I'd say. The upwards swords slashes might be a bit fast for a player who's unforturnate enough to be on them when they spawn. Enjoyable! 9/12.
+ 
+
+ 
+Danmaku Total: (8+8.25+9.5+8.5+9.5+9)/6 = 8.79/12.
+ 
+As for creativity, this Youmu script feels pretty good. Feels a bit Len-esque which isn't a bad thing in my books. Some old elements mixed with new ideas. Good.
+ 
+Creativity: 3.25/4.
+ 
+Aesthetics-wise, this script is excellent. The Halloween theme comes across well. Lots of effects are used, the boss sprites and portrait are edited. This feels like Halloween. As such you get a perfect 4, for being simple yet effective.
+ 
+Aesthetics: 4/4.
+ 
+Total Score: 8.79+3.25+4 = 16.04

@@ -1,0 +1,41 @@
+RaNGE 15 Judgment: Alice Marg...Matroy's Doremy Sweet
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 12/20
+Character Relevance, Creativity, Originality: 4/20
+Aesthetics: 4/20
+ 
+*Is it fun to play? Cheap shots, boring sections, all things danmaku. Individual patterns will be graded out of 12 points, and then will be averaged.
+ 
+Anyway, let's get started.
+ 
+Nonspell 1: Interesting mixing of two patterns Doremy has used before. The blue bullets stacking up is different from her usual nonspells, and the addition of red butterflies is something new. Fun to dodge. Good way to start! 7/12.
+ 
+Spell 1: Not all that interesting to be honest. Random bullets and some fast orbs to dodge. The random bullets are either really easy to dodge or form walls occasionally, but it's not so random that either case happens often. Not all that good design and it feels really long for just the same pattern over and over. 5.25/12.
+ 
+Nonspell 2: I really like the idea of you using elements from Extra stage spellcards in her nonspells. The rain is a little generic but I could see Doremy using this pattern. Keeps the player moving. Great! 8.25/12.
+ 
+Spell 2: This attack is odd. Be careful with using ADD bullets, since if they stack they form an annoying glow that's hard to read. Furthermore there's randomly twisting blue bullets that might turn out of nowhere to nail you. Everything glows so much you can't really tell, and it just feels really cheap. 4/12.  
+ 
+Nonspell 3: I wonder what Aoji Shitodo is doing here? The random glowy blue bullets can present some hard to deal with walls, but it's passable. The purple oval bullets are too fast for someone who doesn't know how the attack works. More extra-stage spell elements. Fine. 6/12.
+ 
+Spell 3: Multiple layers of streaming. I initially thought the stream of bullets aimed at you would be absurdly hard to dodge, but it's actually not that bad. I don't see this type of attack too often. Pretty creative. Not all that fun but maybe I just dislike streaming cards. 7.5/12
+
+Nonspell 4: Doremy nonspell, constant fire edition! Luckily it's slow the whole time. Dodging through the pink bullets is rather tough but I think this is fine. Feels samey after a while. 6/12.
+ 
+Spell 4: My main gripe with this is that there simply isn't a lot for the player to do. You just go between lasers and stay still for the most part. Beyond getting nailed by a superfast butterfly there isn't a lot going on. Butterflies turning into laser bases surely is interesting, but there's very little to dodge and that makes it not fun. 3/12.
+ 
+Spell 5: The first phase of this is doable but entirely too hard compared to the rest of the script. The second phase is fine streaming. The third phase also feels really challenging compared to the rest of the script, while the fourth Kaguya-like phase is pretty doable. Phase 5 is simple enough dodging. Phase 6 is fairly boring tapping to the left/right. Phase 7 is way too fast and just cheapshots the player, even if they know it's coming. Phase 8 is also harder than most of the rest of the script and seems to wall really easily. The bullet count seems to go really high and my fps drops. Phase 9 is your typical Miko nonspell. Feels pretty short. The knife portion afterwards is pretty boring. Junko rings are junko rings. Overall it's a really drawn out card using attacks everyone's seen before. I don't really like it much. 5/12.
+ 
+ 
+Danmaku Total: (7+5.25+8.25+4+6+7.5+6+3+5)/9 = 5.77777777778/12
+ 
+As for creativity, you weren't very consistent in my opinion. You stayed true to Doremy's character for the most part and you tried a good variety of ideas (even if some didn't end very well). The last spellcard isn't all that original and it does take up a good amount of time, though.
+ 
+Creativity: 2.75/4.
+ 
+Aesthetics-wise, this script is pretty good. You use effects and sounds well and I especially liked the intro graphic.
+ 
+Aesthetics: 3/4.
+ 
+Total Score: 5.78 + 2.75 + 3 = 11.78

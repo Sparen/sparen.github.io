@@ -1,0 +1,96 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Rumia, by Miplouf Saigyouki
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Stage : 2,5/10
+I won't call it useless, but... well, it's absolutely not interesting. The stage is supposed to give the player a tense feeling, or make him impatient to fight the boss. Here, it's just a "Oh. Ah." feeling. It's superfluous, really.
+
+Yukari's non-spell : 8/10
+That's pretty good ! I find that very interesting to use the sides of the screen as borders to reflect the kunais.
+
+Yukari's spell card : Yakumo's Nest "Hyperactive Flying Objects" : 9/10
+Really nice, you recreated in a great way Yukari's flying objects. I don't have anything else to add, it's very good.
+
+Since it's forbidden to make more than 1 spell card for the midboss, I won't judge Yukari's following attacks.
+
+Non-spell #1 : 8/10
+The dark bullets depict well Rumia's ability, while the red ones bring back old memories from EoSD. Ah ah, that's good.
+
+Spell card #1 : Luminescence "Radiant Moonlight" : 9/10
+This spell card has an interesting concept, the moonlight lasers have a fun and strange shape. The blue bullets, mixed with the little white ones, make me kinda think of a starry sky, I find that very nice !
+
+Non-spell #2 : 8,5/10
+omg these dark lasers, they're so beautiful ;~; I don't have something very special to say about this attack to be honest. These lasers are really something, pretty neat from your part to add bullets like this in the fight.
+
+Spell card #2 : Dark Line "Dusk Splitter" : 7/10
+Is that some lower rank Yukari's spell card ? I don't know what to think about it. It's cool but.. Something tickles me in this attack. Don't know what, though.
+
+Non-spell #3 : 7,5/10
+A basic non-spell, that's good to see (and to fight). And I find the dark bullets very fun to dodge ! However, I have sometimes a problem with these projectiles. At times it seems that my shot are stopped by the bullets, as if they had a sensitive hitbox like Rumia. That's very strange.
+
+Spell card #3 : Unseen "Dark Side of the Moon" : 9/10
+2dark4me
+No, seriously, it's very good, these big lasers are pure gold. What I really like in this attack, is the white orbs that are left after the lasers hit the screen. It's, like, the bright side of the moon is revealing before our eyes~!
+
+Non-spell #4 : 8/10
+An EoSD non-spell again ! I really find this interesting, because despite dark and modern bullets, you still make reference to some old patterns that were the first to be shot by a Windows boss. Great !
+
+Spell card #4 : Dark Bird "Midnight Flock" : 8/10
+This one is also very amusing to face. It's just like your last spell card, so I don't have anything to add here !
+
+Spell card #5 : Rainbow Decomposer "Dark Trinity" : 4/10
+It's... progressive, but also too fast for a last spell. It can be beaten in just a handful of seconds, that's not really fun or interesting in itself. Also, by rainbow composer, I was expecting a spell with inverted colours or something that really contrasts with the classical colours of the light..
+
+Since Yuyuko hasn't her place as a boss in this script, I won't judge her resurrection hell either.
+
+Total : (2,5 + 8 + 9 + 8 + 9 + 8,5 + 7 + 7,5 + 9 + 8 + 8 + 4) / 6 = 14,75
+=> 14,75/20
+
+Aesthetics : 36/40
+If I put aside the "troll side" of your script, it's very well made in term of aestheticism. Even the start screen is well-worked. The background with the lake is maybe a little plain, but aside from that, your script is pretty.
+
+Balancing and difficulty : 8/10
+Well what can I say here difficulty is homogeneous all along the script, so it's good. Maybe a little too easy to be a Normal difficulty (I assume your script is set on Normal mode).
+
+Overall enjoyment, creativity and originality : 10/10
+This is surely the most unique script of this contest, and because of that, I give you full points. Your originality rewards you here, but beware of being too original ; this kind of script hasn't his place in this particular contest.
+
+Musics and sounds : 1/10
+My ears... They're bleeding from Rumia's theme. D: I mean why ??! Why did you chose this music ? It's totally unfitting.. It's totally... trollish. Suits a troll script for sure, but not a stage 6 boss fight. And the superimposing musics at the end... >_<""
+
+Adherence to the theme (and to the whole contest in general) : 1/10
+Scripts like that aren't made for contests like this. Because in the end, you could have gained a lot of points if you didn't made things that way, that's a shame. Also, the little plot you made was at the beginning really convincing, but then Rumia screws up everything. :/ You were the only who chose Rumia, you could have done an incredible story with her, but well.
+At least you're original !
+
+FINAL SCORE : (14,75 + 36 + 8 + 10 + 1 + 1) / 5 = 14,15
+=> 14,15/20
+
+Final comment :
+You have a very high score despite having two very bad notes at the end. If you respect a little more the contest's theme next time, I think you'll be able to win easily. You're very good at creating danmaku and I can feel that you're a very creative and original person ; just don't try to be too different from the others, find a reasonable balance between being too extreme or too normal in your work, and then you'll be able any contest !

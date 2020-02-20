@@ -1,0 +1,23 @@
+Trickysticks here, judging another contest. Yay. This one involves lasers everywhere and only lasers.
+ 
+Scripts will be judged solely on gameplay. While the danmaku is the vast majority of this category, things like sound effects and graphic design choices do affect how the game plays. Scores will be calculated by rating every pattern out of 10, then taking the average of those values.
+ 
+This review is for Sparen's entry. I played on Hard Mode.
+
+Nonspell 1: Becomes an absolute mess if aimed anywhere that's not reasonably close to straight down. I ended up just memorizing exactly where to stand to dodge all of the lasers on the first wave, and it's over by the time the second wave really becomes a thing. It's a neat idea but...I don't know. I think it's a bit below average and the bouncing lasers are too tight. The curved lasers afterwards are basically a nonfactor. 4/10.
+
+Spell 1: Woo, laser spirals. The somewhat homing lasers are basically a nonfactor but it's a nice lull from dodging through the thin red stuff. It's rather generic but I found it okay to play. 4/10.
+
+Nonspell 2: A nice nonspell. You can micrododge between the red lasers sometimes or play it safe and macrododge them while staying between the lines. Good. 7/10.
+
+Spell 2: A neat idea, but the thin spread of lasers that fires directly below her has a delay time that's simply too short. If it were like 15 or 30 frames longer I'd say it's okay, but it feels cheap now. Otherwise the grid of diagonal lasers doesn't really "move", so it's simple enough to just move between safespots. Okay. 5/10.
+
+Nonspell 3: I like this pattern, too. The random laser rain screwed me over once or twice, but the idea is solid and I found it fun to play. 7/10.
+
+Spell 3: Finding safespots and reacting quickly are both something I like, but I think you're using lasers that are too thin. It's hard to see the delay lines at times, and it's not very clear where the white lasers are going to come from since those familiar things shoot them both in front of and behind themselves. 4/10.
+
+Spell 4: This, on the other hand, I don't really like. It's already shockingly hard to dodge the blue laser bolts, but added the curvy lasers to weave through just makes it too much in my opinion. 3/10.
+
+Overall I thought this script was a mix of both good and bad ideas. I liked the whole package and visual polish, but you should probably lay off the super thin lasers.
+
+Total Score: 4.86/10

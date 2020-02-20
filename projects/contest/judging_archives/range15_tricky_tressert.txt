@@ -1,0 +1,39 @@
+RaNGE 15 Judgment: Treesertree and Hecka-tia or something
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 12/20
+Character Relevance, Creativity, Originality: 4/20
+Aesthetics: 4/20
+ 
+*Is it fun to play? Cheap shots, boring sections, all things danmaku. Individual patterns will be graded out of 12 points, and then will be averaged.
+ 
+Anyway, let's get started. All testing done on Harder Than Normal. Which is harder than normal. Yay. Since the player is included with the script it's getting judged too.
+
+Nonspell 1: Hecatia-style nonspell. Feels less extreme than her nonspells in LoLK. Does get kind of tight at times but I guess it's harder than normal so shrug. Her Y position seems to matter quite a bit despite her not moving all that much vertically. 9/12. 
+ 
+Spell 1: Very interesting vertical streaming card. Feels extremely easy compared to the opening nonspell but maybe I just caught on to the trick early on. Perhaps a tad short since it's possible to no-horizontal this and just stay in the middle. Once you're done streaming there's really no need to move until the next fireball wave, and the stars Hecatia shoots don't interfere with this strategy at all. Would've been better if the stars were aimed to force movement from the center. 8.25/12.
+ 
+Nonspell 2: Another Hecatia-style nonspell. Mixes a few distinct types of dodging together. Quite fun. Just like the actual Hecatia boss fight, rather punishing if the player doesn't finish dodging a wave before the next reaches them. Flash bombs do mitigate this though. Has potential to do very nasty things if she moves in certain ways. 8.75/12. 
+ 
+Spell 2: Feels extremely difficult compared to the earlier patterns. The player seems to just be forced towards the bottom since the gaps in the fireball walls simple aren't available too often. Early on it's feasible to just dash through them, but this quickly becomes unfeasible due to Hecatia's stars and residual fireballs from the bottom. Flash bombs help a bit, but you can't consistently graze for more than one. Interesting idea but the execution is too hard compared to the rest of this difficulty. 6.5/12.  
+ 
+Nonspell 3: Hecatia nonspell woo. Fun to dodge, and the two different types of waves are shockingly different despite working similarly. Could maybe have the two different speed kunai be different colors, but I didn't find them too hard to distinguish. Be careful with overlapping bullets. 8.85/12.
+ 
+Spell 3: Very cool idea. I think it's harder to kill the pumpkins from behind due to how spread out the backwards shot is compared to the forwards shot's focus, and getting closer to them to kill them tends to not be ideal. It's a bit daunting but surprisingly isn't all that bad. Great! 9.75/12.
+
+Spell 4: Triangles. My main gripe with this spellcard is mostly graphical, but that has a huge impact on dodging. Layered additive bullets that accelerate very quickly to fairly high speeds are...quite difficult. By the time they become ALPHA rendered there's barely any reaction time, so better get good at reading them! Considering the small spaces the player seems to need to dodge through, I think they need to become more easily visible earlier or be less dense. My gripe mostly applies to the purple wave, honestly. Besides that, this pattern is triangular I guess. Fun to dodge despite the flaws. 9.25/12 
+
+Player: Nue. The backwards shot is a good idea considering a spellcard later on, and the flash bomb is extremely useful. The deathbomb window feels really, really miniscule, so you can't deathbomb on reaction unless your reaction time is also miniscule. Bomb seems kinda generic but I guess it fits her? 8/12.
+
+ 
+Danmaku Total: (9+8.25+8.75+6.5+8.85+9.75+9.25+8)/8 = 8.54375/12.
+ 
+As for creativity, you did very well. Nonspells are true to Hecatia's style without being carbon copies, and spellcards have interesting and original ideas. You could've tried a bit more deviation from her nonspell style in my opinion, but they were fun! 
+ 
+Creativity: 3.5/4.
+ 
+Aesthetics-wise, this script is also great. The backgrounds are done well, the package and stg frame show work has been put into them. Quite appealing. 
+ 
+Aesthetics: 3.75/4.
+ 
+Total Score: 8.54375+3.5+3.75 = 15.79375/20

@@ -1,0 +1,87 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Perfect Mastermind, by TresserT
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Stage : 5,5/10
+It's... long, very long. Stages 6 aren't that long, even the one in SA was shorter than this. Also, what the point on making invincible ennemies like the red yin-yang orbs ? Plus, Cirno totally lacks of power, that's not really convenient.
+
+Non-spell #1 : 7/10
+No seriously there's gree- hum. Since there's a spring background, I think it's alright... But I'm not sure. Whatever. It's really long, you can definitely feel the player's lack of power. As for the pattern, it's very good, it makes me think of Yuyuko's first non-spell !
+
+Spell card #1 : Spirit Dance "Yuki-onna's Unseasonal Dance" : 8/10
+The concept of this spell card is very interesting ; the fact you use different colours to symbolize seasons is really a good idea. The only problem is that it takes too much time to be defeated.
+
+Non-spell #2 : 8,5/10
+Very fun, Letty is getting serious and you clearly feel it in the non-spell. The hitbox's bubbles is very treacherous tho (＃｀д´)ﾉ
+
+Spell card #2 : Storm "Tornado of Cold" : 9/10
+These pink bullets are a pleasure to watch and to dodge. Thanks god you added them in this spell, because if you didn't, it would have made a very plain spell card. Definitely a very good spell card, GJ.
+
+Non-spell #3 : 10/10
+It's bright and cool, and it's really shorter in comparison to your previous non-spell. You've made a great attack here, congratulations~.
+
+Spell card #3 : Force and Persuasion "The North Wind and The Sun" : 8,5/10
+That's hard and challenging, but it's cool, it makes things more exciting ! The "snow" bullets can be very surprising, it forces the player to pay attention to all of his surroundings ; I'm glad you made at least one spell card like that, because that's totally 6th boss-ish.
+
+Non-spell #4 : 8/10
+I would have given you full points if it wasn't so long. Seriously, this is a ridiculously marvellous non-spell, but it's way too long to be fully enjoyed. You know, it's the type of attacks that you absolutely want to refight when it's ended because of its cool pattern ; in order to achieve that, you must defeat the boss or start again directly the script to reach again this special attack. There's a certain pleasure to do this, but when it's too long, this pleasure disappears, and this is what's happening in my case here. (I hope you understand what I mean >_>)
+
+Spell card #4 : "Flower Master of the Flowers of Winter" : 6,5/10
+Oh, hello Yuuka. This spell card is good, but I think that keeping the same yellow orbs than Yuuka's wasn't a very good idea. By "Flowers of Winter", I was imagining a flowery danmaku made of ice and lasers. :/ Here, I just feel like it's a simple copy and paste of Yuuka's spell, with some Letty's danmaku in it.
+
+Spell card #5 : "Perfect Winter Mastermind" : 10/10
+It's a true final spell card. It's progressive, challenging and pretty, what could be wrong here ? Just... congratulations.
+
+Total : (5,5 + 7 + 8 + 8,5 + 9 + 10 + 8,5 + 8 + 6,5 +10) / 5 = 16,2
+=> 16,2/20
+
+Aesthetics : 37/40
+Your script is beautiful, you made a great job. Plus, it's totally not re-used content, huh ? ( ͡° ͜ʖ ͡°) I just regret that the background is stationary, it makes me feel that there isn't many action in your script. :/ Aside from that, it's graphically impressive. And the flash bomb system is actually a very good mechanic.
+
+Balancing and difficulty (played in Easyish) : 7,5/10
+Wait is that supposed to be Easy ? I'm sorry but that's Normal. And the Normal one is Hard. The names of your difficulties are quite unappropriate. :v Anyway, in terms of difficulty, this script does hold water. It's homogeneous all along the fight, there isn't a big difference of difficulty between the attacks. Nice.
+
+Overall enjoyment, creativity and originality : 8,5/10
+It was a cool and chilling fight. ( ͡° ͜ʖ ͡°) You made very interesting spell cards and pretty non-spell, so I guess everything is okay. Wait no, since it's totally not re-used content, I must remove you some points. (<- jerk detected)
+
+Musics and sounds : 8,5/10
+Eeeeerm well musics are fine. I think it's a stage 6 boss theme, so... Sounds are okay too, even if sometimes Letty makes a robotic sounds I don't even know why.
+
+Adherence to the theme (and to the whole contest in general) : 5/10
+Was your text on bulletforge the actual story of your script ? Well, you say no after that, so I assume there isn't any plot here. Too bad, it makes you lose a lot of points. :| At least, we have a cool fight that stick to the theme.
+
+Others : 14/20
+Oooh, a pretty title screen. It's totally not re-used content, right ? :jke: It's great, really. Though the colours aren't matching the whole script ; I think a blue background would have been a better option. And something like snowflakes falling on the screen would have been cool, too !
+
+FINAL SCORE : (16,2 + 37 + 7,5 + 8,5 + 8,5 + 5 + 14) / 6 = 16,12
+=> 16,12/20
+
+Final comment :
+It was a very nice fight, you're pretty talented, but I guess you already know that, huh ? I don't see any big flaws in your work, just think about changing your title screen next time (it really gives a copy and paste impression, that's not very nice). Well, since I don't have anything else to add, I wish you good luck now~!

@@ -1,0 +1,94 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Dreams of Ice, by Trickysticks
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Cirno's non-spell : 7/10
+Well what can I say it's rather simple, just like this little ice fairy. She can't be the strongest with an attack like this, too bad for her.
+
+Cirno's spell card : Ice Sign "Icicle Crash" : 7/10
+Suits the ⑨ very well. Actually, is she even trying her best ?
+
+Non-spell #1 : 6/10
+Masaka... G-gurin purojekutairu... （＞д＜） Nonono please don't tell me it's real !
+This is the only colour that I don't want to see in a Letty script, and here it comes since the very beginning... Ayayaya. As for the danmaku, it's classic, so I don't have something special to say about it.
+
+Spell card #1 : Snowstorm "Coldnado" : 7/10
+Mmmmmh well it's not like it's totally uninteresting, but... It lacks of something. The big tornado makes things a little funnier, but I feel that this spell is a little dull.
+...It lacks of punch and energy. That's it.
+
+Non-spell #2 : 4/10
+It's a ⑨ attack for sure. I tried to not move in the bottom of the screen and it almost worked, I had to dodge only two bullets. I know Letty is a stage 1 boss, but she's supposed to be a stage 6 boss this time.
+
+Spell card #2 : Frost "Coil of Cold" : 8/10
+Looks like dirty snow, that's fun. However, I'm not really convinced by the light-blue-almost-green projectiles. I think purple bullets would have been a better choice here !
+
+Non-spell #3 : 6/10
+It's more interesting than the previous non-spell, but still, I don't find it very amusing to face. Or maybe it's just me, I don't know. XD I think you should make more... hum... tonic and bombastic attacks.
+
+Spell card #3 : Winter's Roots "Wild Dance of Freezing Mist" : 7/10
+Aaaah, what a cool gimmick ! I find that very suitable to Letty (well, that's normal I guess). But despite this, I have a problem with the bullets you use in the spell. It's always the same, there is no big bubble or something like that. :( It makes the spell card a little lonely, that's a shame.
+
+Non-spell #4 : 4,5/10
+nO GREEN AGAIN
+And it's very easy. :T You should rebalance your attacks a little more, because it looks like a Normal mode (if I consider the density of the script) but it's actually way to easy. Arf.
+
+Spell card #4 : Haze "Encroaching Winter" : 7,5/10
+Ah, this is more like it. This spell is very challenging in comparison of your previous attacks, that's good ! The tiny bullets represent snow very well. I'm still a little disappointed that you don't use more diversified projectiles !
+
+Spell card #5 : Alcolve "Rotating Recess" : 4/10
+That's... monochrome. Wait, that's even too monochrome. ಠ_ಠ And it's pretty easy, too. Maybe making the lasers faster at the end could be a good idea ? About the colour, I know that white represents cold, snow, etc, but here it makes the spell card lonely, even boring. In Touhou, a lot of characters have monochrome attacks, but since these attacks are more entertaining thanks to their unique patterns, then it goes through. In your case, the spell is very slow, so it makes it very long and not very interesting in itself, despite a turning pattern like this.
+
+Spell card #6 : "Crystallized Silver" : 3/10
+Letty knows she's weak so she's getting dramatic, ah ah.
+The first phase of this spell is loooong. Bullets are traveling on the screen far too slowly. Wait, no, actually, the entire spell is far too slowly. It's like I'm at 15 fps all along the spell. There's absolutely no fun in this, when I face it I just want it to end as fast as possible. :/
+
+Total : (7 + 7 + 6 + 7 + 4 + 8 + 6 + 7 + 4,5 + 7,5 + 4 + 3) / 6 = 11,83
+=> 11,83/20
+
+Aesthetics : 25/40
+In terms of esthetism, your script isn't very diversified and visually impressive. As for your danmaku, you should take more risks by adding more types of bullets and colours, because here, most of your attacks are pretty simple regarding this matter. I'm counting on you to reach the next level in terms of aesthetics in danmakufu !
+
+Balancing and difficulty : 5/10
+This is way too easy. I don't know if I should judge your script on a Normal or Easy mode. But even for a stage 6 boss, I feel like Letty just has evolved a little bit from her position as a stage 1 boss, that's all. Try to make more difficult attacks next time (without being too excessive of course) !
+
+Overall enjoyment, creativity and originality : 5/10
+I don't feel a lot of originality in your script. Bullets are practically all the same, colours are kind of dull (except for the GREEN), and finally, I didn't have a lot of fun fighting Letty. Well, this fight let me indifferent.
+
+Musics and sounds : 8/10
+I think this is the second time I hear that theme in the contest... Well, musics aren't that bad I think. Sounds are okay too.
+
+Adherence to the theme (and to the whole contest in general) : 4/10
+I'm searching really hard, but I can't find any unexpected mastermind here. It's just that Sagume is discovering the rules of Gensokyo. Apparently, there's a relation between Letty and Sagume, you could have used this fact to make a more interesting story in your script ; a deeper reflection might have been appreciated.
+
+FINAL SCORE : (11,83 + 25 + 5 + 5 + 8 + 4) / 5 = 11,77
+=> 11,77/20
+
+Final comment :
+You need to think a little more about your danmaku and the theme of the contest. With this, you should be able to make flashy spell cards, a wonderful plot with very suspicious Touhou-girls, astonishing graphic designs, and other things like that. Be more creative in designing your script, and we'll be able to win a contest in the future !

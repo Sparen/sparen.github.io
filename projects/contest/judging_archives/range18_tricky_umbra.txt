@@ -1,0 +1,41 @@
+RaNGE 18 Judgement - Umbra
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+
+Nonspell 1: Mokou nonspell WITH EXPLOSIONS. Okay! 7/10.
+
+Spell 1: The player shots really get in the way in this attack. It's pretty fast, but would probably be feasible if I could see directly in front of myself. 5/10.
+
+Nonspell 2: More explosions! I don't like this as much as the first, but it isn't bad. 6.5/10.
+
+Spell 2: I did not expect those fireballs to suddenly accelerate and ram into me. Otherwise it's okay. 5.75/10.
+
+Nonspell 3: This I think is right between the first two nonspells. Neat. 6.75/10.
+
+Spell 3: The name is what now. Anyway, pretty fine. Nothing special in my opinion. 6.5/10.
+
+Spell 4: A truly weird attack. I didn't find it that hard, but it's...weird. Super weird. Careful with fast bullets. 7/10.
+
+Danmaku Quality Average: 6.35/10 (10.8/17)
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+
+Pretty average. The player shots in the first spell are a major issue, but I'll say drawing your own art counteracts that. 1.5/3.
+
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 12.3/20.

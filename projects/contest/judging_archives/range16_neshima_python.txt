@@ -1,0 +1,95 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Little Mermaid, by Python
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Stage : 6,75/10
+Maybe just a bit too long ? And there's only three types of bullets in it. You should slightly vary the projectiles' nature, since such patterns make me think that I'm fighting the same ennemies again and again !
+
+Seija's non-spell : 8,5/10
+Well it's good, it suits her after all. Nothing more to say here.
+
+Seija's spell card : "Gait of a Drunken Sailor" : 8,5/10
+It may be tricky the first time you face it, but it's easy to figure the bullets' path after that. Since I play with the original version, bullets change direction when they "materialize" in front of me, instead of following their normal path. I find that cool and challenging, because it fits Seija's unstable personnality !
+
+Non-spell #1 : 10/10
+An excellent non-spell to begin with. It's beautiful, colours combine at perfection. Plus, it's really amusing to fight, what more can I ask for ???
+
+Spell card #1 : Water Sign "Water Fountain Palace" : 7/10
+It's very well made,  but also very easy if I just stay passively in the bottom, waiting for the bullets to come at me. Unfortunately, I just have to move to the right and the left to beat it, so that's not really fun to fight. Otherwise, esthetically speaking, it really looks like a fountain~.
+
+Non-spell #2 : 9/10
+Suits Waka at perfection.
+...... (I don't have anything else to add. :p)
+
+Spell card #2 : Bubble Sign "Underwater Prison" : 7/10
+This one is like your previous spell card. At first, I was like "omfg it's impossible to beat without dying" because I entered everytime in the bubble trap ; however, if I just stay on their side without entering into the bullets, then it becomes ridiculously easy. Still, it's a very good spell card in which patterns are decently original.
+
+Non-spell #3 : 11/10 (because I can)
+anhizlvbzeyihlcvzeyilezyuh
+The best attack in your entire script. Manly tears are dripping all over my face. It's wonderful, really ; I would never have imagined that a non-spell could be this marvellous. Colours are incredibly well chosen, it looks exactly like fish scales. You won my respect for creating such a fabulous attack.
+
+Spell card #3 : Song "Siren's Bewitching Aria" : 9/10
+Another great attack, involving Mamizou-like fishes. It's like my player is singing and attracts the fishes to him with his charming song. The concept behind this attack is well thought ; plus, it's very amusing to fight, including fishes like that in your script was a great idea !
+
+Non-spell #4 : 9/10
+Behold ! A good non-spell ! Making Waka spraying water towards me is nice, it's a great change from the other non-spells' pattern. G-o-o-d  j-o-b  a-g-a-i-n~ !
+
+Spell card #4 : Mermaid "Suspicious Figure in the Lake" : 7/10
+This spell card... is strange. Well, it's good, but I feel like it lacks of something (though I don't know what). I don't know if I'm the only one who have this feeling, but I think you could have added something more in it.
+
+Spell card #5 : Scale Sign "Gleaming Giant Rainbow Scale" : 6,5/10
+... I'm not really convinced by this attack. I mean, it's pretty, especially when Waka fires the heartshaped scales, but it's way to brutal. With this kind of attack, a survival spell could have been better. The problem here is that it begins like it ends, that is to say very brutal. A more progressive attack could have been a lot more accurate ; in fact, it could have even been your final spell if you did it this way ! That's why I'm quite disappointed with this spell card.
+
+Spell card #6 : "Misty Ocean" : 7/10
+This, however, is cool and progressive final spell ! Though I don't think the green lasers have their place in it. But it ends in a good way, so that's okay.
+
+Total : (6,75 + 8,5 + 8,5 + 10 + 7 + 9 + 7 + 11 + 9 + 9 + 7 + 6,5 + 7) / 6,5 = 16,35
+=> 16,35/20
+
+Aesthetics : 36/40
+Esthetically speaking, your script is extremely good. Used bullets are very accurate and pretty ; charging/dying/whatever-you-want effect are nice (I particularly like the blue effect when Waka appears in front of me). There're a lot of details that are very well thought, for example the plant in the dialog box, or the "Society Drowned in Water" thing ! Sprites are also very good, and the background is awesome ! My only regret : no PoC.
+
+Balancing and difficulty : 8,5/10 (played in the original version)
+You clearly know how to balance your script. There's a real difference between the two proposed difficulties, it's nice that you make a lower difficulty for those who can't play with the other. However, I don't with the original version is in Hard mode. It's clearly Normal, there weren't enough bullets to call it Hard.
+
+Overall enjoyment, creativity and originality : 8,5/10
+I had a lot of fun fighting Wakasagihime ! Your attacks were also creative and innovative, everything that appears in your script suits her very well. Congratulations ! :)
+
+Musics and sounds : 9,5/10
+We have a stage 6 theme and a stage 6 boss theme, so everything is perfect. Used sounds are also well chosen, you made an excellent job here.
+
+Adherence to the theme (and to the whole contest in general) : 9,5/10
+... And we even have a plot. Boy, this is great ! Seems like the little mermaid's trying to spray water everywhere. Well, I think it's okay to say your script is a sequel to Double Dealing Character (more like an AfterExtra, but without the difficulty). To me, you're completely in the theme !
+
+FINAL SCORE : (16,35 + 36 + 8,5 + 8,5 + 9,5 + 9,5) / 5 = 17,67
+=> 17,67/20
+
+Final comment :
+Your script is excellent, really. Unfortunately, I don't anything to add other than that. ;-; I don't see what I could recommend you, because you fulfilled every conditions to win the contest. Good luck for the rest !

@@ -1,0 +1,87 @@
+Seiran - by PhantomSong
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: N/A
+
+Nonspell 1: 5/10
+	*Fairly rudimentary pattern, is very easy to dodge for the most part
+	*I would be careful with how much you let RNG decide the angles of those triangle shots, because I've gotten walled a couple times
+	
+Spell 1 (Bullet Sign "Shifting Shot"): 6/10
+	*Pretty pattern, and fairly interesting to dodge
+	*It would've been nice if there were a bit more variety though
+	
+Nonspell 2: 6/10
+	*Also a simple pattern, but the faster triangles make dodging more interesting
+	*I haven't encountered too many issues with the RNG here.  Still, for the future I would recommend making some patterns with semi-randomness, rather than basically giving a direction and saying "fire somewhere in that general area"
+	
+Spell 2 (Bullet Sign "Skip Shot"): 4/10
+	*Not a bad concept, but the lack of pattern variety and Seiran staying still make the pattern very repetitive and stale
+	*I can pretty much just park myself in a spot at the bottom of the screen and only move a little when a bullet is about to directly hit me
+	
+Nonspell 3: 4/10
+	*Even though it's just a simple streaming pattern, the triangles make the dodging a bit more interesting
+	*If you had supplemented the triangles with another pattern, or perhaps changed things up a bit, this could be very fun
+	
+Spell 3 (Lunar Ops "Hallucinogenic Poison Bullet"): 5/10
+	*Not a bad concept, though I wish you had done more with it.  With only a simple bullet pattern, dodging this attack gets repetitive fairly fast
+	
+Nonspell 4: 5/10
+	*Not bad, but I feel it could've been better if the dark blue bullets were a bit denser, perhaps even faster?  And perhaps widen up the gaps in the aqua bullets to compensate. 
+	*Because as-is, you're pretty much just sitting in the lanes and dodging a few dark blue bullets that occasionally head your way
+	
+Spell 4 (Lunar Ops "Lunarian Defense Unit"): 6/10
+	*Decently fun to dodge, but again, rather repetitive as dodging is just reduced to sidestepping the triangles and avoiding the rest of the fairly simple danmaku
+	
+Spell 5 ("Warfare from the Alternate Dimension"): 7/10
+	*Despite being a streaming spell, having to avoid and plan for the large triangles is quite fun while having to manage streaming the lasers
+	
+
+Average Score: 48/90 = 53.33%
+
+FINAL SCORE: 10.67/20
+
+Final Comments:
+	-Your patterns were pretty solid, but the level of difficulty felt very underwhelming.  
+	-For future reference, I would recommend making alternate difficulties so that higher-level players don't get bored

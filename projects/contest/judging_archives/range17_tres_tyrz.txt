@@ -1,0 +1,47 @@
+SHINKI LASER BATTLE by GENOCRAFT
+(judged by TresserT)
+ 
+Tested on Hard
+ 
+Pattern 1: (5/10)
+    The curvy lasers are hard to read, but other than that there's not much interesting going on here.
+    The spammy blue lasers are just that- spam. So once you get past the weirdness of curvy lasers, there's nothing going on in this pattern.
+ 
+Pattern 2: (6/10)
+    I like how this pattern works. It reminds me of the original, but is different enough to be fresh.
+    The absurd-wall-of-bullshit lasers are hard to read if you aren't expecting them. Once you know how they work... they're still kind of hard to read but OKAY!
+    The temptation to just sit still for the aimed lasers is VERY high, which is what I like about this.
+    However, there's nothing stoping you from doing a wide stream.
+    In the original, the next wave started so quickly that if you were at the top of the screen you'd get shot in the face.
+    Here there's enough time to stream up to the top, then go back down before the next wave. So sitting still on the aimed lasers is kind of pointless.
+    In other words, the aimed wave is totally non-threatening so the only interesting part of this spell is figuring out how the white bs spawns.
+    There's also a safespot anywhere above Shinki. 
+ 
+Pattern 3: (4/10)
+    Standard rain. pretty bland.
+    If I can beat a pattern by sitting in one spot, with my eyes staring at that one spot, and just tapping left or right, its probably (probably) a boring pattern.
+    Have the player move around, or force them to look somewhere other than their hitbox.
+ 
+Pattern 4: (???/10)
+    This is...... pretty much identical to Shinki's original pattern. I'm not sure if I can judge this.
+ 
+Pattern 5: (5/10)
+    This is kind of interesting. It can be tough to get a rhythm going, so dodging in and out of the red lasers isn't as easy as it seems at first.
+    The purple laser kind of blends into the background though, so I have a hard time even seeing where it is.
+    Ultimately it boils down to a simple back and forth spell, though. Once you DO get a rhythm going it becomes pretty boring.
+ 
+Pattern 6: (4/10)
+    Once again, the purple laser is difficult to see so it keeps cheapshotting me.
+    Once you get past that, this is incredibly boring.
+    Laser spawns, tap left. Laser spawns, tap right. Laser spawns, tap left. Laser spawns, tap right.
+    There's nothing interesting to dodge here.
+ 
+Pattern 7: (6/10)
+    This has the same problems as pattern #3, though less so since the curvy lasers are a bit harder to read.
+ 
+Overall: (30+???/70 = 43+?%)
+    I feel this script tried too hard to be like the original.
+    Some of the patterns felt like you just remade the original but replaced the bullets with short lasers.
+    To make matters worse, you lost the charm of a lot of the original patterns anyway (such as patterns 2 and 6).
+    I can't really give you suggestions on how to improve your style because you don't have your own style. It's like I'm just seeing ZUN's patterns reskinned.
+    Try to deviate a bit more.

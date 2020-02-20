@@ -1,0 +1,49 @@
+RaNGE 18 Judgement - Junky
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Nonspell 1: It's a Mokou nonspell variation that I sorta like. Woo. 6.75/10
+
+Spell 1: I like it! Fundamentally a streaming pattern, but it's more of the type where bullets slowly creep in on you instead of rapid tapping. 8/10
+
+Nonspell 2: A Mokou nonspell variation that I like more. I especially enjoy how it feels like something she'd actually use, but it still feels original and fundamentally different. 7.5/10
+
+Spell 2: Feels like there's a fire at your back. Stressful, but fun! 8.5/10
+
+Nonspell 3: Amulets becoming fireballs is certainly new...and good. 7.75/10
+
+Spell 3: Dodging through a phoenix certainly is something, but besides that it doesn't really seem feasible to chase her around the screen so I just sat on one edge waiting for her to come back. Visually impressive, but there's not all that much dodging to do as you stay between the green lines. 6.5/10
+
+Nonspell 4: Well, this is new. I like how varied these nonspells are. 8/10.
+
+Spell 4: The paths of those flaming talons are pretty hard to predict and they do move pretty quick. The fireballs all being the same color and ADD-rendered is a bit of a pain, but I don't think it gets too bad. A fine pattern. 7/10
+
+Nonspell 5: It's pretty hard to shoot her if you get stuck in the wrong "lane", so it drags on, but I do like the idea of this a lot. 7/10.
+
+Spell 5: I like this pattern too. She doesn't move so quickly that it's too hard to get out of her way, and you get plenty of time to shoot at her. 8.5/10.
+
+Nonspell 6: This is an excellent nonspell - it's good that you included a demonstration wave to show how those familiars work. 9/10.
+
+Spell 6: This might be a case where too many visuals are a bad thing. Those bright explosions at the top of the screen are neat, but pretty distracting when combined with the other visual and audio effects. Otherwise, it's a solid pattern. 7/10.
+
+Spell 7: Good way to end the script. The last phase is pretty tough, but overall I enjoyed the spell. 8/10.
+
+Danmaku Quality Average: 7.65/10 (13.01/17)
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+Aesthetically, I thought this entry was amazing. You come close to overdoing it at times, but it looked and sounded gorgeous. 3/3.
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 16.01/20. Short and sweet. Good work.

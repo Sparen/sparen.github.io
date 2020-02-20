@@ -1,0 +1,21 @@
+Trickysticks here, judging another contest. Yay. This one involves lasers everywhere and only lasers. 
+
+Scripts will be judged solely on gameplay. While the danmaku is the vast majority of this category, things like sound effects and graphic design choices do affect how the game plays. Scores will be calculated by rating every pattern out of 10, then taking the average of those values.
+
+This review is for Angelic Battle! by GenoCraft. There's no player requirement so I used the default ExRumia player.
+
+Nonspell 1 - That background is really not something you should be using if you're also going to be using ADD-rendered lasers. The bright spots make it much harder to see the lasers. Other than that, I don't really like the pattern too much. It's extremely random and generally easy the majority of the time, but sometimes the red lasers can spawn in an unfortunate spot while the projectile lasers bean you. I don't like this pattern very much. 3/10.
+
+Spell 1 - Nothing revolutionary; simple and straightforward dodging. The fact that the crescent moons explode into lasers when they hit a screen edge isn't something I expected and will probably catch someone off guard. Overall, it's okay. 5/10. 
+
+Spell 2 - It's a fine idea. Typically you don't want to spawn curving bullets so low on the screen because the player could use some time to read the path they're going to take. Otherwise I also think this is okay. 5.5/10.
+
+Nonspell 2 - The background issue I mentioned in the last nonspell is especially bad here, since you're dodging two bullets types with practically the same colors as the background and the laser rain can get pretty quick. The curving laser lines are a nice touch, but the pattern is random and it's hard to get through the randomness if you can't clearly see. Can wall you, getting pushed to the bottom left is practically a death sentence due to inability to see, etc. 3/10.
+
+Spell 3 - The idea of forcing dodging from the center is fine, but suddenly appearing flipping laser things from the screen edges are not. Otherwise I don't really have a lot to say about this pattern. It's certainly different. 5.5/10. 
+
+Spell 4 - Good idea with eh execution, if you ask me. The laser net things can become active when they're rotating really quickly and the curvy lasers shot from the boss aren't very predictable. 5.5/10.
+
+Spell 5 - The way you're forced to the middle in this attack is a lot better than in Spell 3. My main gripe is with the black lasers from the top and bottom of the screen, since the top of the screen has a dark patch in the background that the lasers blend into. Plus,   they're random, fast, and dense. Otherwise, fat yellow lasers aren't very nice to read and those blue laser gate things move out really quick. Be careful with using bubble bullets as lasers, too, since they have kinda wonky hitboxes at the ends. It's a fine idea, but it's not all that fun and I'll give it 4/10.
+
+Score: 4.5/10

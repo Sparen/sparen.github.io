@@ -1,0 +1,22 @@
+A SCRIPT by SEARINOX
+(Judged by TresserT)
+
+Nonspell 1: (4/10)
+	The lasers can spawn from weird angles, which is fun, and the aimed laser prevents you from sitting in one place for too long.
+	However, ultimately there's nothing too amazing going on. Just lots and lots of bullets coming from the top of the screen.
+	Mix it up a little, please. The aimed laser was a step in the right direction, but it just wasn't enough.
+
+Spell 1: (6/10)
+	You have a lot of fancy stuff going on visually, but not so much dodging-wise.
+	This is more or less a variation of the nonspell. Restricting the player's dodging space and having handful of bullets spawning from the sides helped.
+	Again, though, its still not enough.
+
+Spell 2: (3/10)
+	And incredibly slow and boring pattern...
+	There just isn't anything going on here.
+
+Overall: (13/30 = 43%)
+	Generally, if I can beat a pattern by sitting in one spot and tapping left or right (barely moving from that one spot) its probably not going to be too fun.
+	Force the player to move around a bit more. And I don't mean make them go to the center of the screen and stay there. I mean make them have to rush to the center, then rush back to the bottom, then rush back to the center....
+	Or make them jump really far to the left or right. It doesn't really matter where they go, just don't let them stay in one place for too long.
+	This can be achieved by having walls, or a long stream of aimed bullets, just to name some ideas.

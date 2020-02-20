@@ -1,0 +1,43 @@
+LASER MIKO by CRESTEDPEAK9
+(Judged by TresserT)
+
+Nonspell 1: (3/10)
+	...This is not off to a good start.
+	The lasers spawn VERY quickly, I didn't even realize what was going on before I died.
+	They also despawn in a very awkwardly. I can't tell when the hitbox exists and when it doesn't.
+	The way the lasers move, its difficult to stay under Miko to end a mechanically bad pattern...
+	...and when you get past all that, all you have to do is move back and forth, back and forth, back and forth.
+
+Spell 1: (6/10)
+	This is pretty nice. The way the Miko laser spawns makes it hard to stay under Miko, but this time in a good way.
+	You have to first get Miko in place, then redirect it. The rain of bullets is there to hold you back from doing that.
+	My complaint is that, while this isn't a bad spell, there's nothing particularly amazing about it either. 
+	Misdirection combined with spam is a very basic concept, and this spell doesn't do anything special with it.
+
+Nonspell 2: (7/10)
+	A bit repetitive and a bit bland, but it's effective.
+	The spinny things force you to get close to Miko, which is scary since the laser lanes are so tight (and get even tighter the closer you get to Miko).
+	I'd recommend making it more apparent as to when the lasers are going to switch directions though. It can be pretty hard to tell sometimes.
+
+Spell 2: (4/10)
+	It isn't very clear how the curvy lasers are going to move until they're curving right into you. This makes the spell very frustrating.
+	Its also kind of bland; all you're doing is micrododging between beams.
+	You generally don't have to dodge very far vertically, so the fact that the lasers form walls that way doesn't make too huge of a difference.
+	Maybe add something that forces the player to move around a bit more.
+
+Nonspell 3: (5/10)
+	WARNING BULLETS FROM THE BOTTOM OF THE SCREEN
+	This has all the same problems as the first nonspell, except now I get a bullet up my butt because I didn't realize the curvy lasers would come back up from behind me.
+	That said, its slightly better than the first one, as once you get past the cheapshot it IS a bit more interesting than just "back and forth, back and forth, back and forth".
+
+Spell 3: (7/10)
+	It took me a second to figure out what was going on, but once I did this wound up being a really neat spell.
+	The way Miko moves around forces you to do some really weird dodges.	
+	I DO have to complain again, as there's no indication that the red lasers will curve up and hit you from behind.
+	However, even so I still really like this pattern.
+
+Overall: (32/60 = 53%)
+	The thing bringing this script down the most is the cheap shots.
+	I recommend making your own laser function if you know how, as right now its incredibly hard to tell when your lasers have hitboxes and when they don't.
+	Alternatively, spacing out your lasers a bit more (not having them rapid fire, right next to each other) would probably help.
+	Also, spawning weird moving bullets right next to the player (or having them come up from behind the player) with no warning is generally not a good idea.

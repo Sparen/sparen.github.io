@@ -1,0 +1,84 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Chang'e's Assassin, by Haru H
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Non-spell #1 : 8,5/10
+It begins with a good non-spell. Suits Seiran very well. Now let's see what comes next !
+
+Spell card #1 : Real Battle "Evil Portal" : 8/10
+Kinda tricky, I always die when new black bubbles are coming to me. But at least it's good and challenging.
+
+Non-spell #2 : 8,5/10
+The concept of this non-spell is very interesting ! It's like two portals are firing bullets from another dimension, it's really a great idea. About the danmaku in itself, it's amusing and colourful, it's nice !
+
+Spell card #2 : Flight "Eagle Kamikaze" : 6/10
+Well, that's a copy of Junko's second spell card with bullets instead of flowers. It's fun to fight, but the reference to Junko is too present to be enjoyable.
+
+Non-spell #3 : 7/10
+Good and colourful. Maybe a too hard and complex for a simple non-spell, that's a shame.
+
+Spell card #3 : Trap "Death by Cartridge" : 8/10
+A Junko's reference again. This time, it's more diluted so it's okay. Personnally, I find this spell card very nice, it forces the player to really think about what movements should he do or not. But there's a problem with this mecanic : since the spell card makes us move a lot, we can't properly drain Seiran's life. It's only possible when the blue orbs force you to relocate at the center of the screen. Well, it's not really disturbing in itself, but it makes the spell reaaaaally long.
+
+Non-spell #4 : 4/10
+Mmmh, a mix between Junko's and Kaguya's non-spell. Nothing new here, what a pity. :/
+
+Spell card #4 : Wars "Star Wars 8" : 8,5/10
+This one is really amusing to face ! Kinda like Mamizou's "Wild Carpet", but more fun. The only problem is that it can be easily defeated by standing in the bottom.
+
+Spell card #5 : Portal "Galacta Wormhole" : 3/10
+Junko again. Mixed with Yuke's style. Nothing original here, sorry. :/
+
+Spell card #6 : "Eagle Ravi of Lunatic Kingdom" : 4/10
+Same here. It's a progressive spell card like it should be, but I can't feel any originality from it. :/ Try to be more creative, really.
+
+Total : (8,5 + 8 + 8,5 + 6 + 7 + 8 + 4 + 8,5 + 3 + 4) / 5 = 13,1
+=> 13,1/20
+
+Aesthetics : 30/40
+The overall presentation of your script is pretty (it's LoLK after all), but there isn't that much diversity in it. Using portals to illustrate Seiran's ability was a very good idea, but the bullets she uses are practically all same. Be more diversified in your attacks, don't hesitate to use more types of projectiles ! Also, Chang'e doesn't disappear correctly (rofl).
+
+Balancing and difficulty : 8/10
+Difficulty is homogeneous all along the script. A regular Normal difficulty fits well this fight, good job !
+
+Overall enjoyment, creativity and originality : 4/10
+I quite enjoyed your fight, and making portals firing bullets was a wonderful idea, it was really like Seiran was using her capacity at full power. However, I'm really disappointing with the general pattern of your spell cards. I feel like it's nothing but a copy and past of Junko's spell cards, adapted with Seiran's projectiles. You should be more original next time !
+
+Musics and sounds : 10/10
+Well, it's Junko's theme, so everything's alright on this side.
+
+Adherence to the theme (and to the whole contest in general) : 6,5/10
+Mmh, I think you're in the theme... It was good to see fanon Chang'e, you had a great idea here. However, I think you should have proposed only Reisen as a playable character to make a greater story, like Reisen fighting her ancient comrade Seiran and her old master Chang'e, something like that. Plus, it's weird that she's saying herself "that purple rabbit's true master bla bla bla". Next time, think more about the context of your script to provide a better plot !
+
+FINAL SCORE : (13,1 + 30 + 8 + 4 + 10 + 6,5) / 5 = 14,32
+=> 14,32/20
+
+Final comment :
+It's a good script, but it really lacks of originality. I have the feeling that you didn't really bang your head to make unique attacks with unique gimmicks, that's quite depleasant. :/ For your future scripts, be sure that your spell cards aren't a pale copy of another boss with just substituted bullets !

@@ -1,0 +1,56 @@
+RaNGE 18 Judgement - Meowstic
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Played as Reimu. Only stuff specific to her will be judged, since I heard there's character-specific elements.
+
+Stage Pre-Midboss: Pretty good. Not your typical fairy patterns! 8/10.
+
+Midboss time!
+
+Spell 1: Pretty interesting. Keeping track of the laser wheels becoming bullets while also dodging bullets from below can get overwhelming, but I like it all the same. 8.25/10.
+
+Spell 2: More standard, but I still enjoyed it. Pretty good. 7.75/10.
+
+Boss time! I wonder who it could b- just kidding it's Mamizou.
+
+Nonspell 1: I was about to say that this is pretty standard until the blue bullet waves started. Good twist on her usual thing. 7.5/10.
+
+Spell 1: UFO transformations are...different! The pattern itself is pretty standard, but I like those graphics. 7/10.
+
+Nonspell 2: This ended up dragging on for me because I got bad RNG and she promptly teleported to the opposite side of the screen and stayed there until she did the blue wave. It happened twice and I nearly timed it out. Otherwise, seems pretty okay. Unusually hard and fast compared to prior patterns. 5.5/10
+
+Spell 2: An interesting idea, but I killed it before the leaves sped up and actually became a threat. Unusually easy. 6/10.
+
+Nonspell 3: A clever twist to her usual nonspells. Excellent. 9/10.
+
+Spell 3: Also a pretty solid attack. Feels easy compared to most of the script. The Mamizou Orbit is funny. 7/10.
+
+Nonspell 4: Good mix of Reimu and Mamizou's danmaku styles. 8.25/10.
+
+Spell 4: A mockery of Reimu Hakurei. Or Reimunny Hakurich? Solid attack as well. 7.25/10.
+
+Spell 5: I'm highly disappointed that this isn't called Animal Crossing. The ending is a bit abrupt, but it was a fun pattern. 8/10.
+
+Danmaku Quality Average: 7.45/10 (12.67/17)
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+
+Aesthetics are above average. Those fake Mamizou tails are a nice touch. 2/3.
+
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 14.67/20.

@@ -1,0 +1,39 @@
+RaNGE 18 Judgement - Rawsome
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+
+Nonspell 1: It's a Koishi nonspell alright, but it's VERY dense. Slow, so it's feasible, but this is really unreasonably dense. 2.5/10.
+
+Spell 1: The slow ring red hearts are simply too dense. If that wasn't the case I'd think this spell is actually pretty okay, if a bit dense. Aside from that, though, it's a pretty good idea. 3.5/10.
+
+Nonspell 2: Another super dense nonspell. Somehow seems a bit more okay than the previous? 3/10.
+
+Nonspell 3: See earlier complaints about density, only this is denser. 2/10.
+
+Spell 2: A pretty cool idea. Not the best execution, though. Those faded out indicators could be a bit brighter, since they're hard to see on a black background. 4.75/10.
+
+Spell 3: Another good idea that pretty much just ends up being "dodge the spam from all sides". Dense, but not TOO dense. 3.5/10.
+
+Danmaku Quality Average: 3.2/10 (5.45/17)
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+
+Lack of a background aside, those faded objects in the second to last attack could use improvement. Otherwise, fine. 1.45/3.
+
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 6.9/20.

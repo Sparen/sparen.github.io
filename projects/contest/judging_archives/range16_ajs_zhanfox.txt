@@ -1,0 +1,103 @@
+Harvest Crisis - by Zhan Fox
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: N/A
+
+Stage: 7/10
+	*While a bit easy at times, it provides just enough excitement to make things interesting
+	*The stage also doesn't overstay its welcome either
+
+Shizuha Nonspell: 5/10
+	*A fairly standard pattern, not too threatening but the yellow shots make for good obstacles as the waves overlap
+
+Shizuha Spell (Autumn Breeze "Momiji Leaf-fall"): 9/10
+	*I LOVE THIS ATTACK!!!
+	*The only reason I'm not giving it a 10 is because Shizuha's healthbar is reaaalllly long for this attack. And this coupled with her movement means it takes a long time to end this attack
+	
+Minoriko Nonspell 1: 5/10
+	*The tomato bullets are reasonably threatening, but otherwise this is just a rehash of one of Minoriko's canon attacks
+
+Minoriko Spell 1 (Goddess Sign "Inari in a Form of a Fox"): 4/10
+	*This attack feels rather barren, with only the lasers posing a threat to the player
+	*I would suggest supplementing the lasers with another layer of attack
+
+Minoriko Nonspell 2: 6/10
+	*Simple, but effective.  It does its job well, and doesn't overstay its welcome
+	*-10 points for making me hungry :( [jk, of course]
+
+Minoriko Spell 2 (Secret "The Principle of Harvest"): 5/10
+	*It feels like a ripoff of Flandre's "Kagome-Kagome" spell
+	*However, the fruit attacks add an interesting dimension to the attack
+
+Minoriko Nonspell 3: 6/10
+	*Another simple but effective nonspell
+	
+Minoriko Spell 3 (Plenty Sign "Exotic Dance of Harvest Gods"): 7/10
+	*While simple in execution, it's a fairly fun and chaotic attack to dodge
+	*I do wish a bit more could have been done with it though, as there's not much to it
+
+Minoriko Nonspell 4: 5/10
+	*Decently fun to dodge, but rather simplistic
+	
+Minoriko Spell 4 (Hunt for Fuits "Rare Catch"): 3/10
+	*I'm not entirely fond of spells where the boss just constantly follows you while shooting bullets
+	*In addition, she's just firing random bullets.  The spell feels dull and drags on way too long
+
+Minoriko Spell 5 (Harvest Crisis "Morning Prayer to Gods"): 8/10
+	*I REALLY like this concept, and it's very fun and challenging!
+	*If I were to make some suggestions, I would recommend decreasing the laser count but increasing the laser speed, because early on the lasers typically end up blowing up the fruits before they barely come on screen
+	*It'd be nice if the gimmick of the player using the lasers to chop up fruits was embraced a little more fully, which could perhaps be done with the above suggestion
+	*It also gets a biiiiiit too chaotic near the end
+	*But overall, I really like the idea of this spell! :D
+
+
+Average Score: 70/120 = 58.33% + [2% AESTHETIC BONUS] = 60.33%
+
+FINAL SCORE: 12.01/20
+
+Final Comments:
+	-Aesthetic-wise, this script was GORGEOUS!  And the ending was adorable--props to whoever drew those!
+	-The danmaku was quite fun, and I got a good laugh out of the various fruits and veggies danmaku
+	-However, some attacks I felt were lazily designed or dragged on too long
+	-That, I think, is your biggest weakness.  But you definitely have a lot of potential, as some of your best attacks were really fun for me.

@@ -1,0 +1,35 @@
+RaNGE 18 Judgement - Conar
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Nonspell 1: A variation on Koishi nonspells that I somehow find more fun than the originals. Good. 7.75/10
+
+Spell 1: It's a simple concept of dodging rings from strange angles, but I think that's enough to create a fine pattern. 7.25/10
+
+Nonspell 2: Good luck to the player if they don't see this coming. If they do it's just simple streaming where you barely move, but if they don't they kinda just die most of the time. Not the sort of design I like. 5/10
+
+Spell 2: I really like the idea of this gimmick. The execution is also pretty good - it's hard to get used to, but the danmaku is mostly aimed or walls that aren't too challenging to get around. It forces you to dodge ahead. Nice. My only gripe is that the thing that you control starts way high on the screen if you decide to PoC the items from the previous attack. 8.5/10
+
+Nonspell 3: Another variation on a Koishi nonspell, only this one forces you to remain unfocused. I thought it was pretty hard compared to the rest of the script. 6.5/10
+
+Spell 3: In practice it's not really feasible to keep track of every connection, so I ended up just breaking as many as I could at once to turn this attack into a sort of streaming pattern. Still, I like the idea. 7/10
+
+Danmaku Quality Average: 7/10 (11.9/17)
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+Aesthetically, I thought this entry was pretty good. The spellcard background literally shattering is cool. I'll give it a 2/3.
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 13.9/20. Short and sweet. Good work.

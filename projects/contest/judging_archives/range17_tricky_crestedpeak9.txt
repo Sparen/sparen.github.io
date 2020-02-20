@@ -1,0 +1,19 @@
+Trickysticks here, judging another contest. Yay. This one involves lasers everywhere and only lasers.
+ 
+Scripts will be judged solely on gameplay. While the danmaku is the vast majority of this category, things like sound effects and graphic design choices do affect how the game plays. Scores will be calculated by rating every pattern out of 10, then taking the average of those values.
+ 
+This review is for LaserMiko by CrestedPeak9. There's no player requirement so I used the default ExRumia player.
+
+Nonspell 1: I really do like the idea and it looks really cool. A good pattern, though the space you have to dodge in is too tight for my liking. 6/10.
+
+Spell 1: The delay laser barely lasts for any time and the spell basically opens by shoving a storm of lasers in your face while the cutin is still onscreen. Once you get past that it's a fine pattern, but it could use a better opening and a longer delay time on the Basically Master Spark. 5/10.
+
+Nonspell 2: An okay pattern, too. Not a lot to do when those pinwheel things aren't coming. Also looks fairly cool. 5.5/10.
+
+Spell 2: I personally hate spells with curvy lasers from the sides since they're pretty hard to read. This spell is no exception, since they curve pretty erratically and it's hard to predict where the safe spots are while also dodging the lasers that Miko fires. I don't like that there are times when it feels like you just have to pray that the lasers don't curve at the wrong angles. 4/10. 
+
+Nonspell 3: I don't really like this idea at all. The rainbow laser bases obscure the rainbow curvy lasers, both as they come in and as they come out, and they force you into a wide sweeping movement that just doesn't go well with dodging stuff from behind you. 3/10.
+
+Spell 3: I don't actually know how to feel about this one. Though I like the idea, the red lasers are hard to see under the sea of yellow ones and rarely there's simply not a path to follow her through if you're unlucky. 5/10.
+
+Total Score: 4.75/10

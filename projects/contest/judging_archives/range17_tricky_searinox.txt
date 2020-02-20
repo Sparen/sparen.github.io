@@ -1,0 +1,13 @@
+Trickysticks here, judging another contest. Yay. This one involves lasers everywhere and only lasers.
+ 
+Scripts will be judged solely on gameplay. While the danmaku is the vast majority of this category, things like sound effects and graphic design choices do affect how the game plays. Scores will be calculated by rating every pattern out of 10, then taking the average of those values.
+ 
+This review is for Searinox's entry. There's no player requirement so I used the default ExRumia player.
+
+Nonspell 1: It's reasonably fun and fair dodging. Makes use of the fact that lasers form lanes. Above average. 6/10.
+
+Spell 1: I really like this idea and it's executed in a fair way. Feels a little bit sluggish, but that doesn't take too much away from the pattern. Good work. 6.5/10.
+
+Spell 2: The idea of dodging in the middle is nothing new, which isn't necessarily a bad thing, and the bullets are so ridiculously slow that it's trivial. It just feels very sluggish and more like a slog than something particularly fun, considering how the lifebar is longer than normal. 3.5/10. 
+
+Total: 5.33/10.

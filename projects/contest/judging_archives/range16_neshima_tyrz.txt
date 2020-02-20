@@ -1,0 +1,99 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Nazrin, by tyrz_939
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Stage : 3,5/10
+What a long stage. It's supposed to be a stage 6, but this one looks like a regular stage 1. Stages 6 are usually really short, and ends just after the midboss, except in SA where the stage is a bit longer. Here, it seems like we're just here to kill time (and fairies). About the patterns, they are simple but effective. They should have been a little harder, though. Even in Lunatic, a lot of patterns are still easy as pie.
+
+Cirno's non-spell : 8/10
+I don't have nothing special to say, except that it fits Cirno.
+
+Cirno's spell card : Ice Sign "Perfect Icicle" : 7,5/10
+Same here. Lasers are the best for deep-freezing English beef~.
+
+Non-spell #1 : 8/10
+A pretty non-spell to begin with ! I like the chosen colours and this kind of circular pattern. Ît's cool and colourful, and this a move that corresponds very well to Nazrin.
+
+Spell card #1 : Rod Sign "Blue Rod" : 7/10
+It's like one of Nazrin's spell in Double Spoiler. The fact that you struggle to stay under Nazrin adds a little fun, that's nice. However, it's wayyy to easy. With this kind of spell, you can add a lot of things to make it fun and difficult to fight ; for example, when the rod touches the bullets, they transform themselves, or something like that.
+
+Non-spell #2 : 9/10
+Just like the first non-spell. Colourful, fun to dodge, very Nazrin-ish.
+
+Spell card #2 : 8/10
+I love it. Though it's a lot more interesting in Hard mode because the bullets superimpose themselves more. Despite this, the lanes of bullets make it really fun to fight, and it's still colourful af. This kind of spell is always welcomed in a fight, so I'm glad you created this way.
+
+Spell card #3 : Search Sign "Uranium Detector" : 5,5/10
+It's too easy. Since the bullets are aimed at you, it makes the spell really predictable. At first, I thought it might be difficult because of the curvy lasers, but it ended up being way to easy. What a pity.
+
+Non-spell #3 : 7/10
+The same pattern as the second non-spell. It's supposed to be more difficult, but I don't feel like there's a big difference between the two. Even if there's more bullets in this one, it's also slower, so in the end I find it easier than the first one.
+
+Spell card #4 : Jeweled Sign "Rare Treasure" : 5,5/10
+Mmh. I don't know how to feel about this one. It's like the one with the jeweled pagoda in UFO's stage 5, but a lot easier. The proposed difficulties are really problematic. In UFO, in Hard mode, the similar spell was a total mess (and I don't speak about the Lunatic version). Here... I... feel like something is missing. The fact that you add pendulums makes it look cool, but... I feel like it's empty.
+
+Spell card #5 : Offence Sign "Highly Sensitive Rod" : 8/10
+I like how you must be always moving to avoid the lasers. In fact, I like your spell cards because you're constantly forced to move, and it makes the fight really interesting. For this one, I would recommend to add something more (like giant bubbles) in order to vary the bullets. It's still a good spell, though !
+
+Non-spell #4 : 7/10
+It's good, I really like it. It was a good idea to use lasers with pendulums. But again, it's too easy.
+
+Spell card #6 : Treasure Sign "Drop Treasure" : 9/10
+Finally, a challenging spell card. This is probably the greatest spell card of your script. The pendulums make it overwhelming, yet really fun to fight. It was also a good idea to add red lasers, because things are a lot more difficult with it. You did a really good job, congrats !
+
+Spell card #7 : Vision Sign "Great Gold Pendulum" : 4/10
+The spell in itself is really good, but that end.... It's not possible to end things like this. First, if the life bar can't be drained, then it's useless. An unbeatable last spell is completely useless. The pattern is good, bullets are fine and well chosen, but this brutal end ruins everything. You're supposed to get rid of the boss after his final spell, and this isn't the case here. And it's a great shame, because if you set aside this, the spell is good. :/
+
+Total : (3,5 + 8 + 7,5 + 8 + 7 + 9 + 8 + 5,5 + 7 + 5,5 + 8 + 7 + 9 + 4) / 7 = 13,86
+=> 13,86/20
+
+Aesthetics : 33/40
+Aesthetics are good. The title screen's background is especially pretty. I like the cloud effects and the stage's background is accurate. The right edge of the screen is well made, and bullets have been chosen carefully. Thought there isn't any "aura" around Nazrin (which indicates she's getting serious), it doesn't matter at all.
+
+Balancing and difficulty : 3/10 (played in Hard mode)
+Your script is too easy, and this is a real problem. Difficulties aren't very well made, because even in Lunatic, the stage's still a piece of cake. The stage is also long, so even in Hard it's getting boring pretty fast. The fight has also the same problem, I can't really tell if there's a REAL difference between Normal and Hard. Hard mode is supposed to be hard, but this isn't the case in your script, sorry. :/
+
+Overall enjoyment, creativity and originality : 6,5/10
+Like I said before, your stage is pretty long and boring because of the easy difficulties and the song (I'll talk about it just after this). However, the fight is okay, because there's a lot of colourful and fun-to-dodge spell and non-spell. You used Nazrin's capacities very well, and the player is constantly forced to move to follow her or to avoid her bullets. That said, the end of the fight leaves a stale after-taste...
+
+Musics and sounds : 4/10
+Your stage music is unappropriate. I feel like I'm just going on a walk in the skies of Gensokyo. The stage music should be tense, or ominous. About Nazrin's theme, it's a good remix, but also not appropriate here. At least, the title screen theme (by FELT ?) is really smoothing. Oh, and sounds are nice too.
+
+Adherence to the theme (and to the whole contest in general) : 3/10
+I don't really feel like it's a stage 6 boss fight. To me, it's more a stage 1 boss fight with a powerful Nazrin who has a lot of spell cards to show us. This feeling is strengthened by the long stage, the easiness of the script and the unappropriate music. Also, it's absolutly not mastermind-ish. More like "Eye'm gonna kick your ass bcz I can"-ish, and that's a shame, because your script have a lot of potential. :/
+
+Others : 15,5/20
+Your title screen is really very well done ! However, there're some audio bugs when the demo play stops. For example, when Reimu sends her Fantasy Seal : if you stop the demo right at this instant, the Fantasy Seal sound continues to play indefinitely. Apart from that, you made a great job !
+
+FINAL SCORE : (13,86 + 33 + 3 + 6,5 + 4 + 3 + 15,5) / 6 = 13,14
+=> 13,14/20
+
+Final comment :
+It's a good script, but not really suited for a stage 6 boss fight. Next time, think about adjusting your difficulties. I don't know how much I wrote the word "easy" in my judgement, ah ah. Setting this aside, your spell cards were interesting ; unfortunately, the end is completely screwed. The boss is supposed to explode and be completely defeated, not to tease the protagonists even if they beat him correctly. There're some elements like that in your script that shouldn't be here, so think about it next time !

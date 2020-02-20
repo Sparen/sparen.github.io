@@ -1,0 +1,86 @@
+Where the Firefly Flies - by Meowstic
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: N/A
+
+Nonspell 1: 7/10
+	*A decent challenge, and overall a very pretty and Wriggle-like pattern that's fun to dodge but doesn't overstay its welcome
+	
+Spell 1 (Hidden Bug "Fireflies in the Darkness"): 4/10
+	*An interesting concept, though in practice it feels very underwhelming
+	*If I were you, I would perhaps not have the fireflies spawn ENTIRELY randomly.  Perhaps have them concentrate near the players position, so they'll have to keep moving in order to avoid getting killed as the fireflies spawn in
+	
+Nonspell 2: 7/10
+	*Though it's a rather simple pattern, it's fairly fun to dodge.  I feel you could improve on this by adding a bit more variety, though--or perhaps by not having the lower familiars fire totally random shots
+	
+Spell 2 (Insect "March of the Worker Red Ants"): 6/10
+	*Another really cool concept, though I feel this has the potential to be even better if you perhaps had the worker ants fire more interesting patterns than just shots perpendicular to their travel path
+	*Still, it's fairly fun to dodge
+	
+Nonspell 3: 8/10
+	*Simple in execution, but it feels quite frantic yet fun
+	
+Spell 3 (Dragonflies): 7/10
+	*Cool concept, interesting execution, though it feels a tad barren without anything else to accompany the dragonflies' shots
+	*Perhaps have Wriggle fire some shots of her own?
+	
+Nonspell 4: 6/10
+	*Though you used quite a bit of randomness here, which doesn't quite look appealing, it's decently fun to dodge anyway
+	
+Spell 4 (Insect "Monarch Butterfly's Essence"): 6/10
+	*A cool-looking spell, and fairly fun to dodge
+	*I feel it could have been supplemented if butterfly bullets were being shot out in all directions in addition to just homing in on you
+	
+Spell 5 ("Wriggle's Lantern"): 7/10
+	*Cool pattern that's interesting to dodge, though the startup is reaaaallllly slow
+	*Nonetheless, I had fun dodging it.  If perhaps you spent last time on the really slow opening waves and more time on the denser waves that appear later, this would be great!
+	
+	
+Average score: 58/90 = 64.44%
+
+FINAL SCORE: 12.89/20
+
+Final Comments:
+	-For a first script, this is quite good!  Your sense of balancing and fairness is a hell of a lot better than mine when I made MY first script...
+	-That said, you had quite a few interesting ideas, but they would have been a bit better with a few extra tweaks.  Still, I suppose I'm being a bit picky for this being your first script and all, but this is definitely a good point from which you can (pardon the pun) spread your wings :P (get it?  cuz Wriggle?  ehehe...)

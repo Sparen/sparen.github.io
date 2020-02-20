@@ -1,0 +1,41 @@
+RaNGE 18 Judgement - Awalys
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+
+Nonspell 1: This is different and original. Good start. 7/10.
+
+Spell 1: Could definitely benefit from a warning laser (or five) on the first wave. Those spears are deadly. Neat idea, but too quick and difficult for my taste. 4.5/10.
+
+Nonspell 2: You end up having to dodge from an uncomfortable angle, which I like. Otherwise it's above average. 6.25/10.
+
+Spell 2: A combination of Flandre spells that I liked until the giant bubble murdered me. I know there's a warning laser, but it's nowhere near wide enough to cover the scope of that thing. Great idea, but the bubble is too much. 5.5/10.
+
+Nonspell 3: I like it, up until the larger orange bullets appear. They're simply too restrictive with how far out they spawn. 5/10.
+
+Spell 3: The screen-wide sweep is unexpected, but I guess the original Flandre is like that too, sort of? Still, it drags on for a while and it seems like if Flandre is in the wrong spot you simply can't avoid the screen sweep. 4.5/10.
+
+Spell 4: Interesting survival. Those purple knives are weeeeeird. Very weird. I-don't-know-how-to-deal-with-them-weird. The purple spinning lasers attached to the bubbles are fine, but everything past that is bizarre and difficult to deal with. 5.25/10.
+
+Danmaku Quality Average: 5.42/10 (9.22/17)
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+
+Pretty good job aesthetically. Effects aren't obnoxious. Could benefit from MORE effects for certain warnings, but it's already above average. 2.5/3.
+
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 11.72/20. Generally I REALLY like the ideas, but they are simply executed in a way that's too difficult or that relies on prior knowledge. Remember that you (as the creator) know what's going to happen, but the player doesn't until they play it!

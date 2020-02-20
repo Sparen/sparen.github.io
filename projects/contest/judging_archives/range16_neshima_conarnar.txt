@@ -1,0 +1,85 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Wriggle, by Conarnar
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Non-spell #1 : 7/10
+A basic non-spell to begin with. Well what can I say about it... It's simple and clear, I guess ?
+
+Spell card #1 : Lamp Sign "Unreasonable Firefly Light" : 8/10
+I had a lot of fun when  fighting this spell card, that's nice ! However, I think light blue would have been better in this spell.
+
+Non-spell #2 : 8/10
+This one is really tricky, I hate it. >_< Well, it's still good, but dammit, I always end being hit. D:
+
+Spell card #2 : Firefly Sign "Constellation on Earth" : 7/10
+The constellation thing whick releases orbs is good and pretty, but the spell in itself looks kind of messy... I'm also not really convinced by the dark blue bullets. I know Wriggle uses them in IN, but I think light blue should be added to make a more bright spell card !
+
+Non-spell #3 : 5/10
+The non-spell is okay, but it's same colours as before... There were only green, yellow and blue bullets in your script until now. It makes your attack really dull, you should change that to make in more entertaining.
+
+Spell card #3 : Wriggle Sign "Firefly Abnormality" : 5/10
+And again, there're only green and blue projectiles in this spell. Plus, it's very simple, there's nothing new here. Really, try to be more creative in your attacks !
+
+Non-spell #4 : 6/10
+Ah, lasers, that's cool. But it's one more time in the same monotonous shades. :/ I don't know why you stuck so much to these colours, it's really not fun after a while.
+
+Spell card #4 : Lamp Sign "Firefly Glow" : 6,5/10
+Behold ! Green, blue and yellow bullets !
+The only thing that's amusing here is that it's becoming dark, like in Mystia's spell cards. For the rest, I have exactly the same comments as above.
+
+Spell card #5 : Insect Attracting Light "Selenic Deity" : 5/10
+Finally, white and red projectiles. And it's a progressive spell, that's nice. However, the dark thing wasn't a really good idea here. A final spell card must be impressive in terms of visual effects, but here, we can barely see something, so I think it's quite unappropriate in this context. Given the name's spell card, I was also expecting a kind of "Guse Kannon", with insects coming from behind.
+
+Total : (7 + 8 + 8 + 7 + 5 + 5 + 6 + 6,5 + 5) / 4,5 = 12,78
+=> 12,78/20
+
+Aesthetics : 23/40
+When I look the overall presentation of your script, it is very basic. I also expected to see more bright bullets in the dark spell cards, like the one Shinmyoumaru uses during her last spell in DDC. Sprites are fine, but avoid placing your spell cards' names at the top with a font this big. The colours you used in your attacks are practically always the same, and there isn't any special stage 6 boss gimmick. Arf.
+
+Balancing and difficulty : 8,5/10
+Your script is in a regular Normal difficulty, so it's cool. There is not really easier attacks than others, you did a great job on this matter.
+
+Overall enjoyment, creativity and originality : 4/10
+I didn't really have fun to fight Wriggle, but I wasn't bored either. What's bother me is that I feel you didn't take many risks by creating these attacks. I mean, it's good, but it's always and always the same classic pattern. You should get off the beaten track in order to make more surprising attacks, because let's be honest, there's nothing new in your spell. It's not that it is unoriginal, but it really seems familiar, so you might be fed up fighting the same attacks in loop.
+
+Musics and sounds : 7/10
+Music is fine, but there's sometimes a lack of sounds in your script (like in the third non-spell). The music level is also very low, think about adjust it correctly next time.
+
+Adherence to the theme (and to the whole contest in general) : 4/10
+Why Yukari, Komachi and Reisen ? They have totally nothing in common, so making them work in team is really unappropriate. You should have separated them, it's not because you fight Wriggle that you must team up two characters like in IN. Also, your introduction text feels like a troll... Maybe putting this introduction in the "wait warmly" screen (or somewhere else) would have been a better idea ?
+
+Others : 10/20
+Aww, no music in your menu, it makes it really lonely. :/ It's also pretty basic and simple. Just by adding Wriggle sprite on it, it would have immediately given a better impression.
+
+FINAL SCORE : (12,78 + 23 + 8,5 + 4 + 7 + 4 + 10) / 6 = 11,55
+=> 11,55/20
+
+Final comment :
+Eeerm, I... think your script is in the theme. He's borderline, though, because some of your spell are regular stage 1 boss spell. There's also a lot of elements that tarnish your fight and so make you lose a lot of points. For your future scripts, think about being more original and creative. Wriggle has a great potential, it would be a shame to not use it at most ! Also, try to not be too basic regarding the overall presentation of your script.

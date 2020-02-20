@@ -1,0 +1,35 @@
+A SCRIPT by A BRO
+(Judged by TresserT)
+
+This script is too difficult. I almost couldn't judge it.
+
+Pattern 1: (3/10)
+	Its cheapshots galore. Start with a slow moving beam, then suddenly make it a fast spread right in the player's face.
+	Then spawn fast rings from all sides.
+	At least the ending is kind of fun to dodge once you know how it works.
+
+Pattern 2: (2/10)
+	This is a spell that has one way to beat it, and once you figure out that way it becomes trivial.
+	I eventually figured out what I was suppoesed to do, but it didn't become any more fun.
+
+Pattern 3: (4/10)
+	I can kind of see what you were going for.
+	But the lasers are very tight, change direction very suddenly, and are very hard to read.
+	Plus it takes forever to start up with no real dodging during that time.
+
+
+Pattern 4: (4/10)
+	See pattern 2.
+	I never did find a route for this.
+
+I apologize if there are any more patterns after 4, as I can't judge them.
+After 8 tries over 2 days, I still can't get past pattern 4.
+
+Overall (13/40 = 32.5%)	
+	Firstly, I would recommend you give players a HIGH number of lives in contest scripts. Especially if you intend on keeping this level of difficulty.
+	Secondly, spells that require a specific route to beat are pretty lousy. 
+	I'm not saying the player should understand every gimmick on the first try, but they shouldn't have to follow the same precise sequence of movements every time in order to capture the spell.	
+	Even spells like Suwako's survival have multiple ways you can beat them and can be BSd through if you're lucky.
+
+	I try to make it a point not to judge a script by its difficulty. I understand that everyone has different skill levels, so if a script is too easy or too hard for me I don't want to penalize anyone for that.
+	But this script really stretches my ability to stick with that idea. I can't even figure out how to clear some of these patterns, and I can't judge something if I don't even know what I'm supposed to be doing...

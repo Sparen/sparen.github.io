@@ -1,0 +1,99 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : 東方寒動乱 ~ Perpetual Winter, by Lunarethic and Kirbio
+
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Stage : 6,5/10
+Long, very long. Even SA's last stage was almost 40 seconds shorter. There're interesting patterns in it, but since it's this long, there's also a lot of unnecessary danmaku (like the yellow and orange ones), that's a shame.
+
+Sumireko's spell card : Dream Cycle "Quest of Unknown Land" : 9,5/10
+I don't see any problem with this spell. :v It's like a danmakufu version of her last spell in UliL (with the purple lasers), it's cool.
+
+Non-spell #1 : 7/10
+... You guys all need to stop already with the green bullets for Letty. o(-`д´- ｡) I don't know if you spread the word to each other but seriously, that's totally wrong.
+As for the danmaku, it's good, maybe a little too dense to be a first non-spell (the first one tends to be classic, the pattern becomes more complicated after that).
+
+Spell card #1 : Cold Sign "Crystal Hailstone" : 9,5/10
+Well well welly welly well what can I say here, it's amusing to fight. Please don't hate me because I have nothing to say about your attack, if I do this it's because it's very good. Plus the pressure is very high for me, everyone is impatient to know the results of this contest, I think Lefkada is angry at me because I'm late and omfg I feel like I'm never gonna be a judge after that so yeah basically I'm trying to fill the vacuum here I think I wrote enough.
+
+Non-spell #2 : 8/10
+Hum, I think that your two first non-spell should be swapped. This one is simpler than the first, so it was quite a mistake from your part to put things that way. :/
+
+Spell card #2 : White Sign "Northern Winter Veil" : 6,5/10
+Green again, y u do dis to me ?! ｡゜(｀Д´)゜｡ At first, I was like "oh that's pretty good" and then I saw... green projectiles... coming from the left side... and then... green everywhere... That's totally wrong. I don't know, green is the colour for spring, plants and the revival of nature, not for cold, winter and Letty Whiterock. As a certain flower would say, "I just can't understand...".
+
+Non-spell #3 : 9/10
+At first, it follows the same pattern as the first non-spell, that's good. It's rather a fun non-spell, especially when the tiny and snowy bullets are coming towards the player.
+
+Spell card #3 : Mystic Sign "Frozen Primrose" : 9,5/10
+Omg yes, ice effect. That's the only Letty script that use this effect, so I'm glad you use it in this attack. I also find interesting the concept of making ice flowers with using this particular effect, that was a great idea !
+
+Non-spell #4 : 8,5/10
+This one is nice too. Maybe adding big bubbles and removing some triangular bullets would have been nice too ? (I don't know, it's just an idea)
+
+Spell card #4 : Winter Sign "Perfect Freezing Mist" : 10/10
+It's pretty but holy mother of god green bullets agai- I joke, they really go well with the rest of the danmaku. I hope you realize how lucky you are for this time. ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+Spell card #5 : "Gensokyo's Fimbulwinter" : 9/10
+Time to blow up the graze counter ! This survival spell is great, seriously. Well, compared to Junko's one, it's very impure ah ah. (please laugh I'm trying to make a joke in order to fill in the gap but boy I'm such a shameful person. By the way, did you have a good day ?)
+
+Spell card #6 : "Oriental Cold Upheaval – Perpetual Winter" : 9/10
+Wow, a final spell card named according to the script's name, things are getting serious. This spell is truly a final spell, very stage 6 boss, much bullets, wow. Aaaand I don't have to anything else to add again.
+
+As requested, I won't judge the overdrive spell card.
+
+Total : (6,5 + 9,5 + 7 + 9,5 + 8 + 6,5 + 9 + 9,5 + 8,5 + 10 + 9 + 9) / 6 = 17
+=> 17/20
+
+Aesthetics : 39/40
+Do I really need to explain why it's beautiful ? No ?... Whew.
+However, the player's spell cards aren't effective on the boss (and on some ennemies too), that makes them pretty useless (they're just here to clean the screen). Also, if I keep being focused when I'm hit by a bullet, the hitbox won't appear unless I release the key. :v
+
+Balancing and difficulty : 9/10
+It's a well balanced script, the general difficulty doesn't fluctuate all along the fight. That's very good...
+
+Overall enjoyment, creativity and originality : 7,5/10
+It sure was original and creative, but the lag is too real to be true. It only disappears if I remove the background, but what the point of fighting a stage 6 boss in pitch black ? '3'
+
+Musics and sounds : 9,99/10 ( ͡° ͜ʖ ͡°)
+Musics are excellent ;-; Yep, really ;-; And sounds are also very well chosen, you made excellent choices here.
+
+Adherence to the theme (and to the whole contest in general) : 9,99/10 ( ͡° ͜ʖ ͡°)
+One of the best plot of this contest, it really impresses me. I really blame the Touhou Wiki for this, if Sumireko didn't check it then she would never know about Gensokyo, and all these importunate incidents would not have existed in the first place.
+
+Others : 19,99/20 ( ͡° ͜ʖ ͡°)
+EVERYTHING IS BEAUTIFUL ALRIGHT ??!
+
+FINAL SCORE : (17 + 39 + 9 + 7,5 + 9,99 + 9,99 + 19,99) / 6 = 18,74
+=> 18,74/20
+
+Final comment :
+The final comment of this contest ohmygod ;-;
+I'm so sorry but I haven't got any particular advice for you, so I guess I'm just gonna wish you all the best for this contest and in the future. I'm also very sorry for these crappy comments but god I'm extremely tired and I really want to finish these judgements because everyone is waiting for my results, why life is so hard with me ? Anyway enough of that, you guys rock, you're unbelievably talented, so really, good luck for what's coming next.

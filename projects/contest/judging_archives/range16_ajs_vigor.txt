@@ -1,0 +1,92 @@
+Mus Armus - by Vigor
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: N/A
+
+Nue Spell: 7/10
+	*Very faithful to Nue's theme while putting a bit of a unique spin on her attacks
+	*The large round bullet phase is rather underwhelming though.  I probably would've set it up so that it overlapped with the kunai phase for a bigger challenge!
+
+Nazrin Nonspell 1: 6/10
+	*The kunai are reasonably fun to dodge, though the blue bullet phase is rather underwhelming
+
+Nazrin Spell 1 (Dowsing Rod "Water Witching"): 7/10
+	*A pretty fun spell, even if a tad on the easy side
+	*However, for the phase when Nazrin fires several columns directly on the player's position, it's hard to see the blue beams (perhaps because of Miko's own lasers)
+	*I did notice that the bottom of the screen glowed when the beams were coming down as well.  Perhaps you could have made those more noticeable to remedy the problem I mentioned?
+
+Nazrin Nonspell 2: 6/10
+	*A cool concept for a nonspell, but the waves (pendulums firing, then exploding) are kind of underwhelming on their own
+	*What would've made this really nice would be if you had those two waves overlapping more--so you have to avoid the beams while dodging the fast shard bullets
+
+Nazrin Spell 2 (Crystal Vision "Diamond Pendulum"): 9/10
+	*YASSSSS.  I love spells that feel and look chaotic while still being fair to dodge
+
+Nazrin Nonspell 3: 7/10
+	*The initial laser phase is fairly simple to dodge, but I really like the phase where you have to dodge the fast lasers.
+
+Nazrin Spell 3 ("Blah"): 8.32/10
+	*A really cool and aesthetically interesting spell, while also fun to dodge
+	*I would've liked if there was a bit more to dodge while avoiding the columns besides the round bullets, but it's still a very fun spell
+	*[+4% AESTHETIC BONUS]
+
+Nazrin Nonspell 4: 7/10
+	*A wild nonspell that's fun to watch and dodge.  However the lasers are a bit difficult to predict and avoid when there's so much else going on already
+
+Nazrin Spell 4 ("Bewitching Light of Jewelled Treasure"): 6/10
+	*A chaotic and interesting spell, but I feel those beams of bullets are rather tricky to dodge--especially with Nazrin herself already shooting so much at you
+	*I would suggesting toning down one or the other--either the beams of bullets, or the regular danmaku Nazrin shoots
+
+Nazrin Spell 5 ("Jewelled Mice from Rainbow Land"): 3/10
+	*The spell gets WAY too dense, chaotic, and noisy near the end.  It's extremely difficult to discern a pattern and properly dodge the bullets
+
+Average Score: 66.32/100 = 66.32% + [2% AESTHETIC BONUS] = 68.32%
+
+FINAL SCORE: 13.66/20
+
+Final Comments:
+	-I encountered a glitch while judging your script.  While pausing and resuming your game periodically, the music eventually stopped at one point.  Later on, the music resumed but now would only loop the first few seconds of the song over and over
+	(Obviously I didn't penalize you for that, but just something you ought to know)
+	-The main problem I had with your script was that the difficulty seemed rather inconsistent.  Many earlier patterns were very easy, but many patterns by the end were crazy.
+	-You should make multiple difficulty settings so that you don't have to try to tailor the whole boss fight to a "one-size-fits-all" difficulty :P

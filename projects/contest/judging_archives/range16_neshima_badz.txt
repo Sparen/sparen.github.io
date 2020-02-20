@@ -1,0 +1,93 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Gatekeeper of Makai, by Badz
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Louise's non-spell : 9/10
+It's pretty good, and suits Louise very well. It's also fun to avoid, what could be better ?
+
+Louise's spell card : Uncertainty "Shifting Path" : 8/10
+Well, this one is good to, but maybe a little monotonous ? Alternate with red and blue spike bullets would have been cool, I think.
+Also, I included in the note above the next phase with the little bullets.
+
+Non-spell #1 : 8,5/10
+I don't have something very particular to say here. Very Sara-ish, a good non-spell to begin with.
+
+Spell card #1 : Magic Sign "Magic Blast" : 8/10
+I like how you came up with a fun spell card like this while Sara hasn't any very amusing danmaku ! Though I think it might be a little more intense and faster, this is rather easy to dodge.
+
+Non-spell #2 : 7,5/10
+It follows the same pattern as the first non-spell, it's pleasant to fight. But again, maybe with a little more bullets, it could have been better.
+
+Spell card #2 : Strategy "Pillars of Pandemonium" : 7/10
+A reflecting spell card, how nice~! Arf, but once again it's too easy. Your Normal mode is actually an Easy mode, you should rebalance your difficulties by adding more bullets and making them faster to make this fight more accurate.
+
+Non-spell #3 : 6,5/10
+Sara's getting the Hina disease Jesus help this girl
+About the danmaku, it's... good, but like Louise's spell card, I think you should change the colours to make it more attractive.
+
+Spell card #3 : Wind Sign "Tornado Spin" : 6,5/10
+godammit Hina leave her alone
+It's amusing to fight, I really like this attack ! ... But guess what ? It's all in the same colour again. I know PC-98 has a limited colour palette but hey, it's supposed to be a stage 6 boss fight with a lot of stuff to dodge. Look at Shinki's attacks for example. Here, well... It doesn't alternate with another danmaku, so it makes it dull despite its nice concept.
+
+Non-spell #4 : 3/10
+Pardon me, but it's simply boring and uninteresting. :/ Even Yuki and Mai have a lot more interesting attacks, and they're stage 4 bosses. Here, I just feel like fighting Cirno and her Icicle Fall. Too easy to be real.
+
+Spell card #4 : Formation "Magic Square" : 8/10
+Finally, a wild challenging spell card appears ! This one is really cool, I'm glad you made it this way. Even if thin lasers could be added to make it more difficult and amusing to fight.
+
+Spell card #5 : "Thorny Road in the Demon World" : 7/10
+Same here. It's an interesting spell card with a great concept, but it could be ameliorated to make it more tense, just like Devil's Recitation.
+
+Spell card #6 : "Windy Gates Guarding Makai" : 3,5/10
+The concept with the windy bullets is cool but it's wayyy to easy. Difficulty is supposed to increase when you drain the boss' life bar, but it's absolutely not the case here. The last phase is the easiest of the three, that's not normal. There's a lot of flaws in your difficulty modes.
+
+Total : (9 + 8 + 8,5 + 8 + 7,5 + 7 + 6,5 + 6,5 + 3 + 8 + 7 + 3,5 ) / 6 = 13,75
+=> 13,75/20
+
+Aesthetics : 28/40
+For a PC-98 style script, this is very well done. However, it's not diversified and I feel like it lacks of originality (in terms of projectiles) ; you could have added big orbs or knifes (those that Yumeko uses during her battle) to make more creative attacks. The sides of the screen are pretty basic too. Despite this, I like how characters declare their spell cards, and the other effects occuring during the fight.
+
+Balancing and difficulty : 3/10
+Your script is totally unbalanced. The Hard version isn't hard, and the Normal one is just super easy.  Add more bullets, make them faster, and everything will be (normally) alright. Because let's be honest, look at your final spell and pay attention to other bosses' final spell : the difference is clear. This is a point you should work on the next time !
+
+Overall enjoyment, creativity and originality : 7/10
+You sure took a risk by making an original PC-98 script, but it works perfectly. However, due to difficulty reasons, the fight in itself is a little boring. Be sure to adjust your difficulties next time. That said, it's still an original and innovative battle, you had a great idea to create things that way.
+
+Musics and sounds : 10/10
+You used a stage 6 theme and a stage 6 boss theme in your script, so I guess everything is alright ? And the sounds are pretty accurate, that's nice !
+
+Adherence to the theme (and to the whole contest in general) : 4/10
+Unfortunately, that's not a stage 6 boss fight. More like a stage 1 boss fight with a lot of spell cards. Even if the music is pretty good, the easiness of your script ruins it quite a lot. Your attacks aren't THAT amazing despite being good, and I don't see why Sara is a mastermind here. She's just here to do her job, that's all. If you made Sara the real goddess of Makai and being superior to Shinki (or something like that), you could have a better score, but unfortunately that's not the case. :/
+
+FINAL SCORE : (13,75 + 28 + 3 + 7 + 10 + 4) / 5 = 13,15
+=> 13,15/20
+
+Final comment :
+Despite an original script, I can't really say that it's in the contest theme. Yes, musics are accurate, there's a lot of attacks and all, but some elements make everything falling down. For your future scripts, think about setting your difficulties and creating more diversified attacks. Like this, your works will really improve in quality !

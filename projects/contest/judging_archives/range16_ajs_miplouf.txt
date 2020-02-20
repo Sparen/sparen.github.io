@@ -1,0 +1,111 @@
+Unexpected Mastermind - by Miplouf
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: Memetic
+
+Stage: 6/10
+	*The stage is rather short so there's not too much to go on here
+	*But the fairies immediately after Yukari are quite fun, as is the death fairy
+
+Yukari Nonspell 1: 9/10
+	*Pretty, reasonably challenging and interesting, but also very fair
+	*Not much more to say here~
+	
+Yukari Spell 1 (Yakumo's Nest "Hyperactive Flying Objects"): 8.32/10
+	*The delay between the indicator laser disappearing and the actual laser arriving forces the player to remember where the lasers are coming from and plan accordingly.  I like that!
+	*While the danmaku Yukari herself shoots is more than enough to do the job, I still wish you could've done a bit more with it
+	*Those lasers effects are GORGEOUS. [+4% AESTHETIC BONUS]
+
+Yukari Spell 2 (Dual Lights "Doppler Effect"): 7.28/10
+	*A decently fun spell to dodge, but I really feel you could've done more with it
+	*Perhaps you could've had Yukari speed up the firing of the spinning waves over time, or had more overlap with the kunai waves
+	*The effects on the bubbles look really cool and trippy [+4% AESTHETIC BONUS]
+	
+Yukari Spell 3 (Balance "Frontier of Movement and Stasis"): 8/10
+	*Fun to dodge, and very fair while also challenging
+	*I feel it drags on a bit long though, owing to the fact that Yukari moves around quite a bit and you yourself are forced to move so much
+
+Rumia Nonspell 1: 3/10
+	*The patterns are very simple and easy to avoid, leaving much to be desired
+
+Rumia Spell 1 (Luminescence "Radiant Moonlight"): 4/10
+	*The concept of dodging spirals of danmaku while avoiding the spinning lasers is nice, but in execution it just ended up being way too easy.  The lasers were hardly a threat at all, even with the spiral danmaku coming at you
+
+Rumia Nonspell 2: 2/10
+	*Dodging this is as simple as >move to the huge gap in the bullets, >stream the lasers, >repeat
+	*Really boring, sorry to say
+
+Rumia Spell 2 (Dark Line "Dusk Splitter"): 4/10
+	*Once again, the idea was sound, but in execution it just ended up being rather dull and easy
+
+Rumia Nonspell 3: 4/10
+	*The dark bullets do occasionally make some patterns that are somewhat interesting to micrododge, but otherwise this pattern leaves much to be desired
+
+Rumia Spell 3 (Unseen "Dark Side of the Moon"): 4/10
+	*The part with the giant lasers spawning trails of bullets was interesting, and could've made for some interesting dodging in conjunction with the other danmaku
+	*But as it is, it's still rather trivial to dodge.  And worse, the health bar was apparently so low that I finished it before she could even fire her second wave of lasers
+	
+Rumia Nonspell 4: 4/10
+	*The green walls may have been more interesting to dodge if they overlapped with the green bullets phase, but otherwise it's rather boring
+
+Rumia Spell 4 (Dark Bird "Midnight Flock"): 5/10
+	*The laser spawning was really cool, and if supplemented with interesting bullet patterns, may have made a very interesting and fun spell card
+	*As it is, the bullet patterns you currently have to support the lasers are really uninteresting
+	
+Rumia Spell 5 (Rainbow Decomposer "Dark Trinity"): 7/10
+	*Fast-paced and fairly fun to dodge.
+	*Sadly, this also ends fairly quickly before it can get a chance to shine :(
+	
+YUYUYUYUYUYUYUYUYUYUYUYUYU: 8/10
+	*VERY fun to dodge, though gets a tad too chaotic by the end
+	*The patterns you already provided were fun, but a bit more variety would've made this even better than it already was
+	
+
+Average Score: 83.6/150 = 55.73% + [2% AESTHETIC BONUS] = 57.73%
+
+FINAL SCORE: 11.55/20
+
+Final Comments:
+	*Overall your script was fairly fun except for, unfortunately, the main attraction--Rumia--herself
+	*With your Yukari and Yuyuko patterns, it's clear you intended this script to be of a higher difficulty.  So Rumia's very low-level and easy danmaku is inconsistent with the tone that they set

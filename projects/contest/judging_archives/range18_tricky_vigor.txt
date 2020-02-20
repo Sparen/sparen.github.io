@@ -1,0 +1,53 @@
+RaNGE 18 Judgement - Vigor
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Played on Hard mode with Hatate type B.
+
+First, the midboss.
+
+Nonspell 1: It's rings with some acceleration and stuff. Nothing amazing, not bad. 6/10
+
+Nonspell 2: How familiar. Also nothing amazing or bad, in my opinion. I like it better than the previous. 6.5/10
+
+Nonspell 3: Does its job as a tutorial for the flashbomb mechanic pretty well. The last phase might be a bit much, but it's simple enough if you rush to take a photo. 7.5/10
+
+Next, the boss. 
+
+Spell 1: I like it. 8/10.
+
+Nonspell 1: It's an interesting pattern, held back a bit by the intermittent glowing that partially obscures the bullets. Be careful with visual effects like that. 7.5/10.
+
+Spell 2: I like this too! The pattern is a good one and the visuals are flashy but not too distracting. 8.25/10.
+
+Spell 3: Excellent. I think some of those bullets are a bit too fast, but that doesn't hold this pattern back. 9/10.
+
+Nonspell 2: Much like the first Yukari nonspell, I enjoy this one too. 7.5/10. 
+
+Spell 4: Feels like some sort of rave of the rainbow variety. It's a fine script ender, though I do think it gets too bright near the end since everything glows. 8/10.
+
+Danmaku Quality Average: 7.58/10 (12.89/17)
+
+I'm also going to comment on the players. Shot type A has a viewfinder in the way basically all the time - I'm not even sure what it does, but glowy viewfinder + glowing bullet everywhere makes for a bad time. Furthermore, both players seem to have an issue where their speed returns to something insanely high after a bomb ends. These are both pretty major issues - I practically felt like I wasn't allowed to bomb - and as such I'll give this score a penalty of 1 point.
+
+Revised Average: 11.89/17
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+Aesthetically, I thought this entry was very pretty. You DO overdo it at times, though - EVERYTHING glows and that can be problematic, especially with Hatate A. 2.75/3.
+
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 14.64/20.

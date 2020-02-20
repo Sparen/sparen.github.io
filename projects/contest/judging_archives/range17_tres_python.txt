@@ -1,0 +1,47 @@
+IT'S SHOUTIME by PYTHON
+(Judged by TresserT)
+
+MAH FPS
+
+Nonspell 1: (5/10)
+	The nonspells are a huge pain to try and read...
+	Just like the original Shou!
+	There's nothing particularly interesting about the pattern other than the awkwardness of the lasers though.
+	Still, it's quite stressful (which is a good thing).
+
+Spell 1: (9/10)
+	This is a very interesting card, I like it quite a bit.
+	It didn't really understand what was going on at first so I died quickly- when the rings are so tiny at the start and the background has lots of yellow and orange, it can be hard to tell that the lasers are spawning.
+	I enjoyed it very much though once I saw the lasers.
+
+Nonspell 2: (4/10)
+	....I wasn't expecting the lasers to continue curving after they speed up. This goes beyond the original Shou.
+	Having the lasers continue changing their curves even when they're right next to the player is not a good idea.	
+	It doesn't totally ruin the pattern though.
+
+Spell 2: (10/10)
+	This is a very fair, fun, and interesting pattern.
+	I have no complaints.
+
+Nonspell 3: (7/10)
+	This one is significantly easier to read than the last two, though no easier to dodge.
+	The way the lasers overlap juuuust slightly makes this an extremely stressful pattern (which is a good thing).	
+	
+Spell 3: (Total: 16/20 = 8/10)
+	Phase 1: (5/5)
+		Okay, this is really neat. I don't really have any other comments on this.
+	Phase 2: (3/5)
+		Almost as good as the first phase. Its too hard for me though...
+		The way the bullets move is EXTREMELY disorienting. I can hardly even tell what's going on.
+		I think this phase might be a bit *too* chaotic.
+	Phase 3: (4/5)
+		This is still an awesome concept. Its just.... way too hard, beyond anything I can do.
+		This spell as a whole is noticeably more difficult than the rest of the script.
+	Phase 4: (4/5)
+		This one is actually doable for me, but its not as interesting as the other phases.
+		Maybe because the white laser was removed? Though adding that would probably make it too hard...
+		
+Overall: (42/60 = 70%)
+	I have complaints about one or two individual patterns, but the script as a whole is outstanding. 
+	Your difficulty is absurd. You give infinite lives, though, so I can't be upset by that. 
+	There are no cheapshots and everything feels fair (just hard), so maybe you just make scripts for someone who's just a better player than me XP

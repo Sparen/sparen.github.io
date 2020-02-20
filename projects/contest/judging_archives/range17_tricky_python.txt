@@ -1,0 +1,21 @@
+Trickysticks here, judging another contest. Yay. This one involves lasers everywhere and only lasers.
+ 
+Scripts will be judged solely on gameplay. While the danmaku is the vast majority of this category, things like sound effects and graphic design choices do affect how the game plays. Scores will be calculated by rating every pattern out of 10, then taking the average of those values.
+ 
+This review is for Python's entry.
+
+Nonspell 1: I really don't like how the blue lasers both curve and accelerate at the same time. It's a big pain to read. Once you get past them it's a fine enough nonspell, though. 4/10.
+
+Spell 1: I really like this idea. It's very creative and I thought it was pretty fun. I do think there could be a sound effect or other indicator that the magic circles are spawning another ring, though, since it's easy to be pushed towards a circle and ram a newly-spawned one. Otherwise, very good. 9/10. 
+
+Nonspell 2: Curving while accelerating can easily mean the player will have a bad time. Of course, if you stay centered below her the only real threat is the Violet Crisscross™. Once you can reliably position for that it's pretty trivial, but if you can't it feels unfair. Very binary. 3/10.
+
+Spell 2: An interesting take on a streaming pattern, basically. The third wave is a bit surprising if you don't know it's coming, but I find the pattern as a whole to be really good and I had fun playing it. 9/10.
+
+Nonspell 3: I think the orange lasers are just a TAD too fast, but I think it's a fine pattern otherwise. It's straightforward but still fits the character's theme. Stressful. 5/10.
+
+Spell 3: Very creative idea. Phase 1 is cool and a good introduction, while phase 2 is a nice twist on the idea. Phase 3 is a bit too hard for me to reliably do, but it's a sensible progression. The lase phase is a good way to end the spell and overall I think it's a good spellcard. 8/10.
+
+Overall, I really liked the spellcards.
+
+Final Score: 6.33/10

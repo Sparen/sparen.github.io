@@ -1,0 +1,81 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Shoot for the Moon, O' Young Hare!, by PhantomSong
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Non-spell #1 : 8/10
+Welp, a regular Seiran-ish non-spell, that's good. And there's no more to be said. :p
+
+Spell card #1 : Bullet Sign "Shifting Shot" : 8,5/10
+I...don't have something particular to say here. It's a good spell, that suits Seiran well, so... I don't see what else I could add here.
+
+Non-spell #2 : 7,5/10
+It follows the same pattern as your first non-spell, it's nice to see some continuity in your work. But I hope the next non-spell will vary a little from this...
+
+Spell card #2 : Bullet Sign "Skip Shot" : 8,5/10
+Yay, that one is very amusing to fight ! Seems like Reisen's spell cards. I like the whole idea of this attack, it's so fun to dodge that I think it's one of my favorite of your entire script !
+
+Non-spell #3 : 5/10
+Well what can I say that's pur- basic. I would have liked to see more diversified attacks, since Seiran has a very interesting ability. I guess we can't always get what we want !
+
+Spell card #3 : Lunar Ops "Hallucinogenic Poison Bullet" : 8/10
+This one has also an interesting concept, that was well found from your part. I think you should have made more attacks like this, because it really shows what Seiran is able to do.
+
+Non-spell #4 : 6/10
+It's good, but I expected to see other colours than blue everywhere. You should be more original than that, because despite an interesting pattern, seeing blue again makes the non-spell repetitive.
+
+Spell card #4 : Lunar Ops "Lunarian Defense Unit" : 7/10
+Makes me think of Hecatia's last spell, you had a nice idea here ! Adding Ringo makes the spell a lot more amusing to face, even if it's still easy as pie. Leveling up the difficulty could have been a plus here !
+
+Spell card #5 : "Walfare from the Alternative Dimension" : 4/10
+Seiran's life bar decreases too fast, and she's sensible to bombs. Since there's this problem, I feel like the spell isn't really progressive, and that it can be defeated more quickly than your other attacks. The overall pattern is also pretty basic, and bullets are practically all the same (thanks god there're lasers). To me, it's not really impressive for a last spell, it doesn't work very well.
+
+Total : (8 + 8,5 + 7,5 + 8,5 + 5 + 8 + 6 + 7 + 4) / 4,5 = 13,89
+=> 13,89/20
+
+Aesthetics : 27/40
+The background is weird, I don't know if we're in the Dream World or on the moon's surface. You mixed three different backgrounds and it looks very strange in the end. Also, there isn't that much diversity in your script. :/ It varies when we arrive at the gas spell card, but it becomes immediately basic at the last spell. Seiran has a useful ability that allows you to use a lot of projectiles,so why didn't you take advantage of it ? Next time, really think about the ability of your character in order to make aesthetically impressive attacks !
+
+Balancing and difficulty : 9/10
+Your script is well balanced, and difficulty is homogeneous all along the fight. You made a good job here !
+
+Overall enjoyment, creativity and originality : 6/10
+Mmh, it was surely a fun fight, but to me it lacks a bit of originality. Your third spell card is very creative and besides, ther other attacks keep the same general pattern and have always the same bullets. Since Seiran has a very large ability, you could have created more diversified attacks with original gimmicks in order to stand out and make your presence among the other contestants. Think about it for your future scripts !
+
+Musics and sounds : 3/10
+Please no... Don't tell me this music is for real ;-; it's like I'm in a nightclub... The music in itself is really good, I like it a lot but damn, it's a stage 6 boss fight, we're not supposed to be on the dancefloor with Seiran ! ;n;
+
+Adherence to the theme (and to the whole contest in general) : 3,5/10
+I can't say that you're really in the theme... Sorry, but to me it's not strictly speaking a stage 6 boss fight. Your attacks are alright, but the rest make it totally unfitting to the theme. :/ Also, there's no plot in your creation, we don't even know why we are fighting Seiran.
+
+FINAL SCORE : (13,89 + 27 + 9 + 6 + 3 + 3,5) / 5 = 12,48
+=> 12,48/20
+
+Final comment :
+Well... The principal advice that I can give you is to be more creative and original, especially with a character like Seiran. You should use more graphically impressive attacks (without being too excessive) to entertain the player a little more. Also, pay attention to yur backgrounds, the one you made here was... well, very strange, I didn't really get it.

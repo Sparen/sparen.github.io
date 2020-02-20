@@ -1,0 +1,88 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Seiran, by arby26
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Stage : 7,5/10
+Despite being chaotic, patterns are good and bullets are colourful. However, there're a lot of ennemies, so I'm easily drowned in bullets after a while. Maybe making less ennemies but with more bullets should have been a better option ? (actually I think it's just me being very clumsy) Anyway, it's nice, and I really like the effect when you go on the sides of the screen.
+
+Non-spell #1 : 8,5/10
+Suits Seiran very well, and is challenging and fun to fight. I really find it very good !
+
+Spell card #1 : 8,5/10
+A tricky spell where the growing red bullets gave me serious problems. It's not that hard, but you can easily be touched by the "tail" of these bullets. I had a lot of fun trying to redirect them !
+
+Non-spell #2 : 7,5/10
+It's, like, an improved version of the first non-spell. I don't have anything else to add, other than it's pleasant to fight.
+
+Spell card #2 : 6/10
+I don't know how to deal with this one. The lasers are a good idea, but they draw near each others too fast, I can't avoid the blue bullets this way. The concept behind it is clever, but the way lasers are set is kinda awkward.
+
+Non-spell #3 : 6,5/10
+Wow, it's so dense it could have been a full part spell card. It requires a lot of micro-movements and patterns are way too complex for it to be just a non-spell. Otherwise it's good, but a little out of place for a non-spell.
+
+Spell card #3 : 10/10
+It's just too good to be true. ;-; 10/10 much brilliance, very Seiran-ish, wow. Seriously, this is the best spell card of your entire script. Bullets/colours/patterns/everything are set at perfection. I think I just fell in love with this attack. Congratulations.
+
+Non-spell #4 : 6,5/10
+That's... hard but it's okay, your script has been setted in a high difficulty. However, it's again too complex for a non-spell. The attack in itself is alright, but there're so many different bullets fired at me that I can't think of it as a non-spell. And that's a shame, because you loose points only because of that.
+
+Spell card #4 : 6,5/10
+I don't know if it's extremely hard or incredibly easy. In fact, it's like Clownpiece's non-spell : if Seiran goes down, I'm screwed ; if she goes up, then it's settled. The fast bullets aren't really a problem, it's more about the red ones. Their disposition make them very hard to read, and thus fill the spell with unrequired traps.
+
+Spell card #5 : 6/10
+Not really a final spell to me. You should have made it more progressive : first, the blue bullets, then Seiran fires the red ones, then the light blue ones, and finally everything gets faster. Here, all of this (except for the speed) is unleashed at the very beginning. This isn't how it was supposed to work. I mean, look at Shinmyoumaru's last spell : it's fairly easy at the beginning, then in the end it's a total nightmare of light orbs. This is the real problem of this spell. Patterns and bullets are good, though !
+
+Total : (7,5 + 8,5 + 8,5 + 7,5 + 6 + 6,5 + 10 + 6,5 + 6,5 + 6) / 5 = 14,7
+=> 14,7/20
+
+Aesthetics : 33/40
+Your script is pretty. Bullet's nature makes me think of it as a Cave game, that's strange. Ice effects are pretty good, along with the dying effect and other stuffs like that. The background is also nice.
+I'm just a little disappointed with the side of the screen, which are quite dull. I also really stumble over when I saw the menu for the first time. Don't know if it's supposed to be funny, but Seiran's head bothers me quite a lot.
+
+Balancing and difficulty : 8/10
+It's a Hard difficulty, not a Lunatic one (or this is a pun with Seiran being a Lunar rabbit, I don't know). The difficulty in your entire script is homogeneous, and I'm happy you managed to do so. Good job on this point !
+
+Overall enjoyment, creativity and originality : 9/10
+One of the best Seiran's script of the contest. Your attacks are very innovative, colours are well chosen and I had a lot of fun fighting Seiran. I can really feel all the work you put in this script thanks to these elements, my compliments !
+
+Musics and sounds : 3,5/10
+Here's one of the two big negative points of your work : musics. Sounds are pretty neat, but musics ruin everything. First, there's stage theme, which is just a standard theme. And just after, the boss theme. You should have picked an epic music or another stage 6 boss theme to give this fight a serious atmosphere. Pure Furies would have been appropriate, because it's a very powerful which could have suited your boss fight. Next time, really think about the context of your fight to choose an appropriate music.
+
+Adherence to the theme (and to the whole contest in general) : 3,5/10
+...And this is the other big problem of your work. If I only look at your attacks, it's indeed a stage 6 boss fight. Now, if I look at the other elements, such as the music and the presence of a plot, then everything collapses. A little description about why we fight Seiran was enough you know ? There was nothing about that in your readme ;-; Personnally, I wonder why we have Cirno as the player (and why not someone else) and what have Seiran done to be a mastermind. Next time, think also about these elements to complete at hundred percent your script.
+
+Others : 11/20
+I'm not really convinced by the menu. A "Setting" category where you can put the "shader quality" in it would have been much better. Seiran's big head is also... not... great. Also, a peaceful menu theme would have been great, too.
+
+FINAL SCORE : (14,7 + 33 + 8 + 9 + 3,5 + 3,5 + 11) / 6 = 13,78
+=> 13,78/20
+
+Final comment :
+You made a wonderful fight with flashy spell cards and non-spell, but the rest of the script ruin it a lot more than you expect. If musics were more adequate, and if you had fully respected the theme, you could have a better score than this. Oh, and don't bother you with overwhelming and complex non-spell like you did here, you could have made life easier with simpler non-spells !

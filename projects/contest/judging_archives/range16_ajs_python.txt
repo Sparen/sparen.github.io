@@ -1,0 +1,105 @@
+Little Mermaid - by Python
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: -ORIGINAL-
+
+Stage: 10/10
+	*This stage was incredibly fun to play, and incredibly well-balanced in my opinion. It feels like something right out of an actual Touhou game
+
+Seija Nonspell: 4/10
+	*Sadly, in contrast to the stage, I felt this nonspell was very underwhelming.
+	*There's hardly any challenge other than "Follow the path the bullets make." It doesn't help that the path is the same every time since there's no variety
+	in the pattern between waves
+
+Seija Spell ("Gait of a Drunken Sailor"): 2/10
+	*I'm not at all a fan of how the bullets suddenly reverse direction when they turn dark.  Especially since the screen-swinging gimmick already makes this spell
+	hard to begin with.  I got cheapshotted tons of times and just had to resort to bombing to get through
+
+Wakasagihime Nonspell 1: 6/10
+	*Standard not-too-hard/not-too-easy opener, not much to say here
+
+Wakasagihime Spell 1 (Water Sign "Water Fountain Palace"): 7/10
+	*It's decently fun to dodge, but it feels really same-y wave after wave.  It would've been nice if you could've addded a bit more variety to how the lasers
+	move each round
+
+Wakasagihime Nonspell 2: 8/10
+	*Simple yet fun to dodge nonspell.
+	*But if it were me, I would've added more than just one ring of large round bullets :v
+
+Wakasagihime Spell 2 (Bubble Sign "Underwater Prison"): 9/10
+	*A "warm-up" wave may have been good here, but once you get the hang of the pattern it's REALLY fun to dodge!
+
+Wakasagihime Nonspell 3: 8.32/10
+	*Another simple but very fun nonspell to dodge, even despite the randomness inherent with Wakasagihime's "theme"
+	*The way you had the bullet colors transition in her spiral was just really beautiful. (and mesmerizing @_@). [+4% AESTHETIC BONUS]
+
+Wakasagihime Spell 3 (Fish Song "Siren's Silent Song"): 8/10
+	*Fun and fair pattern, and an interesting gimmick that keeps the player on their toes
+	*Though I might tone down the speed of the red music notes Waka herself shoots.  There's already a lot going on onscreen, and I've gotten hit quite a few
+	times by the bullets because they caught me off-guard.  Other than that though, the pattern's very fun
+
+Wakasagihime Nonspell 4: 9/10
+	*A very interesting pattern with a lot of variety.  No two waves seem exactly alike, it seems
+
+Wakasagihime Spell 4 (Mermaid "Suspicious Figure Lurking in the Dark"): 7/10
+	*Waka's semi-random movements still kinda puzzle me...  and when I first saw this, I actually thought it was a survival
+	*While it would've been nice to inject a little variety by having her come in from the right side, or changing up the different types of paths she can take,
+	this was a decently fun spell to dodge
+
+Wakasagihime Spell 5 (Scale Sign "Gleaming Giant Rainbow Scale"): 4/10
+	*This spell could DEFINITELY benefit from a "demonstration wave", or at least a longer wait-time in between waves.  It feels like sensory overload when you've
+	got all these heart bullets exploding while ANOTHER wave is already on its way
+
+Wakasagihime Spell 6 ("Misty Ocean"): 8/10
+	*While simple in execution, this spell is suitably challenging enough and helps keep tension as the waves build upon each other
+
+
+Average Score: 90.32/130 = 69.48% + 2% AESTHETIC BONUS = 71.48%
+
+FINAL SCORE: 14.30/20
+
+Final Comments:
+	-Very well done!  I'm impressed~
+	-Aside from a few patterns that I didn't really like, this was overall a really fun and challenging script!
+	-I'm still laughing at "Wakasagihime tries to make an intimidating face.  It's not very effective."

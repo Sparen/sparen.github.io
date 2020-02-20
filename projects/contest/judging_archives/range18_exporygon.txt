@@ -1,0 +1,96 @@
+Fun 9/20 -- Scripts with a higher fun score strongly embody strong variety, fairness, balancing, and pattern length. Scripts with a lower score tended to be have more frustrating and/or tedious elements to them.
+
+Creativity: 7/20 -- Scripts with a higher creativity score really push the envelope with interesting new pattern concepts. Scripts with a lower score tend to have repetitive or relatively typical patterns. 
+
+Pattern Aesthetics: 2/20 -- Expertly crafted patterns that are symmetrical and/or pleasing to the eye receive high scores here. Attacks that barely have a "pattern" do not.
+
+Overall Aesthetics: 2/20 -- This score governs the overall visual presentation of the script. This does not include title screens, menus, or any audio. Backgrounds, special effects, and other similar graphics do count towards this.
+
+Bug penalties: -1 These are rare as I only give them out if I deem that the bug severely impacts the gameplay in some way. Depending on the frequency of occurrence, script errors may or may not qualify for a penalty.
+
+Meowstic - Mamizou
+	Fun: 6
+	Creativity: 7
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 17/20
+
+Jimmy - Hecatia
+	Fun: 7
+	Creativity: 7
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 18/20
+
+WishMakers - Alice
+	Fun: 7
+	Creativity: 5
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 1
+	Total: 14/20
+
+Junky - Mokou
+	Fun: 6
+	Creativity: 6
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 16/20
+
+Genocraft - Mugetsu & Gengetsu
+	Fun: 5
+	Creativity: 5
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 1
+	Total: 12/20
+
+Lollipop - Flandre
+	Fun: 6
+	Creativity: 4
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 1
+	Total: 12/20
+
+Awalys - Flandre
+	Fun: 4
+	Creativity: 6
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 14/20
+
+Conarnar - Koishi
+	Fun: 7
+	Creativity: 7
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 18/20
+
+Vigor - Yukari
+	Fun: 6
+	Creativity: 5
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+
+	Bomb movement speed bug: -1   --After bombing on either player, the player's movement speed would become much faster than before, severely hindering my ability to play
+
+	Total: 14/20
+
+Arcvasti - Alice
+	Fun: 5
+	Creativity: 4
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 0
+	Total: 10/20
+
+Umbra - Mokou
+	Fun: 7
+	Creativity: 5
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 1
+	Total: 15/20
+
+Rawsome - Koishi
+	Fun: 4
+	Creativity: 2
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 1
+	Total: 9/20

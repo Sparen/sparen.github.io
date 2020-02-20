@@ -1,0 +1,82 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Harvester Season, by Fefnir
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Non-spell #1 : 6/10
+Wow wow wow, that beginning is brutal. I think you should have made a simpler non-spell, with less bullets. The pattern isn't bad, but it's really surprising since there's a lot of bullets fired from Minoriko.
+
+Spell card #1 : Harvester Sign "Autumn Special Wheat" : 4/10
+It's a good spell because it's challenging, but it's also not this good because it's dull. There's only one type of bullet in this attack, and there're all of the same colour... The idea behind this spell is good, but further reflexion would have been nice too.
+
+Non-spell #2 : 4/10
+Like the previous spell card, the concept is interesting but it's dull. Making an attack with the same bullets is alright, a lot of attacks in Touhou Project have the same projectiles, look at Hecatia's non-spell for example : there's only one type of bullets and they're all of the same colour, but the spell's pattern make it really fun so you don't pay attention to this. Here, despite an interesting pattern, it's simple, so you realize quickly that it's all the same again and again. This is what I reproach to your attack. :/
+
+Spell card #2 : Wheat Sign "Fabulous Wheat Crops" : 3/10
+Same comment as above. Makes me think of one of Shizuha's spell in DS, but in this game, there were those giant bubbles which make the spell really pleasant to fight. If you want to make an attack with exactly the same projectiles, you must come out with a complex/overwhelming/extremely fun/whatever-you-want-except-simple pattern.
+
+Non-spell #3 : 7/10
+This one is good. Really better than the other two.
+
+Spell card #3 : Harvest Sign "Strange Cherry Fruit" : 5/10
+Eeeerm... I don't know what I should feel about this one. It's challenging and using the red orbs to represent cherries works out quite well, but this is becoming really messy afterwards. There isn't a defined pattern for each type of bullets, so the screen is easily drowned with projectiles.
+
+Non-spell #4 : 5/10
+A really weird non-spell. It's very difficult if you don't watch carefully your hitbox, but also very easy once you've found the safespot.
+
+Spell card #4 : Plenty Sign "Sweet Baked Potatoes" : 3,5/10
+This one's strange too. Well, it's more about the lasers. They can be easily hidden by the "potatoes" because of their thinness, I guess making them slower and more brilliant should have been a better option (like Minoriko's second spell in MoF). You know, like an autumnal sunset-viewing with sweet roasted potatoes~.
+
+Spell card #5 : "Harvester God's Rage" : 2/10
+Arf, this spell is the worst. :/ Final spell cards are supposed to be progressive, and becoming more and more difficult as time goes by. Here, I'm immediately brutally murdered from the start of the spell. It took me a while to understand that the potatoes move according to my player, but I still don't know how to deal with this. This spell is totally unbalanced and you really feel it.
+
+Total : (6 + 4 + 4 + 3 + 7 + 5 + 5 + 3,5 + 2) / 4,5 = 8,78
+=> 8,78/20
+
+Aesthetics : 18/40
+Unfortunately, there're only four types of bullets in your script : the orbs, the tiny ones, the lasers and the potatoes. It's not enough, you should add a lot of various bullets to create more original attacks. Because of that, I feel like your script doesn't have any diversity. :/ Furthermore, there's idea behind your spell cards, but you should think about it a little more to create something quirkier. Aside from that, designs are basic, so I can't really tell if there was a lot of research from your part. Also, Minoriko never charges up her attacks with leaves effects, etc. Visually speaking, your script is pretty poor.
+
+Balancing and difficulty : 7/10
+I think it's a little higher than the Normal difficulty, but not enough to be Hard. Your script alternates between hard attacks and easy spell, but well, it's good anyway.
+
+Overall enjoyment, creativity and originality : 4/10
+I can't say it was a fun fight, yet it wasn't boring either. In terms of creativity, there wasn't nothing new, your attacks are basic (but not completely unoriginal). However, I have to reproach you for something : you gave back your work on 7 January, while the contest ended on 31 January. You had a lot of time to improve your script and make changes to it ; it's not an accusation or something like that, but a saddening observation : with all this time, you could have improved your fight a lot, you know ? :/
+
+Musics and sounds : 2/10
+Your fight lacks of sounds, like in the first non-spell with the red bullets. There's also any "explosion" sounds, while it could have been appropriated in a lot of your spell cards. Finally, the music... It's good, but it's not a stage 6 boss theme. It's absolutely not suited for this kind of fight. :/
+
+Adherence to the theme (and to the whole contest in general) : 3/10
+To me, your script is like some of the other contestants : it's a stage 1 boss fight with a lot of powerful spell cards, and not a stage 6 boss fight. Plus, there is no plot that explains why we fight Minoriko (even a .txt file would have been enough you know ?).
+
+FINAL SCORE : (8,78 + 18 + 7 + 4 + 2 + 3) / 5 = 8,56
+=> 8,56/20
+
+Final comment :
+I know you're a beginner in danmakufu, so here's a good advice for you : participate to the next contest. And create a lot of scripts, even if they're really short. You must train to improve your skills, and participate to contests like this one is a very good way to situate your level. It allows you to find your mistakes and rectify them, so it's all good for you. Also, remember that you have a lot of time to create your script ; give it 3 weeks before the deadline isn't beneficial for you, you must use all this time to perfect your fight. I hope you'll take these advices into consideration !
+... Ah, but should I say good luck to you for the RaNGE 17 ?

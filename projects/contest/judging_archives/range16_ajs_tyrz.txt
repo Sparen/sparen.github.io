@@ -1,0 +1,104 @@
+Nazrin - by Tyrz
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: Hard
+
+Stage: 5/10
+	*It felt rather repetitive, with the frequent overusage of streaming and random bullets
+	*However, I really liked the part with the slow enemies that left trails of blue bullets.  I wish there was more of that
+	
+Cirno Nonspell: 5/10
+	*The light orbs would have made an interesting element to dodge, but I feel they're not very "present" enough to bring much to the table
+	*Dodging the pellet bullets, even with the light orbs around, is fairly trivial
+	
+Cirno Spell (Ice Sign "Perfect Icicle"): 7/10
+	*This one's not too difficult, but it's fairly fun to dodge
+	*I wish Cirno didn't move around so much though
+	
+Nazrin Nonspell 1: 2/10
+	*It's just a ripoff of one of Nazrin's canon patterns, but without the part of the pattern that made it interesting
+	*Very boring, it's just moving back and forth
+	
+Nazrin Spell 1 (Rod Sign "Blue Rod"): 2/10
+	*Another ripoff of one of Nazrin's spells.  Not much to say here
+	
+Nazrin Nonspell 2: 6/10
+	*Fairly fun with the added element of the bouncing bullets
+	*However, I think your warning should have been a bit more obvious.  I barely noticed the red flashing
+	
+Nazrin Spell 2 (Defense Sign "Treasure Guard"): 8/10
+	*I really like the dynamic you have going on between the slow predictable bullets and the fast slightly unpredictable bullets.  Makes for very fun dodging!
+	
+Nazrin Spell 3 (Search Sign "Uranium Detector"): 4/10
+	*Another ripoff, but this one's still rather fun to dodge
+	*Avoiding the slower bullets will still watching out for the lasers is quite fun
+	
+Nazrin Nonspell 3: 6/10
+	*Pretty decent, but I wish it had been a bit faster and a bit more intense.  It still feels rather underwhelming
+	
+Nazrin Spell 4 (Jeweled Sign "Rare Treasure"): 3/10
+	*Another ripoff.  Not bad for dodging, but the RNG god can really decide how fun this spell may be
+	
+Nazrin Spell 5 ("Rod"): 2/10
+	*Extremely rudimentary, just a simple "stream the lasers while dodging bullets" type of spell.  Doesn't help that it drags on for quite a bit as well
+	
+Nazrin Nonspell 4: 5/10
+	*Fairly fun to dodge, though can be a bit too dense at times
+	
+Nazrin Spell 6 (Treasure Sign "Drop Treasure"): 3/10
+	*Not a bad concept, borrowing an idea from Double Spoiler, but the pattern is extremely simple and it is VERY easy to screw yourself.  I often end up just bombing through this one
+	
+Nazrin Spell 7 (Vision Sign "Great Gold Pendulum"): 4/10
+	*Decent pattern, even if it is just slow BoWaP with aimed bullets and a few extra elements
+
+
+Average score: 62/140 = 44.29% + [2% AESTHETIC BONUS] = 46.29%
+
+FINAL SCORE: 9.26/20
+
+Final comments:
+	-My biggest issues were all the patterns you basically just ripped off from Nazrin's canon battle
+	-And the ones that weren't ripped off just felt uninspired
+	-You've got creative ideas, I know you do.  That's why I enjoyed your Flandre.  Don't be afraid to branch out and deviate from canon!  
+	-It's not like Nazrin's a final or EX boss, so you don't have a lot of material to work off if you just make a strict copy of her fight

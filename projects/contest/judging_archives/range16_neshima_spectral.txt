@@ -1,0 +1,87 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Letty, by Spectral Nexus
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Kogasa's non-spell : 6,5/10
+It's fun to dodge, but I don't understand why it's unbeatable. Kogasa isn't an overpowered character, she should be defeated here. That doesn't make any sense. :/
+
+Kogasa's spell card : Rainy Day Surprise "Sudden Storm" : 9,5/10
+Wow. A vivid and colourful spell card that symbolizes very well a sudden storm in the sky. The cloud effect is really nice, this attack is definitely very creative !
+
+Non-spell #1 : 8,5/10
+A classic but efficient non-spell. It begins well, so let's see what comes next !
+
+Spell card #1 : Cryokinesis "Elegant Snowflower's Bloom" : 9/10
+It's beautiful, I find that extremely coherent. The lasers remind me of Byakuren's second spell in ISC, ah ah. It almost looks like a crystal flower that explodes into blue bullets and lasers, that's nice !
+
+Non-spell #2 : 8,5/10
+It follows the same pattern as the first non-spell, it's good. At first, I was afraid that Letty might shoot only these bullets, but thanks god you add dark blue bullets to diversify the attack. Whew !
+
+Spell card #2 : Freezing Blizzard "Cold-Induced Paralysis" : 8/10
+That "frozen" gimmick is pretty nice. Too bad there're green bullets, I don't think this colour is a good idea with Letty. :/ Well, if you had made a spell card based on spring, it would have worked but... At least, the "frozen" state is fun enough to save it. Whenever I'm caught in one of these circles, I'm just like "omfg get away from me", it's very amusing !
+
+Non-spell #3 : 6,5/10
+Urgh, green again. :/ Well, this time, I feel like it works more than just before. Maybe because of the light blue bullets, I think. But still, avoid colours like green, it really doesn't suit Letty.
+
+Spell card #3 : Flurry of Frost "Blizzard Barrage" : 9,5/10
+Surely the most amusing spell card of your entire script. It tenses me when the cold wave arrives but at the same time, I find very interesting because it invites the player to reflect on how he must act to not be hit by a projectile. Strategic spell cards are always welcomed in a long fight like this one.
+
+Non-spell #4 : 5/10
+Nooooo, greeeeeen ! I know you wanted to diversify the colours a little, but really, green is totally unappropriate. Since Letty manipulates cold, it doesn't make sense for her to shoot bullets with a warm colour. Next time, opt for a more cold colour shade, like a pale purple. About the danmaku, it's good, but the green ruins it completely, that's really a shame.
+
+Spell card #4 : "Dance of the Iceborne" : 6,5/10
+Ow, that's brutal. It's like Reimu is skating on the ice, but I feel like she never does that before. This spell's gimmick is pretty good, but it's way too uncontrollable... Since there's a lot of bullets in this spell, it makes things more difficult to handle, especially those lasers at the end and the green loop before. Even with the best will in the world, I can't capture it without dying or bombing, the "skating" function is not really well balanced. As for the different phases in this survival spell, they're in themselves pretty good, but only if you exclude the "skating" thing. :/
+
+Spell card #5 : "Crystallized Silver" : 4/10
+It sure is progressive, but I don't find this very impressive esthetically speaking. I mean, there're just the little bullets and the frozen circles. That's all. A deeper reflection for this spell might have been appreciated, because in terms of diversity, it's not really wonderful.
+
+Total : (6,5 + 9,5 + 8,5 + 9 + 8,5 + 8 + 6,5 + 9,5 + 5 + 6,5 + 4) / 5,5 = 14,82
+=> 14,82/20
+
+Aesthetics : 37/40
+Very pretty. There's a lot of details in your script, it's really appreciable. The backgrounds, the sides of the screen, the effects Letty uses during her fight (her "aura", the snowflakes,...)... Everything combined together make a great visual appearance. My only regret is about the green bullets you used in some attacks (I know I'm tiring :p) ; purple would have been a better colour here, pay more attention to that in the future.
+
+Balancing and difficulty : 6/10
+Generally speaking, the difficulty is okay. Now, if I look closer to your attacks, I can see a real difference of difficulty between some of them. For example, the two last spell of your script ; the survival one is clearly a lot more difficult than the last one, and it should be the opposite. There's this kind of problems in your fight that make you lose points on this criteria. Next time, be sure to adjust more precisely the difficulty of each attack.
+
+Overall enjoyment, creativity and originality : 9/10
+I don't have something particular to say here, because I had fun fighting Letty and I found your attacks creative (especially Kogasa's spell). Since I don't anything else to add, let's leave it there. '3'
+
+Musics and sounds : 8,5/10
+Vanishing Memories suits this fight very well, it's as calm and peaceful as winter (sorry I'm not good at metaphors). I think you find the perfect theme for Letty, it's really serene but powerful at the same time, GJ !
+
+Adherence to the theme (and to the whole contest in general) : 4,5/10
+It's surely a stage 6 boss fight, but where is the plot behind it ? Why is Letty a mastermind ? What is Kogasa doing here ? To me, it looks like we're in the (now frozen) Shining Needle Castle, but I have no clue of what's happening here. :/
+
+FINAL SCORE : (14,82 + 37 + 6 + 9 + 8,5 + 4,5) / 5 = 15,96
+=> 15,96/20
+
+Final comment :
+It's a great script you provided here. Attacks are cool, aesthetics are impressive, gimmicks are amusing, ... I just regret the absence of plot in this. :/ I'm not worried about your future works because you're talented, you really know how to make a great script. Now, I wish you all the best in future ! :)

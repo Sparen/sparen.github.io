@@ -1,0 +1,96 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Harvest Crisis!, by ZhanFox
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Stage : 8/10
+It's a nice stage, with a lot of patterns designed as leaves. There's also a lot of warm and autumnal colours, it's really well-made ! Maybe a little too brutal ? Oh, and what the point of making invincible ennemies like you did ? I don't understand.
+
+Shizuha's non-spell : 8/10
+It's really like she's firing leaves at me. That's cool, really. Though the yellow bullets don't seem really necessary ; I think red bubbles would have been a better choice here.
+
+Shizuha's spell card : Autumn Breeze "Momiji Leaf-Fall" : 8,5/10
+It looks more like an Aya's spell card, but as the one who can control the fall of autumn leaves, it makes sense that Shizuha can use that sort of spell too. That's also amusing to dodge.
+
+Non-spell #1 : 10/10
+"Eat your greens kid !" ... is what Minoriko is saying right now.
+Ah ah, that's very creative from your part. Seriously, this is awesome. I burst out laughing the first time I saw it, my respect for having this wonderful idea !
+
+Spell card #1 : Goddess Sign "Inari in a Form of a Fox" : 8,5/10
+Ooh, shiny. I like these kind of lasers, there're not "tough" like those Junko uses in her lilies spell card. You made a great choice here, that's nice from your part.
+
+Non-spell #2 : 9/10
+Well, it follows the same pattern as the first non-spell. It's cool, and we have even onions and peppers this time !
+
+Spell card #2 : Secret "The Principle of Harvest Growth" : 8,5/10
+An interesting remake of "Kagome, Kagome". Since there're three different danmaku in it, it makes the spell more enjoyable, so I'm glad you did things this way.
+
+Non-spell #3 : 8/10
+Knives are to Sakuya as carrots are to Minoriko. She wants to stab me with vegetables, what a mean goddess. D: *cough* It's a nice attack, but I think putting orange and green bullets instead of the dark blue ones would have put emphasis on the carrots. He he.
+
+Spell card #3 : Plenty Sign "Exotic Dance of Harvest Gods" : 6/10
+Dear lord, the lag is real with this one. It's a good spell, don't misunderstand my note, but fps are decreasing so fast that it's not even funny. And I don't understand why only this spell has this problem, because there're only bananas in it.
+
+Non-spell #4 : 6,75/10
+The potatoes are amusing, but it's not as good as your other non-spell. Were you lacking inspiration when you made this attack ?
+
+Spell card #4 : Hunt for Fruits "Rare Catch" : 7,5/10
+Funny, it reminds me of someone's attack... Maybe Mamizou ? I don't remember very well. Anyway, it's good, but I remove you some points because peaches can't be find at this time of the year (yes, I'm mean, I already know that).
+
+Spell card #5 : Harvest Crisis "Morning Prayers to Gods" : 6,75/10
+It's like I'm playing Cooking Mama omfg
+It's a cool, creative and progressive spell card, but I can't understand why it was designed for Minoriko's final spell. I mean, survival spell like this aren't planned to be use in that way, just look at Ran's and Yukari's survival spell, which are basically the same as yours. Yes, it brings change, but I'm not really convinced by this... Oh, and it's not the season of watermelons, so I also removed some points for this~. (don't hate me)
+
+Total : (8 + 8 + 8,5 + 10 + 8,5 + 9 + 8,5 + 8 + 6 + 6,75 + 7,5 + 6,75) / 6 = 15,92
+=> 15,92/20
+
+Aesthetics : 36/40
+Despite a medium stage's background, your script is graphically impressive. The fruits-life system is simply genius, the vegetables bullets are very original. The background with the sunset at the end of the stage is really breathtaking. There're also all these little effects you put in your stage/battle that make your script very refined. I take my hat off to you !
+
+Balancing and difficulty : 9/10
+Difficulty is homogeneous through the script, you did well here. It's a stage 6 boss fight difficulty, so everything's fine I guess ?...
+
+Overall enjoyment, creativity and originality : 8,5/10
+This is surely one of the most original script of this contest. It's really enjoyable, and I personnally had a lot of fun fighting Minoriko. The only thing that tickles me is the low fps rate, it really puts a halt during the battle and makes things a little less entertaining, that's a great shame.
+
+Musics and sounds : 9/10
+To me, musics suits the script well. Even if it's remixes of MoF first musics, it's still very good and corresponds perfectly to the battle. It was really a good choice, congratulations ! The only thing that bothers me is how the song doesn't loop correctly.
+
+Adherence to the theme (and to the whole contest in general) : 10/10
+I don't have something special to say here, except that your plot is perfect. There's even an ending, what could be better than this ???
+
+Others : 19/20
+You even included an ending, that's amazing. I don't have anything else to add, apart from it's absolutely very well made.
+
+FINAL SCORE : (15,92 + 36 + 9 + 8,5 + 9 + 10 + 19) / 6 = 17,90
+=> 17,90/20
+
+Final comment :
+This script is of very good quality. This is a real stage 6 boss fight, with a real unexpected mastermind. I would like to congratulate you for all the work you put in it because I really feel it, and I encourage you to keep up like this.
+Now, I wish you good luck for the future !

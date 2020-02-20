@@ -1,0 +1,94 @@
+Wakasagihime - by GTbot & Achysolrock
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: N/A
+
+Nonspell 1: 5/10
+	*Fairly standard.  Not too challenging, but decently fun to dodge
+	
+Spell 1 (Tidal Wave "Sea Serpent's Wake"): 8/10
+	*REALLY cool spell with lots going on.
+	*I feel it's a bit chaotic though, especially for a first spell
+	*I would perhaps tone down some of the "waves" that Wakasagihime fires (for instance the one she fires after first submerging) to make the rest more manageable
+
+Nonspell 2: 7/10
+	*The pattern's fairly simple, though interesting, to dodge
+	*I really like the spread of the danmaku pattern that Waka shoots though.  Very cool pattern~
+	
+Spell 2 (Beauty Sign "Drifting Sakura Blossom"): 7.28/10
+	*Really pretty and creative design having the bullets form sakura petals [+4% AESTHETIC BONUS]
+	*The pattern itself is decent, if not a bit slow and underwhelming
+	*I kinda wish that the flowers exploded into more bullets upon hitting the bottom of the screen, in exchange for having them spread slower. Perhaps the "petals" could spread out into large arcs of bullets?
+	
+Nonspell 3: 6/10
+	*Straightforward pattern.  Not too boring to dodge, but rather underwhelming
+	
+Spell 3 (Siren Song "Watery Grave Beckoning"): 10.4/10
+	*THIS IS SO COOL!  The wave patterns were VERY cool, and an interesting gimmick for creating tension while the player has to weave through the music bullets to avoid them
+	*Oh yeah, and have some extra credit for those really cool-looking waves~ [+4% AESTHETIC BONUS]
+
+Nonspell 4: 9/10
+	*Fast-paced, challenging, and fun to dodge.  Good job!
+	
+Spell 4 ("Kelp Forest"): 5/10
+	*An interesting pattern with a nice variety of patterns, but the low speed of it makes it all feel rather underwhelming
+	*When I first played this, I thought my FPS was slowing down considerably, only to see that it was at 60 FPS the whole time...
+	
+Spell 5 ("Revitalizing Whirlpool "Mermaid's Secret Lagoon"): 10/10
+	*A very cool take on the classic "circle around the boss/center" survival spell
+	*The danmaku really synergizes with the moving gravity well gimmick, making for a tense and very fun but fair spell card
+	
+Spell 6 (Longevity "Elusive Ningyo Flesh"): 8/10
+	*I really liked the wide variety of patterns you used here, though some were more interesting than others
+	*The "diving" mechanic is very interesting, but I feel you squandered its potential by only really requiring it when Waka sends an undodgeable wave at you
+	*If I may make a suggestion, you perhaps could have had two waves of danmaku going on at once--with one being transparent--and have them each get noticeable harder or easier at certain times, allowing the player to pick and choose when they'd like to resurface, instead of just at set points
+	
+Spell 7 ("Life Cycle of All Aquatic Fauna"): 8/10
+	*I feel it's a bit slow to get interesting, particularly since the first few waves can easily be macrododged
+	*But by the end, it gets quite fun to dodge.
+	
+
+Average score: 83.68/110 = 76.07% + [2% AESTHETIC BONUS] = 78.07%
+
+FINAL SCORE: 15.61/20

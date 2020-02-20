@@ -1,0 +1,101 @@
+Letty - by Spectral
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: N/A
+
+Kogasa Nonspell: 7/10
+	*This pattern, while very simple, is quite fun to dodge
+	*If you added just a bit of an extra twist to it, perhaps a variation to the movement of the spirals, this would've been even better!
+	
+Kogasa Spell ("Blah"): 8.32/10
+	*The rain danmaku is rather simple, but combined with the fast (and SURPRISING!) but fair purple bullets, it's quite fun to dodge
+	*The "rain cloud" effects were a very clever touch!  Especially when used in conjunction with the lightning lasers [+4% AESTHETIC BONUS]
+	
+Letty Nonspell 1: 8/10
+	*It's simple, but also quite fun having to dodge the fast danmaku as it spreads out in various patterns
+	*I like how the simplicity of this pattern serves the purpose of demonstrating the gimmick of accelerating bullets that you use in later attacks
+	
+Letty Spell 1 ("Blah"): 6/10
+	*The danmaku's very simple to dodge, and assuming you don't get cheapshotted by the lasers the first time around, it's a rather simple pattern
+	
+Letty Nonspell 2: 5/10
+	*Doesn't feel too different from the first nonspell, and the added faster bullet phase doesn't feel like it adds much since it's only faced in isolation, and thus a very little threat
+	
+Letty Spell 2 (Freezing Blizzard "Cold-Induced Paralysis"): 10/10
+	*THIS GIMMICK IS SO COOL!
+	*I really like how the danmaku Letty herself shoots is just challenging enough to be a good challenge to the player, while also not overshadowing the "frost clouds" as a threat on the screen
+
+Letty Nonspell 3: 6/10
+	*This nonspell's decently fun to dodge, if a tad on the easy side
+	*I would perhaps recommend bumping up the density of the green bullets
+	
+Letty Spell 3 (Flurry of Frost "Blizzard Barrage"): 9/10
+	*VERY fun spell with YET ANOTHER COOL GIMMICK!  Not quite as cool as the freezing clouds, but still very fun
+	*You did a very good job at making patterns that supplemented the gimmick well
+	*If I may make a suggestion, perhaps you could have had some bullets ("ice spikes"?) come up from the bottom of the screen for one phase, forcing the player to move up while planning for the frost blasts
+	
+Letty Nonspell 4: 7/10
+	*The "spirals" of bullets work as a good supplement to the blue bullets that are coming down
+	*Though I feel this could have been better with a little more variety added to the mix rather than just randomly spawning bullets raining down
+	
+Letty Spell 4 ("Dance of the Iceborne"): 10/10
+	*I NEVER THOUGHT I'D SEE THE DAY.  ICE PHYSICS IN FREAKING DANMAKUFU.  YOU BLOODY GENIUS.
+	*The danmaku again works to supplement the gimmick very nicely
+	*However, I feel the lasers during the phase where you have to circle around Letty were a bit unfair--I would recommend nerfing them slightly or replacing them with something else
+	*But still, the spell card was so fun.  And those final moments of trying to squeeze into the circle as the ice closed in around you were so tense...
+	
+Letty Spell 5 ("Crystallized Silver"): 5/10
+	*The danmaku pattern, while reasonably fun to dodge, felt kind of trite and straightforward--at least compared to everything else I've seen thus far in this script
+	*When the freezing clouds showed up I was excited like "OOooo, they're bringing back everything we've seen in the script! :D"  But was very disappointed to see that the spell was pretty much over by the time they made only a single pass
+	*I was really hoping you used more freezing clouds, perhaps mixed in with some icy wind blasts as well?  And if you were feeling extra cruel, throw in moments where ice physics would take over for a few seconds? :V
+	*The pattern itself isn't too bad, but it just felt like a disappointment
+	
+
+Average Score: 81.32/110 = 73.93% + [2% AESTHETIC BONUS] = 75.93%
+
+FINAL SCORE: 15.19/20
+
+Final Comments:
+	-The patterns were challenging yet very fair at the same time
+	-THE GIMMICKS WERE SO COOL!  And even better, the bullet patterns that accompanied them worked very well in synergy

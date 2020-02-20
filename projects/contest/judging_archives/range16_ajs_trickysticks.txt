@@ -1,0 +1,96 @@
+Dreams of Ice - Trickysticks
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: N/A
+
+Cirno Nonspell: 2/10
+	*I know this is Cirno we're talking about, and I'm guessing you made her super easy for "story purposes", but judging your script holistically, this nonspell just feels lazy and extremely simple
+	
+Cirno Spell 1 (Ice Sign "Icicle Crash"): 3/10
+	*Not a bad concept, but the execution felt really simple and the attack was extremely easy
+	*Perhaps if the shots Cirno spawned were more difficult, or if the icicles crashed down more frequently, it would be improved
+	
+Letty Nonspell 1: 6/10
+	*This nonspell is better in comparison.  Though still on the simple side, it at least has a good amount of variety
+	*I still feel you could have done more with this though
+	
+Letty Spell 1 (Snowstorm "Coldnado"): 8/10
+	*A reasonably challenging pattern that's quite fun to dodge
+	
+Letty Nonspell 2: 4/10
+	*Not a bad pattern, but it felt again very simple and easy
+	*Perhaps if you had the bullets a bit faster, or had the waves overlap more, it would have made it more interesting
+	*Personally, what I might have done is had the laser rings progressively fire faster and faster bullets over time before dissipating, and then have the waves overlap more--that way you could have a mix of fast and slow bullets onscreen at once
+	
+Letty Spell 2 (Frost "Coil of Cold"): 7/10
+	*A good, beautiful pattern, and fun to dodge
+	*I still feel more could have been done with it though.  Perhaps if the bullets Letty herself fired at the end of each phase were slightly faster or denser
+	
+Letty Nonspell 3: 3/10
+	*The pattern feels very slow, and for a lot of the time it feels like you hardly have to move in order to dodge until the aimed bullets shoot--and even then, avoiding them is trivial
+	
+Letty Spell 3 (Winter's Roots "Wild Dance of Freezing Mist"): 5/10
+	*The pattern itself is fairly fun to dodge, and the freezing mechanic has potential--but I feel you squandered what you could have done with it
+	*The "Rooted!" mechanic is cool, but it doesn't seem to serve any real purpose since there's no real threat the player has to worry about immediately before getting rooted--it has already passed.  So by the time you are rooted, there's hardly anything to worry about getting hit by
+	
+Letty Nonspell 4: 7/10
+	*Fairly fun to dodge, if not a bit on the simple side
+	
+Letty Spell 5 (Haze "Encroaching Winter"): 4/10
+	*The concept had potential, but in execution, the spell just didn't feel very interesting--and in the end, it's over rather quickly anyway
+	*[After this spell, the spellcard background never seems to go away for some reason.  Not taking points off for it, but just a heads up]
+	
+Letty Spell 6 (Alcolve "Rotating Recess"): 4/10
+	*The concept of circling around the boss for a survival has been done to death, as I'm sure you're aware.  The bullet patterns created by the lasers are a good touch, but I'm afraid they're not interesting enough to save this spell from being boring
+	
+Letty Spell 7 ("Crystallized Silver"): 4/10
+	*It's a decent spell, but in the end it just boils down to a simple streaming and misdirecting pattern
+
+
+Average Score: 57/120 = 47.50%
+
+FINAL SCORE: 9.50/20 
+
+Final Comments:
+	-You had a few interesting concepts, but overall the patterns just felt very slow and boring

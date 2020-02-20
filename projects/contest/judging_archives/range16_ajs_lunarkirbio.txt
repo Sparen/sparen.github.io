@@ -1,0 +1,98 @@
+Perpetual Winter - by Kirbio and Lunar
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: N/A
+
+Stage: 6/10
+	*Despite a lot of different elements, the stage doesn't feel very exciting or threatening
+	*Though I did quite like the enemies that shot the giant V's of shimmering bullets
+
+Sumireko Spell: 6/10
+	*Not a bad pattern, but I wish the Occult Ball would've played a larger role in the spell.  As it is, the laser isn't a very big threat, and the bullet pattern itself is kinda repetitive
+
+Letty Nonspell 1: 6/10
+	*A decent opener and very Letty-like, though not all too exciting or interesting to dodge
+
+Letty Spell 1 (Cold Sign "Crystal Hailstone"): 7/10
+	*Fun pattern to dodge, forces the player to move around a lot and keep alert
+	*The orbs that shoot the chains of ice bullets could've stood to have a bit more warning though.  I didn't even realize they'd shoot like that the first time I played and nearly got cheapshotted
+
+Letty Nonspell 2: 6/10
+	*Decently fun to dodge, though not too interesting -- just spirals of pseudo-random bullets
+
+Letty Spell 2 (White Sign "Northern Winter Veil"): 5/10
+	*This spell's average as-is, but I feel it could've been improved quite a bit if the two phases of danmaku overlapped more, so that you'd have to dodge the spiral and side bullets simultaneously
+
+Letty Nonspell 3: 6/10
+	*Most of this pattern's rather slow and easy to dodge, not very interesting
+	*However the fast dots phase was quite fun and redeemed this nonspell for me
+
+Letty Spell 3 (Mystic Sign "Frozen Primrose"): 6/10
+	*WHOA, you need to warn the player somehow about those homing lasers, or they're gonna get cheapshotted every time
+	*Once you get used to that, though, the pattern's rather trivial since the regular danmaku is pretty minimal.
+
+Letty Nonspell 4: 8/10
+	*This nonspell is quite interesting to dodge with all the different elements coming at you
+
+Letty Spell 4 (Winter Sign "Perfect Freezing Mist"): 4/10
+	*Aside from the phase during which the "frozen" bullets shatter into shards, this pattern's rather trivially easy to dodge
+
+Letty Spell 5 ("Blah"): 3/10
+	*For the majority of the spell, it's just circling around and occasionally avoiding large round bullets, and only during the final 10 seconds or so does it actually start to get interesting
+
+Letty Spell 6 ("Oriental Cold Upheaval -Perpetual Winter"): 5/10
+	*The danmaku for the most part is fairly standard and not terribly interesting, though the bullet walls at least help spice things up a bit
+	
+
+Average Score: 68/120 = 56.67% + [2% AESTHETIC BONUS] = 58.67%
+
+FINAL SCORE: 11.73/20
+
+Final Comments:
+	-I'm sorry if I didn't have much feedback or commentary, but overall your danmaku was not very challenging or exciting
+	-Please don't take that the wrong way, but a lot of the patterns were not very interesting to dodge
+	-I've said this for other people as well, but if you were trying to make a "one-size-fits-all" difficulty setting, I really think you would be better off making separate difficulties
+	-That way people of different skill calibers can enjoy your script. Someone of a different skill level than mine may enjoy your script more than I did, honestly
+	-But personally, I felt kind of bored playing through your script
+	-Really, it's a shame that final spell card was merely a bonus.  That was by far the most fun and exciting part of the whole script, and I would've wholeheartedly given it a high score.

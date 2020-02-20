@@ -1,0 +1,47 @@
+RaNGE 18 Judgement - WishMakers
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Stage Pt. 1 (Pre-Midboss): Right off the bat I can say that some of these enemies are really hard to see on that background. The first two enemies in the stage are examples of this. Otherwise I like the stage segment well enough. It's a lot of streaming but it doesn't get boring. 6.75/10
+
+Midboss Nonspell 1: The boss graphic is a bit hard to see but there's an enemy marker so I think that's okay. It's a decent attack. 6.5/10.
+
+Midboss Nonspell 2: Macrododge the walls while micrododging the other stuff, woo. Also decent. 6.5/10
+
+Stage Pt. 2 (Post-Midboss): That post-midboss segment lasts for a LONG time. Eventually some other enemies come in to spice things up but I think it gets boring after a while. The last two enemies are REALLY hard as well, though I usually just end up bombing the second-to-last one and killing the last one before it becomes a threat. 5.25/10
+
+Now for the boss, Alice.
+
+Nonspell 1: A fine start. The second wave of this attack was way harder than usual because she moved particularly low on the screen, so be careful with random boss height variations like that. 6/10
+
+Spell 1: Really wonky streaming that I like. I think it could benefit from some sound effects but I thought it was fun. 7.75/10
+
+Nonspell 2: Not a lot to say about this. A bit better than the others. 6.25/10
+
+Spell 2: I think it's pretty easy compared to everything else, but I like how it's a variation on the same idea as Chalk-White Russian Dolls. Neat. 7.5/10
+
+Nonspell 3: It's not every day that you see a multi-phase nonspell. That's interesting in itself. Otherwise it's fine. 6/10
+
+Spell 3: Difficulty varies intensely depending on how you direct the dolls. It's at its hardest when you stay near the bottom center, but it's much easier if you make them ram the sides of the screen instead. Still, I think it's a decent attack. 6.25/10
+
+Spell 4: Oh boy it's a bunch of her Ex-attacks at once! I think the blue phase can be a bit much when the ring of dolls is fully expanded and spewing aimed bullets in your face, but that seems to depend on Alice's height on the screen somewhat? Otherwise I think it's a pretty neat homage to the original fight and a good way to end the script. 6.5/10
+
+Danmaku Quality Average: 6.47/10 (11.01/17)
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+Aesthetically, I thought this entry did make some mistakes. Some enemies blend in with the stage background, which particularly annoying because those enemies don't just die immediately and not catching them early can result in them piling up and ruining the player's "flow" when doing the stage. The dolls are really hard to see as well - in Concealed the Conclusion they had magic circles around them to make it easier. While more sounds would be nice, there aren't any attacks where I can really say that a sound effect is NEEDED to be fair - just that some attacks would be better with them. As such, there's a small penalty in the Aesthetics score to make it 1.25.
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 12.26/20. I thought it was pretty neat, and a marked improvement from previous contest entries. Keep it up!

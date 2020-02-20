@@ -1,0 +1,91 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Wakasagihime, by gtbot and Achy
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Non-spell #1 : 7,5/10
+That's good. The two waves of blue bullets are fun to dodge. However, I'm not really convinced by the yellow one... Yellow doesn't really suit Wakasagihime, I don't know why you chose this particular colour.
+
+Spell card #1 : Tidal Wave "Sea Serpent's Wake" : 6,5/10
+This first spell is weird. Wakasagihime's life bar goes down very quickly, and then I'm being  brutally cornered by bullets coming from all the directions. Waka should have shot less bullets the first time she's coming toward the player, because between the blue, the red and the green danmaku, it's easy to be killed without understanding what's happenign on the screen. It's not hard, but really messy.
+
+Non-spell #2 : 8/10
+This one is good too, it suits Wakasagihime well. That's, like, jets of water coming from her.~ Nice !
+
+Spell card #2 : Beauty Sign "Drifting Sakura Blossom" : 9/10
+Really pretty and poetic ! This might be my favorite spell card of your script. I've nothing else to say about it, apart from it's very well made.
+
+Non-spell #3 : 7/10
+Is that fish scales ? Well, it suits Waka but the colours are kind of monotonous... You should have add others colours in it, because the final result is quite dull. Otherwise, the pattern is good. Too bad it's only in grey and blue.
+
+Spell card #3 : Siren Song "Watery Grave Beckoning" : 9/10
+Woohoo, giant waves coming from the sides ! And a lot of musical notes, too. All of these combined together make a quite overwhelming spell card, but still easy as pie if you watch out correctly for your hitbox. It's fun to play and the giant waves are pretty, good job on this one !
+
+Non-spell #4 : 8/10
+Eeerm, is this supposed to represent algaes ? That's original. Come to think of it, it makes sense, so why not ? That's creative from your part. And despite a messy pattern, it's not hard to dodge, and even fun to play. Plus, the colours are well chosen, and really contrast with the last non-spell.
+
+Spell card #4 : Entanglement "Enchanted Kelp Forest" : 4/10
+I'm quite disappointed with this one. To be honest, I was expecting giant green lasers, or green danmaku which grows up on the side of the screen when I first saw the spell's name. It's not bad, but I think it could have been a lot better. The small and round bullets seem out of place, especially the orange ones. I would have liked to see big bullets growing on the screen, like a kelp carpet in a lake. Arf. A bit too simple, sorry.
+
+Spell card #5 : Revitalizing Whirlpool "Mermaid's Secret Lagoon" : 7/10
+I have no idea why I'm being sucked by the green bubble, ah ah. Well, it makes the spell more difficult, so that's a good thing. The "unsubstantial" big bullets are pretty and fun to dodge. The rest is very easy to avoid, because hitboxes are reaaaally small.
+
+Spell card #6 : Longevity "Elusive Ningyo Flesh" : 4/10
+According to the legend, eating a ningyo's flesh brings the eater a very long life. This legend suits perfectly this spell card, because it's... boring, and long. No, seriously, it should have been a survival spell. The beginning is long and incredibly easy. I know Wakasagihime is a stage 1 boss, but it's supposed to be a stage 6 boss fight with a certain level of difficulty ; even your first spell card was a lot more difficult than this entire one. Then there's the dialogue, and Waka begins to shoot a lot of bullets. I don't understand why you make a rainbow pattern, it seems completely off the mark. :/ There's also the wall of blue bubbles, which I don't even know how to avoid. This spell card could have been better, too.
+
+Spell card #7 : "Life Cycle of All Aquatic Fauna" : 7/10
+It makes me think of Shinmyoumaru's or Kaguya's last spell. In fact, the fishes' pattern is well defined (and so easy to dodge), the only "problem" here is the grey stars. It makes things more difficult by cornering the player, it's cool. I can't really tell if this last spell is actually impressive, but at least it's good, so I guess it works ?
+
+Total : (7,5 + 6,5 + 8 + 9 + 7 + 9 + 8 + 4 + 7 + 4 + 7) / 5,5 = 14
+=> 14/20
+
+Aesthetics : 28/40
+Backgrounds are good, sprites too. I like the effect when Waka charges up an attack. Bullets are well chosen, I particularly like the weird bubbles and the orbs you used for the waves in the third spell card. However, there's any boss marker. There's also this "thing" which surrounds Wakasagihime at some times... I guess that's also algaes. It's appropriate, because it gives a stage 6 boss feeling, but... I laughed a lot the first time I saw it. Well, in the end, I don't really mind, because it fits Wakasagihime and it's original.
+
+Balancing and difficulty : 8/10
+The script's difficulty is good. It's not too hard, not too easy, just a regular Normal difficulty.
+
+Overall enjoyment, creativity and originality : 8/10
+Your script is fun to play, except for some phases that are quite boring, and which could have been better. Otherwise it's original, like the big algaes which surround Wakasagihime. Your spell cards and non-spell are creative, especially the one with the cherry blossom ! The spell's names are fine too, they're really cool and diversified, it works very well. I can definitely feel all the work you put in it, good job !
+
+Musics and sounds : 3,5/10
+The sounds used in the script are all good, but unfortunately, the music is catastrophic. It's a stage 1 boss theme that doesn't correspond to the fight's spirit. Next time, use a stage 6 boss theme, like Little Princess, or another epic music ; it doesn't matter if it's Touhou or not, if it's an impressive music that sticks to the fight, then it's alright.
+
+Adherence to the theme (and to the whole contest in general) : 4/10
+It's indeed a stage 6 boss fight if you replace the actual music by another one. The spell cards are good, but the theme ruins everything.
+Plus, there's no plot in your script. I can see the full moon reflecting on the lake, but without a little plot or something, I can't tell what's going on and why we fight Wakasagihime. Why is Wakasagihime a mastermind ? I may never know, and that's a shame.
+
+Others : 13/20
+The menu you made is simple, but pretty, and the way settings are made is also good ; however, there's absolutely no music, and that makes it a little lonely.
+
+FINAL SCORE : (14 + 28 + 8 + 8 + 3,5 + 4 + 13) / 6 = 13,08
+=> 13,08/20
+
+Final comment :
+You gave us a good script, even if some elements ruins it a little. The unappropriate music, the absence of plot and other things like that which make you lose some points could have been avoided, and that's a shame. However, a lot of work has been put in this script, and in the end, you came up with a cool fight. Congratulations for this one !

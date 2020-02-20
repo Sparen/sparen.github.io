@@ -1,0 +1,68 @@
+RaNGE 18 Judgement - Arcvasti
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Midboss first!
+
+Nonspell 1: A fine pattern. 7/10
+
+Spell 1: The spell background is certainly...something. Red boss with red magic circle and mostly-red player on top of red with red bullets is a bad idea. The pattern itself seems okay, but the spell background is just not a good choice. 4/10.
+
+Spell 2: With the addition of blue the background is less catastrophic. I think this is pretty okay. 6/10.
+
+Spell 3: no danmaku 0/100 you fail (in reality this doesn't get a score woo!)
+
+Boss now!
+
+Nonspell 1: Good start. 6.5/10.
+
+Spell 1: A simple and effective pattern. The space you have to dodge in might get a little bit too tight for my liking though. 7/10.
+
+Nonspell 2: I like this nonspell more than the first one. Both of these nonspells use sounds well to indicate fast bullets coming at you. 7/10
+
+Spell 2: Another solid pattern. 7/10.
+
+Nonspell 3: Another variation. I don't really like how the red bullets start curving when they're halfway down the screen, but the laser delay time seems just about good enough. 6.5/10.
+
+Spell 3: I enjoy this one too, though it can drag on for a while if you're forced away from under Alice. 7.25/10.
+
+Nonspell 4: This is different, but still plays much the same way. Dodge the aimed stuff while dealing with other danmaku. It's getting a bit tired now, but it's still fine. 6.25/10
+
+Spell 4: I think the knives could use a doll or other sort of enemy to indicate where they'll come from instead of just a delay cloud. Otherwise I think this pattern is fine. 7/10.
+
+Nonspell 5: Yet another solid pattern. 7/10.
+
+Spell 5: For some reason the spell background, which I thought was weird-but-okay, is actually making it pretty hard to deal with this pattern. It's probably a combination of the background, the faded black bullets, and finally the regular blue ones. Anyway, the pattern is fine, if only a tad hard to see and uninspired. 6.5/10
+
+Nonspell 6: These little "lasers" are funky. Anyway, solid like the rest. 7/10.
+
+Spell 6: I think the last bit before you need to start circling is too fast. Otherwise, another solid pattern. At first I thought it was too hard, but after giving it another playthrough it's really not bad. 6.5/10.
+
+Spell 7: Fine survival card. I think the first phase is the hardest and the last phase is the easiest, but maybe that's just me. 6.5/10.
+
+Spell 8: Hmm, where have I seen this concept before? Anyway, I think the first two phases are fine. The last phase makes things a bit too cluttered, since the space you get is already narrow. 6/10.
+
+Last Spell: I didn't get too far into this one so I'll just omit it from the judging. From what I saw it's just a lot of rings with occasional threatening aimed bursts from the extra bosses.
+
+Danmaku Quality Average: 6.11/10 (10.4/17)
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+
+Aesthetics are pretty average in my opinion, but you lose out quite a bit on spell backgrounds. 0.75/3.
+
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 11.15/20.

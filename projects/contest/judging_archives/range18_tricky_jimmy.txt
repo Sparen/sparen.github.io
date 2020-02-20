@@ -1,0 +1,59 @@
+RaNGE 18 Judgement - Jimmy
+
+All judgments by me will be out of 20 points, using the following categories.
+
+Danmaku Quality: 17/20
+
+Danmaku Quality encompasses the overall gameplay of your script. Good patterns and stages will equal a good score in this category, whether they visually look good or bad. Note that aesthetic factors can still factor into this - proper usage of sound effects and bullet graphics can make an unfair pattern fair, and vice-versa.
+
+Aesthetics: 3/20
+
+This category encompasses how your entry looks (and sounds). Most people will probably get a 1.5 in this category, but it can shift higher if I like things (and shift lower if I don't like things).
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+
+Nonspell 1: Decent start. Not bad, not amazing but on the good side. 6.5/10.
+
+Spell 1: Variation on one of her normal spells. Those orange fireballs are really treacherous, but fairly so. 7/10.
+
+Nonspell 2: I like this more than the previous nonspell. 7/10.
+
+Spell 2: Neat idea with good execution. 7.5/10.
+
+Nonspell 3: Now we begin the curve. I like this about the same as the first nonspell. 6.5/10.
+
+Spell 3: Obscuring gimmicks tend to just end up being spells where you need quickly read bullets to dodge effectively, and this is no exception. I like patterns like this. 7.5/10.
+
+Nonspell 4: Really scary, but then it slows down and becomes much more reasonable. 6.5/10.
+
+Spell 4: The idea is sound, but I think lots of these dodges are too tight to be realistically dodgeable, at least for Normal/Hard mode. 6/10.
+
+Nonspell 5: Basically the same feedback as nonspell 4! Slightly lower score, though. 6.25/10.
+
+Spell 5: I think this spell has just a tad too much life. Otherwise, I like having to dodge from two directions at once. 7/10.
+
+Nonspell 6: Pretty hard to keep track of which waves will nail you and which will just return back to her. 6/10.
+
+Spell 6: I'm not very sure of how to do this, since when the moon is on the opposite side of the screen as you it spawns these weird streams of bullets that are hard to dodge through. 6/10.
+
+Nonspell 7: Nonspell combination, woo. The blue one feels particularly irrelevant, but otherwise I like it. 7/10.
+
+Spell 7: I like the concept behind this one too, though I feel like it drags on and particularly bad opening placement could be fatal. 7/10.
+
+Spell 8: Thematically this spell is pretty cool! Great job. 8.5/10
+
+Spell 9: I think this spell is great up until the yellow fireball stream that's honestly more visually distracting than an actual threat. It becomes a bit out of hand then, but it's still good! 7.5/10.
+
+Danmaku Quality Average: 6.85/10 (11.66/17)
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+
+Aesthetically above average! 2.25/3.
+
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+The overall score is 13.91/20.

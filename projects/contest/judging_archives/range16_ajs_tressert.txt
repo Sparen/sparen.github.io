@@ -1,0 +1,91 @@
+Perfect Mastermind - by TresserT
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: Easyish (with some insight from Harder than Normal)
+
+Stage: 8/10
+	*The opening parts are decent, if not a bit underwhelming, and the midboss is fairly challenging despite being sorta static
+	*What I really liked was the sequence with the falling yin-yang orbs and the indestructible red orbs, though.  It forced me to strategize and plan my way around
+
+Nonspell 1: 7/10
+	*Decent patterns, nothing special but contains lots of varied attacks.  I like that!
+	
+Spell 1 (Spirit Dance "Yuki Onna's Unseasonal Dance"): 8/10
+	*An interesting and fun pattern to dodge, especially on higher difficulties
+	*However, those semi-random grey "Murasa droplet" bullets that fire each wave are a bit too random for my taste, especially on higher difficulties where they can become a big pain
+	
+Nonspell 2: 10/10
+	*A very unique style of nonspell that keeps the player on their toes while also being extremely fair
+	*The slight randomness is just enough to keep the waves varied and the patterns fun!
+
+Spell 2: 7/10
+	*Despite your usage of BoWaP, this pattern is still fairly fun to dodge with BoWaP only acting as the support
+
+Nonspell 3: 8/10
+	*On higher difficulties this pattern's CRAZY.  But here, it strikes just the right balance of challenge and fairness
+
+Spell 3: 9/10
+	*I feel like a little bit more could have been done with this, but as it is it's a fun and interesting pattern to dodge
+
+Nonspell 4: 9/10
+	*A fun to dodge pattern, with the spiral walls forcing you to keep moving around
+
+Spell 4 ("Flower Master of the Flowers of Winter"): 7/10
+	*I feel the execution of this pattern was a bit lazy compared to your other patterns, with the semi-static yellow Yuuka-spirals you've got going
+	*Granted, it's still decently fun to dodge.  But I wish you could have done more with the spiral--perhaps maybe occasionally have it complete a rotation?
+	*Compared to your other varied patterns, this one just forces you to zig-zag back and forth
+
+Spell 5 ("Perfect Winter Mastermind"): 9/10
+	*This is what Miko's final attack in Ten Desires should have been more like.  While vertical streaming is the main component, you still add many different
+	varieties to the patterns you have to dodge while doing so. And in addition, all the grazing you get from streaming complements your flashbomb system
+	*However, some of the bullets that Letty herself can leave rather small gaps for the player to try to squeeze through
+	
+
+Average Score: 82/100 = 82.00% + [2% AESTHETIC BONUS] = 84.00%
+
+FINAL SCORE: 16.80/20
+
+Final Comments:
+	-There's really not much I can say, you did a very good job with this whole script
+	-Your difficulty settings are still nuts though >:U

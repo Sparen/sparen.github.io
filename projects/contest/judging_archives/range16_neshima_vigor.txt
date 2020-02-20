@@ -1,0 +1,86 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Mus Armus, by Vigor
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Nue's non-spell : 9/10
+A very pretty non-spell, I must say ! It's cool that you made different phases, because it makes this attack varied and pleasant to fight. Also, colours are well chosen, you did a good job here.
+
+Non-spell #1 : 10/10
+It's excellent. And I don't have anything else to add.
+
+Spell card #1 : Dowsing Rod "Water Witching" : 8,5/10
+I really like the concept of Nazrin dowsing for water. Well, she's the little dowser general after all. About the danmaku, it's pretty good, except that I xas expecting to see more water-like bullets like Nitori's.
+
+Non-spell #2 : 8,5/10
+That's nice, and suits Nazrin very well. Those blue lasers make the non-spell more fun, so it's great you introduced them in the attack.
+
+Spell card #2 : Crystal Vision "Diamond Pendulum" : 6/10
+I have no idea of what's going on in this spell card. Seriously, it's too messy to be real. I think a more defined pattern would have been better since every bullets in this attack make it totally chaotic. It's challenging for sure, but being killed by totally random bullets don't make it very funny to face...
+
+Non-spell #3 : 8/10
+(no not this curvy shit again)
+This attack is nice, and I particularly like the fact that Nazrin uses it after she's seen holding the pagoda. This kind of detail is greatly appreciated, it's good to see that you thought about stuff like that.
+
+Spell card #3 : Jewelled Pagoda "Brilliant Light" : 8,5/10
+A good demonstration of what you can do with the pagoda. It's really amusing to fight, it reminds me of one of Shou's spell card. A nice idea you got there.
+
+Non-spell #4 : 4/10
+Wait wut :v This is way too complex to be a single non-spell. There's so many things to dodge and more like three different danmaku that it can't be a non-spell. You must simplify it, otherwise make it an integral spell card.
+
+Spell card #4 : "Bewitching Light of Jewelled Treasure" : 7/10
+That's... hard, but it's okay. Maybe make it a little more progressive, or an entire survival spell would have been nice too ? Because it's quite brutal after all.
+
+Spell card #5 : "Jewelled Mice from Rainbowland" : 8/10
+Reminds me of Kaguya's last spell. It's good, even if the little projectiles aren't really suited for this kind of spell.
+
+Total : (9 + 10 + 8,5 + 8,5 + 6 + 8 + 8,5 + 4 + 7 + 8) / 5 = 15,5
+=> 15,5/20
+
+Aesthetics : 32/40
+There's a lot of cool effects in your script, there're all just beautiful. The background is also really nice. However, what's the point in putting a life counter if we have infinite lives ? Also, Nazrin doesn't declare properly her spell cards ; that's a shame, because the battle screen is large enough to make a cool effect when she's starting to fire a new attack. There's also a little bug in your script : when I press on the Ctrl key when Nue or Nazrin is talking, the rise of fps make the time counter to  run out. If it reaches 0, then the next attack is skipped. :/ Oh, and the [C] spell card is also too powerful. In the last spell, Nazrin is sensitive to it, but it's not the case with the first one.
+Well, if I exclude these elements, your script is still very pretty, you made a great job here.
+
+Balancing and difficulty : 8,5/10
+The difficulty level is homogeneous, that's nice. It's a good old Normal mode, not too hard, but also not too easy.
+
+Overall enjoyment, creativity and originality : 8,5/10
+Well, it was surely a fun fight. You also gave us creative attacks which were quite amusing to dodge, so I guess everything is fine ?
+
+Musics and sounds : 6,5/10
+Sounds are all okay. The first and second musics were very good, but sadly the third one doesn't fulfill its task correctly. I mean, we have first an ominous music, then an epic melody, and just after the dialog... a calming music ?... That totally ruins the end of the fight, why you chose this one ? ;w;
+
+Adherence to the theme (and to the whole contest in general) : 4/10
+Eeeerm... Well, it began really good... but I feel like it shouldn't have ended like that. The stage is called "Mysterious Power ~ Unknown Power", so it's natural to expect something very dark from the fog spreading at Myouren's Temple. But eventually, we find out that it's just Nue's doing, that it's totally nothing and we were just here to beat some cheeky mice. That's totally wrong... I don't see any unexpected mastermind in this script, sorry. :/
+
+FINAL SCORE : (15,5 + 32 + 8,5 + 8,5 + 6,5 + 4) / 5 = 15,00
+=> 15,00/20
+
+Final comment :
+It's a very good fight, really. Just pay attention to the music and if you have fully respected the theme for the next time. With this, you should be able to win a future contest without any effort. I wish you a good continuation !

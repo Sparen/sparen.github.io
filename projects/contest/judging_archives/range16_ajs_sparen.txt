@@ -1,0 +1,92 @@
+Descent of the Mochi Hammer - by Sparen
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: Normal
+
+Nonspell 1: 4/10
+	*Very simple opening attack.  Not terribly uninteresting to dodge, but leaves quite a lot to be desired
+	
+Spell 1 (Gun Sign "Raging Eagle Dive"): 8/10
+	*Not too much a fan of the total randomness of the bullets that collide with the screen edges
+	*However I LOVE how much it forces the player to move and make quick movements and decisions
+	*Though I feel this is quite a bit of a difficulty jump considering the nature of your opening nonspell
+	
+Nonspell 2: 6/10
+	*I feel this could've been more fun if Seiran fired the dark blue pellets a bit more frequently, and perhaps if the "triangles" were fired in a pattern rather than seemingly at random
+	
+Spell 2 (Moonview "Scintillating Lunatic Ray"): 8/10
+	*A fun attack that has quite a variety of things to look out for, from large bouncing bullets, to arrowhead bullets, to lasers
+	*It's variety like this that helps keep a pattern from getting stale too quickly
+
+Nonspell 3: 6/10
+	*Pretty much just a standard streaming pattern, though it keeps things varied enough that it's not entirely straightforward streaming at least
+	
+Spell 3 (Hawk Sign "Five-Pronged Target"): 7/10
+	*A very interesting pattern to dodge, though I feel it could be a bit better
+	*Perhaps if the supplementing red bullets were a bit denser, or if the white bullet pattern was a bit more intricate and varied so dodging it isn't exactly the same each time
+	
+Nonspell 4: 5/10
+	*Not too challenging, but not too easy, though fairly repetitive
+
+Spell 4 (Evil Bullet "Blazing Strike of the Moon Rabbit"): 7/10
+	*An interesting and varied attack, though RNG can make the purple bullet phase vary from super easy to very difficult, it seems
+	
+Spell 5 (Bullet Sign "Rapid Cleanwater of the Lunar Peach"): 9/10
+	*VERY fun and varied pattern with several challenging (yet fair) elements to dodge simultaneously
+
+Spell 6 (Mochi Pounding "Ceremonial Mallet of Moonview"): 7.28/10
+	*The mochi "hammers" are hilarious, and a creative use of imagery for this spell [+4% AESTHETIC BONUS]
+	*However, I'm not a very big fan of the completely random bullets that the hammers shoot out
+	*Also, given how close the player may get to Seiran to avoid said random bullets, you should probably have a warning for when Seiran's about to start shooting her own bullets
+	*Nonetheless, despite the randomness, it's decently fun to dodge
+	
+
+Average Score: 67.28/100 = 67.28% + [2% AESTHETIC BONUS] = 69.28%
+
+FINAL SCORE: 13.86/20
+
+Final Comments:
+	-Your patterns were pretty good for the most part, but I felt the nonspells were a bit on the boring side
+	-I'm also not too fond of the total randomness for bullet patterns used in certain parts of the script, particularly the final spell
+	-Other than that, I quite liked your script!

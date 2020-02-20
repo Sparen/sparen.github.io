@@ -1,0 +1,42 @@
+RaNGE 15 Judgment: DLS's Lily White and Wriggle Whatsherface
+
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 12/20
+Character Relevance, Creativity, Originality: 4/20
+Aesthetics: 4/20
+
+*Is it fun to play? Cheap shots, boring sections, all things danmaku. Individual patterns will be graded out of 12 points, and then will be averaged. 
+
+Anyway, let's get started.
+
+Nonspell 1: A rather simple criss-crossy nonspell. It's slow and otherwise fairly unremarkable. Not unfun, not fun. Rather plain. 6/12.
+
+Spell 1: Another rather slow pattern. Bullets don't just radiate outward from the boss, which is a good way to make a pattern stand out. Not bad. 6.5/12.
+
+Nonspell 2: Return of criss-cross. Only the bullet spawning radius increases as time goes on, leading to bullets coming from odd angles. Still rather slow, so not too hard to read. One should be careful with this type of pattern, because it can cause walls due to bullet stacking. In this case it's done well enough to avoid most problems. 6.5/12.
+
+Spell 2: Like I said, one should really be careful with patterns like this. Not an easy pattern to read, because the circular bullets don't let the player know what direction they'll eventually travel in. The bullets abruptly create walls due to how they spawn and move, and the player doesn't have much time to react to this. Once the player eventually gets this down, there's not a lot to this pattern. It's dodging the occasional bullet here and there, while waiting for walls to form, then dodging them. Repeat. 5/12.
+
+Spell 3/Survival 1: More slow micrododging. Bullets spawning around the white orbs is an interesting gimmick, but you end the survival before they actually start to fill the entire screen? As such it's kinda just a boring interlude. It feels like more of the same, and a waste of time. 4/12.
+
+Nonspell 3: Wriggle appears! Feels a tad faster than all of Lily's attacks, but just a tad. Criss-cross applesauce. The green bullets are a bit denser than everything Lily had, but you don't have to dodge all that many of them. Fine. 6/12.
+
+Spell 4: Angular velocity is also something you should be careful with. In this case it makes the purple butterflies take unpredictable paths. When combined with having to stay within the confines of the green butterflies, it's really difficult and just feels cheap. 5/12.
+
+Nonspell 4: Ah, something different! Well, not really. It's still a similar pattern to everything from before, but the criss-crossing is combined with another pattern of bullets that makes it non-trivial to dodge. It's also faster than most of the rest of the script. Still crossy road, but at least it's more exciting? 7/12.
+
+Spell 5: Certainly picks up the pace. I know there is some logic to bullet spawning, but beyond the first 10 or so seconds it speeds up and just becomes a lot of fast reflex dodging. This isn't inherently bad, but at some point there's just bullets all over the place and reading this becomes extremely difficult, especially with the bullets stacking and not moving on their final trajectory immediately after spawning. Good idea but execution could use work to make it feel structured. 5.5/12.
+
+Spell 6/Survival 2: Interesting. It's a circle-around-the-center type spell, but with bullets that spawn around you thrown in. It sounds like a neat idea, but considering you still have to circle around the middle you can't really DO anything about the circular bullets. You just have to go with the flow and pray one doesn't get in the way. Luckily it's rather short, but it feels like the player simply can't do anything and just has to get lucky. 5/12.
+
+Danmaku Total: (6+6.5+6.5+5+4+6+5+7+5.5+5)/10 = 5.65/12.
+
+As for creativity, Lily White's patterns don't really feel like her. Sure, they're flowery in a sense, but in the end it devolves into a lot of criss-crossing bullets. She doesn't use any of her iconic teleportation skills or her unique bullets patterns. It just feels fairly generic. Wriggle at least utilizes her bullet-transformation shtick occasionally, but does feel fairly generic too. Nothing spectacular. 
+
+Creativity: 2/4.
+
+Aesthetics-wise, this script is okay. The nonspell background is pretty good, while the spell background is plain and unobtrusive. Sounds are used appropriately and the danmaku errs on the pleasant side of things to look at.
+
+Aesthetics: 2.5/4.
+
+Total Score: 5.65+2+2.5 = 10.15

@@ -1,0 +1,81 @@
+RaNGE Contest 16 : Unexpected Master Mind
+Script : Where the Firefly Flies, by Meowstick
+
+Time to judge your creation ! ( ͡° ͜ʖ ͡°)
+To fulfill this task, I'll use the following rating system :
+
+–	Each spell card/non spell/stage : X/10
+All of them will be add up then divide in order to get back on a X/20 score.
+
+–	Aesthetics : X/40
+This includes the bullets' nature, the backgrounds, the life bar, the sprites, the others visual effects, etc.
+
+–	Balancing and difficulty : X/10
+I'll play on the proposed difficulty, or with the one that I master the most.
+
+–	Overall enjoyment, creativity and originality : X/10
+
+–	Musics and sounds : X/10
+
+–	Adherence to the theme (and to the whole contest in general) : X/10
+
+–	Others (optional) : X/20
+This includes the presence of a menu, a spell practice, settings, etc. These are "bonus" points, but note that you can still have below the average.
+
+
+Note : if you don't understand a mark or a comment, don't hesitate to ask me via PM !
+
+Now, good luck to everyone ! ( ͡ᵔ ͜ʖ ͡ᵔ )
+
+
+
+Non-spell #1 : 8/10
+A classic non-spell to begin this script. It's very good, and very Wriggle-ish, so everything's okay here.
+
+Spell card #1 : Hidden Bug "Fireflies in the Darkness" : 9/10
+This spell card lets me quite impressed. It's bright and dark at the same time, and thanks god the orbs' hitbox is weird enough to not be killed everytime they appear. Good job.
+
+Non-spell #2 : 8/10
+This one is also pretty basic, but you used familiars to attack and it really corresponds to Wriggle's ability. Colours are also well chosen, so that's a good thing.
+
+Spell card #2 : Insect "March of the Worker Red Ants" : 9/10
+An amusing and creative spell card. I'm nearly absolutely not disappointed about this attack, I must say ! The only little problem is the difficulty. Once you know where to go, it becomes incredibly easy. :/
+
+Non-spell #3 : 5/10
+Huh, well, this is also very basic and too easy to be a stage 6 boss non-spell. I mean, look at Miko's non-spell : they may be (very) repetitive but at least, it's challenging, and you must be very focused on your hitbox if you don't want to die. I don't have that feeling here, so... let's say this attack isn't that good.
+
+Spell card #3 : Insect "Flying Southern Hawker Dragonflies" : 9/10
+This one, however, is challenging and also very fun to face. I don't know how the dragonflies shoot their bullets, but this is amusing to dodge. I can already imagine how would be a Hard or Lunatic version of this spell, it's really nice !
+
+Non-spell #4 : 4/10
+Eerm, I don't know. I'm not really convinced by this non-spell. Maybe doing an attack that has nothing in common with its predecessor would have been nice.
+
+Spell card #4 : Insect "Monarch Butterfly's Elegance" : 10/10
+Another good and original spell card involving insects. This time, it's butterflies. Monarch butterflies are popular for their massive migration, and personnally, I find that your attack depicts well this insects' particular trip. To be honest, if a spell can recreate a special impression through the player, then you've managed to create an awesome spell. And this is an awesome spell. In terms of danmaku, it's good, but in terms of sentiments, it's wonderful. Well, in the end that's just my impression, ah ah.
+
+Spell card #5 : "Wriggle's Lantern" : 3,5/10
+Unfortunately, your script ends with a low quality attack. I'm sorry, but this isn't a last spell. :c It's a survival spell that precedes the last spell. Plus, it's way too easy. If you had made another spell after this one, I would have given you more points, but that's not the case here, that's a pity. :/
+
+Total : (8 + 9 + 8 + 9 + 5 + 9 + 4 + 10 + 3,5) / 4,5 = 14,5
+=> 14,5/20
+
+Aesthetics : 23/40
+Aesthetically speaking, your script is quite poor. There isn't anything transcendental or visually impressive. Even if you use appropriate bullets (the bright orbs are very good), I don't see anything really marvellous. Wriggle's sprite is also quite mishandled, it's very static, there's no punch in it.
+
+Balancing and difficulty : 7/10
+This script's difficulty is homogeneous, so that's good. However, it's too easy to be a stage 6 boss fight. Next time, try to make harder spell cards, it could make your script more interesting to play.
+
+Overall enjoyment, creativity and originality : 9/10
+In terms of creativity, this script is very rich. Since your spell are based on insects, it makes the fight very fun to play ! However I can't give you full points, because despite these very creative attacks, they're rather simple if I look more closely to the danmaku part.
+
+Musics and sounds : 3/10
+What a cool remix of Wriggle's theme ! Unfortunately, it's absolutely not suited for this fight. A stage 6 boss theme is supposed to sound magnificent, and that's not the case here. Apart from that, sounds are well used.
+
+Adherence to the theme (and to the whole contest in general) : 3/10
+Well, I don't see any plot here, I don't even know why I'm fighting the bug girl. Even a readme would have been enough you know ? Plus, your attacks are rather simple to beat, you should be more "forceful" in your spell cards.
+
+FINAL SCORE : (14,5 + 23 + 7 + 9 + 3 + 3) / 5 = 11,90
+=> 11,90/20
+
+Final comment :
+Despite being interesting, your script isn't fully in the theme, and this is unfortunate because if it was the case, I could have given you a lot more points. Next time, wonder many times if you're really in the theme or not, and also adjust the difficulty to the context. I don't worry about you for your future works, you're creative and original after all ! :)

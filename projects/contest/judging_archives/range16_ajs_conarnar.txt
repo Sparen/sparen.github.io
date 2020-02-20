@@ -1,0 +1,94 @@
+Wriggle - by Conarnar
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: N/A
+
+Nonspell 1: 7/10
+	*The pellets are fun to dodge, but the intermediary phase where Wriggle shoots the round bullets feels very trivial--it poses no threat, and is mostly gone by the time the next pellet wave begins
+	
+Spell 1 (Lamp Sign "Unreasonable Firefly Light"): 8/10
+	*Beautiful, challenging, and fun to dodge
+	*I would've appreciated a bit more variety other than basically the same pattern each wave, but it's short enough that it's not too big an issue
+	
+Nonspell 2: 7/10
+	*You probably should have had Wriggle start with just one element at a time before firing them both at once.  It can easily catch one off-guard when they're both coming at you simultaneously
+	*However, once you figure it out, it's a pretty fun nonspell!
+	
+Spell 2 (Firefly Sign "Constellation on Earth"): 10/10
+	*This spell's totally chaotic and nuts...  but in a good way!
+	*I'm actually quite impressed by how you managed to keep it so fair and manageable despite looking so dazzling and intimidating
+	*I keep wondering how the hell I'm dodging all that stuff, but I keep doing it consistently, so I'm sure it's no fluke.  That's good game design, my friend. :)
+
+Nonspell 3: 9/10
+	*This nonspell's deceptively simple, but it's surprisingly fun to dodge
+	*I really like how you give the player time to get out of the way of the dodged blasts
+	*But even so, getting out of their way isn't necessarily a cakewalk, so it doesn't feel trivial
+	
+Spell 3 (Wriggle Sign "Firefly Abnormality"): 8/10
+	*The pellets are really fun to dodge, especially when they condense.  But be a bit careful with randomness, I got practically walled by them once (and then never again, oddly enough...)
+	*The aimed shots don't play as much of a role as I would've hoped, since they mostly fire during the easy part and stop before things get challenging
+	
+Nonspell 4: 3/10
+	*Compared to your previous amazing nonspells, this feels like a big letdown, I'm sorry to say :/
+	*The lasers and bullet streams are very trivial to dodge, making the pattern feel rather boring
+	
+Spell 4 (Lamp Sign "Firefly Glow"): 6.24/10
+	*Hey you stole my gimmick! :P (jk)
+	*The gimmick is interesting but reasonable, though I feel the danmaku lacks variety and gets stale after a while
+	*I really appreciate the fact that the familiars stop firing if they pass directly over you, though
+	*If you had made multiple difficulties, I would've recommended making the "light auras" of those familiars smaller, to make things a bit more challenging.  Cuz as it is now, the darkness is kinda more of a nuisance than an actual obstacle facing the player ;P
+	*[+4% AESTHETIC BONUS] for the cool darkness mechanic
+
+Spell 5 (Insect Attracting Light "Selenic Deity"): 7/10
+	*Pretty standard for a final spell card, but pretty fun once it gets to the final phases
+	*Kudos for not letting it get TOO crazy near the end, keeping it challenging but reasonable the whole way through
+
+
+Average Score: 65.24/90 = 72.49% + [2% AESTHETIC BONUS] = 74.49%
+
+FINAL SCORE: 14.90/20
+
+Final Comments:
+	-I gave you the Aesthetic Bonus because while you didn't have that many flashy effects, I really like all the customization you have for the players (as is standard for your scripts :P)
+	-I really liked your danmaku overall!  It was challenging, but very fair for the most part.  And the patterns also felt very Wriggle-like

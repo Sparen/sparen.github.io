@@ -1,0 +1,65 @@
+SHIMMERING CYCLOCHASM by SPAREN
+(Judged by TresserT)
+ 
+Tested on Normal
+ 
+Can you have "Continue?" start on "YES YES YES"? I played this script 3 more times than I meant to because I accidentally hit no =_=
+ 
+Nonspell 1: (6/10)
+    The bouncing wall lasers caught me off guard at first, but they weren't fast enough to kill me so I guess that's not a cheapshot?
+    Once you know they're coming, there's nothing SUPER interesting though.
+    The aimed shot isn't a threat, so its just slowly bouncing lasers.
+    And the second phase might as well not even be there...
+    [On hard, it becomes quite unfair. The lasers are so tight, it becomes extremely easy to get boxed in.]
+ 
+Spell 1: (3/10)
+    ...okay...
+    Move back and forth, then aimed shots...
+    There's nothing going on in this pattern >_<
+    Maybe have something impeding the player from the back and forth movement.
+    There's enough space between the lasers to micrododge instead, so having the two waves overlap might have been okay.
+    At least, it would have been more interesting.
+    [The problem is kind-of-(not-really) corrected on hard, as its significantly harder to just move left and right. However, at that point it instead becomes bland micrododging followed by a bland aimed attack.]
+ 
+Nonspell 2: (9/10)
+    Okay I actually really like this one!
+    The pink lasers are aimed in such a way that you can't just stream and ignore them.
+    And the spinny lasers are unpredictable but fair. They add a lot of pressure, and ALSO demand your attention.
+    So you have to constantly watch two things. Fun!
+    [My feelings towards this pattern remain the same on hard.]
+ 
+Spell 2: (6/10)
+    I see what you were going for, and this has the potential to be a really good pattern. 
+    Unfortunately, the second laser wave isn't wide enough. You don't actually have to leave your little diamond to dodge it.
+    The first laser wave is also a complete non threat. Using it once to show off the gimmick was enough, you don't need to keep showing it, as it doesn't require any kind of dodging.
+    [The issue is resolved on hard, then taken to the extreme... the second wave of lasers spawns so quickly, you really don't have time to get out of the way.]
+ 
+Nonspell 3: (6/10)
+    I feel like you made good use of the laser rain here.
+    The difference between laser rain and bullet rain is that lasers are long. Which means they don't just have to be used for micrododging, they can also be used for walling.
+    Forcing the player to move horizontally and vertically really brings out the difference.
+    ...So at least you get props for using lasers like lasers instead of just fancy bullets.
+    In terms of dodging, the pattern is very frustrating.
+    The creeping lasers are pretty hard to read, and the rain's rng can get overwhelming very easily.
+    Its easy to get unfairly walled in on this pattern.
+    [The issue is amplified on hard. More bullets means more rng means more chance of getting randomly walled in with no way out.]
+ 
+Spell 3: (1/10)
+    At first I got super freaked out because of those insanely fast bouncy bullets. That has nothing to do with the score, I just thought it was funny.
+    This pattern amounts to lasers coming from every direction. It reminds me of Lumen's nonspell form Len'en EMS. Which isn't a good thing.
+    I don't know how you could improve this. Its really just not a good idea in its current form.
+    [My feelings towards this pattern remain the same on hard.]
+   
+Spell 4: (4/10)
+    To be fair, it is very obvious that the lasers will spawn from those spinny bar things.
+    But the speed at which the bars move, the way they bounce, and the way the lasers spawn makes it so that it might as well be random.
+    And not-quite-random, fast lasers that can spawn right next to the player... its not fun.
+    The lasers that aim towards the player neither help nor hurt the pattern.
+    [My feelings towards this pattern remain the same on hard.]
+ 
+Overall: (35/70 = 50%)
+    In general, you have a lot of good ideas but a lot of bad ideas as well.
+    The bad ideas take away from the script in general. Quality over quantity!
+    Additionally, some of your good ideas could be balanced better. Remove safespots and cheapshots.
+    I think you have a good umderstanding of what makes a pattern fun and interesting, you just need to balance things better.
+    I don't want to get cheap shotted because a pattern moves too oddly to read, or boxed in because I can't control the rng.

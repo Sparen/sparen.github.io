@@ -1,0 +1,88 @@
+Seiran - by Arby
+
+AJS's Supercool Judging System!
+
+* My focus is on fun factor, fairness, and challenge of the danmaku.  Aesthetics will be a MINOR component to reward going the extra mile or punish bad design choices.
+* I will score your entry based on the difficulty that is most "playable" for me (typically somewhere around Normal/Hard) while still being fun and fair
+	** I will not factor in how well your difficulty settings are balanced, however.  That'd just kinda complicate things.
+	** It would still be to your benefit to make balanced difficulties though--or at least more than one--so I can find a difficulty most suited to me for scoring
+
+My scoring system will be as such:
+	>0 -- Unplayable (i.e. broken, extremely buggy, etc.)
+	>1 -- Terrible/No effort
+	>2 -- Bad
+	>3 -- Needs work
+	>4 -- Has potential
+	>5 -- Average
+	>6 -- Okay
+	>7 -- Decent
+	>8 -- Good
+	>9 -- VERY good
+	>10 -- One of the best things I've seen
+
+		-Stage portion (if you have one): X/10
+		-Each nonspell (midboss included): X/10
+		-Each spell card (midboss included): X/10
+	*All scores will then be averaged, then multiplied by 2 to give a final score of XX.XX/20.00
+	*Aesthetic bonus 
+	(May be applied to individual pattern scores for making especially pretty/eye-sore attacks, or to overall score for general script aesthetics):
+		*You will receive neither a penalty nor bonus for making a decent to look at script that doesn't stand out.  I don't want to tip things in the favor of advanced scripters too much.
+		-Score bonus for going above and beyond to make something beautiful: +4% if applied to individual attack score; +2% if applied to overall script score
+		-Score penalty for making poor aesthetic choices that make certain things hard to see or look at: -4% if applied to individual attack score; -2% if applied to overall script score
+	
+I will also do my best to provide commentary on every aspect of your script throughout my judging, pointing out things you did right and things you could
+improve on.  I wouldn't call myself an expert, but these comments will just be my honest opinions and advice on what you could do for future scripts, or if you
+wanted to improve your contest entry script after the contest.
+
+***DISCLAIMER: Please don't get hurt if I give your script bad/mediocre scores.  I try to be as strict and objective as possible when scoring, so even scripts that I personally liked or thought
+were pretty decent may still get "meh" scores from me.  I try not to sugarcoat things in the hopes that you can improve, and so long as you're willing to listen to advice, I have nothing but
+respect for you.  Also, I'm just really really picky...  So please bear with me ^^; **
+
+=================================================================================================================================================================
+=================================================================================================================================================================
+=================================================================================================================================================================
+
+Difficulty judged: LUNATIC (not that I had a choice D:)
+
+Stage: 7/10
+	*While the stage was mostly just streaming, it was fast-paced and challenging enough to be interesting
+	*It also feels very satisfying, despite being so short
+	
+Nonspell 1: 9/10
+	*This nonspell can be very challenging the first few times around, but once you get the hang of it, it's quite fun
+
+Spell 1: 8/10
+	*A bit repetitive, and also quite difficult, but challenging and fun once you get the hang of it
+	*It's relatively short, so it doesn't overstay its welcome and become too stale from the repetition
+	
+Nonspell 2: 7/10
+	*Really short, but decently fun and challenging
+	
+Spell 2: 4/10
+	*The lasers are really difficult to read and avoid, especially since they still have a hitbox when they start moving after staying still for a while, forcing you to make a tight squeeze
+	*The bullet walls themselves are quite tight squeezes, which is just extra annoying given the weird lasers you gotta dodge
+	*Basically, I feel this spell just focuses too much on intense micrododging
+	
+Nonspell 3: 6/10
+	*A bit intense, especially the last part of each wave, but not too bad once you learn to take advantage of the tiny hitbox you've given the player
+	
+Spell 3: 7/10
+	*Fairly simple, but the pattern is beautiful and the dodging is pretty fun
+	
+Nonspell 4: 9/10
+	*Probably one of my favorite nonspells because of the variety of micro and macrododging in play here
+
+Spell 4: 8/10
+	*Can be very tricky if you haven't seen it before, but it can get fairly fun once you know what you're doing
+	
+Spell 5: 5/10
+	*An interesting pattern to dodge, and very fun up until about the halfway mark when it gets a bit too chaotic and difficult to be fun for me anymore
+	
+
+Average scores: 70/100 = 70.00% + [2% AESTHETIC BONUS] = 72.00%
+
+FINAL SCORE: 14.40/20
+
+Final Comments:
+	-As is usually the case, your danmaku is very solid and your pattern design is simple yet very fun due to the intensity
+	-However, it can be very off-putting that the level of difficulty is so high, especially since there are no alternate difficulty settings
