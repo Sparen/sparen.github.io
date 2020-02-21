@@ -42,7 +42,7 @@ var dnhph3docs_event = {
                     "fname": "EV_REQUEST_SPELL_SCORE",
                     "args": ["score : number"],
                     "returnv": "",
-                    "description": "Sets if the attack is a Survival Spell.",
+                    "description": "Sets the max Spellcard Bonus.",
                     "notes": "Only used in enemy boss scripts (Single).<br>Defaults to 0 if no value is set."
                 },
                 {
