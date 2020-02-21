@@ -1,0 +1,54 @@
+RaNGE 20 - Tad Marx Barba
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+ 
+Played with Seija B because A is way too fast.
+
+Nonspell 1: Very tough pattern. If I could make more precise movements I probably wouldn't mind as much, but even without high-speed Seija she's still pretty fast. Too hard. 3.5/10.
+ 
+Spell 1: The opening wave seems very tight to dodge (especially with a player that can't move precisely). On the other hand, some of the new few waves are trivial until she starts the weird screen-shaking...things. A very odd and (in my opinion) unbalanced pattern. 2.5/10.
+ 
+Nonspell 2: This is really nonsense if she begins the pattern from low on the screen. Even without that it's still extremely tough with the player movement available. 2/10.
+ 
+Spell 2: I'd like this one but something seems a bit off with the hitboxes. Either the player's is too big or the arrowheads are too big. Either way, that makes what could have been a fun pattern clipdeath hell. 3/10.
+ 
+Nonspell 3: Getting below her seems very difficult-impossible, and the homing shot doesn't do much actual damage. Ended up sitting in a corner dying a bunch before deciding to just bomb this one. The cyan and green bullets are very unpredictable and this pattern is a bit of a mess. 1/10.
+ 
+Spell 3: Usually patterns that spawn bullets this close to you (the ones spawned by lasers) have them show their direction and accelerate from no speed, to give the player time to read the pattern. This just flings them at you. Then you have to deal with bubbles while Doremy stays in the way relatively low on-screen. She can still kill you by touching. Overall a decent idea but needs much better execution. 2.25/10.
+ 
+Nonspell 4: A reasonable pattern! Still a tad hard, but I'd say it's decent even with that in mind.  6.75/10.
+ 
+Spell 4: A lot of the bullets here are too fast to be fair. If they were slower this might be reasonable. 2.5/10.
+ 
+Nonspell 5: Hitboxes are too large for this type of micrododging to be doable, and the bullets are also a tad too fast. 3/10.
+
+Spell 5: It's a really cool concept, pun aside! It's just that the hitbox is way too big for this to be feasible. The second phase also has bullets suddenly change their behavior while they're basically on top of you. Great idea, but not done well. 2/10.
+ 
+Spell 6: Bullets curve oddly, move too fast and the waves clump up in ridiculous ways. I really don't like this. 1/10.
+ 
+Danmaku Score: 2.68/10 (scaled to 3.22/12)
+
+Generally these patterns are just entirely too hard/unfair, especially with the player choices. You either have one that's stupidly fast or one that's less stupidly fast, but the hitbox is still too gigantic. Some of these patterns are creative and a lot of work was put into them, but creativity doesn't matter if they're unplayable. Gameplay comes first.
+======================================================================================================================
+ 
+Aesthetically slightly below average. Patterns are relatively pretty and the STG Frame is fine? The player has distracting elements of the weird...blob behind Seija and the shots rendering above the player. The dialogue is very hard to read on such a background. 1.75/4.
+======================================================================================================================
+ 
+As for following the theme, this script seems a tad below average. Some patterns were decently themed but others were typical unaltered Doremy fare. 1.75/4
+ 
+OVERALL SCORE 3.22 + 1.75 + 1.75 = 6.72/20

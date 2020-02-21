@@ -1,0 +1,57 @@
+RaNGE 19 - Achy and gtbot
+
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fair well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10 and commented on with my reasoning, and the average of that will be taken to calculate the Danmaku Quality score.
+ 
+Usage of Reisen's Gimmick(s)/Creativity: 6/20
+ 
+Expressing the use of Reisen's artifact in danmaku is the central theme of this contest. As such, the script will also receive a score based on how well it uses Reisen's gimmick. This won't be given on a per-pattern basis, but individual patterns might be mentioned in my comments for this rating.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+
+Nonspell 1: Utsuho nonspell but the bullets stop and go weird ways. Just like Reisen's patterns. Cool. 7/10.
+
+Spell 1: A twist on another nonspell. The moving safespot is neat. I'm not too impressed by the random spray she does to supplement it, but it's not like she doesn't do that in the canon games too. 7.25/10.
+
+Nonspell 2: Not as fun/interesting as the first nonspell in my opinion, but it's not particularly bad. 6.5/10.
+ 
+Spell 2: Very good idea and fun pattern to play. 9.25/10.
+
+Nonspell 3: Utsuho nonspell with...are they afterimages if they move first? Regardless, it's a solid pattern. 7.5/10.
+
+Spell 3: Oh no it's Sinker Ghost. I never really found this kind of pattern that interesting, since you just circle around. It's especially easy compared to other patterns, too 6/10.
+
+Nonspell 4: A variant where she shoots aimed stuff while flying back and forth is pretty new. 7.5/10.
+
+Spell 4: I wasn't actually that sure what was going on here, but it seems like the suns spew out those weird blobby shots. Getting beaned by a sun that's below you offscreen sort of feels bad. Otherwise it's a pretty slow pattern - reasonable challenge, but a bit boring. 6.5/10. 
+
+Average Danmaku Quality: 7.19
+ 
+=======================================================================================================================================
+USAGE OF REISEN'S GIMMICK/CREATIVITY
+=======================================================================================================================================
+ 
+I think Reisen's gimmick was well-used. Most patterns are pretty creative, but some feel like rehashes of what already exists. Overall it's still quite a bit above average. 4.5/6.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+It's pretty pretty. Len'en for a Touhou boss is a bit odd, but the bullets and STG_Frame look very nice. There could be a bit more sounds, but otherwise it's very good. 3.75/4.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+7.19 + 4.5 + 3.75 = 15.44/20

@@ -1,0 +1,63 @@
+RaNGE 20 - Sparen
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+ 
+This script was judged using the suggested Normal difficulty.
+
+Stage, Pre-Reisen-Monologue: I like how the seasonal theme is represented by the background and enemies changing. The stage feels weird - not unfair for the most part, but just plain weird. As such it's fine. 7/10.
+
+Stage, Post-Reisen-Monologue: Here is when the stage starts to drag on a bit. There's nothing completely new, really, just the same enemies used in differing formations. 6/10.
+ 
+Nonspell 1: Slight seasonal spin on Tewi's bouncy stuff. Feels pretty trivial compared to the stage, might need to be harder. 6/10.
+ 
+Spell 1: Here's where the first nonspell's challenge went! I like this pattern. 8.5/10.
+ 
+Nonspell 2: why are there splatting noises. Anyway it's also trivial like the first non. The randomness of the...thing...that falls down and leaves trails might be a major reason why it's easy.  6.25/10.
+ 
+Spell 2: It's...alright? I think it drags on a lot with her tendency to hang around the sides that the weird bouncy bullets are on. Not hard, just long. 6.75/10.
+ 
+Nonspell 3: A nice, spread out pattern. Feels a tad more Reiseny than Tewiish, but I like it all the same. 8/10.
+ 
+Spell 3: Multi-phased attacks are nice. This one is pretty easy if you just stay in the lines of green bullets, but that's not necessarily bad. Doesn't really stand out to me but is definitely above average. 7.5/10.
+ 
+Nonspell 4: It's a cool-looking formation of familiars, but gameplay-wise it's pretty trivial unless you're not under her for some reason. Considering Reisen's forward-firing shot, there's no reason to ever not be under her. 6.75/10.
+ 
+Spell 4: An interesting challenge for sure. Not sure how random the bullet trails that the snowflakes make are, but I haven't had any waves of them that seemed unreasonable. Pretty good. 8/10.
+
+Nonspell 5: It's good. The fireballs made by the suns are just sparse enough to be fair. 8/10.
+
+Spell 5: The phase where the familiars go out and shoot those wavy lines of bullets is probably too difficult in my opinion. By comparison, the phase beforehand with the "flowers" is probably too easy. A bit of an oddball. 6/10.
+
+Nonspell 6: More Tewi-Curvy-Curls With Seasonal Addition. Good, good. 8/10.
+
+Spell 6: Simple and effect criss-cross hell. Those lasers look neat and I think the pattern is good. 8/10.
+
+Spell 7: What the HELL is this. Memes aside, besides the opening with the Tewi head lasers I actually think this is a pretty fun spell. The opening had me dodging bouncy Tewi noodles in a confined space and I didn't like that much, but if I saw it coming it's probably routeable. Very good. 9/10.
+
+ 
+Danmaku Average: 7.41/10 scaled to 8.89/12
+======================================================================================================================
+ 
+Aesthetically pretty cool. I liked the background changing with the seasons and the sounds used were very thematic. Sometimes the colors make it a bit hard to see and you could try to differentiate items from bullets more. Overall pretty good! 3.25/4.
+======================================================================================================================
+ 
+This script certainly feels very seasonal. Some of the boss' patterns are weaker than others in terms of seasonality, but overall this is a very good score too. 3.5/4
+ 
+OVERALL SCORE: 8.89 + 3.25 + 3.5 = 15.64/20
+
+As a minor gripe, Reisen having like no item collection radius is really annoying :(

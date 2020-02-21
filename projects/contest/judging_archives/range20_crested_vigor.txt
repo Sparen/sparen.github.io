@@ -1,0 +1,34 @@
+Crested judging for RaNGE 20: Unseasonal Mooning Daydream by NecroHeart/Vigor.
+Script contains 4 nonspells and 5 spells.
+No difficulty selection. Only usable player script is a custom Aya.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+The aesthetics are fantastic and aren't distracting, so no penalty will be issued.
+
+Nonspell 1: Fantastic flower blooming and just the right amount of difficulty with the orbs from the side.
+19/20
+
+Summer Fire "Blazing Earth Spirits": An interesting spell that is unfortunately too dense and too difficult compared to the others.
+13/20
+
+Nonspell 2: The mini-Suika's suicide bullets adds some complexity to this nonspell.
+16/20
+
+Autumn Crowd "Procession of Hundred Demons": Unfocused dodging clears the mini-Suikas so fast that the spell never gets threatening...
+15/20
+
+Nonspell 3: Very fun to dodge especially once the large bubbles start spawning.
+19/20
+
+Winter Sigh "Strange Labyrinth of Inhalation": Neat timeout spell with gravity. Well-constructed to require macrododging but never walls.
+20/20
+
+Nonspell 4: Fast dodging slows down into dense slow waves. The smooth transition between the two makes this quite an interesting pattern.
+18/20
+
+Spring Arcanum "Devastation in Three Steps": An interesting take on Knock Out in Three Steps, and significantly more challenging than it.
+That said, I think some of the bullet hitboxes are a little too large for such micrododging.
+15/20
+
+Overall: 16.9/20
+An incredible script that shows what "quality over quantity" means.

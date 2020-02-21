@@ -1,0 +1,57 @@
+RaNGE 19 - Sparen
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fair well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10 and commented on with my reasoning, and the average of that will be taken to calculate the Danmaku Quality score.
+ 
+Usage of Reisen's Gimmick(s)/Creativity: 6/20
+ 
+Expressing the use of Reisen's artifact in danmaku is the central theme of this contest. As such, the script will also receive a score based on how well it uses Reisen's gimmick. This won't be given on a per-pattern basis, but individual patterns might be mentioned in my comments for this rating.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+
+Since this one offers difficulties, I played on Normal mode.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+ 
+Nonspell 1: A solid pattern with funky visual effects that aren't distracting enough to make it unfair. Good. 7/10.
+ 
+Spell 1: Funkiness has been increased with extra fake hitboxes. The pattern is relatively easy to compensate, though those hitboxes are a lot more distracting than one would think. 7/10.
+ 
+Nonspell 2: Funkiness continues. I like pattern more than the previous two - it's more fun and the visual effect adds more challenge than the last nonspell. 8.25/10.
+ 
+Spell 2: Exactly what it says on the tin - afterimages galore. Pretty easy compared to previous attacks, even with the afterimages taken into account. Simply redirect the...burst thing...and dodge the rings afterwards. It's pretty fun. 7.25/10.
+
+Nonspell 3: I think the curving of the criss-crossing bullets is just a little bit too much. The visual effect emanating from the player doesn't really affect much of anything, so I think you did realize that the curve was a bit tough. I would say it's a tad below the other patterns. 6/10.
+
+Spell 3: Since all of the pattern is fired in straight walls, there's clear lines to avoid and that makes the bullet-obscuring gimmick work well. Good work. 8.5/10.
+
+Spell 4: The randomness of the weird circle locations means this pattern can vary wildly, both in difficulty and length. Generally it's way harder than any of the previous patterns, too. The portion of the STG Frame falling and spawning bullets is amusing, though. I would have liked this more if it were a bit easier and more consistent. 5/10. 
+
+Average Danmaku Quality: 7
+ 
+=======================================================================================================================================
+USAGE OF REISEN'S GIMMICK/CREATIVITY
+=======================================================================================================================================
+ 
+ALL of the patterns seem influenced by Reisen's ability. Even if gimmicks like bullets fading out and reappearing aren't explicitly used, I think this is still a great representation of the artifact and a good job of merging the two character identities. I'll give you 5/6.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+I think this is aesthetically pretty great! The music, sounds and graphics sync up together very well. 3.75/4.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+7 + 5 + 3.75 = 15.75/20

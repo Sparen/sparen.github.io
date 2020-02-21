@@ -1,0 +1,56 @@
+RaNGE 19 - Awalys
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fair well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10 and commented on with my reasoning, and the average of that will be taken to calculate the Danmaku Quality score.
+ 
+Usage of Reisen's Gimmick(s)/Creativity: 6/20
+ 
+Expressing the use of Reisen's artifact in danmaku is the central theme of this contest. As such, the script will also receive a score based on how well it uses Reisen's gimmick. This won't be given on a per-pattern basis, but individual patterns might be mentioned in my comments for this rating.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+ 
+Nonspell 1: It's non-trivial to find ways to stay under Aya and shoot her during this pattern, with the aimed bullets and her propensity to move around. I think this pattern is too difficult and lengthy, considering the gimmick. 5.5/10.
+ 
+Spell 1: I think this one drags on a bit long, since you need to move out from under her for a while in order to redirect the kunai. It's a good idea though! 7.75/10.
+ 
+Nonspell 2: Very neat concept when the rings stop due to Reisen's gimmick. Difficulty varies depending on her height on the screen - if she's low it's really difficult, if she's high it's doable. Good idea, but I think it's also a tad too hard. 6/10.
+ 
+Spell 2: The difficulty feels challenging, but fair. I like this spell a lot. 9/10.
+ 
+Nonspell 3: As usual, it's a great idea, just a bit too hard. Still, this is a pretty good nonspell. 6.5/10.
+ 
+Spell 3: Not dying isn't TOO hard - it's hard, but not unreasonably so. Shooting her while not dying, on the other hand, is pretty hard. She's rarely in the top center for that long, and shooting her at other times is difficult since she gets pretty low pretty quickly, and staying close to her means you'll get beaned by fast arrowheads. If she had way less HP it would be more feasible, but as it is I think the difficulty and tedium outweigh the positive aspects. 4/10.
+
+---
+Since this script uses the reload and shoot mechanic, I'll give my thoughts about that too (and give it a score). I like the mechanic, though the implementation could use a little refinement - you only shoot straight ahead and it takes a lot of shots to finish off most lifebars, but Aya is pretty mobile, meaning that you come close to timing out most patterns unless you've mastered the mechanic. I'd like to see what more can be done with this. 6/10. 
+ 
+Average Danmaku Quality: 6.39
+ 
+=======================================================================================================================================
+USAGE OF REISEN'S GIMMICK/CREATIVITY
+=======================================================================================================================================
+ 
+I think the patterns are creative variants on existing patterns and use the gimmick pretty well. Nonspells in particular are pretty cool. Good work. 4.75/6.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+Aesthetically I think this is pretty great. 3.5/4.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+6.39 + 4.75 + 3.5 = 14.64/20

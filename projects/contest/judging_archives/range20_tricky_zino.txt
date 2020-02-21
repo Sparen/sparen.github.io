@@ -1,0 +1,50 @@
+RaNGE 20 - Zino
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+
+Played with the provided Anna Scarlett player as both the focus and unfocus shot.
+
+Nonspell 1: Stars coming down, yay. Not the best, not the worst. 6.25/10.
+ 
+Spell 1: Dodging a bunch of random star rain isn't the most inspired, but compared to most random attacks it is pretty consistently fair. 6/10.
+ 
+Nonspell 2: Stand in the lane and then dodge the random stars. I like it less than the previous non. I think it would be more interesting if you did something like the yellow stars having an actual pattern and lingering more, so you had to dodge the remnants of those while sitting in the lines made by the purple stars. 5.5/10.
+ 
+Spell 2: There's very little actual dodging to do here once you understand how the orbs that spawn stars work. Trivial and out of place compared to earlier patterns. 4/10. (Also, while this won't affect your score, I discovered a bug where one of the orbs would linger into the next non. I assume it was spawned while/after the attack's lifebar died See https://puu.sh/DxFxh/e25a71e088.png. It deleted after the next non ended)
+ 
+Nonspell 3: Wormy stars, woo. Not that much to dodge but isn't really bad, per se. 5.5/10.
+ 
+Spell 3: The gimmick's kind of interesting but I don't think it adds much to this pattern. It's still just dodging rings, only the rings sporadically change speeds in certain sections and ram you sometimes. Neat concept, poor execution. 3/10.
+ 
+Nonspell 4: Not all that much gameplay here beyond standing in the lanes either. Not all that good or bad. 5/10.
+ 
+Spell 4: An interesting one. A fairly-designed spell where you dodge from both the top and bottom. 7/10.
+
+Spell 5: A weird mess of a survival. The one that shoots the eventually-fast roughly aimed stars is probably the worst one, but the stop-and-go cyan lasers also really get in the way. The blue walls also take so long to move that they clog up a lot of the screen. 3.25/10.
+
+Spell 6: Also a really odd one. The last phase becomes suitably challenging, but before that is pretty weird. There's a lot of dead time and the bullets both take forever to reach you and don't have bomb immunity, so dying or bombing can completely trivialize this for like 7 seconds. Sort of a cool idea, but simply too odd and strangely balanced to really give a good score. 4/10.
+ 
+Danmaku Score: 4.95/10 (scaled to 5.94/12)
+======================================================================================================================
+ 
+Aesthetically, it's...fine? Volume balance is kind of off between sound effects and the sound for picking up items. Most elements don't really stand out but they aren't hideous or anything either. 2/4.
+======================================================================================================================
+ 
+This script does a pretty poor job of fitting the theme in my opinion. Spell names show seasonal tendencies, but not much else really does. 1/4
+ 
+OVERALL SCORE 5.94 + 2 + 1 = 8.94/20

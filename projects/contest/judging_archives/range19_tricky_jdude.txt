@@ -1,0 +1,55 @@
+RaNGE 19 - JDude
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fair well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10 and commented on with my reasoning, and the average of that will be taken to calculate the Danmaku Quality score.
+ 
+Usage of Reisen's Gimmick(s)/Creativity: 6/20
+ 
+Expressing the use of Reisen's artifact in danmaku is the central theme of this contest. As such, the script will also receive a score based on how well it uses Reisen's gimmick. This won't be given on a per-pattern basis, but individual patterns might be mentioned in my comments for this rating.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+ 
+Nonspell 1: The stars transforming into fast aimed bullets is extremely cheap. If there was a warning, and/or if they started at 0 speed and accelerated, then it might be reasonable, but neither of those things happens. The rest of the pattern is a generic criss-cross that isn't bad or worthy of much praise, but the opening sours the rest of the pattern. 2.75/10.
+ 
+Spell 1: I like this. The lifebar feels too long, but otherwise it's reasonably fun micrododging. 7.25/10.
+ 
+Nonspell 2: It's a Reisen-like nonspell. It just doesn't feel much like something Marisa would use, but it's fine besides that. 6/10.
+ 
+Spell 2: I'm not sure if the blinking bullets actually lose their hitboxes when faded out, but they fade out for such a short time that it really doesn't matter. It's best to just avoid them, which makes this pattern a pretty generic game of dodging rings with two different speeds. Not as interesting or fun as the first spellcard. 4.5/10.
+ 
+Nonspell 3: Weird. Creative, I'll grant you, but very weird. You can get rid of half of her lifebar before even having to dodge anything, but then dodging this is just so...weird. Weirdness aside, I think this pattern is solidly average with all parts taken into consideration. 5/10.
+ 
+Spell 3: Pure random spam with movement constricting. Luckily it's fairly reasonable random spam! Still, though, it's not very creative or interesting to dodge. 2.5/10. Unrelatedly, you should really be sure to make the bullet spawners spell-resistant - see https://www.youtube.com/watch?v=sYry4sAxKjE&feature=youtu.be
+ 
+Spell 4: It's a simple, effective and fun pattern. The concept for this is excellent. I think the first phase is far harder than the second, but besides that difficulty weirdness I like this a lot. 8.25/10.
+ 
+Average Danmaku Quality: 5.179
+ 
+=======================================================================================================================================
+USAGE OF REISEN'S GIMMICK/CREATIVITY
+=======================================================================================================================================
+ 
+While Reisen's bullet-shifting gimmick isn't explicitly used, the patterns do feel fairly Reisenlike in a few ways. This counteracts how some of them don't really feel like something Marisa herself would use. 3/6.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+Solidly average aesthetically, I would say. 2/4.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+5.179 + 3 + 2 = 10.179/20

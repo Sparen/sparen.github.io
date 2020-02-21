@@ -1,0 +1,46 @@
+RaNGE 20 - Adam & TTBD
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+
+Played as Reimu on Hard Legacy mode.
+
+Nonspell 1: A wonderful start. I personally didn't like dealing with the wavy amulets before the nonspell looped, but I think they were fair. 9/10.
+ 
+Spell 1: I really enjoy this one. Dodging from all sides that happens at a very reasonable pace. 9.25/10.
+ 
+Nonspell 2: I really like this nonspell too. The phases all work together to make dodging that is varied and fun. 9/10.
+ 
+Spell 2: +1 Tricky Point for using Soku sounds. Tricky Points are worthless, unfortunately. This pattern, on the other hand, is also very good. It's a chasing spell done well and I love that. 9.5/10.
+ 
+Nonspell 3: Another great nonspell. My only gripe would be that it feels rather easy compared to earlier patterns. 8.5/10.
+ 
+Spell 3: There's a cute gimmick and the danmaku is fun enough to dodge. I almost feel like it's dumbed down a bit too much to accommodate the wind, but I still like it. 8.25/10.
+ 
+Nonspell 4: I think I'm just terrible at this one because I find it very easy to get stuck in a corner. If you avoid that though it's another excellent pattern. 9/10.
+ 
+Spell 4: A fast-paced winter spell is unexpected but welcome. Good way to end the script. 9/10.
+ 
+Danmaku Score: 8.94/10 (scaled to 10.72/12)
+======================================================================================================================
+ 
+Aesthetically very great. The background changes at the beginning of nonspells are especially pretty and the patterns themselves are also great to look at. 3.75/4.
+======================================================================================================================
+ 
+The patterns perfectly follow the theme. 4/4
+ 
+OVERALL SCORE 10.72 + 3.75 + 4 = 18.47/20

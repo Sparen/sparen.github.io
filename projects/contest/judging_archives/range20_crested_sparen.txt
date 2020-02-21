@@ -1,0 +1,55 @@
+Crested judging for RaNGE 20: Seasonal Rabbit by Sparen of Iria.
+Script contains a fairly lengthy stage section, 6 nonspells and 7 spells.
+The only player script usable is a custom Reisen.
+Played and judged on Normal difficulty.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+Aesthetics are good and not distracting, hence no penalties will be issued.
+
+Stage section: Neat ideas with many different kinds of enemies representing the different seasons. Some enemies are blind killers, but that's not really an issue.
+16/20
+
+Nonspell 1: Standard Tewi fare of curving bullet lanes with a few straight bullet lanes. Works well, if a little easy.
+14/20
+
+Leaping Rabbit "Leaping Bouquet (N)": More curving bullet lanes, but the flower lanes are much thicker than normal and can be a blind killer. That's not an issue though. Good pattern.
+17/20
+
+Nonspell 2: Seemingly randomly fired non all around. Not very dense, and the flowers falling are too sparse to meaningfully restrict movement. A tad too easy in my opinion.
+13/20
+
+Meadow Sign "Celebration of Okuninushi (N)": An interesting movement restriction spell that encourages staying in the center. Fairly challenging to keep track of the curving bullet lanes and the green orbs. Good pattern.
+19/20
+
+Nonspell 3: Curving bullets that appear to form lanes mixed with a field of pellets. Good pattern.
+19/20
+
+Orchard Sign "Dance of the White Hare (N)": While I like the idea of encouraging dodging from the side, the rings are too sparse to pose a meaningful challenge.
+14/20
+
+Nonspell 4: A good mix of walls and single droplets encouraging a mix of micro and macrodoging. The fast walls don't really pose much of a threat though, even when she moves across the whole screen.
+15/20
+
+Frost Sign "Four Leaf Snow Clover (N)": The snowflakes are too random. The laser part is good though.
+12/20
+
+Nonspell 5: Part of me feels extremely uneasy about having to horizontally misdirect when there are so many wiggly walls, but it's a good pattern.
+18/20
+
+Observing Rabbit "Frost Blossoms of 1000 Years (N)": The first part is alright. The second part is not.
+10/20
+
+Nonspell 6: Curving walls with random bullets is a good combination. The random spray is just dense enough to create a challenge while not walling, so good job on that.
+18/20
+
+Inaba Sign "Dance of the Tottori Dunes (N)": I had to look into the code to see if the lasers were patterned or not. They're not, which is unfortunate given how difficult it can be to read them in time.
+If the lasers rotated in a static fashion this spell would be good, but it's a little unfair as is.
+11/20
+
+Earth Rabbit "Rabbit's Seasonal Ascent": I understand trolls but covering the healthbar seems a little pointless...
+The actual pattern is alright but the curving of the droplets on the Winter part is a little too extreme. Tewi having a hitbox can also make the Spring part a little questionable.
+14/20
+
+Overall: 16.2/20
+Some of the patterns were really good but it's a real shame that some of the patterns were not well balanced. 
+Considering how many submissions had a lot of patterns, I would have definitely preferred scaling down the size of these scripts to maintain a high overall quality.

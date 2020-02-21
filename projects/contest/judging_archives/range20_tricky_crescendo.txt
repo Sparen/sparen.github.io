@@ -1,0 +1,50 @@
+RaNGE 20 - Crescendo
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+
+Nonspell 1: Takes a while. Those thin lasers are really irritating to see in my opinion. Besides those flaws it's fine, but those flaws do take away from enjoyment. 5.5/10.
+ 
+Spell 1: Another pattern that's fine. Doesn't really stand out as good or bad - just dodge the laser spam. 5.5/10.
+ 
+Nonspell 2: Also drags on a bit. Minus the annoying lasers, at least? 6/10.
+ 
+Spell 2: I actually like this one! It's fun to have to stay on the move and account for lasers coming from stars from plenty of sides. 8.25/10.
+ 
+Nonspell 3: I think the nonspells generally have too much HP. These lasers aren't as irritating to see at least. I think this is between the last two nonspells. 5.75/10.
+ 
+Spell 3: Difficulty seems way harder compared to earlier patterns. The sun exploding into view is pretty hilarious. Pattern-wise, cool but could stand to be easier to fall in line with earlier patterns. 6.5/10.
+ 
+Nonspell 4: Those are some sleek-looking curvy lasers. Gameplay-wise, health seems too long and plays a lot like the other nons though. 6.25/10.
+ 
+Spell 4: Seems to take a tad long. A bit more warning on which sides the lasers will come from would be nice. Gameplay-wise there's not much of a pattern here beyond dodging the random stars and hoping a laser doesn't get you if you happen to dodge near one of the sides. 6.25/10.
+
+Spell 5: A bit of a weird one. Weird doesn't mean bad, however - I think it's fine. 6.5/10.
+
+Spell 6: Also a bit odd, but lasts for a reasonable amount of time and is decently fun. 6.75/10.
+
+Spell 7: The main substance of this final is dodging the star spam from Marisa, but the elemental variants coming from the sides are enough to at least make this interesting. Not bad. 7/10.
+ 
+Danmaku Score: 6.39/10 (scaled to 7.66/12)
+======================================================================================================================
+ 
+Aesthetically slightly above average. Nothing is really good or bad, but at least the STG Frame is unique? 2.25/4.
+======================================================================================================================
+ 
+As for following the theme, this script seems thoroughly average in that regard. Some patterns are pretty decent, but others are pretty weak at following the theme. 2/4
+ 
+OVERALL SCORE 7.66 + 2.25 + 2 = 11.91/20

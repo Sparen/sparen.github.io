@@ -1,0 +1,61 @@
+RaNGE 19 - Robin
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fair well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10 and commented on with my reasoning, and the average of that will be taken to calculate the Danmaku Quality score.
+ 
+Usage of Reisen's Gimmick(s)/Creativity: 6/20
+ 
+Expressing the use of Reisen's artifact in danmaku is the central theme of this contest. As such, the script will also receive a score based on how well it uses Reisen's gimmick. This won't be given on a per-pattern basis, but individual patterns might be mentioned in my comments for this rating.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+ 
+Nonspell 1: Feels like a bit of a mix of a Satori and Reisen nonspell, which is pretty much the point. Solid. 7.5/10.
+ 
+Spell 1: While the concept could be interesting, it's incredibly easy to just sit in the center of the circle and ignore everything. I literally didn't move and just shot down Satori before the second amulet ring became any sort of threat. I even tried moving a bunch to try to get something interesting to happen - see https://www.youtube.com/watch?v=x6g3JcIhJb0&feature=youtu.be. Normally I would discount cheesey strategies, but this is so simple to pull off that plenty of players will do it accidentally. Not having to do anything is not fun. 3/10.
+ 
+Nonspell 2: Having the first wave be aimed around you is a very good decision. I like this pattern - it's fair, fun, and demonstrates the gimmick well. 8/10.
+ 
+Spell 2: A concept I like a lot! Thankfully doable if you start from the center. A bit tough, but ultimately pretty fun and creative. 9/10.
+
+Nonspell 3: Recollection of waterfalls, hmm? This does make for a pretty neat boss pattern. Creative recollection and does feel a tiny bit Reisen-ish if you squint. 7.75.
+
+Spell 3: Definitely different, but the gimmick is clear and I think it's a fun break from regular dodging. 8.25/10.
+
+Nonspell 4: Encourages a lot of movement and the walls can be wonky, but not in an unfair way. 7.25/10.
+
+Spell 4: While it isn't strictly random, it does feel like randomish dodging from all sides. It's harder than most of the patterns and ultimately not all that interesting, and it does seem to throw bad things at you if you're unlucky. 4.5/10.
+
+Nonspell 5: Interesting pattern. The round bullets mostly serve as a distraction, which I suppose could be the point? Another solid pattern. 7.5/10.
+
+Spell 5: Can be pretty cheap if you're near the wall-spawning-lines when they head towards the bottom of the screen. Otherwise, neat idea and an interesting end to the script. 7.5/10. 
+
+Average Danmaku Quality: 7.025
+ 
+=======================================================================================================================================
+USAGE OF REISEN'S GIMMICK/CREATIVITY
+=======================================================================================================================================
+ 
+Reisen's gimmick is used well, and besides the patterns that outright use bullet phasing there are others that feel like ones Reisen would use. Excellent job in this department. 5.5/6.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+Nothing looks bad, and work was done to make things look nicer. Minimalistic sound effect use, but the very important things do have sounds. The rabbit ears are a nice touch in my opinion. Above average. 2.5/4.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+7.25 + 5.5 + 2.5 = 15.025/20

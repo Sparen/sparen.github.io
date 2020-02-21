@@ -1,0 +1,42 @@
+Crested judging for RaNGE 20: Seasonal Chaos by Zino.
+Script contains 4 nonspells and 6 spells.
+No difficulty selection. Judged with Aiden Lathzin (clone) for both shots.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+Aesthetics are not distracting, hence no penalties will be issued.
+
+Nonspell 1: Walls of stars force micrododging. It dies really fast though.
+15/20
+
+Fall Sign - "Nova Impact": I can see what the spell's supposed to do but it dies before any bullets even pose any danger.
+3/20
+
+Nonspell 2: It's just sitting in a lane and it dies in half a wave.
+1/20
+
+Spring Sign - "Nebula Gravitation": I dodged between 2 raindrops twice and it died.
+3/20
+
+Nonspell 3: The lines of stars are an interesting idea but it dies so fast.
+4/20
+
+Winter Sign "Omni-Warming": Timeout spell? Interesting idea with the flashlights but it really doesn't mean much.
+15/20
+
+Nonspell 4: Died in 2 waves. At least I had to dodge something.
+5/20
+
+Summer Shower - "Curse and Blessing of Eridanus": The ghost bullets showing where the star walls will go is a very nice touch.
+That doesn't really mean much when I can just shotgun and kill the spell before it presents any threat.
+10/20
+
+All Sign "Star Separation": Another timeout? It's an interesting idea with the four copies chasing you with different bullet patterns but I feel like there's wasted potential if their movements were more patterned.
+15/20
+
+Final Sign "New Season": 3 timeouts is a bit much for 6 spells, but at least they don't die in 4 seconds. The spell is good but the Master Sparks on the side don't do anything.
+15/20
+
+Overall: 8.6/20
+I don't know what you were expecting we'd pick when we play a boss rush script but it's not going to be a spread shot. The insane damage or the lack of health the bosses have makes some patterns completely skipped.
+When you give players/judges options, you have to make sure that all of them are balanced.
+On a sidenote, I don't see the point for the aspect ratio especially with how much empty space the HUD has, and the player sprite's vertical height changing when pressing up/down looks very strange.

@@ -1,0 +1,36 @@
+Crested judging for Achy's Entry for the 20th RaNGE contest.
+Script contains 4 nonspells and 4 spells.
+No difficulty selection, and there was no player restriction.
+It's important to confine player script selection or judges will tend to use default scripts like the default Rumia, which is less than ideal.
+I judged with Ultima's DDC ReimuB.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+Aesthetics are good and not distracting, so no penalty will be issued.
+
+Nonspell 1: A good take on Sekibanki's bullet trains. It dies kind of fast, though.
+15/20
+
+Body Horror "Jinmenju Harvest": The pattern gets harder over time, which actually causes issues since the heads take so long to fly down after the warning lasers show up.
+A simple fix would be to extend the lifetime of the warning lasers and move them along with the heads.
+18/20
+
+Nonspell 2: Isn't very different from a standard Sekibanki non and largely comes down to streaming.
+14/20
+
+Frostbite "Spine-Chilling Stare": The reflection of the cyan lasers provides an interesting style of area denial.
+17/20
+
+Nonspell 3: Cutting through the bullet snakes is an interesting challenge but there doesn't seem to be enough health for that to happen much.
+16/20
+
+Disorientation "Exploding Head Festival": This is a fantastic usage of blinding as the only important aspect to note during the short non-blind periods is the angle of the flower explosion.
+19/20
+
+Nonspell 4: Aside from Sekibanki's movement it's almost a normal Sekibanki nonspell.
+15/20
+
+Body Horror "Freakshow Theme Park": Now that is creative and the best spell in the entire contest.
+20/20
+
+Overall: 16.8/20
+A good script overall with an amazing final spell. If some of the nons were changed this will be a fantastic script overall.

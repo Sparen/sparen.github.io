@@ -1,0 +1,46 @@
+RaNGE 20 - Achy
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+ 
+Played as Python's Not Sagume A, woo.
+ 
+Nonspell 1: Great idea. I think the yellow explosions are a bit too distracting for a bullet deletion effect though, at least for this attack. Maybe if they were smaller? 7/10.
+ 
+Spell 1: I like the idea behind this one too. The yellow bullets might accelerate a bit too suddenly though, which can be a real problem when the spell ramps up. 7.25/10.
+ 
+Nonspell 2: The explosions are a bit less of a distraction here and I think the nonspell is pretty decent. 7.75/10.
+ 
+Spell 2: A neat enough idea. Indicating what bounces off of what with colors is good design. All-around good. 8.5/10.
+ 
+Nonspell 3: A pain to restream, but thankfully it doesn't have that much HP. 7.5/10.
+ 
+Spell 3: A bit of an odd pattern for Sekibanki, but the blinding aspect works out pretty well here. 8/10.
+ 
+Nonspell 4: The movement is interesting - otherwise it's fairly standard stuff. 7.5/10.
+ 
+Spell 4: This pattern is...cute. I like it very much. It's fair and a very creative design. I honestly think it's the best pattern in terms of creativity I've seen, while also being fun and balanced, so it deserves a 10. I don't usually give 10s. Congratulations. 10/10.
+ 
+Danmaku Score: 7.94/10 (scaled to 9.53/12)
+======================================================================================================================
+ 
+Aesthetically pretty good. The backgrounds were nice and the patterns reasonably pretty. The bullet deletion explosions were a bit too much for me though.  3.25/4.
+======================================================================================================================
+ 
+I think the themeing is a tad above average. Not very strong, but not weak either.  2.25/4
+ 
+OVERALL SCORE 9.53 + 3.25 + 2.25 = 15.03/20

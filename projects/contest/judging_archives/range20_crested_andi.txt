@@ -1,0 +1,73 @@
+Crested judging for RaNGE 20: Hanami in Four Seasons by Andi.
+Script contains 8 nonspells and 9 spells.
+The only player script usable is a custom Aya.
+Played and judged on Normal difficulty on Pointdevice.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+Overall aesthetics are good and not distracting, hence no penalties will be issued.
+I wasn't expecting a photography script, but it certainly works!
+
+Nonspell 1: A good warmup for taking photos.
+15/20
+
+Summer Sign "Funeral Chrysanthemum": I like the way the flowers spawn, but isn't it just random spam in the end?
+14/20
+
+Nonspell 2: A bit too easy even on the second photo.
+14/20
+
+Autumn Sign "Haunted Amaranthus": Those petals curve really hard. It's a good pattern though.
+16/20
+
+Nonspell 3: Honestly it's kinda similar to the previous non in terms of dodging.
+14/20
+
+Winter Sign "Mountain Aconite": Nice pattern that mandates clearing the coins before they explode.
+17/20
+
+Nonspell 4: Komachi moving way more on the second photo makes it interesting.
+16/20
+
+Spring Sign "Corpse-Sweet Hyacinth": Good pattern that requires taking photos of clumps of petals to survive.
+17/20
+
+Nonspell 5: Rough streaming with some random coins. Good pattern.
+16/20
+
+Summer Night "Lilium Cemetery": Feels like just random spam everywhere...
+13/20
+
+Nonspell 6: The speed the bullets spawn at remind me of a Nue non. It's not very dense or difficult though.
+13/20
+
+Autumn Equinox "Murderous Higanbana": Very creative pattern, especially with how you ensured the extension of the stems were visible with the black tip.
+Unfortunately this is the first spell that blends a little into the background.
+17/20
+
+Nonspell 7: Creative bullet spawning and fair difficulty. It's still random spam in the end though.
+16/20
+
+Longest Night "Asylum of Hellebore": While seemingly too dense at first glance I eventually realized the dense waves were aimed. Very nice pattern that uses the screen resizing to good effect.
+19/20
+
+Nonspell 8: The aimed part makes it not quite just random spam. Good pattern.
+16/20
+
+Spring Higan "Riverside Higanzakura": I got stuck here way longer than I'd like to admit. Also it crashed after I cleared it on the 56th try.
+I'm not salty, I swear.
+Seriously though, it's a tad too difficult. As pretty as it is, it's easy to get sniped by a random petal hurling in from the side.
+14/20
+
+Shinigami "Cycle of Life, Death and Rebirth": This is how you make a completely impossible final pattern if you leave Spring for last...
+It's way too dense, much too chaotic and the screen resizing screws with the camera in a very unhelpful way and is kind of distracting.
+And in the end, it's still a lot of random bullet spam.
+I also managed to take two photos of Summer somehow and it cycled Fall and Spring and wouldn't let me take a picture of Fall.
+Spring lasts way too short and the immense bullet spam from Higanzakura makes it really hard to get any charge going, even on Legacy.
+A cool idea but very poor execution.
+4/20
+
+Overall: 14.8/20
+The quality of the script is pretty high, but a lot of it comes down to just dodging random bullet spam and is tanked by the final.
+I have to wonder if you could have compacted the script to just 4 nons and 5 spells, condensing the two ideas from each season into one. As is, the script is a little bit of a drag to play.
+Still though, good job on the camera system. I won't be taking any points for the crash on Higanzakura seeing as you really did try to fix it.
+(maybe turn off the debug window in the distributed version next time)

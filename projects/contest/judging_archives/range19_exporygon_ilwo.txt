@@ -1,0 +1,5 @@
+Ilwo - Nitori
+
+Spell 2: Really interesting use of the gimmick and I think it's the best designed and most fun attack in the script
+Spell 3: Um, the way to dodge this is rather weird and unintuitive. It ALMOST looks like I can just move back and forth on the bottom during the bullet phasing but it just barely doesn't work. It took me a while to figure out that moving all over the screen (including towards the top) was the only feasible way to do it. Definitely my least favorite pattern of the script.
+Spell 4: This one seems to have a lot of conflicting ideas. I thought at first that the hexagons that reveal the bullets were more helpful since it's impossible to see the green bullets otherwise. However I later figured out that the disappearing bullets are also harmless as long as they're invisible so the hexagons are actually a hindrance since they effectively put more bullets on screen. On top of all of that there are also rather fast fireballs, making the whole spell rather busy.

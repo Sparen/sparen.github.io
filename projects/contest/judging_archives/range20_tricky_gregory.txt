@@ -1,0 +1,46 @@
+RaNGE 20 - Green Dinobot
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+ 
+Nonspell 1: It's a fine nonspell. I shot down Jo'on first and Shion's "berserk mode" was perfectly reasonable. 7/10.
+ 
+Spell 1: Decent pattern. I thought the amulets that move towards you while shrinking were pretty weird, but weirdness is not bad. 7.25/10.
+ 
+Nonspell 2: Sometimes the green coin walls seem mean, but luckily it wasn't much of a problem here. It's good. 7.75/10.
+ 
+Spell 2: Sort of becomes a mess of stuff flying at you, but at least it's a fun mess? 7.5/10.
+ 
+Nonspell 3: Also is sort of a mess of stuff coming down at you, but it's reasonable and fun too. 7.5/10.
+ 
+Spell 3: The golden kanji are really unpredictable compared to the rest of the spell. That wouldn't be so bad if the rest of the spell didn't have other things demanding your attention. 6.5/10.
+ 
+Nonspell 4: This is where the fact that many things are happening starts to be a detriment. The curvy lasers move pretty weirdly and must be paid attention to along with the straight laser kanji and other bullets they leave behind. 6/10.
+ 
+Spell 4: Shion's solo phase takes a while and is really hard because you can't easily tell when the kanji will shoot bullets and there's a LOT of kanji shooting a lot of bullets. Other than that I think it can be okay. Jo'on died first because you're pretty much stuck wherever you begin and I began under her. 7/10.
+ 
+Danmaku Score: 7.06/10 (scaled to 8.48/12)
+
+Generally, I like the idea of dual bosses but there's a lot of times where it feels like too much is happening.
+======================================================================================================================
+ 
+Aesthetically cohesive enough. 3/4.
+======================================================================================================================
+ 
+The patterns are generally themed well. 3/4
+ 
+OVERALL SCORE 8.48 + 3 + 3 = 14.48/20

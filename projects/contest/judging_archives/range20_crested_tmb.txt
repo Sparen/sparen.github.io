@@ -1,0 +1,56 @@
+Crested judging for RaNGE 20: Seasonal Dream by Tad Marx Barba.
+Script contains 4 nonspells and 7 spells.
+No difficulty selection.
+SejiaA is unplayably fast. SejiaB will have to do.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+Aesthetics are not too distracting, hence no penalties will be issued.
+Who am I kidding? The giant blob behind Sejia is really really distracting. I'll have to deduct 1 point from the overall score due to its severity.
+
+Nonspell 1: Why can I time out this non in the dialogue, and why is the health circle tied to timer
+The first part is fine, the the pellets expand so fast there's no time to react.
+This is then folllowed up by purple suppositories that blend into the background and are also too fast.
+Not a very playable pattern.
+3/20
+
+Bad Dream "Violent Explosion of the Express Train": Past the first phase of rotating rainbow arrowhead shapes the spell is fine.
+...nah, the giant blobs and shaking ruin that from the second cycle onward.
+2/20
+
+Nonspell 2: This would be almost fine if it wasn't for the end of each wave having a huge clump of pellets which is near undodgeable.
+The purple bullets moving so fast is also a problem.
+2/20
+
+Spring Dream "Dream Flower's Poem": This is supposed to be easy but the hitbox is way too dissonant.
+4/20
+
+Nonspell 3: Doremy moves so low she spawncamped me. That's not fine.
+I literally spent the entire timer duration either dead or on i-frames.
+1/20
+
+Summer Dream"Fake Rain in the Bamboo Forest": The bamboo part is fine. The bubble part is fine except for Doremy having a hitbox and staying right where you need to move up.
+And of course, the bubbles like to cave in and wall if you don't move up.
+9/20
+
+Nonspell 4: This is fine. Well, apart from the hitbox dissonance and lack of warning for where the orange arrowheads will spawn.
+7/20
+
+Autumn Dream"Queretano Autumn Festival": Everything moves so fast it's unreadable and the flowers just love to block entire paths.
+2/20
+
+Nonspell 5: This would be fine if it wasn't for hitbox dissonance. It's also on the fast side for its density.
+9/20
+
+Winter Dream"Persephone's Last Farewell": You cannot be serious about wanting us to micro with such a huge hitbox.
+The other phase also jerks bullets randomly too fast and too close to the player.
+1/20
+
+"Eternal Seasonal Dream": Everything stacks, moves too fast, nothing is microable, and this mashup is a mess.
+0/20
+
+Overall: 2.6/20 (-1 for the distracting player shot)
+Where do I even begin...
+Maybe you wanted to make player shots that were uniquely disadvantaged in different ways, but that should not be between uncontrollably fast and stupidly fat hitbox because both result in the same unplayability.
+I spent more time in invinicibility frames than actually dodging because it was that bad.
+Many patterns were also much much too fast to be anywhere near reasonable, which only adds onto the problem.
+The worst part is that I can tell some of these patterns must have taken time to develop but they are just nigh unplayable which means no matter how creative they are going to get a low score.

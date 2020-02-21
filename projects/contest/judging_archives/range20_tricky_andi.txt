@@ -1,0 +1,67 @@
+RaNGE 20 - Andi
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+ 
+Played on Legacy mode and Normal mode.
+
+Nonspell 1: Feels Komachi enough and is pretty fun. 7.5/10.
+
+Spell 1: Fun pattern too. The last phase is scary but not undodgeable. Good. 8/10.
+
+Nonspell 2: Less interesting than the first one but still fair and not unfun to play. 7/10.
+
+Spell 2: The nonspell pattern plus some more bullets that come down. Somehow feels a tad less interesting than the nonspell. 6.75/10.
+
+Nonspell 3: I do hope that all the nonspells won't be differently-colored falling coins. Anyway, this one's a bit worse than the previous non. 6.75/10.
+
+Spell 3: Nonspell pattern plus more bullets, woo. Luckily they make the gameplay interesting enough. 7/10.
+
+Nonspell 4: This nonspell is sluggish and really bores me. It's also starting to feel like more of the same. 5.25/10.
+
+Spell 4: I'm not very sure how this spell works, but it seems very easy for half of the screen to just be walled off, forcing you to wait (and/or die). Don't like this very much. Seems too random to really form a good strategy for it. 4/10.
+
+Nonspell 5: Adding a loosely-aimed element honestly makes this more interesting than the previous nonspells. Still, it's very samey. 6.75/10. 
+
+Spell 5: This spell feels a lot like the third spell, only all the coins turn into bullets higher up on-screen generally. Around here is where the repetitiveness really starts feeling stale. 5/10.
+
+Nonspell 6: More of the same. This one feels REALLY similar to one of the previous nonspells and ends up playing the same, too. If it were standalone I'd say it's fine, but after ten patterns more of the same just isn't good. 3.5/10.
+
+Spell 6: Interesting idea. I like needing to move up on the screen to dodge the bullets from below. The way the leading bullets in the trails curve seems unpredictable enough that I died to something curving into my path, but I still think it's a solid attack. 7/10.
+
+Nonspell 7: It's the last nonspell but the bullets seem to clump up more or something. Samey. 3.25/10.
+
+Spell 7: The screen gimmick is interesting but it seems to make up most of the pattern - it also moves up and down VERY quickly so you really need to try to let it shove you into the right place. Weird, don't like it all that much. 4/10.
+
+Nonspell 8: Still samey, but at least the aimed element means you must stream. 3.5/10.
+
+Spell 8: There's falling spam, much like a lot of the nonspells and some of the spells. It's pretty, but there's simply been so much of this type of pattern that it's not fun anymore. 4/10.
+
+Spell 9: It's an interesting idea! My last phase was incredibly annoying to get a picture of, but otherwise I really like the concept. Gameplay-wise it's just a mashup of a lot of previous patterns, but maybe that's okay this time. 7/10.
+
+Danmaku Score: 5.66/10 (scaled to 6.79/12)
+
+Overall, I think you were really hurt by having so many patterns that play so similarly that they're VERY repetitive.
+
+======================================================================================================================
+ 
+Aesthetically above average. Sounds and backgrounds are nice and obtrusive, and putting Aya photos on the side is a nice touch. Besides that nothing really stood out that much to me. 2.75/4.
+======================================================================================================================
+
+This script does a decent job of fitting the theme. Some of the spells were pretty good about this, but the use of coins that are just differently-colored and otherwise don't behave differently prevents me from giving it a particularly high score. 2.75/4
+
+OVERALL SCORE 6.79 + 2.75 + 2.75 = 12.29/20

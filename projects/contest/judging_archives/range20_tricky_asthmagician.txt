@@ -1,0 +1,48 @@
+RaNGE 20 - Asthmagician
+
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+
+Nonspell 1: Above-average pattern. 6.25/10.
+ 
+Spell 1: Also a fine pattern. Drags on for how simple and repetitive it is. 6/10.
+ 
+Nonspell 2: Fine as well. This and the last non don't really stand out, but they're not unfun. A step above the previous. 6.5/10.
+ 
+Spell 2: Good streaming pattern. 8/10.
+ 
+Nonspell 3: This one stands out a little bit more to me. 6.75/10.
+ 
+Spell 3: An easy and relatively-sluggish pattern. 6/10.
+
+Nonspell 4: An interesting nonspell. Good work. 7.75/10.
+ 
+Spell 4: Not that interesting compared to the non, I think. Still not bad, but a bit bland. 6.5/10.
+
+Spell 5: Decent multiphase script ender. A bit easy, but not egregiously so. 7.5/10.
+ 
+Danmaku Score: 6.81/10 (scaled to 8.17/12)
+
+Generally I don't have that much to say, sorry. The patterns are consistently fine-good.
+======================================================================================================================
+ 
+Aesthetically I think the script is pretty simple - cohesively simple. The music, sounds and graphics mesh together to create what feels like a SNES game or something like that? As such this is good. 3.25/4.
+======================================================================================================================
+ 
+As for following the theme, this script seems to do pretty well in that regard. Nonspell could use a bit stronger seasonal-ness but otherwise it's good. 3/4
+ 
+OVERALL SCORE 8.17 + 3.25 + 3 = 14.41/20

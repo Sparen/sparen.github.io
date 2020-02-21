@@ -1,0 +1,9 @@
+bronxterror - Satori
+
+Spell 1 - I feel like this spell could have been faster paced. It doesn't require much dodging before it dies.
+Non 2 - The explosions cover up the trajectory of the fireball bullets, making them hard to react to when the explosion fades away. Either delay the fireballs more, maybe by giving them acceleration instead of a high starting speed, or spawn them in just outside the explosion radius so their delay clouds are actually visible.
+Spell 2 - I like how fast paced the dodging is and I think the concept is pretty unique too.
+Non 3 - Um, the annoying wall stage portion from MoF stage 4? That's quite an odd choice for a nonspell. Except for the green bullets, it's almost completely unchanged too. Fortunately it's a lot more fun and fair then the original.
+Spell 3 - This is by far the best pattern in the battle. Actually, this might be my favorite pattern out of all of the entries. It's really creative and SOOOO much fun. The bullet pattern and pacing are spot on. I actually really want to see more patterns using this gimmick now!
+Spell 4 - This pattern seems a bit luck based, but I'm not too sure. It seems that a lot of bullets can just randomly decide to spawn near you at close to the same time making the difficulty fairly luck based.
+Spell 5 - I really want to like this pattern as I think it has a really cool concept but far too many times did bullets end up spawning on top of me. If you're going to have the bullets potentially spawn close to the bottom of the screen near the player, then they're going to need more delay at the very least.

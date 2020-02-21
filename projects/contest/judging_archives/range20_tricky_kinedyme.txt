@@ -1,0 +1,52 @@
+RaNGE 20 - Kinedyme
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+ 
+This script was judged using Normal difficulty.
+ 
+Nonspell 0: Reimu aimed/notaimed amulets with some random walls. I'd advise against using randomness as the main threat of the pattern like this. 6/10.
+ 
+Nonspell 1: The falling amulets of madness definitely suit the season. Still a bit too random for my tastes, but I think the concept is fine. 6.5/10.
+
+Spell 1: An interesting concept. The homing swirly things are neat but very unpredictable in how they'll behave, and besides those aimed-ish bursts you just dodge a bunch of spam from Reimu. 4/10.
+ 
+Nonspell 2: Hope the RNG doesn't hate you and shower you in a wintry amulet curtain of death. Neat idea, but could use more of a pattern. If the area under Reimu is covered then she's very hard to shoot with a forward-focus shot. 5.5/10.
+ 
+Spell 2: The random amulets from Reimu make this feel like a repeat of the previous spell, just with snowflakes instead of bursts of bullets. I do think this is more reasonable than the previous one. 5/10.
+ 
+Nonspell 3: I think one particular sound effect for this pattern is WAY too loud. Otherwise this is a step up from previous nonspells. Not all that hard, but a test of your ability to move, I guess? Also a reference to Okina, obviously. 7/10.
+ 
+Spell 3: Dodge the random amulets while Reimu fires really cool curvy-things at you: round 3. This time they don't necessarily explode and murder you, but it still feels very samey. 5.5/10.
+ 
+Nonspell 4: The spirally nature makes the randomness unable to wall you, more or less. It's also not as harmful to move from under Reimu due to the spread shot, I think? 6.75/10.
+ 
+Spell 4: Take 4. This time the nature of the aimed bullets makes them more reasonable to dodge though. Still, I feel like it plays essentially the same as the last three spellcards. Probably the best out of the four? 6/10.
+ 
+Spell 5: A very Reimu-esque pattern and fits well with both the doyou and Reimu themes. Seems to get a bit nuts but maybe I'm just bad at it. 7/10.
+ 
+Spell 6: This really is a wonderful idea. Changing the player shots and the effect of those swirly thingies based on the area they're in is great. The pattern, however, is still random amulets while trying to deal with a mess of explosions. I appreciate the effort but I didn't find this very fun. 4/10.
+ 
+Danmaku Average: 5.75/10 scaled to 6.9/12
+======================================================================================================================
+ 
+Aesthetically above average. Even if it was repetitive, the movement of those swirlies and the little seasonal touches added to the player were good. Some sounds are WAY too loud, on the other hand. 2.5/4.
+======================================================================================================================
+ 
+This script does a good job of fitting the theme. This would probably be deserving of a close-to or actually-perfect score if the spellcards had more interesting amulet patterns that also fit the season instead of rand(0, 360). 3/4
+ 
+OVERALL SCORE: 6.9 + 2.5 + 3 = 12.4/20

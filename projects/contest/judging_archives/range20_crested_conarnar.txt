@@ -1,0 +1,33 @@
+Crested judging for RaNGE 20: Youmu but with Seasons by Conarnar.
+Script contains 4 nonspells and 4 spells.
+No difficulty selection. Judged with YukariA.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+Unfortuantely the dark fog in the background flashes so much it makes dodging difficult. I will have to issue a 0.5 point penalty.
+
+Nonspell 1: That's a Youmu non alright.
+15/20
+
+Autumn Sign "Leaf Turning Slash": Nice to see a bottomhug trap spell for once. It has a chance to form walls though.
+16/20
+
+Nonspell 2: That's a hell of a way to represent slashes. The pink pellets are a little fast, but that's mostly alright.
+19/20
+
+Spring Sign "Sakura Whirlwind": Very creative and has the right density. Good pattern.
+19/20
+
+Nonspell 3: Neat pattern. Not sure what to say though.
+16/20
+
+Summer Sign "Radiant Sunstrike": Random slashes with random fireballs. It's a little too easy compared to the rest.
+15/20
+
+Nonspell 4: The blue arrowheads form lanes, but they rarely conflict with the grey arrowheads which makes this kind of trivial.
+13/20
+
+Winter Sign "Frozen Breaker": The blue slash is entirely aimed, and combined with the gray arrowheads being a seemingly static pattern makes this a little too easy compraed to the rest.
+15/20
+
+Overall: 15.5/20 (with -0.5 for the nonspell background)
+A well-made script with some creative patterns. With a little tweaking the weaker patterns can definitely becomes very good.

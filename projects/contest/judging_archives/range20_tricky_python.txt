@@ -1,0 +1,44 @@
+RaNGE 20 - Python
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+ 
+Nonspell 1: The rings are just spaced out enough to be fair and fun. Lasers could definitely use a bit more delay though. Excellent nonspell otherwise. 7/10.
+ 
+Spell 1: When the incoming bullets line up with the gaps from the outgoing bullets it's kind of ridiculous, and the sun explosion is a bit fast to be reasonable. Otherwise it's also good. 6.25/10.
+ 
+Nonspell 2: The way the oval unfolds is also timed well enough to be dodged. Excellent like the first nonspell minus its flaws. 9/10.
+ 
+Spell 2: I generally dislike patterns like this but it's actually pretty good and fun. 8.75/10.
+ 
+Nonspell 3: Another good nonspell. I'd personally like if the gaps were the tiniest bit larger but that's probably just me being bad? 8.75/10.
+ 
+Spell 3: Very cool! I thought the wave with four of them from the corners would become overwhelming, but it's actually okay. Wonderful. 9.5/10.
+ 
+Nonspell 4: I personally don't like how the bullets at the end of the lines swing out so quickly, but besides the speeds of those it's also great. 8.5/10.
+ 
+Spell 4: Reskinned PDH isn't that bad, I suppose? It dies really quickly though. Would be better if it lasted a bit longer (and possibly had a more flowery spin). 8/10.
+
+Danmaku Score: 8.22/10 (scaled to 9.86/12)
+======================================================================================================================
+ 
+Aesthetically very good. Consistently good - patterns are pretty looking. Nothing impressively stands out, but consistent high quality is fine. 3.5/4.
+======================================================================================================================
+ 
+The patterns are very strongly themed. Good job. 3.75/4
+ 
+OVERALL SCORE 9.86 + 3.5 + 3.75 = 17.11/20

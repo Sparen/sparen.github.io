@@ -1,0 +1,55 @@
+RaNGE 19 - Ilwo
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fair well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10 and commented on with my reasoning, and the average of that will be taken to calculate the Danmaku Quality score.
+ 
+Usage of Reisen's Gimmick(s)/Creativity: 6/20
+ 
+Expressing the use of Reisen's artifact in danmaku is the central theme of this contest. As such, the script will also receive a score based on how well it uses Reisen's gimmick. This won't be given on a per-pattern basis, but individual patterns might be mentioned in my comments for this rating.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+ 
+Nonspell 1: A very tough take on a Nitori nonspell. It's fine, if a bit hard. 6.25/10.
+ 
+Spell 1: I like this pattern. Nitori's gimmick plus Reisen bullet shifting makes it pretty good. 8/10.
+ 
+Nonspell 2: The small curving walls are very tough to dodge. The glowy bullets are trivial in comparison. I'd like it more if it were less difficult. 6/10.
+ 
+Spell 2: Also a pretty good pattern. It's fun and fair. 8.25/10.
+ 
+Nonspell 3: A more reasonable nonspell in my opinion. 7/10.
+ 
+Spell 3: Needing to circle around her isn't all that intuitive, but it works. Since the bullets phase out, it encourages you to dodge through it and get between the lines, but the ideal strategy (as seen by your included replay) seems to be circling around her instead. It's pretty misleading. 3/10.
+
+Spell 4: Hexagons are cool. At first I thought that the hexagon lines were lasers that would hurt me, so I avoided them, but it seems like they keep the bullets solid when they would normally disappear, so I should avoid them anyway? It's weird and unintuitive, even for a Reisen-inspired attack. Not TOO hard though. 5.75/10.
+ 
+Average Danmaku Quality: 6.32
+ 
+=======================================================================================================================================
+USAGE OF REISEN'S GIMMICK/CREATIVITY
+=======================================================================================================================================
+ 
+I think Reisen's gimmick was well-used and there's a lot of creativity here in the spellcards. Nonspells are a bit iffier, but they aren't just carbon copies so that's good. 4.25/6.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+I think it's definitely above average aesthetically, but not by all that much. 2.5/4.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+6.32 + 4.25 + 2.5 = 13.07/20

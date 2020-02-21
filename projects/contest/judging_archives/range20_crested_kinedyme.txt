@@ -1,0 +1,47 @@
+Crested judging for RaNGE 20: Shrine-Visiting Season by Kinedyme.
+Script contains 5 nonspells and 6 spells.
+The only player script usable is a custom Marisa.
+Played and judged on Normal difficulty.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+Overall aesthetics are good and not distracting, hence no penalties will be issued.
+(I'm a little weirded out by Soku sprites being used as cutins, but it doesn't detract from dodging so it's fine.)
+
+Nonspell 1: It works... but the walls are way too sparse to pose any threat.
+13/20
+
+Autumn Nonspell: Much better. The varying speeds of falling amulets makes it more complicated to dodge.
+17/20
+
+Dry Autumn - Autoignition Amulet: The example 3 amulets fired show what the spell's supposed to do, but I feel like the direction the amulets will fire in is too random to tell. Still a decent pattern.
+1520
+
+Winter Nonspell: The cone of bullets is too dense to dodge reasonably for this difficulty level. There doesn't seem to be much strategy other than hoping you don't get walled in.
+10/20
+
+Freezing Witner - Snap Freeze Amulet: It's almost completely identical to the Autumn spell...
+8/20
+
+Spring Nonspell: HBCB walls alone don't really make for an interesting or challenging pattern...
+11/20
+
+Abundant Spring - Blossom Overload Amulet: Way too dense after the first wave and once again the amulets travel on unpredictable paths. This time the random pathing matters.
+5/20
+
+Summer Nonspell: I guess it's got a good difficulty but isn't very creative.
+13/20
+
+Blistering Summer - Thermal Sensitivity Amulet: Almost identical to the first two spells but with no difficulty...
+7/20
+
+Lifeless Doyou - Vitality Transfer Barrier: Neat idea. Dies too fast though.
+15/20
+
+Cyclical Concurrency - Seasonal Multiplex: Very creative but is identical to the first four spells, with a small bit of the random bullshit from the spring spell along with being visually difficult to see bullets to dodge near the season edges.
+10/20
+
+There's also some technical issues with the script; restarting while within the game over dialogue causes the game to softlock after the first nonspell. It also doesn't properly reset your shottype.
+
+Overall: 11.3/20
+While I understand what you were going for with the spells, having them all be the same base pattern severely limits what they can actually be. The whole gimmick of amulets being area denial works but if the exact same misdirection strategy can be employed for 3 of 5 spells with the homing amulets, it becomes very uncreative and frankly boring.
+I'd suggest finding some method to use the seasonal amulets in a non-homing way and in a much more structured pattern. You might find substantially more interesting results that way.

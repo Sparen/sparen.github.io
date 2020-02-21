@@ -1,0 +1,45 @@
+Crested judging for RaNGE 20: Seasonal Misplacement by Crescendo.
+Script contains 4 nonspells and 7 spells.
+No difficulty selection. Forced Reimu player script.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+The spell background circle spins a little too fast and can be distracting, so I will have to issue a 0.5 point penalty.
+
+Nonspell 1: Those white lasers look really unnatural, and I don't really see a reason for the stars to turn into them. Decent pattern though.
+15/20
+
+Borealis Sign - "Aurora Lasers": The whole thing being a bunch of slow lasers makes it kind of trivial...
+13/20
+
+Nonspell 2: The yellow stars are kind of interesting to dodge in what is otherwise random star spam.
+16/20
+
+Hanami Stars - "Pseudo Homing Petals": The stars stopping and turning into aimed lasers is an interesting idea but the pattern as a whole is just slightly altered streaming.
+16/20
+
+Nonspell 3: The different laser speeds makes this more interesting to dodge, though I think you could have maybe used a different color for the faster ones to prevent blending.
+16/20
+
+Sun Sign - "Glorious Summer": (that's... one way ot make a sun i guess)
+The pellets are kind of dense and combined with the player focus aura can be difficult to see.
+13/20
+
+Nonspell 4: Good use of curvy lasers in what owuld otherwise be random star spam.
+16/20
+
+Falling Leaves - "Autumn Night": Good idea with the curvy lasers, though the large stars are kind of too sparse to pose a threat.
+I'd also suggest spawning the curvy lasers slightly offscreen so there isn't an awkward bit of empty space on the leftmost/rightmost side.
+16/20
+
+Non-Dominant - "Cycle of Life and Death": Not sure what to think of this since I couldn't really figure out how to dodge this properly. The stars turning into aimed lasers definitely interferes with dodging the green orbs.
+15.20
+
+Dominant - "Polar Ends of Nature": I think you need a couple more bullets to make that a Master Spark.
+Shaking aside it's not very challenging.
+14/20
+
+Stolen Weapon"Seasonal Stars": A decent mashup spell with a good base pattern. Not sure if the lasers really do anything though.
+15/20
+
+Overall: 14.5/20 (with -0.5 for spell background)
+A decent script with some good ideas, though the laser spam is a little tiring.

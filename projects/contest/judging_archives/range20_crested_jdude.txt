@@ -1,0 +1,37 @@
+Crested judging for RaNGE 20: Seasoned Alice by JDude.
+Script contains 4 nonspells and 5 spells.
+No difficulty selection. I used the DDC ReimuB player.
+
+I will be judging based on danmaku design, with a high focus on balance and creativity second.
+Unfortunately the aesthetics are... not well done. Their opacity is too high and some have too high scroll speed resulting in a very distracting background.
+I'll have to deduct 1 point from the overall score due to the severity of this issue.
+
+Nonspell 1: Very pretty spirals. You can literally just sit still at the bottom and kill it before it's a threat though...
+12/20
+
+The Puppeter's Fall "Ruined Web": Nice combination of area restriction with random dodging.
+16/20
+
+Nonspell 2: It's very important to render the ice bullets on top of the large orb bullets, or you end up with visibility issues.
+11/20
+
+The Eerie Puppeter "Cold-Blooded Dolls": Thankfully the rendering is correct here. A decent spell, if a little easy.
+15/20
+
+Nonspell 3: Interesting idea, though it's a little too easy past the first time seeing it.
+16/20
+
+The Puppeter's Euphoria "Blooming Dolls": Now this is a really really good spell. Well done.
+20/20
+
+Nonspell 4: The laser grid restricting movement and a burst of patterned bullets makes this a beautiful and fun pattern. Minor nitpick but the lasers don't get cancelled properly at the end of the non.
+19/20
+
+The Raging Puppeter "Overheated Dolls": Aimed bubbles with fast random arrowheads. It's nicely balanced to be just a little difficult (for me), so well done.
+18/20
+
+Restless Research "Four Seasons": Neat final spell with a timeout phase of sorts.
+18/20
+
+Overall: 15.1/20 (with one point deducted for aesthetics)
+A really good script in terms of patterns. With just some minor tweaks, this can easily become one of your best works.

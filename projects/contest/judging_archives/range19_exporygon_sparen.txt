@@ -1,0 +1,8 @@
+Sparen - Marisa
+
+Non 1 - I like the shader effect and it's pretty unique but it can be pretty hard to tell where the bullets actually are, especially when they're coming at you at an angle.
+Spell 1 - Um, this only happened once so I'm not going to dock points or anything but the whole screen just went black. I actually had to restart Danmakufu to get it to stop happening, really bizarre. https://puu.sh/AWywh/a961c475e3.png
+Spell 2 - This is surprisingly fair despite the screen shaking and motion blur. I like it.
+Spell 4 - I actually felt pretty underwhelmed by this spell after the dialogue built it up. It's not as interesting pattern-wise as I would have expected, though it does look pretty. Also what was that thing falling inside the HUD at the start? It didn't really do anything that I saw.
+
+General Notes - The fact that this script focuses on visual fuckery instead of the usual Reisen gimmicks is a double edged sword. On one hand, it's pretty unique and very visually pleasing. On the other hand, screwing with the visuals can be very hard to do in a fun or fair way (see ZUN's Seija and my Darkrai script for some not so great examples).

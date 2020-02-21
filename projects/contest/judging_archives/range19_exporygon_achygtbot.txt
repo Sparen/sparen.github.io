@@ -1,0 +1,6 @@
+gtbot & Achy - Utsuho
+
+Spell 1: A great twist on the very iconic Utsuho opener, I thought this was pretty clever
+Spell 2: Probably the most creative idea in the script, if only it was executed a little better. It's not super clear what you're expected to do but tbh I don't really know how I would fix that.
+Spell 3: Well I kind of see what you were trying to go for here, but it really is exactly the same as Minamitsu's Sinker Ghost, only with added suns that don't actually make you dodge it any differently.
+Spell 4: I think this might be where the script really lost steam (I heard that gtbot and Achy struggled to finish on time). This attack is not super fun or very interesting, except for the small bullets' movement.

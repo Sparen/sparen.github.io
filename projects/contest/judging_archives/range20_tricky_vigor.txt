@@ -1,0 +1,44 @@
+RaNGE 20 - Vigor
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Seasonal Theme: 4/20
+ 
+4 points will be dedicated to how seasonal your script feels. Things like color choices, pattern design and aesthetic factors all contribute to how "seasonal" a script feels.
+======================================================================================================================
+
+Nonspell 1: Excellent pattern. Lots of boss movement and seasonally appropriate. Ends before it drags on too much. 8.75/10.
+ 
+Spell 1: Also very good. I like it a little bit more than the previous non. 9/10.
+ 
+Nonspell 2: Being able to shoot down the mini-Suikas really makes use of the player's spread shot. Neat. Excellent pattern as well. 9/10.
+ 
+Spell 2: A like it less than the nonspell, but the usage of mini-Suikas is still really good here. It's very samey until the "second phase" begins, but by then it's been a while and the spell is almost dead (at least if you unfocus to shoot down more). 8.25/10.
+ 
+Nonspell 3: Cool. Pun intended. This one dragged on a bit in my experience, but I wasn't following her very well. 8.5/10.
+ 
+Spell 3: A short, seasonally appropriate survival. Good. 8.25/10.
+ 
+Nonspell 4: A short-lived nonspell is new. This pattern is pretty neat. 8/10.
+ 
+Spell 4: I think this one is just the slightest bit too tight. Doesn't seem all THAT springlike, but it's still fine. 7/10.
+ 
+Danmaku Score: 8.34/10 (scaled to 10/12)
+======================================================================================================================
+ 
+Aesthetically pretty amazing. The patterns were pretty without compromising quality, the fight flowed well to the music, visuals were nice without being glowy distracting ADD-rendered hell. Perfect score. 4/4.
+======================================================================================================================
+ 
+This script does an excellent job of fitting the theme. Not perfect in my opinion, but very close. 3.75/4
+ 
+OVERALL SCORE 10 + 4 + 3.75 = 17.75/20
