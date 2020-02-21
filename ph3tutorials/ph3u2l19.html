@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jul 03, 2018')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Feb 20, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -24,6 +24,7 @@
           <li><a href="./docs_object.html">Object Functions</a></li>
           <li><a href="./docs_system.html">Player Script Fxns</a></li>
           <li><a href="./docs_system.html">Private Script Fxns</a></li>
+          <li><a href="./docs_event.html">Danmakufu Events</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
         </ul>
       </div>      <div id="pagecontentwrapper_tut">
@@ -151,7 +152,7 @@
     SetReplaySaveSceneScriptPath(GetCurrentScriptDirectory() ~ "./ReplaySaveScene.dnh");</code></pre>
 	      <p>These three functions tell Danmakufu to use your custom Pause, EndScene, and ReplaySaveScene scripts instead of the copies found in default_system. I highly recommend using these functions and linking to a local set of the three scripts, even if you don't do any heavy edits. As a general rule of thumb, don't edit default_system - have a local system folder in each script and link to that instead.</p>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How Do System Script Events Work?</h2>
-	      <p>System Scripts are often used to control a number of things such as the boss lifebar, boss timer, and he like. The @Event of a system script also handles what happens when you start and capture a spellcard using the events EV_START_BOSS_SPELL and EV_GAIN_SPELL. Though you are free to put these in any @Event anywhere, they are usually consistent throughout the entire script and as a result, it is highly recommended that you use them in your system script.</p>
+	      <p>System Scripts are often used to control a number of things such as the boss lifebar, boss timer, and he like. The @Event of a system script also handles what happens when you start and capture a spellcard using the events <span class="tooltip" onmouseover="getFxnDocs('EV_START_BOSS_SPELL', 'f_ev_sbs_01');"><code>EV_START_BOSS_SPELL</code><span class="tooltiptext" id="f_ev_sbs_01"></span></span> and <span class="tooltip" onmouseover="getFxnDocs('EV_GAIN_SPELL', 'f_ev_gs_01');"><code>EV_GAIN_SPELL</code><span class="tooltiptext" id="f_ev_gs_01"></span></span>. Though you are free to put these in any @Event anywhere, they are usually consistent throughout the entire script and as a result, it is highly recommended that you use them in your system script.</p>
 	      <p>EV_START_BOSS_SPELL runs at the start of a spellcard. It is commonly used to play sound effects at the start of all spells and for ant effects not in the cutin library. EV_GAIN_SPELL is commonly used to play sound effects upon spell capture and perform any other things done at that time such as displaying the spellcard bonus. In a much earlier tutorial, we awarded spellcard bonuses using TFinalize. Handling it in this event in the system script is highly recommended, especially if you are copy-pasting the spellcard bonus award code in each script.</p>
 	      <p>It is also common to have custom events in System scripts, but we will get into that at a much later time. <strong>Note: The default spellcard sound effect is not handled in the default system file, but in Default_System_MagicCircle.txt</strong>. If you want to change the default spell sound effect, I suggest using EV_START_BOSS_SPELL in the system file and removing the sound data from your local Magic Circle.</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: System Scripts</h2>
@@ -231,4 +232,5 @@
     <script src="javascript/dnhdocs_standard.js"></script>
     <script src="javascript/dnhdocs_object.js"></script>
     <script src="javascript/dnhdocs_system.js"></script>
+    <script src="javascript/dnhdocs_event.js"></script>
     <script src="javascript/dnhdocs.js"></script>  </body></html>

@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jul 10, 2018')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Feb 20, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -24,6 +24,7 @@
           <li><a href="./docs_object.html">Object Functions</a></li>
           <li><a href="./docs_system.html">Player Script Fxns</a></li>
           <li><a href="./docs_system.html">Private Script Fxns</a></li>
+          <li><a href="./docs_event.html">Danmakufu Events</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
         </ul>
       </div>      <div id="pagecontentwrapper_tut">
@@ -139,7 +140,7 @@ task TStage
 	      <p>It will generally be advisable to load all your assets at the start of the stage rather than right before they are needed.</p>
               <p>Although we have a partially functional system now, the above is only one piece of the bigger puzzle, as we need to provision for when the player pauses the game - when the player pauses the game, you will generally want the background music to stop, and you will want the music to resume once the pause has ended.</p>
 	      <p>In this stage, I am using the stagepart variable to store information on which part of the stage (and therefore music track) is currently active - 0 for stage and 1 for boss. This value will be initially set to 0 and then set to 1 once the boss music begins playing.</p>
-	      <p>There are two events relating to pausing - EV_PAUSE_ENTER when the user hits the virtual key for pause (defaults to esc) and EV_PAUSE_LEAVE when a pause script is closed. Using the system below, we are able to turn off the correct bgm track and then turn it back on after the pause script has run.</p>
+	      <p>There are two events relating to pausing - <span class="tooltip" onmouseover="getFxnDocs('EV_PAUSE_ENTER', 'f_ev_pausee_01');"><code>EV_PAUSE_ENTER</code><span class="tooltiptext" id="f_ev_pausee_01"></span></span> when the user hits the virtual key for pause (defaults to esc) and <span class="tooltip" onmouseover="getFxnDocs('EV_PAUSE_LEAVE', 'f_ev_pausel_01');"><code>EV_PAUSE_LEAVE</code><span class="tooltiptext" id="f_ev_pausel_01"></span></span> when a pause script is closed. Using the system below, we are able to turn off the correct bgm track and then turn it back on after the pause script has run.</p>
 	      <pre class="prettyprint linenums"><code>@Event {
     alternative(GetEventType())
     case(EV_PAUSE_ENTER){
@@ -239,4 +240,5 @@ task TStage
     <script src="javascript/dnhdocs_standard.js"></script>
     <script src="javascript/dnhdocs_object.js"></script>
     <script src="javascript/dnhdocs_system.js"></script>
+    <script src="javascript/dnhdocs_event.js"></script>
     <script src="javascript/dnhdocs.js"></script>  </body></html>

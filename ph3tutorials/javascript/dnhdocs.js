@@ -76,6 +76,18 @@ function retrieveFxn(fxnname) {
         }
     }
 
+    //Event
+    cats = dnhph3docs_event.categories;
+    for (i = 0; i < cats.length; i += 1) {
+        var fs = cats[i].fxns;
+        var j;
+        for (j = 0; j < fs.length; j += 1) {
+            if (fs[j].fname === fxnname) {
+                return fs[j];
+            }
+        }
+    }
+
     return {};
 }
 
@@ -157,6 +169,18 @@ function loadDocsSYS() {
     }
 }
 
+//Loads documentation onto docs_event.html
+function loadDocsEvent() {
+    //Load each category one by one
+    document.getElementById("danmakufu_events").innerHTML = loadDocsByCategory("Danmakufu Events", dnhph3docs_event);
+
+    //If the user wanted to access a specific function, scroll them down.
+    var destid = location.hash.substring(1);
+    if (destid != null && destid != undefined && destid != "") {
+        document.getElementById(destid).scrollIntoView();
+    }
+}
+
 //Loads list of functions with links onto docs.html
 function loadDocsList() {
     var functionlist = "";
@@ -208,6 +232,8 @@ function loadDocsList() {
     temp = loadListByCategory("Private System Functions", dnhph3docs_system, "docs_system.html", "sub3"); functionlist += temp[0]; toclist += temp[1];
     temp = loadListByCategory("Custom Script Functions", dnhph3docs_system, "docs_system.html", "sub4"); functionlist += temp[0]; toclist += temp[1];
     temp = loadListByCategory("Package Functions", dnhph3docs_system, "docs_system.html", "sub5"); functionlist += temp[0]; toclist += temp[1];
+
+    temp = loadListByCategory("Danmakufu Events", dnhph3docs_event, "docs_event.html", "sub1"); functionlist += temp[0]; toclist += temp[1];
 
     document.getElementById("fxn_list").innerHTML = toclist + functionlist;
 }

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Function Reference (Player/System/Script Functions)</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Function Reference (Danmakufu Events)</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
     <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmakufu ph3 Documentation"      name="description">
     <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Documentation">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 10, 2018'); loadDocsSYS()">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Jun 09, 2018'); loadDocsEvent()">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -18,7 +18,7 @@
           <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
           <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
-	  <li><a href="./docs_object.html#sub0">Introduction</a></li>
+	  <li><a href="#sub0">Introduction</a></li>
           <li><a href="./docs.html">Function List</a></li>
           <li class="dmbnona"><hr><a href="./docs_standard.html">General Functions</a><hr></li>
 	  <li><a href="./docs_standard.html#sub1">Math Functions</a></li>
@@ -61,33 +61,27 @@
 	  <li><a href="./docs_object.html#sub19">Player Obj Fxns</a></li>
 	  <li><a href="./docs_object.html#sub20">Collision Obj Fxns</a></li>
           <li class="dmbnona"><hr><a href="./docs_system.html">Player Script Fxns</a><hr></li>
-	  <li><a href="#sub1">Player Main Functions</a></li>
-	  <li><a href="#sub2">Player Spell Functions</a></li>
+	  <li><a href="./docs_system.html#sub1">Player Main Functions</a></li>
+	  <li><a href="./docs_system.html#sub2">Player Spell Functions</a></li>
           <li class="dmbnona"><hr><a href="./docs_system.html">Private Script Fxns</a><hr></li>
-	  <li><a href="#sub3">Private System Fxns</a></li>
-	  <li><a href="#sub4">Custom Script Fxns </a></li>
-	  <li><a href="#sub5">Package Functions</a></li>
+	  <li><a href="./docs_system.html#sub3">Private System Fxns</a></li>
+	  <li><a href="./docs_system.html#sub4">Custom Script Fxns </a></li>
+	  <li><a href="./docs_system.html#sub5">Package Functions</a></li>
           <li class="dmbnona"><hr><a href="./docs_event.html">Danmakufu Events</a><hr></li>
-	  <li><a href="./docs_event.html#sub1">Danmakufu Events</a></li>
+	  <li><a href="#sub1">Danmakufu Events</a></li>
         </ul>
       </div>      <div id="pagecontentwrapper_tut">
-          <div id="pagecontent_tut">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials - Function Reference (Player/System/Script Functions)</h1>	      <h2 class="ph3tutorialheader" id="sub0">Introduction</h2>
+          <div id="pagecontent_tut">	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials - Function Reference (Danmakufu Events)</h1>	      <h2 class="ph3tutorialheader" id="sub0">Introduction</h2>
 	      <p>Welcome to my local copy of the Touhou Danmakufu ph3 Function Reference, available in case the Danmakufu Wiki goes down *again*. Here you can access the entirety of the translated Danmakufu function reference, although it has passed through the Sparen filter and therefore may be slightly different from the Wiki.</p>
 	      <p>As a reminder, the OFFICIAL JAPANESE DOCUMENTATION can be found at <a target="_blank" href="https://touhougc.web.fc2.com/products/th_dnh_help_v3.html">mkm's website</a>.</p>
 	      <p>If you are accessing this after the closure of GeoCities Japan in Spring 2019, the full Japanese docs have been backed up to <a target="_blank" href="https://github.com/TheLandOfCodesAndApertures/Danmakufu-ph3-Official-Documentation">GitHub</a>. <a target="_blank" href="https://thelandofcodesandapertures.github.io/Danmakufu-ph3-Official-Documentation/th_dnh_help_v3.html">This link</a> may be sufficient, but if you experience garbled text, you may need to change your browser's Text Encoding [Safari/Firefox: View -> Text Encoding -> Japanese (Shift JIS); Chrome 55+: Extension required]. Alternatively, download the documentation via the 'Clone or download' button.</p>
-	      <p>In the tutorials, the functions will be available like so: <span class="tooltip" onmouseover="getFxnDocs('ObjSpell_SetDamage', 'f_objspellsetdamage_01');"><code>ObjSpell_SetDamage()</code><span class="tooltiptext" id="f_objspellsetdamage_01"></span></span></p>
-	      <p>General Functions, Object Functions, and Events are on their own respective pages to prevent this page from becoming too long. To access these, refer to the sidebar.</p>
+	      <p>In the tutorials, the functions will be available like so: <span class="tooltip" onmouseover="getFxnDocs('EV_REQUEST_IS_DURABLE_SPELL', 'f_rids_01');"><code> EV_REQUEST_IS_DURABLE_SPELL</code><span class="tooltiptext" id="f_rids_01"></span></span></p>
+	      <p>General Functions, Object Functions, and Player/System/Script Functions are on their own respective pages to prevent this page from becoming too long. To access these, refer to the sidebar.</p>
 	      <p>Notes on types:<br>mkm uses types such as 'real' (for real numbers and object IDs), 'char' (for characters and strings), and 'free' (wildcard). In my version of the documentation, I break this down by primary type (number/char/string/bool/free/etc) with a detailed type in parenthesis (float/int/path/Object ID). I also provide types for return values.</p>
-	      <h2 class="ph3tutorialheader" id="sub1">Player Main Functions</h2>
-	      <div id="player_main_fxns"></div>
-	      <h2 class="ph3tutorialheader" id="sub2">Player Spell Functions</h2>
-	      <div id="player_spell_fxns"></div>
-	      <h2 class="ph3tutorialheader" id="sub3">Private System Functions</h2>
-	      <div id="private_system_fxns"></div>
-	      <h2 class="ph3tutorialheader" id="sub4">Custom Script Functions</h2>
-	      <div id="custom_script_fxns"></div>
-	      <h2 class="ph3tutorialheader" id="sub5">Package Functions</h2>
-	      <div id="package_fxns"></div>          </div>      </div>      <footer id="footer">      </footer>    </div>
+	      <p>Please note that with Events, arguments are set using <span class="tooltip" onmouseover="getFxnDocs('SetScriptResult', 'f_ssr_01');"><code> SetScriptResult()</code><span class="tooltiptext" id="f_ssr_01"></span></span>, and return values are read out using <span class="tooltip" onmouseover="getFxnDocs('GetEventArgument', 'f_gea_01');"><code> GetEventArgument()</code><span class="tooltiptext" id="f_gea_01"></span></span>.</p>
+	      <h2 class="ph3tutorialheader" id="sub1">Danmakufu Events</h2>
+	      <div id="danmakufu_events"></div>
+          </div>      </div>      <footer id="footer">      </footer>    </div>
     <script src="javascript/ph3tutorialcommon.js"></script>
     <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
