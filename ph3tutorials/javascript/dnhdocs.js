@@ -10,7 +10,7 @@ function getFxnDocs(fxnname, domid) {
     //Get information
     var fxn = retrieveFxn(fxnname);
     //Format information
-    var argnames = ""; //Argument list inside function header
+    var argnames = ""; //Argument list inside function/entry header
     var i;
     for (i = 0; i < fxn.args.length; i += 1) {
         //Delimit by :, then prune whitepsace
@@ -20,9 +20,14 @@ function getFxnDocs(fxnname, domid) {
             argnames += ", ";
         }
     }
+    // Entry Type checking for non-Function values
+    let fxnargs = "(" + argnames + ")";
+    if ('isEvent' in fxn && fxn.isEvent === true) { // If arguments are to be hidden (e.g. event and not function)
+        fxnargs = "";
+    }
     //Unfortunately, font must be fairly small to *fit* in the tooltip since some names can be... long
     //Same reason why there's a space before (; Forces word wrapping.
-    var str = "<code style='font-size: 18px'>" + fxn.fname + " (" + argnames + ")</code><hr>";
+    var str = "<code style='font-size: 18px'>" + fxn.fname + " " + fxnargs + "</code><hr>";
     if (fxn.args.length > 0) {
         str += "<code><strong>Arguments:</strong></code><br>"
         var j;
@@ -291,9 +296,9 @@ function loadDocsByCategory (catnameparam, maindocobj) {
     }
     returnstring += "</div><br>";
 
-    //Now, loop through functions to populate docs
+    //Now, loop through functions/entries to populate docs
     for (j = 0; j < fs.length; j += 1) {
-        var argnames = ""; //Argument list inside function header
+        var argnames = ""; //Argument list inside function/entry header
         var l;
         for (l = 0; l < fs[j].args.length; l += 1) {
             //Delimit by :, then prune whitepsace
@@ -303,8 +308,16 @@ function loadDocsByCategory (catnameparam, maindocobj) {
                 argnames += ", ";
             }
         }
-        returnstring += "<div class='docsfxnname' id='fxn_" + fs[j].fname + "'><a href='#fxn_" + fs[j].fname + "'><code>" + fs[j].fname + "(" + argnames + ")</code></a>" + 
-            "&nbsp;&nbsp;<button class='docs_copybutton' onclick='docs_copyName(\"" + fs[j].fname + "\")'>Copy Fxn Name</button></div>";
+        // Entry Type checking for non-Function values
+        let fxnargs = "(" + argnames + ")";
+        let entrytype = "Fxn"; 
+        if ('isEvent' in fs[j] && fs[j].isEvent === true) { // If arguments are to be hidden (e.g. event and not function)
+            fxnargs = "";
+            entrytype = "Event";
+        }
+        // Construct body for this entry value
+        returnstring += "<div class='docsfxnname' id='fxn_" + fs[j].fname + "'><a href='#fxn_" + fs[j].fname + "'><code>" + fs[j].fname + fxnargs + "</code></a>" + 
+            "&nbsp;&nbsp;<button class='docs_copybutton' onclick='docs_copyName(\"" + fs[j].fname + "\")'>Copy " + entrytype + " Name</button></div>";
         if (fs[j].args.length > 0) {
             returnstring += "<div class='docsparamsdiv'><code><strong>Arguments:</strong></code><br>";
             var k;
