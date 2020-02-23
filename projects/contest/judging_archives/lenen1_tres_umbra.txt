@@ -1,0 +1,48 @@
+Script: "Suzubami" by Deep Purple
+Judge: Tres
+ 
+Hm.... for some reason, your script got slower and slower as it went on. Are you deleting your sound objects?
+ 
+Nonspell #1 (10/20)
+    This is uninteresting. It's got a gimmick, but when it comes to actual dodging it's just and semi-random spread of bullets.
+    If you just got rid of the gimmick altogether, you would dodge it exactly the same way, so the gimmick is unnecessary.
+    Even without the gimmick it'd still be boring to dodge though.
+ 
+Spell #1 (14/20)
+    It takes so long for the bullets to come back, I forgot you'd even put those warning bubbles hahaha. It's fine though.
+    This spell is pretty fun and interesting.
+    Depending on where Suzumi teleports it can get pretty chaotic, though, and not in a good way.
+ 
+Spell #2 (8/20)
+    This spell is not fun or interesting.
+    It's just random spam of bullets coming from every direction.
+    Depending on where Suzumi teleports, she can cheapshot you right in the face too.
+   
+Nonspell #2 (9/20)
+    This is eternal meek from several sources.
+    Just because Jynx does something doesn't mean it's a good idea.
+    Speaking of which, isn't this the exact same thing as one of Jynx's patterns?
+    The black bullets also occasionally blend into the black rocks in the background.
+ 
+Spell #3 (12/20)
+    This is better. The way your forced to move back and forth to stay in the safespot makes it better.
+    It still amounts to a lot of random spam though.
+ 
+Spell #4 (14/20)
+    I like the way you handled the gimmick this time.
+    However, once you get past the gimmick it's pretty bland.
+    Maybe you could add some walls, or aimed bullets, or really fast bullets, or something. Just anything to make it less repetitive.
+   
+Nonspell #3 (11/20)
+    This one's okay I suppose. A Blue Lady Show type thing, having to dodge in and out of Tsurubami's amulets while being mindful of Suzumi's knives.
+    The black knives occasionally blend into the black rocks of the background, again.
+   
+Spell #5 (15/20)
+    This is pretty good. It's like one of those Marine Benefit bubble spells. Fun.
+    The amulets can be wall-y or spammy, making it interesting.
+    You could still use some work on the pattern behind the gimmick, but it's much better than before.
+ 
+Aesthetic: (1/2). Too many patterns have bullets blending into the background.
+Overall: 94/162 = 11.6/20
+ 
+Closing Thoughts: You have a lot of gimmicks going on, but you try let them carry your patterns and it doesn't work. Focus more making the player do things. If you're doing streaming, maybe make them stream into something. If you're doing micrododging, maybe make add some walls to give them a "time limit" on how quickly they can micrododge. Also, try to cut back on the random spam.

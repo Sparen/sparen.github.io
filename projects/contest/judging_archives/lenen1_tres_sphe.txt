@@ -1,0 +1,40 @@
+Script: "Kill Two Birds with One Bone" by Sphe
+Judge: Tres
+
+Nonspell #1 (9/20)
+	What is this nonspell?????? Just a barrage of random fast moving bullets. Is there some trick I'm missing? If not, it's a really uninteresting and not very fun pattern.
+	To make it worse, the way the double bullets fall makes no space on the screen any more safe than any other. 
+	Maybe I'm supposed to use my flashbomb? The yellow bullets don't give nearly enough graze for that though.
+
+Spell #1 (15/20)
+	There isn't enough time to go from the bottom of the screen to the middle after seeing the delay lasers. Make the delay last a bit longer.
+	Decent enough. A lot of spam, but it's just there to be annoying and isn't a huge deal.
+	The main focus is dodging the aimed bullets in the small space.
+
+Nonspell #2 (12/20)
+	It's pretty good once you know it's coming, but the bones suddenly stabbing into you is a bit cheap.
+	You have warning lasers for every other stabby bone in the script, why not here?
+
+Spell #2 (20/20)
+	This is fantastic!!! This is like what Mitori could have been.
+	The delay lasers give just enough warning to make it possible, while still difficult.
+
+Nonspell #3 (12/20)
+	This is pretty good, if a bit bland. Having to weave in and out of the lanes while dodging the pellets.
+	Simple but effective.
+
+Spell #3 (17/20)
+	I like this a lot, but it could use some touching up.
+	The first phase is fine, gives you enough time to understand the gimmick without lasting too long.
+	The second phase is perfect, no complaints there.
+	When Sese comes in it gets a bit chaotic, but is still maneagable.
+	Once things start speeding up, though, it just kind of becomes a clusterfuck. There's so much going on at such a rapid pace, I just wound up moving wherever without really knowing what I was doing.
+
+Spell #4 (12/20)
+	This one's okay I guess. It's not particularly fun or interesting, though.
+	That last phase with the massive horde of bubbles just isn't cool, though.
+
+Aesthetic: 2/2. No issues.
+Overall: 99/142 = 13.944/20.
+
+Closing Thoughts: I don't really have much to complain about. The biggest problem with this script is the amount of BS and cheapshots. The opening non's barrage of crap, the first spell spawning Haniwas too quickly, the survival and final spell getting insane in the last few seconds, etc... I get this is a len'en contest, but that means it's an opportunity for you to fix Jynx's mistakes, not make the same ones. That said, your ideas are great and you usually execute them well.

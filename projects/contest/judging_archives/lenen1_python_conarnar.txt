@@ -1,0 +1,42 @@
+Len'en Contest 1 ~ Kill Two Birds With One Stone
+Python's Judgement
+
+Each pattern will be graded out of 20 and an average will be made. Aesthetics and the likes grant a bonus of up to 3 points in addition to the average.
+
+Script: Sticky Umbrella (Jun & Shou)
+Author: Conarnar
+
+Nonspell #1 (12/20):
+	Shou's danmaku is barely a threat at all. There is no real interaction between the characters either. Kind of 	dull overall but it's an opening nonspell, so I guess that's to be expected.
+
+Spell #1: Slime Card "Slug Shower" / Weather Card "Umbrella Weather" (16/20):
+	I suppose this is to be counted as a dual spell, but like last time, Shou and Jun are just kind of doing 	whatever. Nevertheless, the umbrellas are actually tough to misdirect now with garbage coming from both sides. I like it.
+
+Nonspell #2 (14/20):
+	This really doesn't leave me with a whole lot to say about it. But I guess that's something you'll see in a 	lot of my judgements.
+
+Spell #2: Slug "Slime Trail" (15/20):
+	Definitely a neat idea, but it gets boring rather quickly. One might argue that a lot of canon Len'en spells 	are like this because all in all not a whole lot happens.
+
+Nonspell #3 (15/20):
+	Again, there's not all that much happening, but the way you have to move back and forth while dodging other things at least doesn't make it as boring as Shou's things.
+
+Spell #3: Cloud Card "Sheets of Hail" (18/20):
+	Here's where it gets better. Even though the idea is really simple, the umbrella movement makes you move around a lot.
+
+Nonspell #4 (16/20):
+	Lovely idea indeed. The characters work together, which is what makes this nonspell so much better than the first one. After all, the contest was intended to at least be somewhat thematic too.
+
+Spell 4: Wet Sign "Slugs Play in the Rain" (16/20):
+	It kind of surprises me that bullets touched by Shou accelerate rather than decelerate, which would have made more sense. Regardless, despite the interaction being there, Shou doesn't really add all that much to the pattern in my opinion.
+
+Salt (salt/salt):
+	Salt. No bonus for your memes, sadly.
+
+
+Aesthetics (2/3):
+	I feel like the script suffered a little bit from lack of variety in terms of shot graphics. But only a little bit. There's also nothing extremely extraordinary going on in terms of graphical shenanigans (where's my daily dose of render targets?!), so you get an aesthetic bonus that's not extremely extraordinary.
+
+=====
+122/160 => 15.25 Pattern score
++2 = 17.25 Total score

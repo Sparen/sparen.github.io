@@ -1,0 +1,39 @@
+Len'en Contest 1 ~ Kill Two Birds With One Stone
+Python's Judgement
+ 
+Each pattern will be graded out of 20 and an average will be made. Aesthetics and the likes grant a bonus of up to 3 points in addition to the average.
+ 
+Script: Kill 2 Birds With 1 Bone (Sukune & Sese)
+Author: Sphe
+
+NOTES: You should probably have implemented difficulties. The script is really, really hard.
+
+Nonspell #1 (16/20):
+	I suppose flashing is necessary to avoid the random barrage. It's good as a pattern though, apart from...you know...the difficulty.
+
+Spell #1: Building "Infinitely Long Haniwa Bridge" (17/20):
+	With all sorts of stuff coming from all sorts of sides on top of having to dodge in a much smaller space this is definitely very Sukune-like, and very, very hard. Fine as a pattern though.
+
+Nonspell #2 (12/20):
+	Those spikes caught me of guard so many times. It's rhythmic, so you can kind of predict when they'll try to skewer you the next time, but for first-timers this is absolutely ridiculous. It's also kind of...boring. Dodging through a random rain to avoid the spikes.
+
+Spell #2: Bone Card "Crush and Pierce" (19/20):
+	I'm reminded of your Shinki script. But anyways, this spells is frantic and a lot of fun. The diverse patterns the bone skewers can take on make for a lot of variety and the spell definitely doesn't get boring quickly.
+
+Nonspell #3 (15/20):
+	Character interaction is there. Sukune does do these things in canon, after all. This is the only pattern I managed to capture.
+
+Spell #3: "Within a Gashadokuro's Clay Chest" (19/20):
+	This is a really nice survival, starting out slow and becoming ridiculous at the end. The spikes give a forewarning this time, which is fantastic.
+
+Spell #4: Boner Card "Final Absorption" (17/20):
+	The ending phase is ridiculous. The large laser is a bit wonky and probably should not have used a regular shot graphic. But it's fine otherwise.
+
+
+Aesthetics (3/3):
+	:ok_hand:
+
+
+=====
+115/140 => 16.43 Pattern score
++3 = 19.43 Total score

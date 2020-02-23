@@ -1,0 +1,43 @@
+Len'en Contest 1 ~ Kill Two Birds With One Stone
+Python's Judgement
+ 
+Each pattern will be graded out of 20 and an average will be made. Aesthetics and the likes grant a bonus of up to 3 points in addition to the average.
+ 
+Script: Reactive Lifeless Land ~ Land of Souls and Undead (Shion & Sese)
+Author: Guilmon
+
+NOTES: I played Hard without weather.
+
+Nonspell #1 (15/20):
+	Yeah, I guess this fits Shion. It's not particularily thrilling to look at, but dodging it is nice.
+
+Spell #1: Spirit Card "Consumation of Wicked Souls" (17/20):
+	Apart from the fact that it's probably supposed to be "consumption", this spell is really nice. The ways the bubbles cross and intersect make for some interesting dodging. Though the safespot around Shion may be a bit deceiving, since the red bullets nullify it, and they come in later. That's kind of my only gripe about this.
+
+Spell #2: "Super Ego" (11/20):
+	How you're supposed to dodge this is definitely not apparent on first sight, which really draws the score down in my opinion. Once you figure it out it also kind of comes down to sitting there and flashing at the right time.
+
+Nonspell #2 (15/20):
+	I don't have a whole lot to say about this. It's fun to dodge, it fits Sese, but like Shion's nonspell, it's not particularily thrilling overall.
+
+Spell #3: Bone Card "Eternal Bone Engine" (16/20):
+	Lovely application of flashbombs here...provided, you haven't forgotten they exist. Gotta love those flash-resistant bullets too. It's fun, but not as fun as Shion's first spell. And if you can't keep up with it, you can easily end up having to go all around Sese once.
+
+Spell #4: "The Ruler of the Underground" (18/20):
+	Fancy short survival spell. I don't see any problems, and dodging it is enjoyable too. Last phase is flash-dependant and may screw you over.
+
+Nonspell #3 (12/20):
+	Thematic failure due to lack of character interaction. It's just both of them doing whatever. Sese could have maybe thrown bones of some sort instead of plain circles, since Shion's attack is based off of her shot type too.
+
+Spell #5: "Feed the Soul, Rule the World" (17/20):
+	Character interaction is there (though it probably would have made more sense had Shion absorbed the bullets instead of Sese). The various phases are also nice. Last phase, again, can screw you over if you don't know what's coming for you.
+
+
+
+Aesthetics (3/3):
+	Nothing to gripe about in regards to aesthetics. Except maybe Sese's lack of bones, but that's being nitpicky.
+
+
+=====
+121/160 => 15.13 Pattern score
++3 = 18.13 Total score

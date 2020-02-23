@@ -1,0 +1,50 @@
+Script: "Sticky Umbrella" by Conarnar
+Judge: Tres
+ 
+I had to turn off your background. It just causes too much lag. Won't deduct points for this, I'm just saying.
+ 
+Nonspell #1 (12/20)
+    This is pretty uninteresting. Shou's stuff isn't important at all, almost entirely ignorable.
+    Jun's stuff is just stuff flying everywhere. It's a bit harder to dodge, but not much more interesting.
+ 
+Spell #1 (17/20)
+    This is fun. The Umbrellas force you to constantly move back and forth, the rest exists to stop you from doing that.
+    All the parts fit very well together.
+ 
+Nonspell #2 (14/20)
+    This looks really cool, I'll just put that out there.
+    As for how it actually plays, though, it's not *bad* but it's not *great* either.
+    The aimed bullets aren't tight enough to really be a threat, though they aren't ignorable like in the last nonspell.
+    The blue bullets are once again just kind of there.
+ 
+Spell #2 (13/20)
+    This spell is something that looks interesting, but when it comes down to actually dodging it it's nothing special.
+    Micrododging in between walls that move at different speeds.
+    There's nothing really special about this.
+ 
+Nonspell #3 (16/20)
+    Even though the biggest threat is just random blah, the way the safespot moves back and forth makes it really fun.
+    You have to move in a back and forth pattern to stay safe.
+ 
+Spell #3 (18/20)
+    This is a lot like the nonspell, but less dramatic and with memes.
+    You have to constantly be moving back and forth, just in a smaller space.
+    This is really good!
+ 
+Nonspell #4 (10/20)
+    Because of the Umbrellas, Shou's stuff is once again really non-threatening.
+    And since the Umbrellas fly back up this time, not even those are threatening.
+    This is a pattern with a lot of stuff going on, but not a lot to actually dodge.
+ 
+Spell #4 (14/20)
+    I don't have much to say about this one. Not very interesting, it's not like it sucks though.
+    Shou doesn't really do much to the rain drops. They change graphic and get slightly faster, but the hitbox of the new shots is more or less the same and there isn't enough of a speed change to make a big difference.
+   
+Nonspell #5 (-1/-1)
+    After 2 tries I managed to dodge both Jun and Shou's explosions.
+    Get Rekt
+   
+Aesthetic: 2/2. No issues.
+Overall: 116/162 = 14.32/20.
+ 
+Closing Thoughts: A lot of your patterns have a lot of stuff going on without a lot to dodge, or else things that are really uninteresting to dodge. That said, a lot of your patterns aren't like that, so *shrug*. In general, random and/or spammy stuff, like in Jun's spell and nonspell, shouldn't be the main focus of the pattern. It can be great if it's used as supporting danmaku, but it's boring when it's the main thing on the screen. Forcing the player to move around the screen can help a lot with this, which is something you've done in several of your patterns, mostly through walls. Heavy streaming and faster changing the density in certain parts of the screen is another way you could do it.

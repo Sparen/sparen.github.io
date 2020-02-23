@@ -1,0 +1,59 @@
+Len'en Contest 1 ~ Kill Two Birds With One Stone
+Python's Judgement
+ 
+Each pattern will be graded out of 20 and an average will be made. Aesthetics and the likes grant a bonus of up to 3 points in addition to the average.
+
+NOTES: I see why Tres had so much trouble judging this script now. It features randomized bosses, and this inevitably also results in a greater amount of patterns than allowed (six spells and six nonspells). I judged two playthroughs of this, and the rest was ignored, as stated in the rules.
+
+ 
+Script: N/A (Yabusame & Aoji | Shou & Kunimitsu)
+Author: GT & Achy
+ 
+Nonspell #1 [Yabusame] (16/20):
+	Smells like Duplex Danmaku Barrier. But it looks fancy and is certainly fun to play.
+
+Spell #1: Crossover "Dimensional Snake" [Yabusame] (14/20):
+	MS PAINT MEMES. Visually this is absolutely hilarious. It's also somewhat interesting to play, though I couldn't really figure out if there was any sort of trick to misdirecting Yabusame and thus got trapped by her on a few occasions.
+
+Nonspell #2 [Aoi] (9/20):
+	Fairly uninteresting actually. Has Armor Mode shenanigans.
+
+Spell #2: Faux Whirlpool "Rince Cycle" [Aoki] (15/20):
+	Nice to play. I like how it isn't static, like most of Aioli's things usually tend to be. Though it also gets boring quickly.
+
+Nonspell #3 [Yabusame & Aioli] (11/20):
+	What the actual fuck is this dimensional fuckery. The team work is certainly apparent, but I don't know what else to say about it.
+
+Spell #3: Infinity "Dimensional Looping" / Water Rush "Blue Vortex" [Yabusame & Luigi] (17/20):
+	MORE DIMENSIONAL HILARITY. This is absolutely fantastic as a dual spell. The danmaku itself isn't very hard to avoid, but Yabusame's screen shenanigans make up for that in spades.
+
+====================
+
+Nonspell #4 [Shou] (16/20):
+	Prime example that Shou's nonspells can be made interesting.
+
+Spell #4: Juicy Card "What if it Could Rain Fruit Juice?" [Shou] (17/20):
+	Oh yes, what if...errr, this spell is influenced by a lot of randomness, but that's characteristic for Shou I suppose. It's nice to play though, that's certain.
+
+Nonspell #5 [Kunimitsu] (15/20):
+	Classic Kunimitsu technique. I feel like this could have been a little more difficult, but it's fine.
+
+Spell #5: Slow Art "Slash Persistence" [Kunimitsu] (14/20):
+	The base concept is very reminiscent of Yago's Silhouette Range. The pattern is very diverse, but most of the time you end up not having to dodge a whole lot if you have keen eyes.
+
+Nonspell #6 [Shou & Kunimitsu] (12/20):
+	Unlike the previous dual nonspell, there really isn't any team work between the two characters (though I guess Yabusame can work with just about anybody by simply fucking with the interface). But it's still enjoyable.
+
+Spell #6: Rain Dance "Slug Conga Line" / Quick Strike "Air Slash" [Shou & Kunimitsu] (14/20):
+	A lesser Giant Killing paired with walls. The spell looks fairly empty, and again, the characters aren't doing much together. But the strange movement of Shou's danmaku kind of makes up for this emptiness.
+
+
+
+Aesthetics (2/3):
+	Visually nothing to complain about, but I'd like to deduct points for forcing the player to drop the player script in their main player folder. I guess this is something I could turn a blind eye to if this were a script made by a beginner, but you two are clearly not beginners.
+
+
+
+=====
+170/240 => 14.17 Pattern score
++2 = 16.17 Total score

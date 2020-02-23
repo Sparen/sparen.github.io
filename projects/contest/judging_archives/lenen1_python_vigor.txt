@@ -1,0 +1,55 @@
+Len'en Contest 1 ~ Kill Two Birds With One Stone
+Python's Judgement
+ 
+Each pattern will be graded out of 20 and an average will be made. Aesthetics and the likes grant a bonus of up to 3 points in addition to the average.
+ 
+Script: Doppelter Vormund (Tsurubami & Tenkai)
+Author: Vigor
+
+NOTES: I played Normal Mode
+
+Nonspell #1 (14/20):
+	Each of them doing whatever. The pattern's overall pretty neat though.
+
+Nonspell #2 [R] (15/20):
+	Also pretty neat, there's not really anything I can say about it.
+
+Spell #1 [R]: Leap Border "Dragon Gale" (17/20):
+	The concept is really fancy, and this is definitely tons of fun to avoid.
+
+Nonspell #3 [R] (14/20):
+	This nonspell proves that Tsurubami's danmaku doesn't always have to be purely random, but alas there isn't all that much interesting going on at all.
+
+Spell #2 [R]: "Ivory Seal" (16/20):
+	And more non-random danmaku. This spell is also visually really fun to look at, and to dodge, although the trails can sometimes really confuse you.
+
+Nonspell #4 [L] (16/20):
+	Personally I prefer this over Tsurubami's other nonspell, as it confronts you with more danmaku that you have to avoid. Her other one had a lot more empty spaces.
+
+Spell #3 [L]: Ink Spot "Black Pigment" (17/20):
+	This is very fancy and a lot of fun to dodge too.
+
+Nonspell #5 [L] (15/20):
+	I like how Tenkai uses her barriers here. The random danmaku from the sides makes avoiding them a lot more difficult too. You say the left route is easier, but I definitely think it's harder.
+
+Spell #4 [L]: "Tegula Assault" (15/20):
+	More barriers. Also a lot of fun to dodge. Man, I should really try to think of more creative things to say. But the biggest flaws this script has aren't in the patterns themselves.
+
+Nonspell #6 [R] (12/20):
+	This doesn't really seem like a dual boss nonspell at all, which would make it a thematic failure. The pattern starts out quite dull, but that changes once the bubbles appear.
+
+Spell #5 [R]: "Overpowering Authority" (13/20):
+	Very reminiscent of Prime Minister in Black Robes, with elements from Pitch Black Eye. But at its core it's still fairly boring to play, at least on Normal. I haven't tried the other difficulties.
+
+Spell #6 [R]: "Evolving Crane" (17/20):
+	The crane pattern is predestined to be a dualspell for Tenkai and Tsurubami because it's something that both of them use. I also like how it changes from a singular crane to Twin Cranes, and even a triple crane.
+
+
+
+Aesthetics (1/3):
+	Visually the script is absolutely gorgeous. HOWEVER, I had absurd problems with the lack of a proper deathbombing ability. The power gimmick is also really neat, but I feel something like it adds unnecessary complexity to the script.
+
+
+=====
+181/240 => 15.08 Pattern score
++1 = 16.08 Total score

@@ -1,0 +1,79 @@
+Script: "Doppelter Vormund" by Vigor
+Judge: Tres
+
+Your power system doesn't work well at all for this script.
+Firstly, there's no easy way to get power back.
+Secondly, at the default power you can kill most patterns before they start if you shotgun.
+But if you're at a lower power, the patterns take *forever* to kill.
+Furthermore, sometimes the bosses take forever *anyway* because the shots shoot around the boss. Since it's random, there's no way to really get around this.
+I would have enjoyed this script much more if the player were more balanced for the script. (-2)
+
+Nonspell #1 (17/20)
+	The lasers restrict your movement, but you still have to read the amulets and find a safe spot. The two halves go very well together, and it's very fun.
+	You keep it from being repetitive by varying the number of amulet clusters too. Good job~
+
+[Tsurubami Route]
+Nonspell #2 (Tsurubami) (16/20)
+	This is like the first non, but instead of lasers restricting your movement you have to keep the danmaku in mind.
+	It's quite a bit less interesting, but still pretty fun.
+
+Spell #1 (Tsurubami) (16/20)
+	The black fog can completely hide some of the lanes until they hit the player. 
+	I understand making the lanes hard to see is the point of the pattern, but it should never get to the point where a lane is completely obscured the entire time it's on screen.
+	Still, if you can get past that this is a very fun and well designed pattern.
+
+Nonspell #3 (Tenkai) (15/20)
+	This one is tricky. If your movements are too wide, the white bullets will get too fast to dodge. 
+	Even though it looks like a misidrection spell, you're actually just supposed to make small movements to the left or right.
+	Very clever~ I like it.
+	However, the white bullets will often blend into the squares, making them difficult or downright impossible to see. 
+
+Spell #2 (Tenkai) (11/20)
+	This is just a card with a lot of bullets falling down.
+	There's no strategy, and it doesn't force you to do anything interesting.
+	You just stay towards the bottom of the screen and dodge.
+
+
+[Tsurubami Route]
+Nonspell #2 (Tenkai) (16/20)
+	This is fun. The lasers restrict your movement, while you have to dodge fast moving balls.
+	It isn't too creative in how you dodge it and it does get a bit repetitive at times, but it's fun~
+
+Spell #1 (Tenkai) (11/20)
+	There are no places in this spell that are safe. 
+	My thought was "okay, I jump over the barrier thing as soon as it passes over me, that way I can avoid getting hit from behind."
+	But the black lasers that spawn prevent you from doing that.
+	You really just have to tank it, try to micrododge the bullets that bounce from behind you.
+
+Nonspell #3 (Tsurubami) (13/20)
+	Until the third wave, the amulets aren't threatening in the slightest. 
+	So until the third wave, this pattern is just about dodging seemingly-random black bullets. Not very interesting.
+	Once the third wave starts it becomes somewhat interesting as you're forced to the left or right, but then it goes back to the first wave right afterward.
+
+Spell #2 (Tsurubami) (14/20)
+	The first wave is really cheap, you can't micrododge in between the amulets but if you try to follow the "lane" you'll wind up almost near the top of the screen.
+	The other two are cool, though.
+	However, depending on how Tsurubami moves you can really get screwed over. That's my biggest problem with this spell.
+
+[Both Routes]
+Nonspell #4 (13/20)
+	*Sigh* This is another time when your script would have been better if everything weren't ADD rendered.
+	It starts out very easy, with nothing threatening at all. 
+	However, once the bubbles start spawning it becomes impossible to see the amulets.
+	This wouldn't be an issue if the amulets were alpha rendered, I think.
+
+Spell #3 (Survival) (5/10) (6/10) (4/10) = (10/20)
+	The first phase is totally non-threatening. Nothing special about it at all, and it's not like it's used to show off a gimmick so I don't know why it's even there...?
+	The second phase is a bit more interesting. Maybe I just caught onto the trick quickly, but it was still not very threatening at all.
+	The third phase starts off with a cheapshot- by the time you see the lasers coming towards the center, they've already spawned their hitbox.
+	Once you get past the initial cheapshot, though, it's so simple and uninteresting. There's really very little to dodge in this entire survival.
+
+
+Spell #4 (14/20)
+	The first wave is totally non-threatening, the second is okay, the third is just too much. Balance the waves a bit better please.
+	Also... isn't this just twin cranes...? It doesn't feel very different. 	
+
+Aesthetic etc: 2/2. No issues.
+Overall: 166/242 = 13.86/20
+
+Closing Thoughts: In general you have a very good idea of what you're doing. Just make sure you don't let your patterns get too BS. Maybe get people to test your scripts before releasing them. If you play something dozens of times it can be hard to tell "is this fair or not". My biggest issue here was the survival, though. There's just nothing going on in it.

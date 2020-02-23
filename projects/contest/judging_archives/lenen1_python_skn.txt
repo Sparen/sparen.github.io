@@ -1,0 +1,41 @@
+Len'en Contest 1 ~ Kill Two Birds With One Stone
+Python's Judgement
+ 
+Each pattern will be graded out of 20 and an average will be made. Aesthetics and the likes grant a bonus of up to 3 points in addition to the average.
+ 
+Script: General Day in Mugenri (Xeno a & Haiji)
+Author: SKN
+
+Nonspell #1 (10/20):
+	Seems like an almost direct copy of one of Haiji's nonspells. Can't really say much about it either.
+
+Spell #1: Hail the Priest "Imperial Clam's Aerobic Cha-Cha!!" (12/20):
+	Based on "Royal Clan's Chaotic Dance" I see. Kind of boring, but that's mostly because I found the original pattern boring too.
+
+Spell #2: Amazing Occult "Angel's Refrigerator" (15/20):
+	Based on "Devil's Recitation" I see. The pattern starts very suddenly, which makes it easy for the player to get trapped somewhere, but apart from that it's actually good.
+
+Nonspell #2 (9/20):
+	Frankly I don't think this fits Xeno a. This is more something like Hibaru's nonspells, and also really dull and uninteresting.
+
+Spell #3: Deck Card "Deck Shuffle on Life Table" (15/20):
+	This is a nice pattern, but it gets rather boring rather quickly. Perhaps some auxiliary danmaku could have made this a lot better.
+
+Spell #4: "The Cards of the Game" (11/20):
+	The first phase is incredibly boring. It would have been a lot better had the cards actually done something like in "Dealer Time" for example instead of just sitting there. The second phase is better, and the third sadly ruins it again.
+
+Nonspell #3 (8/20):
+	Both characters shoot stuff and there's no interaction between them. The danmaku they shoot isn't interesting, neither fun to dodge.
+
+Spell #5: Eighth Conga "Lightning Devil's Happy Day" / Shuffle "Miracle Card" (7/20):
+	Based on "Thunder God's Anger" I see. It comes down to rand(0, 360) and curvy lasers, and that's not good.
+
+
+
+Aesthetics (3/3):
+	Little bonus for the custom sprites and effects. There's nothing wrong with this script outside of the actual danmaku.
+
+
+=====
+111/160 => 10.88 Pattern score
++3 = 13.88 Total score

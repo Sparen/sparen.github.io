@@ -1,0 +1,43 @@
+Len'en Contest 1 ~ Kill Two Birds With One Stone
+Python's Judgement
+ 
+Each pattern will be graded out of 20 and an average will be made. Aesthetics and the likes grant a bonus of up to 3 points in addition to the average.
+ 
+Script: Shall We Overhaul!! (Tenkai & Tsurubami)
+Author: Choon
+
+NOTES: I played Normal Mode
+
+Nonspell #1 (14/20):
+	Generic Tenkai pattern, but that doesn't mean dodging it is boring.
+
+Spell #1: Danmaku Barrier "Dimensional Shrivel" (10/20):
+	It's kind of disappointing that anything touching the barrier turns into random garbage. Because that's what you end up dodging. Random garbage.
+
+Spell #2: Dimensional Tampering "Matter Displacement" (14/20):
+	"We take the bullets, and push them somewhere else!" I feel like something more could have been done with this gimmick, but this is already much better than the previous spell.
+
+Nonspell #2 (14/20):
+	Randomness, but with streaming. This alone already makes randomness more pleasant. Very Tsurubami-esque.
+
+Spell #3: Ink Card "Pitch Black Wave Blotting" (12/20):
+	I like the gimmick here, but the pattern in itself is quite boring. The gimmick kind of makes up for that, but...not really.
+
+Spell #4: Sightlessness "Pain Hidden in the Shadows" (14/20):
+	Works somewhat similarily to the previous spell, but making the pattern more complex would have made this pattern infinitely more difficult, so it's good as it is.
+
+Nonspell #3 (16/20):
+	The characters are working together, and that's how it's supposed to be! A nice example of a team nonspell.
+
+Spell #5: "Crane's Cry Resonating Through Mugenri" (17/20):
+	Because what other pattern would be their dual spell? Haha, but it works well, and the danmaku they shoot alongside the lasers is also neat. Classic final spell with multiple phases, probably the best pattern in the script.
+
+
+
+Aesthetics (2/3):
+	This script doesn't have anything interesting to offer aesthetically, but there's nothing outrageous either. I liked how the dual spell name's text had a gradient. I'm a sucker for details.
+
+
+=====
+111/160 => 13.88 Pattern score
++2 = 15.88 Total score

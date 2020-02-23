@@ -1,0 +1,89 @@
+Script: "Unreal-Tale-of-a-Bootleg-Cupids-Excessive-Blood-Loss" by Natashi
+
+Judge: Tres
+
+ 
+
+Tested on Hard difficulty
+
+ 
+
+Nonspell #1 (16/20)
+
+    This is nice. The double pellets are just wall-y enough to be annoying but not enough to really screw you over.
+
+    The star of davids are kind of spammy and can screw you over occasionally, but it's still very coherent so it works out.
+
+ 
+
+Spell #1 (13/20)
+
+    This pattern alternates between being painfully easy/boring and BS levels of hard.
+
+    The part where the double bullets move back + the mishaguji-sama bullets being the easy part
+
+    The part with the lasers bouncing all over the place being really BS. The lasers spawn very quickly and can fill most of the screen.
+
+ 
+
+Nonspell #2 (15/20)
+
+    This is okay. There's nothing especially bad about this pattern, though it doesn't really stand out.
+
+    Once again, the main focus is on the semi-static stuff, this time being the lasers and the bat bullets, with some random junk thrown in to keep it from being memo.
+
+    That's a good thing though! Goodjob!
+
+ 
+
+Spell #2 (16/20)
+
+    This spell looks cool, but when it comes to what you actually have to dodge...
+
+    Usually the arrows don't manage to get too far down on the screen, so the lasers they spawn usually don't amount to much.
+
+    Every now and then an arrow or two will make it to the bottom and then you actually have to pay attention to it, but for the most part all you have to do is dodge the aimed lasers and the falling double bullets.
+
+    Maybe instead of making it totally random as to when the arrows stop moving, make it pseudo-random, that way you can gurantee a few arrows will always make it to the bottom.
+
+    Still, it's not like it's stupidly easy as is. I'm just nitpicking.
+
+   
+
+Nonspell #3 (16/20)
+
+    This pattern is really cool. I like how it works.
+
+    But, because of how quickly the walls move relative to the spawning of the crosshairs it can become really difficult to recover if you mess up aiming the crosshairs even once.
+
+    A very unforgiving pattern.
+
+ 
+
+Spell #3 (13/20)
+
+    The different parts of this pattern don't blend together very well.
+
+    It feels like you took 3-4 different concepts and tried to mash them into one pattern.
+
+    but none of the concepts feel complete. They just kind of happen one after another without really working together.
+
+    It's not unfair though, it's just not very fun.
+
+ 
+
+Spell #4 (17/20)
+
+    It's a typical "circle around the boss" type spell card, but the way Mitori spawns the arrows gives it a unique feel.
+
+    It's very fun.
+
+ 
+
+Aesthetic: 2/2. No issues.
+
+Overall: 108/142 = 15.42/20
+
+ 
+
+Closing Thought: How do I unlock DBF? Anyway, this script is good. It just needs some minor tweaks here and there. I don't really have very much to complain about.

@@ -1,0 +1,38 @@
+Len'en Contest 1 ~ Kill Two Birds With One Stone
+Python's Judgement
+ 
+Each pattern will be graded out of 20 and an average will be made. Aesthetics and the likes grant a bonus of up to 3 points in addition to the average.
+ 
+Script: Blood-Stained Silver Bullet (Sanra & Mitori)
+Author: Natashi
+
+NOTES: I played Normal Mode
+
+Nonspell #1 (16/20):
+	Absolutely fabulous already. It's more than just Sanra quickscoping you while having you micrododge all sorts of garbage like in BPoHC and I like that a lot.
+
+Spell #1: Bullet Card "Self-Replicating Bullets" (14/20):
+	This is a nice spell, but I feel like it...is a bit too slow-paced for Sanra. Dodging it pretty much requires one quick reaction, and is otherwise pretty unspectacular.
+
+Nonspell #2 (17/20):
+	Again, a really nice nonspell, but there really isn't all that much I can say about it.
+
+Spell #2: Heaven Card "Blinding Light of Amaterasu" (11/20):
+	This feels really boring to dodge. It seems impressive at first, but there's not much to it.
+
+Nonspell #3 (19/20):
+	This is fantastic. I love the idea of having to position Sanra's shots properly to open up a path in the wall. It seems more like something you'd find in a spell, and if you can't keep up, you'll be walled.
+
+Spell #3: Heart Card "Arrows of Yandere Love" (13/20):
+	Character interaction is there, and you're confronted with various patterns that you have to deal with. It's fun, but nothing really special.
+
+Spell #4: Red Flare "Vermillion Heart" (15/20):
+	I personally like this spell more than the previous, though the phases could have maybe been differentiated a bit more by Sanra shooting different patterns, so that you might have to pass through her shots at times as well.
+
+Aesthetics (3/3):
+	This script is very strong on the graphical side of things. Sanra's crosshairs simply look beautiful, as does the cutin animation.
+
+
+=====
+105/140 => 15.00 Pattern score
++3 = 18.00 Total score

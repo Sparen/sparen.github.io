@@ -1,0 +1,46 @@
+Script: "Shall We Overhaul" by Who is this person???
+Judge: Tres
+ 
+Nonspell #1 (15/20)
+    This was fun enough. Dodging between lanes, with just enough extra stuff to keep it from getting repetitive.
+    It's not the most interesting thing in the world, but it's not boring either.
+   
+Spell #1 (13/20)
+    This is basically Nitori's second spell. It's got fancier graphic effects, but the way you dodge it is very similar.
+    And it isn't all that great. Just weave in and out, you don't have to do anything special to dodge this.
+ 
+Spell #2 (13/20)
+    Tenkai's teleporting, forcing you to move around, makes a simple pattern more interesting.
+    The knives and balls overlap in such a way that they can often wall you in, and there's nothing you can do about it.
+    On top of that, it is very simple in terms of how you dodge it.
+ 
+Nonspell #2 (15/20)
+    The transition wave is a cheapshot, but it is cool how it turns tenkai into tsurubami.
+    I like how the aimed bullets and black spam interact. This sort of pattern usually turns out boring, but the random spawning points and the way the bullets work together makes it fun.
+    It's sort of like Ran's first spell in PCB Phantasm.
+ 
+Spell #3 (12/20)
+    Meeeeeeh....
+    It's eternal meek/guse flash with a gimmick. I don't enjoy this sort of thing.
+    Maybe if you would have added some walls or something it might have been better. Honestly, anything would have been better than eternal meek/guse flash/what it is.
+ 
+Spell #4 (17/20)
+    The aimed bullets work out really well- they force the player to move, then linger on screen long enough to serve as walls, restricting movement.
+    The white bullets also make use of the invisibility gimmick much better than the last spell.  
+    You can either try to stay close to Tsurubami, or you can try to guess where the white bullets will be when they turn black.
+    Very nice~
+   
+Nonspell #3 (14/20)
+    The amulets and knives are sparse enough that they don't force you to do anything weird.
+    So really this just turns into a basic "stream and dodge spam" type spell.
+    There's nothing that makes this stand out from all the other patterns that are like this.
+ 
+Spell #5 (6/10) (3/10) (4/10) = (8.67/20)
+    The first wave would have been a lot cooler without the random twin cranes lasers. They really restrict your movement, while the main pattern is one where you'd want to move around a lot. It just doesn't work out, in this case.
+    The second phase on the other had is just a bunch of junk flying all over the screen. The twin crane lasers certainly make it worse, but it's not a fun pattern in the first place.
+    The third wave is a bit more interesting, but suffers from the same problems as the second.
+ 
+Aesthetic: 2/2. No issues.
+Overall: 107.67/160 = 13.46/20
+ 
+Closing Thoughts: You've got a good handle on things, there was nearly nothing in this script that really made me think "this sucks". Try to experiment a bit more with your patterns though. There's a "default position" for the player- usually, players will sit at the bottom of the screen, in the horizontal middle, with their eyes looking at the space around the player. Try doing things that force the player to get away from that default position- force them to the left or right, or higher on the screen, or make them look somewhere other than where the player sprite is (Kunimitsu being an example of the last one). If the player can dodge most of your patterns by staying in that position or near that position, you might need to try something different.

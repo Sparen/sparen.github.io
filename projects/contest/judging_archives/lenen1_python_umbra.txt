@@ -1,0 +1,40 @@
+Len'en Contest 1 ~ Kill Two Birds With One Stone
+Python's Judgement
+ 
+Each pattern will be graded out of 20 and an average will be made. Aesthetics and the likes grant a bonus of up to 3 points in addition to the average.
+ 
+Script: Suzubami (Suzumi & Tsurubami)
+Author: Umbra
+
+Nonspell #1 (11/20):
+	Suzumi shenanigans, but not exactly very interesting to watch, or to dodge.
+
+Spell #1: Memory Card "Reverie" (17/20):
+	I adore the concept, and the spell is made interesting enough through inclusion of a variety of patterns. Though I feel like the reverse bullets suffer a teeny tiny bit from visibility issues.
+
+Spell #2: Loop "Repeating Thought" (12/20):
+	It's...okay, I guess. It comes down to random garbage from all sides in regards to dodging. Well...at least it's not just plain wrapping and the knives changing speed to add something. But overall it's still rather dull.
+
+Nonspell #2 (10/20):
+	Very Tsurubami, and as a result very boring, because Tsurubami is mostly random nonsense.
+
+Spell #3: Ink Card "Chameleon on Paper" (11/20):
+	More random nonsense. This is something I've been told as well. Just because JynX does it all the time doesn't mean it's necessarily fine.
+
+Spell #4: Ink Card "Everything Lost in Black" (15/20):
+	This is already much better. I like how the bullets conceal each other. Makes for some interesting dodging, but could have maybe been accentuated with less randomness and more proper patterns.
+
+Nonspell #3 (11/20):
+	Thematically this is a total failure. Tsurubami and Suzumi are just doing whatever, there's no interaction between the two characters, which, as stated in the rules, would be something to focus on in regards to the dual attacks.
+
+Spell #5: Mugenri "Monochrome World" (19/20):
+	Thematically, this is a huge success. While it uses the same mechanic as Tsurubami's Search Crescent, it kind of is something that would fit Suzumi much better. Combine this with danmaku that's NOT total randomness for once and you've got yourself a neat dual spell. I like this a lot and it's definitely the script's best pattern by far.
+
+
+Aesthetics (1/3):
+	Nothing too interesting going on here, really. The black bullets were a little bit hard to see on some portions of the background, and the final spell caught me off guard during my first playthrough because I didn't see the circle.
+
+
+=====
+106/160 => 13.25 Pattern score
++1 = 14.25 Total score

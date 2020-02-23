@@ -1,0 +1,214 @@
+Script: "Choose Your Own Adventure- BPoHC Edition" by Achy and GT
+Judge: Tres
+ 
+Nonspell (Alola) (9/20)
+    Quite basic. There's really almost nothing to dodge here. The lines spawn in such a way that they're non-threatening, and there's enough time between waves that the less dense pellets become completely non-threatening before the next wave starts.
+ 
+Spell (Akinsola) (15/20)
+    Again, quite basic. Dodging aimed stuff while dodging spam at the same time.
+    Still, the way the bubble spawns right in your face makes this more interesting than similar spells like this.
+ 
+Nonspell (AAoojjii) (7/10)
+    This is so basic it's actually hilarious.
+    They both do the exact same thing. 
+    The only thing that gives this pattern any redemption is the way the random movement changes which spots are safe and which are not.
+ 
+Spell (AAAooojjjiii) (7/10)
+    Most of the bullets miss you completely.
+    Both patterns feel like they should be supportig another pattern, and as a result there's very little you actually have to dodge.
+    Just stay under Aomi, which is easy enough.
+    Actually now that I'm looking closer.... Aoi shoots bubbles for the first few waves but then stops. A bug?
+ 
+Nonspell (Aojimitsu) (14/20)
+    The two parts of the pattern blend together very well- you pick what looks like a safe spot in Kuni's lasers, then Aorta's walls force you somewhere else.
+    It still feels really basic though. It's not particularly interesting.
+ 
+Spell (Alomamolamitsu) (15/20)
+    Aosahina's walls work well with Kunimitsu's lasers and spam.
+    The yellow lasers are thin, and can be pretty hard to see though.
+    It also once again feels incomplete.
+ 
+Nonspell (Shaoji) (11/20)
+    The two halves are decent together, spam and walls, but not all that great.
+    Maybe try to make the spam more coherent.
+   
+Spell (Shaoji) (8/20)
+    Shou's curvy lasers make following Aoki a bit more confusing than before. But it's not much help, and only happens every so often.
+ 
+Nonspell (Aojisame) (13/20)
+    The fake walls are very easy to ignore, so those aren't a problem.
+    The fake yellow bullets are very distracting, however, which is what you were going for. This makes dodging the walls more challenging.
+ 
+Spell (Aojisame) (10/20)
+    When Aoti is spawning bubbles the pattern is halfway decent, but once that stops the pattern becomes entirely non-threatening.
+    Yabusame's bullets are a distraction at best, and don't offer much to the pattern once the bubbles stop spawning.
+ 
+Nonspell (Yaogi) (12/20)
+    This is among the better joint nons. Aoli's walls provide plenty of bullets for Yago's spear to transform.
+    However, the pattern consists mostly of trying to dodge random rain, which isn't all that fun.
+    The leftover Aoi walls spice it up a bit, but it's just not enough.
+ 
+Spell (A God with Shit to Do) (16/20)
+    Heeeeeyyyyy a coherent one~
+    Yago's spears prevent you from sitting at the bottom of the screen, which forces you into the bubbles Shitodo spawns.
+    Normally you could just sit in between the spears and ignore them, but Shitodo's "waterfall" forces you left and right, so that isn't an option.
+    Very fun and interesting.
+ 
+ 
+ 
+Nonspell (Kunimitsu) (14/20)
+    It's very simple, but it does encourage you to move around, which I like.
+    That said, it becomes pretty negligible with anyone but Yaorochi- just don't stay in the center and it becomes easy.
+ 
+Spell (Kunimitsu) (18/20)
+    This is really fun, exactly the kind of thing I loved about Kunimitsu's original fight.
+    It's mostly about reading the lasers. I feel like you could have added some supporting danmaku, as right now it's very basic.
+    But it's still a great attack.
+ 
+Nonspell (Kunikuni) (7/10)
+    Boring boring boring boring.
+    The way the lasers overlap is supposed to spice this up, but it just isn't enough.
+ 
+Spell (Kunikuni) (14/20)
+    It's a huge clusterfuck of stuff going on, but it actually winds up being kind of fun.
+    The frequent laser spawnings keep you moving, and the spam forces you to dodge around at the same time.
+   
+Nonspell (Shounimitsu) (11/20)
+    The two halves seem forced together. They work independently and don't really affect one another.
+    On top of that, neither half is particularly interesting or difficult.
+ 
+Spell (Shooya) (9/20)
+    There's just a whole bunch of stuff flying all over the screen.
+    It has the same problems as the Aoli Kunimitsu spell, but lacks the interesting parts.
+    Not very good.
+ 
+Nonspell (KuniXYabu) (2/20)
+    I didn't realise the first couple times I played it that the darker bullets had no hitboxes, and it felt very absurd.
+    But once I realize what was going on, I was just like "really? I can just ignore all this extra stuff?"
+    The fake bullets I'll admit can be a bit distracting, which is probably what you were going for.
+    Once you get past that, though, the pattern loses most of it's charm.
+ 
+Spell (Yabumitsu) (8/20)   
+    This spell is too much for my brain.
+    If it were just bullets it would be enough, they move very quickly.
+    You have to be reading ahead in two seperate places, the left and the right, so you can determine when the best time for you to jump is.
+    With fast moving bullets at odd angles, it becomes a pain, as you can't really tell *when* there might be a bullet appearing out of nowhere.
+    If you'd kept Yabu's bullets spawning solely from them, rather than looping all around the screen, I think I would have enjoyed this a lot more.
+    On top of that, Kuni's lasers just really seal this as an unfun pattern for me.
+    Kuni's whole thing is forcing you to read the lasers from far away. Trying to read regular bullets in this kind of pattern is hard enough, but if you mess up, you still have the chance to reaction dodge your way back.
+    Kuni's lasers offer no room for error in this kind of pattern, and it isn't very fun honestly.
+ 
+Nonspell (Kunago) (12/20)
+    Kuni's lasers don't interact with Yago's spear at all lol.
+    Yago's half really shines here, but Kuni's is mostly ignorable.
+ 
+Spell (Kunago) (10/10)
+    The spears don't affect the pattern in the slightest once they reach the bottom of the screen.
+    The usual problem of Kuni's yellow lasers is still here.
+    This pattern is mostly just dodging Kuni's spam.
+ 
+ 
+ 
+ 
+Nonspell (Shou) (14/20)
+    The way the walls spawn makes this difficult and interesting.
+    The waves overlap, so you HAVE to move around the screen, which in turn makes the next wave cover a wider area.
+ 
+Spell (Shou) (6/20)
+    There is nothing interesting about this spell at all.
+    It's just basic fast spam from multiple directions.
+ 
+Nonspell (Shoushou) (12/20)
+    It all comes together pretty nicely. Doubling the density of Shou's stuff really helped, as did having it spawn from 2 sources.
+    However, now that this is the only part it's kind of boring.
+ 
+Spell (Shooshou) (17/20)
+    This is really really hard, but very fun.  
+    The "Slug Crossroads" forces you towards the top of the screen, the curvy bullets force you to the bottom.
+    It turns into a juggling act of jump up jump down. 
+    This is made more difficult since you have to jump in between the lanes.
+    It still doesn't feel too coherent though. It feels very choppy, like the parts weren't meant to go together.
+ 
+Nonspell (Yabushou) (15/20)
+    I feel like these were the two patterns that were meant to go together.
+    The large number of sparse bullets makes the entire screen look full, and they move just fast enough that it's hard to tell where things are.
+    Still, it doesn't actually make you do anything interesting. Once you can get past the gimmick, it's just dodging random, sparse stuff.
+   
+Spell (Yabushou) (13/20)
+    The Slug Conga-line is still cool, but Yabu's pattern adds very little to it.
+    Enough to keep you on your toes, I guess.
+    Just not an exciting pattern.
+ 
+Nonspell (Yagoshou) (12/20)
+    Shou's pattern mixes well with Yago's spear due to the large number of bullets, but in the end it's kind of just a lot of stuff falling down on you.
+    There's nothing particularly fun about dodging this, it really is just bullets falling down from above.
+ 
+Spell (Yagoshou) (11/20)
+    This spell is very safe-spotty. Yago doesn't shoot enough bullets, or aimed bullets, that force you to move.
+    So you can really just pick a spot between conga line lanes, then micrododge the knives and spears.
+    Not interesting.
+ 
+ 
+ 
+ 
+ 
+Nonspell (Yabusame) (12/20)
+    This is pretty standard. It's essentially Reimu's final spell in IN.    
+    It's just boring, all things considered. Slight up, wait a while, slight down, slight left, wait a while slight right.
+    It also ended before the "hard" phase.
+ 
+Spell (Yabusame) (14/20)
+    What is this...?
+    Well, I like how it forces you to move all over the screen.  And the way the bullets spawn in BoWaP means you can't just micrododge, you have to macro sometimes.
+    It can still feel really chaotic, though, and not really in a good way. It's hard to tell where Yabusame will move next and at what angle the bullets will spawn. Plus the bullets spawn at a fairly high speed.
+    So unless you memorize it, it can still feel really cheapshotty, despite the obvious spawning point.
+    It's also really weird...? 
+ 
+Nonspell (Yabuabu) (10/20)
+    Since there's nothing to distract you, it becomes very easy to tell the difference between the fake and real bullets.  
+    As a result, this just becomes dodging 2 very sparse, initially aimed BoWaPs.
+    Not difficult or interesting.
+ 
+Spell (Abuyabu) (8/10)
+    This has the same problems as the Kunimitsu/Yabusame spell, but at least the lasers are gone.
+    It is just way too obnoxious trying to judge "can I jump yet?" when there are all these fast bullets flying all over the screen.
+    Especially when bullets can spawn from the bottom.
+    Once again, I would recommend having bullets spawn only from Yabu.
+ 
+Nonspell (Yabugo) (11/20)
+    Yago is in the perfect position for their bullet rings to be distracting.
+    However once you get past the distraction, it has the same problem as Yago/Shou- it's just a basic rain of bullets.
+ 
+Spell (Yagosame) (10/20)
+    This could have been infinitely better if not for Yabu's fast shots and Yabu's BULLETS FROM THE BOTTOM OF THE SCREEN.
+    Really, Yago's static spears are just midfucky enough to make you hesitate when trying to jump from one side of the screen to the other.
+    But then Yabu's spam ruins it.
+ 
+ 
+ 
+ 
+Nonspell (Yago) (12/20)
+    This is probably the only single-person non that really doesn't work well with itself.
+    What I mean is, you have two parts, the lasers and the small white dots, but the neither really have anything to do with each other.
+    The way the white dots spawn, it's almost as if they're aimed away from you. So they never stop you from dodging the lasers.
+ 
+Spell (Yago) (13/20)
+    This is okay. You're forced to move all over the screen and dodge stuff at weird angles.
+    Of course, those two are totally seperate. The waves don't overlap, so there's nothing stopping you from moving all over the screen, and there's no pressure to hurry up and dodge this stuff.
+   
+Nonspell (YagoYago) (10/20)
+    This is, once again, just a rain of spam. This is more or less just peerless wind god.
+    Even if you have a neat visual gimmick to make something look cool, the thing I focus on is how you dodge it. And this is dodged just like peerless wind god.
+    Not fun.
+ 
+Spell (Yagoyago) (13/20)
+    The two parts don't really go well together, the only really threatening thing is the knives.
+    The lasers, the spears that shoot bullets from the bottom, none of it's dangerous.
+    Though I'll admit, the lasers and spears force you to the middle of the screen.
+    Still not great.
+ 
+ 
+Aesthetic: 2/2. No issues.
+Overall: 457/802 = 11.4/20
+ 
+Closing Thoughts: Ugh =_=. This was a pain to judge. Tbh, this is more than the maximum number of patterns so I don't even know if it's fair to consider it. I understand you were trying to go for a mass amount of patterns, but most of them wound up being copy pastes that were not fun. You should really focus more on quality than quantity. I can't even really complain about many of the patterns because they weren't actual patterns- they were just 2 unrelated ideas slapped onto each other.

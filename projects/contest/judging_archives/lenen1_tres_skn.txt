@@ -1,0 +1,48 @@
+Script: "General Day in Mugenri" by The One True Sakana
+Judge: Tres
+
+Nonspell #1 (13/20)
+	There's nothing particularly interesting about this, but it's not bad either.
+	You're supposed to move away from the center of the pattern, that way the black amulet won't spawn bullets on top of you. It seems like a redirection spell.
+	But the black amulet spawns so few bullets, you don't actually have to move away from the center. You'll probably be safe even if you don't redirect anything.
+
+Spell #1 (13/20)
+	It's very nice, you have to read two very different things. The lasers move quickly enough to be threatening despite being so sparse, but if you pick the wrong lane the slower walls will trap you.
+	Unfortunately, it's extremely repetitive. It's fun at first but gets old really quickly.
+	It would have been nice if you could have added a bit more variation to the waves, maybe make the walls do something different on the second wave.
+
+Spell #2 (14/20)
+	Since the lasers are static, there's plenty of safe spaces.
+	Once you know where the safe spaces are, the bats really aren't dense enough to pose any kind of threat.
+	The pattern really is about dodging the slow bats in a limited space, which is kind of boring.
+	Not awful though.
+
+Nonspell #2 (12/20)
+	The dice are totally non-threatening unless the coins are on screen at the same time.
+	Of course, since the dice spawn totally randomly there's no gurantee the coins will ever be there, so this pattern will sometimes get incredibly easy and uninteresting.
+	Maybe you could have the dice spawn in such a way that some of them will always hit a wall and some of them never will.
+
+Spell #3 (15/20)
+	It wasn't very clear how the lasers spawned, I thought they were random at first.
+	Once you know how they work, this becomes pretty simple though.
+	The cards and bubbles aren't all that dangerous. You probably could have upped the intensity a little bit.
+	Since the majority of the pattern is the cards and bubbles, this hurt it a lot.
+
+Spell #4 (3/10) (3/10) (1/10) (3/10) = (5/20)
+	The first phase is very long and very boring. It reminds me of Suwako's first survival, but it's easy enough that you really don't have to route it. Boring.
+	The second phase looks fancy, but it's just dodging rings ultimately. 
+	The third wave is eternal meek. This isn't good.
+	The last wave is a bit better than the rest, but not by much. It's really just the second wave but faster. 
+
+Nonspell #3 (14/20)
+	The two parts are both fast enough to keep this pattern intense, but it's still pretty uninteresting.
+	
+Spell #5 (10/20)
+	This is eternal meek with curvy lasers. This isn't fun at all.
+	Occasionally there'll be safespots, occasionally it'll be really hard.
+	It's entirely up to luck as to what kind of pattern you'll get, which isn't a good thing.
+
+Aesthetic: 2/2. There were some (0,0) spawning errors, but they were all graphical effects, no bullets so that's fine. Some bullets from the previous pattern spawned into the next pattern, though. You should probably get that worked out.
+Overall: 96/120 = 12/20
+
+Closing Thoughts: For your first script this is pretty good, and very nice aesthetically. Try to make your patterns less repetitive, maybe add multiple waves, or change where things spawn more. Also, you generally get the "main part" down well, but your supporting danmaku is lackluster so the pattern doesn't get to shine.
