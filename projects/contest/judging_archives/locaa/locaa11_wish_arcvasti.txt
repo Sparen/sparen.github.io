@@ -1,0 +1,74 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: Sanguine Literature Club
+Creator: Arcvasti
+Difficulty Played: Default
+Player Used: Sakuya
+
+Pattern 1 (Nonspell 1):
+	Creativity/Perfect Possession (4/9): Relatively standard Patchy nonspell.  No Perfect Possession here either.
+	Fun Factor/Pattern Design (5/8): The second wave of lasers can catch you when they are spawning sometimes, especially if you don't know when the lasers are going to fade out and you can move back to the middle.  A faster fade out time may have remedied this issue.  It was fairly fun otherwise.
+	Adequate Challenge (2.5/3): I don't know what difficulty you're going for, but for an opener it was a bit tricky.
+
+Pattern 2 (Forbidden Lore: Demon Binding Circle):
+	Creativity/Perfect Possession (4.5/9): This attack strikes me as odd for some reason.  It looks a bit like that one spell of Ran's, but it's also a Reimu attack...but Koakuma is using it?  I mean it's fairly nice, but I have no idea why it's here.  But again, no Perfect Possession here.
+	Fun Factor/Pattern Design (4/8): The pattern seems pretty straightforward in terms of design for the most part.  The bubbles crossing seems oddly sudden, giving you very little time to move through the gap AND to get through the kunai wave coming at you.  Could use work.
+	Adequate Challenge (2/3): It was really hard, and that made it less fun for me too.
+
+Pattern 3 (Nonspell 2):
+	Creativity/Perfect Possession (2/9): In terms of creativity, it's nothing special, and doesn't even really use Patchy, but...
+	Fun Factor/Pattern Design (7/8): Pattern design is much better here.  I like the way you macro around the bubbles and the kunai are spread out enough to not be insane.  Nice job here.
+	Adequate Challenge (3/3): Good difficulty as well.
+
+Pattern 4 (Earth Sign: Polylith Barrage):
+	Creativity/Perfect Possession (4.5/9): Using geometry for this is not really on brand for Patchy, but I kinda like what you did with it.  No Koakuma though, major problem.
+	Fun Factor/Pattern Design (6/8): It was fun to dodge.  Because it was randomly spaced, the danmaku gives you weird gaps sometimes, but I liked it a fair amount.
+	Adequate Challenge (2/3): Not too tricky for my skill level, but still a bit too much.
+
+Pattern 5 (<combo of spell cards> Grass Cutting Blade + Cyclopean Tomb):
+	Creativity/Perfect Possession (7/9): Here we go, now this is what I'm talking about.  Koakuma's tomb of bubbles and Patchy's "blade" interact pretty well together here, I like the concept.
+	Fun Factor/Pattern Design (6/8): The blades are pretty wide and sometimes force you into the bubbles due to their size, but other than that not bad.
+	Adequate Challenge (2/3): Just a bit too hard once again.
+
+Pattern 6 (<combo of spell cards> Tidal Jet + Cocytean Chill):
+	Creativity/Perfect Possession (6/9): I like the concept of Koakuma freezing Patchy's water droplets but I feel like more could have been done with it, especially when Koakuma just releases the ice bullets to offscreen.  Maybe since it was a cold snap, maybe shattering the ice?  I dunno.
+	Fun Factor/Pattern Design (6/8): It was fairly fun, and the ice messing up your movement the second time around works fairly well.
+	Adequate Challenge (2.5/3): Less difficult but still a little too crazy.
+
+Pattern 7 (<combo of spell cards> Red Dwarf + Saint Elmo's Flare):
+	Creativity/Perfect Possession (5/9): Other than them using two different colors of fire, it seems pretty bland as a concept (compared to the two that came before it).
+	Fun Factor/Pattern Design (6/8): It was fun to dodge though.  The arrows outlining the fireball's path gives you plenty of warning, and Koakuma changing the direction of her fire makes the pattern much more fun (however it could use more warning as well).
+	Adequate Challenge (3/3): Surprisingly not as bad here.
+
+Pattern 8 (<combo of spell cards> "Great Transmutation" + "Little Devil's Chaotic Dance"):
+	Creativity/Perfect Possession (5/9): Something I've seen before from both of them, but a good implementation of them.  Combining the two for this one didn't really do too much special, however.
+	Fun Factor/Pattern Design (7/8): The first part was fun, kept me moving quite a bit.  The second part was a bit more standard but still fairly good.
+	Adequate Challenge (2.5/3): Not as bad as most other things in this script, but still can be tricky.
+	(-10 points) I'm giving this attack a penalty because having Koakuma's spirit or whatever doesn't really fit the spirit of the contest, and seems a lot like having both bosses on screen at once.  Since the rest of the script doesn't do this, this is the only attack that receives this.
+
+Aesthetics and Experience:
+	Graphics (4.5/7.5): Not as many problems as your Alice (especially with spell card backgrounds) but nothing super eye-catching either.
+	Sound (5/7.5): Using the MIDI version here feels like you could have used something better.  The MIDI version isn't bad and fits with the script, but I feel like there were better versions of Locked Girl that could be used.
+	Details (0/5): No details really stick out to me.  Sorry.
+	(-5 points for bugs that were fixed after the due date.)
+
+Overall Score: 99/180, 114/180 before penalties
+Converted Score: 11/20
+
+Comments:
+Honestly, as a whole, I liked your Alice script better.  I feel like you did more creative things with it than you did here.
+I've only seen your scripts one other time, so you may just be starting out.  In that case, it could be much worse, so keep it up and you'll get there!
+The penalties were something I felt a little bad including but they were also important.  There were bugs with the version submitted before the deadline that made it unplayable, but luckily you fixed them relatively quickly.  Using Koakuma's sprite during the survival also warranted a penalty for the reason I listed.

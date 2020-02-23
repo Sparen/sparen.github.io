@@ -1,0 +1,42 @@
+LOCAA 12 - JDude
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+
+Measure of Improvement: 6/20
+ 
+6 points will be dedicated to how much you improved. This is entirely subjective, of course, but I'll comment about why I gave you the score that you received.
+======================================================================================================================
+
+Nonspell 1: Decent nonspells for both characters. I'll accept the Doremy nonspell substitute. 6.5/10.
+
+Spell 1: Reisen's portion of this attack can be completely nonsense if it gives you an unfavorable pattern. Doremy's section is very dense but acceptable. Overall, I'll call this average. 5/10.
+
+Nonspell 2: I like both segments of this nonspell. Not too hard and not too easy. 7.5/10.
+
+Spell 2: Easy and short compared to the previous patterns. It has to be easy since you're restricting the player movement pretty ridiculously - if the zone were bigger the pattern could be harder. I don't think this is designed very well. 4/10.
+
+Spell 3: This spell is a bit odd because Reisen has a solo section, and then they both do stuff, and that repeats. It would be better in my eyes if Doremy did something alone, too. Pattern-wise, it's fine, though it feels a lot like more of the same. 6/10.
+
+Spell 4: This is actually a pretty neat concept! I think this spell would benefit from multiple phases or more variety in what you dodge, but I love the idea. The current execution is pretty good, too. 8/10.
+
+Please note that a part of the rules of LOCAA 12 stated that you must follow any rules that the original script was subjected to. LOCAA 11 stated that both bosses cannot be on-screen at the same time. Since you did that in two patterns, I'll subtract half a point from your danmaku score for each one (or -1).
+ 
+Danmaku Average: 6.17 - 1 = 5.17/10
+======================================================================================================================
+
+In terms of aesthetics, I think this script is just above average. Some work was put into the HUD, the backgrounds aren't offensive, etc. Your score is 2.25/4.
+======================================================================================================================
+
+As for improvement, you did some good things like fixing the first nonspell's issue with big bullets on small bullets. You also made the characters swap throughout attacks, which was a major point of LOCAA 11. While the new script is significantly shorter than the old script, since you combined attacks and fulfilled the spirit of the contest better I'll call it a net improvement. I think you could have tried to keep the spirit of some of the attacks you cut, though. My rating is 3.5/6.
+
+OVERALL SCORE: 5.17 + 2.25 + 3.5 = 10.92/20

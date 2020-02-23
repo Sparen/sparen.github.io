@@ -1,0 +1,65 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: LOCAA 11: Marisa and Alice
+Creator: Conarnar
+Difficulty Played: Default
+Player Used: Reimu + Yukari
+
+Pattern 1 (Nonspell 1):
+	Creativity/Perfect Possession (5/9): Used Perfect Possession, but not the most creative thing ever.  Very on par with other Marisa and Alice nonspells.
+	Fun Factor/Pattern Design (6.5/8): Fun to dodge, that's for sure.  Keeps you on your toes.  Takes a long time to die though.
+	Adequate Challenge (3/3): A bit above my skill level but I know it wasn't tailored to me.  Having only one difficulty selection is...impossible to balance for everyone.
+
+Pattern 2 (Love Magic Sign "Remote Sacrifice Spark"):
+	Creativity/Perfect Possession (7.5/9): Interesting use of Perfect Possession, turning the stars into dolls.  I like it.  Simple but effective.
+	Fun Factor/Pattern Design (6/8): Challenging and thrilling to dodge (those dolls set you on edge) but the Master Spark is pretty much just for show.  It doesn't really kill you unless you stay in one place.
+	Adequate Challenge (3/3): Fine for me at least.  The dolls' laser lines are the only issue I could potentially see happening but they seem well telegraphed.
+
+Pattern 3 (Nonspell 2):
+	Creativity/Perfect Possession (6/9):  The way Marisa and Alice's danmaku overlap is refreshing compared to the last nonspell.  Still standard fare in regards to creativity, but not bad.
+	Fun Factor/Pattern Design (7/8): Very nice to dodge once again.   Healthbar doesn't seem *as* ridiculous this time as well.
+	Adequate Challenge (3/3): Challenging, but again not overly so.
+
+Pattern 4 (Star Demon Sign "Polaris Inanimateness"):
+	Creativity/Perfect Possession (5.5/9): Nice showcasing of the two and comparing their danmaku, but...their danmaku doesn't really interact in a way that's super interesting.
+	Fun Factor/Pattern Design (6/8): Just fine to dodge.  Not bad, but not the most thrilling thing either.
+	Adequate Challenge (2.5/3): Something about those star bullets gets me every time.  I'm not sure why because the pattern is simple, but it's a consistent issue.  I think it might be their speed.
+
+Pattern 5 (Nonspell 3):
+	Creativity/Perfect Possession (7/9): I didn't lie on the livestream.  Shuusou Gyoku Marisa patterns wins some points from me, purely because it's something Marisa should do more.  Alice's StB pattern was a nice touch as well.  Their Perfect Possession doesn't really make the danmaku interact which brings it down, but you did something a bit more creative with the pattern and that's great.
+	Fun Factor/Pattern Design (7/8): Quite fun to dodge, only one issue: very lengthy healthbar.  Great overall however.
+	Adequate Challenge (3/3): Just right in terms of difficulty imo.  A bit easier than your other nons so far, so not completely consistent, but it's good. 
+
+Pattern 6 (Gold Star Sign "Shining Stardust Dolls"):
+	Creativity/Perfect Possession (8/9): Ok, for the record, I love this idea.  The danmaku interaction between Marisa and Alice is very nice here.  Having it all be one color is a little hard to look at it, but the concept is really fun.
+	Fun Factor/Pattern Design (4/8): Here's where the problem with this attack lies.  Those big stars move quite fast with little knowledge of where a good gap will be.  It seems pretty random as well.  Alice's doll pattern only worsens matters, very easy to predict but can get you completely trapped if you're not careful.  A little fun but not the most fun pattern shown off.
+	Adequate Challenge (2/3): All the problems listed above make this attack pretty difficult but to a random degree.  Definitely wackier in difficulty than most other patterns here.
+
+Pattern 7 (Comet Curse Sign "Blazing Doll Kamikaze"):
+	Creativity/Perfect Possession (8/9): Awesome concept.  Making the dolls turn into mini-Blazing Star attacks was really neat, and having it be multiphased allowed you to explore multiple angles with the idea.  The last phase once the shield broke left me wanting more though, since it was the same every time.
+	Fun Factor/Pattern Design (6/8): The shield has an indicator of damage, so it's not as bad design-wise as I thought, but having the "plink" sound effect made it sound like I was doing nothing.  Having that 300 second timer was also...incredibly strange and intimidating at first.  It looks weird at first but once you play it a few times you catch on and it becomes better than at first glance.
+	Adequate Challenge (1.5/3): What I can't completely excuse is the difficulty.  I realize it's the last spell, but damn, this is a difficult pattern compared to everything else.  Not the most dense stuff but you have to think pretty fast.
+
+Aesthetics and Experience:
+	Graphics (6.5/7.5): Graphics as usual from Conar are really nice.  Simple but effective...well, effects.  System looks nice too.
+	Sound (7/7.5): I honestly have no clue why you chose Mechanical Rhythm but I really like it for these two.  No big sound design issues I see here.
+	Details (2/5): Not a lot of crazy cool little details, but using the shield from AoCF was a nice touch despite the problems I had with the attack it was used in.
+
+Overall Score: 123/160
+Converted Score: 15.38/20
+
+Comments:
+Consistently nice script.  Not the most crazy creative I've ever seen (I've seen you do more creative stuff before) but the stuff that stands out *really* stands out.  Nice job.

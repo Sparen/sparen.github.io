@@ -1,0 +1,50 @@
+LOCAA 11 - AJS
+ 
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+ 
+Individual patterns will be rated out of 10, and the average of that will be taken.
+ 
+Creativity/Use of Perfect Possession: 7/20
+ 
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+
+Played on Hard Mode.
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Spell 1: This is pretty good. Even if this spell is named Terminal Velocity, I do think that the drills get a bit too fast to dodge reasonably. 7.5/10.
+
+Spell 2: This spell is one that I really like! It's a decent challenge and deceptively simple, yet it's also fun and looks pretty nice. 
+Excellent work. 9.5/10.
+
+Spell 3: Pretty weird pattern, not that that's necessarily bad. Fun, fair, though it can be a pain to actually shoot the boss depending on where Tenshi ends up. 8/10.
+
+Spell 4: This is cool. I think you could maybe use a bit more time to get into position before the splitting happens, or have the pieces of the screen not go as far, but beyond the high challenge I think this is a excellent and creative pattern. 9/10.
+ 
+Average Danmaku Quality: 8.5
+ 
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+ 
+Patterns are very creative and Perfect Possession is used pretty well, though I do feel it falls a bit shy of a perfect score. 6.5/7
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+I think this script is pretty awesome aesthetically. The last spellcard especially stands out, but overall you use sounds and graphic well enough for me to think you deserve a perfect score. 3/3.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+8.5 + 6.5 + 3 = 18/20

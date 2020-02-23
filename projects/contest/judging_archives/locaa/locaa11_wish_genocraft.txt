@@ -1,0 +1,57 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: Maid in China
+Creator: GenoCraft
+Difficulty Played: Default
+Player Used: UFO ReimuA (not provided)
+
+Pattern 1 (Nonspell 1):
+	Creativity/Perfect Possession (4/9): The curving rainbow bullets was nice, and it was multi-pattern, but it didn't feature any Perfect Possession switching.
+	Fun Factor/Pattern Design (6/8): It was pretty fun to dodge.  It didn't *seem* to wall anywhere.  Pretty good.
+	Adequate Challenge (3/3): Challenge wise it was fine for me.
+
+Pattern 2 (Blade and Qi Sign "Flow of a Serial Killer"):
+	Creativity/Perfect Possession (8/9): Used multiple patterns very well, looked pretty, Sakuya transforming the stars into knives was excellent. Top notch.
+	Fun Factor/Pattern Design (3/8): The white kunai could pin you down into a corner very easily...could use some tweaking.  Bullets came from offscreen too...  Other than that it was pretty straightforward to dodge.
+	Adequate Challenge (2/3): Things happened very quickly, so it was probably a bit too difficult.
+
+Pattern 3 (Nonspell 2):
+	Creativity/Perfect Possession (5.5/9): My favorite attack out of the whole script.  Again, no Perfect Possession, this was solo Sakuya.  But the pattern looked nice and each part of it did something different.
+	Fun Factor/Pattern Design (6/8): It was pretty fun to dodge.  Fast paced.  However, if you get oriented the wrong way the blue knives could wall you.
+	Adequate Challenge (3/3): Good challenge.
+
+Pattern 4 (Smash and Time Sign "Rainbow Tai Chi Illusionism"):
+	Creativity/Perfect Possession (7/9): It's certainly interesting and has a lot of parts to it, and credit where credit is due, it was an interesting idea.
+	Fun Factor/Pattern Design (0/8):  Where do I begin...first of all, Meiling's line of rainbow bullets can get you trapped in a corner, which emphasizes all the other problems with this pattern.  Meiling moves so quickly in your direction, and you have to dodge dots at the same time...the big rainbow explosion of balls was very fast, with Meiling coming at you right after...and what is with those random lasers coming from Sakuya that you can't move out of the way of if you're too high???
+	Adequate Challenge (1/3): The design problems are a big factor here, but you certainly went overboard.
+
+Pattern 5 ("Perfect Possession Square"):
+	Creativity/Perfect Possession (6/9): It has some cool stuff, and uses elements of Meiling and Sakuya for sure, but it certainly seems like strange patterns for either of them.
+	Fun Factor/Pattern Design (0/8): I'm...very confused by some of these patterns.  Half the time I'm not sure whether it wants me to stay in the center or not.  The kunai part at the end punishes you for staying there, but it almost seems like the phases before it want you to be there...but that's also a trap because Sakuya's knives aim there?  It's sending too many mixed messages to be enjoyable to dodge, it kept me on edge for the complete wrong reason.
+	Adequate Challenge (1.5/3): Again, you went a little overboard here.  Not as bad as last time, but still very noticeable.
+
+Aesthetics and Experience:
+	Graphics (4.5/7.5): It was pretty standard DNH effects.  Nothing special but nothing bad either.
+	Sound (6/7.5): This music is nice, I like it for both of them.  Sound effects were louder than anticipated.
+	Details (1/5): The custom HUD image is nice, but I have to take away one of the two points given here because it disappears after the battle ends for some reason...a glitch you should look into.
+
+Overall Score: 67.5/120
+Converted Score: 11.25/20
+
+Comments:
+Your strong point was definitely the creativity here, which was important.  That Sakuya nonspell was your best designed attack because while there was a lot going on, all of it served some kind of purpose and it didn't feel unfair.  Compared to the last two spells which either overwhelmed me with their problems or confused the hell out of me.
+Either way, this was a much more fun script to play than your Gengetsu/Mugetsu contest entry, so keep it up!  I see potential here.
+Also, please, don't skip school to submit an entry again...knowing priorities is an important life skill, hehe.

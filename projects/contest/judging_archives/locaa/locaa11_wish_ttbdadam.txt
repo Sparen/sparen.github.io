@@ -1,0 +1,63 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: The Scarlet Mansion's Master and Servant
+Creator: TTBD and Adam
+Difficulty Played: Default
+Player Used: Yukari/Reimu team
+
+Pattern 1 (Nonspell 1):
+	Creativity/Perfect Possession (7.5/9): A lot of parts to this opener but I love them all.  Not necessarily something they haven't done before, but they all work well.  I like how Sakuya's knives transition into Remilia's red knives.
+	Fun Factor/Pattern Design (6.5/8): Fun to dodge, no eye opening problems that I can think of.
+	Adequate Challenge (3/3): Good starting difficulty.
+
+Pattern 2 (Illusion Fate "The World Wrapped Within Scarlet"):
+	Creativity/Perfect Possession (8/9): Nice use of combination of Scarlet Meister and Sakuya's knives while time is stopped.  Again, not the most original, but the combination of the two attacks makes it work completely differently.
+	Fun Factor/Pattern Design (5.5/8): Definitely fast paced.  Sakuya's knives can push you into a corner and get you trapped (on even-numbered waves) but other than that it was good.
+	Adequate Challenge (2/3): It was difficult.  I think having two knives next to each other in almost every instance was a little overkill since the hitbox is so big in the first place.  But at least it looked nice.
+
+Pattern 3 (Nonspell 2):
+	Creativity/Perfect Possession (7.5/9): The two's danmaku don't mess together as well as the last two attacks, but they each have something new and creative to their patterns, and that's worthy of points here.
+	Fun Factor/Pattern Design (7/8): Very fun, dodging Sakuya's high speed knives was invigorating.
+	Adequate Challenge (3/3): Good difficulty here, not too hard, not too easy.
+
+Pattern 4 (Scarlet Illusion "Special Red Magic Stopwatch"):
+	Creativity/Perfect Possession (8/9): Sakuya's attacks, while not having bullets on screen, meshes really well with how Remilia's attacks work.  Creative solution to having both presences on screen while only having one boss on screen.
+	Fun Factor/Pattern Design (8/8): The watches add a cool part to this attack that makes Sakuya threatening while not directly shooting at you.  Very nice work here.  Fun to dodge as well!
+	Adequate Challenge (3/3): Unlike the last spell, it's not too bad.  Had some silly deaths, but that is just me.
+
+Pattern 5 (Nonspell 3):
+	Creativity/Perfect Possession (9/9): My favorite attack so far.  Uses something new and different for both of them (Remilia's Soku attack, nice touch) and the attacks work together well.
+	Fun Factor/Pattern Design (7/8): Fun to dodge.  I think Sakuya's starting part of the attack is a bit too dense and forces you into a corner though.
+	Adequate Challenge (2.5/3): A little too much.
+
+Pattern 6 (Scarlet Night "Sixteenth Night's Septette"):
+	Creativity/Perfect Possession (9/9): I...don't know what to say.  Uses AoCF shield mechanics, different phases to keep from being stale, danmaku meshes well together, uses both characters in interesting ways...probably the best use of the mechanic out of all the entries up to this point.
+	Fun Factor/Pattern Design (7.5/8): Very fun.  It looks like it might be able to wall you if you're not careful, but when I was close to that point the shield broke and saved me.  It was probably timed that way too...very nice.
+	Adequate Challenge (3/3): Despite its look, it is very fair to dodge.
+
+Aesthetics and Experience:
+	Graphics (7.5/7.5): Effects are beautiful, custom shot sheet, great portrait art, good HUD...and none of it lags!!
+	Sound (7.5/7.5): Sound effects are well used, volume balance is good, and TAMusic is as rockin' as ever.
+	Details (5/5): I am blown away by all the little details used here.  The Perfect Possession mechanic in the player is nice despite dying completely depleting your meter, the "Winner!" graphic at the end was a nice touch, the LoLK system just casually used like it's no big thing...you guys went above and beyond in terms of the experience of the script.
+
+Overall Score: 127/140
+Converted Score: 18.14/20
+
+Comments:
+Holy shit, guys, I'm really impressed.  You two should work together more.
+My favorite part of the script was how well you not only made different kinds of attacks for both characters involved, but used them in a way that they work well together, not just by themselves.
+If I were to criticize anything, I think that the difficulty was hard for only having one to choose from.  I died several times trying to see all of the attacks (not always from the difficulty, but the lack of resources made me restart several times)
+I'm really looking forward to seeing more from both of you.

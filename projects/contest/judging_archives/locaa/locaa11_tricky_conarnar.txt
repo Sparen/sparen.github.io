@@ -1,0 +1,55 @@
+LOCAA 11 - Conarnar
+ 
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+ 
+Individual patterns will be rated out of 10, and the average of that will be taken.
+ 
+Creativity/Use of Perfect Possession: 7/20
+ 
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+ 
+Nonspell 1: I really like this pattern. The healthbar feels excessively long, but it's fun to dodge and the way Alice's bullets form little clumps is nice. 8.5/10.
+ 
+Spell 1: I also like this. You combine dodging a pretty simple star spiral with being forced to one side and dodging a bunch of other lasers. Simple, effective, fun. 8/10.
+ 
+Nonspell 2: My personal hatred for Marisa nonspells aside, this is also a good, fun pattern. I still have the same healthbar concern as the previous nonspell though. 8/10.
+ 
+Spell 2: Can get pretty nasty if you're unlucky with where the aqua stars are headed. HP also feels a bit high, but that might be because it's easyish to be pushed to a side and need to wait to return under the boss. These flaws don't ruin my enjoyment of the pattern too much, but they're something to keep in mind. 7/10.
+ 
+Nonspell 3: Oh hey a Seihou in my Touhou. Marisa's pattern isn't that hard, while Alice's throws some pretty quick bullets at you sometimes and is pretty easy otherwise. It's neat. 7.5/10
+
+Spell 3: It's a creative concept, but it doesn't really feel like there's that much meaningful dodging to do. You sit in between lines of stars and hope that you can see when there's one flying at you through the shiny yellow trails left by the others, then you do some pretty easy streaming. 5/10.
+ 
+Spell 4: I think it's weird how there's so many patterns in a row in this spell, then when you can actually shoot them down it's just the same pattern over and over again. It was a bit funny to sidestep a quickly charging fairy, only to be killed by the suns they make at the bottom of the screen. There's a lot of patterns and I won't go over each individually, but I will say that it's mostly fun, but there are some cheap patterns that will catch you off guard (mostly involving doll explosions). Overall, I'll give it a 6.5/10.
+ 
+Average Danmaku Quality: 7.214
+ 
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+ 
+Perfect Possession is used quite a lot and pretty creatively. Generally speaking, these attacks are also pretty creative, so I'll give you a 6/7 in this category.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+Generally great visuals and usage of sounds, though I do think you might have a bit too much ADD-rendering in one of the spells. 2.25/3.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+7.042 + 6 + 2.5 = 15.46/20

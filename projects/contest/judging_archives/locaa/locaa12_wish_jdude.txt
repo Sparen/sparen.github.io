@@ -1,0 +1,61 @@
+Wish's LoCaA 12 Judging - Make the Old New!
+-=JDude's Entry=-
+
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-20 points towards general aesthetics, sound, and little touches.
+-20 x n points for general improvement over the original script - n is determined by how many patterns you have compared to the usual minimum amount (4), so the more patterns you have the higher this is worth.
+At the end, the total points will be divided by the total possible points, and then multiplied by 20 to get your final score.
+
+Pattern 1: Nonspell 1
+Creativity: 3/10
+Notes: Thanks for finally making them Perfect Possess during the same attack, but other than that...Doremy's spiral is incredibly plain and Reisen's pattern is very standard.
+Fun/Pattern Design: 5/10
+Notes: It's a little fun, but in the end it's nothing special.
+
+Pattern 2: Myopic Firework "Anxious Illusion"
+Creativity: 7.5/10
+Notes: I really like this!  Certainly very different from the norm and makes sense, at least on Reisen's side.  Doremy's random spam is standard but at least makes sense for her given the whole trapping gimmick.
+Fun/Pattern Design: 7/10
+Notes: Definitely a good challenge but at times a bit too difficult.  Thankfully the health is low enough to make this still fun.
+
+Pattern 3: Nonspell 2
+Creativity: 6/10
+Notes: Pretty standard in terms of creativity of the pattern itself but I like how the two of them are using very similar attacks in nature, makes them feel like a team.
+Fun/Pattern Design: 6/10
+Notes: Doremy's half is much more fun than Reisen's half.
+
+Pattern 4: Idling Wave "Amethyst Dream Catcher"
+Creativity: 7/10
+Notes: Nothing I haven't seen before from both of these two, but the attacks work together very well and that alone is worth points given the use of Perfect Possession.
+Fun/Pattern Design: 5/10
+Notes: Pretty standard in terms of fun value, it's ok to play.
+
+Pattern 5: Dreaming Whirl "Lunatic Tuning"
+Creativity: 0/10
+Fun/Pattern Design: 0/10
+Notes: This attack got disqualified for not using the gimmick of Perfect Possession correctly, which would have disqualified it from the original contest as well.
+
+Pattern 6: Infrared Maze "Dreamy Reflection"
+Creativity: 0/10
+Fun/Pattern Design: 0/10
+Notes: See Pattern 5.
+
+Improvement Score: 18/20 (After scaling by 5/4 - 22.5/25 )
+Notes: This was a tough one to grade on improvement because the two best attacks in the script had to be disqualified due to the rules of the previous contest.
+Nevertheless, I think this script has improved a LOT from the previous one.
+Some things felt the same and a bit uninspired, yes (see the nonspells) but the spells were so much better, it's not even a contest.
+If you had used those last two attacks in a script that didn't require Perfect Possession and simply used a dual boss, it would be rated very well, I assure you.
+
+Other things:
+Aesthetics: 5.5/8
+Notes: Somewhat sub-standard aesthetics.  Nothing particularly good but nothing bad either.
+Sound: 6.5/8
+Notes: HertzDevil chiptune is a good pick, and nothing glaring in terms of sound flaws.
+Extras: 2/4
+Notes: Using a custom background and HUD shows some promise of little details, but ultimately does not have much.  Something I would've recommended is changing the color of the magic circle when switching between bosses.
+
+Score Ratio: 83/165
+Final Score: 10.06/20
+
+Final notes: While this score may not seem like much of an improvement, I wanted to tell you JDude personally that you are getting so much better.  I'm looking forward to seeing what you do next!

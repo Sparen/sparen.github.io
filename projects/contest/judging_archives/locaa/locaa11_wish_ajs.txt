@@ -1,0 +1,52 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: Celestial Boundaries
+Creator: AJS
+Difficulty Played: Normal
+Player Used: Reimu
+
+Pattern 1 (Falling Sky - Terminal Velocity):
+	Creativity/Perfect Possession (8/9): Nice opening card.  Very nice use of both of their abilities (Tenshi's part reminded me of her AoCF card, probably intentional).  My only complaint if there was one was that their danmaku don't interact as much as I would like (never mind, on another playthrough just noticed Yukari's screen wrapping shenanigans are happening to the keystones, there's more than meets the eye)
+	Fun Factor/Pattern Design (8/8): Got this down completely.  Nothing felt unfair, pattern design was solid, very fun.
+	Adequate Challenge (3/3): You got Normal difficulty perfectly here.
+
+Pattern 2 (Focusing Stones - Aerial Bait):
+	Creativity/Perfect Possession (8/9): Another nice combination of AoCF Tenshi with Yukari's shenanigans (hey, it's her laser attack, isn't that 2c?)  A combination of things they've done before made into something new, I like.
+	Fun Factor/Pattern Design (7/8): The stone pellets on occasion overlap in weird ways that can trap you, but other than that it's very fun.
+	Adequate Challenge (3/3): Good challenge for Normal mode here.  Nothing too crazy but still keeps you on your toes a bit.
+
+Pattern 3 (Atmospheric Dominance - Scattering Theory):
+	Creativity/Perfect Possession (9/9): The presentation here is through the effing roof.  Yukari's manji kunai standing still and keeping the same rotation as they are moved in the wind is amazing, and the use of Tenshi's new Urban Legend is beautiful.
+	Fun Factor/Pattern Design (8/8): The lightning creates walls but never gives you an impossible wave, since the lightning is spread out well.
+	Adequate Challenge (2/3): My complaint here is solely in the difficulty.  Yukari's kunai is a bit dense, and that permeates throughout the whole spell.
+
+Pattern 4 (Scarlet Rhapsody - Dimensional Splitter):
+	Creativity/Perfect Possession (9/9): You really did save the best for last, huh?  You may have joked about it taking 15 seconds to introduce the concept but holy crap was it worth it.  Very creative as per usual.
+	Fun Factor/Pattern Design (8/8): Even with such a complex gimmick, every part of this attack feels like it was made to be there and there was consideration into how it works with Yukari's gimmick.  If I could give it extra credit I would, it's *that* thought out.
+	Adequate Challenge (3/3): And to top it all off, it was the Goldilocks difficulty here.  You absolutely nailed it with this attack.
+
+Aesthetics and Experience:
+	Graphics (7/7.5): Your custom setup here looks really nice.  The gradient healthbar is the only thing that feels weird to me about it, but that goes for all your scripts, hehe.
+	Sound (7.5/7.5): The music choice was very sly, and I like it.  Sound balance was really well done.
+	Details (5/5): The spell card background switching and the references to Celestial Showdown were pretty great.  The extra effects during Tenshi's Last Word were very welcome as well.
+
+Overall Score: 95.5/100
+Converted Score: 19.1/20
+
+Comments:
+You really are the king of first impressions, aren't you?
+I know this is probably the biggest serious script you've had in some time (Junko notwithstanding), but it was entirely worth the wait.  I'm glad you were able to submit on time as well, given complications.
+There were little nitpicks I had with each attack, but I can say with certainty that this is truly one of the greats.  Excellent work, AJS. (or should I say Artiphex? lol)

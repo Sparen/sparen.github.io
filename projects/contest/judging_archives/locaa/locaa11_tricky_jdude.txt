@@ -1,0 +1,59 @@
+LOCAA 11 - JDude
+
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+
+Individual patterns will be rated out of 10, and the average of that will be taken.
+
+Creativity/Use of Perfect Possession: 7/20
+
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+
+Nonspell 1: It's a pretty simple, if bland, spiral. It doesn't really feel like a Doremy attack and it's not interesting to play. 2.5/10.
+
+Spell 1: This spell is also simple. Feels a tad more like Doremy, but also isn't that interesting. The space you have to dodge in is extremely tight, so it's difficult if you get bad luck on the angles of the stars (which are random). Another thing I noticed is that the surrounding bullets don't follow the player, so if you start the spell in a weird spot you have to manually move back into the Not really a fan. 4/10.
+
+Nonspell 2: Simple, repetitive, and not that creative, but I thought it was more fun than the last nonspell. Also fits the character more. 4/10.
+
+Spell 2: A trend seems to be that these patterns are simple and repetitive. I got pretty bored with this spell, but I suppose it is an appropriate challenge for this difficulty. 3/10.
+
+Nonspell 3: Simple. Repetitive. Uninteresting. Right difficulty, though. 2.5/10.
+
+Spell 3: Much better in most aspects, I'd say. Seems significantly harder than the previous attacks, but not so much so that it's impossible or anything. 6/10.
+
+Nonspell 4: This is significantly different and I like how it slowly pushes you through the side. I'm not sure what's up with the red bullets though - can they hit you? Regardless, a fine pattern. 6.5/10.
+
+Spell 4: It's a spiral with funky colors, but still a spiral. It's shockingly fun to move left and right, but that's all there is to dodging this. 4/10.
+
+Spell 5: I'm assuming that Reisen's bullets are just a distraction, in which case they definitely do their jobs. This is a pretty hard attack due to how difficult it is to really see what's going on, not that the pattern without distractions would be trivial either. It's creative, but I'm pretty unsure of what this is supposed to be. 5/10.
+
+Average Danmaku Quality: 4.167
+
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+
+I think the point of Perfect Possession is that the bosses swap out mid-pattern instead of between patterns. Doing it like this for a small part of the fight might have been okay, but the only time I saw both elements of their danmaku in the same pattern was the last spellcard. Besides that, the patterns aren't very creative but a few stand out. Overall I'll give you a 1.5/7 in this category.
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+
+Nothing amazing visually or audibly, but I'll subtract some score because I thought the spell background had some issues where it clashed with the bullets. Consider using a darker spell background in general. 1.25/3.
+
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+
+4.167 + 1.5 + 1.25 = 6.92/20

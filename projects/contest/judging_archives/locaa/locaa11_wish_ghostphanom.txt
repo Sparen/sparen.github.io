@@ -1,0 +1,52 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: Two baka
+Creator: GhostPhanom
+Difficulty Played: Default
+Player Used: DDC Reimu B
+
+Pattern 1 (Nonspell 1):
+	Creativity/Perfect Possession (7.5/9): The chill/heat tornados are a neat idea for the two of them, I like it.  Certainly different, and is a good intro for the Perfect Possession in this script.
+	Fun Factor/Pattern Design (6/8): The Utsuho mini-suns do very little other than constricting movement, and the startup on the attack is a little longer than I thought it would be, but it's fun to dodge.
+	Adequate Challenge (3/3): Good opener in terms of difficulty.  Lost a life, but I'm not the best dodger around.
+
+Pattern 2 (Melt Sign "Frozen Domain"):
+	Creativity/Perfect Possession (7.5/9): Melting Cirno's ice makes a lot of sense, but it's something I'm glad to see actually put to action.  Very good use of Perfect Possession.
+	Fun Factor/Pattern Design (4/8): The ice shots aimed at the player are hard to see, and diminished some of the fun of the attack.  I didn't realize it was there until it was too late.
+	Adequate Challenge (3/3): Very heavy on macrododging here, but still good.
+
+Pattern 3 (Nonspell 2):
+	Creativity/Perfect Possession (8/9): Again, very nice concepts thrown around for these two.  Incorporating their abilities by the two characters' danmaku interacting is the point of the contest, and you nailed it.
+	Fun Factor/Pattern Design (5/8): My first instinct was to move up when the suns froze to avoid walling when they fall, but the ring of ice was denser than I thought it would be.  That said, the suns probably could wall you since they fall randomly.  It was still fun to dodge but there were some bad tendencies to some things.
+	Adequate Challenge (2.5/3): Challenging, but good.  The frozen suns bouncing up and creating bullets makes sense, but made the attack a bit more difficult than it should be.
+
+Pattern 4 (Highspeed Sign "Cold flight"):
+	Creativity/Perfect Possession (8/9): A good finale.  Interesting to see Cirno make use of breaking her own ice just like Utsuho can melt it as well.
+	Fun Factor/Pattern Design (8/8): Very fun to dodge, kept me on my toes, not much here looked flawed in terms of pattern design.
+	Adequate Challenge (2/3): It was definitely difficult.  I captured it by some miracle but it definitely looked like I was going to die several times and it was definitely the most challenging pattern of the script.  Although I guess there was a difficulty curve.
+
+Aesthetics and Experience:
+	Graphics (6.5/7.5): The custom effects and HUD for the most part looked very nice.  I think the fire and ice motifs clash a bit (especially with the spellcard declaration), but I can't say the effects didn't look nice.  Good job.
+	Sound (6/7.5): Nice remix of Utsuho's theme and Hellfire Mantle.  Sound effects were a little quieter than I thought they would be.
+	Details (5/5): There were a lot of nice little touches in this.  The custom shotsheet was interesting, the HUD looked very nice and custom made (Reimu's faces!), but the best thing was the pause screen.  I can't get over that, it looked awesome.
+
+Overall Score: 82/100
+Converted Score: 16.4/20
+
+Comments:
+Quite honestly, I love this script.  I don't remember seeing your scripts GhostPhanom, but there was clearly some really nice thought put into every attack here.
+There were a few beginner mistakes with pattern design, which is natural if you're a starting scripter, but the creativity and use of the mechanic was consistently great and really showed what it meant to be a Perfect Possession pair.
+I'm looking forward to seeing more from you!

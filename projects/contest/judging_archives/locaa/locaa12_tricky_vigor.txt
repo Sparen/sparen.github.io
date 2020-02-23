@@ -1,0 +1,38 @@
+LOCAA 12 - Vigor
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Measure of Improvement: 6/20
+ 
+6 points will be dedicated to how much you improved. This is entirely subjective, of course, but I'll comment about why I gave you the score that you received.
+======================================================================================================================
+
+Since this has difficulties I judged Normal mode yaaaay.
+
+Nonspell 1: It's fine. 7/10.
+ 
+Spell 1: This pattern seems pretty difficult for Normal - it's very hard to read, but sort of interesting once you get used to it. Overall the difficulty and uniqueness combine to make it 6.75/10.
+ 
+Nonspell 2: This nonspell is definitely more interesting. There's a bit too many walls, but the bullets that follow the laser lines are cool. 7/10.
+ 
+Spell 2: I like it. The lasers moving a little bit while they're active seems like the type of thing that could cause cheap deaths, but it never happened to me. Tough, but not unreasonably so. 8/10.
+ 
+Danmaku Average: 7.19/10
+======================================================================================================================
+ 
+In terms of aesthetics, I think this script is above-average. Maybe a bit minimalist. 2.75/4.
+======================================================================================================================
+ 
+Unfortunately, I don't think this script fared very well in terms of improvement. I think the pacing of the original script was better, I can only really recognize one attack from the original, and it's much shorter than the original. 2/6.
+ 
+OVERALL SCORE: 7.19 + 2.75 + 2 = 11.94/20

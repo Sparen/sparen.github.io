@@ -1,0 +1,51 @@
+LOCAA 12 - Python
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken to calculate the Danmaku Quality score.
+This entry contains a stage. Due to the stage's length, its score will be counted twice (if it earns a 5, it's as if you made two patterns with a score of 5)
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+
+Measure of Improvement: 6/20
+ 
+6 points will be dedicated to how much you improved. This is entirely subjective, of course, but I'll comment about why I gave you the score that you received.
+======================================================================================================================
+
+Since I consider myself a Hard Mode player, I played on Hard. Yay.
+
+Stage: The part before the boss with the purple spinny ghosts I have no clue how to do. Otherwise, this is a pretty good stage. Maybe a tad difficult. Even if items are pointless, I would've preferred for enemies to drop them for that sweet sense of pride and accomplishment. 7.75/10.
+
+Nonspell 1: A good start and good version of a typical Yukari nonspell. 7.75/10.
+
+Spell 1: Interesting spell. I think the difficulty on this one is fine, you just need to be proactive when dodging the weird box bubble things. Great. 8/10.
+
+Nonspell 2: A combination of Sakuya and Yukari that I really like. My only real gripe is the dark kunai being a bit of a pain to see. 8.5/10.
+
+Spell 2: This one I think is fine until the red aimed bubble portion happens. It's perfectly doable up until then. If that phase were easier, I'd give this a great score, but I haven't managed to find a path through that section. 5.75/10.
+
+Nonspell 3: Another excellent nonspell. 9/10.
+
+Spell 3: I like the idea of a new version of Deflation World, but I have two problems with it. First, those yellow arrowheads seem like the type of pattern where you'd want to circle around, like a Doremy pattern, only for the solution to that portion to just be staying still. Second, it's very difficult to predict the paths of all of the deflation:tm: bullets since they're not as pointy and obvious as knives are and they're a bit harder to make out since they're all ADD-rendered. Maybe it's more reasonable on other difficulties, but it's a bit much and I end up attributing my survival to pure luck too often. 5/10.
+
+Nonspell 4: Great nonspell. I don't quite like this as much as the previous two, but it's still good. 8/10.
+
+Spell 4: Reversed controls are unpleasant, but it's a pretty fun idea and creative concept. 8/10.
+
+Spell 5: This is another very interesting concept. The first two waves serve as demonstrations, and the one after those two is fine, but from there it seems to devolve into a bit of a mess. I don't have a problem with the first three and last two waves. The others, though, force you to dodge a lot of aimed bullets while trying to position yourself to not get immediately beaned by Ran or bullets from the circles that Ran runs through. The end of the spell also has a massive wall of ring-spawned bullets that aren't really feasible to read in the time given. Brilliant idea, wonky execution. 5/10.
+
+Danmaku Average: 7.32/10
+======================================================================================================================
+
+In terms of aesthetics, I think this script is great. The backgrounds are excellent, you use sounds appropriately, and the visuals are impressive. 3.5/4.
+======================================================================================================================
+
+While the first script wasn't horrible, this script has improved quite a lot. Some odd difficulty balancing aside, just about every aspect of the script is better. The spirit of most attacks has been kept and expanded upon. This is definitely the sort of thing we're looking for. 5.5/6.
+
+OVERALL SCORE: 7.23 + 3.5 + 5.5 = 16.23/20

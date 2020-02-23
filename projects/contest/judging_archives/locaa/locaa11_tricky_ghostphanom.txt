@@ -1,0 +1,48 @@
+LOCAA 11 - GhostPhanom
+ 
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+ 
+Individual patterns will be rated out of 10, and the average of that will be taken.
+ 
+Creativity/Use of Perfect Possession: 7/20
+ 
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Nonspell 1: I think some of the yellow bullets can fall a bit too fast to reasonably react to, and it seems incredibly random so luck is a factor in this. Otherwise it's an okay pattern. 5.25/10.
+ 
+Spell 1: Pretty creative! My main gripe is that the ice bullets that Cirno shoots have a really weird graphic and the player might just die before they notice it. Otherwise, I think this is pretty fun, if highly-dependent on where you bait the ice to. 7.5/10.
+ 
+Nonspell 2: I think those bullets that bounce off of the bottom are pretty cheap. Otherwise, I think it's decent. 5.75/10.
+ 
+Spell 2: Also creative, though I think this falls a bit more on the unfair side than the previous spellcard due to where the ice chunks are located. It's not that easy to dodge the bullets when Cirno lasers the ice unless you get lucky. 6/10.
+ 
+Average Danmaku Quality: 6.13
+ 
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+ 
+The patterns are pretty creative, though for such a short script I think you could've done some more. Perfect Possession is used, albeit in roughly the same way in both spellcards. Still above average, though! 5/7
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+I think your usage of aesthetic factors is pretty good. I feel like the general design of the HUD could be better, though. Those Useless Facts and Hints are amusing. 2.25/3.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+6.13 + 5 + 2.25 = 13.38/20

@@ -1,0 +1,52 @@
+LOCAA 12 - Green Dinobot
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+
+Measure of Improvement: 6/20
+ 
+6 points will be dedicated to how much you improved. This is entirely subjective, of course, but I'll comment about why I gave you the score that you received.
+======================================================================================================================
+
+Nonspell 1: A Junko nonspell that's actually pretty interesting. Nothing amazing or revolutionary, but good. 7.5/10.
+
+Spell 1: I don't really like this pattern, since it takes a while and you're just trying not to fall asleep as you circle around slowly. Not terrible, but not particularly fun and very lengthy. 5/10.
+
+Nonspell 2: Great! A neat twist on Junko's usual curving nonsense. I think this one was a bit long too, but that could be explained by me not staying under her that much. 7.75/10.
+
+Spell 2: A bit stressful, but perfectly fair and pretty fun. 8.25/10.
+
+Nonspell 3: This one's a bit weirdly-paced in my opinion - it's really trivially easy except for a small amount of time during each wave. A lot of time is spent sitting around doing very little. It's cool, but could benefit from being tougher and quicker to ramp up. 6.25/10.
+
+Spell 3: The only thing I don't really like about this one is her tendency to decide to head to a corner and leave you trapped in the middle. If she more reliably moved towards you, I'd also call this a pretty good one. Otherwise, it's another spell that can drag on and stop being fun. 6/10.
+
+Nonspell 4: Feels very Junko while also being interesting. I like the bullets near the laser tips so you don't get beaned by a barely-invisible thing. 8/10.
+
+Spell 4: Another fun and stressful pattern. It's amazing what you can do with just rings, isn't it? 8.5/10.
+
+Nonspell 5: Not bad, not as interesting as the previous nons. 7/10.
+
+Spell 5: While it's admittedly random spam, it's pretty good for random spam. 6.5/10.
+
+Spell 6: I like the idea. Balance-wise, I think this one ramps up a bit too hard - I wasn't sure how to handle the last two waves at all. Other than that I think it's pretty good. 7/10.
+
+Spell 7: MY EYES. It's still move-back-and-forth-simulator but with added...visual distraction. In my opinion it's not THAT much harder with the added gimmick, and the last phase might be easier than the earlier phases since the first wave of the pattern isn't obscured by evil light. I'm not really sure if I like the gimmick much either. I'll say it's a total score of 5.5.
+
+Danmaku Average: 6.94/10
+======================================================================================================================
+
+In terms of aesthetics, I think this script is pretty impressive visually and audibly. The title screen is a good touch. I think the spell background and/or Junko's magic circle thing could be a bit dimmer, as it was hard to make out ADD-rendered bullets at times. Overall, this is great and earns an aesthetics score of 3.75/4.
+======================================================================================================================
+
+The worst and least original patterns of the original were improved dramatically or outright replaced, and even the decent patterns got some polish. I think you could have tried to keep the spirit of more of the attacks you replaced, but otherwise this is a pretty big improvement over the original. 4.5/6.
+
+OVERALL SCORE: 6.94 + 3.75 + 4.5 = 15.19/20

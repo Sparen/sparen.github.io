@@ -1,0 +1,57 @@
+LOCAA 11 - Junky and GCP
+ 
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+ 
+Individual patterns will be rated out of 10, and the average of that will be taken.
+ 
+Creativity/Use of Perfect Possession: 7/20
+ 
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+ 
+Nonspell 1: Very interesting. I think the fast yellow bullets could give you a bit more space when they're fired, since it's easy to move when they're beginning and get murdered by something too fast to react to. Rin's spam isn't all that interesting either, but it's still a good pattern. 7/10.
+ 
+Spell 1: Another interesting, fun idea, though I think it's too hard (even when compared to the previous nonspell). Dodging three sets of walls (one coming from behind you) is pretty difficult and divides your attention a lot. Utsuho moving so far down on the screen at the start might also cause the player to panic and die suddenly. Good idea, but the execution seems too difficult to rate it too highly. 6.5/10.
+ 
+Nonspell 2: This nonspell seems easier than the previous spellcard and uses both of the characters' patterns appropriately. It's fun and creative and I think it's excellent overall. 8.5/10.
+ 
+Spell 2: This pattern seems brilliant too, because the suns are bright and all of that. Puns aside, I do really enjoy this pattern too. Those suns closing in on you almost made me panic, but they do shrink to a reasonable size. Excellent. 9/10.
+ 
+Nonspell 3: Another good mixing of the two characters' patterns. This one seems to be a reasonable difficulty and still manages to bring something new to the table. 8.25/10.
+
+Spell 3: Pretty simple mix of "don't get nuked" and "micrododge the non-nuke stuff". It's a bit tough since the nukelasers obscure the bullets you need to dodge, but it's just fair enough for it to be doable. Not bad, but less good than some of the other patterns in my opinion. 7.5/10.
+
+Nonspell 4: Having faded bullets show where Utsuho's fast stuff is going to appear is a very good idea. Otherwise it's relatively standard fare, but it's good standard fare. 7.5/10.
+
+Spell 4: A very creative and fun pattern to end the script with. There's JUST enough time to escape the dark bullets, and both characters seem to get their own opportunity to shine here. I think this pattern is awesome, so I'll give it 9.5/10. 
+
+Average Danmaku Quality: 7.97
+ 
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+ 
+Very creative, perfect possession is used well. I wouldn't call it perfect in this regard, but it's an exemplary example. 6.5/7.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+The aesthetics are excellent. Sound effects seem a bit quiet, but everything else is fantastic. There's even an ending! 3/3.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+7.97 + 6.5 + 3 = 17.47/20

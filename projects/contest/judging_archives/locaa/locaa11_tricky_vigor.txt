@@ -1,0 +1,49 @@
+LOCAA 11 - Vigor
+ 
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+ 
+Individual patterns will be rated out of 10, and the average of that will be taken.
+ 
+Creativity/Use of Perfect Possession: 7/20
+ 
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+ 
+Played on Hard Mode. 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Nonspell 1: Pretty. Besides being pretty it's also a good pattern, if a bit easy for the Hard difficulty. 7.75/10.
+ 
+Spell 1: I think the fact that everything is so red is a bad thing in this card, since you've got a lot of somewhat-glowy red things to dodge. The small bullets also go pretty fast while overlapping with the next wave of knives. It's neat, but could be fairer. 6/10.
+ 
+Nonspell 2: It's a bit frightening to have that line of bullets go up into you until you realize that it doesn't hurt if you're low enough on the screen. Otherwise, I think this nonspell is great. 8/10.
+ 
+Spell 2: An interesting take on Lævateinn that isn't quite as memorization heavy. It took me a while to think to bait Flandre higher up on the screen, but once that was settled I thought it was a decently fun spellcard. As an aside, it's a bit worrying how you can bring this to about 2/3 health before a single bullet is fired. 7/10.
+
+Average Danmaku Quality: 7.19
+ 
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+ 
+I think it's pretty creative and Perfect Possession gets enough usage. 6/7
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+Aesthetically pleasing, though the shininess does become a hindrance at times. 2.5/3.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+6.09 + 3 + 1.5 = 15.69/20

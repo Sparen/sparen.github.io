@@ -1,0 +1,55 @@
+LOCAA 11 - Python
+
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+
+Individual patterns will be rated out of 10, and the average of that will be taken.
+
+Creativity/Use of Perfect Possession: 7/20
+
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+
+Nonspell 1: Good start. Nothing groundbreaking, but it utilizes possession and is pretty fun. 7/10.
+
+Spell 1: Interesting idea. It feels like there's a lot of "dead time" in this spell, where you're not actively dodging anything or shooting the boss. When you do have to dodge it's a simple circular movement, too. Conceptually it's neat, but I think more could have been done with this concept to make it more enjoyable. 5.5/10. 
+
+Nonspell 2: Wacky wavy inflatable lines, oh no. Doremy's part in this spell seems pretty minor, but the pattern she makes does give you the option of just making a big dodge around the whole thing or dodging within the bullet formation. 6.5/10.
+
+Spell 2: The fact that some of the smaller white bullets get so quick and render under the purple amulets can be a cause for concern if you're unlucky - I'd suggest having them render above the amulets always to avoid this. Besides this gripe, though, I like this pattern. Sheep are cool. 8/10.
+
+Spell 3: The visual effect for those circles of bullets is pretty neat. Besides the visual neatness, the pattern is pretty interesting and I thought it was decently fun. 7.75/10.
+
+Spell 4: During the first parts of the spell, I don't really like how the lasers try to push you to a screen edge, only for the Doremy spiral to appear around you (with a good part of it coming from offscreen). Beyond then I like it, though - the expanding laser burst things are a nice touch and Doremy's segments are decently challenging for being simple circle motions. 7.5/10.
+
+Average Danmaku Quality: 7.04
+
+As an aside, Yukari's occult attack absolutely murders everything. It's not a "bug" or anything and completely optional so I won't penalize you though.
+
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+
+Perfect Possession is used quite a lot, and in very creative ways. I do admit that it feels "forced" sometimes, so it's not perfection, but I think this is still a very good representation of the gimmick. I'll give you a 6/7 in this category.
+
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+
+Generally great visuals and usage of sounds. 2.5/3.
+
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+
+7.04 + 6 + 2.5 = 15.54/20

@@ -1,0 +1,42 @@
+LOCAA 12 - Awalys
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+
+Measure of Improvement: 6/20
+ 
+6 points will be dedicated to how much you improved. This is entirely subjective, of course, but I'll comment about why I gave you the score that you received.
+======================================================================================================================
+
+Nonspell 1: Good. I thought the second half of the nonspell could make for a more interesting pattern than the first, but it lasts for far less time so who knows. 7.5/10.
+
+Spell 1: I like this pattern a lot! I think it's challenging but fair and pretty fun. 8.75/10.
+
+Nonspell 2: I like this nonspell more than the previous one. Neat! 8/10.
+
+Spell 2: I think the warning laser here needs to be quite a bit wider so it more accurately indicates how much space the rainbow death will occupy. Beyond that it's actually a pretty fun pattern, but a better warning would be appreciated. 6.25/10.
+
+Nonspell 3: Straightforward, fast-paced and fun. I think that the smaller bullets should always render on top of the larger ones because there was a time where I got beaned by one that was hidden. 7.5/10.
+
+Spell 3: Straightforward, stressful, weird, and fun. Definitely fitting some sort of abomination. 8.75/10.
+
+Spell 4: The way the bullets blend is pretty weird. I suppose that's a part of the spell, and it's not that bad, but I can't say I like that aspect much. Otherwise it's straightforward dodging, which is fine. 7/10.
+ 
+Danmaku Average: 7.68/10
+======================================================================================================================
+
+In terms of aesthetics, I think this script is pretty good. Nothing is SUPER nice, but it's above-average in all respects. 3/4.
+======================================================================================================================
+
+I think the nonspells have improved from being all samey in the original entry. The spellcards also improved while maintaining the same general idea. Overall, I think this is deserving of a high rating of 5/6.
+
+OVERALL SCORE: 7.68 + 3 + 5 = 15.68/20

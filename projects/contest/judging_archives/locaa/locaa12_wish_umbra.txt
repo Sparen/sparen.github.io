@@ -1,0 +1,70 @@
+Wish's LoCaA 12 Judging - Make the Old New!
+-=Umbra's Entry=-
+
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-20 points towards general aesthetics, sound, and little touches.
+-20 x n points for general improvement over the original script - n is determined by how many patterns you have compared to the usual minimum amount (4), so the more patterns you have the higher this is worth.
+At the end, the total points will be divided by the total possible points, and then multiplied by 20 to get your final score.
+
+*Suzumi: ur mom gay*
+
+Pattern 1: Suzoom Nonspell 1
+Creativity: 6/10
+Notes: About what I'd expect from a Len'en nonspell.  Some randomness with maybe some aimed stuff thrown in is Len'en nonspell's trademark.
+Fun/Pattern Design: 8/10
+Notes: It's certainly fun to dodge, and the aimed stuff makes the otherwise normal rings and random knives more of an obstacle.
+
+Pattern 2: Memory Card "Reverie Revived"
+Creativity: 8.5/10
+Notes: Nice use of Suzumi's powers to not only recall memories but change them in the same card.  Rare to see those two things done together.
+Fun/Pattern Design: 8/10
+Notes: The three-way stream of bullets fired at one point doesn't seem to do much of anything, so it's a bit of a pointless set piece unless the RNG aligns, but otherwise it's fun to dodge.
+
+Pattern 3: Repeat "Neverending Thought"
+Creativity: 4/10
+Notes: I understand that Len'en relies pretty heavily on RNG for patterns, but this is *just* random knives with nothing else to them.
+Fun/Pattern Design: 5/10
+Notes: Somewhat fun if only because getting trapped by the knives and working your way out of it can be interesting, but also walls sometimes with no way out.
+
+*Tsurubami: no u*
+
+Pattern 4: Tsurubami Nonspell 1
+Creativity: 7/10
+Notes: Standard Tsurubami for the most part - the way the bullets are spawned are a bit different - which mostly affects the next section.
+Fun/Pattern Design: 9/10
+Notes: I like how the way the waves are spawned makes me have to dodge this a bit more dynamically.  The best pattern to play so far.
+
+Pattern 5: Ink Card "Ink-Dragon Camoflauge"
+Creativity: 8.5/10
+Notes: Usually monochrome death lasers are Tsubakura's thing, but Tsurubami does it in a pretty deadly and different way.  I like it.
+Fun/Pattern Design: 8/10
+Notes: Very fast paced.  Sometimes running into random bullets is pretty annoying, and the lasers come pretty dangerously close to catching up with the player even moving at full speed - if you focus for more than a second, you're pretty much dead.
+
+Pattern 6: Drown Card "L'appel du Vide"
+Creativity: 9/10
+Notes: I like how this changes how Tsurubami's gimmick of hiding bullets is used and confines it to certain areas of the screen.
+Fun/Pattern Design: 6.5/10
+Notes: I still don't like bullets being hidden from view but thankfully the pattern is simple enough to make it not so dreadful.
+
+Pattern 7: "Border of Mugenri -Front and Back-"
+Creativity: 7/10
+Notes: My main complaint is that this uses Tsurubami's abilities far more than Suzumi's - more hiding bullets and not enough memory messing, at least visibly.
+Fun/Pattern Design: 6.5/10
+Notes: It's alright to play against, but I find myself being caught off guard by random knives a bit too often for my liking.
+
+Improvement Score: 14/20 (After scaling by 7/4 - 24.5/35 )
+Notes: This script is pretty improved from the original, but not as much as I wish it was in some areas - particularly with Suzumi solo's final spell and the overall final spell (for the former the original honestly looked better, and the latter is basically the same as the original)
+
+Other things:
+Aesthetics: 7/8
+Notes: Typical Len'en system but the use of your own art was nice (and it's gotten a lot better!!)
+Sound: 7/8
+Notes: Was very surprised to hear such a chilled rendition of Suzumi and Tsurubami's themes playing but I'm not complaining - this script as a whole felt pretty chill.
+Extras: 4/4
+Notes: The use of your own art as well as the exchange between the two opponents in between RMI boss 4 phases was good use of small details.
+
+Score Ratio: 143.5/195
+Final Score: 14.71/20
+
+Final notes: I see something new and interesting from each script you make, Umbra.  Even if I liked the Reimu-Yukari script you made a while back better, this was still nice to play.

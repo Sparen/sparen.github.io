@@ -1,0 +1,61 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: Sumireko & Doremy: Dream Team
+Creator: Python
+Difficulty Played: Normal
+Player Used: Yukari & Reimu team
+
+Pattern 1 (Nonspell 1):
+	Creativity/Perfect Possession (6/9): Good opener.  Fairly simple in concept, but the way the bullets spawn in is cool looking.  The two bosses' attacks don't really interact, but they do something a little different.
+	Fun Factor/Pattern Design (6/8): It dies a little fast, but it was interesting to dodge.  No major design flaws, though because of its simplicities, there isn't anything extraordinary either.
+	Adequate Challenge (3/3): Good for Normal difficulty.
+
+Pattern 2 (Psychokinesis Dream "Sleepwalking in Circles"):
+	Creativity/Perfect Possession (8/9): Now this is cool.  Combination of Sumireko's psychokinesis with Doremy's weird restrictive patterns was interesting.  Used the mechanic well too!
+	Fun Factor/Pattern Design (4.5/8): It wasn't super clear what to do on first play.  If you had fully concealed the circle, I think it would be less confusing.  Going around in a circle is simple dodging, but the whole pattern being translated helps a bit with the fun factor.
+	Adequate Challenge (3/3): Once I knew what to do, I found it was the right difficulty.
+
+Pattern 3 (Nonspell 2):
+	Creativity/Perfect Possession (8.5/9): Very nice nonspell.  The curving Sumireko bullets are really cool looking, and Doremy getting rid of the doppelgangers is a great way of interacting with the pattern.
+	Fun Factor/Pattern Design (7/8): Those curving bullets are fun to dodge, and don't seem to wall which is really surprising.  If I had to complain about one thing, it would be that Doremy's bullets are larger than I would expect them to be and sometimes seal off openings, but it's an inconsistent issue.
+	Adequate Challenge (2/3): A bit harder than expected, particularly when Doremy's bullets overlap with Sumireko's.
+
+Pattern 4 (Psychokinesis Dream Team "Telekinesis Sheep Pasture"):
+	Creativity/Perfect Possession (7/9): Sheeeeeep!  First thing that struck me was the interaction of Sumireko and Doremy, changing Sumireko's danmaku.  Very nice idea, but is also the only note of the pattern (if you went with different waves on this one, it could have been even better).
+	Fun Factor/Pattern Design (6/8): It's fairly fun to dodge.  The white bullets being random worried me at first because I thought they could wall me, but they were small enough so that wasn't an issue.  Dies very fast, only one wave really gets through.
+	Adequate Challenge (2.5/3): A tiny bit dense for Normal, but it's mostly good.
+
+Pattern 5 (Psychokinesis Dream "Echoed Dream Psychexplosion"):
+	Creativity/Perfect Possession (9/9): Those dream portals are really nice and enticing but BOOM.  Very nice use of Perfect Possession, and definitely something I've never seen before.  Major props.
+	Fun Factor/Pattern Design (7/8): The pattern makes you think pretty fast about where to move, but that keeps me on my toes.  The dream portals do look like you're supposed to go into them at first glance, though, which could catch people off-guard (if they hadn't read the spell name I suppose)
+	Adequate Challenge (3/3): At first I thought the fireballs were a bit fast, but on replay they are perfectly fine.
+
+Pattern 6 (*There's No Need to See Visions of the Dream World Anymore!*):
+	Creativity/Perfect Possession (6.5/9): Definitely incorporates both users, and uses Sumireko's occult spell well, but using the same Doremy trick multiple times in the same script (bullets spawning around the player) took away from the attack.
+	Fun Factor/Pattern Design (2/8): The lasers and Doremy bullets both being restrictive seems kinda counter-intuitive.  I have a major gripe with those Doremy bullets though.  Not only do they spawn in a way that changes if you move, they can also spawn from off-screen and blindside you.  This happened on stream, so you can see it for yourself as well.  In short, felt meh to dodge and had some design issues.
+	Adequate Challenge (1/3): Made unnecessarily difficult by the Doremy bullets, but the lasers spawned not enough bullets (sometimes?!) to be threatening by themselves.  Weird difficulty here.
+
+Aesthetics and Experience:
+	Graphics (7/7.5): Graphics look very nice and effects are clean.  The dream portals are kickass.
+	Sound (5/7.5): I like the idea of switching music between Sumireko and Doremy, and you synced it up very well.  But sometimes it just feels really jarring.  At the very least a better fade effect could have made it better.  But in general the soundtrack and sfx balance is good.
+	Details (5/5):  The switching music, while awkward, was an interesting idea.  Having infinite lives as an option but not a requirement was nice, too.  The pause screen looks very trippy.  The best little detail, though, was the Yukari/Reimu player.  Has the occult attack for each of them and everything!
+
+Overall Score: 109/140
+Converted Score: 15.57/20
+
+Comments:
+In general, it was a really nice script!  There was a big problematic attack, and one other attack could have been clearer, but in general this was a very fun script to pick up and play.
+Makes me want to try the higher difficulties, too.  Good job using the mechanic, by the way.

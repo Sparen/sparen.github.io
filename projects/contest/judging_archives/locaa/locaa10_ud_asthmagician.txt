@@ -1,0 +1,17 @@
+-Metal Sonic-
+
+A lot of patterns just kind of happened, and while the side scrolling aspect was interesting, I feel it wasn't handled well enough.
+
+-The first nonspell is okay, but the laser walls are randomly placed and are rarely, if ever, an issue. Looks decent.
+
+-First spell is fine, but there's that period of time where he does nothing for a good while, and when he's dashing, you can't actually see him, as his sprite blends into the background.
+The delay lines don't help because his hitbox is poorly defined, and he often just rams into you when you can't see him.
+
+-Very nice looking, I like the effect of the purple bullets and the trails, and moving up and down between the lasers is fun, but the heights being randomized is a little odd?
+Nothing too special over all.
+
+-Another background issue. It's very hard to see the yellow bullets at the top and bottom, since they blend into the yellow edges of the background, and thus leads to cheapshotting the first time.
+Again, it's a spell that happened. Nothing super special.
+
+-When you have a boss fly off screen, make sure they don't have a hitbox. Every time I played this script, I would get tackled and die before the spell started,
+because he would hit me as he went off screen. Aside from that, it was the best spell in the set.

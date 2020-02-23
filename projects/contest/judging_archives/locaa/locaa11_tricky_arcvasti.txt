@@ -1,0 +1,57 @@
+LOCAA 11 - Arcvasti
+ 
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+ 
+Individual patterns will be rated out of 10, and the average of that will be taken.
+ 
+Creativity/Use of Perfect Possession: 7/20
+ 
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+
+
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Nonspell 1: Pretty simple non-directional laser. Nothing groundbreaking, not bad. 6.5/10.
+ 
+Spell 1:  It's a simple-yet-creative idea and I like the pattern. Good. 8/10.
+ 
+Nonspell 2: Super easy by comparison to the last two attacks, since there's barely any kunai to dodge. I think it's less good than the previous ones too. 6/10.
+ 
+Spell 2: Yay, shapes! Shapes are cool. Otherwise it's fairly standard dodging and I can't say it's that much above average, but shapes are nice. 6/10.
+ 
+Spell 3: I think it's unreasonable to expect the player to dodge the slashes, the bullets that the cut bubbles make, and deal with Patchouli's yellow orbs that take up the top part of the box you're forced into. The idea is nice, but the execution seems lacking. 4/10.
+
+Spell 4: Seems scarier than it really is when the frozen and unfrozen bullets overlap. I think it's a fine pattern. 6.5/10.
+ 
+Spell 5: I think it can be a bit hard to shoot the boss depending on the angles that the suns come from. I also don't really like how the blue fireballs suddenly come from the bottom of the screen, but otherwise I think this is okay. 5.5/10.
+
+Spell 6: I like the second phase of this survival more than the first phase. Both phases feel a tad too long, but I like how the lasers operate in the second half. 6.25/10.
+ 
+Average Danmaku Quality: 6.09
+ 
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+ 
+Some of the attacks are creative while some of them aren't, and Perfect Possession isn't really used that effectively in my opinion. 3/7
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+I think the aesthetics are solidly average. Nothing stands out in either a good or bad way. 1.5/3.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+6.09 + 3 + 1.5 = 10.59/20

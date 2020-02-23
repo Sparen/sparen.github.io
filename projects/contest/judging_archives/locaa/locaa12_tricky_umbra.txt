@@ -1,0 +1,42 @@
+LOCAA 12 - Umbra
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Measure of Improvement: 6/20
+ 
+6 points will be dedicated to how much you improved. This is entirely subjective, of course, but I'll comment about why I gave you the score that you received.
+======================================================================================================================
+
+Nonspell 1: A fine beginning to the script. The randomness of the white knives does mean that some waves are way harder than others. Be careful with this. 6.75/10.
+ 
+Spell 1: With this type of spellcard the bullets usually don't take so long to start reversing back to you. Conceptually I dislike this, while in practice it's actually rather okay. 7/10.
+ 
+Spell 2: Usually trivial compared to the last two attacks. Most of the knives didn't even get near me on one attempt, while on another attempt it was a more reasonable challenge. Uncontrolled randomness leads to this. 6/10.
+
+Nonspell 2: It's a pretty cool pattern of the ink-black variety. Better than the first nonspell. 7.5/10.
+
+Spell 3: This one also seems very easy, but very random and it might be harder some times than others. 6.5/10.
+
+Spell 4: Aaaaaah I can't see aaaaah French. I usually don't mind spells that mess with your vision that much but this one is a...bit much. I'd recommend smaller circles and a different pattern to compensate. 6/10.
+
+Spell 5: Interesting gimmick, but seems a bit too dumbed-down to compensate since there's barely anything to dodge other than the aimed shots. Maybe consider some other kinds of more engaging patterns. 6/10.
+ 
+Danmaku Average: 6.54/10
+======================================================================================================================
+ 
+In terms of aesthetics, I think this script is certainly above average. Sounds are used in proper places, and work was put into a custom system. Drawing your own art is neat. 2.75/4.
+======================================================================================================================
+ 
+I think you did a pretty good job of improving the script while keeping the core ideas behind most attacks. The aesthetics are generally better and the amount of times the bosses questioned the sexuality of each other's mothers is a nice touch. I think this earns a 4.25/6.
+ 
+OVERALL SCORE: 6.54 + 2.75 + 4.25 = 13.54/20

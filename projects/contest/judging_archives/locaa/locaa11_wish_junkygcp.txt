@@ -1,0 +1,72 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: The Corpse of the Fallout
+Creator: Len'en boi...uh, I mean Junky, feat. GCP
+Difficulty Played: Default
+Player Used: Green Reimu (Sanae)
+
+Pattern 1 (Nonspell 1):
+	Creativity/Perfect Possession (7/9): Nice use of Perfect Possession here, a lot of parts to the nonspell without any of them feeling unimportant.  Nice job here.  The patterns are exactly what I'd expect to see from either of them.
+	Fun Factor/Pattern Design (7/8): I like the fact that Utsuho's bullets actually serve a purpose here.  Fun to dodge when I wasn't dying.
+	Adequate Challenge (1.5/3): This is a problem I usually have with your scripts...I die a lot.  You only include one difficulty, so I find it hard to not take away points here.
+
+Pattern 2 (Regretful Spirits "Beg for the Light"):
+	Creativity/Perfect Possession (7.5/9): Morbid but cool ideas here, meshes Utsuho's patterns and Orin's ideas very well.
+	Fun Factor/Pattern Design (5.5/8): It can definitely wall you, so points off, but I had fun with it.
+	Adequate Challenge (1.5/3): 2hard5me
+
+Pattern 3 (Nonspell 2):
+	Creativity/Perfect Possession (7.5/9): Very cool stuff done with each of their patterns.  I like it a lot.
+	Fun Factor/Pattern Design (6.5/8): Again, Orin's stuff definitely looks like it can wall you, but I love the idea of the giant wall of bullets coming down to incentivize you to go downwards.  Very yes.
+	Adequate Challenge (2/3): A bit easier than last time, so better here.
+
+Pattern 4 (Hazardous Feline "Explosive Walk"):
+	Creativity/Perfect Possession (7/9): Since when do kitties explode??  Nice idea, fun implementation of existing patterns.
+	Fun Factor/Pattern Design (5.5/8): I have a feeling you did not do wall testing on these patterns...those "Cat's Walk" lines can definitely wall you.  It was fun otherwise.
+	Adequate Challenge (1.5/3): Back to harder difficulty here.
+	"White dwarfs!" -ExPorygon
+
+Pattern 5 (Nonspell 3):
+	Creativity/Perfect Possession (7/9): That new Utsuho pattern of mini suns is really nice.  Great to see a new spin on her patterns.  Otherwise it's solid but standard stuff that doesn't mix together the best.
+	Fun Factor/Pattern Design (7/8): It was fun to dodge and surprisingly didn't wall you this time!
+	Adequate Challenge (2/3): Easier, so better.
+
+Pattern 6 (Nuclear God "Fearful Sun Burst"):
+	Creativity/Perfect Possession (6/9): I really like the idea of this one, and it's not something I've seen from Utsuho before.  Orin's ghosts are there but Utsuho doesn't really switch to her?  It half uses the mechanic.
+	Fun Factor/Pattern Design (5.5/8): So long as you steer clear of the SUN ZONE, it's pretty simple micrododging.  Just with a lot of bullets.
+	Adequate Challenge (1.5/3): Lots and lots of little bullets...
+
+Pattern 7 (Nonspell 4):
+	Creativity/Perfect Possession (7/9): Definitely a clever idea and makes the two interact with their own take on the pattern.  Simple but effective.
+	Fun Factor/Pattern Design (6/8): The dodging itself is pretty standard, nothing special, but I like the faded bullets showing where Utsuho is going to fire.
+	Adequate Challenge (2/3): It's pretty standard but still manages to be difficult.
+
+Pattern 8 (Kasha's Urban Legend "Buried Alive Beneath the Earth's Crust):
+	Creativity/Perfect Possession (8/9): The fact that you gave Orin her own Urban Legend to work with shows some really awesome dedication and creativity. It uses Perfect Possession in a pretty standard way, but there was a lot of creativity put into this.
+	Fun Factor/Pattern Design (7/8): It was exhilarating to escape the ~darkness bullets~ before they closed in, and no elements caused any major trouble for me.
+	Adequate Challenge (3/3): Much better on this front as well.  Not too crazy but can still catch me off guard.
+
+Aesthetics and Experience:
+	Graphics (7.5/7.5): Effects were great, everything looked really top-notch.
+	Sound (7/7.5): Music was really nice, sound effects were a little quiet but still good.
+	Details (5/5): THE ENDING.  THAT IS ALL.
+
+Overall Score: 141/180
+Converted Score: 15.67/20
+
+Comments:
+I really loved this script.  Difficulty was what set you back the most, I feel.  You had cool patterns that were fun to dodge, but the difficulty made it hard to enjoy at points.  It was only 3 points, but you lost nearly half of them on average for each pattern.
+Including multiple difficulties in the future would be very nice to lowly players like me.  Can't wait to see more!

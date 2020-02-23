@@ -1,0 +1,52 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: Perfect Possession - Junko and Yukari Yakumo
+Creator: ultimadragon88
+Difficulty Played: Default
+Player Used: UFO ReimuA (not provided)
+
+Pattern 1 (Nonspell 1):
+	Creativity/Perfect Possession (5.5/9): Definitely used both of them!  Standard spiral for Yukari but I think what Junko did was nice and different.
+	Fun Factor/Pattern Design (5.5/8): It was fun, but the healthbar was really long.  Junko's bullets were kinda weird in the way they moved too.
+	Adequate Challenge (2.5/3): Lost a couple lives (no bombs) but the pattern wasn't unreasonable.
+
+Pattern 2 (Grief Symbol "Bow of Cursed Moonstone"):
+	Creativity/Perfect Possession (7/9): Very different kind of pattern for both of them.  The fireballs being like Double Black Death Butterfly (or...whatever it's called) was a nice callback when Yukari was active (took a little away from creativity but it was nice).
+	Fun Factor/Pattern Design (7/8): Very fun to dodge.  Really long healthbar again, and this goes through the whole script.
+	Adequate Challenge (3/3): Good challenge level.
+
+Pattern 3 (Nonspell 2):
+	Creativity/Perfect Possession (7/9): Taking inspiration from Ran, I see Yukari?  While done before, adding different patterns from each of them was nice.  Only one kind of pattern so it wore out quickly, but it was good.
+	Fun Factor/Pattern Design (7/8): Very fun.  Long healthbar, but a little bit better.
+	Adequate Challenge (3/3): Just right.
+
+Pattern 4 (Babylonia Duality "Wildflowers of Kur"):
+	Creativity/Perfect Possession (5/9): I like the pattern, and it uses Perfect Possession (barely), but I don't see how the Yukari portion of the pattern fits her at all?  
+	Fun Factor/Pattern Design (5.5/8): Pretty standard dodging but it feels graceful.  Some kind of aura about it.  Yukari's bullets can probably wall you though.
+	Adequate Challenge (3/3): A little bit on the easy side, but not too much.
+
+Aesthetics and Experience:
+	Graphics (6.5/7.5): More than standard DNH effects, and the background was pretty.
+	Sound (6.5/7.5): There could have been more sound effects, and the whole thing was a little quiet, but it's good.
+	Details (0/5): Not really any small cool details that I saw, sorry.
+
+Overall Score: 74/100
+Converted Score: 14.8/20
+
+Comments:
+Just because it didn't make a good first impression does not mean that it's a bad script at all.  It was short and simple but I liked what you did here.
+Biggest problem by far was long healthbars though.  Your previous script had too short of healthbars but this gave me the opposite problem.  Including a player that it is balanced for could help too.
+Keep it up!

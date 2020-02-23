@@ -1,0 +1,80 @@
+Wish's LoCaA 12 Judging - Make the Old New!
+-=Adam's Entry=-
+
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-20 points towards general aesthetics, sound, and little touches.
+-20 x n points for general improvement over the original script - n is determined by how many patterns you have compared to the usual minimum amount (4), so the more patterns you have the higher this is worth.
+At the end, the total points will be divided by the total possible points, and then multiplied by 20 to get your final score.
+
+Pattern 1: Nonspell 1
+Creativity: 7.5/10
+Notes: Nice start to the battle, the sound effects and crystal bullets add to this nonspell, but it's pretty close to the original.
+Fun/Pattern Design: 8.5/10
+Notes: Very fun to dodge, doesn't feel unfair, great opener pace-wise.
+
+Pattern 2: Razor Trap "Net of Scarlet Blades"
+Creativity: 8.5/10
+Notes: Incredibly different from what was done before, looks very pretty (and deadly).  Pattern is surprisingly simple but that's perfectly fine.
+Fun/Pattern Design: 9/10
+Notes: Very fun and hectic to dodge while being fair in all the right places.  Doesn't wall, which is surprising given the nature of the lasers.
+
+Pattern 3: Nonspell 2
+Creativity: 7.5/10
+Notes: Pattern is pretty simple, but very pretty and uses the note bullets + sound effects well.
+Fun/Pattern Design: 7/10
+Notes: Unfortunately the pattern being simple makes it a bit too easy to dodge here (for reference, I'm playing on Euclid) but it's designed well.
+
+Pattern 4: Razor Vortex "Paint the Room in Red"
+Creativity: 9.5/10
+Notes: Taking what I thought was the best pattern in the original and making it even more distinct, very nice.
+Fun/Pattern Design: 9/10
+Notes: Fun to dodge, but takes a bit of getting used to how the knives move.
+
+Pattern 5: Nonspell 3
+Creativity: 9/10
+Notes: I'm a sucker for arcade-like macrododging and it's not something enough Touhou-style scripts do, very good.
+Fun/Pattern Design: 7/10
+Notes: Would be higher but a little quirk I noticed is that the waves only change aim every two waves - would be more fun if they changed every wave.
+
+Pattern 6: Hemostasis "Coagulation in Crimson"
+Creativity: 7.5/10
+Notes: Was an interesting idea at first (much moreso than the original) but the lack of change in each wave left me wanting more.
+Fun/Pattern Design: 7.5/10
+Notes: It was fairly fun to dodge, if a bit slow paced - the real fun is trying to work yourself out of traps from the aimed bullets, but if they don't trap you it's just misdirection which is a bit more boring.
+That said I'm not sure what you'd really do about that.
+
+Pattern 7: Nonspell 4
+Creativity: 7.5/10
+Notes: Very arcade-like formation once again, but I feel like the pattern could have been a little more complex than straight lines of bullets for the crystals especially.
+Fun/Pattern Design: 7/10
+Notes: A step down from the previous non, since the aimed stuff is slower and...stranger to dodge, leading to a more delayed misdirection.
+
+Pattern 8: Musical "Facility Prisoners' Elegy"
+Creativity: 9/10
+Notes: The use of color here is very pleasing to the eye, and the fact that it ends after cycling through all of the waves means it's not repetitive for too long.
+Fun/Pattern Design: 9/10
+Notes: Fun micrododging through the red and pink wave, and the lasers are interesting to work around.
+
+Pattern 9: "Cacophonous Composition"
+Creativity: 9.5/10
+Notes: One of the best attacks I've seen all contest, because it takes a previous idea and completely runs with it. A bit heavy on the randomness.
+Fun/Pattern Design: 10/10
+Notes: Multiple phases not necessarily changing the randomness, but changing how the player dodges it is a very good use of those phases, and really stretches an idea to its limit.
+
+Improvement Score: 18/20 (After scaling by 9/4 - 40.5/45 )
+Notes: A solid improvement from the original script - I stand by saying that the original script had some very neat ideas, but I'm glad to see them fleshed out in ways that wasn't completely expected.
+Solid graphical and system/player updates also help the polish of this script (seriously, what the hell was that original Reimu player)
+
+Other things:
+Aesthetics: 7.25/8
+Notes: Terra did some great work making those sprites for Golgotha and it really shows.  Otherwise it's good graphically but not super groundbreaking.
+Sound: 8/8
+Notes: One of the best uses of sound I've ever seen in a script - it helps that the boss is themed around music, but adjusting the pitch of the typical note bullet sound effect (as well as Sound Sepher, because hell yes) and making clever use of it in attacks shows dedication to sound design.
+Extras: 4/4
+Notes: Both things stated above - the added polish of the spritework and the use of sound add neat touches, not to mention the dialogue and portrait art (whose is that, by the way?)
+
+Score Ratio: 209.25/245
+Final Score: 17.08/20
+
+Final notes: Very nice work Adam.  This bodes well for the SCP series that I hear you have planned.

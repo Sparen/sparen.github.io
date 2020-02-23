@@ -1,0 +1,66 @@
+Wish's LoCaA 12 Judging - Make the Old New!
+-=Zinochan's Entry=-
+
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-20 points towards general aesthetics, sound, and little touches.
+-20 x n points for general improvement over the original script - n is determined by how many patterns you have compared to the usual minimum amount (4), so the more patterns you have the higher this is worth.
+At the end, the total points will be divided by the total possible points, and then multiplied by 20 to get your final score.
+
+Pattern 1: Nonspell 1
+Creativity: 5.5/10
+Notes: A quite simple first non in terms of creativity, not bad but not great.
+Fun/Pattern Design: 6.5/10
+Notes: Pretty simple to dodge but it's not inherently bad.  Pretty easy for Normal though.
+
+Pattern 2: Gracious Music "Hymn of Valor"
+Creativity: 8/10
+Notes: Pretty and curvy and features some curvy lasers that look pretty good.
+Fun/Pattern Design: 7/10
+Notes: It's relatively fun to dodge, at least compared to the last nonspell, but I don't see what the curvy laser adds to the pattern...a set piece with no purpose.
+
+Pattern 3: Nonspell 1
+Creativity: 5/10
+Notes: Another very simple spiral non with not much to make it stand out aside from it changing speed.
+Fun/Pattern Design: 6/10
+Notes: Somehow even easier than the first non - the changing speed only makes it easier.
+
+Pattern 4: Beautiful Sound "Aria of Perserverance"
+Creativity: 7/10
+Notes: Definitely an improvement over the original spell but not a pattern that's completely unheard of.
+Fun/Pattern Design: 5/10
+Notes: It's pretty standard to dodge, and the aimed section at the end is just strange and clips me for little reason.
+
+Pattern 5: Joy "Song of Celerity"
+Creativity: 7.5/10
+Notes: Round and round we go.  I like the way the bullets unfold but other than that it's good.
+Fun/Pattern Design: 8/10
+Notes: I actually really like how it forces me to move around a lot, almost like I'm dancing to the pattern.
+
+Pattern 6: Concerto "Crescendo"
+Creativity: 5/10
+Notes: A pretty standard spell, with crescendo blasts and all (even though a crescendo is a gradual increase in volume...my music nerdiness aside it's fine)
+Fun/Pattern Design: 3/10
+Notes: The bullet waves give so little warning, especially when trying to PoC - otherwise it's standard and very easy.
+
+Improvement Score: 14/20 (After scaling by 6/4 - 21/30 )
+Notes: All in all it definitely improved over the original - though that's not the hardest thing to do.
+I think as an overall experience it definitely seems like you've improved, especially as a DNH coder given the whole system and package, 
+but similar to before the pattern creativity being not as much as I would like brings down the experience for me.
+All in all it doesn't stand out the way I would like it to, which is a shame, because it looks like your coding skills are very good.
+
+Other things:
+Aesthetics: 4/8
+Notes: It's clear that a lot of effort went into the aesthetics here for better or worse...I find a lot of things to clash.
+The life piece animation is super smooth while the player graphic looks hand drawn and strange - the hitbox also blends in super well so I can't see it at all.  And that's only one example.
+The colors on the HUD are another example of clashing - it just looks strange and surreal to me.
+Sound: 6/8
+Notes: The OST is very EDM...not my thing but it still works and there's no other glaring issues so it's fine.
+Extras: 4/4
+Notes: This script definitely gets an A for effort - the custom executable, package, system, etc. all look custom made for this script and that really shows how much care you put into it.
+
+Score Ratio: 108.5/170
+Final Score: 12.76/20
+
+Final notes: If you're looking at my score thinking "man, that sure is a low score" then don't lose hope!  
+This script was good but I feel like if you stepped up your game in your patterns I could see you making scripts that are so much better!

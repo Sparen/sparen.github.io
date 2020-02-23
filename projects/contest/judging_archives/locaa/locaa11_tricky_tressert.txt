@@ -1,0 +1,62 @@
+LOCAA 11 - Tray[sic]
+ 
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+ 
+Individual patterns will be rated out of 10, and the average of that will be taken.
+ 
+Creativity/Use of Perfect Possession: 7/20
+ 
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+ 
+Played on Easyish:tm: with Seija.
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+Nonspell 1: I'd say to be careful with how random those dolls that shoot lasers can be. Sometimes the lasers are nowhere near the player and the attack is trivial, sometimes they form a strangely dense pattern and it becomes way harder. Otherwise, it's a fairly standard attack. 6.5/10.
+ 
+Spell 1: The first time through it's pretty easy to pick the wrong lane and be shoved into the side of the screen, but once you realize that, it's a manageable if difficult attack. Not bad, not amazing. 7/10.
+ 
+Nonspell 2: Fairly standard Marisa nonspell. Seems very easy compared to previous attacks. 6.5/10.
+
+Optional? Bubble Nonspell Thing: A nice placeholder for when the player finishes patterns quicker than expected. I'm not sure how well it fits Marisa, but it's fine. 6.75/10.
+ 
+Spell 2: Quick spiral that explodes (literally) into arrowheads. Neat. Not much else to say about it, unfortunately. 7.25/10.
+ 
+Nonspell 3: The part where Alice sends dolls to the side of the screen like her opening nonspell from PCB is particularly tough - otherwise this is a pretty simple and creative pattern. 8/10.
+
+Spell 3: Dodging the sparks while dodging the spinner dolls is actually pretty fun! 8/10.
+
+Nonspell 4: Yay Fairy Wars Marisa minus freezing, and yay for weird Alice nonspell. Not all that original, but still fine to dodge for a short time. 6/10.
+
+Spell 4: I think this survival's pacing is great! It's interesting to see Alice bringing back some PC-98 stuff, and both characters have a large part in this spell. I like this one a lot. 9/10.
+
+Spell 5: Good way to end the script. I personally felt like it dragged on a bit, but maybe I spent too much time dodging on the side. 
+8/10.
+
+Average Danmaku Quality: 7.3
+
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+ 
+Perfect possession is certainly used, albeit maybe not in the most creative of ways. Likewise, there are some neat patterns, but a few of them feel like rehashes of the originals. However, this type of fight is pretty creative in itself, even if it's based on another game. As such, I'll give you 5/7.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+You do a pretty good job of using aesthetic factors appropriately, along with mimicking the style of Barrage Musical. 2.25/3.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+7.3 + 5 + 2.25 = 14.55/20

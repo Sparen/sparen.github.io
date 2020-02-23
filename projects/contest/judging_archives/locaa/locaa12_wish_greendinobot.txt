@@ -1,0 +1,100 @@
+Wish's LoCaA 12 Judging - Make the Old New!
+-=Green Dinobot's Entry=-
+
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-20 points towards general aesthetics, sound, and little touches.
+-20 x n points for general improvement over the original script - n is determined by how many patterns you have compared to the usual minimum amount (4), so the more patterns you have the higher this is worth.
+At the end, the total points will be divided by the total possible points, and then multiplied by 20 to get your final score.
+
+Pattern 1: Nonspell 1
+Creativity: 6/10
+Notes: Definitely an above-average Junko opener - the trails add something that other Junko nons don't have.
+Fun/Pattern Design: 7/10
+Notes: Still the standard rings, but they aren't *too* dense and it's surprisingly stimulating.
+
+Pattern 2: Capture Sign "Primitive Trapcage"
+Creativity: 5/10
+Notes: Not incredibly creative it could be considering it's a remix of one of Junko's Extra spells, but it's very pretty and varies it up a little bit.
+Fun/Pattern Design: 4/10
+Notes: There were a couple problems I had...unless you moved at a snail's pace, there were pink large pellets that broke away from the pattern and made it MUCH more annoying than it needed to be.
+Other than that the pattern is...ok.  Not that fun though.
+
+Pattern 3: Nonspell 2
+Creativity: 7/10
+Notes: Eerily similar to another Junko non but unfolds in a unique way.  Looks pretty and does some interesting things.
+Fun/Pattern Design: 7/10
+Notes: There isn't much to dodging these things, but I enjoyed it!  I like how it gets slowly faster to keep you on your toes.
+
+Pattern 4: "Impure Gravity of the Lunatic World"
+Creativity: 5/10
+Notes: Bullets bouncing off walls has definitely been seen before, but it's not a bad case of it.  Ok.
+Fun/Pattern Design: 8/10
+Notes: Easily the most fun pattern up to this point.  Honestly I wish it fired just a little bit faster near the end for longer, it felt too easy.  I like how the bullets are spaced out juuuust enough around the player to not have bullets snipe you from underneath you.
+
+Pattern 5: Nonspell 3
+Creativity: 7.5/10
+Notes: Definitely something neat and not seen often for Junko - looks pretty too.  Pretty safe but also fairly original.
+Fun/Pattern Design: 6.5/10
+Notes: Mostly standard dodging but definitely not boring.
+
+Pattern 6: Genocide Sign "Heartless Killer"
+Creativity: 8/10
+Notes: Glad that you kept this idea from the original.  Junko is known for her danmaku traps, but this is a surprisingly unique trap.
+Fun/Pattern Design: 4.5/10
+Notes: Once you have a route down for the lasers, it's just criss-crossing hearts and pretty boring.  It *can* keep me on my toes if I was just winging it and messed up somewhere, but unless I intentionally trapped myself, it just wasn't that exciting.
+
+Pattern 7: Nonspell 4
+Creativity: 2/10
+Notes: Junko did this kind of laser pattern followed by a bullet in one of her spells...and it never changes.  The only thing that's changed is where the lasers are coming from, which could do more harm than good.
+Fun/Pattern Design: 5/10
+Notes: It's ok to dodge.  I'm glad the lasers seem pretty lenient hitbox-wise do I don't die to the very tip of the laser.
+
+Pattern 8: Ultramarine Orb "Force Purification"
+Creativity: 4/10
+Notes: Basically PDH but scaled down a little bit - so very safe in terms of what Junko has done before.  At least it's pretty.
+Fun/Pattern Design: 7.5/10
+Notes: It can be pretty exciting at times, though the blue bullets slow down a LOT forcing me to think a lot more.  Not even completely sure whether it's a positive or negative aspect of the pattern, but I like that it keeps me on my toes.
+
+Pattern 9: Nonspell 5
+Creativity: 3/10
+Notes: Pretty standard rings.  Shiny, but nothing really up to par.
+Fun/Pattern Design: 6.5/10
+Notes: The way that the rings interact and keeping yourself in the gaps is good, but surprisingly easy.  Very much an intimidation attack, not much of a bite to this one.
+
+Pattern 10: Reign Sign "Simple and Vulgar"
+Creativity: 7/10
+Notes: It may be a lot of randomness, and it looks like her VD non, but I really like how each wave unfolds.
+Fun/Pattern Design: 7/10
+Notes: Again, just random dodging, but still keeps me on my toes so it's doing SOMETHING right.
+
+Pattern 11: "All Purpose Killing Danmaku"
+Creativity: 8.5/10
+Notes: Honestly very surprised Junko hasn't tried to pull this before.  The most creative attack in the whole script for sure.
+Fun/Pattern Design: 8.5/10
+Notes: It is pretty predictable to an extent what the bullet lanes will be like, but the fact that it aims at you changes the way you dodge it constantly.  Very nice.
+
+Pattern 12: "Luminous Remains of a Dead Star"
+Creativity: 1/10
+Notes: Shining Shivering Star + "AAAAA MY EYES".  Not a good combo at all.  It gets points for existing basically.
+Fun/Pattern Design: 1/10
+Notes: Like Shining Shivering Star, it's boring to dodge but somehow really annoying at the same time.  I get blinding the player so they dodge based on rhythm alone, and that works for an attack like this, but the way you did it is not only distracting, but incredibly frustrating.  In general, adding challenge by hiding bullets from view (or in this case, attempting to blind the player entirely) is really terrible design - look at Tsurubami from Len'en and you'll see my point.
+
+Improvement Score: 16/20 (After scaling by 12/4 - 48/60 )
+Notes: In general, it's a pretty sizable improvement.  Aside from that terrible last spell, everything else is at least improved, in some cases VERY much so.  Well done.
+
+Other things:
+Aesthetics: 6.5/8
+Notes: Custom package and stg frame looks nice - I like the LCD display style numbers a lot.  Everything else looks good, nothing super outstanding but it's nowhere near bad.
+Sound: 6/8
+Notes: Menu music was nice, Junko's music sounds...off-key?  Maybe it's just the arrangement, but it sounds slightly higher pitch and it's a little strange.  Otherwise it's fine.
+Extras: 3/4
+Notes: The camera zoom in on Junko was incredibly Yuke and a nice little touch that didn't really need to be there, but I'm glad it's there because it shows how much you care about this script.  The music syncs nicely too.
+
+Score Ratio: 201/320
+Final Score: 12.56/20
+
+Final notes: 
+This score was a bit lower than I expected it to be...though you did play things very safe.  It was very fitting for Junko, minimalism and all - for better or worse.  My problem is that you played things too safe, often
+ripping patterns straight from ZUN or modified juuuuust a bit to put a slightly different spin on it - this cost a lot of creativity points overall.
+Still though, don't let this score deter you...it's still a good script, but I saw a lot of room for even more improvement - step outside your comfort zone a bit!

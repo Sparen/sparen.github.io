@@ -1,0 +1,78 @@
+Wish's LoCaA 12 Judging - Make the Old New!
+-=gtbot's Entry=-
+
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-20 points towards general aesthetics, sound, and little touches.
+-20 x n points for general improvement over the original script - n is determined by how many patterns you have compared to the usual minimum amount (4), so the more patterns you have the higher this is worth.
+At the end, the total points will be divided by the total possible points, and then multiplied by 20 to get your final score.
+
+Overall note: I did make heavy use of Cirno's freeze mechanic since it's GFW themed...hoping this doesn't break some patterns.
+Also playing on difficulty 4.0 which says Hard but it's feeling more like an easy Normal mode. (Edit: bumped it up to 5.0)
+
+Pattern 1: Nonspell 1
+Creativity: 6.5/10
+Notes: Relatively standard GFW Marisa nonspell.
+Fun/Pattern Design: 8.5/10
+Notes: Using the Cirno freeze mechanic on this nonspell was pretty satisfying, and is relatively fast on 5.0, making this much more fun.
+
+Pattern 2: Magic Sign "Star Blast"
+Creativity: 7/10
+Notes: Pretty much the same as the original attack, but hey at least the stars are stars now!
+Fun/Pattern Design: 7/10
+Notes: I wish this was the 4.0 version but with less dodging bullets from behind the player - that made misdirection less fun and much more challenging than it needed to be.
+
+Pattern 3: Nonspell 2
+Creativity: 6.5/10
+Notes: Once again a normal GFW nonspell but now with more bowap(tm)
+Fun/Pattern Design: 6.5/10
+Notes: Could stand to be a bit more interesting than it is - it's a bit too slow unless you don't freeze anything.
+
+Pattern 4: Magic Sign "Great Rupture"
+Creativity: 5.5/10
+Notes: This honestly feels ripped straight out of GFW, and the pattern of stars isn't the most interesting to boot.
+Fun/Pattern Design: 6.5/10
+Notes: Freezing trivializes this spell, dodging it normally is alright but pretty slow.
+
+Pattern 5: Nonspell 3
+Creativity: 6/10
+Notes: Sensing a pattern here - ripped straight from GFW but with more vivid color choices.
+Fun/Pattern Design: 6.5/10
+Notes: Fast and frantic but a bit too sparse to be exciting - strange considering I even upped the difficulty and this seems too easy.
+
+Pattern 6: Test Sign "Magic Bullet"
+Creativity: 7.5/10
+Notes: Definitely better than the original spell, but still a bit too safe.
+Fun/Pattern Design: 9/10
+Notes: Freezing trivializes this spell but dodging it normally is invigorating, I like it a lot.
+
+Pattern 7: Nonspell 4
+Creativity: 7.5/10
+Notes: Now we're getting somewhere!  The thicc bullets with the lasers are nice to see outside of spells, otherwise pretty normal in terms of what Marisa's firing.
+Fun/Pattern Design: 9/10
+Notes: Fast, not too dense, and the thicc bullet lasers confine the space not too much.  Very good.
+
+Pattern 8: Love Sign "Restrictive Master Spark Flash-Like"
+Creativity: 7.5/10
+Notes: Flash-*Like*?  Nomenclature aside, the attack feels pretty similar to a GFW spell of a similar name but I like that it combines two spells' gimmicks into one.
+Fun/Pattern Design: 7/10
+Notes: This attack felt strange to dodge, if only because freezing on the light does absolutely nothing, which completely threw me off.  Sometimes the light beams trapped me as a result.  Otherwise it's pretty good to dodge.
+
+Improvement Score: 15/20 (After scaling by 8/4 - 30/40 )
+Notes: I was shocked to see that the improvements over the original were less than I thought they would be.
+Obviously the inclusion of the package and system made the whole experience feel new but when it came down to the patterns, most of them are just playing it safe creativity-wise like the original.
+Though I do like how you changed Master Spark into something much more GFW-like to fit the theme, that was nice.
+
+Other things:
+Aesthetics: 7.5/8
+Notes: New system and effects look straight out of GFW and it's nice to see them recreated near perfectly - the cutins also look awesome!
+Sound: 6.5/8
+Notes: Good sound, nothing too extraordinary though.
+Extras: 4/4
+Notes: Where do I start?  The difficulty slider is really neat, so many team combinations, having Cirno's freeze as a flash bomb and designing patterns around it to an extent, etc.
+A lot of nice little touches in the engine that makes me want to replay this.
+
+Score Ratio: 162/220
+Final Score: 14.72/20
+
+Final notes: I've never seen a script from you before, so this was an interesting look into your own standalone scripts, haha.  Fun to play, thanks for sending it in.

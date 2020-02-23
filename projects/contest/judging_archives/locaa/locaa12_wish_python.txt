@@ -1,0 +1,83 @@
+Wish's LoCaA 12 Judging - Make the Old New!
+-=Python's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-20 points towards general aesthetics, sound, and little touches.
+-20 x n points for general improvement over the original script - n is determined by how many patterns you have compared to the usual minimum amount (4), so the more patterns you have the higher this is worth.
+At the end, the total points will be divided by the total possible points, and then multiplied by 20 to get your final score.
+ 
+Stage: 18/20 (After scaling by 9/4 - 40.5/45 )
+Notes: Thank you for reminding me that I needed to figure out how to grade a stage, haha.
+This is a very good stage though, it was fun and not too difficult.  Very nice.
+ 
+Pattern 1: Nonspell 1
+Creativity: 6/10
+Notes: Nothing I haven't seen Yukari/Ran do before, but nothing glaringly bad either.
+Fun/Pattern Design: 7/10
+Notes: Overall fun to play but pretty easy even for Hard.
+ 
+Pattern 2: Boundary "Gradient of Square and Circle"
+Creativity: 6/10
+Notes: Overall not really changed from the original but does a couple different things.
+Fun/Pattern Design: 7.5/10
+Notes: Honestly dodging this can get very fun and dynamic, but it doesn't help at all that the pattern is basically the same each time.
+ 
+Pattern 3: Nonspell 2
+Creativity: 6/10
+Notes: Pretty similar to the original, not too much to say about it.
+Fun/Pattern Design: 4.5/10
+Notes: Alright fun wise but I noticed a pretty big problem - the green waves can wall you if the dark green kunai go at bad angles.
+ 
+Pattern 4: Boundary "Difference Between Instant and Eternity"
+Creativity: 9/10
+Notes: Definitely uses time slow in a way that's not very typical of Sakuya time slow and uses it well.  Very nice.
+Fun/Pattern Design: 6.5/10
+Notes: Pretty fun but because it's so slow it makes dodging the bullets and the fireball walls more difficult than it needs to be - though that's moreso the fault of how the red wave is aligned.
+ 
+Pattern 5: Nonspell 3
+Creativity: 7/10
+Notes: Nothing too drastic but it is very pretty.  Definitely the best nonspell so far.
+Fun/Pattern Design: 8/10
+Notes: Fun to dodge!  Trying to align yourself in the correct way is definitely interesting.
+ 
+Pattern 6: Sinister Spirit "Trapped in a Phantom Hourglass" (Haha spell name reference)
+Creativity: 8/10
+Notes: An interesting use of Deflation World gimmicks but more closely resembles a Doremy pattern.
+Fun/Pattern Design: 2.5/10
+Notes: Some major problems here - from the yellow bullets' movement not being telegraphed well to how the pellets can wall you AND hit you during timeslow...reeks of bad gimmick management.  It's not very fun either.
+ 
+Pattern 7: Nonspell 4
+Creativity: 7.5/10
+Notes: The best nonspell here.  Very pretty and fitting for Yukari, even if it's been done.
+Fun/Pattern Design: 8/10
+Notes: Very fun and hectic to dodge too, a bit of a difficulty spike though.
+ 
+Pattern 8: Sinister Spirits "Paradox on Repeat"
+Creativity: 9/10
+Notes: Yes, the gimmick has been done before, but the way it's used gives it an identity, being used during the latter half of every wave.
+Fun/Pattern Design: 7/10
+Notes: Dodging with the gimmick is intrusive given the nature of control flipping but other than that it's pretty fair even if it's easy when not reversed.
+ 
+Pattern 9: Objectless "The Untainted White Line"
+Creativity: 8.5/10
+Notes: The pattern makes great use of Ran, that's to be sure, and the time stop is used in an interesting way.
+Fun/Pattern Design: 4/10
+Notes: The attack isn't that fun to dodge on top of being by far the hardest attack in the script.  It's aimed for the most part but as a whole I'm not entirely sure how you would tackle it.
+ 
+Improvement Score: 15/20 (After scaling by 9/4 - 33.75/45 )
+Notes: All in all this improved from the original pretty well, though not as much as some of the others.  While a number of attacks are improved or at least changed, most of them aren't changed nearly as much as I would like,
+though there are a lot of aesthetic and system changes and the stage is entirely new, giving this a significant bump up.
+ 
+Other things:
+Aesthetics: 7.5/8
+Notes: Stage and general feel is very pretty, typical Python system, though that's not a bad thing.
+Sound: 7/8
+Notes: Very good music choice and no glaring sound issues.
+Extras: 4/4
+Notes: The stage and the dynamics of the background were very nice and well done, showed a dedication to the script.
+ 
+Score Ratio: 214.75/290
+Final Score: 14.81/20
+ 
+Final notes: Great entry as usual Python.  Don't have a whole lot to say otherwise, but I liked the script as a whole, even if I think the improvements weren't quite where I hoped they would be.

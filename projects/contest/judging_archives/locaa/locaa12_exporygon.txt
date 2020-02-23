@@ -1,0 +1,86 @@
+Improvement: 6
+Fun: 6
+-Variety
+-Fairness
+-Balancing
+-Pattern Length
+Creativity: 4
+Pattern Aesthetics: 2
+Overall Aesthetics: 2
+
+Penalties
+-Script Error: -1
+-Missing Shot Sheet: -2
+
+Python - Yukari
+	Improvement: 2
+	Fun: 3
+	Creativity: 4
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 13/20
+
+gtbot - Marisa
+	Improvement: 2
+	Fun: 3
+	Creativity: 3
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 12/20
+
+Umbra - Suzubami
+	Improvement: 3
+	Fun: 4
+	Creativity: 3
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 14/20
+
+GreenDino - Junko
+	Improvement: 3
+	Fun: 3
+	Creativity: 3
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 13/20
+
+Awalys - Doremy
+	Improvement: 4
+	Fun: 5
+	Creativity: 3
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 16/20
+
+JDude - Doremy & Reisen
+	Improvement: 5
+	Fun: 4
+	Creativity: 2
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Penalty: -2
+	Total: 13/20
+
+Adam - SCP-012
+	Improvement: 3
+	Fun: 5
+	Creativity: 3
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 15/20
+
+Vigor - Kogasa
+	Improvement: 1
+	Fun: 3
+	Creativity: 3
+	Pattern Aesthetics: 2
+	Overall Aesthetics: 2
+	Total: 11/20
+
+Zino - Sona
+	Improvement: 4
+	Fun: 3
+	Creativity: 2
+	Pattern Aesthetics: 1
+	Overall Aesthetics: 1
+	Total: 11/20

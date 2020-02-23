@@ -1,0 +1,46 @@
+LOCAA 12 - gtbot
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Measure of Improvement: 6/20
+ 
+6 points will be dedicated to how much you improved. This is entirely subjective, of course, but I'll comment about why I gave you the score that you received.
+======================================================================================================================
+
+This script was judged using the suggested 40 difficulty and Reimu-Cirno team.
+
+Nonspell 1: Great Fairy Wars Marisa nonspell. Fine, fine. 7/10.
+ 
+Spell 1: It's a simple and effective spell, which is the sort of thing I like. 8/10.
+
+Nonspell 2: I like this variation of the usual GFW nonspell. 7.75/10.
+
+Spell 2: I don't really like how the orbs mess with Reimu's homing. It's a pretty decent challenge compared to the last three attacks, which I don't mind much. Overall it's good. 7.25/10.
+
+Nonspell 3: Those are some very fast stars. Luckily it's just on the border of becoming unfair, I think, but yikes. 6.75/10.
+
+Spell 3: Feels a lot like the last spellcard in concept, but not necessarily in execution. RIP Reimu's homing take 2. I think it's a bit worse than the last spell but still fine/good. 7/10.
+
+Nonspell 4: Aaah, flashlights. Pretty standard, if a bit boring compared to previous nons. 7/10.
+
+Spell 4: Interesting flashlight spell. I'd almost prefer if it were a regular Master Spark, since that would likely drain your health less quickly. The lights drain your HP shockingly quickly (or maybe it's just the big one), which I guess is fair since you shouldn't be touching them at all. Overall I'll also say it's fine. 7/10.
+ 
+Danmaku Average: 7.22/10
+======================================================================================================================
+ 
+I thought the shots looked a bit weird compared to everything else, but otherwise all aesthetic aspects are good. Nothing really stands out at me, but it's still a consistently good quality that's worthy of a 3/4.
+======================================================================================================================
+ 
+I think you did a decent job of improving the script while keeping some of the key parts of the attacks. I think you lost some possible improvement here by having the second and third spells be very similar in concept instead of keeping some of the original script's second spell. 4/6.
+ 
+OVERALL SCORE: 7.22 + 3 + 4 = 14.22/20

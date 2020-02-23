@@ -1,0 +1,53 @@
+LOCAA 11 - GenoCraft
+ 
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+ 
+Individual patterns will be rated out of 10, and the average of that will be taken.
+ 
+Creativity/Use of Perfect Possession: 7/20
+ 
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+ 
+Nonspell 1: This is pretty great! It uses elements of both characters on each other's bullets, which I think is a nice touch. 8/10.
+ 
+Spell 1: It's quite the creative pattern, but I think its execution could use some work. The sparkly starry bullets near the beginning seem to accelerate to a speed that's a bit too fast to follow (and they can also come in from offscreen), and the pattern that they shoot after the gravity bullets could be a little bit more creative than what it is now. Otherwise, I think it's fine.  6/10.
+ 
+Nonspell 2: I like this nonspell less than the first one. It's pretty easy most of the time unless the knives are in the way, and in a way it feels a bit all over the place instead of like a coherent pattern. 6/10.
+ 
+Spell 2: My main gripe is the fact that you might decide to head to the top of the screen to dodge Meiling and get beamed by Sakuya's rainbow lasers when she uses them. Otherwise, I think this is pretty good. 7/10.
+
+Spell 3: The first phase with the spiral feels like a waste of time, since it's pretty trivial to just circle around until they turn into knives. Past that, I think this is a pretty good pattern too. The white knives aimed at the center do border at being too fast right before they disappear, and I think the last phase could be a bit more generous with letting you out of the middle, but otherwise this is a good end to the script. 7.5/10.
+ 
+Average Danmaku Quality: 6.9
+ 
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+ 
+Keeping it short and sweet has its advantages - the patterns feel very creative (some unfairness aside) and you use Perfect Possession in appropriate ways. 6.25/7.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+I think you handle aesthetic factors properly. Nothing really amazing, but better than average. 1.75/3.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+6.9 + 6.25 + 1.75 = 14.9/20
+
+As a personal comment, I think this is a big improvement from your last entry!

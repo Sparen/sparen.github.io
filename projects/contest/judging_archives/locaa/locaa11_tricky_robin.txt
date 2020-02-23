@@ -1,0 +1,49 @@
+LOCAA 11 - Robin
+ 
+All judgments by me will be out of 20 points, using the following categories.
+ 
+Danmaku Quality: 10/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. Good patterns will equal a good score in this category. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair and make an otherwise-fair pattern unfair. Fairness is a pretty big factor here.
+ 
+Individual patterns will be rated out of 10, and the average of that will be taken.
+ 
+Creativity/Use of Perfect Possession: 7/20
+ 
+Since the Perfect Possession gimmick is central to this contest, how well you use it is a major part of your score. The more creative and the less forced it feels, the better.
+ 
+Aesthetics: 3/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should come first, other elements like graphics and sounds are also an important part of the gameplay experience.
+ 
+=======================================================================================================================================
+DANMAKU QUALITY
+=======================================================================================================================================
+ 
+Nonspell 1: A solid start. Junko using stuff that's not just rings is a good thing in my opinion, and it fits both characters even if Yukari's spiral is fairly generic. 7.25/10.
+ 
+Spell 1: A decent and fair challenge. Combines elements of both characters and is pretty fun. 8/10.
+ 
+Nonspell 2: I don't like this quite as much as the first nonspell, but it's still a fine pattern. The constricting aqua bullets don't actually seem to be much of a threat. 6.75/10.
+ 
+Spell 2: Gives off a rather claustrophobic feel initially, but it's slow so it's pretty easy to dodge. 7/10.
+
+Average Danmaku Quality: 7.25
+ 
+=======================================================================================================================================
+CREATIVITY/PERFECT POSSESSION
+=======================================================================================================================================
+ 
+Perfect possession is used, though I wouldn't say this script is all that creative in its usage (or in the nonspell patterns in general). 4.5/7.
+ 
+=======================================================================================================================================
+AESTHETICS
+=======================================================================================================================================
+ 
+Aesthetics are above-average but nothing too fancy. 2/3.
+ 
+=======================================================================================================================================
+OVERALL
+=======================================================================================================================================
+ 
+7.25 + 4.5 + 2 = 13.75/20

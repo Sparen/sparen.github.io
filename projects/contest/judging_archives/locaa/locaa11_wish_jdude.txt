@@ -1,0 +1,76 @@
+LoCaA 11 Judging by Wish
+
+Each pattern is judged out of 20 points:
+?/9 - Creativity of patterns + use of Perfect Possession
+?/8 - Fun factor + pattern design: is the pattern fun to play through? does it have any glaring flaws?
+?/3 - Adequate challenge: if a pattern is too difficult or too easy this may be detracted from.
+
+Overall aesthetics and experience will count for the equivalent of 1 pattern's worth of points.
+?/7.5 - Graphics: This includes backgrounds, HUD, and everything involved but the patterns themselves.
+?/7.5 - Sound: Did you pick a good soundtrack for this script?  This includes both music and sound effects.
+?/5 - Details: Did you include a custom HUD?  Did you include a nice menu? Were there things about the script that made it stick out that deserve a mention?
+This score is detracted from when there is a bad experience, coding errors, or general laziness when it comes to details.
+
+The score of all patterns (including the experience "pattern") is added up, and then converted to a score out of 20.  Up to two decimal places are used, and scores will be rounded up to the nearest hundredth.
+
+Script: The Immaterial Team
+Creator: JDude
+Difficulty Played: Default
+Player Used: UFO ReimuA (Not provided)
+
+Pattern 1 (Nonspell 1):
+	Creativity/Perfect Possession (1.5/9): A fairly simple pattern.  A spiral of big Doremy balls with randomized dots.  Very standard.  Does not use Perfect Possession...at all.
+	Fun Factor/Pattern Design (2.5/8): It's decently fun to dodge, but the dots can wall you really easily when combined with the big bullets.
+	Adequate Challenge (3/3): For Hard to Extra, it's in the right range.
+
+Pattern 2 (Dream Sign "Sleep paralysis"):
+	Creativity/Perfect Possession (2/9): The idea of this pattern is definitely fitting for Doremy, but not incredibly creative. (reminded me of Danmaku Paranoia heavily...points off for creativity)  But doesn't use Perfect Possession at all.
+	Fun Factor/Pattern Design (1/8): Major major flaw with this pattern: if you die and you're above where you spawn, you need to move back into the spiral manually...Other instances of this type of attack don't do that.  The pattern became unenjoyable for me after that.
+	Adequate Challenge (3/3): Again, good challenge for the difficulty provided.
+
+Pattern 3 (Nonspell 2):
+	Creativity/Perfect Possession (2/9): Good but standard Reisen nonspell.  No Perfect Possession used...running theme here.
+	Fun Factor/Pattern Design (4.5/8): It was somewhat interesting to dodge.  It's simple but effective.  No big design flaws like the other two, which is a very good plus.
+	Adequate Challenge (2.5/3): Reminded me more of Lunatic difficulty than Hard/Ex...but I might just be out of practice.
+
+Pattern 4 (Wave Sign "Red Pulse"):
+	Creativity/Perfect Possession (2.5/9): Very simple pattern (and done before), but I like the way the bullets move (very illusionary!).  The way they spawn in looks a little weird, but that's not a big deal.  Doremy is sleeping.
+	Fun Factor/Pattern Design (7/8): I found this pattern really interesting to dodge.  Very fast paced and fun.  Good job!
+	Adequate Challenge (3/3): On the ball with difficulty.
+
+Pattern 5 (Nonspell 3):
+	Creativity/Perfect Possession (1/9): Extremely simple spiral with a trail behind it...very basic stuff here, could've been better.  I can't think of clever ways to say Perfect Possession isn't featured here anymore.
+	Fun Factor/Pattern Design (3/8): The trailing spiral actually kept me on my toes a little bit, but it's basic micrododging, nothing special.  No major design flaws, but no major design strengths either.
+	Adequate Challenge (2/3): Easier than expected.
+
+Pattern 6 (Craft Sign "Pacifist Dream"):
+	Creativity/Perfect Possession (2.5/9): Definitely something I've seen before, but it's not bad.  What *is* Perfect Possession anyway?
+	Fun Factor/Pattern Design (6.5/8): The bullets were slow, but definitely kept me on my toes.  Interesting to dodge.  The faded out blue pellets was a very good idea.
+	Adequate Challenge (1/3): Unlike the last nonspell, much harder than expected.  Ease it up a bit here.
+
+Pattern 7 (Nonspell 4):
+	Creativity/Perfect Possession (2.5/9): I like the idea here.  Very illusionary gaps.  Maybe the true Perfect Possession was the friends we made along the way...
+	Fun Factor/Pattern Design (4/8): Fun to dodge like the last one (albeit less so), but there is a major flaw.  I can't tell whether the red bullets can hurt me or not...and they are VERY fast.  If they're harmless, why didn't you fade them out like in the last spell?
+	Adequate Challenge (2.5/3): If the red bullets can kill you, a bit too hard (2).  If they can't, very reasonable (3).  Because of the red bullets' ambiguity, I went the middle road.
+
+Pattern 8 (Illusion Sign "Overthinking"):
+	Creativity/Perfect Possession (2/9): It is just a spiral...but it's quite a pretty spiral.  Nice use of multi-colored bullets.  
+	Fun Factor/Pattern Design (6/8): I think you're lucky that I figured it out right away, but the pattern design is actually really interesting... You dodge to the beat of the music!  I'm not even completely sure if this is intentional, but it was really fun.
+	Adequate Challenge (1/3): Not gonna lie, it's really easy. You move back and forth to a rhythm.
+
+Pattern 9 ("Dreamy Illusion"):
+	Creativity/Perfect Possession (7/9): Finally!  An attack that uses both of their attributes (at least to some extent)!  A really abstract attack that I couldn't figure out at first.  The idea is that Reisen's faded bullets show you where the safespots are...I think?  It's miles more creative than anything else in the script, so I'm giving it points, even if I'm not entirely sure what it's supposed to be.
+	Fun Factor/Pattern Design (1/8): You...don't even need to dodge.  If I'm right that the purpose of the attack is to make it so Reisen's faded bullets show you where the safespots are supposed to be, then I think it would have been far more interesting if the gaps changed between waves or something.  I stood still and won.
+	Adequate Challenge (0/3): I reiterate...I stood still and won.
+
+Aesthetics and Experience:
+	Graphics (3/7.5): This script uses a lot of blue...from the HUD to both the spell card background AND the normal background.  There could have been much more variety.  HUD is nice looking though.
+	Sound (6/7.5): Doremy's theme from AoCF was a good pick.  Utsuho's caution sound for the spell card sound was an odd choice, but hey, whatever works.  Script used sound effects decently.
+	Details (0/5): There's not enough to me that makes the script stand out in regards to little details.
+
+Overall Score: 85.5/200
+Converted Score: 8.55/20
+
+Comments:  Your biggest loss of points was Perfect Possession usage (mainly used in between attacks, rather than in the middle of attacks to change up the pattern.)...you could have been awarded quite a few more points if you used the mechanic in any way during attacks.
+Another big thing is creativity.  You stayed very safe when it came to patterns and didn't explore ideas that ZUN didn't already use in most cases.
+This looks like it's one of your first scripts, so don't feel bad about the score!  This was a very gimmick-centric contest with a theme that would be difficult for newcomers.   Keep at it, and you'll get a higher place someday!
