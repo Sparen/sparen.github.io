@@ -1,0 +1,26 @@
+LOCAA 8 Judgment - Darkrunner
+
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 14/20
+Character Relevance & Creativity: 3/20
+Aesthetics: 3/20
+This is a change since last time - danmaku matters more. Because in my opinion it should.
+*All patterns are given a score out of 10. Then the average of that is multiplied by 1.4 to get the score out of 14.
+~~~
+Attack 1: The falling rings are pretty cool but it really just devolves into spam. 5/10. 
+
+Attack 2: Basic, and that's okay. Gets VERY messy with her wide movement at times. 5.5/10.
+
+Attack 3: Actually pretty cool! 6.5/10.
+
+Attack 4: The knives feel a bit tacked on but I like the idea. Actually not as restricting as it looks. The danmaku that accompanies the lasers could have a bit more oomph, for lack of a better word. 6/10.
+
+Attack 5: Neat. It feels a bit short, I'd say. Gameplay-wise it's way easy compared to everything else, but the idea is great. The shot lasers you dodge through while avoiding the single homing laser aren't very interesting - maybe try something else? 6.5/10.
+
+Danmaku Quality: (5 + 5.5 + 6.5 + 6 + 6.5)/5 = 5.9*1.4 = 8.26/14.
+ 
+As for character relevance, they do feel like stuff that ExAlice would use. Creativity is a bit lacking on some attacks, though. 2/3.
+ 
+Aesthetics: I really do like how this script works out visually. The...kunai? look a bit weird. 2.5/3.
+ 
+Final Score: 8.26 + 2 + 2.5 = 12.76

@@ -1,0 +1,69 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Conarnar
+Script :  Pure Magic (Marisa)
+Player : A lot of players (by Conarnar)
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+All-around a decent non-spell. I wish there were something "special" to spice it up, though. [7.5/10]
+
+Light Sign "Skylight Ray"
+The opening is good. I like the stars' movement. However, I don't quite like how you did with the aimed mechanic. It looks intimidating and just make it harder to dodge the lasers. The super-fast bullets after that didn't help either. [12/15]
+
+Non-spell 2 :
+The familiars really have fascinating movement. Pattern-wise, I know it has fixed formula for the pattern, but the result look kinda...random. It has no interesting way dodge. [7/10]
+
+Magic Sign "Meteonic Drizzle"
+For the first pattern, I quite like how familiars collapse with the screen and spawning more bullets. The pattern they were firing is simple yet fun to dodge,too.
+For the second pattern, it's pure random, and I've nothing interesting to say. It's just...that. [13/15]
+
+Non-spell 3 :
+Ah, this is what I called "something to spice it up". The lasers are nice. They help keeping the pattern from being dull. [8.5/10]
+
+Star Sign "Starlight Beam"
+Absolutely great work on familiars and boss movement. The pattern they fired also work very well. The extra lasers from Marisa is great. It's a very good spellcard for sure. [14/15]
+
+Non-spell 4 :
+That's a fancy pattern you have there. The aim bullets did a good job so that the player always need to move while dodging the pellets. The only downside is that I get walled sometimes. [8/10]
+
+Ritual Sign "Orreries Starstorm"
+It's actually not much fun considering it has nothing to pressure the player. The only thing I need to beware is the spawn position of bullets, and in fact, not a fun thing to do. [11.5/15]
+
+Love Sign "Satellite Strike"
+The pacing is good and feel like a final spellcard. Although, I can't help but think it's a bit...bland? I feel like there isn't any interesting danmaku or something that's memorable. All I see are fancy bullets everywhere. It's actually not bad. Dodging-wise, it's fun, but overall it's not special.[12/15]
+ 
+Danmaku Score =  (15/115)*(7.5+12+7+13+8.5+14+8+11.5+12) = 12.2
+ 
+-Visual- (2 point)
+Impressive work as always. The effects are nice. The stage background is beautiful. I just hope it didn't blend with the bullet color too much.
+[1.5/2]
+ 
+-Music- (1 point)
+Fast-paced music that suit the fast-paced danmaku. Great choice.
+[0.75/1]
+ 
+-Difficulty- (1 point)
+All patterns feel like they're in the same difficulty. Neat.
+[0.75/1]
+ 
+-Others- (1 point)
+The player system, while look really complicated, it doesn't affect gameplay much. There is no need to swap player because there isn't anything require you to do that. (basically the entire fight can be beaten with only 1 player and 1 shot type, just keep shooting) 
+However, I can't denied the fact that it look really fresh and creative. With the high amount of players and shot types as well as bombs, it adds a lot of replay value to the script.
+[0.75/1]
+ 
+Total Score : 12.2+1.5+0.75+0.75+0.75 = 15.95
+
+P.S. A bit disappoint that there's no Master Spark. :D

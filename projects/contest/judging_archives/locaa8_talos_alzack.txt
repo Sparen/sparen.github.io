@@ -1,0 +1,55 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Alzack
+Script :  Pure Murasa (Murasa)
+Player : Hecatia Lapislazuli ver 1.10 (by TalosMistake)
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point) 
+ 
+Non-spell 1 :
+I know there are some patterns here, but danmaku overall look pretty random. Also, no boss movement make this pattern pretty dull to play. [5/10]
+
+Spell 1 :
+Good concept, poor execution. I got hit by the very first second the spellcard start. The droplet bullets are too fast, which doesn't go well with the flow of the pattern. It can be a good pattern, need a lot of tweaking though. [8/15]
+
+Non-spell 2 :
+I kinda like the blue bullets and the way they move, but what's the deal with those yellow tiny lasers? Look like they were ported from the very recent touhou fangame. (touhou SSS I bet you know it. xD) They doesn't go well with the pattern and are unhealthy to dodge.
+[6/10]
+
+Spell 2 :
+It's a maze! Pretty cool looking pattern so far. Although, not that fun to dodge. There is no way I can know where the anchor-shape bullets will be spawn. That means if I take the wrong path, I will be killed helplessly. The 'impact' bullets just make it worse.
+(This can be solved by using delay-laser to show the path before firing the anchor-shape bullet)
+BUT I see you put some effort here. It's probably the most detailed spellcard in this script ~ .[9/15]
+
+Danmaku Score = (15/50)*(5+8+6+9) = 8.4
+
+Just don't be discourage by my criticism though, You're taking a good step to be good a danmakufu scripter, especially with the pattern making. You just need to be more considerate. Think twice before making any pattern. Is this too hard? or too cheap? Will other people be able to dodge this on their 1st try? etc. Things like these are not easy to come up with, but you will get better as the time goes. Just keep practice!
+ 
+-Visual- (2 point)
+I bet this is your 1st script right? Considering you didn't even make a spellcard cutin. Anyway, I will give you some point because you did put an ok-ish background here. (unlike many other new scripters, who tend to put super flashy background which I really dislike...a lot.)
+[0.5/2]
+ 
+-Music- (1 point)
+It's Zun theme! It's ok I can't disagree with it. xD
+The lack of sound effects slightly hurts the script. You should find one as soon as possible.
+[0.25/1]
+ 
+-Difficulty-(1 point)
+There is only one difficulty, but it's playable. (nothing too hard or too easy) Some patterns are cheap,though.
+[0.25/1]
+ 
+-Others- (1 point)
+[0/1]
+ 
+Total Score : 8.4+0.5+0.25+0.25+0 = 9.4

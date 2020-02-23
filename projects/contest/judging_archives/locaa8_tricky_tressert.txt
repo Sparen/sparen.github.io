@@ -1,0 +1,25 @@
+LOCAA 8 Judgment - TrayserT
+
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 14/20
+Character Relevance & Creativity: 3/20
+Aesthetics: 3/20
+This is a change since last time - danmaku matters more. Because in my opinion it should.
+*All patterns are given a score out of 10. Then the average of that is multiplied by 1.4 to get the score out of 14.
+~~~
+Difficulty: Easyish.
+Attack 1: Good. I...don't really have any comments. Fair, and the boss movement is a nice touch. Fun. 7.25/10.
+Attack 2: Pretty interesting. I like the way the fire bullets are spawned. Fun. 7.5/10. 
+Attack 3: I really like the use of boss movement in this script so far. I think it would matter a tad more if Junko wasn't just a homing shot, but ah well. Neat attack. 7/10.
+Attack 4: Ups the pace and adds bullet curving to consider. Pretty fun attack. 7.5/10.
+Attack 5: Ups the pace even more. Lots of bullet speeds clash to create something fun to dodge. 7.5/10.
+Attack 6: I like how claustrophobic this attack feels with such simple danmaku. Dodging from all sides, and being forced to move with the waves from the sides is great! 8.5/10.
+Attack 7: Ah, rotate amount the middle cards. Done to death, but this one wasn't bad at all. The last wave is the hardest, but also the simplest. Good use of acceleration to create a variety of different patterns, and a great way to end the script. 8.5/10.
+
+Danmaku Quality: (7.25+7.5+7+7.5+7.5+8.5+8.5)/7 = 7.67*1.4 = 10.73
+
+As for character relevance, the patterns all feel like something ExAlice would use. Considering the contest theme, these patterns were very creative. This earns a perfect 3/3.
+
+Aesthetics: The PC-98 style is emulated very well - the sound effects and graphics are perfect. I did think that the magic circle background was a bit distracting - otherwise this is excellent. 2.8/3.
+
+Final Score: 10.73 + 3 + 2.8 = 16.53 (put on score sheet as 16.5)

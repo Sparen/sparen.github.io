@@ -1,0 +1,50 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Pikmin H
+Script :  Pure Insanity (Clownpiece)
+Player : Reimu A by Mr.Blue
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+The star wave is executed poorly.(It look like it does nothing to the pattern.) At least the lasers are ok-ish. Personally if you made the star pattern to be continuous (instead of wave by wave) combine with the vertical lasers that you already made, it would result in much more interesting danmaku. :) [5/10]
+
+Flame of Insanity -PURE- :
+It's junko ring...and well...more junko rings. xD I saw you tried to do something with the spiral (by changing the angle of bullets by a bit as time goes on), but the result was still something like Junko pattern, which doesn't help at all. [7.5/15]
+
+Non-spell 2 :
+Better than the first non-spell. You fused two spirals together. The result is "something" that's not simple and a bit challenging to dodge. There're also Junko rings again but this time it does good more than bad. [6/10]
+
+Freedom Sign: Stars Trapped under Stripes :
+A combination of vertical lasers and horizontal lasers. Pretty interesting spell. Seem like it's hard at first until I realized that horizontal lasers do nothing if the player always stay at the bottom of screen. (no laser there) All in all the best pattern in the script. [10/15]
+ 
+Danmaku Score = (15/50)*(5+7.5+6+10) = 8.55
+ 
+-Visual- (2 point)
+Not much effort on the background. Despite the charge effect I don't seem to find any other effect. Well, the charge effect is cool though.
+[0.75/2]
+ 
+-Music- (1 point)
+Perfectly fit the fight.
+[1/1]
+
+-Difficulty- (1 point)
+Kinda hard to tell. Sometimes it's easy (non-spell 1, no bullet to dodge) or the spellcard 2 (need to do a quick-tap to dodge the lasers.) It's not much balanced but also not cheap.
+[0.5/1]
+ 
+-Others- (1 point)
+There is a 3 second dialogue! It's very short dialogue but it's still a dialogue. It also does a significant feeling to the fight. xD 
+[0.25/1]
+
+Total Score : 8.55+0.75+1+0.5+0.25 = 11.05

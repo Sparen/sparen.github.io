@@ -1,0 +1,59 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : AJS
+Script :  Guardian of the Mastermind (Ran Yakumo)
+Player : Reimu by AJS
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 : 
+The randomness on the first part was done nicely. The stream part is fun and dramatic. The blue part added an extra layer to the pattern which is nice. The flow of pattern is flawless. One of the best non-spell in this contest. (I think I didn't overestimate this. xD) [9.5/10]
+
+Spell 1 :
+The first part is crazy (and fun). The second part is also very nice with cross-over bullets and some extra bullets. The most important thing you have is aim bullets. Without them the score on this pattern would go downhill. [13.5/15]
+
+Non-spell 2 :
+The first wave is a bit easy. After that, when the falling bullets are spawn. Things are spiced up, and I like it. [8.5/10]
+
+Spell 2 :
+The curvy pellets were done right. The small bullets that I need to dodge have good angular velocity. Each phase has similar style of pattern, yet it plays differently. Nice work. [13.5/15]
+
+Non-spell 3 :
+A bit of random but the different speed for each type of bullets make up for that. [8.5/10]
+
+Spell 3 :
+The "wave of bullet" looks cool and gorgeous. The dodge is nice. I like how the knives' angle is changing overtime, giving the player a different feel for dodging. (even though they're the same pattern.) It's clever. [14/15]
+
+Spell 4 :
+It's a survival spellcard with a lot of phases. Even though each phases did use the same type of bullets but with different color (so not much variety), the danmaku is diverse  and require a different way to dodge. They're also very fun to play against. The background are also changed depending on the element Alice is using (amazing right?) . Overall, a very effective survival spellcard with a good gameplay and nice visual. [13.5/15]
+
+Danmaku Score =  (15/90)*(9.5+13.5+8.5+13.5+8.5+14+13.5) = 13.5
+ 
+-Visual- (2 point)
+I'm not a fan of pc-98. For me, the graphic looks kind of dated. The background is a nice touch but can be confusing sometimes. (at least it plays a nice role in final spellcard.)
+Actually, the graphic in term of danmaku is amazing but I don't think that's counted in this section. xD
+[1.25/2]
+ 
+-Music- (1 point)
+The music fit the fight indeed, especially the final spellcard. I like it so far. 
+[0.75/1]
+ 
+-Difficulty- (1 point)
+The difficulty looks impressive. However, the easy isn't really easy and harder than normal should be "easier than lunatic but harder than hard". :D [1/1]
+ 
+-Others- (1 point)
+You made a pretty cool package.(Love the spinning Yin-yang!) The player is nice but I hope there was a death sound effect, and I guess I can't death-bomb in this script?
+[0.5/1]
+ 
+Total Score : 13.5+1.25+0.75+1+0.5 = 17

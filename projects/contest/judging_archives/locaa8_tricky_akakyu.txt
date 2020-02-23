@@ -1,0 +1,43 @@
+LOCAA 8 Judgment - Akakyukyu
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 14/20
+Character Relevance & Creativity: 3/20
+Aesthetics: 3/20
+This is a change since last time - danmaku matters more. Because in my opinion it should.
+*All patterns are given a score out of 10. Then the average of that is multiplied by 1.4 to get the score out of 14.
+~~~
+Played on Normal mode.
+
+Stage Pre-Midboss: I quite like this. There's a lot of variety in big fairies, a lot of variety in dodging types, and it's all fair. Great job. 8.5/10.
+
+Aya Nonspell: I love this. Thematically fits here while incorpating a lot of new themes. Fast, fun, fair. Excellent. 9/10.
+Aya Spell: I like this too. It requires REALLY fast reflexes, though - those laser flashes are very easy to miss and not seeing them results in things getting ugly. I can do it well, but others probably can't. Maybe have them last a bit longer. 7.5/10.
+
+Stage Post-Midboss: Well there wasn't actually much of one lol. The green kunai fairies + the increasing whiter background make for a mean combination. Avoid that in the future. The death fairy is appropriately deathy. 7/10.
+
+Suika Starts!
+
+Nonspell 1: Multi-phase as usual. Pretty intuitive to dodge. Feels a bit easier than most things before it. 7.5/10.
+
+Spell 1: I'd personally darken the spell background a bit. Quite an interesting pattern to dodge. Reasonably challenging micrododging. I like it. 8/10.
+
+Nonspell 2: This pattern is cool! Funky white bullets and wide aimed shots make something awesome. 8.5/10.
+
+Spell 2: I probably dodged the first wave with blind luck, but afterwards I understood this well enough to do it successfully. Very neat pattern. Not much else to say other than I like it. Could be a bit more forgiving to first timers. 8.25/10.
+
+Nonspell 3: Well, it's scarier than it actually is. Bullets aimed around you, then aimed bullets = not really much of a challenge to dodge. It keeps the player moving but really isn't all that much fun to deal with. Not bad, not amazing. 7/10.
+
+Spell 3: Lots of multi-phase attacks in this script. I like this one as well - though the white bullets from the bottom of the screen seem to suggest that the player should move upward, and if they do they'll likely get trapped by the lasers. Good as usual. 8/10.
+
+Spell 4: Neat! It's like Danmaku Bounded Field, but actually doable on the first try! Excellent twist on something that already exists. I love it. 9.5/10.
+
+Spell 5: Multi-phase script ender! Where she steals my graze?! I guess that sorta acts like another spell timer of sorts? It's fun. Kinda devolves into spam from a lot of angles but I guess that's Suika's things anyway. Good, good. 8/10.  
+ 
+Danmaku Quality: (8.5 + 9 + 7.5 + 7 + 7.5 + 8 + 8.5 + 8.25 + 7 + 8 + 9.5 + 8)/12 = 8.0625*1.4 = 11.2875/14.
+ 
+As for character relevance, I'd say it's perfect. All of the attacks seem like ones the characters would use. Old concepts are mixed with a lot of new ones to create something very enjoyable. 3/3.
+ 
+Aesthetics: This script is also very nice visually. Aside from some of the post-midboss stage, and maybe dimming the spell background a tiny bit, I have no real complaints. 2.75/3.
+ 
+Final Score: 11.2875 + 3 + 2.75 = 17.0375

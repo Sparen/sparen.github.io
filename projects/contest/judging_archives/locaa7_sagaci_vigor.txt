@@ -1,0 +1,37 @@
+Score Sheet - Sagaci
+
+All nonspells, spells, and stages will be ranked out of 20 points each
+All scores will be averaged together out of a possible 20 points. 
+Up to 2 bonus points may be added for aesthetic.
+Up to 2 bonus points may be added for any other reason.
+Points may be subtracted from individual scores for possible bugs/glitches/similarities to existing media.
+Final score will be rounded to one decimal place.
+
+Script: Cimelio Canto (Meloetta)
+Coded by: Vigor
+Difficulty Scored: Normal
+
+(note: played with all characters, judged using Sakuya player. Also I know you mentioned the lag being an issue if you die or bomb but its still annoying to deal with and it makes whatever you're playing significantly easier. Only deducting 1 point.)
+
+Nonspell 1
+18/20 - Oh goodness this whole script is gonna be gorgeous isn't it. I love the swooping lasers, very reminiscent of Benben from DDC. Bit slow to start up. A simple but effective nonspell.
+
+Spell 1
+15/20 - Well I can only assume this is a spell since there's no declarations. It's pretty but I was kind of confused as to the point of the spirals Meloetta shot out at first. It took the script slowing down for me to realize that it was shooting out bullets. I'm not sure if that's the fault of the colors of all the bullets or anything, but it felt like it could have been more obvious. Wish it was a bit harder, but still a nice card.
+
+Nonspell 2
+19.5/20 - AGAIN WITH THE PRETTY SWOOPING LASERS IT'S LIKE YOU GUYS KNOW MY WEAKNESSES. This is a really fun nonspell; it's simple at first but then you see the lines of bullets coming at you and you're like "OH DANG" and jump out of the way. Gives you enough time to see those bullets too so it doesn't come out of the blue. My only complaint is that it can be a bit hard to tell where the bullets are gonna go, but otherwise it's awesome.
+
+Spell 2
+19/20 - Okay I think I can stop commenting on how pretty everything is. This spell is better than the first one in my opinion; it's challenging but it never gets frustrating. It gets dense but not overly crowded. It kinda feels like a water-type spell, which seems a little out of place for Meloetta, but oddly enough it DOES feel like it fits at the same time. How do you do that?
+
+Spell 3
+19/20 - Second verse, same as the first. The lasers look like beams of light underwater and it's just amazing, practically hypnotizing. It's hard to describe how I feel about this spell, in a good way. It just FEELS like a nice end spell with the micrododging.
+
+CORE TOTAL: 90.5/100
+AESTHETIC BONUS: 3/2
+ETC BONUS: 0/2 (-1 FOR LAG ISSUES)
+
+FINAL SCORE: 18.5/20
+
+Final Comments: This thing is just beautiful to look at and fun to play. While I wish it was a bit longer, I'm glad that what I got was of such great quality. Even though a lot of it is simple to dodge it still stays enjoyable. Honestly aside from the lag issues, this is an amazing script and I enjoyed playing it immensely.

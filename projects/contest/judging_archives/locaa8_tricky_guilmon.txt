@@ -1,0 +1,26 @@
+LOCAA 8 Judgment - Guilmon
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 14/20
+Character Relevance & Creativity: 3/20
+Aesthetics: 3/20
+This is a change since last time - danmaku matters more. Because in my opinion it should.
+*All patterns are given a score out of 10. Then the average of that is multiplied by 1.4 to get the score out of 14.
+~~~
+I'll assume the weather gimmicks are random. Played on Hard mode.
+
+Nonspell 1: Would probably be more fair if the Drizzle weather wasn't so distracting. ADD bullets + Drizzle = lol. Otherwise it's fine I guess.  5.5/10.
+ 
+Spell 1: Pretty cool. I killed it before I got to see that much of it, but it seems like a fun multi-phase attack. Thankfully the Drizzle weather rendered behind the spell background. 7/10.
+ 
+Nonspell 2: I think it's unreasonable to expect the player to dodge the rainbow kunai and big blue orbs at the same time. Doable, but kinda ridiculous. Otherwise it's fine. I'm happy Drizzle wasn't happening during it.  6/10.
+  
+Spell 2: I like the idea of needing to remember where bullets are coming from, but I think the yellow bullets from the corners are far too fast. The red aimed pattern can be trivial if you know it's coming, or ridiculous if you don't. I think it's unpredictable and has some elements of unfairness. 6/10.
+ 
+Danmaku Quality: (5.5+7+6+6)/4= 6.125*1.4 = 8.575/14.
+ 
+As for character relevance, I'd say it's...odd. The second nonspell doesn't feel much like her, but otherwise it's fine. Everything but the first nonspell is fairly original. 1.75/3.
+ 
+Aesthetics: Graphically the script is fine. Weather effects (aka Drizzle) during nonspells can cause a huge problem with visibility. I shouldn't be unable to see the timer or half of the bullets. 1.5/3.
+ 
+Final Score: 11.825/20 (11.825)

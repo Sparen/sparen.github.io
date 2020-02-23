@@ -1,0 +1,56 @@
+Score Sheet - Sagaci
+
+All nonspells, spells, and stages will be ranked out of 20 points each
+All scores will be averaged together out of a possible 20 points. 
+Up to 2 bonus points may be added for aesthetic.
+Up to 2 bonus points may be added for any other reason.
+Points may be subtracted from individual scores for possible bugs/glitches/similarities to existing media.
+Final score will be rounded to one decimal place.
+
+Script: D'Force Master
+Coded by: Python
+Difficulty Scored: Normal
+
+(note: I do wish the music paused when you pause the game. Minor nitpick though. Also it feels like at one point the music for the stage kinda "jumps" if that makes sense, like it wasn't quite long enough and you had to splice it together. Just something I noticed and kinda nagged at me, no points deducted.)
+
+~ Stage ~
+18/20 - The first half was lovely. It felt like something straight out of a Touhou game actually. Those arrow fairies that come in from the sides move a bit too quickly for my tastes, but overall I liked it. The second half isn't quite as interesting, it feels a little too short, but I also enjoyed it. That last wave of spinning fairies was EVIL with changing the pattern though, I laughed when I died the first time and was literally shaking my fist going "YOUUUUUUU!".
+
+~ Midboss ~
+
+Nonspell 1
+17/20 - OH GOD THE DOREMY FLASHBACKS. Nah in all seriousness, the stars feel a little out of place for Doremy but it still feels much like a Doremy nonspell and is as difficult as one. Took me a few tries to get through one wave untouched, but it's fun to dodge and I like it.
+
+Spell 1: Dream Sign "White Sacred Dream"
+14/20 - Going through this the first time was pretty confusing, but the second time was pretty good. Honestly I wish a little more was done with it, you only pass through 2 waves of bullets per wave and I feel like it should be more. Kind of a simple spell but still nice looking and a good length.
+
+~ Boss ~
+
+Nonspell 2
+13/20 - I snorted when Wizeman flew by at the beginning. Personally I feel like that intro is kinda long for nothing going on. It's just your basic streaming spell. just "tap tap tap tap". Not very interesting but it did look nice.
+
+Spell 2: Dream Sign "Waking Eye"
+16/20 - I think the screen shaking with the red lasers was a little too much, it made it difficult to dodge those stars. Also the red fireballs that shoot from the bottom come a little too quickly for my tastes, it gives you very little time to react if you don't know what's coming. Once you know what's coming it's a pretty easy spell to dodge and capture.
+
+Nonspell 3
+17/20 - Jesus this thing looks gorgeous. I kinda wish that those lasers that fly around actually shot at you at some point and weren't purely aesthetic, since it makes this nonspell a bit too easy. The delay on those aimed lasers can get kinda tricky actually, and the inverted blue orbs can be tricky to dodge as well with how fast they move at that angle.
+
+Spell 3: Shadow Sign "Heart of Darkness"
+16/20 - I really wish the shadows of Wizeman flew farther than just to where you last were, since it kinda limits where you can accurately dodge. Those small stars can really get in your way too. Simple but challenging.
+
+Nonspell 4
+18/20 - WHAT IS WITH YOU AND GORGEOUS NONSPELLS. Seriously, the way the inverted orbs kinda blend together is just mesmerizing. This nonspell kinda reminds me of a mix between Utsuho's nonspells and Shou's nonspells. The blue orbs can be tricky to dodge but it's great otherwise.
+
+Spell 4: Dream Sign "Nightmare Trap" ~Survival~
+13/20 - While I really like the idea of this and how it looks, it's kind of unfair. There's no way to be able to predict which hands are going to move towards the center and I ended up dying a LOT, especially when the hands started to speed up. Plus it feels like it kinda drags on as well before anything interesting really starts to happen. I did get a fun giggle out of the anti-safespotting though.
+
+Spell 5: "Veil of Darkness in the Unconscious Space"
+16/20 - This spell tends to wall you from time to time. Plus since all the bullets are the same black color, everything starts to blend into each other and makes it difficult to tell where something is coming from. I know that's kinda the point but I felt like I died more than I should have. Still fun to dodge though. Also you may want to make the ending a cutscene of sorts, since I could still bomb and drown out the noise.
+
+CORE TOTAL: 158/200
+AESTHETIC BONUS: 2/2
+ETC BONUS: 0/2
+
+FINAL SCORE: 16.0/20
+
+Final Comments: This was a gorgeous script. After watching the actual battle I feel like more elements of it could have been incorporated into the script in some way, but it still feels fitting. The difficulty can kinda vary wildly, but this was a fun script and I can see myself playing this again in the future.

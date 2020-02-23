@@ -1,0 +1,56 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Agent17
+Script :  Esoteric Prayers (Sanae)
+Player : Medicine A by gtbot
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+The amulets part is pretty trivial to dodge, but the part with star-shape and red pellets is pretty fun. The amount of bullets there is just right. I like it. [8/10]
+
+Esoterica "Three-Step Youkai Extermination"
+Wow. A lot of things are going on here. The first step is probably the hardest because of the amulets and pellets. The second step is much easier but also much more satisfying to dodge (cross pattern does a good job). The third step is somewhere in the middle. It's still good though. Overall, it's quite a good spell but require a lot of micro-dodge. [12.5/15]
+
+Non-spell 2 :
+That's a pretty small star you did there.
+Yeah, it's pretty but it has nothing to do with danmaku because everything seems to go randomly.It's fun to dodge,though. [7.5/10]
+
+Miracle "Heaven's Waterfall"
+I had a blast the first time I played this.(The waterfall danmaku is done right), but then I realized I've nothing to dodge. The danmaku is too sparse. Comparing to the first spell, it's like you suddenly drop the difficulty.[12/15]
+
+"Godly Purification Ritual"
+*Kage said she wants her spellcard back.*
+I like how amulet pattern also change as the time goes on.(I also notice that there're a tiny version of amulets here) The lasers are good,too, but it's really not original.
+[11/15]
+
+Danmaku Score = (15/65)*(8+12.5+7.5+12+11) = 11.77
+ 
+-Visual- (2 point)
+The effect is very pretty, but sometimes I get lag-spike out of nowhere. Hope this will be fixed in your future scripts. :)
+[1.25/2]
+ 
+-Music- (1 point)
+It's not Sanae theme but it does work quite well.
+[0.75/1]
+ 
+-Difficulty- (1 point)
+I've to say it's pretty balanced except spell 2 which is a bit easy. Nice work!
+[0.75/1]
+
+-Others- (1 point)
+I notice there is a background music when I died with no life left in a stock. Pretty minor detail but I appreciate it. xD
+[0.5/1]
+ 
+Total Score : 11.77+1.25+0.75+0.75+0.5 = 15.02

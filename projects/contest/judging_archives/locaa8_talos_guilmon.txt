@@ -1,0 +1,55 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Guilmon (DLS)
+Script :  Yuuka Kazami by Guilmon (Yuuka)
+Player : Hecatia Lapislazuli ver 1.10 (by TalosMistake) 
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+
+Non-spell 1 :
+The bullets' speed is a bit too fast here. I was usually trapped by Bubbles then got killed by large round bullets. (I just happened to notice that they rotate clockwise first then counter-clockwise and so on, but that's on my 2nd try already.) In conclusion, this pattern isn't very blind-run friendly, but it's pretty fun once I know how to deal with it. [7/10]
+
+Flower Sign "Flowering Garden of Sunflowers" :
+Now this is something Yuuka would use. The 1st phase is nothing special but nothing bad either. The 2nd phase is what I like the most. It's pretty fun to dodge the danmaku that gradually increasing its speed. The 3rd phase is fine. Sunflowers don't have a hitbox keeping it from being a cheap pattern. The bullets they fire kinda blend with the background though, which make this the hardest phase.
+[11.5/15]
+
+Non-spell 2 :
+It's a pretty pretty pattern if you get rid of those large blue bullets. (I know they suit Yuuka but they don't blend well with the rainbow color.) All in all I don't really have a complaint aside from the aesthetic. xD
+[8/10]
+
+Memories of Sixty Years :
+There is some unique danmaku concept. The way I need to memorize the last position of Sunflower bullets (so I don't get instantly killed when they explode) is pretty fun. I will give you some points for this (although the danmaku is pretty medicore, which can't be helped considering you already delivered a good concept.)
+Also, nice uses of the effect here :)
+[12/15]
+ 
+Danmaku Score = (15/50)*(7+11.5+8+12) = 11.55
+ 
+-Visual- (2 point)
+The stage background is ok, but the spell background give me a headache. Those graphics spin too fast for my eyes,and they tend to merge with the bullet graphics making them harder to see.
+The effects are good and nothing too distracting.
+[1/2]
+
+-Music- (1 point)
+This is a preference but I must admit you choose a good music. It's really catchy and I love that. xD
+[0.75/1]
+
+-Difficulty-(1 point)
+I don't see much different between normal and hard difficulty, but lunatic difficulty is noticeable. Overall it's pretty balance and you did a good job on this part
+[0.75/1]
+ 
+-Others- (1 point)
+The weather system is something. As I see, there are bad weather more than good weather so it kinda punish the player (but only by a bit.) At least it's something. It doesn't affect gameplay much, but it isn't bad to be there either.
+[0.5/1]
+ 
+Total Score : 11.55+1+0.75+0.75+0.5 = 14.55

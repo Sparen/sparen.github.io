@@ -1,0 +1,68 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Haru
+Script :  Demystify! Hecatia VS. Hecatia (Hecatia Lapislazuli?)
+Player : Hecatia version 1.10 by TalosMistake
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+Look a lot like her first non-spell in LoLK, but now it's in triangle shape ~ . The pattern is nothing special but I've fun with it. Pretty satisfying to dodge and no wall either. [8.5/10]
+
+Otherworld "Akatsuki" : 
+Look really like her 1st spell in LoLK but I'm sure this is an intent. The pattern is very pretty and has a nice use of angular velocity. However, I think it's a bit repetitive because of one layer pattern and the sound effect really hurt my ears. [12.5/15]
+
+Non-spell 2 :
+A solid non-spell. Although, it's a little hard and the player can be walled sometimes, and not much variety except more triangles.[7.5/10]
+
+Earth "Malebolge Fault Soul" :
+I like the way bullets are spawned. The lasers are really nice with their appropriate speed. The stream is done well. A very good spellcard and probably the best one in the script [13.5/15]
+
+Non-spell 3 :
+Pretty simple but effective non-spell. Again, a bit repetitive and last too long. [7/10]
+
+Moon "Moon's Hell Torturing Device" :
+The moon has no hitbox so it's kind of a let down in term of usage (can't really blame the scripter, it just doesn't go well with the contest's rule). Considering the player can stay inside the moon and completely avoid the stars, this pattern is really trivial and simply not that fun to dodge. [12/15]
+
+"All-Seeing Eye of God"
+Obviously Illuminati is obvious.
+The blue phase is ok. The pattern looks good. The dodge is fine but can be a problem on a first try.
+The green phase is nice. The angular velocity is in a sweet spot. The triangles effect is a bit intimidating sometimes,though.
+The red phase is super creative and hella fun to dodge. You did a good job with circle bullets that force the player to move. I enjoy dodging them until the end. [13/15]
+
+"Evel Trinity"
+The first wave is decent at best. There is nothing interesting to say. Let's see...the purple bullets have a good movement I think.
+The second wave is really random. It can be easy or super hard depend on well..."a randomness", and my ears... it hurts.
+The third wave is really brutal. The stars are too dense and the gap between fireballs is too small. A lot of time I manage to slip through the gap but guess what? I got owned by stars at my face.
+Overall, I'm not really impressive by the difficulty in this spellcard. It's a bit over the place (let's say it's harder than the rest of script) and that is the real problem.[11/15]
+
+Danmaku Score = (15/105)*(8.5+12.5+7.5+13.5+7+12+13+11) = 12.14
+ 
+-Visual- (2 point)
+The stage background and spell background are neat. The effects are nice. (such as magic circle "changing color" effect)
+[1.25/2]
+ 
+-Music- (1 point)
+It's original I can't argue with that, but the sound effect ruin the music in some scenario.
+[0.5/1]
+ 
+-Difficulty- (1 point)
+There is multiple difficulty ~ which is a nice thing to have. The final spellcard's difficulty still didn't fit with the rest of actual difficulty,though.
+[0.75/1]
+ 
+-Others- (1 point)
+Dialogue is good and well written. Nice job on this part ~ .
+[0.25/1]
+ 
+Total Score : 12.14+1.25+0.5+0.75+0.25 = 14.89

@@ -1,0 +1,55 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Dark
+Script :  Alice
+Player : Reisen by TalosMistake (I haven't released it yet. :) )
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+
+Non-spell 1 :
+Very solid pattern. Those circle things seem weird at first, but hell they works! Very fun to dodge. :) [8.5/10]
+
+Spell 1 :
+The circle-curvy bullets are something I don't like, but in this pattern they're tolerable. The main pattern is good even though they're not something special [12.5/15]
+
+Non-spell 2 :
+It's a multiple phases pattern ~ . Every pattern works together perfectly. I approve. :) [9/10]
+
+Spell 2 :
+It's...epic.
+Seem hard at first, but when I realized I don't really have to worry about the lasers because the gap is always under the player, this pattern become a lot more easier. It's still fun though because of a good use of arrow bullets and bubbles. [13.5/15]
+
+Spell 3 :
+The aimed laser is a little bit of disappointing because it's so easy to dodge, but the shiny lasers at the end of each wave make up for it. Overall, it's a nice pattern. [13/15]
+ 
+Danmaku Score = (15/65)*(8.5+12.5+9+13.5+13) = 13.04
+ 
+-Visual- (2 point)
+The stage background at the start of the script is absolutely stunning, too bad it's not used for the rest of fight. :|
+The visual effect (some sort of light-ray?) look distracting at first, but then I realized it help me keep track of the Alice's position (since there's no enemy marker) They also represent the elements of the spell and make pattern look a lot more epic. :D
+[1.75/2]
+
+-Music- (1 point)
+Good choice of music. Somehow it sounds really charming for me.
+[1/1]
+ 
+-Difficulty- (1 point)
+At first I thought this was going to be super hard script (because a lot of people who did pc-98 script tend to do that), then it turned out to be fair and fun script. Nice work!
+[0.75/1]
+ 
+-Others- (1 point)
+I love the wide screen ~ .It's pretty suitable choice for this fight, too.
+[0.5/1]
+ 
+Total Score : 13.04+1.75+1+0.75+0.5 = 17.04

@@ -1,0 +1,71 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Lefkada
+Script : Pure Gensokyo version 1.00a (Reimu)
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+
+-Danmaku- (15 point)
+
+Nonspell 1 :
+Generic nonspell here. I really don't have anything to say. It's solid enough.[7.5/10]
+
+Dream Sign "Moon Girl Sealing Circle" :
+A pretty nice spellca... oh wait it ends in an instant!. No score here. (well I know you don't want me to judge it. xD)
+
+All aboard the Hype Train! Danmaku style of Phantasmagoria Trues is coming!
+
+Main Phase 1 :
+Pretty good opening waves. Very PT-ish.
+For the 2nd part, it's pretty fun to dodge small amulets, but I got walled by big amulets sometimes (and somehow they seem to have wonky hitbox). [10/15]
+
+Main Phase 2 :
+A lot of phases here. I love the penultimate phase the most. High-speed pellets are really fun to dodge. The last phase is a bit hard on the 1st try. Those super fast walls bullets are too hectic xD. [11.5/15]
+
+Main Phase 3 :
+The stream part is kinda brutal. I was killed by pellets walls a lot of time, but when done right, it's pretty fun.
+The 2nd part is good but nothing special [11/15]
+
+Main Phase 4 :
+Opening wave is tense. 2nd phase is how you make a wall pattern fun to dodge. 3rd phase is ok. I like how you leave big bullets there, making a beginning of next phase a bit harder to dodge [12/15]
+
+Main Phase 5 :
+Best pattern in this script. The opening is great. The rest is pretty simple to dodge. Those sine wave bullets are nice to watch,too. [13/15]
+
+Main Phase 6 :
+The main pattern is fine, but the walls...the walls ~ they are too evil. xD [10.5/15]
+
+Danmaku Score = (15/100)*(7.5+10+11.5+11+12+13+10.5) = 11.32
+
+-Visual- (2 point)
+Background is nice. I prefer more blue color here though.
+The effects are noticeable. It fits the script. :)
+[1.5/2]
+
+-Music- (1 point)
+Maybe I play Phantasmagoria Trues Terminus too much, but I don't find the Terminus Stage theme to suit the Reimu character that much. I would prefer a dramatic song (like the one you use in the unused pattern or in the main menu) than this.
+[0.5/1]
+
+-Difficulty-(1 point)
+All attacks feel like the same difficulty, Hard (or lunatic in someplace) which is a good thing.
+But the actual difficulty is still the problem, I need to play a lot of time, to memorize all the patterns. Otherwise, I will get rekted by the super fast walls bullets.
+Last thing, the bullets in this script seem to have bigger hitbox than usual (or maybe it's player hitbox?) I died out of nowhere a lot of time. x_x
+[0.5/1]
+
+-Others- (1 point)
+HOLY SHIT YOU MADE A SUPER COOL PACKAGE.
+There are tutorial,replay,unused stuff, all of these work perfectly fine (especially tutorial, really like how you put Clownpiece there)
+Max score for this! [1/1]
+
+Total Score : 11.32+1.5+0.5+0.5+1 = 14.82
+
+P.S. Did you release your Junko player yet? xD

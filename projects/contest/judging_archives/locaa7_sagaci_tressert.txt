@@ -1,0 +1,38 @@
+Score Sheet - Sagaci
+
+All nonspells, spells, and stages will be ranked out of 20 points each
+All scores will be averaged together out of a possible 20 points. 
+Up to 2 bonus points may be added for aesthetic.
+Up to 2 bonus points may be added for any other reason.
+Points may be subtracted from individual scores for possible bugs/glitches/similarities to existing media.
+Final score will be rounded to one decimal place.
+
+Script: End of the Ordinary Witch
+Coded by: TresserT
+Difficulty Scored: Harder Than Normal (Normal)
+
+Nonspell 1
+18/20 - While it takes a little while to get the hang of it, I love dodging and weaving through all these bullets. Very fun nonspell.
+
+Spell 1: "Will You Ease the Illness That is Boredom?"
+19/20 - This is a great way to do a spell. It gives you one wave to study it and see how it works and then goes into execution. The randomness of where the bubbles on the sides keeps it from getting stale. I kinda wish you had more time to process where the bubbles are, since they move so quickly you kind of have to get a gut feeling, but it's very fun. And to answer your question, yes, yes you will.
+
+Nonspell 2
+16/20 - Even if it's just a flipped version of the first nonspell, it's still fun. I think I prefer the first one though, this one is a little too crowded for my liking.
+
+Spell 2: "These Games Are But Books in My Library"
+13/20 - Where are the bullets in the corners coming from? I mean I stopped firing for a little while to see what it is, and it's the bubbles? The furthest right explodes and then the furthest left? Little confusing. Also again, everything moves a bit too quickly. The screen gets crowded with too many things way too quickly for me to be able to process everything going on at once. On a side note though, I do like how the amulets kinda fade out of existence, it looks cool.
+
+Spell 3: "The World Turns Like a Page in My Hand"
+17/20 - Maze danmaku done right! Again, I think everything accelerates a little too quickly but it's a fun spell to dodge.
+
+Spell 4: "An Unwinnable Game, Repeated Forever" ~Survival~
+5/20 - Aaaaand this is where I have to dock major points. The concept is certainly interesting but if you touch the boss even ONCE everything resets. While it's nice that you get checkpoints, on top of it being annoying to have to repeatedly dodge the same danmaku (especially when the last phase lasts 24 SECONDS), this pushes it over the 60 second time limit we imposed in the rules. And before you say that technically you didn't because the timer never goes above 60 seconds, it's still kind of a cruel technicality and just ruins any fun I had with this card. It's also a problem when you prefer dying to having to reset.
+
+CORE TOTAL: 88/120
+AESTHETIC BONUS: 2/2
+ETC BONUS: 1/2
+
+FINAL SCORE: 15.1/20
+
+Final Comments: This is a very nice sounding and looking scripts. It's a bit too quick for my tastes, but the patterns are fun to dodge. The survival card is really what hurt you though. If the timer didn't reset if you touch the boss, this probably would have gotten a much higher score.

@@ -1,0 +1,78 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : RickyRister
+Script :  Rainbow Kaguya (Kaguya)
+Player : MoF Reimu (by TalosMistake)
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+The curvy pellets are very misleading and pretty frustrating to dodge them properly. x_x [5.5/10]
+
+New Impossible Request "Refined Magic Mirrors" :
+Bullets are coming from the left and right ~ . Pretty satisfying to dodge. The lasers are a nice addition but I hope they would do something more than this. Right now they aren't any real threat. [11.5/15]
+
+Non-spell 2 :
+An interesting way to use familiar but got ruin by the pattern because the bullets are too random (or mostly 100% random). [6.5/10]
+
+New Impossible Request "Sealed Glass Orb"
+Now THIS is something Kaguya would likely to use and I quite like it. The rainbow pellets. The Lasers. The familiars that keep shrinking over time and force the player to move to the center. Everything blend well together. Nice work. [13.5/15]
+
+Non-spell 3 :
+For a weird reason this is a pretty tricky pattern for me, but it's fun since I need to keep dodging all the time. The pattern-wise is not impressive much, but not bad either. [7/10]
+
+New Impossible Request "Heaven Piercing Drill"
+Impossible indeed.
+The way the patterns are formed remind me of Koishi Spell in Double Spoilers, but what trouble me most is the bullets' speed. It's way too fast. (I know it start at zero so I've some time to prepare but they accelerate quickly and their max speed is quite high.)
+However, if I stay inside the DNA-shape pattern. (I call it like this. xD) The pattern suddenly become trivial. I don't need to dodge anything but in a certain wave. (when she shoots about 6 DNA-shape patterns.) [11/15]
+
+Non-spell 4 :
+Interesting and refreshing. The familiars did a good job and the red ovals are really slow but combining with the blue ovals, is what make this pattern fun. [8.5/10]
+
+New Impossible Request "Crystallized Rain Shards"
+Look really bland. All I see are rainbow bullets and no real pattern. [10/15]
+
+"Eternity in the Blink of an Eye"
+The initial pattern surprised me by a bit with the slow-motion. xD
+Talking about the rest of pattern, for the first phase we have some familiars around the screen, shooting aimed bullets to player. This remind me of her final spell in IN but it's still a nice touch to see it again. I don't quite like the random bullets that Kaguya shoot, but the stars are ok.
+For the second phase, we have single line of aimed bullet from familiars. (I got a ton of graze this way. :D ) It's kinda easy compare to the first phase.
+For the third phase the familiars started to follow the player, shooting the circle stars along the way. I've played with this type of pattern a lot of time and I've to say I always like it (including this one) so yeah. :)
+The last phase is just about a stream. Nothing special. The very last second is a bit pointless, though (I hope those bullets would closer than this.) :|
+Overall, it's a good pattern, has a lot of different phases (I wonder how many lines of code you did), very slow pace, very colorful, but lack of something to spice it up.
+[12.5/15]
+
+Finite Esoteric Arcana "Xiuyan's Great Impact"
+For the final spellcard, this is a bit disappointing. (comparing the the penultimate spellcard) There is nothing interesting in this pattern. Just a bunch of rainbow, curvy bullets, and...that's all. [10.5/15]
+
+Danmaku Score = (15/130)*(5.5+11.5+6.5+13.5+7+11+8.5+10+12.5+10.5) = 11.13
+ 
+-Visual- (2 point)
+Not much effort on the effect. (no magic circle, charge effect etc) The backgrounds are decent.
+[0.5/2]
+
+-Music- (1 point)
+It's original, I guess? (I haven't listened to Kaguya theme for a while.)
+[0.75/1]
+
+-Difficulty- (1 point)
+It's pretty balance. (beside the first non-spell) I'm quite satisfied with this.
+[0.75/1]
+ 
+-Others- (1 point)
+The amount of effort you put in "Eternity in the Blink of an Eye" is amazing. You got some points for that. xD
+[0.25/1]
+
+Total Score : 11.13+0.5+0.75+0.75+0.25 = 13.38
+
+P.S. You would get a lot better danmaku score if you remove some of the "bland" spellcard which have nothing interesting in themselves.

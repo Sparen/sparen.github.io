@@ -1,0 +1,25 @@
+LOCAA 8 Judgment - Goodz (or Badz)
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 14/20
+Character Relevance & Creativity: 3/20
+Aesthetics: 3/20
+This is a change since last time - danmaku matters more. Because in my opinion it should.
+*All patterns are given a score out of 10. Then the average of that is multiplied by 1.4 to get the score out of 14.
+~~~
+Difficulty: Normal.
+
+Nonspell 1: Straightforward and fun. 7.25/10.
+Spell 1: Also pretty straightforward. I don't really see the point of having the round bullets curve - they appear low enough on the screen as it is, and wonky trajectories + spawning close to the player tends to be a bad/unfair combination. Be careful. 6.25/10.
+Nonspell 2: Really funky bullet formations. Giving the player the option to dodge through the white bullets or around them is a great design choice. Good. 7.5/10.
+Spell 2: Really weird and hectic spell. Bullets are a tad fast considering their walling nature. The bullets that spawn lasers could maybe be a bit more transparent - I panic bombed the first time one of them almost "hit" me. Be careful with randomness - I got trapped between lasers and a wall of small bullets with no real way out. 5/10.
+Nonspell 3: Straightforward and fun again. 7/10.
+Spell 3: Another rather odd spellcard. I think this one honestly ends way too soon, especially if the bosses stack on top of each other. I didn't really get to see much of it. Pretty fair and straightforward, it seems. 6.5/10.
+
+Danmaku Quality: (7.25+6.25+7.5+5+7+6.5)/6 = 6.58333*1.4 = 9.2
+
+As for character relevance and creativity, the patterns are both appropriate and creative. No real objections from me here. 3/3.
+
+Aesthetically, this script is very good. It embodies the PC-98 style perfectly. 3/3.
+
+Total score: 9.2+3+3 = 	15.2/20

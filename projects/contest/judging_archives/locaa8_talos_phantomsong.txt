@@ -1,0 +1,50 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : PhantomSong
+Script :  Pure Judgement (Shiki Eiki)
+Player : Reimu by Mr. Blue
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+Solid non-spell. Feel like something eiki would use. Aim bullets just make it fresh. [8/10]
+
+Crime and Punishment "The First Murder"
+I like how the fireballs move. Their angular velocity is nifty. The knives are ok. The 3-ways lasers are there to show that this is Eiki fight, and the dodge after that is good,too. [12.5/15]
+
+Non-spell 2 :
+Pretty fun pattern. A little bit easier than 1st non-spell. Not much variety though considering it uses the same pattern as 1st non-spell, just split it into 2 phases. [7.5/10]
+
+Judgement "Burden of Proof"
+This is quite hard, but I had a grasp of it on my 2nd try. The walls are the real threat but at least they have an actual pattern. The bullets from portal and curvy bullets from Eiki are sure fun to dodge! [13/15]
+
+Reflection "Judgemental Apologetics"
+This one is somewhat tricky. The bubbles tend to wall me (with their angular velocity) than it should. The 3-ways lasers stay on the screen a bit too long. Sometimes I get stuck at the left or right of the screen and I can't shoot Eiki. [12/15]
+
+Danmaku Score = (15/65)*(8+12.5+7.5+13+12) = 12.23
+ 
+-Visual- (2 point)
+Decent effect and background. Not much else though [1/2]
+ 
+-Music- (1 point)
+I don't know the name of this music. It works well, I guess? [0.75/1]
+ 
+-Difficulty- (1 point)
+Pretty fair and balance. I quite enjoy this script. [0.75/1]
+ 
+-Others- (1 point)
+Dialogue and a package is always welcome ~ . [0.5/1]
+
+ 
+Total Score : 12.23+1+0.75+0.75+0.5 = 15.23

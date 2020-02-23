@@ -1,0 +1,60 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Awalys
+Script :  Sweet Dreams: PURIFIED (Doremy)
+Player : Sanae Kochiya Awalys
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+The bullets speed is surprisingly fast. Other than that it's an ok non-spell. [6.5/10]
+ 
+Dream Sign "Everlasting, Looping Nightmare" :
+Whoops they're spawned from the back. Freak me out on my 1st try. xD but beside that it's a pretty good doremy spellcard. [12/15]
+ 
+Non-spell 2 :
+This is a bit more fair than non-spell 1. The fireballs are a nice touch.[7.5/10]
+ 
+Dream Express "Dream Station Derailmen"
+Very pretty but also very hard and cheap. There's not enough time between each rainbow wave. (the walls are too wide.) Not to mention I've to dodge the fireballs. It would be a lot better if you slow everything down by a bit. [9/15]
+ 
+Non-spell 3 :
+Nothing special but it has the feel of Doremy's non-spell. I would suggest don't use additive-blend bullets too much since they tend to make bullets blend with the background. (or blend each other bullets) [7/10]
+ 
+Lovecraft "The Nightmare Cthulu Had"
+A very cool looking spell. You made it look like Cthulu and it really look like that. The problem is the difficulty because in all of every spellcard in this script, this one is the hardest. Bullets' speed is way too high considering there are many of bullets on screen already, thus making this spellcard impossible to capture. (at least for me) [11/15]
+ 
+Flashback "A Dream During One's Final Moment"
+Somehow I like this. This is the most fair spellcard in the script. The pattern in each layer is simple yet it works, fun to play. It's not something I would see Doremy use but it can be. The last phase is pretty brutal, though.[12.5/15]
+ 
+Danmaku Score =  (15/90)*(6.5+12+7.5+9+7+11+12.5) = 10.92
+ 
+-Visual- (2 point)
+The stage background is very beautiful.
+The effect is good, too. They fit the doremy and this script well.
+[1.25/2]
+ 
+-Music- (1 point)
+Unfortunately the music is too loud and not fit the bullet hell game much. (considering the player need to concentrate to the danmaku, you shouldn't put the techno music here.)
+[0.25/1]
+ 
+-Difficulty- (1 point)
+If it's just hard then it's ok. But some patterns are cheap and tend to kill you on the very first second the spellcard start.
+[0.25/1]
+ 
+-Others- (1 point)
+The dialogue is ok. There's also a bomb system which is different from the vanilla touhou game, but it doesn't affect gameplay much.
+[0.5/1]
+ 
+Total Score : 10.92+1.25+0.25+0.25+0.5 = 13.17

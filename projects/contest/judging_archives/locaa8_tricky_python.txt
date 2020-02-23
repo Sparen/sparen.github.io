@@ -1,0 +1,30 @@
+LOCAA 8 Judgment - Python or Boa or some sort of snake
+
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 14/20
+Character Relevance & Creativity: 3/20
+Aesthetics: 3/20
+This is a change since last time - danmaku matters more. Because in my opinion it should.
+*All patterns are given a score out of 10. Then the average of that is multiplied by 1.4 to get the score out of 14.
+~~~
+Nonspell 1: A Raiko nonspell. Amazing. 6/10. 
+
+Spell 1: Quite the odd pattern to wrap my head around. I think the curvy lasers curve a bit too much or something - one element of this just feels off. Interesting. 6.5/10.
+
+Nonspell 2: The larger arrows have enough gaps to give the player the choice of dodging around them or through them - great. Pretty good. 7.5/10.
+
+Spell 2: Interesting idea. Those warning lasers are far more terrifying than the actual pattern. Fairly slow paced but still a reasonable challenge - good job. 8/10.
+
+Nonspell 3: Pretty good. I don't think the cyan bullets need to be quite THAT fast but I like how those arrow shapes unfold. 8/10.
+
+Spell 3: I think the purple music notes could be a taddd slower, but otherwise it's fine. 6.5/10.
+
+Attack 4: Weird bullet trajectories are weird. Pretty damn hard compared to everything else if you ask me, but yay for challenges. Fine. 7/10.
+
+Danmaku Quality: (6 + 6.5 + 7.5 + 8 + 8 + 6.5 + 7)/7 = 7.07*1.4 = 9.9/14.
+ 
+As for character relevance, these attacks feel quite Raiko. They're also quite creative. 2.5/3.
+ 
+Aesthetics: This script is fine aesthetically. Not super amazing, but quite pleasant. 2/3.
+ 
+Final Score: 9.9 + 2.5 + 2 = 14.4

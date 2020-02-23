@@ -1,0 +1,38 @@
+Score Sheet - Sagaci
+
+All nonspells, spells, and stages will be ranked out of 20 points each
+All scores will be averaged together out of a possible 20 points. 
+Up to 2 bonus points may be added for aesthetic.
+Up to 2 bonus points may be added for any other reason.
+Points may be subtracted from individual scores for possible bugs/glitches/similarities to existing media.
+Final score will be rounded to one decimal place.
+
+Script: Dimentio
+Coded by: Conarnar....arararararararara
+Difficulty Scored: Default
+
+(note: I really enjoyed the character customization...odd choices but I still like it.)
+(extra note: I have extensive prior knowledge for this)
+
+Nonspell 1
+17/20 - This first nonspell is fairly basic, just dodge the spikes. Nice use of geometric shapes, reminds me of Utsuho.
+
+Spell 1: Trickery "Magic Swap"
+17/20 - FLEEEEEEEEEEEEEP. Wasn't that more Mimi's thing though? Its basically a star swarm with some extra flips thrown in. Very fitting actually, now that I think about it.
+
+Nonspell 2
+17/20 - A little too crowded for my liking, but that's a clever callback. I know the "real" Dimentio is obvious, but if you're staring at your player character a lot like me it can be kinda hard to tell which ones the real one. Unless you're using a homing attack like I did :V
+
+Spell 2: Trickery "Magic Maze"
+17/20 - Whoaaaaaaaaa calm down bullets. This spell is kinda intimidating when you first go through it. Had to play through it twice to get the full feel for it, that first phase walled me a LOT. It's fun though!
+
+Spell 3: Game Over "Destruction of D" ~Survival~
+20/20 - Okay that's another bonus point for making me laugh so hard I snorted. I loved this survival, each phase goes on just long enough and each phase is an appropriate difficulty jump. The last phase can be a liiiittle tricky since knives have weird hitboxes, but that's a small nitpick. This spell in PARTICULAR looked amazing as well.
+
+CORE TOTAL: 88/100
+AESTHETIC BONUS: 2/2
+ETC BONUS: 2/2
+
+FINAL SCORE: 18.4/20
+
+Final Comments: While I wish you had incorporated Dimentio's flower-like energy shots, this definitely felt like a fitting fight! A seamless transition in my opinion, great sound and great entertainment. You even put in some replay value with that character selection, that's something you don't see often in a script! Definitely one of my favorites.

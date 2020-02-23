@@ -1,0 +1,61 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Kirbio
+Script :  Scarlet Devil Chaos (Flandre Scarlet)
+Player : Sakuya & Marisa Team by Kirbio?
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+I actually like this. The constant circle bullet combine with the acceleration fireballs is pretty satisfying to dodge. [8.5/10]
+
+Forbidden Barrage "Dungeon of Misery"
+Nice way to use the familiars. I especially like the exploding at the end. One thing that is subpar is the randomness of line bullets that familiars spawn. [12/15]
+
+Non-spell 2 :
+Bullets' speed is a bit slower than the 1st non-spell. It's still good though. The extra wave is ok but really easy to dodge. [8/10]
+
+Purgatory "Flame of Gehenna"
+Pretty good in term of misdirecting pattern. Look fair and fun. Although, I can't help but it feel a bit empty with only the circle bullet (aka Junko pattern) that Flandre shoot.
+The pacing (less delay between each wave of bullets as time goes on) is nice, though. [12.5/15]
+
+Non-spell 3 :
+Solid non-spell. Don't really have much to say.[8/10]
+
+Destructive Fate "The Tower of Major Arcana"
+I've fun while dodging bullets from left and right. The extra familiars from Flandre did a good job,too. It's hardest spellcard in this script but it's also the best. :) [13.5/15]
+
+Game of Life "Russian Roulette"
+This spellcard...is obviously from a well-known fangame (Fantastic Danmaku Festival). It's too obvious and doesn't have any creativity in it, so no point for that. It's fun I can't denied, and I like how can I dodge inside the familiars ring. If we talk about creativity, it would be this part. xD [10.5/15]
+
+"Chaos Universe"
+It's really a chaos.The effects are also superb. The patterns are mostly good and well designed, but it's still not the best.
+Some minor thing I noticed. The pattern on the 2nd wave is the mostly the same but bullet colors are different. It's a nice detail. Too bad before the 2nd wave start the pattern would likely end already. [13/15]
+ 
+Danmaku Score =  (15/105)*(8.5+12+8+12.5+8+13.5+10.5+13) = 12.29
+ 
+-Visual- (2 point)
+The effects are gorgeous as well as stage background and spell background. I absolutely have no complaints. Great work so far.
+[1.75/2]
+ 
+-Music- (1 point)
+It fits the flandre character for sure. [0.75/1]
+ 
+-Difficulty- (1 point)
+It's very well balanced. Cheapshot-free. Nice work. [0.75/1]
+ 
+-Others- (1 point)
+The players are neat. The dialogue is well-written. The ending is perfect. I like how you ask the player name so the replay can be saved properly. It's a smart move. [1/1]
+ 
+Total Score : 12.29+1.75+0.75+0.75+1 = 16.54

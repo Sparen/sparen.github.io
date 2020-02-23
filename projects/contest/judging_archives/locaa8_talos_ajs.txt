@@ -1,0 +1,54 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : AJS
+Script :  Guardian of the Mastermind (Ran Yakumo)
+Player : Reimu by AJS
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+Nice spawning positions for the bullets. The danmaku is simple but not that simple and has something special in it. The bullets have reasonable speed and didn't form any walls.
+I like how the danmaku change each time I play. It looks like there're a lot of set patterns that Ran randomly picks from, or maybe there isn't any fixed pattern, but the danmaku is generated overtime instead? Whatever the logic behind that doesn't matter because the result of it is already good. xD [9/10]
+
+Boundary Sign "Sealing Circle" :
+It's a good mini-stream spellcard and has a nice danmaku design, but everything is a bit too slow for my taste. (playing on hard, lunatic is nearly the same but a lot more dense.) Personally, the stream spellcard should be fast and dramatic. This one doesn't live up to my expectation. Another problem is probably the overuse of additive-blend bullets (make pattern unnecessary harder to dodge), but visual-wise I can imagine the danmaku would be ugly without it. [12/15]
+
+Non-spell 2 :
+It's pretty. I don't really know that rainbow color fit Ran character or not. Danmaku-wise, it's quite fun to dodge, but can be boring as time goes on. (only by a bit)
+It also remind me of Kaguya's spellcard (the script that you made around 4 years ago). Her 2nd spellcard iirc xD [7.5/10]
+
+Kitsune Wrath "Nine tails of Wisdom" :
+The final spellcard which look really like a final spellcard. You did a good job on capturing this feeling. The danmaku is very good and play well together. I like the yellow pattern and blue pattern the most. The rest are good but not outstanding. All in all, a great way to end the script, feel very satisfying. [13.5/15]
+ 
+Danmaku Score =  (15/50)*(9+12+7.5+13.5) = 12.6
+ 
+-Visual- (2 point)
+Impressive work as always. The stage background is simply beautiful. Overall, I don't really have any complaints on this part.
+[1.5/2]
+ 
+-Music- (1 point)
+The music is spectacular. It syncs well with the timing of each pattern (I bet this is on your purpose :D ). Nice job.
+[1/1]
+ 
+-Difficulty- (1 point)
+The difficulty is very balance, and feel very appropriate. Excellent work.
+[1/1]
+ 
+-Others- (1 point)
+There's not much thing to say on this part considering it's a small script, but the center screen and some kind of wide screen are neat. The player is ok and the all-star mechanic is not a bad choice.
+[0.5/1]
+ 
+Total Score : 12.6+1.5+1+1+0.5 = 16.6
+
+P.S. So I'm not the only one who make difficulty select at the stage script. xD

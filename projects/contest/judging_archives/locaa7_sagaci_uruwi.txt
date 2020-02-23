@@ -1,0 +1,67 @@
+Score Sheet - Sagaci
+ 
+All nonspells, spells, and stages will be ranked out of 20 points each.
+All scores will be averaged together out of a possible 20 points.
+Up to 2 bonus points may be added for aesthetic.
+Up to 2 bonus points may be added for other reasons.
+Points may be subtracted from individual scores for possible bugs/glitches/similarities to existing media.
+Final score will be rounded to one decimal place.
+ 
+Script: Touhou Shomagaku - Homura no Neko
+Coded by: Fluffy8x / Uruwi
+Difficulty Scored: Normal
+ 
+(note: you may want to put a note saying that you HAVE to use the version of Danmakufu included in your script - using my own base game cut off a lot of the window and made it virtually unplayable.)
+ 
+~ Stage ~
+8/20 - Okay before I get to the stage I need to talk about some overall problems with the script. The SFX are really off balanced. The shot sound overpowers literally every other noise during the entire script, and it got very grating very fast. Second, I tried playing this using every single shot type: MarisaA cannot bomb while she is focused. I don't know if that's intentional or not, but it's very irritating.
+ 
+Now when it comes to the stage, there is virtually no difference here across all of the difficulties. The ONLY thing I noticed was that enemies fire a bit faster, but that's all I could find.
+ 
+Onto the actual stage...first of all, those beginning enemies are extremely hard to see because of their color. I had to restart the stage about 4 times before I even noticed that it was an ENEMY firing at me and not nothing. The rest of the stage feels very similar to stage 6 from Subterranean Animism as well.
+-1 POINT FOR SIMILARITY TO EXISTING MEDIA - FINAL SCORE OF 7/20
+ 
+~ Midboss ~
+ 
+Nonspell 1
+4/20 - I don't really feel like Orin belongs in this script. I mean I know we never specified that the midboss couldn't be from Touhou (a fault on my behalf) but it still kinda feels like a given? Besides, in comparison to the rest of the nonspells, this one is kind of hectic. Isn't the midboss supposed to have easier spells than the boss? And again, across all the difficulties, there is virtually no difference during this nonspell.
+ 
+Spell 1: Torture "Soul Grinder"
+4/20 - I'm not really sure how to talk about this. I mean with most characters you can down her by the time the first lasers get past you. And once again, across all difficulties, there's virtually no difference other than how fast the fairies shoot at you.
+ 
+~ Boss ~
+ 
+Nonspell 2
+8/20 - Nothing really interesting honestly. It's just a simple nonspell that's fairly easy to dodge.
+ 
+Spell 2: Car Sign "Fire Cat's Claws"
+16/20 - Now THIS is a nice spell. While it's a bit simple to dodge, the effects are really good and the somewhat-randomness of those arrows gives it just enough difficulty. My only issues with it are that the health is too low and the randomness of the arrows can sometimes wall you.
+ 
+Nonspell 3
+8/20 - This is basically the first nonspell, but with the lasers spitting out amulets of 3 instead of 2. It's actually arguably easier than the first one.
+ 
+Spell 3: Fire Sign "Fire Elf Spear"
+14/20 - Since the spears home in on you, it turns into a streaming spell very quickly due to the trails of amulets the spears leave behind. Not bad though.
+ 
+Nonspell 4
+10/20 - I don't understand the lasers that Alicane is throwing at you. They have no pattern to them, sometimes they aim at you, sometimes not, sometimes they overlap, sometimes they never cross your path. Probably the best nonspell though.
+ 
+Spell 4: Link Shot "Return to Shooter"
+6/20 - If you stay at the bottom of the screen you only ever have to dodge like 3 bullets per wave. Too easy.
+ 
+Spell 5: "Meteor Strike" ~Survival~
+4/20 - Most of these "meteors" never come near you. You can barely move around during this whole sequence and never get hit. They're just too sparse to be interesting or difficult at all. Also you really should've picked a better timer countdown sound, I thought the Emergency Alert System was going off the first time I played this.
+ 
+Spell 6: "Phoenix Wing Flash"
+6/20 - I really don't like admitting this, but this is basically a rip-off of Remilia's last spell from that fangame Resurrection of Heaven's Liquor. I mean it's not BAD per-se, but the similarities are a bit too close for comfort.
+-1 POINT FOR SIMILARITY TO EXISTING MEDIA - FINAL SCORE OF 5/20
+ 
+CORE TOTAL: 86/220
+AESTHETIC BONUS: 0/2
+ETC BONUS: 0/2
+ 
+-1 POINT FOR BUGGY CHARACTER
+ 
+FINAL SCORE: 7.7/20
+ 
+Final Comments: Other than those two spells, I wasn't a fan of this script. And aside from the central "fire" theme, this really had little to do with Alicane Swiftarrow from the battles that I watched.

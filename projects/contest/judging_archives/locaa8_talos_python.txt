@@ -1,0 +1,59 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Python
+Script :  Purified Taiko Drum (Raiko)
+Player : Junko A and Junko B by Python
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+
+Non-spell 1 :
+Typical Raiko-nonspell, now with 3 spawning points! I would say it plays well. Fun dodging [8.5/10]
+
+Simple Drums "Thunderstorm Bongos" :
+The curvy lasers have a good angular velocity. I didn't think they feel cheap or anything. The bubbles sure are nice. The sound effect is cute. I like it. [13/15]
+
+Non-spell 2 :
+Compare to non-spell 1 this is a bit harder, and even more so if Raiko decide to move downward. (same problem with Doremy non-spell) The danmaku is fine I think [7.5/10]
+
+Loud Card "Pure Speaker's Untainted Sonic Boom" :
+The danmaku for sonic boom(a bunch of V-shape bullets) look really cool as hell. The dodge is ok. However, I think there should be more variety (like the extra danmaku before Raiko shoot sonic boom again) right now it's a bit repetitive (misdirect - shoot - misdirect - shoot - etc), but as I said I love the look of danmaku (the effects are a bit overkill btw). [12/15]
+
+Non-spell 3 :
+The first phase is nice with the use of color and bullet speed. The second phase has its flaw due to the super high speed of aqua bullets. They often kill me while I'm still dodging the left over bullets from the first phase, but after that it's ok.[7.5/10]
+
+Major Key "Heaven's Rock" :
+The aimed bullets are easy to misdirect. The real threat are note bullets. They usually come to me with unpredictable speed (because of the acceleration), and the blue note sometimes can form the wall. (but can be avoid if I've prepared for it) Overall, quite a good design spell, but seem like the note bullets are already hard to dodge already that aimed bullets didn't make this spellcard harder at all.[12.5/15]
+
+"The Empty Sounds of the Bell" :
+I'm not sure how to dodge this one. It's pretty hard to predict the movement of note bullets, especially with this angular velocity. It has a nice difficulty curve though, and feel like a final spellcard, but it's not fun as it should be. [11/15]
+ 
+Danmaku Score = (15/90)*(8.5+13+7.5+12+7.5+12.5+11) = 12
+ 
+-Visual- (2 point)
+The stage background and spell background are good. The effects are nice. Overall, it's a neat script in term of visual and aesthetic.
+[1.25/2]
+
+-Music- (1 point)
+It's quite a catchy music you have here. It works well with the humor in the dialogue between Junko and Raiko I think.
+[1/1]
+ 
+-Difficulty- (1 point)
+It's somewhat hard. Multi-difficulty would be welcome. Although, it's not that there's a cheapshot or such so it isn't really a problem.
+[0.5/1]
+ 
+-Others- (1 point)
+Dialogue is funny. The players are good (both type A and type B but I love type A 's bomb, so epic xD). The package is well polished.
+[0.75/1]
+ 
+Total Score : 12+1.25+1+0.5+0.75 = 15.5

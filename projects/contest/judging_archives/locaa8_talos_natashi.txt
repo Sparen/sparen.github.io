@@ -1,0 +1,65 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Natashi
+Script :  Pure Eternal Flame (Mokou)
+Player : Reimu
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+Nice non-spell. A bit random,though (I know it isn't random, but the way bullets move make it random.) [7.5/10]
+ 
+Pheonix Sign "Shaping Fire Into Immortality"
+Pheonix not Phoenix?
+Well, doesn't like it matter xD Anyway, this spell is pretty cool. You nailed the phoenix-shape bullets. The problem is the danmaku. Sometimes, Mokou moves too low to the screen, making the Phoenix-shape bullets impossible to dodge because there aren't any gaps (unless I run to the left or right side of the screen,but it's probably too late by then) [11.5/15]
+ 
+Non-spell 2 :
+A bit harder than non-spell 1 but it's pretty good. I like fireballs [8/10]
+ 
+Fire Sign "Inferno Barrier"
+I like how you did with fireballs. They look really like a barrier. Although, I don't think super-fast wave of amulets is needed here.
+[12.5/15]
+ 
+Non-spell 3 :
+It's a weird non-spell. The additive-blend knives don't fit well with the amulets, and they often come in a weird angle. Mokou also move way too much. If only Reimu has the homing shot... [6/10]
+ 
+Grudge Sign "Curse of the Unforgiving Shrine"
+Amulet everywhere ~
+I feel uncomfortable while playing this spellcard. The amulet come from everywhere and there is a little time to prepare. (it would be a lot better if they start with 0 speed and a bit of acceleration.) [11/15]
+ 
+"Iwasaka's Neverending Curse"
+There're some questionable effect here. The danmaku is nothing special, just a re-skin of her last spell. The last phase look nice,though. [10/15]
+ 
+God Sign "Kagu-Tsuchi's Inextinguishable Inferno Hell"
+I got cheapshot at the start of spellcard.
+It's a great pattern. I like the rainbow fireballs that you gradually spawn them. The simple circle ring is pretty fun to dodge. There is also a simple aim bullets which always force me to move. Yeah, it's a great pattern despite the cheapshot and impossible danmaku at the last 5 seconds. [13/15]
+ 
+Danmaku Score = (15/105)*(7.5+11.5+8+12.5+6+11+10+13) = 11.36
+ 
+-Visual- (2 point)
+There're some effect that I've never seen before. Pretty good work. :)
+[1.25/2]
+ 
+-Music- (1 point)
+It's original. What more can I say?
+[0.75/1]
+ 
+-Difficulty- (1 point)
+The Reimu's speed is too high (especially focused speed), which make this script unnecessary hard. Otherwise, every pattern feel like they're the same difficulty. [0.5/1]
+ 
+-Others- (1 point)
+You made an unfinished HD script. Well, it's unfinished but at least you made something. [0.5/1]
+ 
+ 
+Total Score : 11.36+1.25+0.75+0.5+0.5 = 14.36

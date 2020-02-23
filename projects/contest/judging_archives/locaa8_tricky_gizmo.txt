@@ -1,0 +1,30 @@
+LOCAA 8 Judgment - Gizmo the Wyvern???
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 14/20
+Character Relevance & Creativity: 3/20
+Aesthetics: 3/20
+This is a change since last time - danmaku matters more. Because in my opinion it should.
+*All patterns are given a score out of 10. Then the average of that is multiplied by 1.4 to get the score out of 14.
+~~~
+Nonspell 1: It's a Ringo nonspell. The ring at the end is very well placed and makes its noticably different to dodge. 7.25/10.
+ 
+Spell 1: A bit dense, but it's slow to compensate. Aimed bullets stop you from just sitting in one spot doing nothing. Good attack. 7.25/10.
+ 
+Nonspell 2: Would really benefit from making the cyan bullets render above the other ones - I died the first time because I simply didn't notice them until they hit me. A good variation of Ringo's nonspells regardless. Even a louder shot sound effect would help. Would be higher if not for that :P. 6.5/10.
+ 
+Spell 2: Macrododging fun. Dango bullets are neat. Feels a bit slow and would probably still be fair if it were faster paced. Overall, a fine attack. 7/10.
+
+Nonspell 3: Ringo nonspell again. With more rings at the end. I think the rings would be much easier to dodge if they weren't ADD rendered, but I suppose that's the point. You need fast reflexes for this one. 7/10.
+
+Spell 3: The small bullets from the left and right are quite fast but doable. The problem is that the spread of bullets aimed at you doesn't actually LOOK like a spread of bullets until it's too late to dodge them. Visually it's cool, but gameplay wise it's rather cheap. 5/10.
+
+Spell 4: Not really a lot to this survival card. Be careful with randomness - near the end it got so dense that being unlucky led to a bunch of random walls. It's cool how you have bullets both going outward and inward at the last 10 seconds or so, but it's still another generic ring-around-the-Ringo type attack. Eh. 5.5/10.
+ 
+Danmaku Quality: (7.25+7.25+6.5+7+7+5+5.5)/7= 6.5*1.4 = 9.1/14.
+ 
+As for character relevance, I'd say all of these attacks suit her. You were pretty creative with these attacks until the survival card. 2.75/3.
+ 
+Aesthetics: Graphically the script is fine. A bit too many additively rendered bullets on a background with some bright spots for my tastes. 2/3.
+ 
+Final Score: 13.85

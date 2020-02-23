@@ -1,0 +1,45 @@
+Score Sheet - Sagaci
+
+All nonspells, spells, and stages will be ranked out of 20 points each.
+Up to 2 bonus points may be added for aesthetic.
+Up to 2 bonus points may be added for additional reasons.
+Points may be subtracted from individual scores for possible bugs/glitches/similarities to existing media.
+Final score will be rounded to one decimal place.
+
+Script: Crocastle Road (Crocodibli)
+Coded by: Badz
+Difficulty Scored: Normal
+
+(note: the music and sound effects in this script are kinda soft in comparison to the sound of the shot type. No points added or deducted, but it did slightly hurt my enjoyment of the script)
+
+Stage
+8/20 - First of all, I will say that I really like how this script looks. Bonus point right off the bat. The pixelated effects kinda remind me of PC-98 Touhou. This does become a problem during the actual fight however, but overall I liked it more than I didn't. With that out of the way... I'm kinda conflicted about this stage. My first play-through of it was extremely annoying: the screen was getting crowded with bullets and those weird homing bee things (seriously they look like bees to me) caught me off guard COMPLETELY. But once I knew what was coming my enjoyment improved. However I did notice that I ended up sticking to the bottom part of the screen for most of the stage  and didn't stray very far.
+
+Nonspell 1
+8/20 - This is where the pixelated effects kinda work against this script. I used SA Reimu for this fight, and it's VERY difficult to see the bullets while you're firing. Also, some of the bullets don't vanish when the spell starts, so I got really confused which bullets were safe and which were dangerous. It's also impossible to clear this nonspell. The timer always runs out. I can kinda see what you were trying to do (I think you were trying to put an exact time on the nonspell), but I don't like it. Other than that though it's actually kinda fun to dodge if not a bit hectic.
+
+Spell 1: Transformation "Garbage snake"
+6/20 - This spell is kind of crazy. There's a lot going on and I pretty reliably die at the beginning of the spell. It also just doesn't really "feel" like a spell card, it feels more like a fancy nonspell.
+
+Nonspell 2
+6/20 - Again, the pixelated bullets get very confusing, especially when you switch to pellet danmaku. Sometimes they hurt me, sometimes they don't. Also, there really needs to be a bit clearer indication that Crocodibli is gonna ram into you; that small thin red circle around your character can get very hard to see.
+
+Spell 2: Blast sign "Explosion field"
+15/20 - I'm still not sure if this is me being lucky or very carefully planned danmaku, but I'm actually able to dodge most of these bullets. This is a pretty fun one to dodge, and honestly I wish it was a little bit longer.
+
+Nonspell 3
+6/20 - The lingering bullets are kinda annoying. It's also another nonspell that you really can't clear without having to bomb at least once. That with all the back and forth moving that you have to do to keep hitting the boss is just...not fun.
+
+Spell 3: Floating sign "Alternating levitation"
+14/20 - This is actually a fairly interesting gimmick. It was a little confusing to start out with, but I got the hang of it pretty quickly. I wish there was an indicator when the barriers appear and when they vanish though, because it's really hard for me to tell when it happens. But overall I like this. While it's ALMOST too similar to the original, the original is kinda bare-bones as it is, so no points subtracted.
+
+Spell 4: "Cheater's Resurrection"
+14/20 - I think its funny that Crocodibli pulls out and brings a new health bar with every "resurrection", that got a few giggles out of me. It's a little lackluster but nothing's really WRONG with it. Maybe make it just a touch less dense though.
+
+CORE TOTAL: 77/160
+AESTHETIC BONUS: 2/2
+ETC BONUS: 0/2
+
+FINAL SCORE: 9.8/20
+
+Final Comments: After watching the original fight, I think there were a few missed opportunities here. Those giant robot things you encounter through the castle might've made for a nice single-spell midboss or something. Also, I'm kinda disappointed that there was no indication of the reversed controls or anything, since that kinda makes up the second half of your encounter with him. It's alright, but nothing stellar.

@@ -1,0 +1,30 @@
+LOCAA 8 Judgment - Awalys
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 14/20
+Character Relevance & Creativity: 3/20
+Aesthetics: 3/20
+This is a change since last time - danmaku matters more. Because in my opinion it should.
+*All patterns are given a score out of 10. Then the average of that is multiplied by 1.4 to get the score out of 14.
+~~~
+Nonspell 1: Fine. Boss movement seems to vary wildly and gets a bit annoying. 6/10.
+
+Spell 1: The player doesn't really seem to be given much of a chance to get in or out of the spiral. The bullets just keep collapsing inward and eventually form a solid wall if you don't get out IMMEDIATELY. Then there's additive bullets for some reason, which just make this pattern even harder to read. Can't say I like this very much. 3/10.
+
+Nonspell 2: A mess of ADD rendered bullets and a lot of them are ridiculously slow and clog up the screen. 3/10.
+
+Spell 2: Pretty interesting. Besides me barely dodging the first wide wall of bullets, I like the idea. The pattern the player has to dodge through is a bit annoying to navigate quickly, but it's not ridiculously unfair. 6/10.
+
+Nonspell 3: Same complaints as the second nonspell but the bullets linger a lot less. Fine by comparison. 5/10.
+
+Spell 3: Funky! I think it's too hard, but the pattern idea itself is very weird. Doremy is also weird, so it fits her. 6/10.
+
+Spell 4: Thematically pretty cool. I don't like how the explosion effect that signifies a next wave obscures the rainbow bullets, though. The pattern is fine. Does the card actually get brighter as health goes down? I don't know how I feel about that. The pattern itself is fine at the beginning but gets a bit plain very quickly. Overall, fine. 6/10.
+ 
+Danmaku Quality: (6 + 3	+ 3 + 6 + 5 + 6 + 6)/7 = 5*1.4 = 7/14.
+ 
+As for character relevance, some attacks are certainly spirally enough to be Doremy. There's also some fairly creative things. 2/3.
+ 
+Aesthetics: All-around good. Except for the abuse of glowy bullets. 2/3.
+ 
+Final Score: 9.25 + 2.5 + 2.5 = 11

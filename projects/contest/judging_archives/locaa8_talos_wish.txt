@@ -1,0 +1,61 @@
+LOCAA Contest #8 - Pure Gensokyo!
+Contestant : Wish 
+Script :  Resurrection of Forgotten Flame (Mokou)
+Player : Marisa by Wish (So obvious xD)
+Judged by TalosMistake
+ 
+My Judging Criteria
+Danmaku - 15 points
+Visual - 2 points
+Music & Difficulty - 1 point each
+Others - 1 point
+ 
+Important Note
+English is not my first language. If I make any unclear points in this judging sheet, feel free to PM to me via MoTK Forum.
+ 
+<----------------------------------------------------------------------------------------------------------------->
+ 
+-Danmaku- (15 point)
+ 
+Non-spell 1 :
+The spirals are so easy to dodge, and the slash wave at the end doesn't do something interesting other than spawning more bullets. I believe if you combine this pattern together, like firing spiral while doing slash wave, the result would be more interesting pattern, but right now it's dull. [5.5/10]
+
+Eternity 'Ouroboro's Curse"
+Nothing telling me that I need to go to the center or else I will die. Yep, I died :| on my first try.
+The danmaku is bland, just random spawning bullet that aim to the center, and some aimed bullets from Mokou didn't help. I honestly don't know how to improve this one, but I still think you can do something interesting from the familiar asides from random firing bullets. [8/15]
+
+Non-spell 2 :
+Again, the pink wave and blue wave don't work well together. By the times the blue wave of amulets come there is no pink amulet left. The fireballs at the end are just there and do nothing to make pattern more interesting. [6/10]
+ 
+Phoenix 'Suzaku's Feather'
+Those feathers have no hitbox, right? Otherwise, it violates the rules.
+About the pattern, it is not good. Basically, the danmaku from aimed feathers tend to force the player to move to the very left or right side of the screen, after that Mokou will unleash the wave of feathers. This is supposed to be the time for the player to actually get to shoot Mokou, but it's not. Why? because there's not enough time for the player to move back and shoot. (and Marisa doesn't use homing shot which make it worse.) This make the spell become pure grind and often end with bomb spammings. [7/15]
+
+Non-spell 3 :
+AKA best non-spell in the script. It's still not that good but not bad either. At least it has some fun in it.[6.5/10]
+
+Occult Fire 'Phoenix's Charge Explosion'
+This spell is very...unintuitive. It takes me 4 tries to realize that I'm supposed to touch the purple rings (before they disappear) to fill the occult meter, and even though I knew that it still take me an age to beat the spellcard. The danmaku is simply not fun. The phoenix hitbox is too big and you know what?...it can kill Marisa during her bomb state!
+I'm sorry but this is bad. The idea behind this is fresh but it need a lot of work and tweaking before it can become a decent spellcard.
+[2.5/15]
+
+'Fujiwara-Hieda Arcanum'
+Not bad for a final spellcard. Akyu has a pretty danmaku (even though it's just a stream) What disappoint me is Mokou's because they're just fireballs everywhere. The lifebar is misleading because I can still shoot Akyu to reduce the life. [8.5/15]
+
+Danmaku Score = (15/90)*(5.5+8+6+7+6.5+2.5+8.5) = 7.33
+ 
+-Visual- (2 point)
+Not much interesting effect. Some of them are a bit uninspired. The background also leave something to be desired.
+[0.5/2]
+ 
+-Music- (1 point)
+This suppose to be free score and you did well with it. [0.75/1]
+ 
+-Difficulty- (1 point)
+The difficulty is all over the place. Range from very easy (non-spell for the most part) to super hard and cheap. (I'm looking at Eternity 'Ouroboro's Curse" and Occult Fire 'Phoenix's Charge Explosion'.) Overall, could use a lot of more work. [0.25/1]
+ 
+-Others- (1 point)
+It's a custom game ~ . I found no critical bug so far so that's good. The dialogue is cute. I like it.
+[0.5/1]
+ 
+Total Score : 7.33+0.5+0.75+0.25+0.5 = 9.33

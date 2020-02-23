@@ -1,0 +1,24 @@
+LOCAA 8 Judgment - Alzack
+ 
+All judgments by me will follow the following rubric:
+Danmaku Quality*: 14/20
+Character Relevance & Creativity: 3/20
+Aesthetics: 3/20
+This is a change since last time - danmaku matters more. Because in my opinion it should.
+*All patterns are given a score out of 10. Then the average of that is multiplied by 1.4 to get the score out of 14.
+~~~
+Nonspell 1: Pretty spammy. Also fairly fun, though. Not much to look at but not too bad to play. 5.5/10.
+
+Spell 1: I think the bullets Murasa shoot are both too fast and too unpredictable to be fair. It's like the pattern begins, I'm forced towards Murasa, and she IMMEDIATELY fires fast aimed-ish bullets and a slightly slower ring while I'm basically on top of her. I don't like this pattern much. Good idea, but needs better execution. 4/10.
+
+Nonspell 2: Be careful with randomness. I managed to not need to move at all during this, but some of those random clumps of bullets seemed very unforgiving to be in. Not all that fun, and can potentially be unfair. 4/10.
+
+Spell 2: Pretty good. Considering adding a delay to the bullets the anchors spawn when hitting the bottom - I randomly died because I didn't know it would happen. 7/10.
+ 
+Danmaku Quality: (5.5 + 4 + 4 + 7)/4 = 5.125*1.4 = 7.175/14.
+ 
+As for character relevance, I suppose they suit Murasa except for the second nonspell. The spellcards are certainly creative but the nonspells could use some rethinking.  1.5/3.
+ 
+Aesthetics: The script isn't really amazing to look at but it's not bad either. 1.5/3.
+ 
+Final Score: 7.175 + 1.5 + 1.5 = 10.175
