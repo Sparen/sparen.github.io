@@ -28,8 +28,6 @@
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
-          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
-          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
           <li><a href="./ph3style.html" title="ph3 Style Guidelines">ph3 Style Guidelines</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
           <li><a href="./docs.html">Function List</a></li>
@@ -39,6 +37,7 @@
           <li><a href="./docs_system.html">Private Script Fxns</a></li>
           <li><a href="./docs_event.html">Danmakufu Events</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+	  <li><a href="./docs_object.html#sub15">Enemy Obj Fxns</a></li>
         </ul>
       </div>
       <div id="pagecontentwrapper_tut">
@@ -245,7 +244,7 @@
 	      <p>Here we will only discuss building the stage enemy so it can be created in a Stage script. But keep in mind the role that stage enemies play when designing your stages.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I implement Stage Enemies?</h2>
 	      <p>There are a multitude of ways to implement stage enemies in Danmakufu, especially since there has, for the vast majority of ph3's existence, been no guide on how to do so and scripters have created a variety of methods. For this guide, I will use what I consider to be the most simple approach given what we already know and have reviewed (IE the method I use). If the method I describe here does not work well for you, by all means feel free to use another system or invent your own.</p>
-	      <p>But anyways, stage enemies. Stage enemies, unlike boss enemies, function as standard objects. There is no built-in event system for their life, and at the same time there is no crazy boss scene stuff to deal with. Just simple objects and methods as detailed in <a target="_blank" href="https://dmf.shrinemaiden.org/wiki/Enemy_Object_Functions">Enemy Object Functions (Danmakufu Wiki)</a>. Let's go over them.
+	      <p>But anyways, stage enemies. Stage enemies, unlike boss enemies, function as standard objects. There is no built-in event system for their life, and at the same time there is no crazy boss scene stuff to deal with. Just simple objects and methods as detailed in <a href="./docs_object.html#sub15">Enemy Object Functions</a>. Let's go over them.
 	      <p>First we have <span class="tooltip" onmouseover="getFxnDocs('ObjEnemy_Create', 'f_oecreate_01');"><code>ObjEnemy_Create()</code><span class="tooltiptext" id="f_oecreate_01"></span></span>, which, as you may expect, creates a new object and returns its object ID, just like with many of the other Obj****_Create functions we have seen already. The catch here is that we must use <code>OBJ_ENEMY</code> as the parameter to this function to notify Danmakufu that we are creating a non-boss enemy, unlike in a standard Single where we specify that it is a <code>OBJ_ENEMY_BOSS</code>. After this, we must, just like with a Single, <span class="tooltip" onmouseover="getFxnDocs('ObjEnemy_Regist', 'f_oeregist_01');"><code>ObjEnemy_Regist()</code><span class="tooltiptext" id="f_oeregist_01"></span></span> on the Object ID to activate the stage enemy. </p>
 	      <p>To initialize the life of a stage enemy, we must use <span class="tooltip" onmouseover="getFxnDocs('ObjEnemy_SetLife', 'f_oesl_01');"><code>ObjEnemy_SetLife()</code><span class="tooltiptext" id="f_oesl_01"></span></span>, which in Singles is rarely used. Of course, we can use <span class="tooltip" onmouseover="getFxnDocs('ObjEnemy_AddLife', 'f_oeal_01');"><code>ObjEnemy_AddLife()</code><span class="tooltiptext" id="f_oeal_01"></span></span> to increment or decrement the value without manually setting it.</p>
 	      <p><span class="tooltip" onmouseover="getFxnDocs('ObjEnemy_GetInfo', 'f_oegi_01');"><code>ObjEnemy_GetInfo()</code><span class="tooltiptext" id="f_oegi_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('ObjEnemy_SetDamageRate', 'f_oesdr_01');"><code>ObjEnemy_SetDamageRate()</code><span class="tooltiptext" id="f_oesdr_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('ObjEnemy_SetIntersectionCircleToShot', 'f_oesicts_01');"><code>ObjEnemy_SetIntersectionCircleToShot()</code><span class="tooltiptext" id="f_oesicts_01"></span></span>, and <span class="tooltip" onmouseover="getFxnDocs('ObjEnemy_SetIntersectionCircleToPlayer', 'f_oesictp_01');"><code>ObjEnemy_SetIntersectionCircleToPlayer()</code><span class="tooltiptext" id="f_oesictp_01"></span></span> work the same as with Boss Enemies.</p>

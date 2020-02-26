@@ -15,8 +15,6 @@
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
           <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
-          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Main_Page">Danmakufu Wiki</a></li>
-          <li><a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Functions_(ph3)">Ph3 Function List (DNH Wiki)</a></li>
           <li><a href="./ph3style.html" title="ph3 Style Guidelines">ph3 Style Guidelines</a></li>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
           <li><a href="./docs.html">Function List</a></li>
@@ -57,7 +55,7 @@
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: How do I use rand?</h2>
 	      <p>We've used rand before. You give rand two numbers - these are your bounds. <span class="tooltip" onmouseover="getFxnDocs('rand', 'f_rand_01');"><code>rand()</code><span class="tooltiptext" id="f_rand_01"></span></span> will generate a floating point number between these (it will, for practical purposes, never be an integer). Note that regardless of whether or not the bounds are included, it is nearly impossible to get exactly those bounds, so always use <span class="tooltip" onmouseover="getFxnDocs('rand', 'f_rand_02');"><code>rand()</code><span class="tooltiptext" id="f_rand_02"></span></span> assuming that the result will have a multitude of numbers after a decimal point.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What Functions Can I Use to Truncate Floats?</h2>
-	      <p>We will be creating a function called rand_int shortly, but before we do this, we must discuss the various built-in ways to truncate floating point numbers (anything with a decimal point) to integers in Touhou Danmakufu ph3. Our main reference will be <a target="_blank" href="http://dmf.shrinemaiden.org/wiki/Math_Functions" title="Math Functions for Touhou Danmakufu ph3">Math Functions</a>.</p>
+	      <p>We will be creating a function called rand_int shortly, but before we do this, we must discuss the various built-in ways to truncate floating point numbers (anything with a decimal point) to integers in Touhou Danmakufu ph3. Our main reference will be <a href="./docs_standard.html#sub1" title="Math Functions for Touhou Danmakufu ph3">Math Functions</a>.</p>
 	      <p>The first function we will look at is <span class="tooltip" onmouseover="getFxnDocs('round', 'f_round_01');"><code>round()</code><span class="tooltiptext" id="f_round_01"></span></span>. This function will round the decimal to the nearest integer using standard rules. Anything .5 or greater will round up, anything less than .5 will round down.</p>
 	      <pre class="prettyprint"><code>round(0.006);     //0
 round(3.500);     //4
