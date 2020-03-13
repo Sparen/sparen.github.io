@@ -181,7 +181,7 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   width: 100%;
 }
 
-.alert {
+.alert .alert_inner {
   background-color: #440000;
   color: white;
   font-size: 1.5rem;
