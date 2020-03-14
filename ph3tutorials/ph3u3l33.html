@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 33</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 33 - Creating Shotsheets. A guide on shotsheets and how to make them in Danmakufu ph3."
+      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Shot, Shotsheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </head>
+  <body onload="setupENG('Mar 13, 2020')">
+    <div id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div class="docsmenubar">
+        <ul>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a href="./ph3style.html" title="ph3 Style Guidelines">ph3 Style Guidelines</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
+          <li><a href="./docs.html">Function List</a></li>
+          <li><a href="./docs_standard.html">General Functions</a></li>
+          <li><a href="./docs_object.html">Object Functions</a></li>
+          <li><a href="./docs_system.html">Player Script Fxns</a></li>
+          <li><a href="./docs_system.html">Private Script Fxns</a></li>
+          <li><a href="./docs_event.html">Danmakufu Events</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+        </ul>
+      </div>
+      <div id="pagecontentwrapper_tut">
+          <div id="pagecontent_tut">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ph3u3l32a.html" title="Sparen's Danmakufu ph3 Tutorials - Libraries: Dialogue System">Extra Lesson 6</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>
+	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 33 - Creating Shotsheets</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What is the structure of a shotsheet?</a></li>
+	          <li><a href="#sub3">Part 3: How do I create bullet graphics?</a></li>
+	          <li><a href="#sub4">Part 4: What are the fields in a shotsheet?</a></li>
+	          <li><a href="#sub5">Part 5: How do I create animated bullets?</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
+	      <p>In this lesson, we will discuss the creation of shotsheets, including a discussion on the available fields and manipulations as well as notes on the graphics themselves. This is the logical sequel to <a href="./ph3u1l8.html">Lesson 8</a> and it is assumed that you have read this beforehand.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What is the structure of a shotsheet?</h2>
+	      <p>In this guide, we will utilize the Default_ShotData.txt located in the default_system of your copy of ph3.</p>
+	      <p>Shotsheets are one of the key components of a Danmaku game, as they define what bullets can be created with the built-in functions as well as their properties. Hitboxes, delay clouds, colors, and more are all defined here. Due to their special role, they have a different syntax from regular Danmakufu scripts - one without semicolons and with a more object-like form.</p>
+	      <p>All Shotsheets begin with <code>#UserShotData</code>. This, like the Danmakufu header, functions as an identifier that lets the Danmakufu engine know what it is loading.</p>
+	      <p>All shotsheets then need to know which image they are referencing. This is done via <code>shot_image</code>, which is set to a string with a relative path from the shotsheet to the image containing the actual shot graphics.</p>
+	      <p>In addition, shotsheets allow you to specify the rect on the shot image which will be used as the delay cloud for bullets that are created. This is set by the <code>delay_rect</code> property, which takes a tuple consisting of the left, top, right, and bottom pixels of the image to use for the delay cloud.</p>
+	      <p>As an example of these, see the start of the Default_ShotData.txt:</p>
+	      <pre class="prettyprint"><code>#UserShotData
+
+shot_image = "./img/Default_Shot.png"
+delay_rect = (209, 474, 240, 505)</code></pre>
+	      <p>It may be worth thinking about a Shotsheet as a form of object where you can set specific values or define specific subcomponents. In this case, the subcomponents are the shot data.</p>
+	      <p>Each Shot Data is noted within a <code>ShotData{}</code>. Each must have a unique numerical ID and rect in LTRB (left top right bottom) format. Other fields will be discussed in <a href="#sub4">Part 4</a>.</p>
+	      <p>Every shot to fire is defined using this <code>ShotData</code> format, and the IDs defined here can be used in the CreateShot function calls.</p>
+	      <p>Within the ShotData, note how there are no commas between the definitions for each field. In fact, line breaks aren't necessary - only white space is required. As an example, see the following excerpt from the SeitenTouji shotsheet:</p>
+	      <pre class="prettyprint"><code>ShotData{ id=1251 rect=(0,15,15,30) render=ALPHA delay_color= (255,64,64) }
+ShotData{ id=1252 rect=(15,15,30,30) render=ALPHA delay_color= (255,96,64) }
+ShotData{ id=1253 rect=(30,15,45,30) render=ALPHA delay_color= (255,128,64) }
+
+//...
+
+ShotData{ id=1501 render=ADD_ARGB angular_velocity = 2 delay_color= (59,248,80)
+    AnimationData{ 
+        animation_data=(4,0,150,15,165)
+        animation_data=(4,15,150,30,165)
+        animation_data=(4,30,150,45,165)
+        animation_data=(4,45,150,60,165)
+    }
+    collision = 4;
+}
+ShotData{ id=1502 render=ADD_ARGB angular_velocity = -2 delay_color= (59,248,80)
+    AnimationData{ 
+        animation_data=(4,0,165,15,180)
+        animation_data=(4,15,165,30,180)
+        animation_data=(4,30,165,45,180)
+        animation_data=(4,45,165,60,180)
+    }
+    collision = 4;
+}</code></pre>
+	      <p>Comments are still supported using the <code>//</code> syntax.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I create bullet graphics?</h2>
+	      <p>In this section, we will briefly describe creation of the shotsheet image, or rather, the pitfalls one might hit. </p>
+	      <p>The first thing to note is that of rotation. <em>Danmakufu ph3 requires an odd number of pixels in each rect in order to rotate about a point. Having an even number of pixels will cause rotating bullets to wobble</em>. For this reason, we recommend, for all bullets that you want to enable rotation for, to create them with odd dimensions. For example, 15x15 or 17x17. For consistency's sake, we actually recommend doing this for pretty much everything besides lasers and special bullets that will never rotate.</p>
+	      <p>The second thing to note is that of black backgrounds. In the old days of 0.12m and early version of ph3, ADD_ARGB was not an available blend type in shotsheets. This meant that if you wanted bullets that could be nicely ADD rendered, you needed bullets in the image with a black background. This caused two problems - one, if the specified rect aligned along the edge of the black background (IE where black meets transparent), ADD (RGB) blend types would result in ugly rendering artifacts. This required extra black buffer space around your rects. The second problem was that you often needed duplicate bullets if you wanted the same base graphic to be used for both ALPHA and ADD rendering types. <strong>The standard today is to use the SAME graphics and rects for ALPHA and ADD_ARGB blend types, with a transparent non-black background and just different bullet IDs between the blend types.</strong></p>
+	      <p>The third thing to note is that standardizing your shotsheet structure with padding and consistent bullet dimensions will make the creation of a shotsheet that much easier. If you have many bullets with the same dimensions, align them in your shotsheet so that they form a nice grid. In addition, always have a pixel of padding around each bullet graphic. This will prevent unfortunate accidents such as the ones noted above where the black background was not big enough.</p>
+	      <p>Finally, a note on default hitboxes. The bullet rect defines the default hitbox size for a bullet. The intersection radius is set to <code>max(min(width, height) / 3 - 3, 3)</code> by default. This means that <em>all bullets defined in a shotsheet will have a hitbox unless forcefully stated otherwise</em>. In addition, even small bullets will have a hitbox size of 3. Be careful when making very small bullets.</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: What are the fields in a shotsheet?</h2>
+	      <p>Now we will go over the fields that can be put into a ShotData definition, as well as their syntax. Note that these can be put in any order.</p>
+	      <p>We've already mentioned id and rect earlier. Each ShotData definition must have a unique ID. Note that you can skip numbers - just be aware that if you try and spawn a bullet with that unmapped ID as the graphic, a bullet with no graphic and no hitbox will be spawned (it will still have angle, speed, etc). As for rect, it's a tuple containing the left, top, right, and bottom coordinates on the image file (in pixels) to use for the bullet.</p>
+	      <p>Besides these, the most common field is <code>delay_color</code>, which takes a tuple consisting of three numbers - red, green, and blue components on a 0-255 scale.</p>
+	      <p>Now, we will cover the truly optional fields. You can use some of these or none of them - it's up to you. The most relevant up front is <code>render</code>. By default, all bullets are rendered ALPHA. You can set <code>render</code> to ADD or ADD_ARGB. The former defaults to RGB mode. As mentioned before, there is no longer any reason to use this, and ADD_ARGB should be used instead. As an aside, you can set <code>render</code> to ALPHA but this does absolutely nothing since it's already ALPHA by default.</p>
+	      <p>Next we have <code>angular_velocity</code>. This is the default angle rotation per frame of the bullet in degrees. <em>This value is entirely independent from the movement angular velocity.</em> This means you can have bullets that normally rotate in one direction, but moving with a rotation in the other. By default, angular velocity is set to 0.</p>
+	      <p>Next is <code>fixed_angle</code>. This takes a true/false value. Fixed angle bullets never rotate, even when the bullet goes in a different angle. There are performance benefits when using this, but it is really only applicable to point symmetric bullets such as circles as well as uniquely shaped bullets that require an orientation.</p>
+	      <p>Finally, <code>collision</code>. This specifies the hitbox radius and overrides the Danmakufu default of <code>max(min(width, height) / 3 - 3, 3)</code>. There are two ways to use this - if assigned a single number, it uses that number as the radius from the center of the rect. However, if assigned a tuple of <code>(r, x, y)</code>, it will use the x and y to center the hitbox - useful for bullets like arrows where the hitbox isn't at the center of the bullet.</p>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I create animated bullets?</h2>
+	      <p>We left out one field earlier - the <code>AnimationData</code> component. This is another definition within a ShotData and consists of multiple <code>animation_data</code> fields. Each of these is a tuple of five values. These are, in order, the number of frames, and then the left, top, right, and bottom of the rect. Each <code>animation_data</code> effectively states a part of the image to use and the number of frames to use before moving on to the next frame. By extension, there is no reason to use <code>rect</code> for animated bullets. See an example below (same as in Lesson 8):</p>
+	      <pre class="prettyprint linenums"><code>ShotData{ id=335 render=ALPHA  delay_color= (64,255,255) 
+	AnimationData{ 
+		animation_data=(4,0,448,32,488)
+		animation_data=(4,32,448,64,488)
+		animation_data=(4,64,448,96,488)
+		animation_data=(4,96,448,128,488)
+	}
+	collision = 5;
+}</code></pre>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li>Shotsheets use a different syntax from other Danmakufu scripts</li>
+	          <li>Every ShotData must have a unique ID, and missing IDs will result in graphic-less hitbox-less bullets</li>
+	          <li>ADD_ARGB should be used over ADD in shotsheets</li>
+	          <li>Animations consist of multiple animation frames with set intervals on a loop</li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>
+            </div>
+          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l32a.html" title="Sparen's Danmakufu ph3 Tutorials - Libraries: Dialogue System">Extra Lesson 6</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>
+      <footer id="footer">
+      </footer>
+    </div>
+    <script src="javascript/ph3tutorialcommon.js"></script>
+    <script src="javascript/GenericQuiz.js"></script>
+    <script src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="javascript/dnhdocs_standard.js"></script>
+    <script src="javascript/dnhdocs_object.js"></script>
+    <script src="javascript/dnhdocs_system.js"></script>
+    <script src="javascript/dnhdocs_event.js"></script>
+    <script src="javascript/dnhdocs.js"></script>
+  </body>
+</html>
