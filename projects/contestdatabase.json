@@ -530,7 +530,7 @@
             "host": "Adam",
             "judges": ["Trickysticks", "WishMakers", "Adam"],
             "numparticipants": 5,
-            "result": [[], [], []],
+            "result": [["Lusus"], ["ExPorygon/Ozzy840"], ["Foxigami"]],
             "participants": ["JDude", "Bagoum", "Lusus", "Foxigami", "ExPorygon/Ozzy840"]
         }
     ]

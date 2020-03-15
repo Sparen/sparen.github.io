@@ -1,0 +1,44 @@
+RaNGE 21 - ExPorygon
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Shape Theme: 4/20
+ 
+4 points will be dedicated to how your script uses shapes. Shoving shapes everywhere will not result in a good score, though - I'll also consider if it seems to fit the character. Mostly subjective but I'll give reasoning for why.
+======================================================================================================================
+
+Nonspell 1: Fast-paced and fun. Would probably be a bit more aesthetically pleasing if the angular velocity bullets would also rotate the other way at some point. 8/10.
+
+Spell 1: A bit more clarity on the transitioning (when the numbers are/aren't active) would make this easier - as it is I find it a real challenge. Not quite unfair, but pretty hard. The idea is good though, especially as an introduction to the concept. 7.5/10.
+ 
+Nonspell 2: I like this! Occasionally seems to not generate the last bullet in each "wave" from the side, making it easier, but I like the pattern still. 8.25/10.
+
+Spell 2: Excellent. Fair, fun, doesn't last forever.  8.5/10.
+ 
+Nonspell 3: I don't really like this one's position in the battle since it comes on the heels of another attack that's sort of like "dodge from all sides while streaming". Still fine though. 7.5/10.
+
+Spell 3: Due to the nature of the player shot and Porygon's movement this one can drag on for a while. Fine idea though (and I'm not sure if Nazrin's shot does enough damage to really shorten this). 6.75/10.
+
+Nonspell 4: I think the wiggly diamonds from the side come out really fast - maybe they could use some sort of advance warning. Otherwise it's good as usual. 7.5/10.
+
+Spell 4: Good way to finish the script. Definitely feels geometric, probably a tad easy compared to the rest? 8.25/10.
+
+Danmaku Score: 7.78/10 (scaled to 9.33/12)
+======================================================================================================================
+ 
+Aesthetically I think the script is pretty good. Nothing super fancy but the digital theme seems to work well. 3.25/4.
+======================================================================================================================
+ 
+The shape usage doesn't feel forced anywhere so I think it's pretty good. 3/4
+ 
+OVERALL SCORE 7.78 + 3.25 + 3 = 14.03/20

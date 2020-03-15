@@ -1,0 +1,72 @@
+RaNGE 21 Contest - Lusus' Entry
+
+For this contest, I'll be using a scoring system similar to Tricky's:
+
+Danmaku Quality: 20/25 points
+
+The majority of score is determined by the gameplay quality of your script. Patterns being fun to play and creative should be your top priority.
+This also includes a pattern's uniqueness and how well it fits into the theme of the contest - the creative use of shapes.
+
+Each pattern can get up to 10 points. After that, I'll take the average and multiply it by 2.
+
+Touch-Up Quality: 5/25 points
+
+Gameplay is important, but so are aesthetics to an extent. Includes things such as sound effects and visual effects. Even bullet colors/types matter!
+
+======================================================================================================================
+
+1st Nonspell: 
+An "arranged" version of Nue's UFO nonspells with triangles.
+Standard nonspell, nothing too interesting. Kinda boring, though - both slow and fast triangles are aimed at you. Spice the nonspell up a little with either more spawn points or a variety of shapes.
+
+4.25/10
+
+
+
+1st Spell: Mystery Sign "Alignment of Stars"
+A starry sky that arranges itself into several geometric constellations.
+A lovely concept! The bullets are slow enough for the player to read and react in time when they start retracting.
+A bit slow, as it takes a while for the bullets to form, so Nue could've shot aimed bullets to put the player on their toes at all times.
+
+6.25/10
+
+
+
+2nd Nonspell:
+Falling shapes. Well, falling both in 2D and in 3D.
+The way the shapes just drop like that is so nice! The bullets overlap, but they seldom give you dangerous situations if you're not hugging the bottom. Great concept and great use of shapes!
+
+8.25/10
+
+
+
+2nd Spell: Nue Sign "Slithering Creature" 
+Nue "draws" lanes of fireballs in various shapes and colors.
+I can see that you took inspiration from Nightmare of Heiankyou. The pattern itself looks amazing and has a surprising amount of ways to dodge it.
+The variety of shapes and colors really makes it stand out, too. The gimmick may be the same, but the spell is far from repetitive. My only nitpick is that it's always static besides the quick burst Nue does.
+
+8.5/10
+
+
+
+3rd Spell: Unindentified "Alien Abduction"
+Rotating UFOs leave trails of knives while ovals of humans are being abducted from the bottom.
+The beginning is nice and simple to get you used to the trail of knives. The green UFOs also give you a bit of a challenge with the aimed yellow diamond bullets.
+After that, the human bullets start to appear. They're in predictable formations, which makes them easy enough to dodge by themselves, but can be challenging with the knives and the aimed diamonds.
+One minor issue is that the darkened bullets render over the player, which can be kinda confusing. I'd love to see some more action from the UFOs themselves, too.
+This final spell is pretty cute and has superb execution. It's well-balanced and fun to dodge - definitely the best pattern in the whole script!
+
+9/10
+
+Danmaku Score: 14.5/20
+
+======================================================================================================================
+
+Touch-Ups:
+Script looks nice, nothing too mindblowing to speak of. There are a handful of visual and sound effects and the shape variation is pretty neat as well.
+
+4/5
+
+======================================================================================================================
+
+TOTAL SCORE: 14.8/20

@@ -1,0 +1,50 @@
+RaNGE 21 - Bagoum
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Shape Theme: 4/20
+ 
+4 points will be dedicated to how your script uses shapes. Shoving shapes everywhere will not result in a good score, though - I'll also consider if it seems to fit the character. Mostly subjective but I'll give reasoning for why.
+======================================================================================================================
+ 
+Spell 1: I quite like this one. It's too hard for me to do consistently, but it seems fair and even if I kills me a bunch it's pretty fun. 6.75/10.
+ 
+Spell 2: A neat idea, but the paths the lasers make are very hard to read while also dodging fairly dense arrowheads. The arrowheads then come back from offscreen, giving even less time to read them, so it sort of devolves into a mess of relatively quick reactions and praying you don't get hit by something that's very hard to predict. 3/10.
+ 
+Spell 3: Generic, but fine. 5.25/10.
+ 
+Spell 4: A very odd pattern. I presume it would be easier if I made better use of WASD to direct the player's shots. I think the lasers from the sides are aimed? If you fail to misdirect them you sort of just die, and considering that you're likely still on the tail end of dodging the earlier parts of the pattern it's pretty easy to screw yourself over. 4.25/10.
+ 
+Spell 5: It's threeee deeeee and I like threeee deeee. Weird for Mokou though. 6.5/10.
+ 
+Spell 6: I like the concept. Seems hard to line up shots with Mokou but the timer isn't so long that it's unbearable to simply sit through the timer. It also seems notably more difficult than some of the earlier patterns. 5.5/10.
+ 
+Spell 7: Weird as hell but I actually like this. Not too difficult either. 6.75/10.
+ 
+Spell 8: Simply too difficult in my opinion. You're dodging a lot of bullet types from different directions with possibly-differing angular velocities (the ones on the rotating stars). Would be fine if toned down quite a bit to give more breathing room. 3/10.
+
+Spell 9: Didn't we do this spell already? I feel like it plays pretty similarly to Spell 7 to the point where it's a bit samey. 5.5/10.
+
+Spell 10: A tough finishing spell. Very hard, fine enough idea. 5.5/10.
+
+Overall, I think your score also suffered by being too difficult and not fitting the character very well.
+ 
+Danmaku Score: 5.2/10 (scaled to 6.24/12)
+======================================================================================================================
+ 
+Aesthetically this script is pretty good. I think it has a solid, cohesive style. There's minor gripes with the system; I'd like a more solid border at the bottom of the screen since I keep thinking I can go lower than the bottom but really can't. 3/4.
+======================================================================================================================
+ 
+While you do have shapes I'm not all that sure what the patterns have to do with Mokou most of the time. 1.25/4
+ 
+OVERALL SCORE 6.24 + 3 + 1.25 = 10.49/20

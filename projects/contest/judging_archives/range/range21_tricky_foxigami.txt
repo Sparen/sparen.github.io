@@ -1,0 +1,46 @@
+RaNGE 21 - Foxigami
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Shape Theme: 4/20
+ 
+4 points will be dedicated to how your script uses shapes. Shoving shapes everywhere will not result in a good score, though - I'll also consider if it seems to fit the character. Mostly subjective but I'll give reasoning for why.
+======================================================================================================================
+
+Played using Ultima Reimu.
+
+Nonspell 1: Reisen criss-cross applesauce. With shapes, woo. Fine, a bit standard. 6.5/10.
+
+Spell 1: This is actually a pretty neat way to trick one's eye! I feel like the pattern is too plain for the gimmick to stand out, but I love the idea. 7/10.
+ 
+Nonspell 2: Also rather plain all things considered. The shapes don't differ all that much since you just dodge between them anyway. 6.25/10.
+
+Spell 2: Feels pretty Reisen and is an interesting thing to dodge. Shape usage feels a little forced but it's nothing too bad.  8/10.
+ 
+Nonspell 3: More interesting than the previous two, but seems too hard compared to them (and compared to the rest of the script). 6.5/10.
+
+Spell 3: Another sort of neat gimmick, though in practice it's streaming through bullets that aren't quite there all the time. The red-eyes phases happen very infrequently and don't seem to change all that much about the pattern. Another point where I think the execution of the idea is sort of off. 6/10.
+
+Nonspell 4: Pretty good. I like this the best out of all the nons so far. 7/10.
+
+Spell 4: I feel like this is really slow paced, then suddenly you have to escape the hexagon around you or you mega die. The pacing issue makes it rather boring in my opinion, but it's also not a bad idea. 5/10.
+
+Danmaku Score: 6.53/10 (scaled to 7.84/12)
+======================================================================================================================
+ 
+Aesthetically I don't think this script is very cohesive. I don't really like how the music dims during the red eyes, it's a plain black background, etc. 1.5/4.
+======================================================================================================================
+ 
+The shape usage is great at some points and shoehorned in at other points I feel. 2.75/4
+ 
+OVERALL SCORE 6.53 + 1.5 + 2.75 = 10.78/20

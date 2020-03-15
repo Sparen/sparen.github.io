@@ -1,0 +1,123 @@
+RaNGE 21 Contest - JDude's Entry
+
+For this contest, I'll be using a scoring system similar to Tricky's:
+
+Danmaku Quality: 20/25 points
+
+The majority of score is determined by the gameplay quality of your script. Patterns being fun to play and creative should be your top priority.
+This also includes a pattern's uniqueness and how well it fits into the theme of the contest - the creative use of shapes.
+
+Each pattern can get up to 10 points. After that, I'll take the average and multiply it by 2.
+
+Touch-Up Quality: 5/25 points
+
+Gameplay is important, but so are aesthetics to an extent. Includes things such as sound effects and visual effects. Even bullet colors/types matter!
+
+Your final score will be multiplied by *0.8 as requested by the rest of the judges.
+
+======================================================================================================================
+
+1st Nonspell:
+A static pattern making use of falling squares and rings. The pattern drags on a bit too much, especially since dodging it is extremely simple. 
+The sides of the squares use lasers that are rendered under the player sprite, which makes dodging confusing at times if you were in unfocused mode.
+In my opinion, the use of shapes is rather arbitrary.
+
+3/10
+
+
+
+1st Spell: Surprising Rain "Rainbow Prism"
+A spell making use of rotating triangles and falling rain.
+The glaring problem in this card is the rain - the combination of slow and fast RNG-heavy bullets can easily create tight gaps or even clumps of bullets impossible to dodge.
+The rain bullets can also hide under the triangles' laser sides, since the both are add-rendered.
+Kogasa being so low on the screen doesn't really do the player any favours, either.
+Like the first nonspell, the use of shapes is a bit arbitrary.
+
+2/10
+
+
+
+2nd Nonspell:
+A pattern that relies on pushing the player away with a set of wide lasers.
+It's interesting how you used these arrowhead bullets to create squares, a pretty neat way to take advantage of the bullet's shape itself.
+A decent nonspell, but quite repetitive and there's not much in terms of shapes besides the arrowhead formations.
+
+4/10
+
+
+
+2nd Spell: Pentagonal Amulet "Rain Cyclone"
+Walls of arrowheads combined with aimed pentagons.
+The variety of colors is neat, certainly fits Kogasa and gives the bullets some pizzazz. Don't know why you didn't go with an actual rainbow gradient, though.
+A neat spell that is also fairly balanced: the arrowhead walls are delayed just enough for the player to dodge both them and the pentagons. However, the nature of the spell makes it repetitive.
+
+6.25/10
+
+
+
+3rd Nonspell
+The player is surrounded by Evil Knives:tm: that slice stacks of bullets.
+A unique concept for sure. Unfortunately, its execution is subpar due to the oversights and some other issues.
+If you were to move closer to Kogasa, the knives will force more and more stacks to spawn the ring bullets. Since the rings have a random angle, you can get some nasty micrododging RNG.
+Furthermore, you'd naturally be pushed dowards by the stacks, which also means the random rings will spawn closer and closer to you until you have no breathing space at all.
+The black bullets don't help much, either - their speed is troublesome considering you have so many slow bullets to weave through.
+I love the concept, as it has a lot of potential, but gameplay-wise, it's nigh-unplayable depending on the RNG you get.
+
+1.5/10
+
+
+
+3rd Spell: Unlucky Traveler "Epitrochoid Cyclone"
+Rotating blue and red rings combined with lines of purple bullets.
+The flower shape that the bullets create when they spawn is cute and I like that you're taking advantage of some ObjMove_AddPattern functions.
+The spell, however, doesn't give you too much to dodge before you deplete its HP. As you're underneath Kogasa, you're guaranteed to blast her down fairly quickly.
+Concept itself is nice, but I'd love to see some more shape usage in it. Perhaps the purple bullets could form shapes instead?
+
+5/10
+
+
+
+4th Nonspell
+Aimed blue ovals and an interesting arrangement of colorful bullets.
+While the bullet spawn points do form a neat shape, the bullets simply turn into careless RNG when it's time to dodge them.
+Nothing much to say about the pattern, other that it's not too interesting. Seems decent enough, at least.
+
+4/10
+
+
+
+4th Spell: Cylinder Light "Rainy Rainbow" 
+Rotating formations of oval bullets and falling rain bullets.
+A very creative concept, I must say! I love how you used SetColor for the bullets, gives off the feel of a seamless rainbow coming from some prism.
+As much as I like it, it's ruined by, you guessed it, the rain bullets. The onslaught of RNG pellets is simply unappealing, especially when you've got the pretty rotating oval walls.
+An aimed pattern would probably work better, maybe large bullets or lasers. If the rain were a different, more coherent pattern, I'd love to give this spell a higher score.
+
+6.5/10
+
+
+
+5th Spell: Monstrous Art "Geometric Karakasa" 
+A variety of patterns combined into one multiphased attack.
+The square pattern of rainbow icicles is so overly flashy and complex (I took a fourth of Kogasa's health when the spell started!). 
+Gives the pattern an "in your face" feel, fits Kogasa well. I think that the bullets could be a tad slower.
+The lasers are kind of just... there. They don't do much in trying to threaten the player. More shape play could fix that, however!
+At the end, Kogasa starts shooting the rings from the first nonspell. They seem a tad unfitting, honestly. 
+Overall, a decent final spell, but it needs more work into it.
+
+
+5/10
+
+
+Danmaku Score: 8.28/20
+
+======================================================================================================================
+
+Touch-Ups:
+Nothing too mind-blowing, but nothing glaringly bad. I'd say that some bullets could benefit from being add-rendered like the laser walls in a few spells. Some colour combos were kind of unappealing, too.
+Not sure why she'd steal Nue's spell background, though... 
+
+3.5/5
+
+======================================================================================================================
+
+TOTAL SCORE: 9.42/20

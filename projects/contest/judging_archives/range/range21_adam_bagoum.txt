@@ -1,0 +1,108 @@
+RaNGE 21 Contest - Bagoum's Entry
+
+For this contest, I'll be using a scoring system similar to Tricky's:
+
+Danmaku Quality: 20/25 points
+
+The majority of score is determined by the gameplay quality of your script. Patterns being fun to play and creative should be your top priority.
+This also includes a pattern's uniqueness and how well it fits into the theme of the contest - the creative use of shapes.
+
+Each pattern can get up to 10 points. After that, I'll take the average and multiply it by 2.
+
+Touch-Up Quality: 5/25 points
+
+Gameplay is important, but so are aesthetics to an extent. Includes things such as sound effects and visual effects. Even bullet colors/types matter!
+
+======================================================================================================================
+
+1st Spell: Night Travel "Rolling Stones"
+Shapes that come out from the sides of the screen, rotating as they go along.
+A nice pattern. Shows off shape play fairly well and is fun to dodge. The difficulty curve on this spell in particular is all over the place due to how the pattern is built, but it's not too bad.
+7.25/10
+
+
+
+2nd Spell: Sign of Spring "Taking Down the Christmas Tree"
+Curvy lasers snaking in forms of various shapes with some additional danmaku from Mokou.
+The concept of this card is amazing and I love how it looks! Though, this is where the spell's pros come to a halt.
+As pretty as it may be, I can't help but give it a low score because of how unpredictable the lasers are at the bottom. The lack of any warnings and the lasers' speed is a big no-no.
+In combination with the bullets Mokou shoots out, this spell gets extremely hectic quickly, and I doubt most people are capable of reading everything on screen.
+3/10
+
+
+
+3rd Spell: Starry Night "Hunting the Morning Dew"
+Bursts of pentagons and squares from Mokou.
+It's decent, plays well. I don't have much to say, honestly. It's very repetitive and it feels like the usage of shapes is rather arbitrary.
+4/10
+
+
+
+4th Spell: Starry Night "Constellations of Earth, Frost Quakes of Sky"
+A variety of shape bursts and lasers.
+I appreciate the multiple phases this spell has. Mokou moving around like that is her forte, at least in the fighting games, so I'm fine with her moving around much more.
+Gameplay-wise, the spell is so tight it's ridiculous. It's pretty inconsistent. The shapes are simply too dense and, to rub salt on the wound, also stack together to form nigh-impossible situations.
+The laser part was irritating since the misdirection you have to do has to be pixel perfect, not to mention you could've been pushed too far into the left or right because of the other bullets.
+2.5/10
+
+
+
+5th Spell: Quantum Theory "Gods' Rolling Dice"
+A rotating 3D cube.
+Looking great. The way the bullets move is mesmerizing as all 3D spells should be. It's a tad... generic, I think? It doesn't stand out much from other 3D spells I've seen.
+The lasers don't really do much besides pushing you out of the safespot zone. Having them play a bigger role e.g. pushing the player around the cube would improve the spell a lot.
+6/10
+
+
+
+6th Spell: Official Seal "Tripartite Prison"
+The player is forced into a triangular seal, maneouvering around Mokou's bullets while following the box closely.
+A pretty interesting take on a familiar gimmick. Thank God you can actually switch the direction you shoot at with WASD...
+I'm on par with the red-orange bullets from the triangle's angles. As the triangle moves, the bursts just end up looking like random bullets. The lasers from Mokou seem like the only thing with an actual pattern.
+Still, a fine spell. A bit weird for Mokou, but I can see her using something like this with her phoenix aura.
+6.5/10
+
+
+
+7th Spell: Euclidean Space "Washing Machine"
+A set of shapes rotating around the screen while the player is forced to jump through them one by one.
+The way all those bullets move around the screen is hella weird, but it looks lovely. A fun pattern, though, like the first spell, can throw easy lanes and unreasonable ones.
+7/10
+
+
+
+8th Spell: Starry Night "Sky Ablaze with Falling Stars"
+Falling stars, the centers of which release lasers upwards.
+Very cool pattern, but in turn extremely difficult. The concept of the spell is lovely, but you're simply forced to dodge way too much at once. 
+If the stars didn't bounce from the sides of the screen, I can see the spell becoming much more reasonable. Beautiful, but simply lacking in terms of gameplay.
+5.25/10
+
+
+
+9th Spell: Euclidean Space "Blender"
+Two rectangles rotating around the screen while the player is forced to jump through them... got some deja vu here.
+Spell's way too similar to the 7th one. It's only two rectangles this time instead of the multiple shapes. Feels like the pattern is there only to make the script longer, honestly. Still looks neat though.
+2/10
+
+
+
+10th Spell: Starry Night "Dancing Where The Sun Dares Not Rise"
+Lasers from Mokou and many bullets spawning from a set radius around you.
+Tough finished, but I think it's fairly good. The lasers move in a neat way and the bullets spawn in some cool shapes. They should've had a delay cloud for the player to notice and prepare, to be honest.
+Towards the end, though, it gets ridiculous and the player can easily be pushed into a laser or even be stuck in between stacked bullets with nowhere to run from a laser.
+4/10
+
+Danmaku Score: 9.5/20
+
+======================================================================================================================
+
+Touch-Ups:
+All the graphics look very clean and beautiful. Patterns also look charming, especially with all the math involved for bullets to move in a certain way.
+A bit of an issue to me is that the shapes aren't as seamlessly put into Mokou as I'd hoped. The use of shapes is great, but rarely do the patterns feel like something Mokou would use.
+I've also had severe lag issues with some of the patterns due to the bullet count, so consider adding something to increase the FPS. (VSync switch didn't change anything)
+
+3.25/5
+
+======================================================================================================================
+
+TOTAL SCORE: 10.2/20

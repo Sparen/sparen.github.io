@@ -1,0 +1,50 @@
+RaNGE 21 - JDude
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Shape Theme: 4/20
+ 
+4 points will be dedicated to how your script uses shapes. Shoving shapes everywhere will not result in a good score, though - I'll also consider if it seems to fit the character. Mostly subjective but I'll give reasoning for why.
+======================================================================================================================
+ 
+Played as DDC Reimu B yay.
+ 
+Nonspell 1: I'd really call this just "fine". It doesn't seem all that Kogasa and it lasts for a decently long while. 5.25/10.
+ 
+Spell 1: This spell is very difficult. There's too much rain and the rain bullets are rendered under the triangles, making them super hard to read. It does feel a bit more appropriate for Kogasa, but the extreme denseness doesn't make it any better than the previous attack. 3.25/10.
+ 
+Nonspell 2: It's fine. Doesn't feel all that Kogasa either, but better than the first non in terms of gameplay. I think the hitboxes on those squares could use some looking at. 5.25/10.
+ 
+Spell 2: I think this fits the character and is pretty fun! 7.5/10.
+ 
+Nonspell 3: This seems more like a spellcard than a nonspell. Besides that the arrowheads make it very dense, so if the black bullets happen to spawn at an unlucky angle they can easily screw you over. 4/10.
+ 
+Spell 3: Definitely feels like a thing Kogasa could do. Difficult but fair I'd say. 6.75/10.
+ 
+Nonspell 4: The lines are REALLY fast. Besides that it's just streaming through a bunch of spammy bullets. 6/10.
+ 
+Spell 4: The cylinder part is interesting but the random droplets are nonsense more often than not. 5/10.
+
+Spell 5: A neat idea but it's simply too difficult imo. 5/10.
+
+Overall, I think your score suffered by being too difficult and not fitting the character very well.
+ 
+Danmaku Score: 5.33/10 (scaled to 6.4/12)
+======================================================================================================================
+ 
+Aesthetically, I think nothing is particularly amazing and nothing is particularly bad.  2/4.
+======================================================================================================================
+ 
+While you do have shapes I don't think they fit the character all that much and are rather shoehorned in.  1.5/4
+ 
+OVERALL SCORE 6.4 + 2 + 1.5 = 9.9/20

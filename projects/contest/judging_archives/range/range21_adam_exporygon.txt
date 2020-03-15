@@ -1,0 +1,91 @@
+RaNGE 21 Contest - ExPorygon's Entry
+
+For this contest, I'll be using a scoring system similar to Tricky's:
+
+Danmaku Quality: 20/25 points
+
+The majority of score is determined by the gameplay quality of your script. Patterns being fun to play and creative should be your top priority.
+This also includes a pattern's uniqueness and how well it fits into the theme of the contest - the creative use of shapes.
+
+Each pattern can get up to 10 points. After that, I'll take the average and multiply it by 2.
+
+Touch-Up Quality: 5/25 points
+
+Gameplay is important, but so are aesthetics to an extent. Includes things such as sound effects and visual effects. Even bullet colors/types matter!
+
+======================================================================================================================
+
+1st Nonspell:
+A speedy array of diamond formations and rotating bullets.
+A decent start that gets the player on their toes. A pretty neat opened, but it felt a bit static. Making the boss move around would make it more fun, I'd say!
+6/10
+
+
+
+1st Spell: Function "Binary Logic"
+A grid of blinking binary boxes that traps the player in a small space while the boss shoots bullets to make it more difficult to switch sides.
+Lovely concept and executed very well! The sound warnings and the subtle square effect were pretty good hints. The binary boxes also lose their hitbox after the last ping for easier escape.
+A very good card, albeit the bullets themselves don't threaten the player too much. I'd love to see the player being forced to the side with lasers or other bullets.
+8/10
+
+
+
+2nd Nonspell:
+Diamond formations come from the top and expand after slowing down.
+The cyan bullets' movement is really cool, makes them stand out from the purple ones. This pattern is a neat way to prevent bottomhugging since the area under the boss is better for dodging the cyan bullets.
+Great nonspell, can get energetic while trying to chase down Porygon-Z. My gripe with it are the purple bullets, since they pose almost no threat. Up the difficulty a little and it should be fine.
+7.5/10
+
+
+
+2nd Spell: Coroutine "Binary Process"
+Three familiars that shoot different types of attacks at the player.
+Interesting take on the Tri-Attack move. The familiars' danmaku doesn't stack up too quickly, so the player is given enough breathing room to dodge.
+Lovely concept with great execution.  Porygon-Z itself could move a little to force the player to take riskier dodges to chase it down. As of now, the player can kill the spell too quickly.
+8.5/10
+
+
+
+3rd Nonspell:
+Bullets spawn from the edges of the screen while Porygon-Z shoots aimed bubbles.
+Decent, but in comparison of the other nonspells, this one felt boring and unfinished. The concept itself could work with different bullet formations and such. Experimentation is a virtue, after all.
+3.5/10
+
+
+
+3rd Spell: Coroutine "Binary Process" ...again
+Scrolling columns of blinking binary boxes with Porygon-Z teleporting around the screen to release bullets.
+A more aggressive version of the first spell - just fills me with andrenaline! Difficult, but fair, and making the boss teleport around troubles players who want to speedkill it.
+Uses the previous gimmick much better and is fun to dodge. Dodging Porygon-Z's shots can be tricky if the RNG hates you and you're being pushed upwards, but the spell is wonderful regardless!
+9/10
+
+
+
+4th Nonspell:
+An alternate version of the second nonspell with denser diamond formations.
+Looks pretty good and is fun to dodge. A bit slow for my tastes - upping the speed as Porygon-Z takes damage. Fun, but could need some more work in terms of variety. Maybe some warnings for the purple diamonds too?
+6/10
+
+
+
+4th Spell: "Geometric Grandeur" 
+Laser formations that split into walls of bullets.
+From the looks of it, the lasers can form both 2D and 3D shapes. Quite intriguing.
+The pattern itself is relatively simple, but it's a decent finale to the script. The cyan and purple bullets each have a direction to go, so the player won't be confused as to what goes where.
+I've had the RNG cuck me several times on the third phase, so maybe you can look into making it more consistent? More boss HP would be nice, too.
+7.25/10
+
+Danmaku Score: 13.94/20
+
+======================================================================================================================
+
+Touch-Ups:
+
+The script definitely excels in terms of graphic and sound effects, nice job! Both the stage and spell backgrounds fit a cyber-based boss like Porygon-Z very well.
+I'm not a big fan of how the majority of the bullets are cyan or purple diamonds. It gets a bit stale and several attacks don't stand out much. Other than that, everything else is golden.
+
+3.75/5
+
+======================================================================================================================
+
+TOTAL SCORE: 14.15/20

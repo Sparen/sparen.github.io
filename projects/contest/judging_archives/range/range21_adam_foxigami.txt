@@ -1,0 +1,98 @@
+RaNGE 21 Contest - Foxigami's Entry
+
+For this contest, I'll be using a scoring system similar to Tricky's:
+
+Danmaku Quality: 20/25 points
+
+The majority of score is determined by the gameplay quality of your script. Patterns being fun to play and creative should be your top priority.
+This also includes a pattern's uniqueness and how well it fits into the theme of the contest - the creative use of shapes.
+
+Each pattern can get up to 10 points. After that, I'll take the average and multiply it by 2.
+
+Touch-Up Quality: 5/25 points
+
+Gameplay is important, but so are aesthetics to an extent. Includes things such as sound effects and visual effects. Even bullet colors/types matter!
+
+======================================================================================================================
+
+1st Nonspell:
+Hexagonal bursts coming from Reisen.
+Really really standard pattern. The shape usage here is... very arbitrary. There's not much creativity involved here.
+
+2/10
+
+
+
+1st Spell: Crescent Waxing Moon "Myopia Flaw"
+Bursts of bullets that clump together to become visible.
+I was pleasantly surprised by this spell card's gimmick! The way you have to rely on the bullets to merge together to become visible is wonderful and plays off of Reisen's ability.
+Some more phases to the spell would be great. Also, the RNG could be toned down, as the direction and position Reisen moves at can make or break the spell's difficulty.
+
+7.5/10
+
+
+
+2nd Nonspell:
+An endless array of purple shapes coming from above.
+A fast-paced nonspell for sure. More fun than the first nonspell, but still suffers from the same issue - the shape usage is uninspired.
+
+3.5/10
+
+
+
+2nd Spell: Half Moon "Peduncular Hallucinosis"
+Bursts of grey bullets that reshape themselves into triangles, squares, hexagons etc. when Reisen activates her eyes of lunacy.
+A spell that fits Reisen very well given its association with guns and confusing bullet movement. The different phases are a nice touch as well.
+This pattern left a very good impression on me, nice job!
+
+8.5/10
+
+
+
+3rd Nonspell:
+Lines of bullets that "fan out" into various shapes.
+Confusing bullet movement is what Reisen nonspells are about and you captured that well here. Fun enough to dodge, but quite repetitive.
+
+5/10
+
+
+
+3rd Spell: Gibbious Moon "Senseless Glaucoma" 
+Several bursts of blinking bullets along with a lunatic eyes gimmick that activates them all at once. Suzumi's jealous.
+A neat gimmick, but the arbitrary usage of shapes is kind of a breaking point for me here.
+
+3.5/10
+
+
+
+4th Nonspell:
+Similar to the previous nonspell, but now it includes aimed bullets.
+I guess it's different enough??? You should've made it stand out more in comparison to the third nonspell, honestly.
+
+3.5/10
+
+
+
+4th Spell: Lunatic Full Moon "Strabismus Bomb"
+Reisen uses her Mind Starmine blasts from SWR along with hexagon bursts. The bursts then move around the screen when Reisen activates her eyes.
+I always appreciate some use of the ideas the fighting games have. Feels neat to see people get inspired by patterns from them, honestly!
+A neat pattern with neater hallucination effects from Reisen - the bursts switch from aiming for the player to being set up around the screen.
+My gripe is that there are barely any warnings given to the player - one could easily get sniped by the mind bombs. While the hexagon bursts expand, the player isn't given much to dodge while they wait.
+
+8.25/10
+
+Danmaku Score: 10.44/20
+
+======================================================================================================================
+
+Touch-Ups:
+
+The lack of any background makes the script feel... incomplete, almost. Music and animations are given a pass, of course.
+It got really boring to see the same red and purple bullets in every pattern. Sure, she used mostly those in IN, but you could've mixed the colors a bit more. You shouldn't limit yourself just because of canon.
+I've noticed several 0,0 spawn errors, mostly from effects that didn't get deleted.
+
+2/5
+
+======================================================================================================================
+
+TOTAL SCORE: 9.95/20

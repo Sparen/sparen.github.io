@@ -1,0 +1,42 @@
+RaNGE 21 - Lusus
+ 
+For this contest I'll continue using a 20-point rating system. Points will be divided as follows:
+ 
+Danmaku Quality: 12/20
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 4/20
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to the Shape Theme: 4/20
+ 
+4 points will be dedicated to how your script uses shapes. Shoving shapes everywhere will not result in a good score, though - I'll also consider if it seems to fit the character. Mostly subjective but I'll give reasoning for why.
+======================================================================================================================
+
++1 Happy Tricky points for using the updated version of Ultima Reimu.
+
+Nonspell 1: A little messy visually, but it's a fun pattern! Feels appropriate for Nue while following the theme and being a reasonable challenge. Maybe a little too hard? 7.75/10.
+
+Spell 1: Fits the character and is a neat challenge. Could maybe use a little bit more of a pattern but it's fine as-is. 8/10.
+ 
+Nonspell 2: Very solid. Because they're shapes. Ha. Not much else to say, good job. 8/10.
+
+Spell 2: This one drags on for a while but I do like it otherwise. 7.5/10.
+ 
+Spell 3: I think it was a very good design design to turn off the aimed bullets for the phase when the people danmaku shows up, then turn them back on later. Good! 8/10.
+
+As a minor gripe, be sure you have the Log Window closed when you distribute a script. Having that thing open killed performance. Performance still seems a little choppy without it, but it's an easy win to just have it off for people that wouldn't know to close it.
+ 
+Danmaku Score: 7.85/10 (scaled to 9.42/12)
+======================================================================================================================
+ 
+Aesthetically I don't think this script is all that cohesive, but it's not any worse than the Danmakufu defaults. 2/4.
+======================================================================================================================
+ 
+You use shapes well without it feeling shoehorned in, and their usage fits the character nicely! It's not super-creative in my opinion, but it's still very good. 3.5/4
+ 
+OVERALL SCORE 9.42 + 2 + 3.5 = 14.92/20
