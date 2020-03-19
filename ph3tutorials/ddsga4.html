@@ -1,0 +1,158 @@
+<!DOCTYPE html><html lang="en-us">  <head>    <meta charset="utf-8">    <title>Sparen's Danmaku Design Studio - Guide A4</title>    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">    <meta content="Sparen's Danmaku Design Studio - Guide A4 - Bullet Density - Putting the 'Hell' in 'Bullet Hell'. A guide covering types of bullet density and how they comprise patterns."      name="description">
+    <meta name="keywords" content="Sparen, Danmaku, Design, Theory, Studio, Density, Macrododging, Micrododging">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>  </head>  <body onload="setupENG('Mar 18, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+      <div id="menubar">
+        <ul>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
+          <li><a href="./danmakudesign.html" title="Sparen's Danmaku Design Studio">Danmaku Design</a></li>
+        </ul>
+      </div>      <div id="pagecontentwrapper">
+          <div id="pagecontent">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ddsga3.html" title="The Ring, The Spread, and The Stack - Combinations with You">Guide A3</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>	      <h1 class="toplevelheadera">Sparen's Danmaku Design Studio - Guide A4 - Bullet Density - Putting the 'Hell' in 'Bullet Hell'</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: Guide Introduction</a></li>
+	          <li><a href="#sub2">Part 2: Macrododging vs Macrododging - Variations in Subpattern Interaction and Design</a></li>
+	          <li><a href="#sub2a">Part 2a: Implementing Macrododging</a></li>
+	          <li><a href="#sub2b">Part 2b: Implementing Micrododging</a></li>
+	          <li><a href="#sub2c">Part 2c: Finding a balance between Macrododging and Micrododging</a></li>
+	          <li><a href="#sub3">Part 3: Spacial and Temporal Density - Creating Patterns from Fundamentals</a></li>
+	          <li><a href="#sub4">Part 4: Controlled Density - Fewer Bullets != Lower Difficulty</a></li>
+	          <li><a href="#sub5">Part 5: Negative Space - Organizing Chaos into Beauty</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: Guide Introduction</h2>
+	      <p>Why exactly is danmaku referred to as 'Bullet Hell'? Why is it sometimes translated as 'Curtain Fire'? The answer here lies in density - bullet density to be precise. Unlike shooters where you dodge a small number of bullets that come at high speeds, danmaku games focus on incredible amounts of bullets. However, even within danmaku games, there are different categories and styles, ranging from the reflex-heavy rapid-fire CAVE games to the heavily subpatterned Len'en games to the slow and heavily artistic Touhou games.</p>
+	      <p>In this guide, we will discuss bullet density, how it can be utilized to suggest or blend different dodging methods, how temporal and spacial density differ, how to control density, and how to utilize a lack of bullets to enhance the gameplay or aesthetic experience.</p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: Macrododging vs Macrododging - Variations in Subpattern Interaction and Design</h2>
+	      <p>We'll introduce out discussion on bullet density with macrododging and micrododging, which we gave rough definitions for in the prior guide. These are two general terms that get thrown around a lot and they are good to understand. Note that it is incredibly rare for a pattern to be pure 'macrododge' or pure 'micrododge' - they exist on a spectrum and work very well in harmony, and they represent a subset of the types of patterns one can find in danmaku.</p>
+	      <p>First, as we begin our discussion on macrododging and micrododging, it is important to get an understanding of what we mean by these two concepts. Both of these are density-based danmaku pattern design styles, and a pattern can make use of any number of characteristics of these by utilizing multiple subpattern and groups in conjunction. Macrododging is characterized by bullets being in a tight formation that requires the player (or the viewer's eye) to move a significant distance, focusing on the pattern as a whole to dodge. Micrododging is the opposite, focusing on bullet arrays that require the player (or the viewer's eye) to focus deeply on a small area of the screen. Note that the actual bullets do not define these two types of pattern design - rather, the <strong>visual and mental focus</strong> of the person experiencing the danmaku pattern is what differentiates the two. Therefore, although they both have 'dodging' in their name, no player is actually needed for subpatterns to contribute to a macrododging or micrododging design.</p>
+	      <p>The best way to describe these is by example. First, examples of macrododging. Some examples of pure macrododging include the following selection from Sese (Len'en 3) and Lumen (Len'en 2). In these cases, large clusters of 'bullets' force the player to move while considering the objects' size.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/AtZr58wIIFQ?start=113" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Sese's opening boss nonspell - Bones have a very large spin radius and require the player to work around the circular area that they cover while spinning</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/vq2tlX-p9Sk?start=200" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Lumen's first extra stage spell - large clusters of lasers and bullets force the player to navigate around the obstacles while taking into account their spin.</p>
+	      </div></div>
+	      <p>However, macrododging is best used as part of a larger pattern, where macrododging is just one component. Excellent examples include Aya's nonspells in Mountain of Faith, Momiji's nonspell in Mountain of Faith, and one of Orin's spellcards in Subterranean Animism.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/rirUqfFmhEM?start=155" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Aya's boss opener - large impassable macrododge rings are utilized in conjunction with wider rings that the player can pass through to create a dynamic, multi-faceted pattern using simple groups and subpatterns.</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/rirUqfFmhEM?start=64" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Momiji's nonspell - giant spirals cover large portions of the screen, forcing the player to dodge around them while also using additional subpatterns to force the player to dodge carefully.</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/iK8bdov6XsE?start=276" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Large spiraling rings of spirits force the player to dodge between them while Orin's other subpattern on repeat adds complexity to the dodging.</p>
+	      </div></div>
+	      <p>Now we'll cover examples of Micrododging. Imperishable Night as a game focuses incredibly heavily on micrododging as a design pattern and is a good example for study. We will showcase examples from Eirin (Imperishable Night), Sanae (Mountain of Faith), and Ringo (Legacy of Lunatic Kingdom). It is worth noting that a lot of bullets does not imply micrododging - we will cover some of these more surprising concepts in Part 4.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/AY7QEEnSGVU?start=226" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Eirin boss nonspell 4 - Differing starting angles, bullets coming from different directions, and slow bullet speeds result in the player having to focus on every single move they make.</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/xDC5LHRz7fI?start=80" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Sanae midboss spell 1 - Star formations disintegrate into slow moving highly-dense bullets from all sides.</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/9D6fj5AUmnM?start=520" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Ringo last spell - Complex bullet groups disintegrate into a dense cloud of slow-moving bullets.</p>
+	      </div></div>
+	      <h2 class="ph3tutorialheader" id="sub2a">Part 2a: Implementing Macrododging</h2>
+	      <p>Earlier we described macrododging as a way to make the player focus on the pattern as a whole and to pay attention to a large part of the screen. In addition, we used Sese and Lumen as examples of pure macrododging, where the entire focus of a pattern was on dodging large obstacles. However, we don't need multi-directional crazy patterns to demonstrate macrododging. In fact, we covered the foundations for macrododging in the prior guide. </p>
+	      <p>Here we will demonstrate two of the many techniques that can be used to create macrododging environments - walls and same-angle rings. Other techniques, like the spinning radius method employed by Sese and Lumen, the variable shape method, and the large object method popularized by Utsuho sunspam/Unzan brofist + derivative troll scripts, will not be covered here (but you should definitely take them into consideration).</p>
+	      <p>We'll start with walls. In the following example, we will have rings of spreads. Each spread will have a fixed angle range, and there will be a control slider that dictates how many bullets will be in the spread. Imagine that you're the player - what is it like dodging with very few bullets per spread vs dodging with many bullets per spread?</p>
+		<div style="text-align:center"><canvas id="gamecanvas_1" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', 'Spread and Walls');">Run Danmakanvas</button></div>
+		<div style="background: #202020; outline: none; text-align:center;">
+		  <input type="range" min="3" max="16" value="3" style="background: #4CAF50; width: 100%" id="canvas1n">
+		  <p id="canvas1nvalue">Number of Bullets in Spread: </p>
+		</div>
+	      <p>As you will have noticed, there eventually comes a point where the bullets in each spread are so close together that it is no longer for the player to dodge between the bullets within a spread. This is the point where the spread becomes a 'wall', and where the player is forced to dodge around the entire spread. From a gameplay perspective, this requires the player to dodge the pattern while taking into account the fact that they cannot go straight through these obstacles. From an aesthetic perspective, clear walls provide visual structure to the pattern and since they are easy to identify, can be used for that property to create strong focus points for the viewer's eye.</p>
+	      <p>Now we'll cover the technique employed by Aya - the same-angle ring. In the previous guide, we covered how we could spawn rings with a set offset radius from a center point. The Same-Angle Ring is a technique whereby we spawn the bullets this way, but where all the bullets making up the ring move at the same angle and speed. We will use an example similar to that of Aya in the following canvas - again, experiment with the number of bullets in the ring.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_2" width="480" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_2', 'Rings and Circles');">Run Danmakanvas</button></div>
+		<div style="background: #202020; outline: none; text-align:center;">
+		  <input type="range" min="5" max="32" value="5" style="background: #4CAF50; width: 100%" id="canvas2n">
+		  <p id="canvas2nvalue">Number of Bullets in Ring: </p>
+		  <input type="range" min="0" max="96" value="32" style="background: #4CAF50; width: 100%" id="canvas2nb">
+		  <p id="canvas2nvalue2">Ring Radius: </p>
+		</div>
+	      <p>Like with the walls, as the density of bullets goes up, it no longer becomes possible for the player to enter the ring, and as such it becomes a large obstacle. Note that this depends on the radius employed, similar to the spread angle for walls. With a large radius, more bullets are needed before the ring seals itself and prevents the player from entering or leaving.</p>
+	      <p>Hopefully this section has provided some examples of how to implement macrododging (other than the tried-and-true method of just using large bullets).</p>
+	      <h2 class="ph3tutorialheader" id="sub2b">Part 2b: Implementing Micrododging</h2>
+	      <p>To implement micrododging, we must clarify some aspects of its definition. First and foremost, micrododging requires the player to pay extremely close attention to a confined area of the screen. By definition, this means that very fast bullets and streaming are NOT considered micrododging. We will discuss the former in more detail in Part 3 and will discuss the latter in Part 4.</p>
+	      <p>Micrododging, therefore, requires that there be bullet subpatterns interacting such that the player or viewer has a need to focus. Random variation and bullets coming from different directions with time for the player to react are all important components of micrododging. The former ensures that the subpattern is not predictable. The latter ensures that the player must exert more focus. An example of only having the former would be Eternal Meek - there is no micrododging, even if the speeds were slower, since all the bullets originate at a single location and are therefore predictable. An example of only having the latter requires no effort on the end of the player once the first bullet is dodged.</p>
+	      <p>So how can we implement micrododging? We will give more complex examples in Part 3 when we cover spacial density, but for now we will turn to the death fairy before Mokou in Imperishable Night.</p>
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/KACaRij6QVo?start=254" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <p>We will fire three subpatterns in this example - a ring from the center and spreads from two points rotating about the center.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_3" width="480" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_3', 'Micrododging');">Run Danmakanvas</button></div>
+	      <p>There are many ways in which you can create a micrododge heavy pattern, but in general simple layering of different subpatterns is the easiest way to do so. Place your eye on an empty space in the above pattern and pretend you're the player. Before you know it, you'll experience mental filtering (as discussed at the end of Guide 2) and you'll be focused solely on wherever your 'player' is. That's the essence of micrododge.</p>
+	      <h2 class="ph3tutorialheader" id="sub2c">Part 2c: Finding a balance between Macrododging and Micrododging</h2>
+	      <p>Micrododging and macrododging work best together. Finding a balance between the two, like was done with Utsuho in Subterranean Animism, can make a pattern dynamic and enjoyable. This isn't to say that pure macrododging and pure micrododging aren't dynamic or enjoyable, but they put intense strain on the player or viewer and should not be the only component of your game or visualization. Try to combine the two in order to create patterns that require the player to dodge large bullets while also needing to pay attention to smaller ones. </p>
+	      <p>Remember - these are tools in your toolbelt as a danmaku designer. What kind of movement do you want your player to make? Where should the focus of the pattern be? What speed do you want your player to move at? Take these things into consideration and your patterns will be more vibrant and enjoyable as a result.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Spacial and Temporal Density - Creating Patterns from Fundamentals</h2>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: Controlled Density - Fewer Bullets != Lower Difficulty</h2>
+	      <p></p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <br>            </div>          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ddsga3.html" title="The Ring, The Spread, and The Stack - Combinations with You">Guide A3</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>      <footer id="footer">      </footer>    </div>
+    <script src="javascript/ph3tutorialcommon.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="./dds_danmakanvas/Danmakanvas.js"></script>
+    <script src="./dds_danmakanvas/DDSG4.js"></script>  </body></html>

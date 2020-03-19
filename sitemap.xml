@@ -358,11 +358,16 @@
 </url>
 <url>
 <loc>http://sparen.github.io/ph3tutorials/ddsga2.html</loc>
-<changefreq>weekly</changefreq>
+<changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 <url>
 <loc>http://sparen.github.io/ph3tutorials/ddsga3.html</loc>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>http://sparen.github.io/ph3tutorials/ddsga4.html</loc>
 <changefreq>weekly</changefreq>
 <priority>0.7</priority>
 </url>
