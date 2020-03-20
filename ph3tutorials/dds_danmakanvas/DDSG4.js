@@ -5,41 +5,52 @@
 let CANVAS_1_N = 3;
 let CANVAS_2_N = 5;
 let CANVAS_2_NB = 32;
+let CANVAS_5F_SR = 25;
 
 // Controller that determines which attacks to display
 function getPluralController(currgame, canvasid) {
     switch(canvasid) {
         case "gamecanvas_1":
-            return new Plural_1(currgame);
+            return new Plural_Constructor([new Single_1(currgame)], currgame);
             break;
         case "gamecanvas_2":
-            return new Plural_2(currgame);
+            return new Plural_Constructor([new Single_2(currgame)], currgame);
             break;
         case "gamecanvas_3":
-            return new Plural_3(currgame);
+            return new Plural_Constructor([new Single_3(currgame)], currgame);
+            break;
+        case "gamecanvas_4a":
+            return new Plural_Constructor([new Single_4a(currgame)], currgame);
+            break;
+        case "gamecanvas_4b":
+            return new Plural_Constructor([new Single_4b(currgame)], currgame);
+            break;
+        case "gamecanvas_5a":
+            return new Plural_Constructor([new Single_5a(currgame)], currgame);
+            break;
+        case "gamecanvas_5b":
+            return new Plural_Constructor([new Single_5b(currgame)], currgame);
+            break;
+        case "gamecanvas_5c":
+            return new Plural_Constructor([new Single_5c(currgame)], currgame);
+            break;
+        case "gamecanvas_5d":
+            return new Plural_Constructor([new Single_5d(currgame)], currgame);
+            break;
+        case "gamecanvas_5e":
+            return new Plural_Constructor([new Single_5e(currgame)], currgame);
+            break;
+        case "gamecanvas_5f":
+            return new Plural_Constructor([new Single_5f(currgame)], currgame);
             break;
         default:
             console.log("getPluralController(): Canvas ID " + canvasid + " could not be recognized. Please check to make sure that the canvas ID is correct and/or supported.");
     }
 }
 
-function Plural_1(currgame) {
+function Plural_Constructor(singles, currgame) {
     this.step = 0; // Default to first single in array
-    this.singles = [new Single_1(currgame)];
-    this.update = function () { this.singles[this.step].update(); }
-    this.remove = function () { this.singles = []; }
-}
-
-function Plural_2(currgame) {
-    this.step = 0; // Default to first single in array
-    this.singles = [new Single_2(currgame)];
-    this.update = function () { this.singles[this.step].update(); }
-    this.remove = function () { this.singles = []; }
-}
-
-function Plural_3(currgame) {
-    this.step = 0; // Default to first single in array
-    this.singles = [new Single_3(currgame)];
+    this.singles = singles;
     this.update = function () { this.singles[this.step].update(); }
     this.remove = function () { this.singles = []; }
 }
@@ -139,6 +150,235 @@ function Single_3(currgame) {
         }
         if (currgame.everyinterval(18)) { 
             CreateRingA1(36, GetCenterX(currgame), GetCenterY(currgame), 1, Math.random()*Math.PI*2, "#4444FF", 2, 3, 1, 0, currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Subpattern1(x, y, currgame) {
+	CreateRingA1(36, x, y, 2, 0, "#44FF66", 3, 4, 1, 0, currgame);
+}
+
+function Subpattern2(x, y, currgame) {
+	CreateRingStackA1(8, 6, 0.267, x, y, 2, 0, "#FF6644", 1.333, 5, 3, 0, currgame);
+}
+
+function Subpattern1B(x, y, currgame) {
+	CreateRingA1(36, x, y, 4, 0, "#44FF66", 3, 4, 1, 0, currgame);
+}
+
+function Subpattern2B(x, y, currgame) {
+	CreateRingStackA1(8, 6, 0.533, x, y, 2, 0, "#FF6644", 2.667, 5, 3, 0, currgame);
+}
+
+function Single_4a(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(50)) { 
+            Subpattern1(GetCenterX(currgame), GetCenterY(currgame), currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_4b(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(50)) { 
+            Subpattern2(GetCenterX(currgame), GetCenterY(currgame), currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_5a(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(50)) { 
+            Subpattern1(GetCenterX(currgame), GetCenterY(currgame), currgame);
+            Subpattern2(GetCenterX(currgame), GetCenterY(currgame), currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_5b(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(50)) { 
+            Subpattern1(GetCenterX(currgame), GetCenterY(currgame), currgame);
+        }
+        if (currgame.frameNo % 50 == 25) {
+            Subpattern2(GetCenterX(currgame), GetCenterY(currgame), currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_5c(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(100)) { 
+            Subpattern1(GetCenterX(currgame) + 64, GetCenterY(currgame) - 64, currgame);
+            Subpattern2(GetCenterX(currgame) - 64, GetCenterY(currgame) - 64, currgame);
+        }
+        if (currgame.frameNo % 100 == 50) {
+            Subpattern1(GetCenterX(currgame) - 64, GetCenterY(currgame) - 64, currgame);
+            Subpattern2(GetCenterX(currgame) + 64, GetCenterY(currgame) - 64, currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_5d(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(100)) { 
+            Subpattern1(GetCenterX(currgame) + 64, GetCenterY(currgame) - 64, currgame);
+        }
+        if (currgame.frameNo % 100 == 25) {
+            Subpattern2(GetCenterX(currgame) + 64, GetCenterY(currgame) - 64, currgame);
+        }
+        if (currgame.frameNo % 100 == 50) {
+            Subpattern1(GetCenterX(currgame) - 64, GetCenterY(currgame) - 64, currgame);
+        }
+        if (currgame.frameNo % 100 == 75) {
+            Subpattern2(GetCenterX(currgame) - 64, GetCenterY(currgame) - 64, currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_5e(currgame) {
+    this.tasks = [];
+    let counter = 0;
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(20)) { 
+            Subpattern1(GetCenterX(currgame) + 96 * Math.cos(Math.PI*2/5*counter), GetCenterY(currgame) + 96 * Math.sin(Math.PI*2/5*counter), currgame);
+            counter += 1;
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function setCanvas5fSpawn(n) {
+	CANVAS_5F_SR = n;
+}
+
+function Single_5f(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(100)) { 
+            Subpattern2(GetCenterX(currgame) + 96, GetCenterY(currgame), currgame);
+            Subpattern2(GetCenterX(currgame) - 96, GetCenterY(currgame), currgame);
+        }
+        if (currgame.frameNo % 100 == CANVAS_5F_SR) {
+            Subpattern1(GetCenterX(currgame), GetCenterY(currgame) + 64, currgame);
+            Subpattern1(GetCenterX(currgame), GetCenterY(currgame) - 64, currgame);
         }
         // Remove completed tasks
         let tasktoremove = [];

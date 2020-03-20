@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Mar 18, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupENG('Mar 19, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div id="menubar">
         <ul>
           <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
@@ -33,7 +33,9 @@
 	          <li><a href="#sub2a">Part 2a: Implementing Macrododging</a></li>
 	          <li><a href="#sub2b">Part 2b: Implementing Micrododging</a></li>
 	          <li><a href="#sub2c">Part 2c: Finding a balance between Macrododging and Micrododging</a></li>
-	          <li><a href="#sub3">Part 3: Spacial and Temporal Density - Creating Patterns from Fundamentals</a></li>
+	          <li><a href="#sub3">Part 3: Spacial and Temporal Density</a></li>
+	          <li><a href="#sub3a">Part 3a: Creating Patterns from Fundamentals</a></li>
+	          <li><a href="#sub3b">Part 3b: Bullet Speed and Spacial Density</a></li>
 	          <li><a href="#sub4">Part 4: Controlled Density - Fewer Bullets != Lower Difficulty</a></li>
 	          <li><a href="#sub5">Part 5: Negative Space - Organizing Chaos into Beauty</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
@@ -136,11 +138,59 @@
 	      <h2 class="ph3tutorialheader" id="sub2c">Part 2c: Finding a balance between Macrododging and Micrododging</h2>
 	      <p>Micrododging and macrododging work best together. Finding a balance between the two, like was done with Utsuho in Subterranean Animism, can make a pattern dynamic and enjoyable. This isn't to say that pure macrododging and pure micrododging aren't dynamic or enjoyable, but they put intense strain on the player or viewer and should not be the only component of your game or visualization. Try to combine the two in order to create patterns that require the player to dodge large bullets while also needing to pay attention to smaller ones. </p>
 	      <p>Remember - these are tools in your toolbelt as a danmaku designer. What kind of movement do you want your player to make? Where should the focus of the pattern be? What speed do you want your player to move at? Take these things into consideration and your patterns will be more vibrant and enjoyable as a result.</p>
-	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Spacial and Temporal Density - Creating Patterns from Fundamentals</h2>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Spacial and Temporal Density</h2>
+	      <p>Back in <a href="ddsga1.html">Guide 1</a>, we touched upon spawn rate and bullet speed. Now we will go into further depth as we cover spacial and temporal density.</p>
+	      <p>Bullet spawning can be dense in the spacial sense (bullet density) as well as the temporal sense (timing & pacing). Think variation over space and time. Spacial density is the more obvious component - the more bullets in a given area, the more dense the area is spatially. Temporal density is a less obvious component - the timing and pacing of the attack can create and disperse density.</p>
+	      <p>We'll first show how adjusting spawn location and spawn time can completely change a pattern. Then we will take a closer look at bullet speed and how it affects density.</p>
+	      <h2 class="ph3tutorialheader" id="sub3a">Part 3a: Creating Patterns from Fundamentals</h2>
+	      <p>Patterns are rarely comprised of a single subpattern. Different subpatterns interact on the screen both in space and time, and the interactions between subpatterns (and how they are designed) is a fundamental part of the pattern. Given two subpatterns, spawning them in different locations or displaced over time can cause them to interact in completely different ways, and determining how to take advantage of these displacement techniques is one of the most powerful abilities a danmaku designer can have.</p>
+	      <p>In the following examples, we will have two subpatterns. One is a repeating dense green ring. The other is a repeating stack of orange rings. They have the same angles, number of bullets, and speed. Each will be spawned approximately once a second.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_4a" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_4b" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_4a', 'Subpattern 1');createNewGame('gamecanvas_4b', 'Subpattern 2')">Run Danmakanvas</button></div>
+	      <p>Now we will utilize these two subpatterns in a variety of examples. The only difference in how they are spawned is where and when they are spawned. Throughout these, consider how the bullet density changes when different subpatterns collide, as well as how the timing and location affect this.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+		<div style="text-align:center"><canvas id="gamecanvas_5a" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_5a', 'Example 1')">Run Danmakanvas</button></div>
+		</div><div style="flex: 1;text-align:center">
+		<p>In our first example, we will use one of each, spawned at the same time at the center of the screen. This pattern uses the two subpatterns as if they were groups, with a single dominating pattern. Note how all bullets originate from a single point. The two subpatterns complement each other visually but from a danmaku perspective, this is visually boring over time.</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+		<div style="text-align:center"><canvas id="gamecanvas_5b" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_5b', 'Example 2')">Run Danmakanvas</button></div>
+		</div><div style="flex: 1;text-align:center">
+		<p>In our second example, we will offset the second subpattern by half a second. Note how the two subpatterns, when compared to before, are now highly distinct components. In addition, the bullets do not overlap nearly as much spatially either. Instead of concentrated bursts of bullets, there are more frequent but different types of patterns.</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+		<div style="text-align:center"><canvas id="gamecanvas_5c" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_5c', 'Example 3')">Run Danmakanvas</button></div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Let's kick it up a notch. We'll separate the two spawning and alternate them on the sides. Now the two subpatterns are interacting at different angles and at different locations. In addition, by adding spacial offsets, each subpattern is now interacting with the subsequent spawning of themselves, especially for the stack of rings.</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+		<div style="text-align:center"><canvas id="gamecanvas_5d" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_5d', 'Example 4')">Run Danmakanvas</button></div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Adding to the prior example, let's offset each subpattern by half a second. Note how much more 'dynamic' the pattern is compared to the prior example. However, also observe how the bullets cross and interact - the entire pattern shifts the focus of spawning simply by virtue of having offset timing resulting in consecutive spawning bursts at each side. This pulls the viewer's attention to one side and then the other and back. </p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+		<div style="text-align:center"><canvas id="gamecanvas_5e" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_5e', 'Example 5')">Run Danmakanvas</button></div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Let's crank it up even further with some actual density. We'll fire five instances of Subpattern 1 in a ring over time. To not make this overwhelming, each spawner will fire every two seconds instead of every second. Observe how the different rings interact, crossing and diverging. Also observe how there are locations where bullets from multiple rings collide - consider how this affects the viewer's eye and where they are looking as how the momentarily clumping of bullets affects the density at that point. By controlling density in such a way, you could for example create a situation where a player must micrododge temporarily in an otherwise micrododge-free pattern.</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+		<div style="text-align:center"><canvas id="gamecanvas_5f" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_5f', 'Example 6')">Run Danmakanvas</button><br><button type="button" onclick="setCanvas5fSpawn(25)">Sub1 - 0.75 - Sub2 - 0.25 - Sub1</button><button type="button" onclick="setCanvas5fSpawn(50)">Sub1 - 0.5 - Sub2 - 0.5 - Sub1</button><button type="button" onclick="setCanvas5fSpawn(75)">Sub1 - 0.25 - Sub2 - 0.75 - Sub1</button></div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Finally, we will close with an example where two instances of Subpattern 2 are on the sides and alternate with two instances of Subpattern 1. The three buttons dictate what fraction of a second offset is used between the subpattern spawns. The timing of this gap allows the subpatterns to interact in different ways - test the three out.  Observe how the bullets interact (and how the time difference causes them to meet at different places). Default is the first option (Sub1 - 0.75 - Sub2 - 0.25 - Sub1)</p>
+	      </div></div>
+	      <h2 class="ph3tutorialheader" id="sub3b">Part 3b: Bullet Speed and Spacial Density</h2>
+	      <p>Now that we've shown some examples, it should be clear that the way you space and time your subpatterns can have a tremendous impact on the flow and aesthetics of a pattern as well as how bullets bunch up or spread out. However, it's worth noting that throughout these, we never actually varied the speed of the bullets themselves. In the previous section, we noted that micrododging involves heavy viewer/player focus on a small area and that fast bullets did not constitute micrododging.</p>
+	      <p>Why is this so? The faster a bullet, the larger area the player or viewer must pay attention to in order to understand the trajectory of the bullet. By definition, this means losing focus on a certain area of the screen. As the player's focus expands, it becomes harder to track many bullets, and spacial density is typically lost or traded in for techniques that are easier for the player/viewer to keep track of (e.g. streaming). A natural consequence of faster bullets is that they leave the field of view faster - affecting both spacial and temporal density. The opposite of this holds true as well - slower bullets leave the field of view more slowly and allow the player to focus on a much smaller area of the screen.</p>
+	      <p>We'll illustrate this by showing examples of the first four above side by side with a version with double speed.</p>
+	      <p>TODO: Side by side comparison of above but with double speed.</p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: Controlled Density - Fewer Bullets != Lower Difficulty</h2>
 	      <p></p>
 	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: Negative Space - Organizing Chaos into Beauty</h2>
+	      <p></p>
+	      <p></p>
+	      <p>We will close this lesson by using Doremy as an example of how a combination of spacial and temporal density can result in patterns that form 'paths' for the player.</p>
+	      <p>TODO: Video. Then Example - single bullet aimed at player from fixed radius, rotating. Then Example - five bullets with one aimed at player to showcase spacial density additions</p>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <br>            </div>          </div>
           <div class="tutnavbar">
