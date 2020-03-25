@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Mar 19, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupENG('Mar 24, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div id="menubar">
         <ul>
           <li><a href="https://sparen.github.io" title="AFCDTech">Home</a></li>
@@ -41,7 +41,8 @@
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
 	      </div>	      <h2 class="ph3tutorialheader" id="sub1">Part 1: Guide Introduction</h2>
-	      <p>Why exactly is danmaku referred to as 'Bullet Hell'? Why is it sometimes translated as 'Curtain Fire'? The answer here lies in density - bullet density to be precise. Unlike shooters where you dodge a small number of bullets that come at high speeds, danmaku games focus on incredible amounts of bullets. However, even within danmaku games, there are different categories and styles, ranging from the reflex-heavy rapid-fire CAVE games to the heavily subpatterned Len'en games to the slow and heavily artistic Touhou games.</p>
+	      <p><strong>NOTE: There are a large number of canvases on this page. As there is currently no way to turn a canvas off, we recommend that you refresh the page if your experience performance issues.</strong></p>
+              <p>Why exactly is danmaku referred to as 'Bullet Hell'? Why is it sometimes translated as 'Curtain Fire'? The answer here lies in density - bullet density to be precise. Unlike shooters where you dodge a small number of bullets that come at high speeds, danmaku games focus on incredible amounts of bullets. However, even within danmaku games, there are different categories and styles, ranging from the reflex-heavy rapid-fire CAVE games to the heavily subpatterned Len'en games to the slow and heavily artistic Touhou games.</p>
 	      <p>In this guide, we will discuss bullet density, how it can be utilized to suggest or blend different dodging methods, how temporal and spacial density differ, how to control density, and how to utilize a lack of bullets to enhance the gameplay or aesthetic experience.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: Micrododging vs Macrododging - Variations in Subpattern Interaction and Design</h2>
 	      <p>We'll introduce out discussion on bullet density with micrododging and macrododging, which we gave rough definitions for in the prior guide. These are two general terms that get thrown around a lot and they are good to understand. Note that it is incredibly rare for a pattern to be pure 'micrododge' or pure 'macrododge' - they exist on a spectrum and work very well in harmony, and they represent a subset of the types of patterns one can find in danmaku.</p>
@@ -83,7 +84,7 @@
 		</div><div style="flex: 1;text-align:center">
 		<p>Large spiraling rings of spirits force the player to dodge between them while Orin's other subpattern on repeat adds complexity to the dodging.</p>
 	      </div></div>
-	      <p>Now we'll cover examples of Micrododging. Imperishable Night as a game focuses incredibly heavily on micrododging as a design pattern and is a good example for study. We will showcase examples from Eirin (Imperishable Night), Sanae (Mountain of Faith), and Ringo (Legacy of Lunatic Kingdom). It is worth noting that a lot of bullets does not imply micrododging - we will cover some of these more surprising concepts in Part 4.</p>
+	      <p>Now we'll cover examples of Micrododging. Imperishable Night as a game focuses incredibly heavily on micrododging as a design pattern and is a good example for study. We will showcase examples from Eirin (Imperishable Night), Sanae (Mountain of Faith), and Ringo (Legacy of Lunatic Kingdom). It is worth noting that simply hving a lot of bullets does not imply micrododging - we will cover some of these more surprising concepts in Part 4.</p>
 	      <div style="display: flex;"><div style="flex: 1">
 	      <div class="ytembed_sm">
 	        <iframe src="https://www.youtube.com/embed/AY7QEEnSGVU?start=226" frameborder="0" allowfullscreen></iframe>
@@ -93,20 +94,20 @@
 	      </div></div>
 	      <div style="display: flex;"><div style="flex: 1">
 	      <div class="ytembed_sm">
-	        <iframe src="https://www.youtube.com/embed/xDC5LHRz7fI?start=80" frameborder="0" allowfullscreen></iframe>
+	        <iframe src="https://www.youtube.com/embed/xDC5LHRz7fI?start=79" frameborder="0" allowfullscreen></iframe>
 	      </div>
 		</div><div style="flex: 1;text-align:center">
 		<p>Sanae midboss spell 1 - Star formations disintegrate into slow moving highly-dense bullets from all sides.</p>
 	      </div></div>
 	      <div style="display: flex;"><div style="flex: 1">
 	      <div class="ytembed_sm">
-	        <iframe src="https://www.youtube.com/embed/9D6fj5AUmnM?start=520" frameborder="0" allowfullscreen></iframe>
+	        <iframe src="https://www.youtube.com/embed/9D6fj5AUmnM?start=519" frameborder="0" allowfullscreen></iframe>
 	      </div>
 		</div><div style="flex: 1;text-align:center">
 		<p>Ringo last spell - Complex bullet groups disintegrate into a dense cloud of slow-moving bullets.</p>
 	      </div></div>
 	      <h2 class="ph3tutorialheader" id="sub2a">Part 2a: Implementing Macrododging</h2>
-	      <p>Earlier we described macrododging as a way to make the player focus on the pattern as a whole and to pay attention to a large part of the screen. In addition, we used Sese and Lumen as examples of pure macrododging, where the entire focus of a pattern was on dodging large obstacles. However, we don't need multi-directional crazy patterns to demonstrate macrododging. In fact, we covered the foundations for macrododging in the prior guide. </p>
+	      <p>Earlier we described macrododging as a way to make the player focus on the pattern as a whole and to pay attention to a large part of the screen. In addition, we used Sese and Lumen as examples of pure macrododging, where the entire focus of a pattern was on dodging large obstacles. However, we don't need multi-directional crazy patterns to demonstrate macrododging. In fact, we covered the foundations for macrododging in the previous guide. </p>
 	      <p>Here we will demonstrate two of the many techniques that can be used to create macrododging environments - walls and same-angle rings. Other techniques, like the spinning radius method employed by Sese and Lumen, the variable shape method, and the large object method popularized by Utsuho sunspam/Unzan brofist + derivative troll scripts, will not be covered here (but you should definitely take them into consideration).</p>
 	      <p>We'll start with walls. In the following example, we will have rings of spreads. Each spread will have a fixed angle range, and there will be a control slider that dictates how many bullets will be in the spread. Imagine that you're the player - what is it like dodging with very few bullets per spread vs dodging with many bullets per spread?</p>
 		<div style="text-align:center"><canvas id="gamecanvas_1" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', 'Spread and Walls');">Run Danmakanvas</button></div>
@@ -132,16 +133,16 @@
 	      <div class="ytembed_sm">
 	        <iframe src="https://www.youtube.com/embed/KACaRij6QVo?start=254" frameborder="0" allowfullscreen></iframe>
 	      </div>
-	      <p>We will fire three subpatterns in this example - a ring from the center and spreads from two points rotating about the center.</p>
+	      <p>In the Imperishable Night example, many different subpatterns layer on top of one another to create a slow-movng, dense cloud of bullets from all sides that requires intense concentration. Now we will demonstrate a much simpler version. We will fire three subpatterns in the following example - a ring from the center and spreads from two points rotating about the center.</p>
 		<div style="text-align:center"><canvas id="gamecanvas_3" width="480" height="480" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_3', 'Micrododging');">Run Danmakanvas</button></div>
-	      <p>There are many ways in which you can create a micrododge heavy pattern, but in general simple layering of different subpatterns is the easiest way to do so. Place your eye on an empty space in the above pattern and pretend you're the player. Before you know it, you'll experience mental filtering (as discussed at the end of Guide 2) and you'll be focused solely on wherever your 'player' is. That's the essence of micrododge.</p>
+	      <p>There are many ways in which you can create a micrododge heavy pattern, but in general simple layering of different subpatterns is the easiest way to do so. Place your eye on an empty space in the above pattern and pretend you're the player. Before you know it, you'll experience mental filtering (as discussed at the end of Guide 2) and you'll be focused solely on wherever your 'player' is (though the quickly rotating spawners may catch your eye as well). That's the essence of micrododge.</p>
 	      <h2 class="ph3tutorialheader" id="sub2c">Part 2c: Finding a balance between Macrododging and Micrododging</h2>
 	      <p>Micrododging and macrododging work best together. Finding a balance between the two, like was done with Utsuho in Subterranean Animism, can make a pattern dynamic and enjoyable. This isn't to say that pure macrododging and pure micrododging aren't dynamic or enjoyable, but they put intense strain on the player or viewer and should not be the only component of your game or visualization. Try to combine the two in order to create patterns that require the player to dodge large bullets while also needing to pay attention to smaller ones. </p>
 	      <p>Remember - these are tools in your toolbelt as a danmaku designer. What kind of movement do you want your player to make? Where should the focus of the pattern be? What speed do you want your player to move at? Take these things into consideration and your patterns will be more vibrant and enjoyable as a result.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Spacial and Temporal Density</h2>
 	      <p>Back in <a href="ddsga1.html">Guide 1</a>, we touched upon spawn rate and bullet speed. Now we will go into further depth as we cover spacial and temporal density.</p>
-	      <p>Bullet spawning can be dense in the spacial sense (bullet density) as well as the temporal sense (timing & pacing). Think variation over space and time. Spacial density is the more obvious component - the more bullets in a given area, the more dense the area is spatially. Temporal density is a less obvious component - the timing and pacing of the attack can create and disperse density.</p>
-	      <p>We'll first show how adjusting spawn location and spawn time can completely change a pattern. Then we will take a closer look at bullet speed and how it affects density.</p>
+	      <p>Bullet spawning can be dense in the spacial sense (bullet density, including spawn rate, spawn quantity, and speed) as well as the temporal sense (timing & pacing). Think variation over space and time. Spacial density is the more obvious component - the more bullets in a given area, the more dense the area is spatially. Temporal density is a less obvious component - the timing and pacing of the attack can create and disperse density.</p>
+	      <p>We'll first show how adjusting spawn location and spawn time can completely change a pattern. Then we will take a closer look at bullet speed and how it affects both forms of density.</p>
 	      <h2 class="ph3tutorialheader" id="sub3a">Part 3a: Creating Patterns from Fundamentals</h2>
 	      <p>Patterns are rarely comprised of a single subpattern. Different subpatterns interact on the screen both in space and time, and the interactions between subpatterns (and how they are designed) is a fundamental part of the pattern. Given two subpatterns, spawning them in different locations or displaced over time can cause them to interact in completely different ways, and determining how to take advantage of these displacement techniques is one of the most powerful abilities a danmaku designer can have.</p>
 	      <p>In the following examples, we will have two subpatterns. One is a repeating dense green ring. The other is a repeating stack of orange rings. They have the same angles, number of bullets, and speed. Each will be spawned approximately once a second.</p>
@@ -180,17 +181,77 @@
 	      <h2 class="ph3tutorialheader" id="sub3b">Part 3b: Bullet Speed and Spacial Density</h2>
 	      <p>Now that we've shown some examples, it should be clear that the way you space and time your subpatterns can have a tremendous impact on the flow and aesthetics of a pattern as well as how bullets bunch up or spread out. However, it's worth noting that throughout these, we never actually varied the speed of the bullets themselves. In the previous section, we noted that micrododging involves heavy viewer/player focus on a small area and that fast bullets did not constitute micrododging.</p>
 	      <p>Why is this so? The faster a bullet, the larger area the player or viewer must pay attention to in order to understand the trajectory of the bullet. By definition, this means losing focus on a certain area of the screen. As the player's focus expands, it becomes harder to track many bullets, and spacial density is typically lost or traded in for techniques that are easier for the player/viewer to keep track of (e.g. streaming). A natural consequence of faster bullets is that they leave the field of view faster - affecting both spacial and temporal density. The opposite of this holds true as well - slower bullets leave the field of view more slowly and allow the player to focus on a much smaller area of the screen.</p>
-	      <p>We'll illustrate this by showing examples of the first four above side by side with a version with double speed.</p>
-	      <p>TODO: Side by side comparison of above but with double speed.</p>
-	      <p></p>
+	      <p>We'll illustrate this by showing examples of the first three above side by side with a version with double speed.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_6a" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_6b" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_6a', 'Example 1 - Regular');createNewGame('gamecanvas_6b', 'Example 1 - Double Speed')">Run Danmakanvas</button></div>
+	      <p>In this first example, note how subsequent burst catch up with the former - behavior that was not in the first example. If the canvas size was larger and there was an actual player, imagine how it would be dodging at the bottom where the two patterns overlap.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_6c" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_6d" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_6c', 'Example 2 - Regular');createNewGame('gamecanvas_6d', 'Example 2 - Double Speed')">Run Danmakanvas</button></div>
+	      <p>In this example, the double speed pattern feels less dense precisely because it *is* less dense. Look at the bullet counts and how they differ. Note that the visual structure present in the first example is lost in the second due to only one ring being present on the canvas at a time due to increased speeds. However, remember that this example is exactly the same as the one above, just with staggered spawn times. Compare the two - this is an example of how changing the timing of a subpattern can create one set of patterns with one speed, and actually lessen the distinctness of the patterns at a higher speed.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_6e" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><canvas id="gamecanvas_6f" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_6e', 'Example 3 - Regular');createNewGame('gamecanvas_6f', 'Example 3 - Double Speed')">Run Danmakanvas</button></div>
+	      <p>Here, as in the prior examples, overlaps between patterns are reduced and the pattern seems to lose some structure. However, imagine if the ring was a stack of rings - the gameplay with stacks would be completely different from the slower speed version. Different speeds can allow for different types of groups to shine.</p>
+	      <p>By now you should understand that with faster bullets, overall spacial density is lowered and patterns can lose their form. However, it is also an opportunity for other potential subpattern components to shine, and so you should continue to experiment and see what kind of bullet speeds work well with one another. In addition, by upping the pacing, the character of the pattern can change, so be aware of how the temporal density of your pattern changes and how that affects how the player or viewer experiences your pattern.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: Controlled Density - Fewer Bullets != Lower Difficulty</h2>
-	      <p></p>
-	      <p></p>
+	      <p>Earlier, I noted that streaming, even with thousands of bullets, is not micrododging. This is because the player can literally close their eyes and tap in one direction a few times to completely dodge the subpattern. More bullets does not mean higher difficulty. And, vice versa, fewer bullets does not mean a lower difficulty.</p>
+	      <p>First, let's start with an example where a pattern with many bullets turns out to be comparatively easy to dodge.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/0q-qnyD5lsk?start=373" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Sengo (BoSM Extra) - A massive swarm of bullets spawns along a line near the top of the screen. However, most of these bullets leave the screen immediately and the structure of the pattern provides clear paths for the player to dodge along.</p>
+	      </div></div>
+	      <p>The above is just one example of the phenomenon - in a future guide we will discuss in greater detail how small changes in a pattern can make it completely different difficulty wise (e.g. different change in angle. There are some perhaps unexpected occurrences here due to the way the math plays out.</p>
+	      <p>But now let's discuss the opposite of the above. When it comes to bullet density, a shocking amount of difficulty can be drawn from a small number of bullets without needing curvy lasers or complex gameplay mechanics. The structure of a bullet group and its timing can prove to be more deadly than sheer numbers. For example, a seemingly innocuous pattern can merge to form ridiculously high spacial density at the very moment the player tries to dodge it. Sometimes how the player dodges determines the difficulty.</p>
+	      <p>For this section, I will default to examples of patterns with fewer bullets but unsuspectingly high difficulty.</p>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/Itt0BNGd1nk?start=134" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Miko - Bullets with angular velocity are too dense to pass at the top, and cross over where the player typically dodges to form a wall if the player does not time their movement correctly. By the time they are less dense, they are at the edges/corners of the screen, and so the density drop cannot be taken advantage of by the player.</p>
+	      </div></div>
+	      <div style="display: flex;"><div style="flex: 1">
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/_4AfcpCm_qM?start=153" frameborder="0" allowfullscreen></iframe>
+	      </div>
+		</div><div style="flex: 1;text-align:center">
+		<p>Kutaka - Five rings of bullets accelerate from the four corners of the screen as well as her position. Only a few bullets are ever near the player, but their acceleration and the random variation mean that they will interact in a completely different way each time, and will meet in different ways depending one where on the screen the player is dodging.</p>
+	      </div></div>
+	      <p>Finally, let's discuss a special case - cases where fewer bullets on easier difficulties potentially make the attack harder, or may cause the pattern to be dodged in an entirely different way. These are cases where the density of bullets is actually necessary to detail how to dodge the pattern.</p>
+	      <p>Doremy from Legacy of Lunatic Kingdom is perhaps the best example of controlled density and is therefore simultaneously the worst offender in this category. Many of her spellcards provide a clear movement for the player to follow in order to dodge despite having copious amounts of bullets. However, density and pattern structure are reduced so much on Easy and Normal difficulty that her first boss spell in Stage 3 is most easily dodged a completely different way than on Lunatic.</p>
+	      <p>Watch this attack on Easy, then Normal, then Lunatic. Then compare how the attack is structured (and subsequently dodged) on Lunatic to how the attack is structured on Normal and Easy. How is the pattern telegraphed? What structural changes occur to the subpatterns, and how does this change player behavior? What different ways can the patterns be dodged? And, somewhat importantly, is the apparent change in the dodging method actually better for a player with a lower skill level who is not expected to be able to do perfect circular ring movement?</p>
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/kACPLKNq0U8?start=877" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/nmBjrIzbQ1M?start=252" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/9D6fj5AUmnM?start=748" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <p>This is all something to take into consideration when designing a pattern - especially one meant to be played - what are the expectations of your player or viewer, and does your pattern design work well with those expectations?</p>
+	      <p>To close off this section, I'd like to do a little bit of self-promotion.</p>
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/s9vgI5BluVQ?start=175" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <p>This spellcard uses covering up expanding parts of the screen as a mechanic. In order to properly telegraph attacks, the solution chosen was to use stacks of bullets. Due to the player or viewer being able to group the  bullets in a stack together mentally, it allows them to predict where the hidden parts of it are. This attack simply would not work if there were fewer bullets in the stacks. For more on how this works, I'd recommending watching <a target="_blank" href="https://www.youtube.com/watch?v=c1qdyszaeTU">Gestalt - The Parts and the Whole - Extra Credits</a> - something that is quite useful in game design even if it is not directly applicable to this particular guide.</p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: Negative Space - Organizing Chaos into Beauty</h2>
-	      <p></p>
-	      <p></p>
-	      <p>We will close this lesson by using Doremy as an example of how a combination of spacial and temporal density can result in patterns that form 'paths' for the player.</p>
-	      <p>TODO: Video. Then Example - single bullet aimed at player from fixed radius, rotating. Then Example - five bullets with one aimed at player to showcase spacial density additions</p>
+	      <p>We will close this lesson by using Doremy as an example of how a combination of spacial and temporal density can result in patterns that form 'paths' for the player. We've already shown an example above, but the question is how this is actually achieved.</p>
+	      <p>Now, negative space in danmaku doesn't seem obvious at first. After all, the one major aspect of danmaku is to have bullets everywhere. But when we think of negative space as a bullet-free area over a period of time, it becomes an aspect of temporal density - the negative space is created by a specific aspect of the pattern working over time, and the pacing at which it is executed dictates how apparent the negative space is as well as how efficiently it can be used by the player or the viewer as a way to move their focus around the screen.</p>
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/hMvYEAxNtRc?start=751" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <p>Above is one of the most well-known examples of how the player can be guided along a path by a pattern's design. Now, looking at it like this, it may be hard to understand how exactly it guides the player. So we'll observe the same pattern on Normal difficulty.</p>
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/nmBjrIzbQ1M?start=284" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <p>Fundamentally, we have a spawner moving in a ring over time, spawning a group of bullets. Their angle has an offset in the opposite direction of the spin, but that's not fundamental to this pattern. In the example below, all of the bullet groups face away from the center (and therefore face towards the center since I have an even number of bullets). </p>
+		<div style="text-align:center"><canvas id="gamecanvas_7" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_7', 'Doremy Example - Adapted');">Run Danmakanvas</button></div>
+	      <p>The important aspect here is the spawn time. Only by having an offset in the spawning do we get the moving area of negative space. In the below, everything spawns at once with no delay.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_8" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_8', 'Doremy Example - No delay');">Run Danmakanvas</button></div>
+	      <p>A lot less dramatic, huh.</p>
+	      <p>So... what's the secret, really? Well, as shown in the canvas below, it's really just hiding in plain sight. Aim at a point. Spawn over time in a ring. Each component of the ring will hit the center at a different time. The resulting shape over time is what we just experienced.</p>
+		<div style="text-align:center"><canvas id="gamecanvas_9" width="320" height="320" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_9', 'Doremy Example - Fundamentals');">Run Danmakanvas</button></div>
+	      <p>With that, we conclude this guide. Hopefully you have a better understanding of bullet density, pattern pacing, and how they can be controlled, experimented with, and manipulated to discover new and exciting ways to design your patterns. Always keep in mind that things can interact in interesting ways, especially if a few characteristics are tweaked here and there, and keep in mind that sometimes, things are not what they seem. I'll see you all in the next guide.</p>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <br>            </div>          </div>
           <div class="tutnavbar">

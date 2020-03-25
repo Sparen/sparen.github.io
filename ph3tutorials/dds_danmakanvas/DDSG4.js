@@ -43,6 +43,33 @@ function getPluralController(currgame, canvasid) {
         case "gamecanvas_5f":
             return new Plural_Constructor([new Single_5f(currgame)], currgame);
             break;
+        case "gamecanvas_6a":
+            return new Plural_Constructor([new Single_5a(currgame)], currgame);
+            break;
+        case "gamecanvas_6b":
+            return new Plural_Constructor([new Single_6b(currgame)], currgame);
+            break;
+        case "gamecanvas_6c":
+            return new Plural_Constructor([new Single_5b(currgame)], currgame);
+            break;
+        case "gamecanvas_6d":
+            return new Plural_Constructor([new Single_6d(currgame)], currgame);
+            break;
+        case "gamecanvas_6e":
+            return new Plural_Constructor([new Single_5c(currgame)], currgame);
+            break;
+        case "gamecanvas_6f":
+            return new Plural_Constructor([new Single_6f(currgame)], currgame);
+            break;
+        case "gamecanvas_7":
+            return new Plural_Constructor([new Single_7(currgame)], currgame);
+            break;
+        case "gamecanvas_8":
+            return new Plural_Constructor([new Single_8(currgame)], currgame);
+            break;
+        case "gamecanvas_9":
+            return new Plural_Constructor([new Single_9(currgame)], currgame);
+            break;
         default:
             console.log("getPluralController(): Canvas ID " + canvasid + " could not be recognized. Please check to make sure that the canvas ID is correct and/or supported.");
     }
@@ -135,13 +162,13 @@ function Single_3(currgame) {
         angleT1 += Math.PI/60;
         angleT2 -= Math.PI/60;
         if (currgame.everyinterval(5)) { 
-            let newshots1 = CreateSpreadA1(5, Math.PI/15, GetCenterX(currgame) + 64*Math.cos(angleT1), GetCenterY(currgame) + 64*Math.sin(angleT1), 1.5, angleT1 - Math.PI/3, "#FF8888", 4, 8, 1, 0, currgame);
+            let newshots1 = CreateSpreadA1(5, Math.PI/15, GetCenterX(currgame) + 64*Math.cos(angleT1), GetCenterY(currgame) + 64*Math.sin(angleT1), 1, angleT1 - Math.PI/3, "#FF8888", 4, 8, 1, 0, currgame);
             let objctr = 0;
             for (objctr = 0; objctr < newshots1.length; objctr += 1) {
                 let currbullet = newshots1[objctr];
                 SetShotGraphic(currbullet, "OVAL", "#FF4444", 2, 8, 4, 2, true, 0);
             }
-            let newshots2 = CreateSpreadA1(3, Math.PI/18, GetCenterX(currgame) + 128*Math.cos(angleT2), GetCenterY(currgame) + 128*Math.sin(angleT2), 1.75, angleT2 + Math.PI/3, "#FF8888", 4, 8, 1, 0, currgame);
+            let newshots2 = CreateSpreadA1(3, Math.PI/18, GetCenterX(currgame) + 128*Math.cos(angleT2), GetCenterY(currgame) + 128*Math.sin(angleT2), 1.25, angleT2 + Math.PI/3, "#FF8888", 4, 8, 1, 0, currgame);
             objctr = 0;
             for (objctr = 0; objctr < newshots2.length; objctr += 1) {
                 let currbullet = newshots2[objctr];
@@ -149,7 +176,7 @@ function Single_3(currgame) {
             }
         }
         if (currgame.everyinterval(18)) { 
-            CreateRingA1(36, GetCenterX(currgame), GetCenterY(currgame), 1, Math.random()*Math.PI*2, "#4444FF", 2, 3, 1, 0, currgame);
+            CreateRingA1(36, GetCenterX(currgame), GetCenterY(currgame), 1, Math.random()*Math.PI*2, "#4444FF", 1.5, 3, 1.5, 0, currgame);
         }
         // Remove completed tasks
         let tasktoremove = [];
@@ -395,4 +422,195 @@ function Single_5f(currgame) {
         }
     }
     this.remove = function () { this.tasks = []; }
+}
+
+function Single_6b(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(50)) { 
+            Subpattern1B(GetCenterX(currgame), GetCenterY(currgame), currgame);
+            Subpattern2B(GetCenterX(currgame), GetCenterY(currgame), currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_6d(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(50)) { 
+            Subpattern1B(GetCenterX(currgame), GetCenterY(currgame), currgame);
+        }
+        if (currgame.frameNo % 50 == 25) {
+            Subpattern2B(GetCenterX(currgame), GetCenterY(currgame), currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_6f(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(100)) { 
+            Subpattern1B(GetCenterX(currgame) + 64, GetCenterY(currgame) - 64, currgame);
+            Subpattern2B(GetCenterX(currgame) - 64, GetCenterY(currgame) - 64, currgame);
+        }
+        if (currgame.frameNo % 100 == 50) {
+            Subpattern1B(GetCenterX(currgame) - 64, GetCenterY(currgame) - 64, currgame);
+            Subpattern2B(GetCenterX(currgame) + 64, GetCenterY(currgame) - 64, currgame);
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_7(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(120)) { 
+            this.tasks.push(new Single_7_Task_Ring(currgame));
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_7_Task_Ring(currgame) {
+    this.counter = 0;
+    this.maxcounter = 60; // Maximum time allowed for task to run. Use -1 for non-terminating tasks
+    this.finished = false;
+    let initangle = 0;
+    this.update = function () {
+    	if (currgame.everyinterval(3)) { 
+            CreateRingA2(6, GetCenterX(currgame) + 96 * Math.cos(initangle), GetCenterY(currgame) + 96 * Math.sin(initangle), 0, initangle, 0.01, 3, "#FFFF00", 3, 5, 1, 0, -1, currgame);
+        	initangle += Math.PI*3/20; // We want a 540 degree span
+        }
+
+        this.counter += 1;
+        if (this.counter === this.maxcounter) {
+            this.finished = true;
+        }
+    }
+    this.remove = function () { // Deconstructor. Called by the Single object. Destroy any subtasks or objects created by the task here.
+    }
+}
+
+function Single_8(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(120)) { 
+        	let initangle = 0;
+            for (let i = 0; i < 20; i += 1) { 
+	            CreateRingA2(6, GetCenterX(currgame) + 96 * Math.cos(initangle), GetCenterY(currgame) + 96 * Math.sin(initangle), 0, initangle, 0.01, 3, "#FFFF00", 3, 5, 1, 0, -1, currgame);
+	        	initangle += Math.PI*3/20; // We want a 540 degree span
+	        }
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_9(currgame) {
+    this.tasks = [];
+    this.update = function () { // Main Loop for a given Danmakanvas Instance
+        if (currgame.everyinterval(120)) { 
+            this.tasks.push(new Single_9_Task_Ring(currgame));
+        }
+        // Remove completed tasks
+        let tasktoremove = [];
+        let i;
+        for (i = 0; i < this.tasks.length; i += 1) {
+            this.tasks[i].update();
+            if (this.tasks[i].finished) {
+                tasktoremove.push(i);
+                this.tasks[i].remove();
+            }
+        }
+        for (i = tasktoremove.length - 1; i >= 0; i -= 1) {
+            this.tasks.splice(tasktoremove[i], 1);
+        }
+    }
+    this.remove = function () { this.tasks = []; }
+}
+
+function Single_9_Task_Ring(currgame) {
+    this.counter = 0;
+    this.maxcounter = 60; // Maximum time allowed for task to run. Use -1 for non-terminating tasks
+    this.finished = false;
+    let initangle = 0;
+    this.update = function () {
+    	if (currgame.everyinterval(3)) { 
+            CreateShotA2(GetCenterX(currgame) + 96 * Math.cos(initangle), GetCenterY(currgame) + 96 * Math.sin(initangle), 0, initangle + Math.PI, 0.01, 3, "#FFFF00", 3, 5, 1, 0, -1, currgame);
+        	initangle += Math.PI*3/20; // We want a 540 degree span
+        }
+
+        this.counter += 1;
+        if (this.counter === this.maxcounter) {
+            this.finished = true;
+        }
+    }
+    this.remove = function () { // Deconstructor. Called by the Single object. Destroy any subtasks or objects created by the task here.
+    }
 }
