@@ -46,7 +46,7 @@
 		<li><strong>Static-Angled Bullets</strong> where there is no rotation at all.</li>
 	      </ul>
 	      <p>Loose and Straight Lasers fall under the category of Directional Bullets, while bullets that rotate independently of their movement direction are considered Non-Directional Bullets. Curvy Lasers are considered strings of Bullets, so the individual components fit into the Directional Bullets category. Run the below example to see examples of these bullet types.</p>
-		<div style="text-align:center"><canvas id="gamecanvas_1" width="640" height="160" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', '')">Run Danmakanvas</button></div>
+		<div style="text-align:center"><canvas id="gamecanvas_1" width="640" height="160" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_1', '')">Run Danmakanvas</button> <button type="button" onclick="stopGame('gamecanvas_1')">Stop Danmakanvas</button></div>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: Bullets and Spawners</h2>
 	      <p>Now that we've covered types of bullets, we'll take a (very) brief look at Spawners.</p>
 	      <p>As mentioned in the previous guide, a Spawner (or Emitter) is where a bullet spawns. This is generally true, though we will go into greater depth with this when we discuss radial offset spawning and line spawning.</p>
@@ -58,7 +58,7 @@
 	      <p>While the link between these two aspects of bullet spawning may not seem obvious at first glance, from an aesthetic perspective and from a gameplay perspective, there is a key link - density.</p>
 	      <p>If the spawn rate is high and speeds are slow, bullets will be bunched closely together. If the spawn rate is low and speeds are high, bullets will be far apart. The implications of this mean that a careful balance must be maintained to have the appropriate number of bullets on the screen at any given time.</p>
 	      <p>Try out the following interactive example below. Please note that it runs at 50 FPS, so a rate of 5 will result in 10 bullets/second. The last two rows are user controlled - after changing a value, click outside of the box for the changes to take effect. Please note that interval values must be integers, as internally, Danmakanvas computes a modulus.</p>
-		<div style="text-align:center"><canvas id="gamecanvas_2" width="640" height="240" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_2', '')">Run Danmakanvas</button>
+		<div style="text-align:center"><canvas id="gamecanvas_2" width="640" height="240" style="border:1px solid #DDDDDD;"></canvas><br><button type="button" onclick="createNewGame('gamecanvas_2', '')">Run Danmakanvas</button> <button type="button" onclick="stopGame('gamecanvas_2')">Stop Danmakanvas</button>
 	      <p>Row 5 Speed; Interval: <input type="number" id="speed1" step="0.1" value="4.5" onchange="updateSpeedAndRate()"> <input type="number" id="rate1" min="1" step="1" value="6" onchange="updateSpeedAndRate()"></p>
 	      <p>Row 6 Speed; Interval: <input type="number" id="speed2" step="0.1" value="1" onchange="updateSpeedAndRate()"> <input type="number" id ="rate2" min="1" step="1" value="12" onchange="updateSpeedAndRate()"></p></div>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
