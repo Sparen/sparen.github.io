@@ -13,7 +13,7 @@ var dnhph3docs_system = {
                 {
                     "fname": "CreatePlayerShotA1",
                     "args": ["xcoord : number", "ycoord : number", "speed : number", "angle : number (degrees)", "damage : number", "penetration : number (int)", "graphic : number (int)"],
-                    "returnv": "",
+                    "returnv": "object ID of new player shot : number (Object ID)",
                     "description": "Fires a player shot with the specified position, speed, angle, damage, penetration, and graphic ID from the player shotsheet.",
                     "notes": "If the player is not permitted to shoot, then this function returns void."
                 },
