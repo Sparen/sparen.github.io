@@ -1002,7 +1002,7 @@ var dnhph3docs_object = {
                     "notes": ""
                 },
                 {
-                    "fname": "ObjFileB_GetSeek",
+                    "fname": "ObjFileB_Seek",
                     "args": ["objID : number (Object ID)", "filepointer : number (int)"],
                     "returnv": "",
                     "description": "Sets the position of the current file pointer.",
