@@ -1500,6 +1500,13 @@ var DNHFartobj = {
             "scripter" : "Lollipop",
             "scriptname" : "Fidget Spinner",
             "dvdb" : ""
+        },
+        {
+            "id": "12",
+            "ytid": "sRr2-V0Iczc",
+            "scripter" : "Sparen",
+            "scriptname" : "Snomnomnom ~ The Trial of Snomsnom",
+            "dvdb" : "sparenofiria.html#snomnomnom"
         }
     ]
 };
