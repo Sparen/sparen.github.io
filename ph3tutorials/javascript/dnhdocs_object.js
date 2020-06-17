@@ -1493,21 +1493,21 @@ var dnhph3docs_object = {
                 {
                     "fname": "ObjShot_GetDamage",
                     "args": ["objID : number (Object ID)"],
-                    "returnv": "damage of shot object associated with objID : bool",
+                    "returnv": "damage of shot object associated with objID : number",
                     "description": "Returns the damage of the shot object associated with objID.",
                     "notes": "Player shots only."
                 },
                 {
                     "fname": "ObjShot_GetPenetration",
                     "args": ["objID : number (Object ID)"],
-                    "returnv": "penetration of shot object associated with objID : bool",
+                    "returnv": "penetration of shot object associated with objID : number (int)",
                     "description": "Returns the penetration of the shot object associated with objID.",
                     "notes": "Player shots only."
                 },
                 {
                     "fname": "ObjShot_GetDelay",
                     "args": ["objID : number (Object ID)"],
-                    "returnv": "delay of shot object associated with objID : bool",
+                    "returnv": "delay of shot object associated with objID : number (int)",
                     "description": "Returns the delay of the shot object associated with objID.",
                     "notes": ""
                 },
@@ -1521,7 +1521,7 @@ var dnhph3docs_object = {
                 {
                     "fname": "ObjShot_GetImageID",
                     "args": ["objID : number (Object ID)"],
-                    "returnv": "graphic ID of shot object associated with objID : bool",
+                    "returnv": "graphic ID of shot object associated with objID : number (int)",
                     "description": "Returns the graphic ID of the shot object associated with objID.",
                     "notes": ""
                 },
