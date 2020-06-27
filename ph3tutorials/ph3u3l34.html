@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Mar 29, 2020')">
+  <body onload="setupENG('Jun 27, 2020')">
     <div id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -61,6 +61,7 @@
 	          <li><a href="#sub7">Part 7: How do I handle player events?</a></li>
 	          <li><a href="#sub8">Part 8: What are player shots and how do player shotsheets work?</a></li>
 	          <li><a href="#sub9">Part 9: What is a spell object and how are they controlled?</a></li>
+	          <li><a href="#sub10">Part 10: What else can (or should) I add to a player?</a></li>
 	          <li><a href="#subs">Summary</a></li>
 	          <li><a href="#subf">Sources and External Resources</a></li>
 	        </ul>
@@ -84,16 +85,76 @@
 	      <p>With that introduction out of the way, let's get started.</p>
 	      <h2 class="ph3tutorialheader" id="sub3">Part 3: How do I create the structure of a player script?</h2>
 	      <p>As noted earlier, we will be working from scratch here instead of starting by analyzing the default player script. We will go section by section, but let's start with our general framework.</p>
-	      <p></p>
-	      <p>TODO</p>
-	      <p></p>
-	      <p></p>
+	      <p>First, a player script is like any other Danmakufu script. You have a header, your routines, and your other miscellaneous supporting files, assets, and scripts. Of particular interest is the player shotsheet, which we will get to later on.</p>
+	      <p>First, let's get our Danmakufu Header sorted out.</p>
+	      <pre class="prettyprint"><code>#TouhouDanmakufu[Player]
+#ScriptVersion[3]
+#ID["DNHTut"]
+#Title["Danmakufu Tutorials - Player Script"]
+#Text["Example player script built for the Danmakufu Tutorials"]
+#ReplayName["DNHTut"]</code></pre>
+	      <p>Let's take this apart. First, we have our usual fields. We specify that the script is a Player script after <code>#TouhouDanmakufu</code>, and use most fields as usual. Title and Text are shown here, but you will almost always want an <code>#Image</code> component - Player scripts are actually one of the few locations where using this is standard since... it's sort of important to know what your player looks like, and is a great way to include artistic style or text-based information that might not fit on the screen with the limited #Text option.</p>
+	      <p><code>#ID</code> and <code>#ReplayName</code> are two important components of a Player script. The former is the ID for the player, <strong>which should be unique across all Danmakufu player scripts if you plan to release your player for general use, and which cannot have spaces.</strong> This ID is very important and is the primary identifier for your player script. The Replay Name on the other hand is exactly what it sounds like - the name associated with your player script in replays. These two fields can be retrieved in Danmakufu using <span class="tooltip" onmouseover="getFxnDocs('GetPlayerID', 'f_gpid_01');"><code> GetPlayerID()</code><span class="tooltiptext" id="f_gpid_01"></span></span> and <span class="tooltip" onmouseover="getFxnDocs('GetPlayerReplayName', 'f_gprn_01');"><code> GetPlayerReplayName()</code><span class="tooltiptext" id="f_gprn_01"></span></span>.</p>
+	      <p>Now, as usual, please create your routines - <code>@Initialize</code>, <code>@MainLoop</code>, <code>@Event</code>, etc. Now, between the header and <code>@Initialize</code>, we will define some global variables that will be global across this script.</p>
+	      <p>The primary one you will want is a reference to the player object itself for when the script runs. For this, we can use something along the lines of <code>let objPlayer = GetPlayerObjectID();</code>. <span class="tooltip" onmouseover="getFxnDocs('GetPlayerObjectID', 'f_gpoid_01');"><code> GetPlayerObjectID()</code><span class="tooltiptext" id="f_gpoid_01"></span></span>, when run, gets the Object ID associated with the player object - this is a special object that supports ObjMove and ObjRender commands among others and is how we will refer to the player object within the script.</p>
+	      <p>Besides this, you may also want to define a shortcut for <code>GetCurrentScriptDirectory()</code>, which we will use for all of the assets we load. We will use <code>csd</code> as our variable name. Do note that in this tutorial, we won't actually cover sound effects - these are up to you to implement. Also note that player scripts in particular should never have absolute paths since they can be moved around quite a bit and it's good to have a player script that you can drop into a completely different directory. This is because most ph3 scripts don't allow the person playing the script to choose from the full selection of players but instead limit them to a specific set of players bundled together with the script.</p>
+	      <p>Now, let's head into <code>@Initialize</code> and call some tasks. We will want to define these as well. First, a task to draw the player sprite. Please create a png file with a single white pixel in it and name it <code>dot.png</code> - normally you'd want actual sprites but for the purpose of simplicity given that this is a tutorial, this should suffice. For now we'll call the player drawing task <code>DrawPlayer</code>. </p>
+	      <p>Since we have no animation, we can have a very simple (and very uninspiring) draw loop.</p>
+	      <pre class="prettyprint"><code>task DrawPlayer {
+    let path = csd ~ "white.png";
+    ObjPrim_SetTexture(objPlayer, path);
+    ObjSprite2D_SetSourceRect(objPlayer, 0, 0, 15, 15);
+    ObjSprite2D_SetDestCenter(objPlayer);
+    loop {
+        // Normally, you would check against GetVirtualKeyState(VK_LEFT/VK_RIGHT) and KEY_PUSH/KEY_HOLD to see if you need a different sprite, but we're just using a white box here
+        yield;
+    }
+}</code></pre>
+	      <p>In this tutorial we won't be covering the animation process since that really depends on your spritesheet. Note that you do NOT need to manually set positions - remember that you are operating directly on the player object when you run the above commands. The infinite loop here ensures that the rendering task runs as long as the script is running.</p>
+	      <p>For the future, please create a <code>PlayerShot</code> task. Also add a <code>yield;</code> to <code>@MainLoop</code> so that tasks can run in this script.</p>
+	      <p>At this point, you should actually be able to run the tutorial player script and do pretty much everything except for bomb. Of course there are many things missing and some things (e.g. movement speed) are clearly set to some default, but we'll get to replacing those next. Do note that the player controls are built into Danmakufu and that you don't need to manually code them in, so movement and other virtual key controlled actions are done for you.</p>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I set the player's parameters?</h2>
-	      <p></p>
-	      <p></p>
+	      <p>Players have all kinds of parameters. Hitbox size, movement speed, deathbomb window, etc. See <a href="docs_standard.html#sub14">Player Functions</a> for a list. We'll go through these one by one.</p>
+	      <p>First, player speed. Each player has two speeds - one for when they are unfocused and one for when they are focused. Balancing these is difficult but depends on what kind of player you are designing.</p>
+	      <p>Next, the player clip. By default, the player can move throughout the entire playing field but no further. However, you can change the player clip so that the player is further restricted. All four LTRB values are relative to the top left of the playing field.</p>
+	      <p>Next, we have lives, spells, and power. The first should never be set in a player script unless you are trying to make an invincible player - <span class="tooltip" onmouseover="getFxnDocs('SetPlayerLife', 'f_splife_01');"><code> SetPlayerLife()</code><span class="tooltiptext" id="f_splife_01"></span></span> usage should be reserved for the package/stage/plural instead. The second is a little quirky - adding spells based off of a spell extend system should typically be associated with the package/stage/plural if the system is tied to the game's gimmick but should be associated with the player instead if it's a player-specific gimmick. Removal of bombs and what happens to bombs on bombing/player death/deathbombing should be exclusively controlled in the player script unless you have some kind of gameplay gimmick. Finally, power is typically irrelevant since there is no standard system. It's fine to ignore this entirely.</p>
+	      <p>Next we have invincibility frames. <span class="tooltip" onmouseover="getFxnDocs('SetPlayerInvincibilityFrame', 'f_spinvfr_01');"><code> SetPlayerInvincibilityFrame()</code><span class="tooltiptext" id="f_spinvfr_01"></span></span> starts ticking from when it is called so we won't concern ourselves with this at the moment (it primarily comes into play when the player bombs/dies).</p>
+	      <p>Now we have three fields associated with player death and rebirth. Down State Frames determine how long until respawning occurs. Rebirth Frames specify the deathbomb window, with a default of 15 frames (1/4 second). Finally, there are Rebirth Loss Frames, which effectively make it harder to perform consecutive deathbombs by shortening the window over time. This is handled independently from the deathbomb window as far as the raw player attribute goes, which means that the actual stored value of the deathbomb window does not change - only the effective value that the player sees changes. When the player dies, the loss frames reset back to how they were before without the coder having to manually specify so.</p>
+	      <p>Next we have the autocollect line. This is the y coordinate above which all items can be autocollected by the player. It defaults to zero, so if you want to have autocollect enabled, make sure to set this value. Note that in some scripts or games, it may be preferable to control this from the stage/plural if it's tied to a gimmick.</p>
+	      <p>Finally, in the ObjPlayer category, we have the player hitbox. This is set once and persists over time, adjusting its position automatically. <span class="tooltip" onmouseover="getFxnDocs('ObjPlayer_AddIntersectionCircleA1', 'f_opaica1_01');"><code> ObjPlayer_AddIntersectionCircleA1()</code><span class="tooltiptext" id="f_opaica1_01"></span></span> allows for both the hitbox and graze radii to be set. <span class="tooltip" onmouseover="getFxnDocs('ObjPlayer_AddIntersectionCircleA2', 'f_opaica2_01');"><code> ObjPlayer_AddIntersectionCircleA2()</code><span class="tooltiptext" id="f_opaica2_01"></span></span> can be used to create additional independent graze hitboxes. Finally, <span class="tooltip" onmouseover="getFxnDocs('ObjPlayer_ClearIntersection', 'f_opcis_01');"><code> ObjPlayer_ClearIntersection()</code><span class="tooltiptext" id="f_opcis_01"></span></span> can be used to clear the existing hitboxes.</p>
+	      <p>We will go with the default on all of these for the purpose of this tutorial. Except the intersection - we sort of need a hitbox. In <code>@Initialize</code>, add the following. It doesn't matter if it's before or after the tasks are called, but we will put it before. <code>ObjPlayer_AddIntersectionCircleA1(objPlayer, 0, 0, 1, 20);</code></p>
 	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I create player options?</h2>
-	      <p></p>
-	      <p></p>
+	      <p>Options, also known as familiars, are an integral part of Touhou-style shmups. They provide incredibly variety by moving in limitless ways, providing all sorts of extra shots, etc. Notable examples of options include those that automatically hone in on enemies, those that stay in place when the player focuses, and those that trail behind the player.</p>
+	      <p>Now, we *could* implement a complicated set of familiars doing crazy logic but for this tutorial we will keep things simple and have two familiars - one on each side of the player. These will have a different distance depending on whether or not the player is focused. </p>
+	      <p>Please define a task <code>CreateOption(dir)</code>. In <code>@Initialize</code>, call it twice - once with the parameter -1 and once with the parameter 1. We will use these parameters to determine which option is which.</p>
+	      <p>We will use a typical task for a render object. Each option is a render object with a graphic and a position relative to the player. </p>
+	      <pre class="prettyprint linenums"><code>// Creates an option to the side of the player
+task CreateOption(dir) {
+    let path = csd ~ "white.png";
+    let unfocdist = 64; // Distance to the player when unfocused
+    let focdist = 32; // Distance to the player when focused
+    let transitionfr = 15; // Number of frames for option transition when focused/unfocused state switches
+    let currdist = unfocdist;
+    let objOption = ObjPrim_Create(OBJ_SPRITE_2D);
+    ObjPrim_SetTexture(objOption, path);
+    ObjSprite2D_SetSourceRect(objOption, 0, 0, 11, 11);
+    ObjSprite2D_SetDestCenter(objOption);
+    loop {
+        if (GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD && GetVirtualKeyState(VK_SLOWMOVE) != KEY_PUSH) { // Unfocused
+            if (currdist < unfocdist) {
+                currdist += (unfocdist - focdist)/transitionfr;
+            }
+        } else { // Focused
+            if (currdist > focdist) {
+                currdist -= (unfocdist - focdist)/transitionfr;
+            }
+        }
+        ObjRender_SetPosition(objOption, GetPlayerX() + currdist*dir, GetPlayerY(), 1);
+        yield;
+    }
+}</code></pre>
+	      <p>A few things to note. First, the source rect dictates an oddxodd rect. This is important since many options are circular and will want to rotate. Danmakufu ph3 requires oddxodd rects for clean rotation. Next, the way we're handling the animation. While crude, it does the job. We specify two distances from the player - one for focused and one for focused - and keep track of the current distance. In the while loop, we check the current distance against these and if not within the range, we adjust the distances. Here I also use a transition frame variable to control the speed of the transition between the phases - it's typically not a good idea to have the options simply warp since it has a jarring visual impact that is often unwanted. You can set the transition speed to whatever you want, though lower is better (not too low though!)</p>
+	      <p>We will cover having options fire shots when we cover player shots.</p>
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I handle player death?</h2>
 	      <p></p>
 	      <p></p>
@@ -105,6 +166,9 @@
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub9">Part 9: What is a spell object and how are they controlled?</h2>
 	      <p></p>
+	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub10">Part 10: What else can (or should) I add to a player?</h2>
+	      <p>(HITBOX VISUALIZATION!!!)</p>
 	      <p></p>
 	      <pre class="prettyprint"><code></code></pre>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
