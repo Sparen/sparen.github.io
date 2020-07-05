@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Jun 27, 2020')">
+  <body onload="setupENG('Jul 05, 2020')">
     <div id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -57,8 +57,8 @@
 	          <li><a href="#sub3">Part 3: How do I create the structure of a player script?</a></li>
 	          <li><a href="#sub4">Part 4: How do I set the player's parameters?</a></li>
 	          <li><a href="#sub5">Part 5: How do I create player options?</a></li>
-	          <li><a href="#sub6">Part 6: How do I handle player death?</a></li>
-	          <li><a href="#sub7">Part 7: How do I handle player events?</a></li>
+	          <li><a href="#sub6">Part 6: How do I handle player events?</a></li>
+	          <li><a href="#sub7">Part 7: How do I handle player death?</a></li>
 	          <li><a href="#sub8">Part 8: What are player shots and how do player shotsheets work?</a></li>
 	          <li><a href="#sub9">Part 9: What is a spell object and how are they controlled?</a></li>
 	          <li><a href="#sub10">Part 10: What else can (or should) I add to a player?</a></li>
@@ -67,7 +67,7 @@
 	        </ul>
 	      </div>
 	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
-	      <p>Welcome to the introductory player script guide! In this guide, we will cover the fundamental components of a player script and how you can create your own. We will utilize the default ExRumia as an example of a player script, but will take a different approach from usual in this guide and will have you start from scratch - a complete blank slate. Accordingly, we will provide some basic graphics that you can use as a starting point.</p>
+	      <p>Welcome to the introductory player script guide! In this guide, we will cover the fundamental components of a player script and how you can create your own. We will utilize the default ExRumia as an example of a player script, but will take a different approach from usual in this guide and will have you start from scratch - a complete blank slate. Accordingly, we will provide some basic 'graphics' that you can use as a starting point.</p>
 	      <p>Player scripts are incredibly complex in that creating them requires a working knowledge of most of the provided object types in Danmakufu. It is the only cross-cutting script of this sort and as such, we recommend that you be familiar with the following prior to starting: Shot Objects, 2D Sprite Objects, Primitive Objects, Text Objects, Sound Objects, Shotsheets, Events, and Virtual Keys</p>
 	      <p>In order to not overload this guide, a discussion on player design and balancing as well as how *not* to design a shottype will be provided in the next guide, which will be shorter but far more complex in content.</p>
 	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are the components of a player script?</h2>
@@ -78,8 +78,8 @@
 	      <p>Now, in Touhou style games, the player can do a number of different actions, and can be customized in a variety of different ways. We will split these up into six sections.</p>
 	      <p>First, the basic parameters of the player. Every player has its own speed, graze radius, deathbomb window, etc. In addition, you must render the player in order for the physical player to understand how the player is reacting to their input.</p>
 	      <p>Next is a common aspect of Touhou-style players - the Player Option. Options/Shikigami/Familiars accompany the player and are typically tasked with moving in a specific way and firing shots. These must be rendered, controlled depending on whether the player is moving unfocused or focused, and must fire shots accordingly.</p>
-	      <p>In addition, we have player death. Player death is simple on the surface, but is actually quite a bit more complex. For example, where does the player respawn? How do graphics and familiars adjust to that respawn point? How is deathbombing controlled? Is it controlled automatically? And after the player has respawned, how do you convey to the player that the player is no longer invincible? These are all things that need to be taken into consideration.</p>
 	      <p>Another component is the player event. Just like any other Danmakufu script, players have an event handler, and can work with a variety of system-triggered events. We will go into more detail in the respective section, but there is much customization that can be done here, in addition to noting some aspects that Danmakufu does not handle by default.</p>
+	      <p>In addition, we have player death. Player death is simple on the surface, but is actually quite a bit more complex. For example, where does the player respawn? How do graphics and familiars adjust to that respawn point? How is deathbombing controlled? Is it controlled automatically? And after the player has respawned, how do you convey to the player that the player is no longer invincible? These are all things that need to be taken into consideration.</p>
 	      <p>In addition to these, players have their own shotsheets and control mechanisms when they are firing. How do these work? How do you handle focused vs. unfocused shottypes?</p>
 	      <p>And finally, player bombs are incredibly complex, with their own special object type. From triggering to rendering and action to completion, it is necessary to understand how they work, how they destroy bullets, and how to avoid unfortunate accidents.</p>
 	      <p>With that introduction out of the way, let's get started.</p>
@@ -99,14 +99,20 @@
 	      <p>The primary one you will want is a reference to the player object itself for when the script runs. For this, we can use something along the lines of <code>let objPlayer = GetPlayerObjectID();</code>. <span class="tooltip" onmouseover="getFxnDocs('GetPlayerObjectID', 'f_gpoid_01');"><code> GetPlayerObjectID()</code><span class="tooltiptext" id="f_gpoid_01"></span></span>, when run, gets the Object ID associated with the player object - this is a special object that supports ObjMove and ObjRender commands among others and is how we will refer to the player object within the script.</p>
 	      <p>Besides this, you may also want to define a shortcut for <code>GetCurrentScriptDirectory()</code>, which we will use for all of the assets we load. We will use <code>csd</code> as our variable name. Do note that in this tutorial, we won't actually cover sound effects - these are up to you to implement. Also note that player scripts in particular should never have absolute paths since they can be moved around quite a bit and it's good to have a player script that you can drop into a completely different directory. This is because most ph3 scripts don't allow the person playing the script to choose from the full selection of players but instead limit them to a specific set of players bundled together with the script.</p>
 	      <p>Now, let's head into <code>@Initialize</code> and call some tasks. We will want to define these as well. First, a task to draw the player sprite. Please create a png file with a single white pixel in it and name it <code>dot.png</code> - normally you'd want actual sprites but for the purpose of simplicity given that this is a tutorial, this should suffice. For now we'll call the player drawing task <code>DrawPlayer</code>. </p>
-	      <p>Since we have no animation, we can have a very simple (and very uninspiring) draw loop.</p>
+	      <p>Since we have no animation, we can have a very simple (and very uninspiring) draw loop. However, we will do some player direction checks to show that the player is moving in a direction. We're using a 15 degree rotation here - if you are too lazy to or unable to use a separate set of sprites for a movement animation then a 10-15 degree shift does the job (though it's not optimal).</p>
 	      <pre class="prettyprint"><code>task DrawPlayer {
     let path = csd ~ "white.png";
     ObjPrim_SetTexture(objPlayer, path);
     ObjSprite2D_SetSourceRect(objPlayer, 0, 0, 15, 15);
     ObjSprite2D_SetDestCenter(objPlayer);
     loop {
-        // Normally, you would check against GetVirtualKeyState(VK_LEFT/VK_RIGHT) and KEY_PUSH/KEY_HOLD to see if you need a different sprite, but we're just using a white box here
+        if(GetVirtualKeyState(VK_LEFT) == KEY_PUSH || GetVirtualKeyState(VK_LEFT) == KEY_HOLD) {
+            ObjRender_SetAngleZ(objPlayer, -15);
+        } else if(GetVirtualKeyState(VK_RIGHT) == KEY_PUSH || GetVirtualKeyState(VK_RIGHT) == KEY_HOLD) {
+            ObjRender_SetAngleZ(objPlayer, 15);
+        } else {
+            ObjRender_SetAngleZ(objPlayer, 0);
+        }
         yield;
     }
 }</code></pre>
@@ -153,18 +159,321 @@ task CreateOption(dir) {
         yield;
     }
 }</code></pre>
-	      <p>A few things to note. First, the source rect dictates an oddxodd rect. This is important since many options are circular and will want to rotate. Danmakufu ph3 requires oddxodd rects for clean rotation. Next, the way we're handling the animation. While crude, it does the job. We specify two distances from the player - one for focused and one for focused - and keep track of the current distance. In the while loop, we check the current distance against these and if not within the range, we adjust the distances. Here I also use a transition frame variable to control the speed of the transition between the phases - it's typically not a good idea to have the options simply warp since it has a jarring visual impact that is often unwanted. You can set the transition speed to whatever you want, though lower is better (not too low though!)</p>
+	      <p>A few things to note. First, the source rect dictates an oddxodd rect. This is important since many options are circular and will want to rotate. Danmakufu ph3 requires oddxodd rects for clean rotation. Next, the way we're handling the 'animation' between the focused and unfocused positions. While crude, it does the job. We specify two distances from the player - one for focused and one for unfocused - and keep track of the current distance. In the while loop, we check the current distance against these and if not within the range, we adjust the distances. Here I also use a transition frame variable to control the speed of the transition between the phases - it's typically not a good idea to have the options simply warp since it has a jarring visual impact. You can set the transition speed to whatever you want, though lower is better (not too low though!)</p>
 	      <p>We will cover having options fire shots when we cover player shots.</p>
-	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I handle player death?</h2>
-	      <p></p>
-	      <p></p>
-	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I handle player events?</h2>
-	      <p></p>
-	      <p></p>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I handle player events?</h2>
+	      <p>So far, we haven't covered the <code>@Event</code> routine - in fact, with the current player setup, attempting to bomb will crash Danmakufu since it doesn't know what to do if this isn't defined.</p>
+	      <p>Now, there are plenty of different events you can handle in a player script. <code>EV_GET_ITEM</code>, <code>EV_HIT</code>, <code>EV_PLAYER_SHOOTDOWN</code>, <code>EV_PLAYER_REBIRTH</code>, and <code>EV_REQUEST_SPELL</code> are some of the most notable, but  there are plenty of others - <code>EV_GRAZE</code> is a great one to handle if you want graze particles/sound effects on your player, for example. Let's start with <code>EV_GET_ITEM</code>.</p>
+	      <p>To be quite blunt, the only reason to use <span class="tooltip" onmouseover="getFxnDocs('EV_GET_ITEM', 'f_evgi_01');"><code>EV_GET_ITEM</code><span class="tooltiptext" id="f_evgi_01"></span></span> is to have sound effects play when you collect life and bomb items. Using <code>GetEventArgument(0)</code> to get the event argument will yield the type of the item (e.g. ITEM_1UP, ITEM_SPELL).</p>
+	      <p>Next, let's touch upon <span class="tooltip" onmouseover="getFxnDocs('EV_GRAZE', 'f_evgraze_01');"><code>EV_GRAZE</code><span class="tooltiptext" id="f_evgraze_01"></span></span> - we'll set up a system for graze particles here. Sound is up to you. We'll want a task <code>CreateGrazeParticle</code> defined somewhere in the script. In this case, we will also use a global constant MAX_GRAZE_PARTICLES and a global variable curr_graze_particles. Since we'll be creating actual objects, we want to make sure that we don't create more than expected and so these two values will help with that. In the task, we'll create a render object that starts at the player, flies off in a random direction, and disappears.</p>
+	      <pre class="prettyprint linenums"><code>...
+    case(EV_GRAZE) {
+        // Add sound here
+        if (curr_graze_particles < MAX_GRAZE_PARTICLES) {
+            CreateGrazeParticle;
+        }
+    }
+
+...
+
+task CreateGrazeParticle {
+    let path = csd ~ "white.png";
+    let objParticle = ObjPrim_Create(OBJ_SPRITE_2D);
+    let startx = GetPlayerX();
+    let starty = GetPlayerY();
+    let angle = rand(0, 360);
+    let anglecomponents = [cos(angle), sin(angle)];
+    let speed = rand(0, 4) + rand(0, 8);
+    let frames = 30; // Frames for the particle to exist
+    let size = rand(1, 3);
+    curr_graze_particles += 1;
+    ObjPrim_SetTexture(objParticle, path);
+    ObjSprite2D_SetSourceRect(objParticle, 0, 0, size, size);
+    ObjSprite2D_SetDestCenter(objParticle);
+    ascent(i in 0..frames) {
+        ObjRender_SetX(objParticle, startx + anglecomponents[0] * i);
+        ObjRender_SetY(objParticle, starty + anglecomponents[1] * i);
+        if (i > frames/2) {
+            ObjRender_SetAlpha(objParticle, 255 - (i - frames/2)*255/(frames/2));
+        }
+        yield;
+    }
+    Obj_Delete(objParticle);
+    curr_graze_particles -= 1;
+}</code></pre>
+	      <p>In this example, we splurge a little and make a fancier graphic with variable speed and size. Our strategy for controlling position is a linear control from the base point (player position at the time of graze). Since calling trigonometric functions is expensive and we will be creating many of these particles, we're running the trig once and storing the value (since the angle is not changing).</p>
+	      <p>Note that we're doing some strange logic for the alpha - this is to have the particle only start fading out halfway through its existence time. Hopefully this should suffice as a basic graze particle effect.</p>
+	      <p>There are four more events we'll cover in this tutorial - <code>EV_HIT</code>, <code>EV_PLAYER_SHOOTDOWN</code>, <code>EV_PLAYER_REBIRTH</code>, and <code>EV_REQUEST_SPELL</code>. We'll do the two related to player misses and death first.</p>
+	      <h2 class="ph3tutorialheader" id="sub7">Part 7: How do I handle player death?</h2>
+	      <p>First thing's first. When the player is hit, regardless of whether or not they deathbomb, there must be some kind of visual indication. And then, once they respawn, we need to determine where they do so and will need to showcase invincibility post-respawn.</p>
+	      <p>Starting with when the player is hit, <span class="tooltip" onmouseover="getFxnDocs('EV_HIT', 'f_evhit_01');"><code>EV_HIT</code><span class="tooltiptext" id="f_evhit_01"></span></span> differs from <span class="tooltip" onmouseover="getFxnDocs('EV_PLAYER_SHOOTDOWN', 'f_evpsd_01');"><code>EV_PLAYER_SHOOTDOWN</code><span class="tooltiptext" id="f_evpsd_01"></span></span> in that the former is emitted when the player is hit while the latter is emitted when the player loses a life. There is a distinction here involving deathbombs - if the player deathbombs, only the former will be emitted. Therefore, we use <code>EV_HIT</code> for the death sound effect but <code>EV_PLAYER_SHOOTDOWN</code> for the actual death animation.</p>
+	      <p>Let's create a player death explosion effect. Again, sound is up to you. We'll run a single task in the event handler which I am calling <code>DeathExplosion</code>. Continuing with the slightly-fancier-than-necessary trend, we'll have some fancy inverted expanding squares coupled with some particle effects to reflect the nature of our square player that will 'reform' our player.</p>
+	      <pre class="prettyprint linenums"><code>task CreateExpandingInvertSquare(angle) {
+    let path = csd ~ "white.png";
+    let objSquare = ObjPrim_Create(OBJ_SPRITE_2D);
+    ObjPrim_SetTexture(objSquare, path);
+    ObjRender_SetBlendType(objSquare, BLEND_INV_DESTRGB);
+    ObjSprite2D_SetSourceRect(objSquare, 0, 0, 2048, 2048);
+    ObjSprite2D_SetDestCenter(objSquare);
+    ObjRender_SetPosition(objSquare, GetPlayerX(), GetPlayerY(), 0);
+    ObjRender_SetAngleZ(objSquare, angle);
+    ascent(i in 0..120) {
+        // Scale goes from 0 to 1
+        ObjRender_SetScaleXYZ(objSquare, i/120, i/120, i/120);
+        yield; 
+    }
+    Obj_Delete(objSquare);
+}
+
+task CreateDeathParticle {
+    let path = csd ~ "white.png";
+    let objSquare = ObjPrim_Create(OBJ_SPRITE_2D);
+    let angle = rand(0, 360);
+    let anglecomponents = [cos(angle), sin(angle)];
+    let speed = rand(0, 8);
+    let accel = speed/100;
+    let startx = GetPlayerX();
+    let starty = GetPlayerY();
+    let currx = startx;
+    let curry = starty;
+    ObjPrim_SetTexture(objSquare, path);
+    ObjSprite2D_SetSourceRect(objSquare, 0, 0, 8, 8);
+    ObjSprite2D_SetDestCenter(objSquare);
+    ObjRender_SetPosition(objSquare, startx, starty, 0);
+    let rotangles = [rand(0, 360), rand(0, 360), rand(0, 360)];
+    let rotspeeds = [rand(0, 6), rand(0, 6), rand(0, 6)];
+    let downframes = GetPlayerDownStateFrame();
+    ascent(i in 0..downframes/2) {
+        currx += anglecomponents[0] * speed;
+        curry += anglecomponents[1] * speed;
+        ObjRender_SetPosition(objSquare, currx, curry, 0);
+        rotangles[0] = rotangles[0] + rotspeeds[0];
+        rotangles[1] = rotangles[1] + rotspeeds[1];
+        rotangles[2] = rotangles[2] + rotspeeds[2];
+        ObjRender_SetAngleXYZ(objSquare, rotangles[0], rotangles[1], rotangles[2]);
+        speed -= accel;
+        yield;
+    }
+    // Use respawn location to determine movement back towards it
+    let dx = GetStgFrameWidth()/2 - currx;
+    let dy = GetStgFrameHeight() - 32 - curry;
+    ascent(i in 0..downframes/2) {
+        currx += dx/(downframes/2);
+        curry += dy/(downframes/2);
+        ObjRender_SetPosition(objSquare, currx, curry, 0);
+        rotangles[0] = rotangles[0] + rotspeeds[0];
+        rotangles[1] = rotangles[1] + rotspeeds[1];
+        rotangles[2] = rotangles[2] + rotspeeds[2];
+        ObjRender_SetAngleXYZ(objSquare, rotangles[0], rotangles[1], rotangles[2]);
+        yield;
+    }
+    Obj_Delete(objSquare);
+}
+
+task DeathExplosion {
+    CreateExpandingInvertSquare(0);
+    CreateExpandingInvertSquare(45);
+    loop(30) {
+        CreateDeathParticle;
+    }
+    loop(5) {yield;}
+    CreateExpandingInvertSquare(0);
+    CreateExpandingInvertSquare(45);
+}</code></pre>
+	      <p>Admittedly, this is probably overkill, but let's dive into this animation. First, we're creating four squares, offset by 5 frames. These are INV_DESTRGB and so we must pair them up to create a 'restoration' effect whereby the one spawned later 'restores' the invert wave created by the first. In order to have a nice transition for when the object disappear, this time-based pairing is necessary, coupled with a final scale that is large enough to surround the entire playing field (hence the 2048x2048). We're using 120 frames for these but you can do whatever you want. Doubling up with the angle offset is just to make things look fancier.</p>
+	      <p>For the death particles, it's similar to the graze particles except they're actually keeping track of their position when flying outwards and also have acceleration on them for when they fly out, proportional to their speed. We're using the player's down state frames in order to time the animation - note that we run <code> GetPlayerDownStateFrame()</code> once and store the value - this is because the frame it is called is the first frame where the player is dead (so it's at max value) and because we want to use the original value for timing. This allows us to now have to edit a value here were we to change the number of down state frames elsewhere. As for the second half of the animation, we use the Danmakufu default respawn point as a 'target' and have the particles lerp to that point from wherever they are. If you don't like this, you can remove the second ascent loop and have the first one last the full duration of <code>downframes</code>. The angle rotation is also just for visual effect and is entirely optional.</p>
+	      <p>Now, a few changes to keep things moving smoothly. We will create a <code>playerdead</code> global variable initially set to false. In our player and option loops, we will add the following (change the object to whichever one is relevant) in order to actually hide the player and options when the player is dead:</p>
+	      <pre class="prettyprint"><code>        if (playerdead) {
+            ObjRender_SetAlpha(objPlayer, 0);
+        } else {
+            ObjRender_SetAlpha(objPlayer, 255);
+        }</code></pre>
+	      <p>And now, our current event handler:</p>
+	      <pre class="prettyprint"><code>@Event {
+    alternative(GetEventType)
+    case(EV_GRAZE) {
+        // Add sound here
+        if (curr_graze_particles < MAX_GRAZE_PARTICLES) {
+            CreateGrazeParticle;
+        }
+    }
+    case(EV_PLAYER_SHOOTDOWN) {
+        playerdead = true;
+        DeathExplosion;
+        // Optional: run a task to delete bullets in a radius of the player
+    }
+    case(EV_PLAYER_REBIRTH) {
+        playerdead = false;
+        SetPlayerInvincibilityFrame(240);
+        SetPlayerSpell(3); // Note: You can also use max(#, GetPlayerSpell) to not destroy extra bombs from prior life
+        // Optional: run a task to delete bullets in a radius of the player
+    }
+}</code></pre>
+	      <p>Note that I added 240 frames of invincibility. This is because the player should not be vulnerable on respawn, especially if they're respawning to a fixed location. But that does transition into the next part.</p>
+	      <p>Let's target the invincibility... by copy-pasting the magic circle code from <a href="./ph3u3l29.html">Lesson 29</a></p>
+	      <p>Now, some key differences. First, this magic circle will be created at the start of the player script and will never delete - the current number of invincibility frames will determine if its logic is executed at all. Secondly, the scale of the radius of the magic circle will be based on the amount of invincibility frames left when compared to some arbitrary max.</p>
+	      <pre class="prettyprint linenums"><code>task MagicCircle {
+    let imgpath = GetCurrentScriptDirectory() ~ "./u3l29sample.png";
+    let NUM_VERTEX = 32;
+    let MC_RADIUS = 96;
+    let scale = 1;
+    
+    let listRadius = [];
+    loop(NUM_VERTEX) {
+        listRadius = listRadius ~ [0];
+    }
+    let objCirc = ObjPrim_Create(OBJ_PRIMITIVE_2D);
+    ObjPrim_SetTexture(objCirc, imgpath);
+    ObjPrim_SetPrimitiveType(objCirc, PRIMITIVE_TRIANGLESTRIP);
+    ObjPrim_SetVertexCount(objCirc, NUM_VERTEX);
+    ObjRender_SetScaleXYZ(objCirc, scale, scale, 1);
+    ascent(iVert in 0..NUM_VERTEX / 2){
+        let left = iVert * 240/NUM_VERTEX;
+        let indexVert = iVert * 2;
+        ObjPrim_SetVertexUVT(objCirc, indexVert + 0, left, 125);
+        ObjPrim_SetVertexUVT(objCirc, indexVert + 1, left, 141);
+    }
+    let angleRender = 0;
+    let frameInvOld = 0;
+    loop { // Magic circle never deletes
+        let frameInv = GetPlayerInvincibilityFrame();
+        if (frameInv <= 0) { // Not Invincible
+            Obj_SetVisible(objCirc, false);
+        } else {
+            Obj_SetVisible(objCirc, true);
+            if (frameInv > 240) { // We will use an arbitrary cutoff of 240 frames for our 'max' scale
+                frameInv = 240;
+            }
+            scale = frameInv/240;
+            ObjRender_SetScaleXYZ(objCirc, scale, scale, 1);
+            angleRender += 360 / NUM_VERTEX / 8;
+            ascent(iVert in 0..NUM_VERTEX / 2) {
+                let indexVert = iVert * 2;
+                let angle = 360 / (NUM_VERTEX / 2 - 1) * iVert;
+                let vx1 = listRadius[indexVert] * cos(angle);
+                let vy1 = listRadius[indexVert] * sin(angle);
+                ObjPrim_SetVertexPosition(objCirc, indexVert + 0, vx1, vy1, 0);
+                let vx2 = listRadius[indexVert+1] * cos(angle);
+                let vy2 = listRadius[indexVert+1] * sin(angle);
+                ObjPrim_SetVertexPosition(objCirc, indexVert + 1, vx2, vy2, 0);
+                let drOut = (MC_RADIUS - listRadius[indexVert]) / 8;
+                listRadius[indexVert] = listRadius[indexVert] + drOut;
+                let rRateIn = 1 - 0.12;
+                let drIn = (MC_RADIUS * rRateIn - listRadius[indexVert + 1]) / 8;
+                listRadius[indexVert + 1] = listRadius[indexVert + 1] + drIn;
+            }
+            ObjRender_SetPosition(objCirc, GetPlayerX(), GetPlayerY(), 1);
+            ObjRender_SetAngleZ(objCirc, angleRender);
+        }
+        yield;
+    }
+    Obj_Delete(objCirc);
+}</code></pre>
+	      <p>We'll call the task in <code>@Initialize</code>. In contrast to the version presented in Lesson 29, we are now checking the current invincibility frames in the loop - if the player is not invincible, there is no reason to perform the magic circle update logic at all, which improves performance. In addition, we use 240 frames as our 'ceiling' here - this value is used to control the maximum size of the circle and in this case it lines up with the invincibility time set out. </p>
+	      <p>And with that, we have some support for player death. However... might as well discuss respawn. By default, the player respawns 32 pixels above the bottom of the playing field, centered. You can override this behavior by manually setting the player's position. Sometimes you may want to keep the player in the same location where they died or have them animate coming back into the screen from below - in these cases, make sure to override the default.</p>
 	      <h2 class="ph3tutorialheader" id="sub8">Part 8: What are player shots and how do player shotsheets work?</h2>
-	      <p></p>
-	      <p></p>
+	      <p>It's time for our player to actually do damage. For the purposes of this tutorial, we will do an incredibly generic shottype where every 6 frames, the player and options fire shots upwards, with some variety for unfocused and focused. Let's revisit the empty <code>PlayerShot</code> task first. But first... we need a shotsheet.</p>
+	      <p>A player shotsheet is very similar to a standard shotsheet. The only difference is their use, in fact. You can have IDs defined here independent of any other shotsheet of course, because the player shotsheet is only used by (and data is only loaded into) the player. In our case, we will use our friend white.png and will define two shots - a boring square shot and a slightly less boring rectangle shot.</p>
+	      <pre class="prettyprint linenums"><code>shot_image = "./white.png"
+
+ShotData{
+	id = 0 //Dummy Shot
+	rect = (0,0,0,0)
+	render = ALPHA
+	alpha=0
+	collision = 12
+}
+
+ShotData{
+	id = 1
+	rect = (0, 0, 8, 8)
+	render = ALPHA
+	alpha = 64
+	collision = 12
+}
+
+ShotData{
+	id = 2
+	rect = (0, 0, 4, 16)
+	render = ADD_ARGB
+	alpha = 64
+	collision = 12
+}</code></pre>
+	      <p>Now, usage. We will define a global variable <code>count</code> and increment it in the main loop. We will also run <code>LoadPlayerShotData(csd ~ "shotdata.txt");</code> with the path to your shotdata file in <code>@Initialize</code>.</p>
+	      <p>There are three conditions upon which to fire - these are: player is not dead, shot key is pressed, and firing is enabled. The first two we must check on our own. The last is handled by the engine. After this, we will typically want to only shoot on a steady interval (e.g. every 6 frames). There are clean nice ways to do this where you start a counter when the player taps and there are ways to make the player shoot for a bit even after letting go of the shot key, but we'll use a naive solution for now.</p>
+	      <pre class="prettyprint linenums"><code>task PlayerShot {
+    loop {
+        if (!playerdead && GetVirtualKeyState(VK_SHOT) != KEY_FREE) {
+            if (count % 6 == 0) {
+                if (GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD && GetVirtualKeyState(VK_SLOWMOVE) != KEY_PUSH) { // Unfocused
+                } else { // Focused
+                }
+            }
+        } 
+        yield;
+    }
+}</code></pre>
+	      <p>We'll use the above structure. In this loop, we check that the player is alive and that the shot key is being pressed. We use a % 6 (every 6 frames) counter for controlling shots. We also have a focused/unfocused check. A similar structure will end up in the options, but we'll get to that later.</p>
+	      <p>The workhorse of a player script is <span class="tooltip" onmouseover="getFxnDocs('CreatePlayerShotA1', 'f_cpsa1_01');"><code>CreatePlayerShotA1()</code><span class="tooltiptext" id="f_cpsa1_01"></span></span>. This creates a standard player shot. You can also create custom shot objects, including lasers, which will all be registered as player shots, though you will need to manually specify damage and penetration. These two parameters specify how much damage is done to a boss, and how many times that damage can be applied before the shot deletes itself, respectively.</p>
+	      <p>For now we'll showcase a fairly boring player. We will implement a light spread player with forward-focus options.</p>
+	      <pre class="prettyprint linenums"><code>task CreateOption(dir) {
+    ...
+    loop {
+	...
+        if (!playerdead && GetVirtualKeyState(VK_SHOT) != KEY_FREE) {
+            if (count % 12 == 0) {
+                if (GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD && GetVirtualKeyState(VK_SLOWMOVE) != KEY_PUSH) { // Unfocused
+                    CreatePlayerShotA1(ObjRender_GetX(objOption), ObjRender_GetY(objOption), 12, 270, 6, 1, 1);
+                } else { // Focused
+                    CreatePlayerShotA1(ObjRender_GetX(objOption), ObjRender_GetY(objOption), 6, 270, 6, 2, 2);
+                }
+            }
+        } 
+        yield;
+    }
+}
+
+task PlayerShot {
+    loop {
+        if (!playerdead && GetVirtualKeyState(VK_SHOT) != KEY_FREE) {
+            if (count % 6 == 0) {
+                CreatePlayerShotA1(GetPlayerX() - 4, GetPlayerY() - 8, 10, 270, 6, 1, 1);
+                CreatePlayerShotA1(GetPlayerX() + 4, GetPlayerY() - 8, 10, 270, 6, 1, 1);
+                if (GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD && GetVirtualKeyState(VK_SLOWMOVE) != KEY_PUSH) { // Unfocused
+                    CreatePlayerShotA1(GetPlayerX(), GetPlayerY() - 8, 12, 250, 3, 1, 1);
+                    CreatePlayerShotA1(GetPlayerX(), GetPlayerY() - 8, 12, 260, 3, 1, 1);
+                    CreatePlayerShotA1(GetPlayerX(), GetPlayerY() - 8, 12, 280, 3, 1, 1);
+                    CreatePlayerShotA1(GetPlayerX(), GetPlayerY() - 8, 12, 290, 3, 1, 1);
+                } else { // Focused
+                    CreatePlayerShotA1(GetPlayerX(), GetPlayerY() - 8, 12, 260, 3, 1, 1);
+                    CreatePlayerShotA1(GetPlayerX(), GetPlayerY() - 8, 12, 265, 3, 1, 1);
+                    CreatePlayerShotA1(GetPlayerX(), GetPlayerY() - 8, 12, 275, 3, 1, 1);
+                    CreatePlayerShotA1(GetPlayerX(), GetPlayerY() - 8, 12, 280, 3, 1, 1);
+                }
+            }
+        } 
+        yield;
+    }
+}</code></pre>
+	      <p>It's typical to provide a player with a boring set of two shots going upwards rapidly as a 'base' attack, coupled with some additional attacks. What kind of shottype is given to the options varies wildly but should support the player. It's worth noting that balancing does in fact matter, but that's a topic for a different guide. </p>
 	      <h2 class="ph3tutorialheader" id="sub9">Part 9: What is a spell object and how are they controlled?</h2>
+	      <p>Player bombs are an incredibly complex topic with lots of potential variety. In this section, we'll implement two bombs - one focused and one unfocused. Our unfocused bomb will be a series of squares (duh) that rapidly expand from the player's position and cause damage + bullet clears. Our focused bomb will be two rings of squares rotating around the player.</p>
+	      <p>Let's start by filling out our event handler so that Danmakufu stops crashing every time we try to bomb.</p>
+	      <pre class="prettyprint"><code>    case(EV_REQUEST_SPELL) {
+        let spell = GetPlayerSpell();
+        if (spell >= 1) {
+            SetScriptResult(true);
+            SetPlayerSpell(spell - 1);
+            if (GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD && GetVirtualKeyState(VK_SLOWMOVE) != KEY_PUSH) {
+                UnfocusedSpell();
+            } else {
+                FocusedSpell();
+            }
+        } else {
+            SetScriptResult(false);
+        }
+    }</code></pre>
+	      <p>As you can see above, we need to manually check if there are still bombs remaining. We'll be implementing these two spellcards shortly. Create tasks for them.</p>
 	      <p></p>
 	      <p></p>
 	      <h2 class="ph3tutorialheader" id="sub10">Part 10: What else can (or should) I add to a player?</h2>
