@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Jul 05, 2020')">
+  <body onload="setupENG('Jul 06, 2020')">
     <div id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -457,7 +457,7 @@ task PlayerShot {
 }</code></pre>
 	      <p>It's typical to provide a player with a boring set of two shots going upwards rapidly as a 'base' attack, coupled with some additional attacks. What kind of shottype is given to the options varies wildly but should support the player. It's worth noting that balancing does in fact matter, but that's a topic for a different guide. </p>
 	      <h2 class="ph3tutorialheader" id="sub9">Part 9: What is a spell object and how are they controlled?</h2>
-	      <p>Player bombs are an incredibly complex topic with lots of potential variety. In this section, we'll implement two bombs - one focused and one unfocused. Our unfocused bomb will be a series of squares (duh) that rapidly expand from the player's position and cause damage + bullet clears. Our focused bomb will be two rings of squares rotating around the player.</p>
+	      <p>Player bombs are an incredibly complex topic with lots of potential variety. In this section, we'll implement two bombs - one focused and one unfocused. Our unfocused bomb will be a series of squares (duh) that rapidly expand from the player's position and cause damage + bullet clears. Our focused bomb will be two 'rings' of squares rotating around the player before flying upwards.</p>
 	      <p>Let's start by filling out our event handler so that Danmakufu stops crashing every time we try to bomb.</p>
 	      <pre class="prettyprint"><code>    case(EV_REQUEST_SPELL) {
         let spell = GetPlayerSpell();
@@ -474,15 +474,201 @@ task PlayerShot {
         }
     }</code></pre>
 	      <p>As you can see above, we need to manually check if there are still bombs remaining. We'll be implementing these two spellcards shortly. Create tasks for them.</p>
-	      <p></p>
-	      <p></p>
+	      <p>We'll do the unfocused spellcard first as it's technically simpler due to our design. Let's first fill out the <code>UnfocusedSpell()</code> task.</p>
+	      <pre class="prettyprint linenums"><code>task UnfocusedSpell {
+    SetForbidPlayerShot(true);
+    let objManage = GetSpellManageObject(); // Start of spell
+    SetPlayerInvincibilityFrame(240); // Should last duration of spell + some buffer time afterwards
+    ascent(i in 0..20) {
+        CreateUnfocusedSpellSquare(i);
+        loop(6) {yield;}
+    }
+    loop(30) {yield;} // Wait for all spell objects to delete before ending spell
+    Obj_Delete(objManage); // End of spell
+    SetForbidPlayerShot(false);
+}</code></pre>
+	      <p>Note that we surround the invocation of the spellcard with two calls to <span class="tooltip" onmouseover="getFxnDocs('SetForbidPlayerShot', 'f_sfpshot_01');"><code>SetForbidPlayerShot()</code><span class="tooltiptext" id="f_sfpshot_01"></span></span>. It's typical to prevent the player from shooting their regular attack during a bomb. Of course you can choose to not do this as well - it's up to you.</p>
+	      <p>Also note that we use <span class="tooltip" onmouseover="getFxnDocs('GetSpellManageObject', 'f_gspmanobj_01');"><code>GetSpellManageObject()</code><span class="tooltiptext" id="f_gspmanobj_01"></span></span>. When we call this, we 'begin' the player spellcard. When we delete these objects, the spellcard 'ends'. Note that all spell objects for the spellcard should be deleted before the spell management object is deleted.</p>
+	      <p>Let's see the implementation of <code>CreateUnfocusedSpellSquare</code>. This is a task that runs 20 times with 6 frames in between each time.</p>
+	      <pre class="prettyprint linenums"><code>task CreateUnfocusedSpellSquare(ID) {
+    let path = csd ~ "white.png";
+    let rad = 0; // Tracks size
+    let objspell = ObjSpell_Create;
+    ObjSpell_Regist(objspell);
+    ObjPrim_SetPrimitiveType(objspell, PRIMITIVE_TRIANGLEFAN);
+    ObjPrim_SetVertexCount(objspell, 4);
+    ObjPrim_SetTexture(objspell, path);
+    ObjRender_SetBlendType(objspell, BLEND_ADD_ARGB);
+    ObjPrim_SetVertexUVT(objspell, 0, 0, 0);
+    ObjPrim_SetVertexUVT(objspell, 1, 512, 0);
+    ObjPrim_SetVertexUVT(objspell, 2, 512, 512);
+    ObjPrim_SetVertexUVT(objspell, 3, 0, 512);
+    ObjPrim_SetVertexPosition(objspell, 0, -rad, -rad, 0);
+    ObjPrim_SetVertexPosition(objspell, 1, rad, -rad, 0);
+    ObjPrim_SetVertexPosition(objspell, 2, rad, rad, 0);
+    ObjPrim_SetVertexPosition(objspell, 3, -rad, rad, 0);
+    ObjRender_SetAngleZ(objspell, ID*7);
+    ascent(i in 0..30) {
+        ObjRender_SetPosition(objspell, GetPlayerX(), GetPlayerY(), 0);
+        ObjSpell_SetIntersectionCircle(objspell, GetPlayerX(), GetPlayerY(), rad*2^0.5);
+        ObjSpell_SetDamage(objspell, 2);
+
+        ObjPrim_SetVertexPosition(objspell, 0, -rad, -rad, 0);
+        ObjPrim_SetVertexPosition(objspell, 1, rad, -rad, 0);
+        ObjPrim_SetVertexPosition(objspell, 2, rad, rad, 0);
+        ObjPrim_SetVertexPosition(objspell, 3, -rad, rad, 0);
+        ObjPrim_SetVertexAlpha(objspell, 0, 255 - i*255/30);
+        ObjPrim_SetVertexAlpha(objspell, 1, 255 - i*255/30);
+        ObjPrim_SetVertexAlpha(objspell, 2, 255 - i*255/30);
+        ObjPrim_SetVertexAlpha(objspell, 3, 255 - i*255/30);
+
+        rad += 256/30; // Reaches 256 in 30 frames
+        
+        yield;
+    }
+    Obj_Delete(objspell);
+}</code></pre>
+	      <p>The first thing to notice is that our spell objects are treated as primitives. Unfortunately, these do not work well with standard sprite manipulation and so you will need to manually set your UV coordinates and vertex positions. In this case we're just using a white square so the actual coordinates don't matter. Based on the ID passed, we also set a different angle - this gives us a series of rotating squares. Also note that spell objects must be registered to come into effect.</p>
+	      <p>In the loop, which lasts 30 frames, we use <span class="tooltip" onmouseover="getFxnDocs('ObjSpell_SetIntersectionCircle', 'f_ospsic_01');"><code>ObjSpell_SetIntersectionCircle()</code><span class="tooltiptext" id="f_ospsic_01"></span></span> to define the hitbox of the spell object (including the radius in which enemy bullets are deleted) and <span class="tooltip" onmouseover="getFxnDocs('ObjSpell_SetDamage', 'f_ospsd_01');"><code>ObjSpell_SetDamage()</code><span class="tooltiptext" id="f_ospsd_01"></span></span> to set how much damage the spell object should do. Note that we only need to set the vertices and alpha in the loop because we're having the squares expand while fading out as part of the visuals (and damage box).</p>
+	      <p>Now let's handle our focused spellcard.</p>
+	      <pre class="prettyprint linenums"><code>task FocusedSpell {
+    SetForbidPlayerShot(true);
+    let objManage = GetSpellManageObject(); // Start of spell
+    SetPlayerInvincibilityFrame(420); // Should last duration of spell + some buffer time afterwards
+    ascent(i in 0..20) {
+        CreateFocusedSpellSquare(i, 1);
+        loop(3) {yield;}
+        CreateFocusedSpellSquare(i, -1);
+        loop(3) {yield;}
+    }
+    loop(120) {yield;} // Wait for all spell objects to delete before ending spell
+    Obj_Delete(objManage); // End of spell
+    SetForbidPlayerShot(false);
+}</code></pre>
+	      <p>To make things fancier, we'll use two sets of squares. In addition, the duration is a lot longer than for the unfocused spell - unfocused spells tend to be more for bullet clearing and hitting a large number of enemies (e.g. stages) while focused spells tend to play a larger role in boss battles. </p>
+	      <pre class="prettyprint linenums"><code>task CreateFocusedSpellSquare(ID, dir) {
+    let path = csd ~ "white.png";
+    let rad = 0; // Tracks size
+    let rotdist = 64;
+    let objspell = ObjSpell_Create;
+    ObjSpell_Regist(objspell);
+    ObjPrim_SetPrimitiveType(objspell, PRIMITIVE_TRIANGLEFAN);
+    ObjPrim_SetVertexCount(objspell, 4);
+    ObjPrim_SetTexture(objspell, path);
+    ObjRender_SetBlendType(objspell, BLEND_ADD_ARGB);
+    ObjPrim_SetVertexUVT(objspell, 0, 0, 0);
+    ObjPrim_SetVertexUVT(objspell, 1, 64, 0);
+    ObjPrim_SetVertexUVT(objspell, 2, 64, 64);
+    ObjPrim_SetVertexUVT(objspell, 3, 0, 64);
+    ObjPrim_SetVertexPosition(objspell, 0, -rad, -rad, 0);
+    ObjPrim_SetVertexPosition(objspell, 1, rad, -rad, 0);
+    ObjPrim_SetVertexPosition(objspell, 2, rad, rad, 0);
+    ObjPrim_SetVertexPosition(objspell, 3, -rad, rad, 0);
+    let currx = GetPlayerX();
+    let curry = GetPlayerY();
+    ascent(i in 0..60) {
+        // Base location + gradual expansion + rotation
+        currx = GetPlayerX() + rotdist/60*i * cos(270 + 360/60*i*dir);
+        curry = GetPlayerY() + rotdist/60*i * sin(270 + 360/60*i*dir);
+        ObjRender_SetPosition(objspell, currx, curry, 0);
+        ObjSpell_SetIntersectionCircle(objspell, GetPlayerX(), GetPlayerY(), rad*2^0.5);
+        ObjSpell_SetDamage(objspell, 1);
+
+        ObjPrim_SetVertexPosition(objspell, 0, -rad, -rad, 0);
+        ObjPrim_SetVertexPosition(objspell, 1, rad, -rad, 0);
+        ObjPrim_SetVertexPosition(objspell, 2, rad, rad, 0);
+        ObjPrim_SetVertexPosition(objspell, 3, -rad, rad, 0);
+
+        ObjRender_SetAngleZ(objspell, ID*7 + 360/60*i);
+
+        if (rad < 32) { // Reaches 32 in 60 frames
+            rad += 32/60;
+        }
+        
+        yield;
+    }
+    let ascendspeed = 12;
+    ascent(i in 0..60) {
+        currx = GetPlayerX() + 32*sin(i*360/30*dir);
+        curry = GetPlayerY() - rotdist - ascendspeed*i;
+        ObjRender_SetPosition(objspell, currx, curry, 0);
+        ObjSpell_SetIntersectionCircle(objspell, currx, curry, rad*2^0.5);
+        ObjSpell_SetDamage(objspell, 1 + 4/60*i);
+
+        ObjPrim_SetVertexPosition(objspell, 0, -rad, -rad, 0);
+        ObjPrim_SetVertexPosition(objspell, 1, rad, -rad, 0);
+        ObjPrim_SetVertexPosition(objspell, 2, rad, rad, 0);
+        ObjPrim_SetVertexPosition(objspell, 3, -rad, rad, 0);
+
+        ObjRender_SetAngleZ(objspell, ID*7 + 360/60*i);
+
+        if (rad > 16) { // Reaches 16 in 30 frames
+            rad -= 16/30;
+        }
+        
+        yield;
+    }
+    Obj_Delete(objspell);
+}</code></pre>
+	      <p>We're doing something similar to the earlier unfocused spellcard but with some major twists. First, we're positioning each of the squares more uniquely, with them moving in a growing spiral starting from the player's position and ending <code>rotdist</code> pixels in front of the player. Each square follows the trajectory, but has a different angle going in, making it more interesting visually (or well, as interesting as you're going to get with white squares). In addition, after they complete one circuit, they move upwards, decreasing in size but increasing in damage and getting a spiral form due to the sine wave attached to the x coordinate. </p>
+	      <p>Of course, most of this is just for fun - but it does result in a situation where to maximize damage with the focused spell, you should stay close to the boss at the start and move backwards over time. Whether or not such a gimmick is warranted depends on whether or not your player is general purpose as well as what kind of enemies it is designed to be good against.</p>
+	      <p>And with that, we have a player... except that if you've ever played a Touhou game after Touhou 6, there's something missing, isn't there...</p>
 	      <h2 class="ph3tutorialheader" id="sub10">Part 10: What else can (or should) I add to a player?</h2>
-	      <p>(HITBOX VISUALIZATION!!!)</p>
-	      <p></p>
-	      <pre class="prettyprint"><code></code></pre>
+	      <p>To close off this guide, we'll cover some miscellaneous aspects of a player script. For now we'll stick with the hitbox visualization when focused. Now, you will normally want an actual graphic for this, but for the same of demonstration, we'll use a... red square. Add the following to <code>@MainLoop</code>:</p>
+	      <pre class="prettyprint"><code>    if(GetVirtualKeyState(VK_SLOWMOVE) == KEY_PUSH) {
+        RenderHitbox;
+    }</code></pre>
+	      <p>We'll do this by creating two objects every time the focus key is pushed, which will delete themselves whenever that state no longer holds. Of course, there's... a little more logic than you'd might expect.</p>
+	      <pre class="prettyprint"><code>task RenderHitbox {
+    yield;yield; // Two frames after KEY_PUSH, the focus key will be in KEY_HOLD mode
+    while(playerdead) { // If the player is dead, don't render the hitbox
+        if(GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD){return;} // If they unfocus during the respawn timeframe, terminate the hitbox
+        yield;
+    }
+    let path = csd ~ "white.png";
+    let objcount = 0;
+    let objHitbox = ObjPrim_Create(OBJ_SPRITE_2D);
+    ObjPrim_SetTexture(objHitbox, path);
+    ObjSprite2D_SetSourceRect(objHitbox, 0, 0, 5, 5);
+    ObjSprite2D_SetDestRect(objHitbox, -5, -5, 5, 5);
+    ObjRender_SetColor(objHitbox, 255, 0, 0);
+    Obj_SetRenderPriority(objHitbox, 0.31); // Player renders at 30
+    let objHitbox2 = ObjPrim_Create(OBJ_SPRITE_2D);
+    ObjPrim_SetTexture(objHitbox2, path);
+    ObjSprite2D_SetSourceRect(objHitbox2, 0, 0, 5, 5);
+    ObjSprite2D_SetDestRect(objHitbox2, -3, -3, 3, 3);
+    Obj_SetRenderPriority(objHitbox2, 0.31); // Player renders at 30
+
+    while (GetVirtualKeyState(VK_SLOWMOVE) == KEY_HOLD && !playerdead) {
+        ObjRender_SetPosition(objHitbox, GetPlayerX(), GetPlayerY(), 1);
+        ObjRender_SetPosition(objHitbox2, GetPlayerX(), GetPlayerY(), 1);
+        objcount += 1;
+        yield;
+    }
+
+    // If the player is dead, destroy this hitbox and create a new one
+    if (GetVirtualKeyState(VK_SLOWMOVE) == KEY_HOLD && playerdead) {
+        Obj_Delete(objHitbox);
+        Obj_Delete(objHitbox2);
+        RenderHitbox;
+        return;
+    }
+
+    Obj_Delete(objHitbox);
+    Obj_Delete(objHitbox2);
+}</code></pre>
+	      <p>For this demonstration we use two squares. Now, please note that at the very start, we <code>yield;</code> twice - this is in order to let Danmakufu naturally transition to the <code>KEY_HOLD</code> state after we initially call the task. Next, we have a check if the player is dead. This ties into some logic within the while loop whereby if the player dies while the hitbox is active, we want to destroy the existing hitbox (so that the hitbox doesn't exist during the death animation. Of course, there are two things that can happen here - the player can hold the focus key or let go. If they hold on, the initial check in <code>@MainLoop</code> will never trigger again and so the hitbox won't be recreated - for this reason we destroy the hitbox and recreate it on death with a while loop at the start of the task. In addition, it is here where we handle the case where they let go - if the player lets go, we don't even bother creating the hitbox components.</p>
+	      <p>In the future, more things may be added here, but for now... <a href="./ph3u3l34code1.html">here</a>'s our player script in its entirety.</p>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>
-	          <li></li>
+	          <li>Player scripts run in parallel with other Danmakufu scripts</li>
+	          <li>Player parameters all have defaults and can be customized</li>
+	          <li>Player Options can be created using Render Objects</li>
+	          <li>Players have a default respawn point</li>
+	          <li>Invincibility can be visualized using a magic circle with a fixed max radius</li>
+	          <li>Player shotsheets are fundamentally the same as any other shotsheet except that they happen to only be used in player scripts</li>
+	          <li>Player bombs use Spell Management Objects and Spell Objects</li>
+	          <li>Spell Objects use vertex manipulation to render</li>
 	        </ul>
 	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
 	      <p>N/A</p>
