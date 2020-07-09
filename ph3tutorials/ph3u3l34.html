@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Jul 06, 2020')">
+  <body onload="setupENG('Jul 07, 2020')">
     <div id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -614,19 +614,11 @@ task PlayerShot {
 	      <p>Of course, most of this is just for fun - but it does result in a situation where to maximize damage with the focused spell, you should stay close to the boss at the start and move backwards over time. Whether or not such a gimmick is warranted depends on whether or not your player is general purpose as well as what kind of enemies it is designed to be good against.</p>
 	      <p>And with that, we have a player... except that if you've ever played a Touhou game after Touhou 6, there's something missing, isn't there...</p>
 	      <h2 class="ph3tutorialheader" id="sub10">Part 10: What else can (or should) I add to a player?</h2>
-	      <p>To close off this guide, we'll cover some miscellaneous aspects of a player script. For now we'll stick with the hitbox visualization when focused. Now, you will normally want an actual graphic for this, but for the same of demonstration, we'll use a... red square. Add the following to <code>@MainLoop</code>:</p>
-	      <pre class="prettyprint"><code>    if(GetVirtualKeyState(VK_SLOWMOVE) == KEY_PUSH) {
-        RenderHitbox;
-    }</code></pre>
-	      <p>We'll do this by creating two objects every time the focus key is pushed, which will delete themselves whenever that state no longer holds. Of course, there's... a little more logic than you'd might expect.</p>
+	      <p>To close off this guide, we'll cover some miscellaneous aspects of a player script. For now we'll stick with the hitbox visualization when focused. Now, you will normally want an actual graphic for this, but for the same of demonstration, we'll use a... red square. Add a call to <code>RenderHitbox</code> in <code>@Initialize</code></p>
+	      <p>We'll handle the hitbox by creating two objects that will only be visible if the player is alive and focusing (otherwise they will be invisible).</p>
 	      <pre class="prettyprint"><code>task RenderHitbox {
-    yield;yield; // Two frames after KEY_PUSH, the focus key will be in KEY_HOLD mode
-    while(playerdead) { // If the player is dead, don't render the hitbox
-        if(GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD){return;} // If they unfocus during the respawn timeframe, terminate the hitbox
-        yield;
-    }
     let path = csd ~ "white.png";
-    let objcount = 0;
+    let visible = false;
     let objHitbox = ObjPrim_Create(OBJ_SPRITE_2D);
     ObjPrim_SetTexture(objHitbox, path);
     ObjSprite2D_SetSourceRect(objHitbox, 0, 0, 5, 5);
@@ -639,25 +631,23 @@ task PlayerShot {
     ObjSprite2D_SetDestRect(objHitbox2, -3, -3, 3, 3);
     Obj_SetRenderPriority(objHitbox2, 0.31); // Player renders at 30
 
-    while (GetVirtualKeyState(VK_SLOWMOVE) == KEY_HOLD && !playerdead) {
+    loop {
+        if (visible && (playerdead || GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD)) { // Shift to invisible
+            visible = false;
+            Obj_SetVisible(objHitbox, false);
+            Obj_SetVisible(objHitbox2, false);
+        } else if (!visible && !playerdead && GetVirtualKeyState(VK_SLOWMOVE) == KEY_HOLD) { // Shift to visible
+            visible = true;
+            Obj_SetVisible(objHitbox, true);
+            Obj_SetVisible(objHitbox2, true);
+        }
+
         ObjRender_SetPosition(objHitbox, GetPlayerX(), GetPlayerY(), 1);
         ObjRender_SetPosition(objHitbox2, GetPlayerX(), GetPlayerY(), 1);
-        objcount += 1;
         yield;
     }
-
-    // If the player is dead, destroy this hitbox and create a new one
-    if (GetVirtualKeyState(VK_SLOWMOVE) == KEY_HOLD && playerdead) {
-        Obj_Delete(objHitbox);
-        Obj_Delete(objHitbox2);
-        RenderHitbox;
-        return;
-    }
-
-    Obj_Delete(objHitbox);
-    Obj_Delete(objHitbox2);
 }</code></pre>
-	      <p>For this demonstration we use two squares. Now, please note that at the very start, we <code>yield;</code> twice - this is in order to let Danmakufu naturally transition to the <code>KEY_HOLD</code> state after we initially call the task. Next, we have a check if the player is dead. This ties into some logic within the while loop whereby if the player dies while the hitbox is active, we want to destroy the existing hitbox (so that the hitbox doesn't exist during the death animation. Of course, there are two things that can happen here - the player can hold the focus key or let go. If they hold on, the initial check in <code>@MainLoop</code> will never trigger again and so the hitbox won't be recreated - for this reason we destroy the hitbox and recreate it on death with a while loop at the start of the task. In addition, it is here where we handle the case where they let go - if the player lets go, we don't even bother creating the hitbox components.</p>
+	      <p>For this demonstration we use two squares. Note that we store the 'visible' flag as a variable - this is so that instead of performing the full 'is player alive and focusing' check (and the opposite as well), we only need to check for a change in the variable. It saves a little bit of speed in exchange for an extra variable.</p>
 	      <p>In the future, more things may be added here, but for now... <a href="./ph3u3l34code1.html">here</a>'s our player script in its entirety.</p>
 	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
 	        <ul>

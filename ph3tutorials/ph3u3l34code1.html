@@ -77,12 +77,10 @@ let count = 0;
     CreateOption(-1);
     CreateOption(1);
     MagicCircle;
+    RenderHitbox;
 }
 
 @MainLoop {
-    if(GetVirtualKeyState(VK_SLOWMOVE) == KEY_PUSH) {
-        RenderHitbox;
-    }
     count += 1;
     yield;
 }
@@ -145,13 +143,8 @@ task DrawPlayer {
 }
 
 task RenderHitbox {
-    yield;yield; // Two frames after KEY_PUSH, the focus key will be in KEY_HOLD mode
-    while(playerdead) { // If the player is dead, don't render the hitbox
-        if(GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD){return;} // If they unfocus during the respawn timeframe, terminate the hitbox
-        yield;
-    }
     let path = csd ~ "white.png";
-    let objcount = 0;
+    let visible = false;
     let objHitbox = ObjPrim_Create(OBJ_SPRITE_2D);
     ObjPrim_SetTexture(objHitbox, path);
     ObjSprite2D_SetSourceRect(objHitbox, 0, 0, 5, 5);
@@ -164,23 +157,21 @@ task RenderHitbox {
     ObjSprite2D_SetDestRect(objHitbox2, -3, -3, 3, 3);
     Obj_SetRenderPriority(objHitbox2, 0.31); // Player renders at 30
 
-    while (GetVirtualKeyState(VK_SLOWMOVE) == KEY_HOLD && !playerdead) {
+    loop {
+        if (visible && (playerdead || GetVirtualKeyState(VK_SLOWMOVE) != KEY_HOLD)) { // Shift to invisible
+            visible = false;
+            Obj_SetVisible(objHitbox, false);
+            Obj_SetVisible(objHitbox2, false);
+        } else if (!visible && !playerdead && GetVirtualKeyState(VK_SLOWMOVE) == KEY_HOLD) { // Shift to visible
+            visible = true;
+            Obj_SetVisible(objHitbox, true);
+            Obj_SetVisible(objHitbox2, true);
+        }
+
         ObjRender_SetPosition(objHitbox, GetPlayerX(), GetPlayerY(), 1);
         ObjRender_SetPosition(objHitbox2, GetPlayerX(), GetPlayerY(), 1);
-        objcount += 1;
         yield;
     }
-
-    // If the player is dead, destroy this hitbox and create a new one
-    if (GetVirtualKeyState(VK_SLOWMOVE) == KEY_HOLD && playerdead) {
-        Obj_Delete(objHitbox);
-        Obj_Delete(objHitbox2);
-        RenderHitbox;
-        return;
-    }
-
-    Obj_Delete(objHitbox);
-    Obj_Delete(objHitbox2);
 }
 
 // Creates an option to the side of the player
