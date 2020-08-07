@@ -532,6 +532,19 @@
             "numparticipants": 5,
             "result": [["Lusus"], ["ExPorygon/Ozzy840"], ["Foxigami"]],
             "participants": ["JDude", "Bagoum", "Lusus", "Foxigami", "ExPorygon/Ozzy840"]
+        },
+        {
+            "id": "bha2",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "unlikely allies",
+            "year": 2020,
+            "duration": [2020.08, 2020.09],
+            "host": "Jean Fox",
+            "judges": ["Trickysticks", "CrestedPeak9", "Badz"],
+            "numparticipants": 0,
+            "result": [[], [], []],
+            "participants": []
         }
     ]
 }
