@@ -192,6 +192,39 @@ p, fieldset, table, pre {margin-bottom: 1em;}
   margin-top: 1rem;
 }
 
+.alert .alert_inner_sm {
+  background-color: #440000;
+  color: white;
+  font-size: 0.75rem;
+  border: 2px double #AA0000;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 1rem;
+}
+
+.alert .notice_inner {
+  background-color: #004444;
+  color: white;
+  font-size: 1.5rem;
+  border: 2px double #00AAAA;
+  border-radius: 8px;
+  text-align: center;
+  padding: 16px;
+  margin-top: 1rem;
+}
+
+.alert .notice_inner_sm {
+  background-color: #004444;
+  color: white;
+  font-size: 0.75rem;
+  border: 2px double #00AAAA;
+  border-radius: 8px;
+  text-align: center;
+  padding: 8px;
+  margin-top: 1rem;
+}
+
 /* ----- MENUS BY SPAREN. PLACED AT BOTTOM IN ORDER TO OVERRIDE ALL DEFAULTS ----- */
 
 /* ----- Main Menu: Origianlly on the left side; shifted to float center for better mobile support ----- */
