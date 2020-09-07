@@ -542,9 +542,9 @@
             "duration": [2020.08, 2020.09],
             "host": "Jean Fox",
             "judges": ["Trickysticks", "CrestedPeak9", "Badz"],
-            "numparticipants": 0,
+            "numparticipants": 12,
             "result": [[], [], []],
-            "participants": []
+            "participants": ["Bagoum", "Python", "Naudiz", "Tylorfully", "Lusus", "TTBD", "Zinochan", "Jackie Matthews", "Foxigami", "JDude", "Gregory", "Adam"]
         }
     ]
 }
