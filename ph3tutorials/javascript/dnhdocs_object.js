@@ -1403,7 +1403,7 @@ var dnhph3docs_object = {
                     "fname": "ObjShot_SetSourceBlendType",
                     "args": ["objID : number (Object ID)", "blendtype : const"],
                     "returnv": "",
-                    "description": "Gives the shot object associated with objID the specified graphic.",
+                    "description": "Gives the shot object associated with objID the specified blend type.",
                     "notes": "Available blend types are:<br>BLEND_ALPHA, BLEND_ADD_RGB, BLEND_MULTIPLY, BLEND_SUBTRACT, BLEND_ADD_ARGB, BLEND_INV_DESTRGB, and BLEND_SHADOW (undocumented)."
                 },
                 {
