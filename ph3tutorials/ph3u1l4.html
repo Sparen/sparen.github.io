@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Dec 03, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupENG('Sept 24, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
@@ -260,8 +260,8 @@ array = 999;</code></pre>
 array = array ~ [4]; //array is now [3, 6, 4]</code></pre>
 		<p>Please note that you must include the item you are going to add as an array - in essence, you are combining two arrays. Also, you can use <span class="tooltip" onmouseover="getFxnDocs('concatenate', 'f_concatenate_01');"><code>concatenate(array1, array2)</code><span class="tooltiptext" id="f_concatenate_01"></span></span> in order to concatenate two arrays, although the method with the ~ is much simpler. Here is another example, this time showing how to include the value of a variable in an array:</p>
 	        <pre class="prettyprint"><code>let array = []; //Declare an empty array
-let string = "Test";
-array = array ~ [string]; //array is now [string], where the value of string is "Test"</code></pre>
+let element = "Test";
+array = array ~ [element]; //array is now [element], where the value of element is "Test"</code></pre>
 		<p>Next we will discuss indexing. You can obtain the length of an array using <span class="tooltip" onmouseover="getFxnDocs('length', 'f_length_01');"><code>length(nameofarray)</code><span class="tooltiptext" id="f_length_01"></span></span>. First thing's first though - the first item in an array is indexed 0, not 1. You index an array as follows:</p>
 	        <pre class="prettyprint"><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declare an array of length 4 containing the names of Danmakufu Scripters
 let lengthdnh = length(dnh); //4

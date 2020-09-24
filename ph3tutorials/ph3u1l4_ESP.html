@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupESP('Oct 14, 2018')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
+  </script>  </head>  <body onload="setupESP('Sept 24, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>
       <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
@@ -249,8 +249,8 @@ array = "CIRNO ATACA DE NUEVO";</code></pre>
 array = array ~ [4]; //array ahora es [3, 6, 4].</code></pre>
 		<p>Ten en cuenta que debes incluir el ítem que quieres agregar, escrito como array – en esencia, estás combinando dos arrays. También puedes usar <span class="tooltip" onmouseover="getFxnDocs('concatenate', 'f_concatenate_01');"><code>concatenate(array1, array2)</code><span class="tooltiptext" id="f_concatenate_01"></span></span> para concatenar dos arrays, aunque el método con el ~ es mucho más simple. Otro ejemplo, esta vez mostrando cómo incluir el valor de una variable en un array:</p>
 	        <pre class="prettyprint"><code>let array = []; //Declara un array vacío.
-let string = "Test";
-array = array ~ [string]; //array ahora es [string], cuyo valor es "Test".</code></pre>
+let element = "Test";
+array = array ~ [element]; //array ahora es [element], cuyo valor es "Test".</code></pre>
 		<p>Ahora vamos a discutir indexados. Puedes obtener el largo de un array usando <span class="tooltip" onmouseover="getFxnDocs('length', 'f_length_01');"><code>length(nombredelarray)</code><span class="tooltiptext" id="f_length_01"></span></span>. Pero primero lo primero – el primer elemento de un array está indexado como 0, no 1. </p>
 	        <pre class="prettyprint"><code>let dnh = ["ExPorygon", "Naut", "Trickysticks", "AJS"]; //Declara un array de largo 4 y contiene los nombres de scripters de Danmakufu.
 let lengthdnh = length(dnh); //4
