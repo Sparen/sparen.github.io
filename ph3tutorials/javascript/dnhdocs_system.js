@@ -284,7 +284,7 @@ var dnhph3docs_system = {
                 },
                 {
                     "fname": "SaveReplay",
-                    "args": ["replayfileindex : number (int)"],
+                    "args": ["replayfileindex : number (int)", "username : string"],
                     "returnv": "",
                     "description": "Saves a replay to the specified replay index.",
                     "notes": ""
