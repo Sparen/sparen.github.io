@@ -1,0 +1,45 @@
+Oops! All BoWaP - by bagoum
+Difficulty – Hard (there were 6 difficulties to choose from, and Normal seemed easier than your traditional Normal)
+Playthrough - https://www.youtube.com/watch?v=iYD0rRwzlk0
+
+Creativity – 1/5
+Not to say the spells themselves aren't creative. But judging them on the criteria and theme of the contest however, this script comes up short. Namely being, the use of two characters here. The entire battle is only Junko using her ability to transform Yukari's danmaku to change the pattern into a myriad of different styles of bullets (few of those attacks feeling very “Junko-like” either). A choice that underutilized what can be done with both characters on field at the same time. Ultimately, this script did not even require Junko to be in it. Every single pattern could realistically be accomplished by Yukari alone.
+
+Aesthetics – 3/5
+This one is difficult to judge, because this script contains aspects that on one hand are very impressive (the flame bullets and lightning lasers were particularly gorgeous), but also some that are questionable as well, as such I'm giving it a score I would normally use for “average”. For instance, choice bullet graphic designs clash with both the rest of the script and Touhou as a whole. The triangles used in “Border of Wave, Particle, Offset, and Origin” seem less like bullets and are designed more like a fighter jet seen in an early 3D SNES low poly game. 
+The large circles used in the same spell and elsewhere are shaded significantly different from the rest in the game and as such, give the impression of bizarre solid objects instead of energy bullets (to a certain degree, they appear more like plates or frisbee's being thrown). Lastly, the stars seen in “Border of Wave, Particle, View, and Reflection” like the triangles from before, also stand out as not appearing consistently designed. Especially considering that this script did feature stars that were shaded and designed like the rest of the bullets in the script. 
+Finally, the death effect on Reimu feels incomplete. Dying feels like it contains little impact and as such feels both inconsequential and incomplete. Dying traditionally involves a significantly flashy explosion that also clears out bullets while you have invulnerability frames. While you made an interesting design with the red circle to signify the i-frames, the lack of the former two aspects that make up a “death” makes the dying effect feel unfinished.
+
+Spell Grading – 7.77/10 (11.6/15 score total)
+
+Border of Wave, Particle, Vector, and Curve – 8/10
+A simple spell, but as such a good opener showcasing to players what's to come. Many will be used to dealing with BoWaP, but the flames, not being much of a threat, but still keeping the player on their toes.
+
+Border of Wave, Particle, Plane, and Sphere – 9/10
+I appreciate Junko not having a hurt-box when she goes to the bottom of the field to safely tell to player “get up and get out of here”. Cleverly designed in both design and execution and truly gives the impression of Yukari and Junko's styles of danmaku mixed together. 
+
+Border of Wave, Particle, Offset, and Origin – 8/10
+While it is still the traditional BoWaP, the backwards bullets do put an interesting spin on things. Because of them often coming from behind and off screen, while it is a direct a good continuation of what came before.
+
+Border of Wave, Particle, Line, and Shape – 10/10
+The crows do a very good telegraph of what's to come right before this spell really takes off. I like the way this spell forces you to keep track all around you, both from what Yukari's firing and keeping ahead of the birds aimed at you. All the while aiming to get between the next set of lasers that's setting up lest you get trapped. Note: particularly beautiful design choice to have the lasers curl around the crows themselves before attacking.
+
+Border of Wave, Particle, Area, and Perimeter – 7/10
+For all intents and purposes, this is BoWaP with an added layer to it. Clever design with how you made it happen, but it does feel like it's “regressing” and more simplistic than what came before with the strategy just being “hug the bottom and dodge what comes your way”.
+
+Border of Wave, Particle, View, and Reflection – 7/10
+This is interestingly designed, but ultimately feels like a bit of a mess. It's not particularly bad, but does feel like it's a bit too particularly chaotic and random. The lasers could have used a bit more logic in their pattern, otherwise it's just random stars with random lasers bouncing around
+
+Border of Wave, Particle, Continuity, and Gap – 7/10
+This is the same BoWaP patterns seen before, but with slower and denser bullets with some lasers added as well. Mechanically, it feels less than what came before it.
+
+Border of Wave, Particle, Circle, and Lily – 7/10
+While the red and blue waves force you to move around a little more than normal. Ultimately this spell in practice is still just “hang out on the bottom and dodge what comes your way”. 
+
+Border of Wave, Particle, Touhou, and CAVE – 7/10
+Same logic again, but this time the threat comes switches from coming from the upper left and upper right instead of straight ahead. Ultimately however, you're still taking this attack on in the exact same manner of the previous three spells, making this a touch repetitive at this point.
+
+
+
+Final Score – 15.6/25
+The script has a strong start, however it becomes a bit repetitive near the end. It ultimately is “good but not great”. What truly holds this script back more than anything is underutalization of the main theme this contest is built around, and I feel it would have been better suited for a different themed contest.

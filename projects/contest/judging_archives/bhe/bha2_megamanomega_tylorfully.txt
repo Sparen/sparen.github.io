@@ -1,0 +1,48 @@
+Kaguya and Sakuya ~ TimeAndRhyme Duo - by Tylorfully
+Difficulty – Default
+Player – Have the option for anyone (Glorious and Huge Singer Marisa)
+Playthrough - https://www.youtube.com/watch?v=-fNgsBP8XS0
+
+Creativity – 3/5
+Everything with Sakuya and Kaguya here works, but I feel much more could have been explored with what they can both do. Sakuya has more than just time stopping and Kaguya has more than just manipulation of eternity and instantaneous. 
+
+Aesthetics – 2/5
+This script is missing a lot. Not to the point that it's detrimental to the attacks themselves. However the music doesn't properly loop (in fact, it doesn't loop at all), the graphics around the spell cards is completely missing leaving only pink & white rectangles, and there's really no death effect from beating bosses (both spell cards and the final victory). They just pop out of existence.
+
+Spell Grading – 7.8/10 (10.7/15 total)
+Note: I am taking a point off overall for two ongoing problems
+1) Attacks don't always properly despawn after an attack ends. In fact, in many spells some leftover bullets will still be fired when everything's supposed to be destroyed
+2) Sakuya is the only boss with a damageable hitbox. For whatever reason, in all spells you cannot damage Kaguya.
+
+Non-spell 1 – 9/10
+Very nice for an opening spell. Introduces you to both the characters with signature moves, plus the predictable nature of Sakuya's knives contrast well with the random nature of Kaguya's bullets
+
+Time Sign “Instantaneous Warp” - 8/10
+Neat idea with the knives turning into lasers. Though I feel it could use a little more to it, namely because once you get the logic down, it's very systematic and easy making the spell feel like it drags on a bit too long.
+
+Non-spell 2 – 8/10
+I think it would have been better if Kaguya's lasers had you move around a bit more. Since otherwise they're not doing much since you want to stay under Sakuya in that zone anyway. However, aside from that overall a good non-spell. I like how the pace of the knives keeps them a threat, but also warned you of what was about to happen so you don't get caught off guard when they come from behind
+
+Time Sign “Eternal Stop” - 4/10
+This spell is clever. However, it just throws you right into the deep end with no warning, but more importantly, it potentially breaks and you can't beat it except by timeout. By itself it's not a bad idea and is actually pretty clever, however it needs some sort of warning to let the player know what's going on if the game play's about to change that dramatically. However the biggest problem is, unless you're playing as a character with homing shots, if you don't beat the prior spell when under Sakuya (like by using a bomb for instance) you will be stick off to the side and unable to damage her and will be forced to time out the spell.
+
+Non-spell 3 – 7/10
+Not bad for a non-spell. The knives in the shape of crosses is a little odd, but not unpleasant. The biggest problem is this is the 3rd non-spell in a row where you're dodging it the exact same way with minor differences. Some variety at this point would be nice.
+
+Time Stopper “Timekeeper's Watch” - 9/10
+Simple by Sakuya standards of time stopping, but works very well. You know right away to get out of dodge, and I particularly like how you can either hug the bottom to dodge everything, or if you realize, you'll have an easier time if you zip up towards them in the correct gap.
+
+Non-spell 4 – 7/10
+Passable in its own right, but again, we're doing almost the exact same things as before, but honestly almost feels like less. Compared to what came before non-spell wise, this almost feels like regressing and makes this non-spell feel more like filler than anything.
+
+Grow Sign “Instant Growing” - 10/10
+Part of me thinks it could have used a little extra warning about what's about to happen, or at least eased the player into it. But overall, very good spell and a very dynamic spell. I'd say this is my favorite of the bunch with a great way of making you move about the field while also being a very good mixture of Sakuya's time manipulation and Kaguya's instant manipulation.
+
+Non-spell 5 – 8/10
+It's good. I'd say it's still having the problem where the strategy once again is “hang out under Sakuya and dodge the things”. But it is improving on what's happened before and does force you to move around a bit more.
+
+Bloom Sign “Flowers in Eternal Bloom” - 8/10
+Interesting and nice dynamic between the two going on (though with the two moving around, it makes the whole “I can't damage Kaguya” issue stand out the most here...). I do however think the over-reliance on smaller gaps hurt this a tad cause in practice, for everything that's going on you just get siphoned into a small zone, sometimes without even any range to dodge anything.
+
+Final Score – 15.7/25
+This script is rough. Extremely rough. But it's not something I'd automatically write off as bad or unsalvageable, because there are some clever and interesting ideas here. However this script needs a lot of polish, in the system mechanics, graphic design and bullet patterns.

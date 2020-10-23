@@ -1,0 +1,31 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Similarity Duo" by Green Dinobot
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+Unfortunately, because this script uses Ultima's ReimuB, there is a known issue where shots will get randomly deleted.
+
+Non 1 - Very straightforward, but it works. 13/15
+Spell 1 - Mostly just lane-reading. It's okay, I guess. 11/15
+Non 2 - Another pretty standard non. 13/15
+Spell 2 - Could we not have dark bullets on dark backgrounds please. The circling required is alright. 11/15
+Non 3 - Fairly interesting circling, but Okina's solo phase is pretty silly. 12/15
+Spell 3 - It is just horizontal streaming... 11/15
+
+Overall Gameplay - 11.8/15
+It's all playable, but doesn't feel particularly inspired? There are more to these two than just firing lanes or circles or spirals of bullets. Understandably Junko-themed scripts are always going to be more simplistic, but I didn't feel like it was particularly interesting either.
+==========================================================
+Creativity (Contest Theme) - 3.5/5 (Okay)
+Meme pair theme, but there's almost no synergy between the two.
+==========================================================
+Aesthetics - 3.5/5 (Passable)
+It works just fine and doesn't interfere with the dodging (save for that one spell). I have to question restarting the music every time you pause though...
+==========================================================
+Total Score - 18.8/25
+This honestly felt more bland than anything else. Also doesn't help that the script actively breaks the more you die... please fix the issue with the shottype.

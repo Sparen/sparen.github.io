@@ -1,0 +1,37 @@
+Melancholic Lily Valley - by Adam
+Difficulty – Normal
+Mode – Legacy
+Character – Sanae (default)
+Playthrough - https://www.youtube.com/watch?v=jTUTP4Br5xs
+
+Creativity – 5/5
+All in all these two work very well together. Their attacks compliment each other nicely and I love the instances of them influencing each others danmaku as well.
+
+Aesthetics – 5/5
+Absolutely beautiful. I particularly love the designs you made in the danmaku as well, such as the smaller green bullets to simulate vines and especially the heart bullets to simulate roses. Great attention to detail all around
+
+Spell Grading – 8.5/10 (12.75/15 total)
+
+Spring Mist “Engulfing Miasma” - 9/10
+Very nice opener. It starts out seemingly intense and chaotic, but with a logic to it, and then eases into something more structured near the end. However, while normally I would be annoyed with a spell that only lasts for one loop, the second half of the loop does build on what the first half had. But it does still give me a feeling up surprise that it was over so quickly.
+
+Toxic Flower “Daisy-chains for the Delirious” - 9/10
+I like the controlled randomness and how much it makes you have to move around. From a thematic standpoint I also love how this is essentially Medicine poisoning Lily's flowers. Especially how it gives you a feeling of wanting to move up, and 
+
+Floral Magic Vine “Medicine for a Bleeding Heart” - 8/10
+Nice spell and I also like how this one forces you to move around quite a bit. To that end, I also really like the style of warning lasers the heart fruits have to give even blind-run players enough time to react to get away from the bottom without sacrificing difficulty. That said, while I like the spell as a whole, the shortness of it really hurts it here. It ends a bit into the setup of the second loop before anything happens so you're hanging back doing nothing. So you're given almost 10 seconds of preparing for the next attack to come, and then it ends. Because of the design, I feel it should have lasted long enough to fight against a second loop.
+
+Life Sign “Migrating Butterflies” - 9/10
+Very well made. I like how it gives you easy to understand warning lasers right out the gate, and then quickly builds on it as it ratchets up in difficulty as the spell goes on.
+
+Night Bloom “Beware the Forest's Thorns” - 8/10
+I love the design and dodging style of it (from a thematic standpoint, it's also my favorite one here. I love the “vines” and “flowers” you made out of danmaku). I like the varied attacks going on here where you need to dodge bullets, then misdirect homing shots and then before said bullets are clear, get out of dodge of what's about to come from below. However, this spell suffers from the same problem Floral Magic Vine “Medicine for a Bleeding Heart” did in that it's too short. This spell too is over shortly after the second loop starts, meaning while you're hanging back before the challenging part of the loop begins, it ends right before it does.
+
+“A Curious Case of Spring Fever” - 8/10
+Well, it's a random slew of attacks that do still work well together and do still force you to move around so you can't just hang out under Medicine and dodge what comes your way. It's a solid spell that works,you've got easy to read random shots fired about while you've also got aimed bullets that make you move about. I was kinda left with a feeling of “Wait. That's it?” when it was over however. It's a solid spell that works, however to use it as the final spell felt a little lacking, considering this is essentially the mechanics of what I's expect out of a non-spell.
+
+Final Score – 22.75/25
+
+A very nice script with few complaints. Ultimately my biggest complaint across the board is that I was left wanting more. Which honestly, it is the best complaint to have, but it is still a complaint I need to consider. Spell patterns I feel should go for two loops, especially when they come with a fairly sizable gap of downtime between when the loop ends and when it begins again. Without it you actually only spend very little time in the spell dealing with actual threatening attacks (this is why I didn't dock a point for Spring Mist “Engulfing Miasma”). 
+
+A very fun script all in all, but at many times I was left feeling both confused and disappointed that an attack was over already. That, and I feel it ended kinda flat. Not bad, but “A Curious Case of Spring Fever” really did not feel “final spell worthy”. It felt like it was instead building up to a climax that didn't happen.

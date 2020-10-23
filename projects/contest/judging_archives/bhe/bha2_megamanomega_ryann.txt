@@ -1,0 +1,53 @@
+Ashes of Jeweled Treasures - by Ryann1908
+Difficulty – Normal
+Player – Marisa
+Playthrough - https://www.youtube.com/watch?v=7lxYoGomzQc
+
+Creativity – 4/5
+They work well together and are a good representation of what they can do. I wish both Shou & Seiga influenced one another's shots better, cause as is they're just both out there doing their own thing. But they do still end up working well together with what they do
+
+Aesthetics – 1/5
+Everything is good and standard Touhou... until it's not. There's too many instances where your aesthetic choices are actually detrimental to the spells as a whole. There's the darkened screen & vision obscuring black boxes with Castaway Penumbra “Cloud Oscillation Paradigm”, the fact that said black boxes can carry onto the next non-spell, the fact that the design of Abhorrent Torrent “Insidious Sputter” can make the lasers essentially invisible at times, and then just... everything going on with Tropical Country “Lusophone Freightage” with the background there.
+
+Spell Grading – 6.82/10 (10.23/15 total)
+
+Non-spell 1 – 9/10
+Pretty good opener. Good use of both Seiga & Shou's signature non-spell moves without being overbearing.
+
+Rosary Sign “Esse Hawser” - 9/10
+Also a very good progression of the theme. I especially love how this spell has such a strong focus on the curvy lasers, however they're quite manageable to keep track of, even when focusing on the rest of the bullets on the field.
+
+Non-spell 2 – 7/10
+I feel Shou's a little too aggressive compared to what Seiga's throwing out here. Not a bad idea on paper, but I have to practically get right up into Seiga's face while she essentially shotguns me over and over again giving me little to no time to react to her shots.
+
+Castaway Penumbra “Cloud Oscillation Paradigm” - 4/10
+What... is this effect? In all honesty, I'm really not sure if this is a bug or a feature, but it's consistent so I gotta treat it as the latter. Darkening the screen and making it hard to see everything just isn't good game design and its made even worse by the random black boxes that'll occasionally pass across the screen obscuring everything. And to make matters even worse, you're expected to move all over the place, so there's a pretty good chance you'll get blind-sided by something you couldn't even see or react to. I'm just disappointed because I know I'd like this a lot better if this overlay effect wasn't present.
+
+Non-spell 3 – 8/10
+Not bad, pretty good. I'm a little iffy on it cause this is one of those spells where the difficulty is dramatically reduced once you understand how it works (the first few times you face it you'll get blasted, but once you learn how to misdirect the yellow orbs you can ignore them almost completely and focus exclusively on the kunai). But it otherwise works well for a non-spell. Honestly, the bigger issue is that parts of the special effects from the previous spell tend to bleed over into this spell, with some of them being the completely obscuring black boxes.
+
+Memorial Card “Capricious Avifauna Burial” - 7/10
+It may be a blind-run-killer, however knowing what's coming isn't going to negate the difficulty, so it's fine in that regard. It works and both Shou & Seiga's attacks work well together (as does leading Shou around correctly). However, there's a pretty glaring issue at the end of the spell, namely that since Shou races off field while the boss portraits are active, you can randomly die if she runs into you without being able to see anything coming.
+
+Abhorrent Torrent “Insidious Sputter” - 5/10
+I honestly love the idea, I just hate the execution. Or rather, numerous issues pop up in it's execution. Limiting your movement to a grid is a really cool and unique idea, however.
+Making it so you're only able to stay on the lit up parts poses a few issues. One being you really can't see your character clearly when unfocused, other one being you've got lasers in the latter parts that are the same white color as your “safe lasers”. This especially causes issues in the last part with the falling horizontal lasers where you really can't tell where the lasers “end”. The death at 4:33 is a good example of this, cause it just looks like you're randomly dying cause you can't clearly make out the lasers.
+The way it ends with all the bullets collapsing just feels like an unnecessary cheap shot. It's either you die cause you didn't know what was coming, or know you just need to move up and to the left to dodge everything flawlessly.
+And then we end it off with random bullet puke from Shou? This spell just feels unfocused and randomly going all over the place.
+
+Eastern Impermanence “Fandangle Lullaby” (Protocol #1) – 7/10
+A solid spell and I love the way this spell leads you around the field as you avoid the “puckerin' butt holes” as my Editor put it. A really nice ongoing threat that leaves you with the chance of getting trapped, but they never stick around, or are shot so fast that you're not given the chance to plan ahead. My biggest issue is just that random giant laser storm Shou'll randomly decide to do. That just felt like an unnecessary cheap shot on an otherwise good spell.
+
+Eastern Impermanence “Fandangle Lullaby” (Protocol #2) – 9/10
+Very well done. Straightforward, but still challenging. Felt like a good mixture of Shou and Seiga's attacks while still maintaining enough attacks to keep you on your ties and keep making you move around, all the while without so many different styles of attack you get overwhelmed.
+
+Eastern Impermanence “Fandangle Lullaby” (Protocol #3) - 8/10
+Protocol #2 version but Hard mode? Contrast to #1 & #2 being vastly different from one another, this one seems very similar to #2, just with moving lasers (why are there 3 different versions of Fandangle Lullaby anyways?). The spell's honestly pretty fun, I just wish there was more logic/control to the green lasers, cause as is they can randomly either be a complete non-issue, or with the blue lasers keeping you pinned down, they can randomly trap you with nothing you can do but bomb.
+
+Also, I have to ask. Why are all these all time out spells? They really don't feel like they should be when playing against them, and it doesn't feel like making them time-out spells adds anything either. Just randomly make these spells longer than they need to for the sake of making them longer than they need to?
+
+Tropical Country “Lusophone Freightage” - 2/10
+I've seen some poor aesthetic choices that needlessly make things hard to see, but this takes the cake. Putting bright, yet fake bullets on the background, putting large blooming bullets that block the vision of the actual threatening bullets (and why is it Subconsciously Lunatic Eye playing in the background anyways?). This is an otherwise just alright spell that I feel is just completely ruined by this effect you've got going on here.
+
+Final Score – 15.23/25
+This script started out pretty good and did still manage some good parts in the middle of it. About a third of the spells are good, a third could use some work but a third of them just have some really questionable decisions that make the spells just plain not fun to play and unfair. Experimental and creative and definitely some stuff I haven't seen before, however just because something's unique does not make it good.

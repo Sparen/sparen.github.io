@@ -1,0 +1,40 @@
+Shipwreck Showdown - by The Terrible Bullet Dodger
+Difficulty – Normal
+Player – Marisa (Laser & Laser)
+Playthrough - https://www.youtube.com/watch?v=eZps2cPeyQA
+
+Creativity – 3/5
+While the implementation of the bosses was amazing and both Komachi & Murasa complimented each other well when together. Well, the key being “when together”. While I don't think there's anything wrong with having sections of this script being 1 on 1 for the sake of showcasing what the bosses can do. At the same time though, 4/7 of the spells were 1 on 1 fights. When over 50% of the battle doesn't include the two bosses together, I gotta take a point off, even if I love some of the stuff done here.  
+
+Aesthetics – 5/5
+Absolutely gorgeous in MANY ways. The intro was absolutely phenomenal and I love even the screen itself (namely how you can still see stuff off screen so you don't get blindsided). I especially liked the center of the screen number countdown for the timeout spell
+
+Spell Grading – 9.14/10 (13.7/15 total)
+
+Phase 1 – 9/10
+Very good “non-spell”. It captures both what Murasa and Komachi are capable of without being too overbearing right out the gate.
+
+Phase 2 – 10/10
+Great mixture of both Murasa's traditional anchors while mixing in her water waves along with Komachi's boat waves. May come off as overbearing at first, but is more manageable with time once you realize the patterns the anchors come in. Very well done.
+
+Phase 3 (Murasa) – 8/10
+Not bad, though I feel it was a touch lacking both in impact and design compared to what just came before it. This script came out the gate swinging and this spell almost feels like a moment to catch your breath.
+
+Phase 4 (Murasa) – 9/10
+And speaking of a chance to catch your breath, have a timeout spell. Very well designed and fits Murasa to a tee. I especially love the fact that this was challenging without needing to resort to controller screw with pulling me towards the center. 
+
+Phase 5 (Komachi) – 9/10
+Aside from thinking the exploding spirits seems more Rin-like than Komachi-like, very well done. Great non-spell that keeps you on your toes with varying attacks. Especially the scythe boomerang that makes it so you can't get complacent.
+
+Phase 6 (Komachi) – 10/10
+This right here is why I love Touhou fan games, cause to this day I still manage to somehow see people do something I haven't seen before. It's a challenging spell by itself, but I absolutely love the clever idea to add in the soul there so you have to be careful not to kill yourself. Also, I especially love the choice to give said soul the same “boss damage” sound effect when at low health, so I can pay attention to that rather than focusing on the health bar
+
+Phase 7 – 9/10
+Controlled chaos. I like it. If you panic and move all over the place, you're gonna get trapped and blasted hard, but once you get the logic down it's really not too bad, but still challenging in its own right. Both Komachi & Murasa really complimented each other very well this spell.
+
+Final Score – 21.7/25
+Very strong, very well made script, through and through. My only significant complaint is I wish I got to see you having Komachi & Murasa working together a bit more. But all in all, great script.
+
+Though I do have to mention, this one was a little tough to judge compared to the rest. Not enough so that I decided to dock points for anything, but in much of the script I really didn't feel like I was playing “Touhou” anymore. This could be good or bad depending on who you ask, but it did make me question myself when judging much of the spells. Since the core of Touhou is “beautiful, yet deadly patterns” and this script really is just... well just deadly patterns. It was still fun, but it was definitely something that was on my mind the whole time I was playing.
+
+Also, side note. Interesting choice making it so your choice in shot-type decides whether you fight Komachi or Murasa's solo spells first. Though from a design standpoint I do think fighting Murasa second feels better because of the timeout spell (I feel timeouts are better suited as the penultimate spell, as opposed to early/smack in the middle of a boss fight)

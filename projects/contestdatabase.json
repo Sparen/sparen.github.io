@@ -492,7 +492,7 @@
             "judges": ["Trickysticks", "ExPorygon/Ozzy840", "WishMakers"],
             "numparticipants": 9,
             "result": [["iVAwalys"], ["Adam"], ["Python"]],
-            "participants": ["Green Dinobot", "JDude", "Python", "iVAwalys", "NecroHeart/Vigor", "Zinochan/Lathios", "Adam", "Umbra", "gtbot"]
+            "participants": ["Green Dinobot/Gregory", "JDude", "Python", "iVAwalys", "NecroHeart/Vigor", "Zinochan/Lathios", "Adam", "Umbra", "gtbot"]
         },
         {
             "id": "range20",
@@ -505,7 +505,7 @@
             "judges": ["Trickysticks", "yeashie", "CrestedPeak9"],
             "numparticipants": 14,
             "result": [["The Terrible Bullet Dodger/auto2112", "Adam"],["NecroHeart/Vigor"],["Python"]],
-            "participants": ["Sparen", "Kinedyme", "Andi", "JDude", "NecroHeart/Vigor", "Zinochan", "Conarnar", "Crescendo", "Tad Marx Barba", "Asthmagician", "Python", "Gregory", "The Terrible Bullet Dodger/auto2112", "Adam", "AchySolrock"]
+            "participants": ["Sparen", "Kinedyme", "Andi", "JDude", "NecroHeart/Vigor", "Zinochan", "Conarnar", "Crescendo", "Tad Marx Barba", "Asthmagician", "Python", "Green Dinobot/Gregory", "The Terrible Bullet Dodger/auto2112", "Adam", "AchySolrock"]
         },
         {
             "id": "bha1",
@@ -541,10 +541,10 @@
             "year": 2020,
             "duration": [2020.08, 2020.09],
             "host": "Jean Fox",
-            "judges": ["Trickysticks", "CrestedPeak9", "Badz"],
+            "judges": ["Trickysticks", "CrestedPeak9", "Badz", "MegamanOmega"],
             "numparticipants": 12,
-            "result": [[], [], []],
-            "participants": ["Bagoum", "Python", "Naudiz", "Tylorfully", "Lusus", "TTBD", "Zinochan", "Jackie Matthews", "Foxigami", "JDude", "Gregory", "Adam"]
+            "result": [["Adam"], ["Naudiz"], ["The Terrible Bullet Dodger/auto2112"]],
+            "participants": ["Bagoum", "Python", "Naudiz", "Tylorfully", "Lusus", "The Terrible Bullet Dodger/auto2112", "Zinochan", "Jackie Matthews", "Foxigami", "JDude", "Green Dinobot/Gregory", "Adam", "Ryann"]
         }
     ]
 }

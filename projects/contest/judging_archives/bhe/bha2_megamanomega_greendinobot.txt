@@ -1,0 +1,41 @@
+Similarity Duo - by GreenDinobot
+Difficulty – Default
+Player – Reimu (default)
+Playthrough - https://www.youtube.com/watch?v=N-GoufxQNvA
+
+Creativity – 4/5
+This isn't badly designed, and the spells do all work well together. I feel the some of the attacks are a bit too derivative of what both Junko and Okina pulled off in LoLK & HSiFS respectively, but it's not enough for me to really start knocking points. It was close however, cause at times I was thinking “Hey, isn't this just Junko's non-spell ___ mixed with Okina's Non-spell ___?”. However, on another note, I do love the inclusion of the one on one fights after you take out the other one. It added a nice sense of variety to the attacks.
+
+
+Aesthetics – 3/5
+You've got some notable ups and downs here, so you're getting an “average Touhou” score
+As far as the game play graphics and battle aesthetics are concerned, everything's standard and nothing really jumps out at me compared to your usual flair
+On the plus side however, custom menu and custom game play field. Good improvements over the norm
+On the down side however, you didn't just not loop your music, it doesn't even play more than once. 
+So, some improvements that'd push it higher, but a notable missing aspect that would push it lower. So, average score.
+
+Spell Grading – 8.16/10 (12.25/15 total)
+
+Non-spell 1 – 9/10
+Very nice opener. Very Okina-like & very Junko-like with the two attack waves complimenting each other (the simplicity of Junko's attacks works very well with the complexity of Okina's)
+
+God Sign “Hidden God Surfing in a Sea of Bullets” - 8/10
+Clever idea, and the two styles of attacks work very well together with the slower and faster bullets, even if they are still going in the same direction. So, very nice for the opening spell card. Though I do have to mention, even when not recording, this spell lags considerably, dropping into the 40s on a consistent basis.
+
+Non-spell 2 – 8/10
+A solid spell, but I do feel it's treading into the same realm as the previous non-spell did. Focus on the more complex blasts, while occasionally keep track of a tighter wave from off to the side. It is still different, but I feel I'm still dodging the same way
+
+Secret Ceremony “Pure Divine Spirit Offering” - 7/10
+It works well together, but I kinda feel like this is “Okina & Okina” instead of “Okina & Junko”. Junko's pulling off an Okina-like pattern while Okina herself is also running around the field doing an Okina pattern. Thematically, I think it would have been better if Okina was in the center with Junko flying around shooting off a Junko-like pattern. Also, holy crap, just like how God Sign “Hidden God Surfing in a Sea of Bullets” was causing serious lag, this too creates consistent lag when playing it as well.
+
+Non-spell 3 – 8/10
+Works very well and I love the fact that it's much different than the non-spells from before. It does get a little samey/goes on for a bit too long for my taste since you're probably gonna go about 3-ish laps around the field, but it's not too bad. My bigger issue is that I'm not fond of Okina blasting you in the butt with no warning. With Junko positioned above her red bullets along with Okina's red talismans, what warning you do have towards the player is really hard to pick up on.
+
+“Pristine Anarchy World” - 9/10
+IT works very well, though I think it gets a little oddly chaotic compared to everything that came before it. It's definitely an oddly sharp uptick in difficulty compared to the rest, but not bad for a non-spell. I also like that even when you think you may be getting trapped between the wall and onion rings, they're paced out well enough that you probably are given enough room to get out of there
+
+Final Score – 19.25/25
+
+A solid script, but it could use some serious work on the technical side of things, since honestly those were the biggest things that hurt it. Lack of looping music and numerous lag issues being the biggest ones. This script consisted of solid spells that, while nothing really amazed me, nothing really annoyed me either. It just works. A good script, but could use some polish to make it better
+
+Also note. I docked a point off God Sign “Hidden God Surfing in a Sea of Bullets” and Secret Ceremony “Pure Divine Spirit Offering” because those lagged considerably when not recording, but across the board this entire script lags. Not enough that I was ready to knock out everything universally, but we're playing in the 50s here pretty consistently when playing normally. This script really needs some better optimization.

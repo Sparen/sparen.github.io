@@ -1,0 +1,41 @@
+Bullet Hell Artistry #2 - Adam
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+Played Hard Mode, PointDevice just in case xd
+
+Spell 1: A very good start! I like how Medicine provides the covering fire while Lily shoots aimed bullets during one particular phase.  9/10.
+
+Spell 2: The "Daisy Chains" are a wonderful component of the spell. Creative and fun, excellent work. 9.5/10.
+
+Spell 3: A pretty good pattern. Having to dodge the exploding things from the bottom when they aim at you keeps the dodging varied and exciting. Don't like it as much as the last two, but it's still great. 8.5/10.
+
+Spell 4: A great solo Lily spell. Not what I imagine when I think of Lily White spells, but this seems to fit her well. 8.5/10.
+
+Spell 5: I really appreciate the warning indicators for this spell. Creative, fun, fits the character. 9/10.
+
+Spell 6: A curious case of good pattern. This one stands out the least to me out of all of the script's patterns, but standing out the least in a script with many amazing patterns isn't bad at all. 8/10.
+ 
+Danmaku Score: 8.75/10 (scaled to 13.125/15)
+======================================================================================================================
+ 
+Aesthetically I'd call this script pretty awesome. The graphics and patterns are both beautiful and there is good sound effect variety. I also like the directional panning on sounds and wish more scripts would do this. 4.5/5.
+======================================================================================================================
+ 
+I think the characters work together very well and the danmaku fits both of their themes. Obviously two patterns are solo, but the ones that aren't are excellent. 4.25/5
+ 
+OVERALL SCORE 13.125 + 4.5 + 4.25 = 21.875/25

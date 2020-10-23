@@ -1,0 +1,38 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Ashes of Jeweled Treasures" by Ryann1908
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+ 
+Before I get to the boss fight... I hate this stage section why did you even do this.
+Also why is the Spell Practice menu order reversed... and could you make the bosses have the actual correct HP in practice mode...
+
+Non 1 - Shou's lasers are such a random mess that this pattern just feels like a total jumble. Something's also not right with Seiga's lasers. 11/15
+Spell 1 - It's a much more structured pattern, but Seiga's bullets feel more like Kagerou...? It also doesn't even have enough HP to see the whole pattern. 13/15
+Non 2 - Why did you make Shou a homing bullet. The randomness of Seiga's pattern makes this also really inconsistent. 11/15
+Spell 2 - This not only lags like hell, there's also no reason for the gimmick... the pattern's practically ruined by the effect. 6/15
+Non 3 - Despite being again, horribly random, it's actually decent. 13/15
+Spell 3 - I mean, despite being Len'en, this is still way too simple. Shou does force movement, but it's really basic... 10/15
+Spell 4 - I get the idea but good grief it's not doable. Again, falls victim to some unbalanced RNG nonsense with wonky hitboxes. I don't get the final part of the spell at all either. 10/15
+Spell 5v1 - Why are the bullets pulsing. The pattern works, but why. 13/15
+Spell 5v2 - Would you look at that, an actual standard and good pattern! 13.5/15
+Spell 5v3 - The jellybean bullets are interesting but what's up with the blue lasers? 13.5/15
+Spell 6 - I hope you were just memeing because this pattern is a mess at the bottom and completely free at the sides. 9/15
+
+Overall Gameplay - 11.2/15
+Unbelievably gimmicky but somehow ended up okay.
+==========================================================
+Creativity (Contest Theme) - 3.5/5 (Okay)
+Was this supposed to be a meme script? I don't even know what the theme of this script was.
+==========================================================
+Aesthetics - 4/5 (Functional)
+It works just fine and doesn't interfere with the dodging. No, wacky UI doesn't give more points.
+==========================================================
+Total Score - 18.7/25
+I don't know what I played, but it feels like it's all just too random to tell.

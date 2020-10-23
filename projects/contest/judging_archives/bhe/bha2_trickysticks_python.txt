@@ -1,0 +1,44 @@
+Bullet Hell Artistry #2 - Python
+ 
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+Played with Reimu and Aunn because I'm boring, and on Normal mode.
+
+Nonspell 1: Interesting music-synced sequence. I think the purple ovals Seija shoots during the first half are just a bit too quick, otherwise this entire pattern is good. 7.75/10.
+
+Spell 1: Normally I hate screen flipping with a passion, but at least this iteration of it is very easy. Seems good to me, 8/10.
+
+Nonspell 2: I understand the idea but this seems MUCH too hard for Normal mode, or maybe I'm just horribly understanding the intended dodging method. How the yin-yang orbs curve leaves a tight window for circling around, otherwise you have to micro between the amulets which is difficult, and then Seija's bullets leave rather tiny gaps. Simply too hard for the difficulty imo. 5/10.
+
+Spell 2: This is one that's almost too easy by comparison. Avoiding the trickster mine isn't difficult (and I like the name indicating what to do) and then the remaining pattern is rather plain. Not bad though. 7/10.
+
+Nonspell 3: Also pretty easy unless you don't know how it works and stop shooting in which case you just die. Kind of a binary pattern since it's not remotely difficult if you just shoot the enemies (Reimu and Aunn can just hold Z) and is impossible if you don't. I appreciate the attempt but I don't think this execution is very good. 5/10.
+
+Spell 3: Intuitive and interesting, I'm impressed. 8.5/10.
+
+Spell 4: While I understand how Sagume determines the axis of reflection, actually dodging the bullets is another thing when combined with the lasers. After a bit of spell practice I can route this one fairly consistently but boy is it a pain. 6/10.
+
+Danmaku Score: 6.75/10 (scaled to 10.125/15)
+======================================================================================================================
+ 
+Aesthetically I think the script is fine. Certainly above average. 3/5.
+======================================================================================================================
+ 
+I think the characters work together well. It does occasionally feel like Sagume dominates the patterns. 3.5/5.
+ 
+OVERALL SCORE 10.125 + 3 + 3.5 = 16.625/25

@@ -1,0 +1,36 @@
+Mysterious Sunflare - by Jdude
+Difficulty – Default
+Player – Reimu
+Playthrough - https://www.youtube.com/watch?v=XmNqPEPej3M
+
+Creativity – 4/5
+I gotta say, very clever choice in characters all things considered (both are illusionists in their own ways that I've literally never seen together in any fan work). You have both moments when they work well together while firing their own bullet patterns. I just wish there were more instances of Sunny or Nue influencing the others bullets (especially since did it a lot back in Fairy Wars).
+
+Aesthetics – 4/5
+Nothing stands out as special compared to your standard Touhou as far as game play and the battle's concerned. But you've both got a unique menu and custom game play screen. So that's enough to get above average.
+
+Spell Grading – 8/10 (12/15 total)
+
+Non-spell 1 – 8/10
+I really think you could stand to lessen the curve or speed of the flames. Not a bad idea and a good mixture of the two's attacks, however as it currently stands you've got the opening non-spell as one of the toughest attacks in the script with the way the flames can easily lead and trap you against the snake lasers. 
+
+Star Slicer “Unidentified Mechanic” - 9/10
+Clever move all around. You may not be expected, or required to move around all too much, however I like how the nature of the spell forces you to keep watch all around you (both for what's coming ahead and the bouncing stars on the sides) and I like how you've got multiple different styles of bullet waves you need to keep track of as well.
+
+Non-spell 2 – 8/10
+Good and fairly clever idea with the bullets refracting off the lasers. My only complaint however is that things get a little obnoxious to see and keep track of whenever Nue fires and difficulty then feels like it stems more towards “hope and pray not red bullets come at your level while she's shooting”. It made it so the difficulty of each wave could vary extremely wildly.
+
+Falling Light “Myouren's Unidentified Ring” - 7/10
+It feels a tad... lacking for a spell card and I'd say is oddly placed as the easiest attack in the script (honestly, I'd say the flow of the script would be better if this and the opening non-spell switched places). As is, all you're really doing is slowly moving a little to the side through stars that are pretty generously spaced apart and not moving most of the time. Good for an early non-spell when you're getting the player warmed up, not so much for a halfway point/near the end spell card
+
+Non-spell 3 – 8/10
+Simple, but solid. Good attack for a non-spell and fits both characters well. My only wish was that there was more logic to the rate of Sunny's fire, cause she either has massive gaps between shots, leaves just enough time to move back and forth, or fires a non-stop rapid-fire shot. Nue's attacks are spread out enough (even in the dark) so you can still react to any of them in time, so it's only a minor complaint. But it is still an oddity to be this unnecessarily random.
+
+UFO Invasion “Seamless Refraction” - 8/10
+Fun but, somewhat broken spell (also, very laggy near the end when Sunny goes Gold UFO, pretty consistently dropping to 40-50 fps when not recording). As a whole, it's a fun bit of controlled chaos cause despite the fact that the strategy is the traditional “stay near the bottom center and dodge what comes your way”, you've got a massive variety of different styles of attacks that will come your way that slowly builds up as the spell goes on that's honestly quite fun to dodge.
+
+However, the lag is a notable issue, and sometimes the UFOs will randomly decide not to spawn in, or fire their bullets. There's numerous times when the red UFOs don't fire all or any of their flames (and sometimes don't come in) and on my first impression play through, you saw how even one of the two gold lasers didn't properly activate at once point. 
+
+Final Score – 20/25
+
+Nothing particularly “wowed” me, however nothing particularly aggravated me either. A solid good script that could just use a little more work. If polished a little bit more I feel it could be a really great script, but as is it does have some notable rough spots.

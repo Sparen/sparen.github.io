@@ -1,0 +1,73 @@
+Badz's BHA2 Judging: Melancholic Lily Valley by Adam
+Played on Hard mode
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 4/5
+----------------------------------------------------------------------------------------------------
+Two flowery characters, and with danmaku that makes good use of both of them.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 4.5/5
+----------------------------------------------------------------------------------------------------
+Custom STG frame, CtC sprites, nice music, everything's there.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 12/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Spell 1: Spring Mist "Engulfing Miasma"
+13/15 (4/5 | 9/10)
+
+This is smooth. There's something about those lanes from the top that makes them look and feel very pleasant to dodge.
+The progression with the increasing sizes of red bullets is nice, too.
+
+--------------------------------------------------
+Spell 2: Toxic Flower "Daisy Chains for the Delirious"
+11/15 (4/5 | 7/10)
+
+The rotating chains get incredibly awkward, but it seems like it's always fair. 
+
+--------------------------------------------------
+Spell 3: Floral Magic Vine "Medicine for a Bleeding Heart"
+12/15 (3.5/5 | 8.5/10)
+
+The warning-line-based streaming makes for some very interesting gameplay. I like it.
+The second half of the pattern feels disconnected from the first, though.
+
+--------------------------------------------------
+Spell 4: Life Sign "Migrating Butterflies"
+12/15 (4/5 | 8/10)
+
+Not much to say here. It all works very well.
+
+--------------------------------------------------
+Spell 5: Night Bloom "Beware the Forest's Thorns"
+12/15 (4/5 | 8/10)
+
+This is good too. The vertical streaming followed by rising vines makes for a very nice flow.
+
+--------------------------------------------------
+Spell 6: "A Curious Case of Spring Fever"
+12/15 (4/5 | 8/10)
+
+This is a nice way to conclude the fight. I have nothing to say against it.
+
+----------------------------------------------------------------------------------------------------
+Final score: 20.5/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-This is probably the entry where I have the fewest things to say. It's an incredibly clean script with very solid danmaku.

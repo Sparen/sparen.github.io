@@ -1,0 +1,39 @@
+Bullet Hell Artistry #2 - Jackie Matthews
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+Attack 1: First off I'll say this is a pretty hard pattern. I can manage it most of the time, but the difficulty is pretty high - I'd try making scripts for contests more accessible and/or have difficulties. The hardest part for me is when Cirno shoots the ice crystals since there's substantial overlap between the two halves of the pattern and THEN you need to move out of the way of the aimed stuff. Very pretty, very hard. 6.5/10.
+
+Attack 2: I think this pattern's fine. Getting through the ice wall is tense but not actually that difficult in my opinion. Seems much easier than the previous non, probably harder if you don't get the boss to fire straight down? 8.25/10.
+
+Attack 3: Straightforward streaming through really dense stuff. The phoenixes and ice...nixes? are pretty cool. The difficulty still feels too high to do comfortably but I like this pattern more than the first attack, since the overlap isn't as possibly-brutal. 7.75/10.
+ 
+Attack 4: I generally dislike vision-obscuring gimmicks, and right off the bat the clouds obscuring the blue arrowheads can be a problem. There have been waves where I just ended up praying a bullet wasn't in the way, and other waves where the clouds didn't seem to make a huge difference. Besides that phase I think this pattern is good, but the arrowheads do take a lot away from the enjoyment of this pattern. 6.5/10.
+
+Attack 5: Simple and very easy compared to other patterns. 7/10.
+
+Attack 6: Amazingly I actually understood the focus/unfocus gimmick immediately! Otherwise the pattern is kind of forgettable unfortunately. It's probably the easiest pattern in the script, the enemies don't appear to move and it's random dodging from the sides. Plus some points for cool fire and ice. 6/10.
+ 
+Danmaku Score: 7/10 (scaled to 10.5/15)
+======================================================================================================================
+ 
+Aesthetics are quite good. They're simple and cohesive and you use a variety of appropriate sound effects. 4.25/5.
+======================================================================================================================
+ 
+I think the characters showcase both of their themes well. 4/5.
+ 
+OVERALL SCORE 10.5 + 4.25 + 4 = 18.75/25

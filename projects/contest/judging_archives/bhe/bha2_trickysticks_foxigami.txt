@@ -1,0 +1,43 @@
+Bullet Hell Artistry #2 - Foxigami 
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+Played on Hard Mode because I'm a souper player.
+
+Nonspell 1: It's fine. The lack of sounds/movement from the bosses makes it feel kind of...lifeless? I don't know, it's just pretty repetitive (though it helps that the pattern naturally changes over time, like Kaguya's walls flipping(?) and Shou's lasers doubling up) 6.5/10.
+
+Spell 1: I love the name. Name aside, this spell feels like a lot of setup for...not much, honestly? The fireballs aren't that hard and Kaguya's portion of the attack is also not that much. It's still fine to dodge, but watching the lasers get stacked like the enemy team in Overwatch isn't very exciting. 6/10.
+
+Nonspell 2: Some of these waves seem really hard, but the progression to them is easy? When the V's Kaguya shoots end up occupying much of the safe spots between lasers is when I don't like this. Otherwise it's still...nothing super special, honestly. Kaguya's bullets don't feel a ton like Kaguya and Shou's are the usual curvy laser hell. 5.5/10.
+ 
+Spell 2: It feels like Shou strongly dominates this one. The dodging isn't bad, just kind of typical of Shou, and Kaguya barely seems to do anything. 6/10.
+
+Spell 3: The lasers are R E A L L Y fast and basically impossible to predict, and circling around the boss is very boring gameplay. Admittedly the lasers still seem static but this is the bad kind of static pattern in my opinion. 3/10.
+
+The Most Glorious Treasure: +.01 points for Mima's Mammaries
+
+Get Stickbugged Lol: This is too hard even if we ignore the crashing meme. 4/10.
+ 
+Danmaku Score: 5.166667/10 (scaled to 7.75/15)
+======================================================================================================================
+ 
+I'd say this is an average script aesthetically, since it's kind of patchwork using AJS's system. 2.5/5.
+======================================================================================================================
+ 
+I think Shou dominates these patterns too much, making this a below-average score. 2/5.
+ 
+OVERALL SCORE 7.75 + 2.5 + 2 + 0.01 (MIMA'S MAMMARY BONUS) = 12.26/25

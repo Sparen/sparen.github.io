@@ -1,0 +1,98 @@
+Badz's BHA2 Judging: Perfect Form by Naudiz
+Played on Smooth mode
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 5/5
+----------------------------------------------------------------------------------------------------
+Yeah, there's no contest here. This script goes above and beyond with making use of its theme, integrating it into just about every aspect of the game.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 5/5
+----------------------------------------------------------------------------------------------------
+This is also excellent, with a lot of unique assets and a nice package.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 10.6/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Nonspell 1
+8.5/15 (3.5/5 | 5/10)
+
+The VD-esque circle is neat, but the optimal way to dodge this is to tap away once when the aimed shots fire. Not particularly exciting.
+
+--------------------------------------------------
+Spell 1: Pure Sign "Refinement of the Red Orb"
+11.5/15 (4.5/5 | 7/10)
+
+A very clever twist on Circle Creature.
+Junko's charge effect covers up the warning lines close to her, though, which makes it a lot more annoying than it needs to be.
+
+--------------------------------------------------
+Nonspell 2
+10.5/15 (3.5/5 | 7/10)
+
+Not much to say on this. It just works.
+
+--------------------------------------------------
+Spell 2: Square Shape "Blue Cube Creatures"
+10.5/15 (4.5/5 | 6/10)
+
+It looks very nice, but it has a very long setup phase without much happening.
+
+--------------------------------------------------
+Nonspell 3
+10/15 (3.5/5 | 6.5/10)
+
+Overall, it's all fine, but not the most exciting thing either.
+
+--------------------------------------------------
+Spell 3: Hope "The True Form of Pandora's Box"
+8.5/15 (3.5/5 | 5/10)
+
+This takes a long while to build up into a dangerous pattern, and it's basically over by the time it can reach that state.
+
+--------------------------------------------------
+Nonspell 4
+10.5/15 (4/5 | 6.5/10)
+
+I like the combination of spells, but the player will be standing still a lot of the time.
+The solo attacks are more interesting to dodge, at least.
+
+--------------------------------------------------
+Spell 4: Cyberbrain "A Round Cog in a Rectangular Machine"
+11.5/15 (4.5/5 | 7/10)
+
+It's a very unique pattern, but also a very awkward one that I'm not sure how to handle properly. How are you supposed to get around the corners?
+
+--------------------------------------------------
+Spell 5: "Geometry of the Despised (Cavalerius Versus Cartesius)"
+12/15 (4.5/5 | 7.5/10)
+
+Simple and effective. My only complaint would be that Junko's rings get a bit tight in the first phase, especially for something you're forced to dodge unfocused.
+
+--------------------------------------------------
+Spell 6: "Forma Perfecta"
+13/15 (4.5/5 | 8.5/10)
+
+Creative, unique, and fitting for the script's theme. An excellent way to finish it off.
+
+----------------------------------------------------------------------------------------------------
+Final score: 20.6/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-My skill level felt like a real curse when judging this. Smooth mode was easy enough to be boring, but Rough mode was too much for me to handle.
+-Overall, it's a beautiful script with a lot of very interesting ideas, just with slightly boring execution sometimes.

@@ -1,0 +1,35 @@
+Ice and Fire - by Jackie Matthews
+Difficulty – Default
+Player – Reimu (default)
+Playthrough - https://www.youtube.com/watch?v=wHJEtm2aGZM
+
+Creativity – 4/5
+While you do have Cirno & Mokou attacking together and their attacks do work well together, You don't really do as much as you could of having either of them influence one another's shots. The second phase in particular was nice where Mokou melted Cirno's ice, but really, that's the only occurrence of such a move in this script.
+
+Aesthetics – 2/5
+It's presentable, however I question some aesthetic choices (what the hell is that sound effect for Cirno's ice phoenix...) and you're also missing some standard Touhou aspects as well. No cut-in portraits, the death effect is pretty lacking (so much so that if there's enough bullets obscuring you, you may not even know you died) and the bosses don't actually do anything when you end the fight, they just... poof.
+
+Spell Grading – 6.5/10 (9.75/15 total)
+
+Phase 1 – 6/10
+My biggest issue is the fact that the opening spell of this script is actually harder than literally everything that's gonna come after it. Between the size of Cirno's bullets and the way Mokou's talismans keep you locked down most of the time, it is very easy to just get trapped between the two. Also, I'm not to thrilled with the follow-up bullet puke that's just a case of “know ahead of time to not stand still”. It's just a blind-run-killer with no real difficulty behind it once you know what the threat is.
+
+Phase 2 – 7/10
+Not bad in theory (though it does remind me a bit too much of Hooaka from Len'en). However my biggest issue is that in practice, there's really not much at all going on here. Dodge Mokou's initial shot, zigzag for a second and then zip up the gap that was made. Ultimately, the only challenge of this spell is whether or not Mokou's initial shot was fired straight down or not, cause it'll change whether the path you need to zip up through is straight or diagonal.
+
+Phase 3 – 8/10
+Honestly pretty good design. My biggest complaint however is that the game notably slows down whenever Cirno fires her ice phoenix compared when when Mokou fires hers. Even when not recording.
+
+Phase 4 – 4/10
+Making bullets hard to see is not good game design.
+That's the biggest thing. Especially in the first phase where at times it's literally luck is you'll even be able to see what's coming. It works a bit better in the rest of the spell since the bullets move slow enough they won't overlap with the fog wave, but even still just making stuff hard to see is the worst way to try and make a spell more difficult (and ironically, it doesn't seem too bad a spell and would have scored it higher without that fog effect).
+
+Phase 5 – 8/10
+Alright, now this one should have been the opening spell. Good display of Mokou's attacks along with Cirno's while being much more manageable. Biggest complaint is that while it's an alright non-spell (free and loose definition of non-spell considering the make up of this script), this is very much the kind of spell that should be early if not at the start of the script, not the penultimate attack.
+
+Phase 6 – 6/10
+Very creative idea, however it needs A LOT of work. Biggest is that you need some sort of notification to the player that this focus/unfocus mechanic is in effect. If you're gonna change the rules of the game this much, you need some notification as to what's going on. Also, while its important to start off a spell slow to ease the player into something, it's is much to slow. For about the first 30 seconds there's really nothing much going on and I can just hang out in the middle of the field fluttering the focus button and nothing's really happening. The bullets are so spread out, very few ever reach me and really only the last 10-15 seconds is a challenge.
+
+
+Final Score – 15.75/25
+There's potential here and also some creative ideas. However above all else there's still a lot of work that both could be done and needs to be done to make it better.

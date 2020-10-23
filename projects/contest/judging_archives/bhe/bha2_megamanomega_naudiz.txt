@@ -1,0 +1,47 @@
+Unlikely Allies ~ Perfect Form - by Naudiz
+Difficulty – Smooth
+Playthrough - https://www.youtube.com/watch?v=ckFWeEpRGX8
+
+Creativity – 5/5
+I absolutely love the dichotomy you've got between these two. Junko only fires circular and curvy patterns while Keiki only fires straight and angular attacks. Great work showcasing them both alone, then working together
+
+Aesthetics – 5/5
+A simple logic of quares and circles that you incorporated into every facet of this script. Not just boss attacks, but you definitely went above and beyond to design the motif into the GUI of the game (love the choice to make Keiki's health-bar a square) and Reimu's focused and unfocused shot as well.
+Side note: I also really love all the instances of Junko & Keiki kicking each other off the screen.
+
+Spell Grading – 8.1/10 (12.15/15 total)
+
+Non-spell 1 – 6/10
+While it's really neat looking and the opening spell should be an easier warm-up to the whole script, the one's a bit too simplistic. Fun fact: Even on Lunatic mode you can beat this spell with your eyes closed. Just move a little to the right soon as you hear Junko's done firing and stay there, then move a little to the left next time you hear Junko stop firing, and repeat. I feel it could have used a little more spice rather than being two bullet waves aimed directly at you, where all you need to do is move a little to the side.
+
+Pure Sign “Refinement of the Red Orb” - 9/10
+Very nice, very Junko. I especially like how it has two distinctly different strategies you can use to beat it, either getting close to Junko to get within the largest circle while contending with the aimed bullets, or making use of that super-itty-bitty hitbox and staying outside it.
+
+Non-spell 2 – 8/10
+Simple logic, but fitting for a non-spell. I think the green wave could have used a little more, but altogether, good.
+
+Square Shape “Blue Cube Creatures” - 10/10
+I really love this one and everything that's going on. A simple enough logic of “Hey, let's do Tetris in Touhou”, but I love how the spell expects you do do something completely different from normal, leads you into it, but also ramps up the difficulty as the spell progresses.
+
+Non-spell 3 – 8/10
+Fittingly, it feels somewhat like a mix of an easier version of the non-spells Junko & Keiki pulled off earlier. I feel it could use a little more complexity when you've got either of them by themselves (since it's actually a drop in difficulty compared to when they're together), but otherwise good.
+
+Hope “The True Form of Pandora's Box” - 7/10
+Well it's really neat looking and warms you up to what's about to come. But it's basically just boils down to “hug the bottom and dodge what comes your way”. That wouldn't be too bad, but cause of the nature of the spell, it ends about the time it actually starts getting complex.
+
+Non-spell 4 – 7/10
+I like the way you keep having these two kick each other off as they use their respective attacks. I only wish we could have seen a bit more “togetherness” from these two attacks overlapping or something. Since both attacks have a lot of downtime where after you get in the gap, you just hang out for a second or so doing nothing until the next attack comes.
+
+Cyberbrain “A Round Cog in a Rectangular Machine” - 7/10
+Very well done spell on all accounts and honestly would have been 10/10 if not for one design decision. Because of the way the  pink laser always stops at the top of the screen when coming from both sides, once you get up there you're able to now ignore 90% of the spell. The spell seems like it wants you to go around in circles around the field, but soon as you get up there you can just stay there ignoring both the laser and the bullets from it. Perhaps make the laser go all the way across the field after the first time it stops, to force the player to now get out of there.
+
+“Geometry of the Despised” - 9/10
+Very great spell all around. Simple logic, but still challenging. Be stuck unfocused when you want to focus, but stuck focused when you'd prefer to be unfocused, and even still the rapid switching wasn't annoying either. My only complaint is I wish there was more done with this idea, it was fun, but kinda felt untapped.
+
+“Forma Perfecta” - 10/10
+Great design, great ender, and I especially just straight up love the way it looks in general as the spell gets going. It maintains a proper difficulty for a final spell while still maintaining the age old adage that danmaku ultimately should be about beauty.
+
+Final Score – 22.15/25
+Very solid script with great highs and only a few minor lows. I feel it could have used a touch more focus on making a couple spells slightly more complex. But otherwise a very good script.
+
+On a semi-related note. I really wish this script had a third difficulty setting. I know this is called “Easy/Normal” and “Hard/Lunatic”, but in practice it just feels like Easy Mode and Lunatic mode with nothing in between. I'm either breezing through this script or getting completely demolished and I kinda wish there was a difficulty option between the two.

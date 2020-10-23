@@ -1,0 +1,41 @@
+Bullet Hell Artistry #2 - GreenDinobot
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+Nonspell 1: Off to a good start. Feels kind of like a VD duo spell (which isn't the best) but it's still good to dodge. 8/10.
+
+Spell 1: I really like the idea of this one. I think the execution is a bit bland though - maybe more exciting bullets patterns than just rings (yes, I know it's Junko). Maybe a spiral? 7.25/10.
+
+Nonspell 2: I think this non's fine too. I like it less than the first one, but it's not bad at all. 7.75/10.
+
+Spell 2: I think it's kinda hard to see these ice crystals post-bounce. Not TOO hard, but a bit difficult. Otherwise this pattern seems okay too. 7/10.
+
+Nonspell 3: A decent combination of both of their gimmicks. I think the solo Okina pattern once you've killed Junko is harder than the first part of the non, but not unreasonably so. About the same as non 2 maybe. 7.75/10.
+
+Spell 3: I think it's a good way to end the script. I'm a bit disappointed that the pattern doesn't do much as it progresses other than just get faster(?), but that's fine honestly. 7/10.
+ 
+Danmaku Score: 7.458333333333333/10 (scaled to 11.19/15)
+======================================================================================================================
+ 
+Aesthetically I'd call this significantly above average. You seem to have your own sort of style and the Junko graphic is pretty funny. 3.5/5.
+======================================================================================================================
+ 
+I think the character cooperation is also above average. I'm not a fan of nons where they do their own patterns that don't really mesh super well with each other, but the spellcards do a good job. 3.5/5.
+ 
+OVERALL SCORE 11.19 + 3.5 + 3.5 = 18.19/25
+
+ALSO, remember to replace your Ultima Reimu player with the newest one on Bulletforge, because this one is bugged and randomly deletes bullets!

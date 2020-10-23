@@ -1,0 +1,49 @@
+Bullet Hell Artistry #2 - Bagoum
+ 
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+All attacks played on Normal.
+
+Attack 1: I expected this pattern to be something plain and boring, but this is a pleasant surprise. Good opening for a BoWaP script. 
+8/10.
+
+Attack 2: I can vaguely see the BoWaP here, but I'm perfectly fine with a 3D sphere spell. I think having it come from both directions is a neat spin on the concept. 8/10.
+ 
+Attack 3: Continues the BoWaP theme while keeping it fresh and exciting. I like this non more than the first. 8.5/10.
+
+Attack 4: The fact that differently colored lasers curve (cool) different ways wasn't immediately apparent at first, so I just ended up dying a bunch. After figuring the pattern out I think it's it's not that bad of a pattern, just one I don't particularly like. 6/10.
+
+Attack 5: Poor Yukari, always getting her BoWaP destroyed. Not as aesthetically pleasing or interesting to dodge at the first two iterations I'd say. 7.5/10.
+
+Attack 6: I'm not a particular fan of the bouncing lasers - it seems like the ones from the bottom just show up from nowhere, even if I was lucky enough to avoid them. This pattern is where the BoWaPing seems more forced. 6.5/10.
+
+Attack 7: This also feels rather forced and not very interesting. It's not an offensive pattern, but I'd expect something more novel. 7/10.
+
+Attack 8: Here the bullets follow some seemingly wacky but ultimately predictable paths. I like this. 8.5/10.
+
+Attack 9: What's this about CAVE? Anyway it's fast paced and fun, but doesn't seem as likeable as the previous. Maybe it's more impressive on higher difficulties? 8/10.
+
+Danmaku Score: 7.55/10 (scaled to 11.33/15)
+======================================================================================================================
+ 
+Aesthetically I think the script is fine. Not really super cohesive, but above average and nothing stands out as bad. 3.25/5.
+======================================================================================================================
+ 
+The way the characters "work together" seems appropriate for both of them, so I like this. Junko's purification did get kind of old near the end. 4/5.
+ 
+OVERALL SCORE 11.33 + 3.25 + 4 = 18.58/25

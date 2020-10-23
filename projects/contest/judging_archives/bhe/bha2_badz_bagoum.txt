@@ -1,0 +1,90 @@
+Badz's BHA2 Judging: Oops! All BoWaP by Bagoum
+Played on Very Hard mode
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 3.5/5
+----------------------------------------------------------------------------------------------------
+This certainly has a creative idea, but why Junko? Manipulating bullets really isn't her kind of thing.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 3.5/5
+----------------------------------------------------------------------------------------------------
+It's the standard Danmokou look. I don't have anything to comment on.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 9.6/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Pattern 1: "Border of Wave, Particle, Vector, and Curve"
+7.5/15 (2/5 | 5.5/10)
+
+Well... the bullets curve. Not particularly interesting.
+
+--------------------------------------------------
+Pattern 2: "Border of Wave, Particle, Plane, and Sphere"
+10/15 (4/5 | 6/10)
+
+The dodging is fine, but it starts feeling tedious by the time it ends.
+
+--------------------------------------------------
+Pattern 3: "Border of Wave, Particle, Offset, and Origin"
+9.5/15 (3/5 | 6.5/10)
+
+The repositioning looks neat, but in the end, it just creates a second BoWaP on top of the first one. The bullets coming back from behind are a point of interest, at least.
+
+--------------------------------------------------
+Pattern 4: "Border of Wave, Particle, Line, and Shape"
+12/15 (4/5 | 8/10)
+
+I like this a lot. The curving lasers look great, and the dodging required to handle the crows is pretty fun.
+
+--------------------------------------------------
+Pattern 5: "Border of Wave, Particle, Area, and Perimeter"
+8/15 (2.5/5 | 5.5/10)
+
+BoWaP with some random bullets thrown in... not particularly interesting.
+
+--------------------------------------------------
+Pattern 6: "Border of Wave, Particle, View, and Reflection"
+9/15 (3/5 | 6/10)
+
+I'm not sure what's going on here. What's making those lasers spawn?
+The omnidirectional dodging with them is acceptable, at least.
+
+--------------------------------------------------
+Pattern 7: "Border of Wave, Particle, Continuity, and Gap"
+7.5/15 (2/5 | 5.5/10)
+
+BoWaP with a few lasers mixed in. Not particularly interesting either.
+
+--------------------------------------------------
+Pattern 8: "Border of Wave, Particle, Circle, and Lily"
+11/15 (3.5/5 | 7.5/10)
+
+The shifting flower-like circles look nice and are pretty fun to dodge.
+
+--------------------------------------------------
+Pattern 9: "Border of Wave, Particle, Touhou, and CAVE"
+12/15 (4/5 | 8/10)
+
+The concept is neat, and the curving BoWaP combined with the fire works fairly well.
+
+----------------------------------------------------------------------------------------------------
+Final score: 16.6/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-I like this script's premise, but a lot of the resulting patterns are just uninteresting. I can't help but notice my favorites ended up being the least BoWaP-like ones.

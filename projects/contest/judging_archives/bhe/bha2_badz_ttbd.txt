@@ -1,0 +1,82 @@
+Badz's BHA2 Judging: Shipwreck Showdown by ttbd
+Played on Normal mode
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 2.5/5
+----------------------------------------------------------------------------------------------------
+The characters do fit and they work together, but 4/7 of the patterns have them going solo. The "team battle" aspect isn't quite there.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 5/5
+----------------------------------------------------------------------------------------------------
+The visual effects look nice, and there are some less common ones like a boss intro. This is excellent.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 11.5/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Nonspell 1
+10.5/15 (3.5/5 | 7/10)
+
+Komachi's alternating attacks here make for a nice flow. Keeping up with the Murasa's scattered droplets is a pain, though.
+
+--------------------------------------------------
+Spell 1
+11/15 (3/5 | 8/10)
+
+Fun macrododging with a lot of variety!
+My only complaint is more of a conceptual one: Komachi doesn't contribute much at all here.
+
+--------------------------------------------------
+Komachi's nonspell
+11.5/15 (4.5/5 | 7/10)
+
+Ooooh, that scythe attack is cool.
+The rest of the pattern isn't too special, though.
+
+--------------------------------------------------
+Komachi's spell
+12.5/15 (5/5 | 7.5/10)
+
+Now THERE's an interesting gimmick!
+The danmaku is very chaotic (maybe a little too much), and yet there are enough indicators to keep track of the player's soul. Nicely done.
+
+--------------------------------------------------
+Murasa's nonspell
+12/15 (4/5 | 8/10)
+
+More fun macrododging! I can't complain about anything here.
+
+--------------------------------------------------
+Murasa's spell
+11/15 (3.5/5 | 7.5/10)
+
+It's a solid spinning pattern. There's not much to say about this one.
+
+--------------------------------------------------
+Final spell
+12.5/15 (4.5/5 | 8/10)
+
+Avoiding Komachi's giant waves while luring Murasa around is fun.
+Though the danmaku can be a pain sometimes, with things coming from really awkward positions.
+
+----------------------------------------------------------------------------------------------------
+Final score: 19/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-I like the fast-paced danmaku here, but as a side effect, what you call "Normal mode" is significantly crazier than the usual Normal mode fare.
+-Overall, it's a fun boss fight with a distinct danmaku style.

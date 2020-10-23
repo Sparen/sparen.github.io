@@ -1,0 +1,72 @@
+Badz's BHA2 Judging: Unlikely Allies - Kisume & Parsee by Lusus
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 4.5/5
+----------------------------------------------------------------------------------------------------
+A fitting choice, with some uncommon characters. The Perfect Possession fight is a nice twist.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 3/5
+----------------------------------------------------------------------------------------------------
+Everything looks fine, but there are no big stand-out features either.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 10.9/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Nonspell 1
+10.5/15 (3.5/5 | 7/10)
+
+It's a fitting way to start the fight. I can't really find anything to comment on.
+
+--------------------------------------------------
+Spell 1: Malice "Sudden Horde of Will-O'-The-Wisps"
+11.5/15 (4/5 | 7.5/10)
+
+It takes some figuring out, but it plays well enough once you know how to handle it.
+
+--------------------------------------------------
+Nonspell 2
+12/15 (4.5/5 | 7.5/10)
+
+This is a really interesting spin on Kisume's abilities. I like it!
+The randomness on the falling bullets is annoying sometimes, but it's still a good pattern.
+
+--------------------------------------------------
+Spell 2: Haunted Bridge "A Path Cursed by Hashihime"
+12/15 (4/5 | 8/10) 
+
+It looks nice, and the streaming is interesting to pull off.
+
+--------------------------------------------------
+Nonspell 3
+8/15 (3/5 | 5/10)
+
+Streaming lasers through Parsee's walls is a real pain, and it's hard to get some worthwhile damage on the boss without taking serious risks with Kisume's opening attack.
+
+--------------------------------------------------
+Spell 3: Horror Sign "The Stalker Right Behind You"
+11.5/15 (4.5/5 | 7/10)
+
+A new take on one of Parsee's spells, and with a good flow to it too.
+My only issue with it is that the chase sequence with Kisume lasts longer than it needs to.
+
+----------------------------------------------------------------------------------------------------
+Final score: 18.4/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-This is one of those scripts that's hard to comment on. It could use extra visual flair, but everything else is very solid.

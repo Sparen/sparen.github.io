@@ -1,0 +1,37 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Oops! All BoWaP" by Bagoum
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+I will be judging on Very Hard difficulty.
+ 
+Nonspell 1 - Yeah it's BoWaP with some crisscrossing fireballs. 12/15
+Spell 1 - I have a big problem with the dark bullets against the dark background. It makes dodging this already difficult pattern even more straining. 7/15
+Nonspell 2 - The idea is clear but it doesn't make for particularly engaging dodging. 8/15
+Spell 2 - You know, this would be a good pattern if the petal bullets weren't just BoWaP. The movement required is clear, but the obstruction is much too simple. 8/15
+Nonspell 3 - The idea is again very obvious, and it has some difficulty. 11/15
+Spell 3 - Despite the lasers not really being BoWaP, it actually makes the pattern interesting. 13/15
+Spell 4 - Despite there being laser BoWaP, it doesn't even pose much of a threat. You can dodge most of the lasers just by dodging the bullet BoWaP, which makes this just... slow BoWaP. 8/15
+Spell 5 - See, this pattern is really good. The waves of lily mentos are interesting to dodge and the BoWaP bubbles force movement. 14/15
+Spell 6 - Well, it's a pattern alright. 12/15
+ 
+Overall Gameplay - 10.3/15
+I get the impresison that this script is more of a technical display of BoWaP than actual gameplay. The BoWaP isn't always clear in the patterns, and BoWaP itself doesn't make for a particularly fun pattern without speed. Unfortunately, this script slows down the BoWaP bullets to such a large extent that the patterns become mostly uninteresting.
+==========================================================
+Creativity (Contest Theme) - 2/5 (Below Passing)
+Considering the contest asks for a non-plot related pairing that shares a feature, it's not exactly clear what feature Yukari and Junko share. The gimmick of the script with Junko "purifying" BoWaP makes up the vast majority of the patterns, but it doesn't feel quite right as it doesn't feel like Junko's patterns, and only barely passes as Yukari patterns.
+==========================================================
+Aesthetics - 4/5 (Functional)
+I'm not an arty person. The graphics work. For the most part.
+Some patterns have problems of poor bullet visibility, but I've already reflected that in the Gameplay section. The rest of the presentation works just fine.
+==========================================================
+Total Score - 16.3/25 (66%)
+This script seems to apply more to the prior meme script theme than the ally theme...
+Even so, the patterns themselves aren't particularly interesting to dodge.
+There are patterns that feel more like technical exploration than danmaku; this script certainly feels that way.

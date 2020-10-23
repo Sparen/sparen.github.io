@@ -1,0 +1,32 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Treasure Hunters" by Foxigami
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+I will be judging on Hard difficulty.
+
+Non 1 - Actually a really good non. 14/15
+Spell 1 - I guess it works? The spell has way too much HP, though that's AJS style for you. 13/15
+Non 2 - Wall central. Please don't make the arrow walls completely random. 9/15
+Spell 2 - Despite being a CC clone, it's good. I wish Kaguya would do more than just spew random bullets though. 13/15
+Spell 3 - Uh, no. This is a mess. 6/15
+Non 3 - The green lasers are static, too bad the bullets suck. 6/15
+
+Overall Gameplay - 10.2/15
+Well, it was a meme script. Not much else to say.
+==========================================================
+Creativity (Contest Theme) - 3.5/5 (Okay)
+Despite being based around treasures, Kaguya didn't even use any of her iconic treasure attacks?
+==========================================================
+Aesthetics - 3/5 (Mediocre)
+It works just fine and doesn't interfere with the dodging. Well, it's AJS lol.
+The complete absence of sound effects is quite jarring though.
+==========================================================
+Total Score - 16.7/25
+I'm sure you knew this would happen. It did become a meme, so you got what you wanted, I guess?

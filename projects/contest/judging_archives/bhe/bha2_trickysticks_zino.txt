@@ -1,0 +1,44 @@
+Bullet Hell Artistry #2 - Zino
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+Played on Hard Mode
+
+Nonspell 1: Seems good to me. Nothing super special. 6.75/10.
+ 
+Spell 1: I think this spell is pretty deceptively hard due Reisen's bullets alone. They're shockingly dense for how fast they are. The telephone wire thingies, on the other hand, didn't really do all that much? The consequences for triggering them are more bullets later, but dealing with Reisen's seems like the main challenge. Interesting idea but I think the execution needs a lot of work. 4.75/10.
+ 
+Nonspell 2: The heart is pretty cute, but Reisen's portion of this attack is underwhelming in comparison. Still seems fine to me. 7/10.
+ 
+Spell 2: The Reisen laser is very glowy, but the resulting pattern is a lot of pure dodging as Koishi does most of the work. Not bad, just not very special. 7/10.
+ 
+Nonspell 3: I didn't actually have to move that much from the same general area, which I guess is intentional, but it meant I just moved up and down a bunch until the pattern died. Simple, and being simple isn't a bad thing, but it's also exceedingly simple to dodge and that's less good. 6/10.
+ 
+Spell 3: This pattern seems to be a bit of a difficulty spike (not a huge one though), or maybe I just got unlucky with rose placement? Visual annoyances aside it's another straightforward dodging pattern, which is a trend with this script. I'd try to experiment with more types of patterns to dodge - stuff like the third non, but with more movement required. 6.5/10.
+
+Spell 4: Now this IS a different kind of dodging. The gimmick from Koishi's survival with Reisen clones added in isn't super original or anything, but the way you dodge this is way different from anything else in the script. I like it. 8/10.
+
+Spell 5: I think the first phase is an interesting use of BoWaP. The second phase where it becomes wiggle heck is...weird. I'm not even sure if it's better or worse than the BoWaP, just...weird. Overall the pattern feels like more straight dodging of the roses with rainbow stuff to dodge though. 7/10.
+ 
+Danmaku Score: 6.625/10 (scaled to 9.94/15)
+======================================================================================================================
+ 
+Aesthetically, I think this script is a bit above average. Your sound effect usage isn't super interesting to me - not every shot needs a sound, since it results in a lot of hearing the same thing over and over. Backgrounds and other visuals were good. 3.25/5.
+======================================================================================================================
+ 
+I think the characters work together about averagely well. I felt that one character dominated patterns too often, but other times they did good work together. 2.5/5.
+ 
+OVERALL SCORE 9.94 + 3.25 + 2.5 = 15.69/25

@@ -1,0 +1,32 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Subconsciously Lunatic Eye" by Zino
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+ 
+Non 1 - Quite an easy non. Well, it's thematic I guess. 12/15
+Spell 1 - The lines being used to spawn rose waves is an effective deterrent, while the rose waves themselves are still very doable. Good spell. 13.5/15
+Non 2 - Another really easy non. It looks pretty more than anything else, but I don't think it really uses the characters' theming well. 12/15
+Spell 2 - The giant spark forces movement, but it's not particularly challenging since there's more than plenty of time to go to the other side. 13/15
+Non 3 - It's a bit simple, but it's decent. 12.5/15
+Spell 3 - I like the wavy movement of the bullets, but the roses don't pose a threat when they shrink at the height you want to dodge them... 13/15
+Spell 4 - Those roses are huge. It's a good survival, but I wish the final wave lasted for a little longer to force a dodge through those dense rings. 14/15
+Spell 5 - Reisen's pattern is really neat, but Koishi just spamming roses is a little disappointing. 14/15
+
+Overall Gameplay - 13/15
+For Extra difficulty these patterns are a little too easy, but they're still good patterns.
+==========================================================
+Creativity (Contest Theme) - 3.5/5 (Okay)
+I'm not really clear what the theming was between these two, but they both used their patterns alright. I'd have hoped for more from Koishi, since it feels like a lot of her pattern is relegated to spamming rose bullets...
+==========================================================
+Aesthetics - 4/5 (Functional)
+It works just fine and doesn't interfere with the dodging.
+==========================================================
+Total Score - 20.5/25
+Apart from the engine choice, it's a pretty standard script. Not the best use of duo boss, but not bad either.

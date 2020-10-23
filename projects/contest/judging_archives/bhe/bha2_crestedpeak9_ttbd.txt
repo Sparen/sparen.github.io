@@ -1,0 +1,31 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Shipwreck Showdown" by TTBD
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+ 
+Non 1 - Lanes + aimed with some random elements. It works well. 13.5/15
+Spell 1 - Anchor spam was used to force movement effectively, while the spirals of droplets provided a constant difficulty with the random fireballs making for extra variation. Very good pattern. 14.5/15
+Non 2 - Uh... isn't this mostly just streaming? The spirits need to be killed or it's way too hard, but the pattern seems a bit too simple. The scythe is cool though. 11/15
+Spell 2 - This spell varying based on the character is a cool concept, but unfortunately not very balanced (Futo's random icicles are really fast). The gimmick also boils down to just stopping fire occasionally, so it's not really that interesting... 12/15
+Non 3 - It's a good nonspell. Not much else to say. 13.5/15
+Spell 3 - Cool survival, though it seems a bit on the easy side? 14.5/15
+Spell 4 - A spell that requires good positioning. The element of aimed bullets coming from the obscured "spirit" bullets is a nice touch. 14.5/15
+
+Overall Gameplay - 13.4/15
+Quite fast-paced patterns that test dodging in a variety of directions, but there are some patterns that I feel could have been improved to bring up the average even more.
+==========================================================
+Creativity (Contest Theme) - 4.5/5 (Superb)
+It's a good pairing whose patterns were executed very well, making full advantage of their duo boss nature.
+==========================================================
+Aesthetics - 4.5/5 (Superb)
+I really like the boss position indicators, and that intro animation is... something. The UI is quite impressive.
+==========================================================
+Total Score - 22.4/25
+Fairly fast-paced arcade-style script that works very well.

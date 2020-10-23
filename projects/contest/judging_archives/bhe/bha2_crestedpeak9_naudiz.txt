@@ -1,0 +1,37 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Perfect Form" by Naudiz
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+I will be judging on Rough difficulty.
+While I understand the script was designed in part with an elaborate scoring system involving grazing, I will have to overlook it for the most part.
+
+Non 1 - Fairly standard for Junko, though it is very plain aimed dodging. 10/15
+Spell 1 - While the idea is sound, I'm not entirely sure limiting the dodging area to such a small circle while forcing streaming was a good idea. When HSoB did it, dodging the random spam of bullets returning to rings was a section of its own, allowing players to chart a path quickly. Here however, it's very difficult to predict ahead of time with the streaming elements involved. 
+Also no one likes having a ring of bullets spawn on them. 11/15
+Non 2 - That's a square Keiki non alright. 12.5/15
+Spell 2 - On Rough, the boxes pose a very significant threat that is unfortunately victim to RNG. That said, the execution is still fairly good, forcing the player to move vertically throughout different waves to get through the falling boxes with ample time to react while avoiding the stacking, as well as dodging amulets from behind. 13.5/15
+Non 3 - I'm not convinced Junko's rings were a good idea here. At least Keiki's BoWaP squares on her solo phase is fine, but the duo phase really likes bricking the player in if you're trying to shoot down Junko. 11/15
+Spell 3 - Most of the spell is fine (if a little boring since it is just dodging wave after wave of bullets), but the final phase is quite something. It's 10 times harder than the rest of the spell. 10/15
+Non 4 - The duo phase is too easy, but Keiki's solo phase can get way too hard. Also lol blatant remade patterns. 12/15
+Spell 4 - It's clear what the spell wants you to do, so... what's with the purple bullets? They almost completely break the spell considering the speed of spinning required without them was sufficiently difficult. The concept is very cool, but I'm not sure why you would throw in an element like that. 12/15
+Spell 5 - Focus  mode restriction is a good idea on paper, and I get that the pairing was intentionally wrong, but it makes the first two phases of the survival much too difficult. And the swap spam part, too. 12/15
+Spell 6 - This pattern is actually very well-made, not just because of its concept, but also because of the reading angle being drastically unconventional, requiring attention to be paid to the trajectories of bullet waves across the bottom half of the screen. Unfortunately, it's also incredibly straining to read this properly... 14/15
+
+Overall Gameplay - 11.8/15
+I was quite conflicted on whether to judge Smooth or Rough, but I'd realized that lower difficulties are generally getting boring for me, so I instead chose to try to address the higher difficulty. While I'm not exactly sure if I'm able to dodge these patterns properly, the scores reflected here would be higher than if I judged their Smooth equivalents.
+==========================================================
+Creativity (Contest Theme) - 5/5 (Exceptional)
+Playing not only into the "unlikely" part of Junko and Keiki allying up right after conflicting, the patterns make use of squares and circles in ways to emphasize their common theme of shapes. This is likely the strongest theming entry in the contest.
+==========================================================
+Aesthetics - 5/5 (Exceptional)
+I usually don't comment much on the graphical aspects of scripts, but the graphics used in this script leaves a very strong impression. It feels like a genuine, very high effort product, despite being just a boss fight.
+==========================================================
+Total Score - 21.8/25
+It's definitely a strong entry despite having more simplistic patterns due to the theming. It's a shame that some spells had such bizzare design since the concepts were great and they would have scored very highly if they felt more balanced, but as is it's a somewhat consistent performer.

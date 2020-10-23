@@ -1,0 +1,51 @@
+Bullet Hell Artistry #2 - Naudiz
+
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+Played in Rough Mode which is a concerning difficulty name.
+
+Nonspell 1: Doesn't really interest me that much but it's not a bad pattern. Definitely better than the usual Junkoisms. 7.25/10.
+
+Spell 1: I'm dumb and took a while to figure this out, but it's actually pretty neat and fun to deal with. 8.75/10.
+
+Nonspell 2: This non fits well with Junko's obnoxious tight dodging theme, only the tight dodging that is somehow way more interesting. I like this one a lot. 9/10.
+
+Spell 2: Aaaaaa Tetris Aaaaaaaaa. This is good and creative, seemed difficult but not unusually so. I like this too. 9/10.
+
+Nonspell 3: A good non that uses both of them. I thought this was a little harder than the others but definitely still feasible.
+Also the circles aren't perfectly centered in Keiki's diamonds minus 1000 points. 8.75/10.
+
+Spell 3: This spell is very pretty. It's not dodged in a particularly interesting way honestly, but it's really really pretty. I'd rate it around an 8 because of this. 8/10.
+
+Nonspell 4: I usually really hate Lilies of Murderous Woos but I like the combination of both characters' attacks. Very good. 9/10.
+
+Spell 4: Very unique and fun spellcard! I see it, I like it, I judge it, it's great. 8.5/10.
+
+Spell 5: A another very interesting spell idea. Strangely, I thought the first phase was hardest, the second was easy, and the third wasn't that much harder than the second. I think the difficulty curve is a bit off, but I enjoyed this spell nonetheless. 7.75/10.
+
+Spell 6: Another additional to the "this spell is unique pile". I love the idea too. Dodging it is kind of boring until it ramps up, and since they become invincible when you bomb the last phase can drag on. Other than that I really like this. 8.75/10.
+
+Danmaku Score: 8.475/10 (scaled to 12.71/15)
+======================================================================================================================
+ 
+Aesthetically I think the script is amazing. Not perfectly cohesive, but probably as close as you can get. 5/5.
+======================================================================================================================
+ 
+I think the characters work together very well. 4.5/5.
+ 
+OVERALL SCORE 12.71 + 5 + 4.5 = 22.21/25

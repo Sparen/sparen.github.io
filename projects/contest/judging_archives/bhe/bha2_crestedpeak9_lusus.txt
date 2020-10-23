@@ -1,0 +1,30 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Kisume and Parsee" by Lusushime
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+ 
+Non 1 - Usually Parsee nons' walls will shrink and expand, but this combination with the lasers makes a good pattern. 13.5/15
+Spell 1 - Forcing the player to dodge into then out of fireball waves is neat. While Kisume jumping around the screen is to set up the fireball waves, it doesn't offer much in terms of gameplay save for the final wave. 13.5/15
+Non 2 - Don't have much to say other than this is a good nonspell. 14/15
+Spell 2 - At first glance it seems much too difficult, but figuring out how to properly stream the fireballs makes this quite a fun pattern. 14/15
+Non 3 - Another very good nonspell. 14/15
+Spell 3 - While the petal part of the spell is very pretty and well made, the chase part is way too hard, with the fireball bullets being this fast. 12/15
+
+Overall Gameplay - 13.5/15
+This is a script that exemplifies quality over quantity. While the difficulty is fairly high, perhaps overtuned for certain patterns, it's a very well-made boss fight that uses the Perfect Posession style very well.
+==========================================================
+Creativity (Contest Theme) - 4.5/5 (Decent)
+Considering you chose Kisume there wasn't much material to work off of, but you made it work. The only criticism would be that there isn't a very clear connection between the two and so there isn't a strict theme, but the danmaku using Perfect Posession makes the pairing work very well.
+==========================================================
+Aesthetics - 4.5/5 (Superb)
+HD Danmakufu looks good. If entries like Perfect Form weren't in the contest, this would probably have gotten a 5.
+==========================================================
+Total Score - 22.5/25
+It's obvious that this script was made with pattern playability in mind, and that allows it to score exceptionally highly. Quality trumps quantity, so despite being minimal length, I can predict that this will be among the highest scoring entries. Well done.

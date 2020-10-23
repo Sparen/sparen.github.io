@@ -1,0 +1,41 @@
+Bullet Hell Artistry #2 - JDude
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+Nonspell 1: I think the transparent tips of the wiggle lasers have hitboxes or something, because I feel as if I'm dying to things I really should not be. Other than that this pattern seems really difficult for how simple it is. 5.75/10.
+
+Spell 1: Sunny's bouncing star thing and her shooting them down is pretty cool! Nue's curving bullets are kind of just there, by comparison. Not as amazing as it could have been. 6.25/10.
+
+Nonspell 2: When Nue fires bullets directly at the player, the fact that there's a bunch of ADD-rendering on top of each other makes it difficult to see the bullets from the side. Kind of a neat concept, but visibility issues hamper the execution. The yellow bullets can also clump up when Sunny moves from left to right. 5.5/10.
+
+Spell 2: Streaming through falling stars. Simple and fun enough. 7/10.
+
+Nonspell 3: When Sunny starts really spamming the aimed bullets is too hard, but the idea behind this one is neat. 6/10.
+
+Spell 3: The pattern is pretty good. I'm not sure what's going on with her disappearing during the last phase, but it forced me to time out the most hectic part. It's strange, and probably too hard compared to previous phases/the rest of the script. 5/10.
+ 
+Danmaku Score: 5.916666666666667/10 (scaled to 8.875/15)
+======================================================================================================================
+ 
+Aesthetically I'd call this above average. The fancy aimed bomb things Nue has in the second spell are pretty appealing. 3/5.
+======================================================================================================================
+ 
+I think the character cooperation is about average. 2.5/5.
+ 
+OVERALL SCORE 8.875 + 3 + 2.5 = 14.375/25
+
+ALSO, remember to replace your Ultima Reimu player with the newest one on Bulletforge, because this one is bugged and randomly deletes bullets! It happened a LOT while I played.

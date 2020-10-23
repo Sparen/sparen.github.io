@@ -1,0 +1,30 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Ice and Fire" by Jackie Matthews
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+ 
+Non 1 - For a pattern that you posted previews of so many times, it's quite straightforward. Still a good pattern though. 14/15
+Non 2 - The idea is there but at the end of the day, the two parts of the pattern don't overlap at all and result in a pretty boring pattern. 11/15
+Non 3 - The spirals are fairly simple but it works by forcing such large movements with the birds. 13/15
+Non 4 - This is a mess... When you obscure bullets, it should be done with some purpose, not just to make reading more difficult. With no way around the bullet obscuring, the random arrowhead pattern becomes straight up unfair. 8/15
+Non 5 - Well... it's really simple. 12/15
+Non 6 - I'm not sure what the thought process behind this was, but it's way too easy. There isn't any difficulty to controlling the focus mode apart from being a blind killer, and the rest of the pattern is way too simple. It might have worked if the waves' movements were forced instead of controlled to require vertical movement, but as is there's no reason for this pattern to exist. 5/15
+
+Overall Gameplay - 10.5/15
+Really inconsistent across the board. It feels like some patterns were strictly standard and some patterns were strictly experimental, which leads to a very mixed result.
+==========================================================
+Creativity (Contest Theme) - 4/5 (Decent)
+It's definitely ice and fire. There's not much else to it.
+==========================================================
+Aesthetics - 4/5 (Functional)
+It works just fine and doesn't interfere with the dodging.
+==========================================================
+Total Score - 18.5/25
+The whole script doesn't really feel cohesive, with some patterns being really hard (like non 1 and 3) and some patterns being completely free. The experimental patterns all seem to fall apart, and it's a shame since there is some potential to them that can be brought out by realizing what the gimmicks' purposes are, then structuring the pattern around them.

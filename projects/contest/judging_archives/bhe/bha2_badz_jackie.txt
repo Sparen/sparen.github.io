@@ -1,0 +1,76 @@
+Badz's BHA2 Judging: Ice and Fire by Jackie Matthews
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 4/5
+----------------------------------------------------------------------------------------------------
+I'm not sure why those two are working together, but the fire-and-ice theme is exploited fairly well throughout the script.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 3.5/5
+----------------------------------------------------------------------------------------------------
+Everything looks acceptable. Bonus points for the custom title screen.
+(I'm not a fan of the inescapable void that is the Options menu, though.)
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 9/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Pattern 1
+8.5/15 (3/5 | 5.5/10)
+
+It seems fine, but those amulets are entirely too dense for me to deal with.
+The switch between the two segments of the patterns is also very abrupt, and there's little time to get out of the way from the aimed blast.
+
+--------------------------------------------------
+Pattern 2
+9/15 (4/5 | 5/10)
+
+I like the flow this pattern has when dodging.
+Problem is, there's nothing to dodge between waves while Cirno sets up the ice wall.
+
+--------------------------------------------------
+Pattern 3
+12.5/15 (4.5/5 | 8/10)
+
+The mirror effect with the two characters' patterns is neat, and the phoenixes and ice dragons are beautiful. And it's fun to dodge!
+Only thing I'd complain about is that, due to the wing flap effect, the macrododging attacks seem smaller when they spawn compared to when they reach the player.
+
+--------------------------------------------------
+Pattern 4
+6.5/15 (2/5 | 4.5/10)
+
+Noooooooo. I don't like having my vision obscured.
+If you're going to do this, you should use predictable patterns that the player can still estimate while they're hidden. The fast-and-random blue scale waves are particularly problematic here.
+
+--------------------------------------------------
+Pattern 5
+8.5/15 (2.5/5 | 6/10)
+
+This seems to be a filler pattern, and it doesn't have any glaring flaws. Next one!
+
+--------------------------------------------------
+Pattern 6
+9.5/15 (3.5/5 | 6/10)
+
+The focus/unfocus gimmick is nice, though it could have used some kind of tell so the player knows it exists.
+The side danmaku could have been more interesting, as well.
+
+----------------------------------------------------------------------------------------------------
+Final score: 16.5/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-This script was rushed, and it shows in quite a few places. But with some polish, I believe the concepts could really shine.

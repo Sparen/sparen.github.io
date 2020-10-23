@@ -1,0 +1,106 @@
+Badz's BHA2 Judging: Time and Rhyme by yeet1234567890
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 2.5/5
+----------------------------------------------------------------------------------------------------
+The characters do fit together, but I don't feel like this script makes good use of their different danmaku styles.
+If anything, there are too many cases where they're both doing the exact same thing.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 1.5/5
+----------------------------------------------------------------------------------------------------
+It's all default assets and free-to-use resources, which isn't bad in itself.
+However, it loses points due to presentation issues like bullets spawning at (0,0) when patterns end.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 8/15
+----------------------------------------------------------------------------------------------------
+
+Before I get to the patterns, there's one big thing: Kaguya cannot be damaged. This impacts playability in several places.
+
+--------------------------------------------------
+Nonspell 1
+8.5/15 (2.5/5 | 6/10)
+
+A spiral with some random bullets mixed in. It's not *bad*, but it's not very interesting either.
+
+--------------------------------------------------
+Spell 1: Time Sign "Instantaneous Warp"
+6/15 (2/5 | 4/10)
+
+The idea could be used in interesting ways, but this just makes a field of random lasers.
+
+--------------------------------------------------
+Nonspell 2
+9.5/15 (3/5 | 6.5/10)
+
+This is fine. Kaguya's lasers tend to end up at (0,0) for some reason, though.
+
+--------------------------------------------------
+Spell 2: Time Sign "Eternal Stop"
+8/15 (4/5 | 4/10)
+
+It's a very interesting concept, but the execution has issues:
+-If the player isn't under Sakuya at the beginning of it, there's no way for them to move and deal damage. This is admittedly unlikely to happen, but it's still a serious problem.
+-It can be cheesed by continuously "moving" diagonally downwards, which makes the bullets unable to reach the player before it ends.
+
+--------------------------------------------------
+Nonspell 3
+10/15 (3/5 | 7/10)
+
+Sakuya's knife +'s look weird, but besides that, this plays well enough.
+
+--------------------------------------------------
+Spell 3: Time Stopper "Timekeeper's Watch"
+8/15 (3/5 | 5/10)
+
+This would be easier to parse if the bullets flying in flower-like shapes rendered above the aimed shots. It's really hard to read in its current state.
+Otherwise, this works, though the two halves of the pattern feel disconnected.
+
+--------------------------------------------------
+Nonspell 4
+7/15 (2/5 | 5/10)
+
+It's just lines of bullets... and Kaguya's butterfly lines remind me more of Yuyuko.
+
+--------------------------------------------------
+Spell 4: Grow Sign "Instant Growing"
+6.5/15 (3/5 | 3.5/10)
+
+The delay lasers are showing the activating animation, even though they're harmless. They should be deleted before they can do that.
+
+There's also no way to distinguish the delay lines from the bosses and the ones from Kaguya's growing shots.
+Add in the danmaku spawning all over the screen, and this makes a mess that I simply can't keep up with.
+This would've been a lot better if Kaguya's growing shots simply went upwards, I think.
+
+--------------------------------------------------
+Nonspell 5
+9.5/15 (3.5/5 | 6/10)
+
+I like the look of the whirling bullets here. (Though once again, butterfly lines are more of a Yuyuko thing.)
+
+--------------------------------------------------
+Spell 5: Bloom Sign "Flowers in Eternal Bloom"
+6.5/15 (2.5/5 | 4/10)
+
+Please don't spawn lasers so quickly after the cut-in animation. There's no way to react to these.
+The inability to damage Kaguya makes this problematic: you'd have to chase Sakuya around to deal damage, but it's not an option because of the laser pattern she fires while moving.
+
+----------------------------------------------------------------------------------------------------
+Final score: 12/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-This has a fairly obvious "first script" vibe. The feedback might be discouraging, but don't give up!

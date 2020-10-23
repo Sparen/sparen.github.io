@@ -1,0 +1,52 @@
+Bullet Hell Artistry #2 - Ryann1908
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+Played as Normal Reimu. Arbitrarily chose the number 12 I guess idk?????
+
+Stage section: In general the stage sections were decently good. I'm not really going to judge every section so I'll just give an overall score of 7/10.
+
+Nonspell 1: The red lasers seem to clump kind of weirdly in an ugly way, but the rest of the pattern is pretty good I'd say. Kind of easy compared to the stage? 6.75/10.
+
+Spell 1: I don't really like how the curvy lasers curve in this one, but the pattern is also pretty fine. 7/10.
+
+Nonspell 2: The Shou chasing thing is pretty weird. Not hard, just weird. I guess it's fine? 6/10.
+
+Spell 2: I assume this is probably a reference to something but the weird visual nonsense makes dodging this particularly not fun. 2.5/10.
+
+Nonspell 3: I wouldn't really call this one hard. Definitely harder than some of the other patterns, but not hard. Kind of neat. 7.5/10.
+
+Spell 3: Why are we Len'en now :(. Otherwise this pattern seems okay, if a bit easy compared to the previous. The sudden use of Len'en warning indicators and such is a bit jarring. 7/10.
+
+Spell 4: Insidious Sputter is incredibly bizarre. The survival portion of it seems to drag on for too long, then they steal your graze (?) and you shoot them for a bit before you move on to the next spell? Bizarre, and not the good kind of bizarre. 3.5/10.
+
+Spell 5: The Protocol 1 version of this is mostly okay, except for when Shou randomly vomits a ton of curvy laser which is mostly not okay. Protocol 2 is reasonable. Protocol 3 seems harder than the others. All three of these have no reason to be survival spells! The patterns don't seem to ramp up or otherwise justify taking 55ish seconds to sit through. For all three of these, I'll give them a 4/10.
+
+Spell 6: Thankfully this pattern is 10 seconds, because the fact that there is a video of Zino's entry for SOME REASON in the background is extremely distracting. The pattern itself is just curvy lasers and dots, but visibility issues make it hellish. Why.
+2/10.
+ 
+Danmaku Score: 5.325/10 (scaled to 7.99/15)
+======================================================================================================================
+ 
+Aesthetically this script has some good points and then it commits visual murder with certain attacks. I'll just average it to be slightly worse than average. 2.25/5.
+======================================================================================================================
+ 
+I think the characters are mostly doing their own thing instead of working together. I'd rate this as below average. 1.5/5.
+ 
+OVERALL SCORE 7.75 + 2.25 + 1.5 = 11.74/25
+
+(As an aside, I appreciate the effort, but too much RNG is a bad thing I would say.)

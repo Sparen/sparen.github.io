@@ -1,0 +1,34 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"One-Winged Engels" by Python
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+I will be judging on Normal difficulty. This script is... insanely difficult.
+This script suffers from a severe technical issue where the script will no longer be able to run after a couple retries.
+Since this seems to be a ph3sx bug, we won't be penalizing for it.
+
+Non 1 - The opening pattern doesn't really do much apart from force the player to start from the right side, or at least not be on the left side for the jellybean wave. The actual nonspell itself afterwards also pushes Sejia's bullet so far down the screen that it can be difficult to determine where the lane is supposed to go and react to the much brighter amulet bullets from Sagume accordingly. 12/15
+Spell 1 - Much more straightforward, but the flipping gimmick doesn't accomplish anything since the section it's paired with is pure streaming. Also that Dream Bow is way too fast for Normal difficulty. 10/15
+Non 2 - By all means this shouldn't be dodgable in a regular Touhou engine, but it seems the hitboxes are much more lenient than normal. 13.5/15
+Spell 2 - Honestly, a fairly boring spell. There just isn't much going on when the revenge bullets from the yin-yangs are just aimed. Obviously if the trickster mine is killed it gets way harder, but that's completely avoidable... 10/15
+Non 3 - While the idea of clearing bullets by destroying the orbs is sound, the actual execution of the pattern results in it being incredibly easy. 9/15
+Spell 3 - It's not really the gimmick you'd associate with this pairing, but the pattern works well. 13.5/15
+Spell 4 - A hell of a blind killer, but fortunately since it's static, the four waves are consistent. 13.5/15
+
+Overall Gameplay - 11.6/15
+It's a fairly steady performance, but not really exceptional.
+==========================================================
+Creativity (Contest Theme) - 4/5 (Decent)
+It's obvious they're both amanojaku, and the existing patterns of both bosses were used to good effect. I think it could go further, however, since the screen-flipping in particular wasn't used particularly effectively.
+==========================================================
+Aesthetics - 4/5 (Functional)
+Graphics and UI are just fine and don't interfere with the gameplay. 
+==========================================================
+Total Score - 19.6/25
+The script's got overtuned difficulty largely owing to the structure of the patterns and their speed, but the patterns are overall fairly simplistic. It doesn't disappoint, but it doesn't pack a big punch either.

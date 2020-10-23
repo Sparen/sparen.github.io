@@ -1,0 +1,74 @@
+Badz's BHA2 Judging: Similarity Duo by Greg
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 3.75/5
+----------------------------------------------------------------------------------------------------
+Okay, that's a good meme.
+Their danmaku styles are combined fairly well for the most part, save for the first two nonspells.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 4/5
+----------------------------------------------------------------------------------------------------
+Everything looks fine. The custom Junko sprite is a nice touch.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 10/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Nonspell 1
+10/15 (3.5/5 | 6.5/10)
+
+Junko's attack is the interesting part here, particularly when she's doing it solo. Okina is just providing random spam.
+
+--------------------------------------------------
+Spell 1: God Sign "Hidden God Surfing in a Sea of Bullets"
+8.5/15 (3/5 | 5.5/10)
+
+The concept has potential, but the pattern isn't particularly exciting.
+This would've been a good place to do like the nonspells and have Okina fire something on her own after Junko is shot down.
+
+--------------------------------------------------
+Nonspell 2
+8.5/15 (3/5 | 5.5/10)
+
+It's all essentially random dodging. Junko's solo attack is pretty, but it's ridiculously hard to dodge.
+
+--------------------------------------------------
+Spell 2: Secret Ceremony "Pure Divine Spirit Offering"
+11/15 (3.5/5 | 7.5/10)
+
+It's unusual, and Junko firing one of Okina's spells outright is strange, but the resulting pattern is actually fairly interesting to dodge.
+
+--------------------------------------------------
+Nonspell 3
+12.5/15 (4.5/5 | 8/10)
+
+Now THIS is a nice one. It could use an indication that bullet lines are about to come in from below, though.
+The combined pattern and Okina solo are both fun to dodge. Junko's solo attack feels unreasonable, though.
+
+--------------------------------------------------
+Spell 3: "Pristine Anarchy World"
+9.5/15 (3.5/5 | 6/10)
+
+I don't have much to say about this. It just works.
+
+----------------------------------------------------------------------------------------------------
+Final score: 17.75/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-I'm getting persistent lag on this script, even with the background completely removed. What's going on?
+-Overall, it's a nice script, but the first half feels like it's not living up to its full potential.

@@ -1,0 +1,42 @@
+Subconsciously Lunatic Eye - by zino
+Difficulty – Normal
+Player – Reimu (default)
+Playthrough - https://www.youtube.com/watch?v=QJKgtD9TmZI
+
+Creativity – 5/5
+Reisen and Koishi work very well together. You did a great job of incorporating their respective abilities into this script while also having their attacks play off one another.
+
+Aesthetics – 3/5
+This is more a “things balance out” score rather than “this is average for Touhou” score. This script is gorgeous, and I wanted to score it higher like 4/5 or possibly 5/5, but at the same time the lack of standard Touhou aesthetics such as the portrait cut-in for spell cards means I should be scoring this a 2/5. So, average between the two since you're really on point in some areas, but lacking in others.
+
+Spell Grading – 8.5/10 (12.75 total)
+
+Non-spell 1 – 9/10
+Very well made opener and a great showcase of both Reisen & Koishi's standard powers. It's quick, simple and you're given plenty to keep track of to keep you on your toes.
+
+Wavelength “Moon's Telephone Wire” - 8/10
+It works, but it's a bit lacking in what it's capable of. Namely being, it took me 5 runs before I learned the lasers aren't death, rather they trigger Koishi's portion of the spell. It's really not hard to avoid the lasers completely, meaning there's a good chance players won't see what this spell is capable of.
+
+Non-spell 2 – 9/10
+Essentially the same logic as the last spell card, but designed with a slower, but more pressing threat. Nice lead in for a well designed non-spell
+
+Sky Sign “MindBreaker” - 8/10
+As a whole, I love the design of it, but I feel Reisen's laser could stand to fire faster. Moving from one side of the field to the next is the more interesting part of the spell, however each time Reisen fires that laser it lasts for 5-ish seconds where you're stuck in one place doing less interesting dodging. Personally I feel it could stand to be active for a little less time.
+
+Non-spell 3 – 7/10
+As a whole. It's fairly lacking compared to the ones that came prior. It looks cool, but really it's just 10 seconds of “hug the bottom and scoot a little towards the gaps”. 
+
+Blind Sign “Unforeseen Love” - 8/10
+Pretty good, though ultimately I feel it's much too short. By itself, I feel the pattern's good, however in practice, only one flower wave is ever going to reach you. The spell ends before you really start dealing with the part that makes the spell difficult.
+
+“La vie en rose” - 9/10
+Very nicely designed spell and I love how you incorporated Koishi's traditional “flower blooming” attack with Reisen's duplication. 
+
+Though side note. I'm not going to dock points because it doesn't happen in normal play, but when recording it does consistently start lagging on the second phase in particular. This could stand to be a bit better optimized
+
+Wavelength “Wave Particle Realignment” - 10/10
+I absolutely love the design of this spell. Plain, pure and simple. It's a manageable and cool pattern by itself, but I'm honestly amazed by the spiral flipping you keep making the attack do. It suits the characters and doesn't get overbearing to the point of distracting. Very beautiful and clever spell.
+
+
+Final Score – 20.75/25
+A very good script with some nice highs, but still with some faults. All in all, still fun to play, but is just missing a few aspects that keep it from being amazing.

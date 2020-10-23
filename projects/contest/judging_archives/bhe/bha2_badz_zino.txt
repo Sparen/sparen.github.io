@@ -1,0 +1,95 @@
+Badz's BHA2 Judging: Subconsciously Lunatic Eye by Zino
+Played on Hard mode
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 3.75/5
+----------------------------------------------------------------------------------------------------
+I'm... not quite sure why those two would be together, actually.
+But the danmaku works quite well, and has some fresh takes on their usual styles.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 3.75/5
+----------------------------------------------------------------------------------------------------
+There isn't any specific aesthetic flair that stands out, but the script looks fine in general.
+There are enough pretty-looking patterns that I feel like it's worth pointing out here, too.
+
+However, there's one presentation quirk: the game will display "Extra" no matter which difficulty you pick, which made me question whether the options worked in the first place.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 10.8/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Nonspell 1
+10.5/15 (3.5/5 | 7/10)
+
+It's some fairly standard "stream through the random shots" gameplay. Fine enough to start with.
+The glowball wave between cycles is a pain to read when the shots from both characters overlap, though.
+
+--------------------------------------------------
+Spell 1: Wavelength "Moon's Telephone Wire"
+7.5/15 (3.5/5 | 4/10)
+
+I can't keep up with Reisen's shots due to their sheer speed, so it's hard to evaluate the rest of the pattern.
+I feel like Koishi's roses should be faster, so the retribution from hitting a laser is more immediate.
+
+--------------------------------------------------
+Nonspell 2
+11/15 (4/5 | 7/10)
+
+Fairly standard streaming again.
+Koishi's rose heart is very pretty!
+
+--------------------------------------------------
+Spell 2: Sky Sign "MindBreaker"
+12.5/15 (4/5 | 8.5/10)
+
+Simple and fun.
+The transparent lasers that allow seeing bullets through them are a nice choice.
+
+--------------------------------------------------
+Nonspell 3
+10/15 (3/5 | 7/10)
+
+It's just some curvy lines... it feels like filler, but it's short enough that it doesn't pose a problem.
+
+--------------------------------------------------
+Spell 3: Blind Sign "Unforeseen Love"
+11.5/15 (4.5/5 | 7/10)
+
+The green pattern here is beautiful. And the polygonal shape makes it match nicely with the preceding nonspell too.
+The dodging is interesting, but it could afford a few more roses. As it is right now, the player only ever dodges two waves of them.
+
+--------------------------------------------------
+Spell 4: "La vie en rose"
+12/15 (4/5 | 8/10)
+
+This is a nice spin on Koishi's survival. I like how it doesn't waste any time progressing through the phases.
+It lags, but I'm going to blame that on my wimpy computer instead of the script itself.
+
+--------------------------------------------------
+Spell 5: Wavelength "Wave-Particle Realignment"
+11.5/15 (4/5 | 7.5/10)
+
+The repositioning effect looks really neat.
+The first phase doesn't do anything spectacular with it, but the second phase's curving lanes create some really interesting scenarios.
+
+----------------------------------------------------------------------------------------------------
+Final score: 18.3/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-I like this script's pacing. The patterns all go by fairly quickly, and it never feels like one of them overstays its welcome.
+-Overall, it's a fun and quick boss fight with some very nice-looking danmaku.

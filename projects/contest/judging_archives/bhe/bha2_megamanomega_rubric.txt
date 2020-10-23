@@ -1,0 +1,50 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging by MegamanOmega
+
+Oops! All BoWaP                      - 15.6/25  - https://pastebin.com/GvaNbWME
+One-Winged Engels                    - 22.4/25  - https://pastebin.com/i19n5xJm
+Unlikely Allies ~ Perfect Form       - 22.15/25 - https://pastebin.com/aViW4vNe
+Kaguya and Sakuya ~ TimeAndRhyme Duo - 15.7/25  - https://pastebin.com/czxdgKLV
+Unlikely Allies - Kisume & Parsee    - 19.5/25  - https://pastebin.com/vq1vpKMS
+Shipwreck Showdown                   - 21.7/25  - https://pastebin.com/Jz8GzGTW
+Subconsciously Lunatic Eye           - 20.75/25 - https://pastebin.com/EAqyiiAb
+Ice and Fire                         - 15.75/25 - https://pastebin.com/AENJ3R8Q
+Foxigami's contest entry             - 12/25    - https://pastebin.com/jc8rgRYb
+Ashes of Jeweled Treasures           - 15.23/25 - https://pastebin.com/Y4pN308Q
+Mysterious Sunflare                  - 20/25    - https://pastebin.com/M2g0ew6Z
+Similarity Duo                       - 19.25/25 - https://pastebin.com/yDQziJWy
+Melancholic Lily Valley              - 22.75/25 - https://pastebin.com/Enap2Y6Y
+
+Grading Criteria: Scripts are graded on the following criteria
+Creativity - Contest Theme (max. 5 pts).
+Aesthetics - Appearance (max. 5 pts).
+Playability - Gameplay (max. 15 pts).
+
+Creativity for this contest is all about mixing two characters together that are tangentially related. Points towards this category will be given both towards how well you encapsulated the characters themselves, but most importantly, how well you made them work together. Characters in Touhou have many unique abilities, bullet types and bullet patterns. I will be looking for both signature and creative examples of their abilities, but also unique examples of patterns done thanks to this mixture that I should not be able to find anywhere else.
+My grading process is something like
+5/5 – Two bosses are features, and their attacks are designed to compliment one another
+4/5 – Two bosses are featured, and they both act like they would from their respective games
+3/5 – Two bosses are featured, but I feel more could be done with how they were implemented
+2/5 or lower – I feel the danmaku patterns/abilities of one or two of the characters weren't showcased well, or I feel the overall theme of the contest is missed.
+
+Aesthetics is all about sound & graphic design. I will be looking both for people that went above and beyond for unique (and good looking) aesthetic choices, but also for people who phoned it in, or made less than stellar decisions. Bad graphics, hard to see graphics, music that isn't properly looped, or even missing basic aspects (such as missing death effects, sound effects, etc)
+My grading process here is something like
+5/5 – In multiple ways, you go above and beyond the norm of sound and graphic design
+4/5 – You do things that are better than what I generally see
+3/5 – Sound and graphic design is similar/identical to standard Touhou
+2/5 – You are missing standard aesthetic aspects (sound effects, death effects, etc)
+1/5 or 0/5 – Your aesthetic choices are actively detrimental to the script
+
+Playability will then be quality of the game and spells themselves. The remaining 15 points will be the average score of the quality of all the spells themselves, each of which will be graded on a 1-10 scale. Note, that aesthetics can factor into the grading here. Mainly in the realm that proper usage or misuse of sound effects and graphics can dramatically change the difficulty and fairness of a spell, even if the danmaku is identical.
+
+Note. Points will be docked if playability issues do arise. Namely, I will be looking for instances when spells glitch or don't behave right, looking for instances when the FPS drops significantly, or worst case scenario, if the game crashes.
+
+I have the most experience playing Normal difficulty games and single scripts, so generally speaking that's what I will be doing here. Exceptions will be if the author requests a different difficulty for the sake of judging, or if there are more or less than Touhou's traditional 4 difficulty settings.
+I will also be playing as Marisa whenever possible, because I'm just that guy. 
+A rough estimate of my grading thought process is
+10/10 – I am both surprised/impressed and can't think of ways it can be better
+9/10 – I can't think of ways it can be better
+8/10 – Very good, but I feel it could use some tweaking
+7/10 – Good, but there are some notable issues
+6/10 – Playable, but at this point I'm finding issue with the spell as a whole instead of parts of it
+5/10 or lower – Either your spell is extremely sparse and simple, I actively dislike that I am forced to sit here and play this, or the spell is broken in some way.

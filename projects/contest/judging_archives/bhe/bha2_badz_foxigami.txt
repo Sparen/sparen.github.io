@@ -1,0 +1,83 @@
+Badz's BHA2 Judging: Treasure Hunters by Foxigami
+Played on Hard mode
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 3.5/5
+----------------------------------------------------------------------------------------------------
+I can see why those two would be together. The danmaku has a few interesting ideas as well.
+
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 2/5
+----------------------------------------------------------------------------------------------------
+The main fight doesn't look bad, but the stickbug is simply ugly.
+There also don't seem to be any sound effects. Where are they?
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 7.4/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Nonspell 1
+8.5/15 (3.5/5 | 5/10)
+
+This is simple, but the combination of Kaguya's attack and Shou's lasers making lanes actually works really well.
+Shou's lasers are ridiculously fast, though, and there are some parts where Kaguya's pattern more or less walls.
+
+--------------------------------------------------
+Spell 1: Treasured Treasure "Treasured Treasure Worth Treasuring"
+8/15 (4/5 | 4/10)
+
+This is an interesting take on Kinkaju-ji (if silly-looking), but the actual pattern doesn't quite work.
+Shou takes a terribly long time to set up the laser stack, and the fire spawned is super slow. The whole thing could be sped up a lot.
+
+--------------------------------------------------
+Nonspell 2
+7.5/15 (2.5/5 | 5/10)
+
+I cannot keep up with Shou's lasers here. They're too fast, and there's no real way to predict their trajectories.
+The rest of the pattern seems fine, though Kaguya's shots get really wide and it feels like there's no way to avoid them sometimes.
+
+--------------------------------------------------
+Spell 2: Mirrored Mirror "Mirrored Mirror Mirrors Mirrors"
+10/15 (3/5 | 7/10)
+
+Shou's pattern is nice, and definitely feels like the kind of thing she'd do.
+Kaguya is just firing random spam, though, and that's a shame.
+
+--------------------------------------------------
+Spell 3: Flashy Sign "Shiny Flash Flashing Shiny Shines"
+5.5/15 (2.5/5 | 3/10)
+
+Once again, I cannot read those lasers. They're too fast, and I can't distinguish them during the slowdown before they shoot away.
+The intent here seems to be making the player spin, which is cool, but the rotation is so slow that it never even reaches the player.
+
+--------------------------------------------------
+Spell 4: The Most Glorious Treasure
+(aka GET STICKBUGGED LOL)
+5/15 (2/5 | 3/10)
+
+I won't complain about the fast lasers this time, since they always fly in the exact same trajectories.
+However, the random bullets are too fast and dense to reasonably dodge. They don't even seem to change based on difficulty!
+This all feels like a troll pattern, which shouldn't be in a contest script.
+
+----------------------------------------------------------------------------------------------------
+Final score: 12.9/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-I *assume* the entry's name is Treasure Hunters. The BulletForge upload didn't specify it.
+-I actually liked the meme spell names on Hard mode quite a bit.
+-Overall, the script's rushedness definitely shows. There are some worthwhile concepts, but the gameplay is just bad in its current state.

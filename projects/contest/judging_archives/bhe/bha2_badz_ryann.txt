@@ -1,0 +1,115 @@
+Badz's BHA2 Judging: 東方闉塔得 ～ Ashes of Jeweled Treasures by Ryann
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 2.5/5
+----------------------------------------------------------------------------------------------------
+This is definitely creative, and there's a story to it, but it just doesn't make sense to me.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 2/5
+----------------------------------------------------------------------------------------------------
+The switching frames are nice, and it's nice to have a custom Seiga portrait...
+But this also has several instances where the visuals interfere with gameplay (mostly bright backgrounds with ADD bullets), and the negatives outweigh the positives in this case.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 8.3/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Nonspell 1
+7/15 (2/5 | 5/10)
+
+It's just random chaos with lasers everywhere.
+I'm really not a fan of Seiga's thinning lasers. It reduces their visibility and doesn't look very good.
+
+--------------------------------------------------
+Spell 1: Rosary Sign "Esse Hawser"
+10/15 (3/5 | 7/10)
+
+Shou's lasers are very uncomfortable with how low on the screen they curve, but besides that, it's a decent pattern.
+
+--------------------------------------------------
+Nonspell 2
+8/15 (2/5 | 6/10)
+
+The dodging itself is okay, but I have no idea why Shou would be chasing me around like this.
+
+--------------------------------------------------
+Spell 2: Castaway Penumbra "Cloud Oscillation Paradigm"
+7/15 (2/5 | 5/10)
+
+The dark negative filter looks cool, but it also hinders visibility. And it's even worse with those vision-obscuring rectangles.
+The danmaku itself seems okay, though I'm not a fan of Seiga's random bullet lines.
+
+--------------------------------------------------
+Nonspell 3
+11/15 (3.5/5 | 7.5/10)
+
+A little strange, maybe, but it's a solid pattern.
+
+--------------------------------------------------
+Spell 3: Memorial Card "Capricious Avifauna Burial"
+11.5/15 (4/5 | 7.5/10)
+
+Solid enough, and feels like a follow-up to the previous nonspell.
+
+--------------------------------------------------
+Spell 4: Abhorrent Torrent "Insidious Sputter"
+6/15 (3/5 | 3/10)
+
+The premise is interesting, but there are some problems with the execution. Let's split it by phase:
+
+-The intro takes entirely too long. The bubbles could be deployed way faster while still giving the player time to get in a gap.
+-Phase 1 is the most solid one- the danmaku is clearly visible, and it occasionally requires dodging on both axes of the bubble grid. I'm not a fan of how low on screen the bullets can spawn, though.
+-Phase 2 introduces ADD-blended bullets, and that's a problem: they blend in with the bubbles (though they're still relatively easy to track here). The random falling positions could also make them wall.
+-Phase 3's falling lasers, meanwhile, are easy to miss and can lead to cheap deaths.
+-The bubbles splitting and going after the player is fine once you know what's going to happen, but the charge effects don't telegraph it well in the slightest.
+-Then the last two segments of the spell are just standard dodging. They're not BAD, but they feel disconnected from the rest of it.
+-And why is the timer so much longer than it needs to be?
+
+--------------------------------------------------
+Spell 5A: Eastern Impermanence "Fandangle Lullaby" (Protocol 1)
+7/15 (3/5 | 4/10)
+
+It's *mostly* fine, except for Seiga's bullets that can occasionally snipe the player at extreme speeds.
+Shou's big laser wave is also kind of unreasonable to dodge.
+And why is this a survival? I don't see any reason for it to be. This applies to all three variants.
+
+--------------------------------------------------
+Spell 5B: Eastern Impermanence "Fandangle Lullaby" (Protocol 2)
+6/15 (3/5 | 3/10)
+
+This WOULD be a good pattern if it weren't for Shou's bullets being way too fast to dodge. What on earth is up with that?
+
+--------------------------------------------------
+Spell 5C: Eastern Impermanence "Fandangle Lullaby" (Protocol 3)
+9.5/15 (3.5/5 | 6/10)
+
+This is the most coherent variant of this spell. It's easy to get sniped by a red laser, but otherwise, the gameplay makes sense.
+
+--------------------------------------------------
+Spell 6: Tropical Country "Lusophone Freightage"
+8/15 (4/5 | 4/10)
+
+The danmaku in itself is fine, and I don't mind this whole "recording of Zino's entry as the background" concept, but the background is way too bright to be dodging ADD-blended lasers on.
+This would've been a lot better if it had used a different spell, or even simply darkened the background.
+
+----------------------------------------------------------------------------------------------------
+Final score: 13.3/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-I actually like this "LuaSTG Randomizer" idea. But why did it have to be in a script where stages don't matter for judging? I'm very glad that spell practice is included, because judging this would've been incredibly annoying otherwise.
+-Overall, this was a really weird script with a lot of concepts I didn't quite get, but with good enough execution, I think you could make something very interesting out of it.

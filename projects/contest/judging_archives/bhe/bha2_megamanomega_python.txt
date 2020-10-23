@@ -1,0 +1,38 @@
+One-Winged Engels - by Python
+Difficulty – Normal
+Player – Marisa & Narumi
+Playthrough - https://www.youtube.com/watch?v=MJugv9HremI
+
+Creativity – 5/5
+This was a great mixture of both what Sagume and Seija pull off in their respective fights. Mixing both Sagume's traditional mines and Seija's arrows & flipping. Especially impressive that you did more than just have them fire their respective attacks together, but mixed their abilities together in choice spells as well.
+
+Aesthetics – 5/5
+Definitely a script that went above and beyond with the aesthetics. I liked the fade-in effects for the mines as well as liking the spell card transition animation. Though what made this the difference between a 4/5 and a 5/5 was the choice to incorporate a music arrange that combines both Reverse Ideology and Reversed Wheel of Fortune together.
+
+Spell Grading – 8.29/10 (12.4/15 score total)
+
+Non-spell 1 – 7/10
+My main issue is Sagume's opening drifting in blast of a blind-run killer. I feel it's a poor choice to open up the battle with “stream and then misdirect, or die”. The rest are more manageable and either are well designed skill based or give you some warning to let you know how you screwed up before transitioning into a much more, “what I'd expect from an opening Non-spell”. However, as cinematic as the intro is, I'm not fond of the idea of “First go here, here, here, then here, and 'now' you may play the game”
+
+Bad Omen “Pheasant Shooter” - 8/10
+All around I really like the design and implementation of this spell. The mines coming in from the background insinuate to the player to go up and I especially love how the leftover arrows get reused once the screen flips to get aimed at you. The only thing stopping it from being 9/10 is I found it to be abnormally short compared to the rest. Every other spell in this script is able to get 2+ loops off, even as Marisa. This one has barely enough time to do one loop.
+
+Non-spell 2 – 9/10
+Simple yet threatening. Very well designed non-spell that also compliments their danmaku styles perfectly. 
+
+Wicked Orb “Shoot Not the Trickster Mine” - 10/10
+There is a lot to keep track of here, but it never gets overwhelming and I absolutely love it (though the fact that I'm playing as your Marisa player and have to now also keep track of the fact that I shoot behind me when focused is pushing the boundaries of a little much, but I'm used to spells being harder because I'm playing as Marisa). Bar none, I absolutely love the choice 
+
+Non-spell 3 – 7/10
+Did you know the opening salvo is almost impossible unless you realize it's better to face this spell unfocused rather than focused? Narumi does not deal enough damage with the mines spawning that close to you to destroy any before a wall of bullets come down (ironically, she can in Hard mode, making the Hard mode version significantly easier than the Normal mode version). This is a problem that seems exclusive to her and unfocused Reimu (though in that case, you're unlikely to even want to dodge in that way anyways). Good spell otherwise if it didn't have such an odd issue.
+
+Boundless “Torus Universe” - 8/10
+Flashy, but felt a little lacking from what came before it. A lot of times you're just given the illusion of difficulty with this spell. I love the way Seija's initial laser shows that you're dealing with wrap around before you're dealing with lasers up the butt, but the second shot is just plain free since you've got the entire left side of the field to dodge in. Similarly Sagume's lasers are purely decorative, since if you're dodging below and under her (where you normally would want to be) they'll never hit you.
+
+Turnabout “One-Winged Heron's Mirror World” - 9/10
+A great way to incorporate a version of Sagume's signature attack, but also did a great job mixing it together with Seija's style of attack. I especially love how the line that flips Seija's fireballs is the line Sagume just moved on. My only real complaint is that this reminded me a little “too much” of how Kuroji attacks, but you do implement it in unique enough ways that I won't dock points for being too derivative 
+
+
+
+Final Score – 22.4/25
+A strong showing in many aspects. Only a few minor hiccups hold it back from being REALLY good.

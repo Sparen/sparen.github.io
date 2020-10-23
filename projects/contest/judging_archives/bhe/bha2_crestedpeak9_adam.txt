@@ -1,0 +1,32 @@
+Bullet Hell Artistry #2: Unlikely Allies
+Judging notes from Crested
+"Melancholic Lily Valley" by Adam
+==========================================================
+Judging criteria and point distribution are as follows:
+Playability - Gameplay (max 15 points)
+Creativity - Contest Theme (max 5 points)
+Aesthetics - Appearance (max 5 points)
+Max score per judge is 25.
+==========================================================
+Gameplay - For gameplay, I will score each pattern individually and average the scores to get the final gameplay score.
+Gotta be honest, this script is really undertuned. I'll be judging on Lunatic (but it feels like Hard).
+
+Spell 1 - Very impressed with how well this flows when dodging. 14.5/15
+Spell 2 - Another very good spell with several approaches. I found it best to move out of the flower circles completely. 14.5/15
+Spell 3 - This spell's much too easy, I'll be honest. There isn't very much happening during the streaming section, and the other phase being static (and still quite easy) makes this kind of boring. 10.5/15
+Spell 4 - Fairly straightforward, but it's a good spell. 14/15
+Spell 5 - I wish the vine growing part could have had more bullets to make it actually threatening, but the rest of the spell is just static with aimed flowers. It's a little too easy (again), but it works. 13.5/15
+Spell 6 - You know, of all the scripters to have (0,0) spawning, I certainly didn't expect you to fall victim to it. The flower blooming being cancelled by a death causes it to spawn at (0,0) lol
+It's a decent final spell, but so much of the pattern being just aimed is a little disappointing. 13/15
+
+Overall Gameplay - 13.3/15
+Very consistent while varying the spells quite significantly. Well done.
+==========================================================
+Creativity (Contest Theme) - 4.5/5 (Superb)
+It's certainly flower-based and looks very pretty. Perhaps more of Medicine's gimmicks could have been employed, but it would be difficult to use poison fields well.
+==========================================================
+Aesthetics - 4/5 (Functional)
+It works just fine and doesn't interfere with the dodging.
+==========================================================
+Total Score - 21.8/25
+I've seen you say before that you find it difficult to balance difficulties, and it does reflect here. Don't be afraid to kick things up a notch, since these patterns are almost an entire tier too easy for their level. Your scripts never cease to amaze though.

@@ -1,0 +1,85 @@
+Badz's BHA2 Judging: One-Winged Engels by Python
+Played on Normal mode
+
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 5/5
+----------------------------------------------------------------------------------------------------
+This script does an excellent job at taking two characters with gimmicky danmaku styles and making them work together.
+There are some really interesting twists that wouldn't work with only one of them.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 4/5
+----------------------------------------------------------------------------------------------------
+A custom system, a neat spell cut-in animation, and a cool stormy background. It looks very nice.
+There are some quirks in the dual-boss handling, though: Sagume always has a full life bar, and homing shots only ever go after Seija.
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 11.1/15
+----------------------------------------------------------------------------------------------------
+Nonspell 1
+12/15 (4.5/5 | 7.5/10)
+
+Music-synced intro sequence? That's really neat.
+The actual nonspell is nothing special, but it's good enough as an introductory pattern.
+
+--------------------------------------------------
+Spell 1: Bad Omen "Pheasant Shooter"
+10/15 (4/5 | 6/10)
+
+It's a solid concept that could use a few adjustments.
+The rising arrows can be dodged almost entirely by standing still on Normal, and there's a little while with nothing going on before Seija does the screen flip.
+
+--------------------------------------------------
+Nonspell 2
+12/15 (4/5 | 8/10)
+
+It's a new take on both characters' nonspells, and it flows very smoothly once you know what to do.
+My only complaint is that the gaps in Seija's pattern seem awfully tight for Normal.
+
+--------------------------------------------------
+Spell 2: Wicked Orb "Shoot Not the Trickster Mine"
+13/15 (5/5 | 8/10)
+
+Ooooh, that's a clever gimmick!
+I feel like this would've been better if the green orbs' positions had some kind of pattern instead of being fully random, though.
+
+--------------------------------------------------
+Nonspell 3
+11/15 (4.5/5 | 6.5/10)
+
+It's a very interesting concept, but the actual dodging isn't terribly exciting.
+It does force focus or unfocus depending on shottype; I'm not sure if it's intentional, but it makes for a point of interest.
+
+--------------------------------------------------
+Spell 3: Boundless "Torus Universe"
+8.5/15 (3/5 | 5.5/10)
+
+I'm not sure how to feel about Seija's walls. With how fast they are, it's easy to get sniped unless you know exactly what to do.
+Sagume's part is fine, but it's just dodging some amulets while bottom-hugging.
+
+--------------------------------------------------
+Spell 4: Turnabout "One-Winged Hero's Mirror World"
+11.5/15 (4.5/5 | 7/10)
+
+Another clever mix of the two characters' patterns.
+I feel like there's entirely too much fire for Normal mode, though.
+
+----------------------------------------------------------------------------------------------------
+Final score: 20.1/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-I'm usually a Hard mode player, but it felt like it was above my level here (and it's a shame, since there are some significant differences from Normal). Considering your comments on Lunatic, maybe you're making things too hard in general?
+-Overall, this was a very interesting boss fight with unique ideas. I like the "puzzle-like patterns with spell practice" approach.

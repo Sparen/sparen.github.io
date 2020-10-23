@@ -1,0 +1,42 @@
+Bullet Hell Artistry #2 - TTBD
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+Played on Normal Mode as Reimu with her default shots.
+
+Nonspell 1: Fast-paced and fun. Great start. 9/10.
+ 
+Spell 1: I think it can be a tad too chaotic with a bunch of indicators and bullets. Otherwise, excellent. 8.5/10.
+ 
+Nonspell 2: I really don't have much to say but praise for this pattern too. 9/10.
+ 
+Spell 2: Yay survival card...but this one is just the right length and difficulty, aesthetically pleasing with the countdown timer and kind of funny with the spinning fish. I don't think it's quite "perfect", but it's awesome. 9.75/10.
+ 
+Nonspell 3: Excellent, fun, wow I'm repeating myself. 9/10.
+ 
+Spell 3: Not shooting your soul is a very interesting idea, but the soul doesn't just die instantly so it's fun and fair. Doesn't interest me as much as other patterns but it's still great. 8.5/10.
+
+Spell 4: This spell got kind of messy and I ran around hoping I didn't die and I didn't die, so I guess that's good. Fine way to end the script. 8/10.
+ 
+Danmaku Score: 8.82/10 (scaled to 13.23/15)
+======================================================================================================================
+ 
+Aesthetically, I think this script is quite cohesive. 4/5.
+======================================================================================================================
+ 
+I think the characters work together very well. 4.5/5.
+ 
+OVERALL SCORE 13.25 + 4 + 4.5 = 21.73/25

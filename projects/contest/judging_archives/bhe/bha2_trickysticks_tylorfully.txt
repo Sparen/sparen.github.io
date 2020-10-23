@@ -1,0 +1,50 @@
+Bullet Hell Artistry #2 - Tylorfully
+
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Character Cooperation: 5/25
+ 
+5 points will be dedicated to how well the characters fit the contest theme of being unlikely allies. How well do they cooperate? Do their patterns make good use of both of the respective characters gimmicks, or are they just solo patterns mushed together? Note that cooperation means "how well the danmaku works together", not necessarily how well the CHARACTERS work together. If the characters are actively fighting each other, that's fine as long as the pattern is good.
+======================================================================================================================
+
+Played with DDC Ultima Reimu B since idk what player to use whoops.
+
+Nonspell 1: The fact that you can hit Kaguya but it doesn't do any damage to the boss lifebar is very strange and unintuitive. The pattern is okay - nothing fancy, but not super bad - but the Kaguya weirdness takes away from it (and from future patterns). 4.25/10.
+
+Spell 1: I like the idea of this pattern, but the fact that it's so quick and repetitive makes it rather boring. 4.5/10.
+
+Nonspell 2: It ends up being "dodge the bouncy stuff while streaming rainbow stuff sometimes". Not very interesting. 4/10.
+
+Spell 2: A neat spell idea, but it has a fatal flaw - if you start the spell while you're not directly under her, like if you die or move to dodge the lasers, you're trapped there and have to time the spell out. You thought to return the player to their position when they die, so why not set the player to be under Sakuya to ensure the spell is capturable? Otherwise it's an okay pattern. 3/10.
+
+Nonspell 3: Doesn't really seem to fit the characters well, beyond being rainbow bullets/knives. 4.5/10.
+
+Spell 3: This pattern is better than the previous ones. The curving bullets are really weird and probably at the point where a bullet is curving too much though. 5.5/10.
+
+Nonspell 4: I think this non is a weird difficulty increase compared to previous patterns. As usual it's not a horrible pattern, but not that interesting either. 4.75/10.
+
+Spell 4: I think the way the bullets spawn in this pattern is pretty cool looking and interesting! Unfortunately, I don't think the pattern that results is that fun to dodge. 5.5/10.
+
+Nonspell 5: Not super character appropriate or very fun to dodge. The curving is more tolerable in this spell than Spell 3. 4.5/10.
+
+Spell 5: Lasers that also shoot a bullet are interesting, but this pattern just isn't very fun. It's a pretty repetitive cycle and only being able to hit one enemy makes it take a while. 4.5/10.
+
+Danmaku Score: 4.5/10 (scaled to 6.75/15)
+======================================================================================================================
+ 
+Aesthetically I think the script isn't very cohesive, and it has bugged textures and such. Visibility isn't a constant issue but it's still not that great 1.5/5.
+======================================================================================================================
+ 
+I think the script makes a below-average effort to get the characters working together in ways that fit the contest. 2/5.
+ 
+OVERALL SCORE 6.75 + 1.5 + 2 = 10.25/25

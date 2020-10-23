@@ -1,0 +1,76 @@
+Badz's BHA2 Judging: Mysterious Sunflare by JDude
+The final score is out of 25, split as follows:
+
+Gameplay: 15 points
+How well the script plays. Each pattern is judged individually.
+The individual scores are further split as 5/15 for concept and 10/15 for gameplay.
+
+Creativity and theme: 5 points
+How well the script uses the contest theme. Based on having a fitting pair of characters, and making good use of both of them.
+
+Aesthetics and presentation: 5 points
+How good the script looks and feels. Includes visuals, as well as other presentation aspects like sound effects and the system.
+
+----------------------------------------------------------------------------------------------------
+Creativity and theme: 3.5/5
+----------------------------------------------------------------------------------------------------
+Those are some very unlikely allies indeed. How'd you come up with this one?
+The patterns provide a few interesting interactions between the two, at least.
+
+----------------------------------------------------------------------------------------------------
+Aesthetics and presentation: 3.5/5
+----------------------------------------------------------------------------------------------------
+The script looks fairly standard. The custom title screen is nice!
+
+----------------------------------------------------------------------------------------------------
+Gameplay: 9.3/15
+----------------------------------------------------------------------------------------------------
+
+--------------------------------------------------
+Nonspell 1
+8.5/15 (3/5 | 5.5/10)
+
+This seems like it's a streaming pattern, but the two characters' attacks being out of sync makes it incredibly hard to keep up with.
+
+--------------------------------------------------
+Spell 1: Star Slicer "Unidentified Mechanic"
+10.5/15 (4/5 | 6.5/10)
+
+I like the pattern itself, but it's all very slow and takes a long time to get going.
+It could be more interesting if Nue started firing immediately or Sunny had an intro wave to get things going.
+
+--------------------------------------------------
+Nonspell 2
+10.5/15 (4.5/5 | 6/10)
+
+This is a very interesting combination of that one Nue nonspell and Sunny's usual style.
+I can't keep up with the random bullets when Nue is firing, though.
+
+--------------------------------------------------
+Spell 2: Falling Light "Myouren's Unidentified Ring"
+11.5/15 (4/5 | 7.5/10)
+
+All the components here work nicely together.
+It's weird to see Nue firing those aiming beams when Sunny is usually the one doing so in this script, though.
+
+--------------------------------------------------
+Nonspell 3
+7.5/15 (2.5/5 | 5/10)
+
+The curving on Nue's shots make them incredibly unpleasant to dodge when trying to stream the other bullets. The part where she cover the screen in darkness is nice, though.
+Also, the two characters' patterns don't stay in sync, which doesn't seem intentional.
+
+--------------------------------------------------
+Spell 3: UFO Invasion "Seamless Refraction"
+7/15 (3/5 | 4/10)
+
+I like the idea, but this is one of those final spells that just combine a bunch of attacks without forming a coherent whole.
+Also, Sunny seems to disappear without ending the fight once the last phase is reached? What's going on?
+
+----------------------------------------------------------------------------------------------------
+Final score: 16.3/25
+----------------------------------------------------------------------------------------------------
+Closing notes
+----------------------------------------------------------------------------------------------------
+-I was dying a lot while playing this, especially during the nonspells. I would recommend including some easier difficulty options in future entries.
+-Overall, it's a script with interesting concepts, but the execution could use work in a few places.
