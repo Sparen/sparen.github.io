@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 20, 2018')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Oct 25, 2020')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -99,39 +99,49 @@ let test3 = (bool || !bool2); //test3 is true if bool OR not bool2 is true. IE i
 	      <p>Above is an example of an if statement. If statements have a condition (a boolean or boolean expression) that is true, the code in the braces following the statement will be executed. In the above situation, the variable <code>count</code> will be set to 0 if its value is greater than 30. If its value is not greater than 30, the code within the braces will not be executed.</p>
 	      <p>For future reference, code within {braces} is considered a block. You can have multiple statements (a single instruction) inside a block - just remember to end each statement with a semicolon.</p>
 	      <p>If you want to do something else instead when a given condition is false, you can use if-else statements.</p>
-	        <pre class="prettyprint"><code>if(count &gt; 30){
-        count = 0;
-}else{
-        count++;
+	        <pre class="prettyprint"><code>if(count &gt; 30) {
+    count = 0;
+} else {
+    count++;
 }</code></pre>
 	      <p>Now, if count is not greater than 30, count will increment by 1! You can also nest if else statements and have multiple else statements, like so.</p>
-	        <pre class="prettyprint"><code>if(count &gt; 30){
-	count = 0;
-}else if(count &lt; 0){
-	count = 0;
-}else{
-	count++;
-	if(count % 3 == 0){
-	  //Do something
-	}
+	        <pre class="prettyprint"><code>if(count &gt; 30) {
+    count = 0;
+} else if(count &lt; 0) {
+    count = 0;
+} else {
+    count++;
+    if(count % 3 == 0) {
+        //Do something
+    }
 }</code></pre>
 	      <p>In the above example, there is another case - if count is less than 0. In this manner, you can set the code to do a variety of things. In the last part, the case where count is greater than or equal to 0 AND less than or equal to 30, there is another if statement allowing the code to do yet another thing.</p>
 	      <p>However, if you have a lot of different cases using the same variable, a wall of if else statements gets clunky and hard to read. As a result, there are switch statements, known as alternative-case statements in Danmakufu. They are basically shorthand for if-else statements where the condition involves equality with a specific thing.</p>
 	      <p>But wait! Haven't we seen these before in @Event? Why yes. That's one of the places where you will be using them.</p>
 	        <pre class="prettyprint"><code>    alternative(x)
     case(-3){
-	//Do stuff
+        //Do stuff
     }
     case(2){
-	//Do other stuff
+        //Do other stuff
     }
     case(10){
-	//Do some stuff
+        //Do some stuff
     }
     others{
-	//Do various stuff
+        //Do various stuff
     }</code></pre>
 	      <p>The way an alternative-case statement works is as follows: The variable inside <code>alternative()</code> is the variable that is being tested. The first case asks whether <code>x == -3</code>. If true, it will execute the stuff inside the braces for case(-3) and ignore everything else. If x is not -3, it will move on to the next case and so on. Finally, if it has exhausted its options, it will do whatever is in others{} or, if others{} is not present, simply exit the statement and do nothing. Very useful.</p>
+	      <p>The equivalent if-else statement to the above is as follows:</p>
+	        <pre class="prettyprint"><code>    if (x == -3) {
+	//Do stuff
+    } else if (x == 2) {
+	//Do other stuff
+    } else if (x == 10) {
+	//Do some stuff
+    } else {
+	//Do various stuff
+    }</code></pre>
 	      <h2 class="ph3tutorialheader" id="sub4">Part 4: What are Loops and How do I Use Them?</h2>
 	      <p>If you want to repeatedly do the same thing over and over again (and perhaps with slightly different effects), loops are the solution! There are a few types of loops in Danmakufu.</p>
 	      <p>The first type of loop is the generic loop. It is a structure that takes an integer parameter <code>n</code> and will run the code in the following block <code>n</code> times. The parameter must be an integer because it makes no sense to repeat something 3.5 times. For example:</p>
