@@ -1,7 +1,7 @@
 // Set an alert
 document.getElementById("alert_div").innerHTML = `
 <div class="notice_inner_sm">
-<img src="./projects/contest/bha3_banner.png" style="max-width: 50%"><br>
+<img src="http://sparen.github.io/projects/contest/bha3_banner.png" style="max-width: 50%"><br>
 Bullet Hell Artistry Contest #3 - Unexpected Mastermind 2 is now ongoing! Visit <a target="_blank" href="https://discord.gg/4wNvvPHxeU">BHE Discord</a> for more information!
 </div>
 <div class="alert_inner_sm">
