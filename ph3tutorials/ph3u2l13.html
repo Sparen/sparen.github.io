@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 20, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('Feb 16, 2021')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -65,8 +65,8 @@
 	      <p>2D Sprites have four vertices that form a rectangle, and you use the following three functions to tell Danmakufu which parts of the image to use and how to display the selection - <span class="tooltip" onmouseover="getFxnDocs('ObjSprite2D_SetSourceRect', 'f_os2dssr_01');"><code>ObjSprite2D_SetSourceRect()</code><span class="tooltiptext" id="f_os2dssr_01"></span></span>, <span class="tooltip" onmouseover="getFxnDocs('ObjSprite2D_SetDestRect', 'f_os2dsdr_01');"><code>ObjSprite2D_SetDestRect()</code><span class="tooltiptext" id="f_os2dsdr_01"></span></span>, and <span class="tooltip" onmouseover="getFxnDocs('ObjSprite2D_SetDestCenter', 'f_os2dsdc_01');"><code>ObjSprite2D_SetDestCenter()</code><span class="tooltiptext" id="f_os2dsdc_01"></span></span>.</p>
 	      <p><span class="tooltip" onmouseover="getFxnDocs('ObjSprite2D_SetSourceRect', 'f_os2dssr_02');"><code>ObjSprite2D_SetSourceRect()</code><span class="tooltiptext" id="f_os2dssr_02"></span></span> is the function you use to tell Danmakufu which part of the image sheet you want to render. It takes five parameters - the object to assign the rects to, and the four bounds - Left, Top, Right, and Bottom.</p>
 	      <p>As a refresher, consider your image file, with (0,0) being the top left corner. In a graphical editor, use the rectangular select tool and drag from the top left (0,0) to another point (x, y). The coordinates of the destination and the origin designate the rectangle. The four bounds of this rectangle (Left, Top, Right, and Bottom) would be (0, 0, x, y).</p>
-	      <p>Note that the second (top) and third (right) arguments should be one greater than displayed when you are looking at the rects in a graphical editor. In other words, if you want to use a 64x64 sprite whose bounds are (0, 0, 64, 64), you should use (0, 1, 63, 64) in the source rect function. Otherwise there may be undesirable side effects. <b><span style="color:magenta">!!!FACT CHECK NEEDED!!!</span> **This is how it is done in the sample scripts</b></p>
-	      <p>The source of the side effects is because of how SourceRect works - if you exceed the boundaries of an image, it will wrap. Basically, think of a 64x64 graphic. If you set the source rect to have a 64x128 image, there will be two copies of the sprite stacked vertically. The main application of this in Danmakufu is tiling seamless textures, which we will discuss along with background scripts.</p>
+	      <p>Note that the first two (left, top) arguments are inclusive and the last two (right, bottom) are exclusive, and that the pixels are zero-indexed. Therefore, if you have a 64x64 image, source rects of (0, 0, 64, 64) should be fine. Note that the sample scripts use (0, 1, 64, 63) in the source rect function. Why they do this is unknown.</p>
+	      <p>Note that there are some interesting side effects due to the way SourceRect works - if you exceed the boundaries of an image, it will wrap. Basically, think of a 64x64 graphic. If you set the source rect to have a 64x128 image, there will be two copies of the sprite stacked vertically. The main application of this in Danmakufu is tiling seamless textures, which we will discuss along with background scripts.</p>
 	      <p>Now, you have two options for the destination rects. You can manually set them using <code>ObjSprite2D_SetDestRect()</code>, or you can have it automatically centered, using <code>ObjSprite2D_SetDestCenter()</code>.</p>
 	      <p>What <span class="tooltip" onmouseover="getFxnDocs('ObjSprite2D_SetDestRect', 'f_os2dsdr_02');"><code>ObjSprite2D_SetDestRect()</code><span class="tooltiptext" id="f_os2dsdr_02"></span></span> does is as follows: The position of the object acts as the origin, like with a coordinate axis. If your second (left) argument is 16, then the left side of the image will be 16 pixels to the right of the object's position. So (obj, -16, 16, 16, 16) would render the object in a square of side length 32 centered at the object's position. Basically, each argument controls the offset value of one side of the texture.</p>
 	      <p>As for <span class="tooltip" onmouseover="getFxnDocs('ObjSprite2D_SetDestCenter', 'f_os2dsdc_02');"><code>ObjSprite2D_SetDestCenter()</code><span class="tooltiptext" id="f_os2dsdc_02"></span></span>, say you have a 64x96 sprite. Using <code>ObjSprite2D_SetDestCenter(objBoss)</code> is equivalent to using <code>ObjSprite2D_SetDestRect(objBoss, -32, -48, 32, 48);</code></p>
@@ -89,7 +89,7 @@
         let obj = ObjPrim_Create(OBJ_SPRITE_2D);
         let imgpath = GetCurrentScriptDirectory() ~ "./u2l13sample.png";
         ObjPrim_SetTexture(obj, imgpath);
-        ObjSprite2D_SetSourceRect(obj, 0, 1, 383, 448); //alternatively, 0, 0, 384, 448
+        ObjSprite2D_SetSourceRect(obj, 0, 0, 384, 448);
         ObjSprite2D_SetDestCenter(obj);
         ObjRender_SetPosition(obj, 384 / 2, 448 / 2, 1); //move it to the center of the screen
     }</code></pre>
@@ -99,7 +99,7 @@
         let obj = ObjPrim_Create(OBJ_SPRITE_2D);
         let imgpath = GetCurrentScriptDirectory() ~ "./u2l13sample.png";
         ObjPrim_SetTexture(obj, imgpath);
-        ObjSprite2D_SetSourceRect(obj, 0, 1, 383, 448); //alternatively, 0, 0, 384, 448
+        ObjSprite2D_SetSourceRect(obj, 0, 0, 384, 448);
         ObjSprite2D_SetDestRect(obj, 0, 0, 384, 448);
         ObjRender_SetPosition(obj, 0, 0, 1); //move it to the top left corner of the screen
     }</code></pre>
