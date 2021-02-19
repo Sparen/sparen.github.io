@@ -19,7 +19,7 @@
     ga('send', 'pageview');
   </script>
   </head>
-  <body onload="setupENG('Jul 07, 2020')">
+  <body onload="setupENG('Feb 19, 2021')">
     <div id="top">
       <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
       <br>
@@ -98,7 +98,7 @@
 	      <p>Now, as usual, please create your routines - <code>@Initialize</code>, <code>@MainLoop</code>, <code>@Event</code>, etc. Now, between the header and <code>@Initialize</code>, we will define some global variables that will be global across this script.</p>
 	      <p>The primary one you will want is a reference to the player object itself for when the script runs. For this, we can use something along the lines of <code>let objPlayer = GetPlayerObjectID();</code>. <span class="tooltip" onmouseover="getFxnDocs('GetPlayerObjectID', 'f_gpoid_01');"><code> GetPlayerObjectID()</code><span class="tooltiptext" id="f_gpoid_01"></span></span>, when run, gets the Object ID associated with the player object - this is a special object that supports ObjMove and ObjRender commands among others and is how we will refer to the player object within the script.</p>
 	      <p>Besides this, you may also want to define a shortcut for <code>GetCurrentScriptDirectory()</code>, which we will use for all of the assets we load. We will use <code>csd</code> as our variable name. Do note that in this tutorial, we won't actually cover sound effects - these are up to you to implement. Also note that player scripts in particular should never have absolute paths since they can be moved around quite a bit and it's good to have a player script that you can drop into a completely different directory. This is because most ph3 scripts don't allow the person playing the script to choose from the full selection of players but instead limit them to a specific set of players bundled together with the script.</p>
-	      <p>Now, let's head into <code>@Initialize</code> and call some tasks. We will want to define these as well. First, a task to draw the player sprite. Please create a png file with a single white pixel in it and name it <code>dot.png</code> - normally you'd want actual sprites but for the purpose of simplicity given that this is a tutorial, this should suffice. For now we'll call the player drawing task <code>DrawPlayer</code>. </p>
+	      <p>Now, let's head into <code>@Initialize</code> and call some tasks. We will want to define these as well. First, a task to draw the player sprite. Please create a png file with a single white pixel in it and name it <code>white.png</code> - normally you'd want actual sprites but for the purpose of simplicity given that this is a tutorial, this should suffice. For now we'll call the player drawing task <code>DrawPlayer</code>. </p>
 	      <p>Since we have no animation, we can have a very simple (and very uninspiring) draw loop. However, we will do some player direction checks to show that the player is moving in a direction. We're using a 15 degree rotation here - if you are too lazy to or unable to use a separate set of sprites for a movement animation then a 10-15 degree shift does the job (though it's not optimal).</p>
 	      <pre class="prettyprint"><code>task DrawPlayer {
     let path = csd ~ "white.png";
