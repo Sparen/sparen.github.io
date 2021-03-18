@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <title>AFCDTech - Sparen's Danmakufu ph3 Tutorials - Lesson 35</title>
+    <link rel="stylesheet" type="text/css" href="../blah.css">
+    <link rel="stylesheet" type="text/css" href="docs.css">
+    <meta content="Sparen's Danmakufu ph3 Tutorials Lesson 35 - Designing and Balancing Player Scripts. A guide on player script design and balancing in Danmakufu ph3."
+      name="description">
+    <meta name="keywords" content="Sparen, Touhou, Danmakufu, ph3, Tutorial, Script, Danmaku, Plural, Player">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-58194930-1', 'auto');
+    ga('send', 'pageview');
+  </script>
+  </head>
+  <body onload="setupENG('Mar 17, 2021')">
+    <div id="top">
+      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>
+      <br>
+      <div class="docsmenubar">
+        <ul>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
+          <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
+          <li><a href="./ph3tutorials.html" title="Sparen's Danmakufu ph3 Tutorials">ph3 Tutorial Index</a></li>
+          <li><a href="./ph3style.html" title="ph3 Style Guidelines">ph3 Style Guidelines</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Function Reference<hr></li>
+          <li><a href="./docs.html">Function List</a></li>
+          <li><a href="./docs_standard.html">General Functions</a></li>
+          <li><a href="./docs_object.html">Object Functions</a></li>
+          <li><a href="./docs_system.html">Player Script Fxns</a></li>
+          <li><a href="./docs_system.html">Private Script Fxns</a></li>
+          <li><a href="./docs_event.html">Danmakufu Events</a></li>
+          <li class="dmbnona"><hr>&nbsp;&nbsp;Lesson Resources<hr></li>
+        </ul>
+      </div>
+      <div id="pagecontentwrapper_tut">
+          <div id="pagecontent_tut">
+              <div class="tutnavbar">
+	        <ul>
+	          <li><a href="./ph3u3l34.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Player Scripts">Unit 3 Lesson 34</a></li>
+	          <li><span>Navigation Bar</span></li>
+	          <li><span>---</span></li>
+	        </ul>
+              </div>
+	      <h1 class="toplevelheadera">Sparen's Danmakufu ph3 Tutorials Lesson 35 - Designing and Balancing Player Scripts</h1>
+	      <div class="tutorialnav">
+	        <h2 class="tocheader">Table of Contents</h2>
+	        <ul>
+	          <li><a href="#sub1">Part 1: What will be covered in this lesson?</a></li>
+	          <li><a href="#sub2">Part 2: What are the general player shottypes?</a></li>
+	          <li><a href="#sub3">Part 3: What considerations should I make when designing a player script?</a></li>
+	          <li><a href="#sub4">Part 4: How do I design player bombs?</a></li>
+	          <li><a href="#sub5">Part 5: How do I balance player scripts?</a></li>
+	          <li><a href="#sub6">Part 6: How do I design and balance custom shottypes?</a></li>
+	          <li><a href="#subs">Summary</a></li>
+	          <li><a href="#subf">Sources and External Resources</a></li>
+	        </ul>
+	      </div>
+	      <h2 class="ph3tutorialheader" id="sub1">Part 1: What will be covered in this lesson?</h2>
+	      <p>Welcome to the second player script tutorial. In this guide, we will cover player script design and balancing. Perhaps surprisingly, this tutorial <strong>will not use Danmakufu code at all</strong>, as this guide is meant to be general purpose and the same guidelines apply to any bullet hell with a player.</p>
+	      <p>We will start by covering the primary types of player script shottypes, and will then dive into considerations on base shottype design and bomb design. After this we will consider balancing techniques, including for custom shottypes.</p>
+	      <p><strong>Note that there is no standard way to design and balance a player script. It depends on the purpose of the player script (tailored to a specific game/general purpose/etc). Like usual, we aim to give you examples and tools to put in your toolbox - how you use them is up to you.</strong></p>
+	      <h2 class="ph3tutorialheader" id="sub2">Part 2: What are the general player shottypes?</h2>
+	      <p>First thing's first - standard player shottypes are almost universally grouped into three categories - Wide (Spread) types that do less damage across a wide area, Narrow (Forward Focus), and Other. Marine Benefit Sanae is a very *special* type of 'Other' that we will <s>pretend does not exist</s> cover later in the design and balancing of custom shottypes.</p>
+	      <p>Spread shottypes generally aim to cover a wide range, dealing less damage to an enemy directly in front of them but doing well during stages and with moving bosses. Some of these have very good shotgunning potential if you can get right in front of a boss, though this is risky for the player. Generally speaking, their unfocused shot covers more range, allowing their focused shot to deal more damage to a boss (though shots should always be missing the boss if you aren't shotgunning with a spread type. In rare cases, you get an inverse, such as with MarisaA in Touhou 11 - this is much harder to use in terms of required skill level but can be very rewarding to use as a player if properly balanced for the game.</p>
+	      <p>On the other hand, Forward Focus shottypes fire most of their bullets straight towards the other side of the playing field with minimal spread. These do great at destroying bosses that move slowly or not at all, but do a less good job in stages with large numbers of enemies on different sides of the playing field and boss battles where the boss likes to move a lot.</p>
+	      <p>With regards to the Other category, there are some general archetypes that see use. The most common are Homing shottypes, though the homing is generally only done as a complement and not as the main source of damage.</p>
+	      <p>Besides the general categories, it's worth noting that familiars/player options can be used to add a 'secondary' style to a shottype, and that there is an abundant variety of different styles here. Some familiars track the boss or an enemy, others fire backwards or at strange angles, and yet others lock into position or angle based on whether or not the player is focused or not. There's a wide variety of options to choose from or invent on your own.</p>
+	      <p>Of course, there are a few general things to note. First, the player needs to be able to work in a boss fight. Unless the game is 100% stage with no boss, the player needs to be able to consistently damage the boss. Anyone who has done an Imperishable Night solo run with an unfocused shottype should understand how much longer it takes to clear the game due to the lower focused damage output. Adding homing shots to a spread shot, enabling guaranteed damage (e.g. a familiar tracking the boss), and having area of affect are all examples of ways to counteract this. There are plenty of creative ways to get around this problem.</p>
+	      <h2 class="ph3tutorialheader" id="sub3">Part 3: What considerations should I make when designing a player script?</h2>
+	      <p>Of course, a player script is more than just its base shottype, even though that might be what you experience the most. There are a lot of different levers to toggle - movement speed, location of familiars, range, firing speed, amount of penetration, bomb type, deathbomb capabilities, and more all play into how a player script is used. Therefore, we will split player scripts into categories once again - in this case, general purpose player scripts and specialized player scripts.</p>
+	      <p>A general purpose player script is one that should be able to handle any situation gracefully. It's very common to see average speeds (default is [4, 1.6], for context), a balance of focused and spread shots, and either a larger number of smaller scale bombs or a smaller number of high impact bombs. These players assume no gimmicks, and follow the same guidelines as any script released for use with any player. Most Reimu/Marisa/Sanae Touhou players in official games are balanced this way, as long as you ignore the more gimmicky players (e.g. Touhou 8, Touhou 11, Touhou 16, Touhou 17).</p>
+	      <p>On the flip side, gimmicky players are typically tied to the gimmicks present in their game. Using Touhou 11 as an example, MarisaA is entirely dependent on the 'bombs are tied to power gauge' mechanic. This also goes for HSiFS Extra, where you can fire backwards. We'll consider these later when we discuss the design and balancing of custom shottypes.</p>
+	      <p>So it comes down to what kind of game the player you are developing is meant for. If you're designing a player for use with any script, focus on balance - a good amount of reliability in their shots, average speed, balanced bombs, etc. On the other hand, if you are designing a player for use with a full game that has a core mechanic, the player should be balanced to work together with that mechanic, and all players used for such a game must be balanced against one another such that none has a clear advantage over the others. Even the gimmicky ones - Youmu in canon games might be terribly hard to use without practice, but she does the job just as well as, if not better than, the other players.</p>
+	      <p>As a final note, all components of a player (unfocused shottype, focused shottype, unfocused bomb, focused bomb, gimmick, etc) should all complement one another. Each option should be superior in a different situation, and each option should cover weaknesses of the others.</p>
+	      <h2 class="ph3tutorialheader" id="sub4">Part 4: How do I design player bombs?</h2>
+	      <p>Player bombs, like shottypes, come in three general categories - Bullet Wipes, Nukes, and Other.</p>
+	      <p>Bullet Wipes focus on clearing bullets and doing less damage across a wide area. Unfocused bombs tend to be of this category - think Evil Sealing Circle, Non-Directional Laser, Indiscriminate, etc. You typically have more bombs of this category when starting out and missing, as they tend to be more 'spammable'.</p>
+	      <p>On the flip side, Nukes focus on wiping out a boss, and it generally doesn't matter how much of the screen they cover (screen nukes are very satisfying to look at). Tsubakura Lasers, Master Spark, etc are good examples. Typically, on spawn and miss you only get two bombs of this type, and they are typically reserved for particularly nasty parts of a stage that the player finds too risky.</p>
+	      <p>Finally, the Other category includes flash bombs that do little to no damage but are spammable (e.g. Len'en and Touhou 16), as well as unique types (e.g. shields such as SA MarisaC and DDC Reisen; timestop; etc).</p>
+	      <p>Moreso than with anything else though, the bomb is what defines the player script. They need to be appropriately flashy, powerful, and in-character in how they look and operate. You probably won't see Youmu wielding a missile launcher or Ran using a camera.</p>
+	      <h2 class="ph3tutorialheader" id="sub5">Part 5: How do I balance player scripts?</h2>
+	      <p>We've already given plenty of reasons why player script design is subjective, but there are some tips and tricks that you might find useful.</p>
+	      <p>First, your shottype should clear enemies in a relatively fast (but not too fast) fashion. For a nonspell, a shottype of any form should clear it in between 10-15 seconds (extra nonspells tend to be a second or two shorter). Any longer and it's dragging on. Any shorter and the player isn't even dodging for very long. Spellcards are typically in the 16-28 second range, excluding final spells and survivals. </p>
+	      <p>To achieve this, one important thing to consider is the balance of damage across the shots emitted by a player. For consistency in forwards spread shots for example, the central shots can have higher damage to ensure some level of consistency against a boss, or constant homing shots can ensure damage is being delivered.</p>
+	      <p>Similar tactics can be employed with familiars. Familiars can be placed in such a way that their shots' trajectories run parallel or never hit a boss at the same time as the player's main shots, for example. Familiars can also provide shots at niche angles that can be useful situationally, making some less favorable situations for the player more manageable. An example is with MarisaB in Subterranean Animism, with Patchouli's wide variety of shot formations allowing for an incredible ability to adapt the shottype to the situation (though with a high skill requirement).</p>
+	      <p>As for balancing other aspects of a player, it depends on if you have a general purpose player or are building a player for a game - in the latter case, players need to be distinguished from one another. Perhaps one moves faster and deals more damage, but has a smaller deathbomb window and fewer bombs. Perhaps one has wide spread but also has piercing straight lasers. Build what works best for your game</p>
+	      <p>To close with a final note, a good max DPS is around 280-300 for standard general purpose players. Go up to around 300-320 for spread shots, and go down to 260-280 for players where nearly every shot hits.</p>
+	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I design and balance custom shottypes?</h2>
+	      <p>Finally, balancing and designing custom shottypes. There are many ways to do a terrible job. But in the end, a good job is dependent on the game working with the shottypes.</p>
+	      <!--Embedded video below. Make sure to format the link correctly-->
+	      <div class="ytembed_sm">
+	        <iframe src="https://www.youtube.com/embed/PFWLbFQS5Pg" frameborder="0" allowfullscreen></iframe>
+	      </div>
+	      <p>Here's an example of a terrible shottype for general purpose use, where DPS is entirely dependent on aligning the player's position to be that of the boss but flipped across the middle of the playing field. If the entire game were based around this (including enemy movement and danmaku patterns), it could be a fun way to play. But for general purpose? No.</p>
+	      <p>Earlier I mentioned both MarisaB in SA and Sanae in Marine Benefit as examples of the 'Other' category. MarisaB is uniquely versatile but has a very high skill requirement for the player. Yet due to the variety of shottypes, it is even more imperative that the shottypes *all* be balanced. As for Sanae, SanaeB only works because the game was designed specifically so that the player type was viable - by preventing bullets from emerging at high speeds close to the boss without warning, a shottype that requires proximity to the boss can work. And for SanaeC, the speed of the player, enemies, and shots allows it to work.</p>
+	      <p>But how to design a unique shottype? That's a different and more complex topic. Here is one way to approach the problem - given the gimmicks in play, how would you design enemy patterns to make use of those gimmicks? Then, given those patterns and the types of bosses and stages you plan to have, what kind of traits should a player have to make the most of our the gimmicks while allowing the person behind the screen to enjoy the gameplay? And of course, it should be in-character.</p>
+	      <p>In the end, one of the best ways to balance a player is to build them, then modify them over time to fit needs identified in-game. They don't do well against enemies against the edges of the screen? Adjust the power of their spread shots or give them better movement speed. They can't DPS miniboss stage enemies quickly enough but are doing too much damage against bosses? Take a look at their range, as well as how gimmicks play into the player's approach when facing a miniboss versus a boss. Then adjust shots to work together with the gameplay approach and/or adjust the pattern to promote gameplay that makes use of the player's strengths.</p>
+	      <p>Player design and balancing is an art. I hope you have learned some more techniques to work with.</p>
+	      <h2 class="ph3tutorialheader" id="subs">Summary</h2>
+	        <ul>
+	          <li>Bullet power levels can be shifted in order to provide different power balances between types of shots</li>
+	          <li>Subshots and familiars can enable shottypes to perform better by covering their weaknesses</li>
+	          <li>Bombs should be reflective of the player</li>
+	          <li>...Is it really even possible to summarize a concept as nebulous as 'design and balancing' into bullet points?</li>
+	        </ul>
+	      <h2 class="ph3tutorialheader" id="subf">Sources and External Resources</h2>
+	      <p>N/A</p>
+	      <br>
+            </div>
+          </div>
+          <div class="tutnavbar">
+	    <ul>
+	      <li><a href="./ph3u3l34.html" title="Sparen's Danmakufu ph3 Tutorials - Introduction to Player Scripts">Unit 3 Lesson 34</a></li>
+	      <li><span>Navigation Bar</span></li>
+	      <li><span>---</span></li>
+	    </ul>
+	    <br>
+          </div>
+      <footer id="footer">
+      </footer>
+    </div>
+    <script src="javascript/ph3tutorialcommon.js"></script>
+    <script src="javascript/GenericQuiz.js"></script>
+    <script src="javascript/QReviewP.js"></script>
+    <link href="customhighlighter/desert.css" type="text/css" rel="stylesheet" />
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <script src="javascript/dnhdocs_standard.js"></script>
+    <script src="javascript/dnhdocs_object.js"></script>
+    <script src="javascript/dnhdocs_system.js"></script>
+    <script src="javascript/dnhdocs_event.js"></script>
+    <script src="javascript/dnhdocs.js"></script>
+  </body>
+</html>
