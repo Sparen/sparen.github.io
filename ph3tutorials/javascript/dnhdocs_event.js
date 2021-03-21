@@ -151,7 +151,7 @@ var dnhph3docs_event = {
                     "args": [],
                     "returnv": "GetEventArgument(0) - Object ID of bullet that hit the player : number (Object ID)",
                     "description": "Player hit notification.",
-                    "notes": "Emitted by player scripts (Player).<br>Used for playing sound effects on death.",
+                    "notes": "Emitted by player scripts (Player).<br>Used for playing sound effects on death.<br>WARNING: GetEventArgument always returns 0 and is therefore useless",
                     "isEvent": true
                 },
                 {
