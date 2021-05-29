@@ -10,7 +10,7 @@
 
     ga('create', 'UA-58194930-1', 'auto');
     ga('send', 'pageview');
-  </script>  </head>  <body onload="setupENG('Jun 20, 2019')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
+  </script>  </head>  <body onload="setupENG('May 29, 2021')">    <div id="top">      <p style="text-align: center;"><a href="https://sparen.github.io"><img alt="Site Logo" src="../images/logo.png" style="width:100%;max-width:1000px"></a></p>      <br>      <div class="docsmenubar">
         <ul>
           <li class="dmbnona"><hr>&nbsp;&nbsp;Site Navigation<hr></li>
           <li><a href="https://sparen.github.io" title="AFCDTech">Return to Home</a></li>
@@ -128,6 +128,7 @@
 	      <h2 class="ph3tutorialheader" id="sub6">Part 6: How do I Use Danmakufu's Bracketed String Characters?</h2>
 	      <p>Danmakufu ph3 is somewhat stupid in that it gave up the standard \n for [r] in strings. But there are other similar things and escape characters in ph3.</p>
 	      <p>According to the official documentation, there are two bracketed strings - [r] for new lines and [ruby] for ruby/furigana. For [r], you just place it in the string and it will automatically line break.</p>
+	      <p>For ruby/furigana, the actual encoding requires the rb and rt parameters. For example, <code>チルノは[ruby rb=\"天才\" rt=\"バカ\"]である。</code> will render as チルノは<ruby>天才<rp>(</rp><rt>バカ</rt><rp>)</rp></ruby>である</p>
 	      <p>There are also some other standard things, such as the <code>&amp;nbsp;</code>, a non-breaking space, <code>&amp;quot;</code> for a quotation mark " (since you cannot just put them in strings or the Danmakufu interpreter will assume you are trying to end the string, and <code>&amp;osb;</code> and <code>&amp;csb;</code> for the [ and ], respectively (since they are interpreted in syntactic analysis). </p>
 	      <p>This being said, you can turn off Syntactic Analysis. Using <span class="tooltip" onmouseover="getFxnDocs('ObjText_SetSyntacticAnalysis', 'f_otssa_01');"><code>ObjText_SetSyntacticAnalysis()</code><span class="tooltiptext" id="f_otssa_01"></span></span> will disable interpreting of things such as [r] in a text object.</p>
 	      <h2 class="ph3tutorialheader" id="quiz1">Quiz: Creating and Customizing Text Objects</h2>
@@ -187,7 +188,7 @@
 	        </div></div>
 	      <h2 class="ph3tutorialheader" id="sub7">Part 7: Text Objects or Images of Text?</h2>
 	      <p>Now that we've discussed Text Objects, it's about time we discussed their limitations. As we have discussed previously, a single text object is limited to a single color gradient, a single border style, and a single font and font size.</p>
-	      <p>If you wanted a horizontal gradient of rainbow text or insane Alpha-blended text shadows, you're not going to be able to do that natively in Danmakufu. Also, languages like Thai tend to, more often than not, get stuck in weird font or Text Encoding issues and simply not render correctly. In these cases (and in others as well), it is almost always preferable to use an image file containing text.</p>
+	      <p>If you wanted a horizontal gradient of rainbow text or insane Alpha-blended text shadows, you're not going to be able to do that natively in Danmakufu. Also, languages like Thai tend to, more often than not, get stuck in weird font or Text Encoding issues and simply not render correctly (If you need foreign language support, Danmakufu ph3 seems to like UTF-16 Little Endian with Byte Order Mark (BOM)). In these cases (and in others as well), it is almost always preferable to use an image file containing text.</p>
 	      <p>For example, look at the following (from Phantasmagoria of Imagine Breaker). Note: It may be blurry depending on your browser. Additionally, a gray background has been prepared to show the black alpha shadow.</p>
 	      <img class="pixelimg" src="./tutimg/u2l17textsample.png" style="width:400%;height:auto;max-width:256px;background-color:#666666" alt="Gore Shotsheet Image"><br><br>
 	      <p>The first thing you will notice is the pixel-perfect precision used in the image. Danmakufu does a horrible job with this level of precision in text objects - fonts will render differently on different computers with different widths between individual glyphs. Additionally, the color and border do not bleed here, and the border works as intended. In Danmakufu, large thick borders may look quite ugly, especially if you in fact WANT a gradient between the text color and border. These kinds of effects cannot be done using Danmakufu's text objects.</p>

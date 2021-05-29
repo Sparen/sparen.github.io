@@ -206,6 +206,18 @@
   background-color: #004488;
 }
 
+.indexupdspring2021{
+  border-width: 4px 6px; 
+  border-color: #FFAAAA #66FF00; /*TRBL*/
+  border-style: double double; 
+  padding-left: 8px; 
+  padding-right: 8px; 
+  padding-bottom: 8px; 
+  padding-top: 4px; 
+  border-radius: 20px; 
+  background-color: #004422;
+}
+
 .indexupdsp2015title{
   padding: 5px;
 }
