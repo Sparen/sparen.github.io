@@ -545,6 +545,32 @@
             "numparticipants": 12,
             "result": [["Adam"], ["Naudiz"], ["The Terrible Bullet Dodger/auto2112"]],
             "participants": ["Bagoum", "Python", "Naudiz", "Tylorfully", "Lusus", "The Terrible Bullet Dodger/auto2112", "Zinochan", "Jackie Matthews", "Foxigami", "JDude", "Green Dinobot/Gregory", "Adam", "Ryann"]
+        },
+        {
+            "id": "bha3",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "unexpected mastermind 2",
+            "year": 2021,
+            "duration": [2021.01, 2021.02],
+            "host": "Loann",
+            "judges": ["CreepyNinja", "Naudiz", "Loann"],
+            "numparticipants": 0,
+            "result": [[""], [""], [""]],
+            "participants": []
+        },
+        {
+            "id": "syucc",
+            "location": "locaa",
+            "loc_category": "shrines-and-youkai",
+            "name": "unconnected card captors",
+            "year": 2021,
+            "duration": [2021.06, 2021.07],
+            "host": "TresserT",
+            "judges": ["TresserT", "Trickysticks", "DrytheMeowstic"],
+            "numparticipants": 0,
+            "result": [[""], [""], [""]],
+            "participants": []
         }
     ]
 }
