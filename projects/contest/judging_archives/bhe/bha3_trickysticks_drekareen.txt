@@ -1,0 +1,50 @@
+Bullet Hell Artistry #3 - Drekareen
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played as Reimu.
+
+Nonspell 1: Kind of drags on a little without any changes, but it's a pretty fine pattern. 7/10.
+
+Spell 1: Seems fine. Maybe a bit too hard compared to the previous nonspell? ADD-rendered junk that clumps up is tough. 6.5/10.
+
+Nonspell 2: Feels like it drags on like the previous non, and I'd highly suggest you have the amulets render ABOVE the round bullets so they aren't as obscured. Doesn't take too much away from the pattern, I just thought it was weird for that to be the case. 6.5/10.
+
+Spell 2: The curvy lasers are a pain but I quite like dodging this spell otherwise! 8/10.
+
+Nonspell 3: The walls of bullets unfold pretty interestingly. This drags on too, probably due to her movement pattern, and it feels a taaad too tough but I like the idea. 6.5/10.
+
+Spell 3: Seems like a reasonable spell. Dragonflies are kind of an odd theme for Hina, but I suppose they do "spin" (rotate) and that's her shtick? 7/10.
+
+Nonspell 4: The aimed bullets are WAY too fast at first - once I know they're coming I can conceivably prepare for them, but tossing them at the player out of nowhere is unfair. The pattern is fine otherwise, but that one flaw does really test your reaction time. 6/10.
+
+Spell 4: I think the bullets that slowly grow in size would be a lot easier to be deal with if they were aimed - as they are it's kind of hectic to dodge them while also dodging the lingering crystal thingies. I still quite like this! 7.5/10.
+
+Spell 5: A decent way to end the script, but I don't think this really NEEDS to be a survival? You shouldn't have trouble hitting her and it doesn't make you move around the screen much (despite saying you rotate to achieve victory). 7/10.
+
+Danmaku Score: 6.89/10 (scaled to 10.3/15)
+
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is above average. The transparent STG Frame is a nice touch, the dragonflies are nice too even if they don't fit Hina much. The one nonspell with the weird bullet layering did annoying me, but otherwise it's good. 3/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is a little above average. The nonspells were long but arguably for the wrong reasons, and the final IS multi-phase but also oddly a survival. 2.75/5.
+ 
+OVERALL SCORE 10.3 + 3 + 2.75 = 16.05/25

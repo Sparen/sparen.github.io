@@ -1,0 +1,43 @@
+Drek's Entry by Drekareen
+Difficulty - Hard (default) 
+Character - Marisa 
+Playthrough - https://www.youtube.com/watch?v=xF1dw22_WAs
+
+Creativity – 5/5
+Very well done. I feel it fits Hina to a tee with the emphasis on talismans and her spinning, but you also do some unique stuff representing her species as well. A really nice depiction of her overall
+
+Aesthetics – 5/5
+Really cool overall. I like the custom HUD and I love the faded out bullets you can see under it as well. You've got nice bullet graphics and I love the designs you make with them at times too. The only thing I notice is missing is that you've got no background graphic for her spell cards, it's just solid black. A minor issue however, and something that's barely noticeable when playing normally, so the rest I feel makes up for it, and I wouldn't say it detracts from the score
+
+Spell Grading – 8.44/10 (12.66/15 total)
+
+Non-spell 1 - 8/10
+It works, but I feel it drags on much to long for what it is. It's essentially just direct shots from Hina, so all you have to do is hug the bottom under her and zigzag a little as needed. Something I do feel works for an opening non-spell by itself, but the spell goes on for around 30 seconds. That is much too long with the loop in the pattern being this short.
+
+Misfortune Sign “Safe Revolution Girl” - 7/10
+This kinda suffers from the same problem in a different way, though arguably made worse since it's a time-out spell. It's a cool attack and all with her moving all over and firing a nice variety of attacks. But realistically, the safest thing to do is hang out in the corner, dodge what few bullets come your way and wait for the spell to be over. I don't feel this spell makes good use out of the fact that this is a time out spell, especially when you're doing the exact same thing for so long.
+
+Non-spell 2 - 9/10
+Same logic as before, but now with a lot more bullets. I'm giving this one a 9/10 however despite having the same basic make-up since this one I feel earns it's long time. I do still feel it goes on for a bit too long, but the added difficulty makes it so it doesn't feel as tedious as before.
+
+Feng Shui “Esoteric Hill Zone” - 10/10
+Now this I really like. You've got a lot going on here, they work really well together, and it looks gorgeous as well. The talismans are “mostly” ignorable, and mostly serve to trap you, while it's the spiky yin-yang orbs and curving bullets you have to really contend with. But then she also adds in some homing lasers to force you to move around while still contending with the same balls you've been keeping an eye on.
+
+Non-spell 3 - 9/10
+I really like this upgrade to her non-spells here. You've still got the same kind of talisman waves that you can avoid by hugging the bottom and zigzagging, but now you've also got huge bullets coming at you from the sides and her waves of bullets that can push you away from the middle as well. I do feel this goes on a bit too long as well, but this one feels more like a Marisa thing, considering how much she moves and how little damage you can deal when she passes over, making timing this one out not uncommon.
+
+Ofuda Dragonfly “Overwhelming Luck” - 8/10
+It looks cool, I just wish there was more going on. The problem is that the dragonflies are largely ignorable, with very few actually reaching the bottom center. Making it so you can practically pretend they're not there and focus entirely on the coins, which largely aren't doing anything special. I feel it would have been better if the two waves worked better together.
+
+Non-spell 4 - 9/10
+This one's cool, though again we've got the Marisa thing where you're practically timing this out no matter how you slice it. That aside, it's got a simple logic to it, but spices it up enough so you're doing more than just dodging a basic wave. You've got an attack forcing you to the side, then you just wanna get to, and then hang out under Hina dodging her shots.
+
+Jade Dreamcatcher “Misfortune Mist” - 9/10
+This one I think is really cool. I'm not sure if the slow-down is intentional, but if it isn't it does work really well into the design. In general, I both love the design of this, and love the variety of attacks and where you have to go. Only thing I wish is that the final part where she fires the square blast of bullets had a bit more to it. Compared to everything else in each wave, just slipping into a single gap and following it to the side feels a little lacking compared to what came before. As a whole though, really good spell
+
+“Rotate to Achieve the Victory” - 7/10
+My biggest gripe is that I feel the bullets waves really don't work well together. You've got random lines of red bullets, similarly random curving random blue bullets, and then lasers that'll force you vertically  or horizontally. I appreciate a spell that makes you move around, especially for a time-out spell, and this spell manages that much perfectly. I just feel the red and blue waves are a bit too random, and clash with each other rather than working together well. 
+Also as a side note, it could really stand to be much clearer that the dark red lines of bullets are purely decorative and don't hurt you. Those things are overlayed on the lasers, and honestly are pretty much as bright and stand out as much as everything else. In the heat of the moment, if a red line is an actual threat, or something ignorable.
+
+Final Score – 22.66/25
+A fun script that has some really cool parts, but also some parts that I have some notable issues with. I feel the noted parts could really use some tweaking (along with less heath on choice spell, even playing with other characters I felt like they dragged on a bit too long as well). No major issues however, just some things I feel could be tweaked to be a bit better. Biggest thing is to try and avoid instances where at multiple times in a row, you ask the player to simply “hug the bottom and dodge what comes your way” (something that happens 3 times in a row when the script starts). Your spells that asked for more movement variety I felt were your best ones.

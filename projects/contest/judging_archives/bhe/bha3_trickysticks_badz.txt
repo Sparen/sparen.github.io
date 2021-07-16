@@ -1,0 +1,49 @@
+Bullet Hell Artistry #3 - Badz
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played on Hard Mode.
+
+Nonspell 1: Very solid start. 7.75/10.
+
+Spell 1: Also a solid pattern. The knives that come from behind aren't a surprise at all since they stay there spinning for a while. Good! 8/10.
+
+Nonspell 2: Feels like hectic fun. 8/10.
+
+Spell 2: Fun and fair spellcard. I like the warning indicators for the blue wolf heads. 8/10.
+
+Nonspell 3: I quite like the idea behind this non, and it's immediately intuitive to dodge. 8.5/10.
+
+Spell 3: You probably don't need to give THAT much time after the demonstration wave, but that's a minor flaw. This is still a fun pattern. Maybe not as interesting as some previous ones, but it's good. 7.5/10.
+
+Nonspell 4: Now this one resulted in me not actually dodging that many bullets - maybe I got lucky, but it was just chilling between lasers and ignoring bullet clusters for the most part. Still fine. 6.5/10.
+
+Spell 4: Pretty easy once you understand the gimmick - looking at the spell named helped unironically. Tough if you don't just rotate in the center, but quite easy if you do. 7/10.
+
+Spell 5: Good multi-phase script ender. It's nice to fight a spell like this where the boss chases you around. 8/10.
+
+Danmaku Score: 7.69/10 (scaled to 11.54/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is a decent bit above average. Nothing groundbreaking, but it's aesthetically pleasing and cohesive. 3.5/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is a bit above average. Patterns are very short for a final boss, but the last pattern is good enough to elevate you above averager. 2.75/5.
+ 
+OVERALL SCORE 11.54 + 3.5 + 2.75 = 17.79/25

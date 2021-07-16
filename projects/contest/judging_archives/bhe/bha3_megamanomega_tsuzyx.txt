@@ -1,0 +1,29 @@
+Tank Girls Many Tanks by Tsuzyx
+Difficulty - Default
+Character - Reimu (Shot Type A)
+Playthrough - https://www.youtube.com/watch?v=7xxDkxCjxeE
+
+Creativity – 2/5
+While it was a really clever idea to have Rika keep swapping to her different tanks she used in Touhou 2 throughout the fight, the creativity ended there. You had her mid-boss tank, her Flower Tank and even her Evil Eye Σ, but none of which really displayed attacks akin to her original appearances. Both in bullet patterns, and completely lacking some of her signature moves as well (the lasers from the Flower Tank and the different styles of missiles from Evil Eye Σ).An interesting idea, but really underutilized considering the patterns the different tanks do pull off
+
+Aesthetics – 1/5
+There is next to nothing here. There is no background music, nor is there even any sound effects. All this can be judged by is the graphical prowess alone, and even that's sub-par. Stylistic changes are fine, but the biggest issue I had was the clashing different graphical styles this script is pulling off all at once. Reimu's option and the bosses bullets have incredibly low resolution with gigantic pixels, Rika herself is her PC-98 form with large, but not as large but still clear pixels, but then Reimu herself is HD enough that she'd fin in perfectly in a Windows game. Pick an art-style and stick with it. Don't grab a motley crew of different styled sprites when designing a script.
+
+Spell Grading – 0/10 (0/15 total)
+
+Phase 1 - 0/10
+
+Phase 2 - 0/10
+
+Phase 3 - 0/10
+
+Phase 4 - 0/10
+
+Phase 5 - 0/10
+
+Phase 6 - 0/10
+
+Phase 7 - 0/10
+
+Final Score – 3/25
+I really don't feel I can give any spell phase a proper score. Technically speaking, these aren't bullets. It's made to look like bullet patterns, but since none of the bullets have any hit-boxes, it's just a trick to make you think there's a treat that isn't really there. You can pretend to dodge fake threats, but that's all you'll be doing. To actually have any sort of “challenge” or rather, have anything interesting happen, you need to pretend there's threats on the screen that aren't there. As is, the best course of action is to just stay under Rika and hold the shot button down until the script ends.

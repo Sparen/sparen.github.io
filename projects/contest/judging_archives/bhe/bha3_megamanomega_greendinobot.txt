@@ -1,0 +1,46 @@
+Impossible Spell Card Day 5.5 by GreenDinobot
+Difficulty - Default
+Character - Seija (default)
+Playthrough - https://www.youtube.com/watch?v=Sbl9b_Wsbbc
+
+Creativity – 5/5
+A really cool depiction on Hina all in all. The talismans are very Hina-like, but I especially liked the other aspects you associated with her, such as her pulling stamina from you (like misfortune) and her use of the literal decoy doll from ISC. 
+
+Aesthetics – 5/5
+The HUD is gorgeous and the bullets are similarly gorgeous (seriously, graphically speaking, that aura you gave the talismans is one of my favorite parts of this). Also nice job incorporating the HM Hina into a battle spite, and I especially liked the zoom-in right before her final spell.
+
+Spell Grading – 7.78/10 (11.67/15 total)
+
+Non-spell 1 - 9/10
+It is just a case of hanging out low and dodging what comes your way. The only real variety this spell adds is the slow moving large bullets, which isn't much. That being said, it is something that works well for an opening non-spell.
+
+Tragic Greed “Lottery Misfortune” - 9/10
+Simple, but very effective. It is just a bunch of direct attacks from Hina, but the crisscrossing bullets from the sides force you to not get complacent and will force you to move around rather than just focusing on what's coming at you. 
+
+Non-spell 2 - 8/10
+It looks cool, but mechanically, there's even less going on than the last non-spell. Hug the bottom and zigzag to avoid the green talismans, with the only variety being when you have to move up a little to following the paths in the blue bullets. Ultimately, there's not much going on here.
+
+Misfortune “The Eyes That Saw Uninvited Danmaku” - 7/10
+I am not a fan of unexplained gimmicks that function more as a blind-run-killer than anything. But worse than that is when you've got something that changes the rules of the game, but then is largely ignorable. 
+A) This spell could really use something to make it clear that the red bullets only activate and hurt you when unfocused
+B) This spell could use more to force you to be unfocused in the first place. Ultimately, the biggest thing that makes this spell unique can be completely ignored considering there's no reason you can't just beat it while staying focused the entire time.
+
+Non-spell 3 - 8/10
+Again, we're just hugging the bottom and zigzagging. The only variety to this is the occasional moment when you've got some minor angled bullets. But for the most part, you're dodging this exactly the same way you did the previous two.
+
+Bewitched Weapon “Cursed Decoy Doll” - 8/10
+Cleaver, and I love what the doll does. I just really wish Hina didn't scoot to the middle of the screen, and instead stayed up top. You've got a spell that does a clever way to making you have to move around and balance your time spent under Hina, and time spent leading the doll away, but then you've got a long period of time when Hina just hangs out in the middle of the screen and makes it so you instead actually wanna move all around the field and waste time, or try to finish this spell with much less room to move around in. The time Hina spent at the top of the screen was more fun than when she was in the middle.
+
+Non-spell 4 - 7/10
+This is still the exact same strategy as the last 3 non-spells. Hug the bottom and dodge what comes your way, with the only bit of variety being the slow moving crystals that you need to keep in mind for the following wave. Mechanics-wise, this non-spell is not only the same as the first one, but I feel we haven't really grown past it at all either.
+
+Magic Crystal “Stamina Consume” - 6/10
+A clever spell once you realize what you have to do, but this spell does a HORRIBLE job of explaining to the player what's expected of them. Again, I dislike gimmick spells that don't explain themselves to the player well, but this goes above an beyond by making the actual strategy incredibly counter-intuitive as well. So you've got these options that surround you and create crystal bullets that in turn slow you down, but to win, your goal is to actually RUN INTO the bullets to get you more speed to dodge the rest of the wave...
+It is a clever idea, and a fun spell once you know what you're doing. But if you expect the player to do this, you REALLY need to spell out what's expected of them. This is something I didn't find out until I did by accident. Not only do you have to make it clear you want the player to collect these things, don't use normal bullet graphics as something you want the player to collect either. They look just as threatening as the rest of the spell, and simply calling it Magic Crystal “Stamina Consume” is not clear enough.
+
+“Youkai Mountain Journey's End” - 8/10
+Challenging, but definitely feels a bit lacking for a final spell. So you've got rain bullets that steadily get denser for about 30 seconds before anything else is added to it. But even then, what is added isn't much and is just simple direct shots from Hina. I'll admit that the purple bullets do get dense enough that you can't just hang out under her and dodge what comes your way, but even still, the simple nature of this (especially with the spell cards that came before) really leaves you with a feeling of “Alright, now let's see that actual final spell”. 
+
+Final Score – 21.67/25
+A cool script with some really creative idea's, but idea's that need better implementation. Her three middle spell cards are really creative, but I feel they need to be implemented better, and REALLY need to be showcased better. Gimmicks are fine, not explaining them is not. You want to lead the player into learning what's going on if you're gonna essentially change the rules like that.
+Secondly, your non-spells really need more variety to them. A direct attack of “hug the bottom and dodge what comes your way” works fine for the opening spell when the battle is starting, but not for every non-spell after that. Design-wise, they may have been quite different from each other. However mechanically, they were essentially exactly the same. If you find your players dodging multiple spells in a row (as well as multiple non-spells in a row) in the same way, you want to change the designs around to add a bit more variety to them.

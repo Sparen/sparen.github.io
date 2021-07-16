@@ -1,0 +1,45 @@
+Bullet Hell Artistry #3 - Middy
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Nonspell 1: A good variant on Mystia's usual. Doesn't last very long for a "final boss" 6.75/10.
+
+Spell 1: Fairly fun, just not super interesting. 6.75/10.
+
+Nonspell 2: A decent test of your reading ability. Also pretty short, but I like this more than the previous non. 7/10.
+
+Spell 2: The evil eye thingies in the darkness look pretty cool! The pattern just ends up being run-of-the-mill dodging though. 6.75/10.
+
+Spell 3: Flickering bullets are something I haven't actually seen TOO often - I think it's quite appropriate for Mystia. The pattern isn't super interesting but with a gimmick like that it simply can't be. Not that this is bad, though - I think it's pretty decent. 7/10.
+
+Spell 4: Another interesting gimmick. The dodging is kind of generic, but the gimmick makes the spell more appealing. 7/10.
+
+Spell 5: A multi-phase script ender, it seems. The darkness does make reading it a little harder, but otherwise it's fairly typical Mystia. 6.75/10.
+
+Spell 6: But wait, there's more! I think this pattern's pretty odd, because the first phase is the hardest phase AND the most interesting to dodge in my opinion. Otherwise it's fine as usual. 6.5/10.
+
+Danmaku Score: 6.8125/10 (scaled to 10.22/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is very cohesive. I think it's weird how the player shots obscure the boss sprite when the feathers are disappearing - not a problem gameplay-wise, but it's unfortunate that your spritework gets covered like that. 3.5/5.
+======================================================================================================================
+ 
+I think this script's final boss-ness is about average. On one hand, the nons and early spells die SUPER fast - maybe there's a balancing issue there? On the other hand, multiple multi-phase attacks and a survival kind of make up for them.  2.5/5
+ 
+OVERALL SCORE 10.22 + 3.5 + 2.5 = 16.22/25

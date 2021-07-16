@@ -1,0 +1,53 @@
+Perfect Luminescent Nightmare by DoctorD
+Difficulty - Normal (default)
+Character - Flandre (default)
+Playthrough - https://www.youtube.com/watch?v=EYFhYdOzUtk
+
+Creativity – 5/5
+Absolutely beautiful. There's a lot of unique stuff to see here, such as the HUD and spell backgrounds, Rumia's aura, and you also have a great flair for design when making spells as well. Very well done in the art department
+
+Aesthetics – 5/5
+This one's a mix, but ultimately opted on this score. On one hand, I kinda wanted to say there wasn't much “Rumia-like” spells here, but on the other hand, it's true there isn't much to go on. So to that end, there are spells here that do carry call backs to EoSD, but there's also spells that portray other idea's of Rumia. Ultimately I would still call this a very creative expression of Rumia
+
+Spell Grading – 8/10 (12/15 total)
+
+Non-spell 1 - 8/10
+Though it is important to start simple for an opening non-spell, this one's a bit on the too simple side. Ultimately, it's just hugging the bottom and dodging the flames, then moving to the side along with the blue wave. The only challenge is getting back under Rumia after said blue wave.
+
+Glittering Shards - 8/10
+Pretty good, I just think it takes much too long to set up is all. For the first 10 seconds, there's literally no bullets around you, just Rumia setting up. Then for the next 10 seconds after that, it's fairly basic, slow moving shots coming down. It takes 20 seconds for the real meat of the spell, the bullets spawning around you, actually start happening.
+
+Non-spell 2 - 6/10
+By design, I'm not a fan. You've only got one playable character as an option, and forward and direct, but in response this spell has Rumia bouncing randomly around the top of the field while locking your position down with lasers. It essentially becomes a timeout spell in all but name, considering the chance to actually get to hit her is practically random. But, the bigger issue is this.
+https://i.imgur.com/0bV5nUF.png
+https://i.imgur.com/8BdAD1u.png
+Normally this would be an aesthetics issue, but this isn't an issue for the whole script, only instances when you've got a non-spell with this background, and Rumia's using fireball bullets. You can see it especially well at 1:44 in my Playthrough of the script, any flames that got over the white parts of the windows turn practically invisible. As a pattern, it's alright, but they NEED to contrast against the background better.
+
+Moonlit Chaos - 8/10
+It works and looks cool, I just down feel there's very much to it. Keep moving to openings between the lasers, don't let yourself get led into a wall. There is a challenge to it, and it does look cool, but I feel it's a bit too simplistic in its design. At least for a spell card anyways. It feels like a lead up to something more, but nothing happens, the spell just ends.
+
+Non-spell 3 - 9/10
+I feel it could use a bit of a warning to players that, if you move a lot you're gonna die. But that aside, it works well. A flurry of direct attacks, but the design of the spell forces you to move as little as you possibly can.  very solid. 
+
+Interlaced Moonray - 9/10
+Now this is what I'm talking about. Similar logic to what Moonlit Chaos pulled off, but unlike that one, after the laser grid, it does pull off an additional swarm to add to the variety. A very good spell all in all, and truth be told, from a design standpoint, I feel having Moonlit Chaos be the non-spell before this would have worked out very well.
+
+Non-spell 4 - 9/10
+Simple and works well, though ironically, I wonder if having the large blue bullets curve more would have made the spell better/gimmick more clear. IT works out really well once the player knows what they're dealing with, but the bullets having such a gentle curve does seem like it would catch people off guard since it seems like they're moving straight. All in all though, it's a direct attack with enough of a twist to force you to move around and don't just focus on the obvious threats. Very good for a non-spell
+
+Bordered Ripples of Waves - 8/10
+This spell could seriously use some sort of thematic “go to middle” warning, considering it's very possible to get blasted if you're hugging the bottom of the screen ahead of time (which you will be, considering you were expected to last spell). Aside from that, it works well, though I do feel the closing border doesn't really do much here. The best place/no reason not to be in, is the middle. So the walls closing in on you is largely just thematics. They're not a threat, they're a decoration
+
+Non-spell 5 - 8/10
+It works, it's just that at this point in the script, I was hoping for a bit more than “Rumia shoots circle waves, and there's also some other circle waves up top for variety”. Like I said, it does work, but at this point near the end of the battle, you kinda expect more from an attack, even for a non-spell.
+
+Darkness Sign “Gluttony” - 10/10
+Amusingly, this fixes the very issues I had with Bordered Ripples of Waves. The bullets coming from the corners give you plenty of warning to get up from the bottom before anything kills you from the floor, but then at the halfway point the circles of bullets that home in on your position also make VERY good use of the closing in walls. Since you really wanna move around as much as you can, but your playing space is getting smaller and smaller. Everything works very well together, and it looks really great as well.
+
+Darkness Sign “Void Demarcation” - 5/10
+Alright, let's break this down. The first part of the spell I feel works very well, I just wish the lasers didn't cover up the bullets. You've got a spell that forces you to move around with bullets reflecting off the walls. This is not the time to make a gigantic vertical stream that hides said bullets.
+The second part may be simple, but I think is fitting. It's a good “calm before the storm” before the final part of the spell hits. So despite the fact that it's just slow moving bullets in a “shifting labyrinth” it fits the role perfectly in this part
+This third phase is broken. Simple as that. At around 7:14 and 7:40 you can see I die randomly from absolutely nothing, and this isn't an isolated incident either. You could see a similar thing happened when I did my first impressions, and as well when I did other recording attempts at this script. As is, I think the design is very good, and ties into Rumia well (I love how the black bullets kinda act like “darkness” all around you). Plus, I like how the red flames act as a kind of call back to Bordered Ripples of Waves. The spell works well, but the random dying is a huge problem.
+
+Final Score – 22/25
+A cool script with some cool ideas, but also some notable issues that drag it down. Definitely some great potential here, but before I can call it a “great” script, said issues need to be addressed. For the most part however, a very good script with only minor issues for the bulk of the spells. Fix the visibility issues and whatever was going on in Darkness Sign “Void Demarcation” and this has the potential to be really great.

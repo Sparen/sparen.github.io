@@ -1,0 +1,104 @@
+Bullet Hell Artistry #3: Unexpected Mastermind 2
+Contestant: Badz
+Judge: Loann Noe
+
+================================================
+INTRODUCTION
+================================================
+
+Hi! Thank you for participating in BHA#3 contest!
+I hope you did have fun being creative, while we, judges, are going to have fun playing your games.
+
+Before we can proceed with judging I have to mention some important things.
+
+0) This text was written with the help from other people so some inconsistencies in style and vocabulary are to be expected.
+
+1) This file is divided into three main parts, namely: INTRODUCTION (for information on how the script is going to be judged), REFLECTIONS (for judging) and CONCLUSION (for finishing thoughts and a message to you).
+
+2) Judging criteria for this contest are: CONTEST THEME (originality of your ideas and how well do they fit with the contest premise), APPEARANCE (composition of graphics and music in your game) and GAMEPLAY (self-explanatory; is a most valuable criteria, due to it being the primary aspect of a game).
+
+3) CONTEST THEME: Minimal requirement for this contest is to pick an early stage boss and create a minimum of 8 patterns based on the theme of the boss. Not fulfilling this requirement will result in disqualification. Successfully accomplishing it won’t give you any extra points.
+Promoting the character to a stage 6 boss gives them a lot of opportunities to show their power and abilities, so utilize those opportunities well to get higher score. Simply put, make people even not familiar with the contest rules believe they are fighting a final boss.
+
+4) APPEARANCE: This criterion is twofold.
+Firstly, it considers how nice the script looks. It means that having well designed HUD, backgrounds and extra visual effects (even for the minor things) will yield you more points. Likewise, using simple static backgrounds and only basic effects will result in lower score on this criterion.
+Secondly, a well made script should not distract the player from what is most important – the gameplay itself and the mechanics you put in your script. So, make sure that all HUD and in-game info is easily readable, that bullets and boss do not get obscured by the flurry of visual effects (unless you intend them to be).
+
+5) GAMEPLAY: This criterion considers how the players will experience the danmaku action itself. More consideration would be given to the patterns themselves (mainly to the spell-cards), but more general things like difficulty balance and optimization would also be evaluated.
+As for the patterns, the major things expected from them are: a non-trivial idea, a decent presentation and a solid dodging experience. In a way this is similar to the structure of the document as a whole.
+Please be aware that while the spell-cards each get its own set of marks, all the non-spells would be judged in bulk.
+
+6) Quality > Quantity: A rule that applies to anything. The goal of this contest is to create a bossfight consisting of at least 8 patterns. Extra points won’t be awarded for having more patterns, a stage section or a full game functionality, since rewarding that would provide unfair advantage to those with more free time or experience in scripting.
+
+7) I am sincerely sorry if my judging seems harsh to you. Please be aware that I'm still learning and may not have enough experience. I simply intend to do my job as a judge, not to hurt or offend anyone.
+
+================================================
+REFLECTIONS
+================================================
+
+FIRST IMPRESSIONS
+------------------------------------------------
+"It's Nansei 14, final boss theme. I know it by heart. :smart:"
+
+> (18/25) | GENERAL SCORE
+------------------------------------------------
+(3/5) | CONTEST THEME
+(4/5) | APPEARANCE
+(11/15) | GAMEPLAY
+
+> (3/5) | CONTEST THEME
+------------------------------------------------
+(0/1) | Boss patterns and difficulty. Do patterns have difficulty appropriate for a final boss battle? Is there a distinct final spell?
+(1/2) | Graphics and music choice. Does the script include appropriate (Touhou-style) graphics (general background, spell-card background, character cut-ins, boss aura etc.) and does it have a fitting music for a final boss fight? Do the chosen sprites and effects fit the character?
+(2/2) | Reference to character’s abilities and their gimmicks. Do patterns represent the character well or are they very generic-looking?
+Comments: "The difficulty might be too easy for a final boss even on a lunatic level. I don't think the last spell was intuitively clear that it is a last spell."
+
+> (4/5) | APPEARANCE
+------------------------------------------------
+(1/1) | Music and sounds. Does the script include sounds and music? Is music looped? Are sounds and music volume-balanced? Is the quality of audio resources high enough?
+(1/2) | Aesthetics and design choices. Does everything look nice and eye-catching? Are animations fluid?
+(2/2) | Game clarity. How do graphics help in recognizing important game elements and understanding their functions (in case of custom mechanics)? Possible issues here would be HUD elements blending with the background or graphical effects obscuring bullets.
+Comments: "-"
+
+> (11/15) | GAMEPLAY
+------------------------------------------------
+(7/9) | Overall patterns.
+(4/6) | Overall gameplay.
+
+
+(7/9) | Overall patterns.
+------------------------
+([2, 3, 3] 8/9) | Non-Spells.
+([1, 2.5, 3] 6.5/9) | Spell-Card 01.
+([3, 3, 3] 9/9) | Spell-Card 02.
+([1, 3, 2] 6/9) | Spell-Card 03.
+([2, 3, 2] 7/9) | Spell-Card 04.
+([2, 2, 1.5] 5.5/9) | Spell-Card 05.
+(8 + 6.5 + 9 + 6 + 7 + 5.5) / 6 = 7
+Comments: "-"
+
+[3, 3, 3] | Non-Spell Criteria
+------------------------
+3 - Patterns. Is there a common idea (or at least a style) to all the non-spells? How well is this idea iterated upon? Basically, keep non-spells different enough that they’re not boring, but similar enough that players have some expectations about them after the first one.
+3 - Playability. Does the attack offer a challenging but fair dodging experience or is it full of cheap-shot moments and/or opportunities to drastically trivialize the whole thing (for example, by using an obvious safespot)?
+3 - Composition. The visual appeal of the pattern. Nice and fitting color and shape choices help, as do eye-catching dynamics and smoothness of bullet movement.
+
+[3, 3, 3] | Spell-Card Criteria
+------------------------
+3 - Mechanics. Does the spell-card have a definitive mechanic or play style? Generic dodging spells won’t do it for the final boss. Additionally, is the mechanic just for show or does it introduce a certain challenge/puzzle element to the card?
+3 - Playability. (See corresponding Non-Spell section.)
+3 - Composition. (See corresponding Non-Spell section.)
+
+(4/6) | Overall gameplay.
+------------------------
+(1/2) | Difficulty balance. Does the difficulty of patterns match the shown difficulty (if exists)? Did all the attacks have similar difficulty or were there inconsistencies in how difficult the patterns were?
+(1/2) | Uniqueness of experience. Are dodging challenges varied enough? (All the cards being just RNG spam or static patterns makes for an unfun experience.) Are there any distinct features to the gameplay?
+(1/1) | Player character balance. Is player character well balanced for the script? Requires not only having an adequate damage output (killing a single attack in 1 second or a few minutes is not OK), but the absence of pattern-breaking opportunities as well (like killing boss’s familiars before they shoot even once).
+(1/1) | Optimization. Is code written in the way that efficiently utilizes the resources of PC? Basically, the script should run smoothly on any relatively new PC (60 fps all the time is not required but would be welcome). On older PCs it still should be at least somewhat playable.
+Comments: "-"
+
+================================================
+CONCLUSION
+================================================
+
+"I'm very glad you found time to participate in this contest. I find your pattern designs interesting. I hope to see more works from you!"

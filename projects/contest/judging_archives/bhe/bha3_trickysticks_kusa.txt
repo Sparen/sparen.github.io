@@ -1,0 +1,49 @@
+Bullet Hell Artistry #3 - Kusa
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Nonspell 1: Seems pretty fine. You might want to turn off the angular velocity on those things at some point because they're kind of weird to dodge. 6.25/10.
+
+Spell 1: Also seems fine; just not super interesting in my opinion. Oddly difficult for how sparse the bullets are. 6.25/10.
+
+Nonspell 2: More fun variant of the first non, I'd say? 6.5/10.
+
+Spell 2: I actually this is a good pattern. Kind of janky since it's hard to tell which direction the aimed portion comes from at first and dodging towards it doesn't lead to good outcomes (probably). 7.5/10.
+
+Nonspell 3: Another pretty decent non; better than the previous two 6.75/10.
+
+Spell 3: Interesting idea, but I find that it's very impractical to go chase the orbs in an effort to catch them. Seems impractical to grab them after the second/third. It's good for you to spell out the gimmick though!  6/10.
+
+Nonspell 4: Another variant on previous themes. This one seems like the bullets can randomly clump from time to time, but it might just be my imagination and I had no trouble navigating those clumps. 6.75/10.
+
+Spell 4: Fine; not super interesting in my opinion. The angular velocity on those amulets is kind of irritating. 6.5/10.
+
+Spell 5: I actually like the idea for this, and the execution is decent too. I had some weirdness occur where one of the boxes was deleted (thanks broken version of Ultima Reimu). Still, neat! 8.25/10.
+
+Spell 6: Pretty fine ending to the script. It feels like the phases go by really quick, but it might be that I'm doing good DPS. 7.25/10.
+
+Danmaku Score: 6.8/10 (scaled to 10.2/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is slightly below average. I REALLY don't like the spell background much. 2.25/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is about average too. Nothing really stood out in a good or bad way. 2.5/5.
+ 
+OVERALL SCORE 10.20 + 2.25 + 2.5 = 14.95/25

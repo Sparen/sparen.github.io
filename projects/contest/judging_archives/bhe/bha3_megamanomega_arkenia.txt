@@ -1,0 +1,55 @@
+Collapse of Animism by Arkenia
+Difficulty - Normal
+Character - Marisa
+Playthrough - https://www.youtube.com/watch?v=vGxGGUohGX8
+
+Creativity – 5/5
+Very spot-on depiction of Kisume's attacks and also a really creative way to go about doing it as well. Naturally, her only attack back in the original games was her falling down/falling on you, and you recreated that idea nicely. But I also like how much of her other attacks carried a similar style. What with many attacks having bullets “falling” straight down
+
+Aesthetics – 5/5
+A very beautiful script. I like the custom HUD and new graphics (such as the aura you gave Kisume). But I really love that transition you did for beating spell cards, where the whole screen itself falls away in tiles.
+
+Spell Grading – 8.33/10 (12.5/15 total)
+
+Non-spell 1 - 9/10
+Simple, gets the job done, and introduces players to the odd attack patterns Kisume has. People I feel should expect her to dive-bomb you, even still the warning laser was a nice touch (especially for later attacks)
+
+“Indiscriminate Well-Purging Light” - 8/10
+Interesting attack, but I do have to say the static nature of the lasers mean you can (and really have to) stay put in a small location and generally ignore them completely. Up close to Kisume or far away, however you slice it, it means you can ignore large swaths of the screen and focus on very few threats actually coming your way
+
+Non-spell 2 - 9/10
+Kisume chasing you at this point is a very nice touch. At first it comes off as “alright, so this is more of the same” but that's a simple, but very effective spice to add to what you may expect at first otherwise
+
+“Echoes of Materiality Faded Away” - 6/10
+IS this not just Gengetsu's second phase? It's a good attack and all with stuff to keep track of from many angles, but I don't understand why you'd just essentially copy that attack wholesale.
+
+Non-spell 3 - 8/10
+A little lacking compared to the previous non-spells, but still works. It does add to the threat considering she's coming at you much more aggressively. But even still, simple dropping after she chased you the previous time is still less than what I'd expect after what came before.
+
+“Apparition Illuminated in Moonlight” - 7/10
+I really wish there was more going on in this spell, or that it was happening faster. Not exactly a bad idea on paper, but there is A LOT of unnecessary downtime here. Warning lasers are only needed if that upcoming attack is going to be instant, but both the warning lasers and the lasers themselves just drift down slowly. Followed by Kisume dropping a blast that also has warning lasers you need to get away from, which you then hang out in a big, wide open space and dodge a few offhand bullets before she does it again, but up close.
+
+Non-spell 4 - 9/10
+Now this one's an interesting spin on what's come before. She's chasing after you like the 2nd non-spell, but she's firing many more bullets, and doing so in a more gradual pattern as well. It maintains the spirit of the idea while also adding to it.
+
+“Unending Legion of Tsurube-Otoshi” - 9/10
+Well it's different and unique that's for sure. Interesting design and does actually give the player plenty of time to react despite the changing of the rules. It does it's job, and you're always staying on your toes. Though it does seem a tad bit out of place for a Kisume fight (shadow Kisume's were cute though)
+
+Non-spell 5 - 9/10
+And now we've got aggressively chasing, but with time stopping Kisume. Little bit of an odd design choice again, but it does also definitely add to what she's done before. Now with the added time stopping (but with her bullets unaffected) it means you need to run away from her like before, but run FAR away instead.
+
+“Buried Cyclone Ascending” - 8/10
+I feel the biggest point of this spell is just to surprise, or get some shock value out of the player. Once you get past the initial surprise of controlling the bullets instead of the player, you soon realize there's not much of anything to this spell. It's still just a matter of zigzagging a little to dodge what comes your way, only difference is instead of hugging the bottom I'm making Kisume hug the ceiling.
+
+“Subterranean Void” - 10/10
+A very clever and unique spell, I love it. What comes off as initially a very simple “here's some straight falling bullets. Dodge” suddenly turns into a challenge of moving all over the place and keeping track all around you as certain bullets will change direction and aim at you depending on the color of your aura. Also it makes the spell very dynamic despite the easy to see and predict nature of the spell, since just because you understand the pattern of the bullets falling in a second, your actual mental strategy has to change on the fly since what you have to actually dodge will change depending on the color (like when you first encounter the diagonal lines of bullets)
+
+“Collapse of Animism” - 8/10
+An interesting idea, though I feel it falls a little flat in execution. There's a pretty clear gap just to the side of the middle in the vertical bullets, and since the horizontal crystals are always aimed at your position, all you have to do is scoot up that gap until you get close to Kisume, then slowly back away towards the bottom alongside all the bullets, and then you just keep doing it over and over again cause she has a crap-ton of health. The bullet pattern is static and the same every time, so that gap never really changes, nor does your strategy. I end up getting left with a feeling of wanting more instead of a feeling of ever increasing threat.
+
+Final Score – 22.5/25
+A good script with some ups and downs. I feel it could use some tweaking to be better in places, but really my biggest issue was the almost copy-paste of Gengetsu's spell. Other than that, while I understand there's not much to go on when it comes to “expanding” on Kisume's abilities, I do feel in the second half of the fight it really felt like you were throwing random abilities/gimmicks at the wall to see what stuck. They weren't bad spells, but we got focus/unfocus activating & deactivating lasers, time stopping and then swapping player control with the boss. These are things that you could build an entire boss fight around and feel odd to be one and done spells here.
+
+Also, minor complaint/note for future reference. I didn't take points for this since this is a Marisa exclusive problem and there were three other options, but look at this.
+https://i.imgur.com/Juegfz5.png
+If you are standing directly under Kisume (which is the place you usually will be) Kisume's warning laser is overlaid, close in color and the same size as Marisa's lasers, making them blend in so much you practically can't see it in practice. If you're gonna do a warning like that, I recommend a wider and transparent warning zone, to help prevent it from looking so similar to something else that may be in the same place as it.

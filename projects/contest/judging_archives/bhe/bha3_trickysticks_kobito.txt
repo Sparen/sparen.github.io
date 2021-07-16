@@ -1,0 +1,53 @@
+Bullet Hell Artistry #3 - Kobito
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played on Hard Mode woo.
+
+Nonspell 1: Not all that fun to dodge, doesn't look all that good...kind of difficult compared to later patterns too? Thoroughly average. 5/10.
+
+Spell 1: A streaming pattern, in essence, but it's fun and quite pretty with the rainbow danmaku. Good. 7.5/10.
+
+Nonspell 2: More fun, nicer to look at, and reasonable difficulty compared to the previous non. Good. 7.5/10.
+
+Spell 2: A more difficult variant of that one Kogasa card I'm too lazy to look up. Very fair, I like this too. 8/10.
+
+Nonspell 3: Simple, yet fun to dodge. I'd say it's quite elegant in that manner. 7.75/10.
+
+Spell 3: Now this is another streaming spell that's I'd say isn't as mechanically different as the previous AND it's not as good as the previous streaming spell. Actually hitting her can kind of be a pain. 6.75/10.
+
+Nonspell 4: The lasers don't look super good and I'd say this is oddly easy compared to the rest of the script, but it's not like this pattern is bad. 6.75/10.
+
+Spell 4: Safety umbrellas are neat. I'm particularly bad at this pattern, but it's a good idea and I think it's executed well. 8.25/10.
+
+Nonspell 5: Pretty rainbow is pretty, but the pattern is kind of generic spirals and the aimed superfast burst could've maybe used a brief warning laser? Not that it's bad, of course. C'est fine. 6.5/10.
+
+Spell 5: Kind of a weird one, but I like it enough. 7/10.
+
+Spell 6: Neat idea for a multi-phase ending spell. Kind of annoying in the circling phase to have all the umbrellas flashing since they're low HP, and the last one doesn't FEEL like it's very patterned, but it's good. 7.5/10.
+
+Danmaku Score: 7.14/10 (scaled to 10.70/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is a little above average. It's not exactly high-budget or anything, but it's fine. 2.75/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is above average too. It takes her existing themes and amps them up. 3/5.
+ 
+OVERALL SCORE 10.70 + 2.75 + 3 = 16.45/25

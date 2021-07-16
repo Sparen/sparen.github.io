@@ -1,0 +1,47 @@
+Bullet Hell Artistry #3 - Bagoum
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played on Normal Mode with Reimu Type 0?
+
+Attack 1: A darkness gimmick isn't something I'd expect from this character, but it seems like a fine enough pattern. Not super interesting? 6.75/10.
+
+Attack 2: The bullets shooting forward is telegraphed but it still seems kind of weird to me. Once you get used to it, the pattern is pretty fun. 7.25/10.
+
+Attack 3: W e i r d n e s s but I like this weirdness more than the previous weirdness. 7.75/10.
+
+Attack 4: Less weird, more simple. Being more simple isn't a bad thing though, I actually like this pattern more than everything but the previous one. Being chased is fun, who knew? 7.5/10.
+
+Attack 5: Not a ton to say about this one, other than it's solidly solid. 7.25/10.
+
+Attack 6: This one got a bit annoying but that might be because she took a while to actually die while I spent a bunch of time at the top of the screen shooting nothing. Fine idea, hourai elixirn't is an interesting reference. 6.25/10.
+
+Attack 7: Pretty plants! Maybe the white petals on the flowers could use a bit less acceleration, but otherwise I quite like it. 8/10.
+
+Attack 8: An interesting multi-phase final. I never understood why Elly is into planets and physics (or something) now. It gets pretty hectic near the end and I'm not sure if you're supposed to dodge higher up on the screen, considering that the orbiting things do shoot bullets and will shoot them on top of you if they feel like it. Might need more practice, but I'll rate this 6.5/10.
+
+Danmaku Score: 7.15625/10 (scaled to 10.73/15)
+======================================================================================================================
+ 
+Aesthetically, I think the style is certainly above-average. I quite like this style. 3.5/5.
+======================================================================================================================
+ 
+I think this script feels about averagely final-bossy. Maybe a little above average actually? 2.75/5
+ 
+OVERALL SCORE 10.73 + 3.5 + 2.75 = 16.98/25

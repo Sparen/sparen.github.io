@@ -1,0 +1,50 @@
+Bullet Hell Artistry #3 - Kagummi
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played as Reimu.
+
+Nonspell 1: It's a take on a Keine nonspell. By the time the pattern starts rotating (meaning you need to actually dodge stuff and not sit below her) the lifebar is already basically half-finished, and by focusing/unfocusing you can honestly just macrododge the whole thing. Thoroughly average, if not somewhat below average. 4.25/10.
+
+Spell 1: Kind of boring since it's just the same simple pattern repeated. The star wiggling is weird but doesn't actually make it that much harder to dodge. 5.25/10.
+
+Nonspell 2: This does use her unfocus/focus gimmick, but I feel like it's substantially harder than the last two patterns. Neat idea though. 5/10.
+
+Spell 2: I like the idea of the stopwatches reversing time, but this spell has some issues in my opinion. First, the stopwatches are VERY difficult to see - I didn't even notice them until my second playthrough. Then, getting hit by one stopwatch makes it difficult to avoid others (assuming the intent is to have them avoidable) meaning they snowball quite a bit. Lastly, something about this spell seems to lag immensely - maybe because I triggered too many stopwatches, or some other reason. Regardless, it's a good idea that could use better execution. 3/10.
+
+Nonspell 3: Pretty decent! I'd suggest always having the smaller bullets render above the larger bullets, since the larger bullets can cover them up and it's kind of annoying when that happens. 6/10.
+
+Spell 3: This spell is reasonable and I think it makes sense for Keine. Again, kind of boring since it's the same wave repeating, but it's fine. 5.75/10.
+
+Spell 4: As far as I can tell, collecting the green stopwatch thingies stops her from speeding up the bullets. It's not really properly communicated though (and the watches are a pain to see like the red ones), but I like the idea. Maybe have a demonstration of sorts, or outright put text on the screen explaining it if it's too complicated to show. The pattern itself is fine. 5.5/10.
+
+Spell 5: It's dodging BoWaP with extra steps, really. It's great that you used warning indicators for where you should be during each part of this attack. Initially I thought you had to circle her while dodging that BoWaP (which I think is ridiculous), but you can just chill below her and dodge it normally. Which is why I say it's BoWaP with extra steps, since that's not really that interesting. 4.75/10.
+
+Spell 6: The balance on this one is kind of weird - in my opinion it starts out fine, then gets EASIER until the last phase which ends up just being bullet spam with no distinguishable pattern. A good attempt, but I'd say it could use some work. Try just adding an element or spicing up existing elements instead of having such dramatic changes. 3.5/10.
+
+Danmaku Score: 4.77/10 (scaled to 7.16/15)
+
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is quite below average. The volume balance is off, the patterns aren't really pretty, and it feels like a mish-mash of art from different sources that don't really go well together. The awkward pause between regular Keine and horn Keine is weird. 1.25/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is below average. The patterns are simple and repetitive. The final pattern IS multiple-phases but the phases are oddly designed. 1.75/5.
+ 
+OVERALL SCORE 7.16 + 1.25 + 1.75 = 10.17/25

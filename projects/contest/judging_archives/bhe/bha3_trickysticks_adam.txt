@@ -1,0 +1,51 @@
+Bullet Hell Artistry #3 - Adam
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played on Hard Mode with ReimuSpring
+
+Midboss Non: Excellent! I'm really bad at the curvy bullets but that's just me. Can't judge this though.
+
+==ACTUALLY JUDGED STUFF BELOW==
+
+Nonspell 1: Very good nonspell. The aimed(?) element keeps you moving. 8.75/10.
+
+Spell 1: I like this spell as well. Still keeps you moving, just like the previous non. 8.5/10.
+
+Nonspell 2: Another great nonspell. I got a 0,0 spawning error which doesn't really matter. 8.75/10.
+
+Spell 2: Excellent pattern here too. The rotating caught me a little off guard but it was very easy to get used to.  8.5/10.
+
+Nonspell 3: I was going to say this was really trivial, but then the spirals of bullets started overlapping in interesting ways. I still think it's a bit too easy compared to previous nons, but it's not egregiously so. 8/10.
+
+Spell 3: Butterfly amulets are neat! Otherwise I really like how this spell plays - I think it gives a bunch of options for how you dodge the aimed bullets from the lanterns. Very good. 9/10.
+
+Nonspell 4: Not as complex as some of the previous nons, but that's not exactly a bad thing considernig the previous nonspells are amazing. 8.25/10.
+
+Spell 4: I like how one lantern directs you towards the next lantern that's going to "go off". I quite like this pattern too. 8.5/10.
+
+Danmaku Score: 8.53/10 (scaled to 12.80/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is very much above average. There's a lot of animation frames on the boss sprites in particular, the fluttering butterly amulets are awesome, and sound effects are used very well. Excellent work! 4.5/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is above average for sure. It's a bit short for one, but the patterns are high-quality. 3.75/5.
+ 
+OVERALL SCORE 12.80 + 4.5 + 3.75 = 21.05/25

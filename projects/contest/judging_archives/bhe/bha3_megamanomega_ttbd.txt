@@ -1,0 +1,46 @@
+Super Youkai Warhead ~ Nitori Kawashiro by The Terrible Bullet Dodger
+Difficulty - Default
+Character - Marisa (Laser + Laser)
+Playthrough - https://www.youtube.com/watch?v=jMQz4whKS0Y
+
+Creativity – 5/5
+An absolutely amazing depiction of Nitori. I love the way this both captured her use of tech, but also managed to have many water-like attacks, and mix in some moves akin to what she pulled off in MoF without seeming too derivative
+
+Aesthetics – 5/5
+Again, absolutely stunning. The background and effects of this script is so over the top. I do have to mention though, it is close to the point of being a little “too” over the top however. I never reached a point where the background was so distracting I couldn't tell what was going on, but it was pushing it. Though it is important to note that there is A LOT of unnecessary flashing going on during the “non-spell” portions of this fight, making the “spell card” portions (and the TLB phase as well) much easier to deal with in that regard.
+Long story short, I was not a fan of that black & green flashing going on in the bottom half of the screen.
+
+Spell Grading – 8.7/10 (13.05/15 total)
+
+Phase 1 - 9/10
+Very nice opener, though a little over the top (though in all fairness, that's the theme of this entire script). I like the movement required here, with how the missiles lead you up towards Nitori to avoid them, but then you have to back away through the waves they set up before she fires again
+
+Phase 2 - 9/10
+And then a breather for a spell card. I like how even though it's simple case of moving to the side each time she fires at you, there's still plenty to focus on considering the way the blue bullets are staggered
+
+Phase 3 - 8/10
+My only wish is that the drones surrounding her didn't have a hurt-box. This spell seems like it wants you to use the whole screen to your advantage (after dodging the initial blue bullets, zip up and round her to avoid the explosions from the missiles and to be in a good place to dodge the last phase with the pink bullets). However, those things seem to sometimes kill you, sometimes not (you can see it in my video). Having to avoid such a giant threat when the spell makes you get close to her is considering the nature of what this spell seems to want out of you
+
+Phase 4 - 8/10
+Only complaint is I wish the yellow arrowhead bullets stopped a bit sooner. It's enough to get players to move all the way to the side, but with them alongside the lines of yellow bullets, they move so fast that at times they may only be visible for a single digit number of frames. It can definitely cause cases of not even seeing or registering what killed you considering everything else that's going on
+
+Phase 5 - 8/10
+I'm not a fan of how easily this spell traps you with no real tell as to what you're doing wrong. So when dodging everything else in this spell, you need to keep moving, both to avoid the flames and the bullets aimed at you. But then she switches to orange bullets that make you think you have to do the same thing, but no you actually have to stay completely still, or else the following blue wave will kill you if you moved too much horizontally. I'd say it kinda works once you know what you're doing, but even still, I'm not a fan of how you're forced to stay put with no warning in a zone where the orange bullets can very easily trap you. 
+
+Phase 6 - 9/10
+Very nice use of those rotating balls to keep you moving horizontally in a spell where otherwise you'd just be hugging the bottom and dodging her direct attacks. Though I do think a warning circle around Marisa showing what zone it'd be when those balls activate would be appreciated. It doesn't seem to be an even circle around her, since I had them stop quite some distance from her both to the sides and in front, but when one slipped behind her it didn't activate until it was practically right on her.
+
+Phase 7 - 9/10
+Simple, but fits in well as a nice breather compared to what's come before and what's about to come after
+
+Phase 8 - 8/10
+I'm not a fan of the microscopic windows of opportunity you have to get out of dodge between phases, especially when she switches to the pink wave. Really good design overall, but this spell especially really feels like you're not given enough time to react to the next moves.
+
+Phase 9 - 10/10
+Simple logic, but I really love the implementation and the way it constantly builds on each other. The small green bullets are predictable, but that's good. The real threat and the real treat is the fact that you've got aimed shots directly at you, but beyond that, it's the offhand bullets that those aimed shots fire that are your real threat. It's fun contending with both the small green bullets while staying away from the aimed shots while also contending with the larger green bullets and pink ones as well
+
+Post-battle phase - 9/10
+Simple, but still very fun. It doesn't carry the same “punch” the last spell did, but still very effective. It's essentially just dodging random bullets while keeping ahead of the aimed lasers. But still very much a challenge, and quite fitting for this point in the fight.
+
+Final Score – 23.05/25
+Well I gotta say this is the most “final-boss” like script in this whole contest. This is a very well made script, but DAMN is it the hardest one here by a mile. I didn't want to take any points off for the sake of being too difficult, though even still what few problems I had with this script were moments when I felt the difficulty went over the top, even with what you were going for here. Still, a very amazing and incredibly stunning script overall.

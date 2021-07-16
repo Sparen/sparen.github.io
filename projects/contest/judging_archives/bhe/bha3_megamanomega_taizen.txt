@@ -1,0 +1,46 @@
+Chromatic Guardian of Scarlet by Taizen Chisou
+Difficulty - Contest Mode (default)
+Character - Marisa (default)
+Playthrough - https://www.youtube.com/watch?v=U2VyuGupAwA
+
+Creativity – 5/5
+Very Meiling-like. I think this script both covered all its bases doing what would be considered a harder version of a Meiling fight, while also adding it's own spin on things as well
+
+Aesthetics – 3/5
+This is a very nice looking script, but at the same time there are some aesthetic choices that I feel detract from the score a bit. The first is the choice to have a background image with a copyright in the bottom corner. A choice like that is just sloppy. Secondly, I really wish you incorporated rainbow colors into her spell cards. In all but a single spell card in EoSD, StB and Soku she has rainbow effects (only exception is her mid-boss spell card in EoSD). Here however is just the opposite where she only incorporates rainbow danmaku in a single spell card. Rainbow colors are an aesthetic choice that is a signature to Meiling, so to not have that makes the spells themselves not feel as “Meiling-like”
+
+Spell Grading – 8.6/10 (12.9/15 total)
+
+Non-spell 1 - 8/10
+Good attack. Simple. But gets the point across. I like how after the first two simple waves of showing you how the attack works pass, she then goes into firing a much tougher both at once. Only thing I didn't like was how that phase only lasted for maybe two seconds. It's like the spell ends just as it's getting tough
+
+Color Sign “Chroma Tempest” - 9/10
+A very great spell. I love how you've gotta keep track of rapidly changing angled shots, but all the while you've also got the aimed shots you can kinda ignore and kinda control. Cause since they have a little delay to them, you can't always ignore them.
+
+Non-spell 2 - 8/10
+A really nice and fitting uptick and build upon from the non-spell from before, but unfortunately it has the same issue. This time, the spell will actually end before the third wave containing the red & blue bullets together even reaches you.
+
+Flower Sign “Hydrangea Dream” - 9/10
+I like it. It may be a simple “hug the bottom and dodge what comes your way”, but such logic isn't something that overstays its welcome and gets overused in this script, and the way she keeps hopping around to four different places causing the bullets to come in at angles does add a bit of spice to the logic.
+
+Non-spell 3 - 8/10
+Good logic, I feel more could have been done with it, mainly forcing the overlap with the flames and the aimed bullets. As is, the aimed bullets get fired at you before the flames reach you, so you can easily just move to the side of the aimed bullets and then focus on the flames themselves. Cause of that, the former is largely ignore-able in this spell, despite making up half of it.
+
+Color Sign “380nm” - 9/10
+I like how you've got her firing off a simple pattern, but the constant rotation keeps shifting your path to dodge around a lot. Nice spell, and despite the direct nature of the attacks, it always makes you keep your eyes moving.
+
+Non-spell 4 - 9/10
+Now this one's more what I was talking about where the aimed bullets and flames work well together, instead of being kept separate. I do wish there was a bit more room for error considering if you don't know you have to stream ahead of time, this turns into a blind-run-killer. But it's still a good spell if you know what you're getting into.
+
+Dragon Sign “Long Kick” - 8/10
+I don't know whether to call this an exploit or an oversight, but I don't like how this spell can be made much easier at the expense of making it take much longer if you just move diagonally to dodge her. If you do so, it makes it so you can ignore the green bullets entirely making it so you just need to focus on the straight brown wave, then the straight yellow wave (with the latter having very wide gaps). It's a pretty normal way to get away from her, which is why I'm leaning more towards oversight. I'd like it better if everything she did in this spell would end up being a threat to you.
+
+“Dragon Tempest” - 9/10
+Well, this is one hell of an uptick in difficulty. A fun and creative spell and I like how the bullets slowly got more and more horizontal as they got faster and faster. 
+Also, minor complaint, but I feel the background bullets could have more of an effect (ie: make them more transparent) top make it more clear they're actually harmless and in the background. I'm not gonna detract points, cause won't I understood it, it was pretty clear. But still, the first few times I did this, they're so bright I thought they were part of the attack I'm dodging as well.
+
+“Pure Lotus Emergence” - 9/10
+Nice flower effect, nice steady increase in difficulty. I like the fact that despite the fact that the bullets are moving in a straight line, you have to dodge essentially sideways to avoid each burst. Then to add to that, the increase in difficulty isn't just her firing faster, it's cause the old waves are overlapping with the new waves.
+
+Final Score – 20.9/15
+An all around good script, but a perfect example of small complaints that add up. All around, my complaints with the script is minor (both in the spell design and aesthetics), but if that's going to keep happening throughout the script, that's gonna add up once I tally the score. Pretty good, but I feel it could be great with some minor adjustments.

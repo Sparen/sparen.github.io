@@ -1,0 +1,45 @@
+Memento of Outwit by Ryann1908
+Difficulty - Normal
+Character - Rumia (Default)
+Playthrough - https://www.youtube.com/watch?v=GckmbIGGgyc
+
+Creativity – 5/5
+This definitely contained aspects of Urumi's fight (the rebounding bullets and enlarging bullets) but at the same time, did a lot of new stuff as well that came off as quite fitting for her. Well done and interestingly done.
+
+Aesthetics – 5/5
+While the sudden jump to Mrs. Estacion was a strange one, I can't deny the effort that got put into this. The music changing was one thing, but I was surprised to see you also changing the HUD to match as well. Aesthetically speaking, definitely a script that went above and beyond the norm.
+
+Spell Grading – 8.4/10 (12.6/15 total)
+
+Non-spell 1 - 9/10
+Very good opener. Simple yes, but should be expected at this point in the fight, plus the angled bullets keep you on your toes so you're not just hugging the bottom and looking ahead
+
+Transmutation “From Bijou to Ferric” - 8/10
+Very interesting way of doing her expanding bullets. Though I do feel the logic of them make it very easy for you to get trapped beneath the additional falling ones from the ceiling a little too often.
+
+Non-spell 2 - 9/10
+Definitely a new and interesting way of making a new/harder version of her rebounding shots. I particularly like the flair of them exploding, added a little spice to the spell
+
+Entangled Hawser “Impervious Treasure Trove” - 7/10
+I want to like it, it is a very cool spell with the bullets forming a cool pattern... but it's static and the solution makes it both much too easy and ultimately, largely ignorable. The spell's static and symmetrical, so all you have to do is a quick zigzag a couple times each time the center bullets reach you.
+
+Non-spell 3 - 9/10
+I really like everything you've got going on here. Bullet that hits the wall and explodes, it leaves leftover bullets that also explode, and you've got Urumi shooting stuff at you as well. Gives you the idea of wanting to zip around the perimeter of the field, but still has enough going on that it's still a challenge to do so
+
+Eco Chamber “Vernal Equinox” - 8/10
+I feel it could have used a bit of a delay before she charges at you the first time, since it's pretty much instant and players aren't really given a chance to see what's about to happen or realize they're about to screw themselves if they move wrong. Very fun spell once you understand what you're getting yourself into however.
+
+Non-spell 4 - 9/10
+Simple logic, but still holds a challenge. I particularly like the bullets moving backwards that last for quite some time, cause it leaves you in a sort of cage that you need to get out from to keep going after Urumi, as opposed to a more direct blast of shots that would be quite boring at this point in the game otherwise
+
+Fey Twitchel “Cloak-and-Dagger” - 7/10
+I am not a fan of the extremely small window of opportunity you're given here. Ultimately there's a bit too much contrasting logic going on here. You wanna be up a bit away from the edges so you can escape the orange bullets faster, but Urumi's there and she's shooting at you so you wanna be far away from her, but when you do get an opening the middle opens up first, but Urumi falls straight down the middle all the while shooting at you so you wanna be away from that zone. You've got a bit too much going on at once and they're not working well together.
+
+O.E.D. “The Knickerbocker. 1845” - 8/10
+You've got a lot going on here, and for the most part I like it. The first part is well made, making sure you position yourself and keep track of the waves so you're taking them on one at a time. The second was a bit dense, but it's all symmetrical, so it's easy to avoid. The third however, I feel something's off, either the density of the bullets or Urumi's speed, but trying to face it the intended way feels uncomfortable. It makes it so the best place to avoid stuff is actually in the bottom corner, which doesn't feel right considering what the spell's thrown at me so far.
+
+“Memento of Outwit” - 10/10
+A nice variety of attacks that work very well together. It's nothing new to see direct waves mixed together with aimed shots so you have to keep switching between under the boss and hanging out off to the sides to misdirect them. But I really liked the implementation of two different styles of aimed attacks, it added some nice added challenge and flair to this spell that made it feel like quite the fitting final spell. I especially liked the large bullets that hang out near the bottom for just a moment before finishing their movement. Another interesting thing to get in your way that still manages to work well with the spell overall.
+
+Final Score – 22.6/25
+Very well made script all in all. I did have some minor issues at times which I went over (some spells I feel could use a tad bit of tweaking). But overall this is a very well made script with some very challenging, yet mostly fair patterns. 

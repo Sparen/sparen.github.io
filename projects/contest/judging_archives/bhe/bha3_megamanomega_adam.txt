@@ -1,0 +1,41 @@
+Eternity Tokoyo by Adam
+Difficulty - Normal 
+Character - Marisa 
+Playthrough - https://www.youtube.com/watch?v=WFAiYMHxX_8
+
+Creativity – 5/5
+Very cool all around. I love the thematic styling akin to Okina's fight this had (what with the Spring/Summer/Fall/Winter spells) but while also having Eternity's spell theming woven into it, such as the butterflies and the like. Plus also having her own twists as well, such as all the lanterns.
+
+Aesthetics – 5/5
+Absolutely gorgeous. It may still have the standard HUD, but it ends there. Custom boss sprites, custom bullets, but above all else, you've got a great artistic flair with your bullet designs. I especially loved part of Spring Sign “Flower Viewing at Hirana Shrine” where you've got the lasers suddenly fanning out to create flowers.
+
+Spell Grading – 8.63/10 (12.95/15 total)
+
+Note: I played through this script afterwards without recording, or with anything going on to try to get it to run smooth, to no avail. The lag in this script is VERY bad at times, so as such, for any spell that had the FPS hang out at 50 or lower for a noticeable amount of time, I'm noting which ones that applied to and I'm detracting a point off the score I would have given it.
+
+Non-spell 1 - 8/10
+A really good opener. I like the different ways the waves of bullets will force you to go from directly under her and then push you to the sides. Normally would have been 9/10, but I have to deduct a point since the game consistently lags to 40-ish FPS whenever the multiple small lanterns came from the top of the field.
+
+Spring Sign “Flower Viewing at Hirana Shrine” - 9/10
+Similar logic, and incredibly gorgeous to boot. For the most part it's just the same as before, hanging out under her, then scooting to the sides until you can get back. However there's still a lot going on you  need to contend with that keeps things interesting. Would have been 10/10, if not for the major lag you get with the initial cherry blossom bullets and lines of green bullets.
+
+Non-spell 2 - 9/10
+Very fun and interesting. I think I would have liked it better if the lasers didn't hide the flames, but that's a minor issue. The lasers and flames work very well together to keep you both locked down, but also keep you moving
+
+Summer Sign “Halo of the Rising Sun” - 7/10
+A really cool spell with a lot going on, I just wish more was going on in what the spell wants you to do, as opposed to how well it looks. Pretty as it is, and despite Eternity having two different styles of attacks here, for the most part you can just hang out near the bottom and stay under her, moving a little to the side whenever something comes your way. Even the spinning lasers don't force you to move much at all. Would have been 8/10, however the game lags pretty bad and consistently whenever said ring of lasers comes.
+
+Non-spell 3 - 9/10
+It works really good for a non-spell. I like how Eternity's attacks keep you moving, which juxtaposes well with wanting to stay put when the bullet waves reach you. It also has a nice, steady increase in difficulty as the waves start overlapping.
+
+Autumn Sign “Vermilion Foliage” - 9/10
+I absolutely love all that's going on here, how the spell asks you to move around, and the fact that there's multiple ways to manipulate and go about doing this. There's a lot going on and everything works very well together with so many things you have to keep track of at once, but they don't get overwhelming. Would have been 10/10, however when the lanterns start spawning and shooting, the game lags really consistently for the whole bit.
+
+Non-spell 4 - 9/10
+Simple, but works, and I really like the stars near the end adding a bit of extra flair to it. Even still, this is a bit too simple and I wish there was a bit more too it, considering what's come before. You wanna hug the bottom and stay under Eternity, and there's not much stopping you from doing that. Even still, and alright breather, and functions as a good “calm before the storm” before the final spell hits.
+
+Winter Sign “Fluttering Snow Butterflies” - 9/10
+I absolutely adore the amount of stuff you have going on, and my biggest wish is that it lasted longer and I got to see more of it. You've got a huge motley crew of attacks with her different phases, all of them giving different expectations to the player. A great job of having the boss throw everything she's got at you, without just a slew of a variety of bullets simply coming from her. Would have been 10/10, however the game lags pretty consistently for the whole spell, especially when the lanterns come in from the corners.
+
+Final Score – 22.95/25
+An absolutely amazing and stunning script that I only wish could play at 60fps consistently. At the end of the day, that's the biggest thing that hurt it, which is very annoying considering how much I love this script. But, it is what it is. Design-wise, I have very few complaints. My biggest issues are on the mechanical side of things, which sadly does add up.

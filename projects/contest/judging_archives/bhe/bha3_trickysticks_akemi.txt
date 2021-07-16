@@ -1,0 +1,50 @@
+Bullet Hell Artistry #3 - Akemi
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played as Reimu.
+
+Nonspell 1: Pretty decent take on a Keine non. Dies kind of fast but that's acceptable. 6/10.
+
+Spell 1: I think this one is pretty cool, all things considered. It gets you to dodge in interesting ways. It and the previous non feel kind of sluggish, but that's not necessarily bad. 7.25/10.
+
+Nonspell 2: Decent Keine Non with aimed stuff. Feels a lot like the first so I'll judge it like the first. 6/10.
+
+Spell 2: Suuuuper thin warning lasers are a pain to see. You can manipulate their render widths before the hitbox is active to avoid this problem. Other than that, dealing with the lasers while dodging sluggish aimed bullets is fine. Not super interesting, but fine. 5.5/10.
+
+Nonspell 3: Slow bullets going down. I guess it's appropriate for Keine, but it's not super engaging either. 6/10.
+
+Spell 3: This is pretty good! Thank you for including a warning at the bottom. Dodging from both sides is quite fun. 8/10.
+
+Nonspell 4: This non stands out from all of the others. I guess in principle it's still Keine non plus aimed things, but it feels more FUN than the last three. 7.25/10.
+
+Spell 4: A good spin on your typical circling survival spell. I feel like the difficulty is kind of high compared to previous patterns but not unreasonably so. 6.75/10.
+
+Spell 5: Yay multi-phase ending spell. I think this spell is thoroughly fine. I appreciate the sword warning lasers.  7/10.
+
+Danmaku Score: 6.64/10 (scaled to 9.96/15)
+
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is above average. I like the art, nothing looks hideous, the meteors in that Pompeii spell are pretty cute considering you didn't really use any special graphics. You use warning lasers appropriately, sounds are fine, etc. 3.25/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is thoroughly average. Nothing is really grand or bombastic, but nothing stands out as being too wimpy for a final boss either. 2.5/5.
+ 
+OVERALL SCORE 9.96 + 3.25 + 2.5 = 15.71/25

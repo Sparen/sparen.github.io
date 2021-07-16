@@ -1,0 +1,41 @@
+Sparrow of Darkness by Middy the Bird
+Difficulty - Flightless (default)
+Character - Horou (default)
+Playthrough - https://www.youtube.com/watch?v=41i7GQriv4I
+
+Creativity – 5/5
+Very well done. With Mystia, it'd pretty much be required to have her pull off her “night blindness” attacks and lower your field of view, but I especially like how despite the simplistic nature of such an attack. You were quite creative in the implementation, doing different things with it
+
+Aesthetics – 5/5
+Absolutely stunning. Custom title, HUD, player graphics, bullets, the whole nine yards. Definitely a script that went above and beyond in the design department (side note, I really like that “spell captured” graphic you did, that was a really nice touch to literally capture their spell card)
+
+Spell Grading – 8.13/10 (12.2/15 total)
+
+Non-spell 1 - 9/10
+A good opener. It fits Mystia very well and it does a good job of easing the player into the script, without starting off too overbearing
+
+Eerie Song from across the night's shore. - 8/10
+Not bad, though I feel the notes could have stood to do a bit more in the spell. As such, they're actually largely ignorable considering how few'll actually reach you.
+
+Non-spell 2 - 9/10
+Again, I do feel it could have used a little bit more too it, however this attack is a non-spell after all, so as such it's not a problem and gets the point across.
+
+Dark Cantata: Hidden red eyed creatures - 8/10
+Not bad, and a neat way to improve on the traditional “night blindness” effect. Though I do feel the spell's a little too short, ending before the “red eyed creatures” will reach you, making them seem underutilized.
+
+Blind to all but the Song - 8/10
+A really cool spell, and I love the reverse vision you've got going on here, making everything but the bullets black. And it was also a nice touch having only the notes stay fully visible while the regular bullets faded out. Though I do feel this spell was a touch too short. That's a sentiment I've felt for a lot of the spells here, but this one especially it felt like it ended just as it was starting to get fun and difficult.
+
+Surviving in a dark world - 7/10
+Cool idea, poor execution. On one hand, it's a very creative and interesting spell, it kinda reminded me of a unique, Mystia themed version of "Boundary of Humans and Youkai". But you also do enough different stuff with the concept that it never feels derivative.
+That being said, my issue with it is that it's got a cool, unique mechanic that's incredibly underutilized. So you've got this zone of darkness that'll kill you if you stay in it for too long... but the player is never given a reason to want to stay in the darkness for longer than they need to anyways. The fact that I can't see my player is punishment enough, I'm gonna stay in that zone just so I can see what's going on and not get killed.
+That being said, I understand why you did it. IF I could just hang out in the darkness safely, I could cheese the spell horribly. But the thing is, if you're gonna introduce a mechanic like that, you really want to make the player have to balance between one side of danger, and the other. When the light sources were shooting bullets, that was a really good way of doing it (since you wanna stay far away from that, but not too far). However, those instances were few and far between, making the most unique aspect of this spell largely ignorable.
+
+Song of the Night: Sparrows last call - 7/10
+I really feel this could have used a bit more, considering how basic the attacks really are when you get right down to it. Now I understand that Mystia firing direct attacks works very well when the upcoming blindness sets in. That being said, it's still just a case of “hug the bottom and dodge what comes your way” with very little variety added in any of her phases in this spell. In fact, it looks like she starts to add some variance in her last phase, but those pink bullets move so slow it'll be over before they really become a threat.
+
+Night owl's Encore - 9/10
+This one's much better, and is a really cool final spell. Cool attacks keeping you moving, while the notes move in odd, yet predictable patterns so you can't just get complacent when dodging them as well. Though I do wanna mention, something like this is kinda what I would have liked to see Mystia pull off in the last spell. Showcase some unique and odd moving bullet patterns, and then shut off the lights.
+
+Final Score – 22.2/25
+A really cool and fun script, I just think some area's could have used a touch of work. There's some very creative idea's on the table here, I just don't feel everything was utilized as well as it could have been.

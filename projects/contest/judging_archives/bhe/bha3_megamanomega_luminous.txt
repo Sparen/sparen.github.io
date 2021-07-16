@@ -1,0 +1,46 @@
+ExRumia by Luminous
+Difficulty - Default
+Character - mariss
+Playthrough - https://www.youtube.com/watch?v=_TiqvrcoBUs
+
+Creativity – 3/5
+Truth be told, this felt like a random assortment of attacks that for the most part, that could have gone to anyone. The inclusion of lasers at times kinda gave me Rumia vibes, but for the most part, I really felt more could have been done when imagining “final boss Rumia”. She's the youkai of darkness, so so with her being reflected as a final boss, I was hoping to see more along those lines reflected here, as opposed to just normal bullet patterns.
+
+Aesthetics – 2/5
+For the most part, these are your normal Touhou-styled graphics with no special bells and whistles, so that would have gotten you a solid 3/5. However your sound effects need some serious work, which is why I'm docking this to 2/5. Bullets tend to be abnormally loud, but the biggest issue was the laser sounds during Maze Night “Vertical Pseudo-Symmetry”. Those noises are honestly painful to listen to.
+Also, you're missing things such as a character cut-in for the transitions into spell cards. As is, it just jumps in right away with no fanfare.
+
+Spell Grading – 7.33/10 (11/15 total)
+
+Non-spell 1 - 9/10
+Simple, yet solid. There's not too much to it, but it gets the point across, making it fit very well for an opening spell
+
+Star Sign “Midnight Reverie” - 9/10
+Interesting design that does a lot with its simplicity. On paper, not much to it, but I do like how the nature of it does make you wanna move around a bit (but not too much) as the attacks come, even if you know exactly how the attack works.
+
+Non-spell 2 - 8/10
+While not bad per-say, it's really just more of the same from what her initial non-spell was. What works good for an opening non-spell isn't necessarily good on following non-spells. 
+
+Dark Sign “Night Dance” - 8/10
+Definitely a unique spell, and honestly not bad. I do feel it tries its hardest to wall you off a bit too much however (between either the lasers or the dense bullets). It's got a difficulty curve that instead of trying to lead you towards the solution, it feels more like it randomly leads you towards bombing.
+
+Non-spell 3 - 7/10
+Again, aggravatingly similar to the previous non-spells. IT wouldn't be so bad to remix the designs like this, if the core dodging strategy didn't remain as “hug the bottom and dodge what comes your way”. As is, it makes things incredibly repetitive
+
+Maze Night “Vertical Pseudo-Symmetry” - 6/10
+Zip to the middle of the field and now just dodge a bunch of random bullets coming from all over. Not only is that really not a good design on paper, the implementation of it here is quite lacking and I feel the flashing on and off lasers detract from the spell as well. 
+
+Non-spell 4 - 8/10
+Same logic as the previous non-spells by design, but at least with streaming it asks you to do something different. In practice, I would have preferred this to be the second non-spell and two additional unique attacks as the 3rd and 4th. But, this is at least a breath of fresh air to ask me to do something different.
+
+Death “Human Destruction Laser” - 5/10
+This is an incredible downgrade in quality both from what's come before it, and as the penultimate spell as well. Literally all it is is staying in the gap between the lasers and keep doing so for much longer than need be. It is not a good sign when I'm actively getting bored fighting a spell, especially this late in the game. More really needed to be done to spice this up
+
+“Micrododges of Dawn” - 6/10
+Everything I didn't like her doing with her non-spells, but now there's a whole lot more of it. It's an incredibly simple spell and I honestly feel it could have worked in a vacuum, if half the script didn't involve you doing the same logic. You can only have so many spells that involve “hug the bottom and dodge what comes your way” before things become incredibly repetitive. And ending on such a note after having it happen throughout the script is not a good choice.
+
+Final Score - 16/25
+
+Aesthetically, it was rough. Not only was it missing some choice aspects, some of your sound choices were detrimental to the script itself. Creatively I felt it was lacking as well, without enough to the design for me to say “This is Rumia”. I felt more in that regard could have been done when imagining what Rumia would be like as a final boss
+
+As for the spells, it started out quite well but then failed to take off. In a way it almost felt like I was facing a script full of nothing but opening Non-spells and Spell Cards. A good number of these spells are okay in a vacuum design wise, but when placed altogether in a full battle, it leaves something to be desired. It's okay to remix the designs of non-spells going forward, but if you find the player dodging patterns in the same way over and over again, you're gonna want to find ways to spice it up.

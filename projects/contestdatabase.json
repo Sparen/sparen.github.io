@@ -453,7 +453,7 @@
             "judges": ["WishMakers", "CreepyNinja", "Trickysticks"],
             "numparticipants": 12,
             "result": [["AJS"], ["The Terrible Bullet Dodger/auto2112", "Adam"], ["Junky", "GCP"]],
-            "participants": ["JDude", "Python", "Conarnar", "GenoCraft", "Junky", "GCP", "bronxterror/Ultimadragon88", "TresserT", "The Terrible Bullet Dodger/auto2112", "Adam", "GhostPhanom", "AJS", "Arcvasti", "NecroHeart/Vigor"]
+            "participants": ["Drekareen/JDude", "Python", "Conarnar", "GenoCraft", "Junky", "GCP", "bronxterror/Ultimadragon88", "TresserT", "The Terrible Bullet Dodger/auto2112", "Adam", "GhostPhanom", "AJS", "Arcvasti", "NecroHeart/Vigor"]
         },
         {
             "id": "uwom1",
@@ -479,7 +479,7 @@
             "judges": ["ExPorygon/Ozzy840", "Trickysticks"],
             "numparticipants": 7,
             "result": [["bronxterror/Ultimadragon88"],["Sparen"],["AchySolrock", "gtbot"]],
-            "participants": ["Umbra", "JDude", "Sparen", "iVAwalys", "Ilwo", "bronxterror/Ultimadragon88", "AchySolrock", "gtbot"]
+            "participants": ["Umbra", "Drekareen/JDude", "Sparen", "iVAwalys", "Ilwo", "bronxterror/Ultimadragon88", "AchySolrock", "gtbot"]
         },
         {
             "id": "locaa12",
@@ -492,7 +492,7 @@
             "judges": ["Trickysticks", "ExPorygon/Ozzy840", "WishMakers"],
             "numparticipants": 9,
             "result": [["iVAwalys"], ["Adam"], ["Python"]],
-            "participants": ["Green Dinobot/Gregory", "JDude", "Python", "iVAwalys", "NecroHeart/Vigor", "Zinochan/Lathios", "Adam", "Umbra", "gtbot"]
+            "participants": ["Green Dinobot/Gregory", "Drekareen/JDude", "Python", "iVAwalys", "NecroHeart/Vigor", "Zinochan/Lathios", "Adam", "Umbra", "gtbot"]
         },
         {
             "id": "range20",
@@ -505,7 +505,7 @@
             "judges": ["Trickysticks", "yeashie", "CrestedPeak9"],
             "numparticipants": 14,
             "result": [["The Terrible Bullet Dodger/auto2112", "Adam"],["NecroHeart/Vigor"],["Python"]],
-            "participants": ["Sparen", "Kinedyme", "Andi", "JDude", "NecroHeart/Vigor", "Zinochan", "Conarnar", "Crescendo", "Tad Marx Barba", "Asthmagician", "Python", "Green Dinobot/Gregory", "The Terrible Bullet Dodger/auto2112", "Adam", "AchySolrock"]
+            "participants": ["Sparen", "Kinedyme", "Andi", "Drekareen/JDude", "NecroHeart/Vigor", "Zinochan", "Conarnar", "Crescendo", "Tad Marx Barba", "Asthmagician", "Python", "Green Dinobot/Gregory", "The Terrible Bullet Dodger/auto2112", "Adam", "AchySolrock"]
         },
         {
             "id": "bha1",
@@ -517,8 +517,8 @@
             "host": "Jean Fox",
             "judges": ["Jean Fox", "Naudiz", "WishMakers"],
             "numparticipants": 2,
-            "result": [["Sparen"], ["JDude"], []],
-            "participants": ["Sparen", "JDude"]
+            "result": [["Sparen"], ["Drekareen/JDude"], []],
+            "participants": ["Sparen", "Drekareen/JDude"]
         },
         {
             "id": "range21",
@@ -531,7 +531,7 @@
             "judges": ["Trickysticks", "WishMakers", "Adam"],
             "numparticipants": 5,
             "result": [["Lusus"], ["ExPorygon/Ozzy840"], ["Foxigami"]],
-            "participants": ["JDude", "Bagoum", "Lusus", "Foxigami", "ExPorygon/Ozzy840"]
+            "participants": ["Drekareen/JDude", "Bagoum", "Lusus", "Foxigami", "ExPorygon/Ozzy840"]
         },
         {
             "id": "bha2",
@@ -544,7 +544,7 @@
             "judges": ["Trickysticks", "CrestedPeak9", "Badz", "MegamanOmega"],
             "numparticipants": 12,
             "result": [["Adam"], ["Naudiz"], ["The Terrible Bullet Dodger/auto2112"]],
-            "participants": ["Bagoum", "Python", "Naudiz", "Tylorfully", "Lusus", "The Terrible Bullet Dodger/auto2112", "Zinochan", "Jackie Matthews", "Foxigami", "JDude", "Green Dinobot/Gregory", "Adam", "Ryann"]
+            "participants": ["Bagoum", "Python", "Naudiz", "Tylorfully", "Lusus", "The Terrible Bullet Dodger/auto2112", "Zinochan", "Jackie Matthews", "Foxigami", "Drekareen/JDude", "Green Dinobot/Gregory", "Adam", "Ryann"]
         },
         {
             "id": "bha3",
@@ -554,10 +554,10 @@
             "year": 2021,
             "duration": [2021.01, 2021.02],
             "host": "Loann",
-            "judges": ["CreepyNinja", "Naudiz", "Loann"],
-            "numparticipants": 0,
-            "result": [[""], [""], [""]],
-            "participants": []
+            "judges": ["MegamanOmega", "CreepyNinja", "Trickysticks", "Loann"],
+            "numparticipants": 24,
+            "result": [["Junky"], ["The Terrible Bullet Dodger/auto2112"], ["Adam"]],
+            "participants": ["Junky", "The Terrible Bullet Dodger/auto2112", "Adam", "Kobito", "Bagoum", "Jackie Matthews", "Lusus", "Badz", "Ryann", "Green Dinobot/Gregory", "Middy/Midnight Sparkle", "Drekareen/JDude", "Arkenia", "Zinochan", "Rakaasac", "Taizen", "Akemi", "Kusa", "Syoudre", "DoctorD", "Kagummi", "Hoagie", "Kudo", "Luminous", "Tsuzyx"]
         },
         {
             "id": "syucc",

@@ -1,0 +1,44 @@
+Disappearing Items by kudoo
+Difficulty - Default
+Character - Reimu (default)
+Playthrough - https://www.youtube.com/watch?v=JCrrSL33pQg
+
+Creativity – 5/5
+Interesting take on Nazrin, definitely represents her quite well. I like how you started with her original non-spell, but then remixed in in various ways for the following ones. While I do think actually showcasing her pendulum would have been nice to see, at the same time the way you represented her “finding money” with her spell cards was very unique and interesting. So it managed to accomplish that aspect in an unexpected way.
+
+
+Aesthetics – 2/5
+While what's there is solid, you are missing some standard aspects. There's no death effect after beating spell cards, the spell card background is essentially a plain black background, the music just has a single loop and then it fades out to nothing, and there's no death effect or anything when the script is over. It just abruptly stops.
+
+
+Spell Grading – 7.88/10 (11.82/15)
+
+Non-spell 1 - 8/10
+Solid, get's the job done. Though for the sake of a contest that's trying to showcase your creativity, I would have preferred something that wasn't essentially her exact same non-spell from UFO.
+
+Rod Sign “Searching Rods” - 8/10
+Good idea on paper, but in practice I feel it both wants and rewards you a bit too much for staying in the middle under her. A very creative spell, but you don't end up appreciating much of it since the inclusion of the lasers does nothing, they just make you stay where you already want to be.
+
+Non-spell 2 - 7/10
+Simple, but works. I like the remix on the traditional styled spell, and the attacks move slow enough that you get the idea that something's up, rather than hugging the bottom and getting caught unaware. Though, while fun and interesting, I do have to say that just like how her fist non-spell is the same as what she did in UFO, this attack is also the same as what she did in DS
+
+Search Sign “Radar-Style Detection” - 8/10
+Cleaver spell with interesting effects (I like how the logic of the spell naturally ramps up as the bullets reach the top of the screen, turning into bullets that'll fall straight down). However, I do have to say that I do not like how the bullets can randomly spawn in on your position/right next to you. IT means that you can essentially just die randomly for something you couldn't reasonably see, or just cause you got unlucky. Traditionally spells of this nature would have a zone around your character bullets can't spawn in on.
+
+Non-spell 3 - 9/10
+Alright, now we've got a non-spell remixed off her original design that hasn't been done before. Interesting implementation, but fittingly challenging for this point in the fight and a simple but effective change that still matches the original feel.
+
+Track Sign “Movement Tracker” - 8/10
+Similar to the previous non-spell, a very clever attack, but I do not like how you have a pretty good chance of dying instantly unless you know what this spell is ahead of time. If you're near the bottom of the screen and press down, you die instantly. It's a workable and fun challenge once you're doing it, but that effect activates instantly soon as the spell starts, and that's a movement that's pretty common to make coming off the last non-spell. I feel it could have been better if the player was instead eased into the overall effect of this spell.
+
+Non-spell 4 - 8/10
+I feel like this is essentially just her last non-spell, but a bit easier considering now she doesn't have any waves that'll fire at 45 degree angles from her (and get into your face as a result). It works as a spell, but I would have preferred to see something a bit more unique here.
+
+“Searching For Coal And Finding Gold” - 7/10
+Cleaver idea, but I feel it could have used some work. Biggest one being that the “activating” laser could stand to have something to it to show the player that no, that isn't death (such as making it transparent like Search Sign “Radar-Style Detection”). Secondly, the spell is completely static, and while there's no inherent problem with that, it does have the issue that the difficulty curve of it starts strong, but then tapers off near and at the end. It makes it so the spell, and fight as a whole doesn't end with a bang, but with a whimper. 
+
+Final Score – 18.82/25
+
+Interesting and clever idea's with a few notable flaws that make the difference between this script going from good to great. The spell cards as I mentioned, overall clever idea's, but they tended to have some small, easily fixed issues to them that make them that lower the quality a bit. Non-spell wise as a whole I feel I would have liked to see some more creativity here. Yes the idea may be to make “final boss Nazrin” so reusing/remixing her original non-spells is fine to an extent. But I feel this script didn't need to stick quite this close to the source material.
+
+Aesthetics wise though, this script really could have used a once over and clean up. I mentioned everything already, but the music not even looping at all is a major one, with the jarring transitions from one spell to the next being another. The former just plain needs to be fixed, while the latter could use some serious smoothing out in that regard. 

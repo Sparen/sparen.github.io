@@ -1,0 +1,45 @@
+Azure Kappa by Junky
+Difficulty - Pretty Interesting
+Character - Marisa (Default)
+Playthrough - youtube.com/watch?v=A8w31_5Q4FU
+
+Creativity – 5/5
+Great use of having Nitori use many Nitori-like spells, and I especially love the way you incorporated both her tech into the spells themselves, but also the giant cannon in the background as well
+
+Aesthetics – 5/5
+Absolutely stunning, hands down. The HUD is amazing, your spell design is gorgeous and you've got a full 3D background that isn't just for show. At times in influences the battle with certain spells, or the camera moves around dynamically as the battle goes on as well (I was just blown away by the sudden dive into the water)
+
+Spell Grading – 8.9/10 (13.35/15 total)
+
+Non-spell - 10/10
+Very great for an opening non-spell. Simple, but there's still a lot to it. I particularly like how the actual loop is quite long and the attacks are layered. So despite the fact that it's fairly direct attacks, it never feels boring or repetitive
+
+Kappa Halo "Cephalic Ocean" - 9/10
+I kinda feel like this is asking a little much for a first spell card, but for the spell itself it is very well done. It involves you moving around a lot as you have to keep up with the safe zones from the green circles, but all the while you have to keep track of how you're manipulating Nitori's shots as well. So your eyes have to keep focusing in many directions at once without it being random.
+
+Non-spell - 9/10
+Great use of the cannon rising from the background incorporating it into the battle. A very good spell in it of itself, with direct attacks, but the giant laser will force you to keep making quick movements all around the field. So while the attacks from ahead may be predictable, your real goal is zipping horizontally
+
+Arsenal "Military Grade Genso-Weaponry" - 8/10
+A gorgeous spell, but a little too route heavy I feel. You are forced to make quick decisions, but once you understand where to go it's just a case of being in the right place at the right time. Not to say you can get completely complacent once you know the order of operations, but once you know where to go large swaths of the screen can be ignored leaving you with very few actual threats to keep track of.
+
+Non-spell - 9/10
+Same logic as the last spell, but I like the execution here better. It still has that “go here, go here, then go here” structure to it, but the actual threats you'll be dealing with along the way will come at you from multiple angles and force you to rapidly move all over the place. You're keeping track of more of the screen here, as opposed to just having to focus on a little portion
+
+Whirlpool "Stormy Seas-Sea Monster" - 9/10
+Nicely made timeout spell. Simple enough logic, but the slow and steady additions to it add a slowly increasing threat to it without really changing the logic. Even though you're getting new stuff thrown at you, you're not going to be changing your plan of attack
+
+Non-spell - 8/10
+I feel it's a little plain compared to what I'd come to what this script offers, both before and after. But plain isn't a detractor necessarily, and giving the players a moment to breathe is nice. However, I feel the horizontal lines of bullets are a little wasted here. The hardest parts to dodge are when the lines are longest while the easiest parts are where the lines are shortest. However the shortest parts are almost always under or around Nitori, so they're kinda not really doing much. Really it's just a barrage of direct attacks where you wanna hang out under Nitori and dodge whatever comes your way
+
+Non-spell - 10/10
+I absolutely love the multi-phase to this. This makes it both a really impressive spell and non-spell, but also a great lead up into the following spell card. The little warm-up at first was cute, then I love the middle portion where you're dodging the angled attacks, but always need to leave yourself room to make snap decisions to avoid the missiles. Then the final portion was a nice addition to that previous phase, maintaining a similar logic when dodging the bullets, but making them more of a threat while nixing the missiles. 
+
+Monster Cucumber "Cyan Clover -Type1-" - 7/10
+On one hand, it's absolutely gorgeous. On the other hand, once you peel back how pretty it is, you realize you're both not doing hardly anything, but you really don't have to care about much at all either. The arrowhead bullets are pure decoration making sure you can't leave the center zone you're in, so it's just a matter of focusing really closely in the bottom center and not moving any more than you need to. Scoot a little to the side of the warning lasers set up on you or if a bullet is coming your way.
+
+"Subaquedus Kappa" - 10/10
+Now here's a good way to get the player to start moving while also keeping track of alternative routes. I love the way here how you've got a simple line of bullets forcing you to go left and right, but then the crisscrossing angled lines of bullets make it so you can't just follow it easily, you may need to push up or down ahead to slip through them before you get trapped. Then after you're introduced to that logic, only then are you given additional bullets to get in your way. Great introduction to the challenge and adding onto it.
+
+Final Score – 23.35/25
+An absolutely stunning script with both beautiful graphics and some amazing attacks. Not a perfect script though, but any issues are minor. Biggest thing is that on choice moments, the spectacle of the script is taking the lead over gameplay. Spectacle is nice and will get you 5/5 on the aesthetics portion, but it ultimately will not matter how beautiful a spell is if I'm not expected to do much at all, or focus on many actual threats.

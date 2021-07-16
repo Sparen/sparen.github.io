@@ -1,0 +1,51 @@
+Bullet Hell Artistry #3 - Junky
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played on Designed for Contest Mode:tm:(R)
+
+Nonspell 1: I think this nonspell is a good start. Clear Nitori inspiration while also being fun to dodge. 8.5/10.
+
+Spell 1: I usually really dislike spells like this, but the implementation of this gimmick is actually pretty fun. You don't just insta-die if you leave a ring for a second or two and the dodging while within them is pretty fun. Good work. 9/10.
+
+Nonspell 2: She has a WHAT in the background now? Pretty interesting; I adore the aesthetics but I actually like the previous non a little more in terms of dodging. 8.25/10.
+
+Spell 2: This spellcard has enough fun elements packed into it that I honestly forgot it was just ONE attack. Wonderful. 9.5/10.
+
+Nonspell 3: Cool! I found it pretty easy to misjudge the hitbox of the Laser Thingy but that isn't a large flaw. 8.25/10.
+
+Spell 3: A good survival card that doesn't overstay its welcome. 8.5/10.
+
+Nonspell 4: I think this non's still good, just doesn't stand out too much. 8/10.
+
+Nonspell 5: Maybe the previous non didn't stand out because this one does? It's quite flashy and fun to dodge. 8.5/10.
+
+Spell 4: The warning lasers are very good design. Fun, fair, and it's kind of cool to dodge with those special warnings. 8.75/10.
+
+Spell 5: An excellent way to end the script. Ramps up in difficulty appropriately and never feels unfair. Very good. 9.25/10.
+
+Danmaku Score: 8.65/10 (scaled to 12.975/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is amazing. I admit it's kind of odd to see Touhou in a style with explosions and a giant 3D weapon in the background, but it's still excellent. 4/5.
+======================================================================================================================
+ 
+I'd say this feels very much like a final boss. There's a lot of dramatic explosions and the like, a survival spell and the usual ramping final attack. Excellent here too. 4.25/5
+ 
+OVERALL SCORE 12.975 + 4 + 4.25 = 21.225/25

@@ -1,0 +1,47 @@
+Bullet Hell Artistry #3 - Hoagie
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played with Reimu
+
+Nonspell 1: This is REALLY hard. When the waves overlap I don't think it's reasonable to expect me to dodge this, but it's maybe a tough challenge otherwise. 2/10.
+
+Spell 1: Much easier than the previous non, and seems to have a glaring safespot (I wrote this comment while sitting in the safespot)  4/10.
+
+Nonspell 2: The first non, but a lot more reasonable. I think it's definitely tough but actually kind of fun. 4/10.
+
+Spell 2: This spell would be more reasonable if the rings of arrowheads had like half the amount of bullets they do. Otherwise it's pretty tough but probably doable by a better player. 3.5/10.
+
+Nonspell 3: With this one it would be kind of tough, but you identify a safe lane in the arrowheads and just dodge the balls within it. Not that interesting as a result. 3.5/10.
+
+Spell 3: Pretty easy compared to previous patterns. Not a bad thing in this case, I think this pattern is decent. 6/10.
+
+Spell 4: Doable pattern, just takes a very long time to die. Very long. I-timed-this-out long. 2.5/10.
+
+Spell 5: An interesting idea but it's WAY too hard. Being sucked into the middle just adds to the already-high difficulty. 2.5/10.
+
+Danmaku Score: 3.5/10 (scaled to 5.25/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is above average. Ryannlib is pretty good, who knew. 3/5.
+======================================================================================================================
+ 
+I think this script's final boss-ness is...maybe a tad below average? 2/5.
+ 
+OVERALL SCORE 5.25 + 3 + 2 = 10.25/25

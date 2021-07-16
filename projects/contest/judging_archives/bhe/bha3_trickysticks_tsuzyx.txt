@@ -1,0 +1,47 @@
+Bullet Hell Artistry #3 - Tsuzyx
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Attack 1: Basic spiral. Pretty below average. 3/10.
+
+Attack 2: This is a more interesting pattern at the very least? 4/10.
+
+Attack 3: Unfortunately this attack seems pretty boring, even when compared to the previous ones. 2.5/10.
+
+Attack 4: The abrupt transformation into downward bullets isn't good, and then the pattern is simple streaming. 2/10.
+
+Attack 5: Due to the static angles it's very easy to find a safespot and just sit there. Kind of neat idea if it wasn't for that, I suppose, but it's just...boring. 3/10.
+
+gasp eyeball
+
+Attack 6: This one is lacking actual dodging. Just chill under the boss, slightly offset. 1.5/10.
+
+Attack 7: These bullets are a PAIN to see. 2/10.
+
+Attack 8: nonexistent :( there's a minimum rip. 0/10.
+
+Danmaku Score: 2.25/10 (scaled to 3.375/15)
+======================================================================================================================
+ 
+Aesthetically, the lack of sounds and general jankiness is off-putting. 1.5/5.
+======================================================================================================================
+ 
+Doesn't really feel like a final boss at all. I guess it's more of a tech demo, but bullets being able to hit you would be a start. 0/5
+ 
+OVERALL SCORE 3.375 + 1.5 + 0 = 4.875/25

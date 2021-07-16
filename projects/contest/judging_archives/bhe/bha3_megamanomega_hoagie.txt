@@ -1,0 +1,40 @@
+Rebellion of Raging Mermaid by Hoagie
+Difficulty - Extra (Default)
+Character - Marisa 
+Playthrough - https://www.youtube.com/watch?v=TuHF2Mq-U00
+
+Creativity – 5/5
+The fight definitely felt Wakasagihime-like, but also added in a bunch of interesting idea's as well that were quite fitting to boot. Such as the fished themed spell card, or the whirlpool
+
+Aesthetics – 4/5
+While nothing here really “wowed” me, I can say for certain that the aesthetics of the script were quite nice looking. The new HUD looks nice, and there was enough deviation from the norm to bump this to a 4/5
+
+Spell Grading – 6.25/10 (9.38/12 total)
+
+Non-spell 1 - 7/10
+This works, but I am not a fan of the randomness, or the speed in which everything's coming at you. This is definitely a script where you hit the ground running. But there either needs to be less randomness in Wakasagihime's attacks, or they need to come out slower. 
+
+Fish Sign “Violet Fin Slap” - 5/10
+On the flip side, this is literally just stay put and win game. There's absolutely no horizontal variation to this attack, so as long as you're in a gap under her, you just need to stay put and this turns into a waiting game for her health to run out.
+
+Non-spell 2 - 7/10
+This is basically the same issue I have with the first non-spell. On paper, this is a nice uptick in difficulty from the previous one, but this still maintains the same issues I had with it.
+
+Mermaid Sign “Mermaid in the Lake” - 5/10
+This spell feels more like a timeout spell that goes on for too long than something you're reasonably supposed to beat. Your window of opportunity to get under  Wakasagihime is minuscule at best and because of the nature of her attacks, you'll probably die for your efforts. Note, these complaints apply to all characters, since none of them have homing attacks while focused. This spell is obnoxious no matter who you choose.
+
+Non-spell 3 - 7/10
+This is... basically the exact same logic and problems of Fish Sign “Violet Fin Slap”, but with some random bullets so you can't get completely complacent. Still, the logic of it is incredibly uninspired and you still end up just hanging out in one place and maybe doing a single zigzag if a threat happens to come your way.
+
+Fish Sign “School of Fish” - 8/10
+This one I honestly think is pretty good. I like the fish motif you've got going on and I also like how it wants you to keep moving. What I don't like is the way Wakasagihime's fish will spawn above her. This is a script that wants you to move around, acts like it wants you to use the size of the screen to your advantage, but then punishes you if you do just that.
+
+Violent Sign “Water Kick” - 7/10
+This one doesn't have the same problem's that Mermaid Sign “Mermaid in the Lake” had, however they are similar in issue. The design of the spell honestly isn't half bad, it likes to keep you moving and you've always got a threat on your butt. The problem is actually damaging Wakasagihime is both annoying and quite risky to boot. So to beat this spell, you're honestly better off just timing it out.
+
+“Whirlpool of Rage” - 4/10
+An interesting idea, but this spell is incredibly sparse, especially for a final spell, plus the spell's a bit broken as well. Design wise it's... just dodge waves of bullets one at a time while getting pushed towards them for about a minute. The only bit of variety is when you'll randomly get a wave of bullets from behind you with little to no warning. Then to add to that, if you do die at any point, bullets stop spawning. You just have to sit there and twiddle your thumbs until the spell reactivates.
+
+Final Score – 18.38/25
+
+This script has some interesting idea's at times, however I feel their implementation is poor. Other times I don't really like the design of the spell at all, or I feel the design needs a lot of work to be fun to play against. There is promise to be seen here however, and I feel much of this script could be made much better with tweaking to many spells, as opposed to thinking spells just need to be start over from scratch.

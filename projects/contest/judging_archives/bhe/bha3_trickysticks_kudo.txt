@@ -1,0 +1,45 @@
+Bullet Hell Artistry #3 - Kudo
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Nonspell 1: Pretty typical Nazrin non. Not very interesting, lasts too long. 5/10.
+
+Spell 1: Seems pretty reasonable; quite slow and you should just stay in the middle. 6/10.
+
+Nonspell 2: I feel like the bullets are painfully slow in this non. Still not offensive or anything; but kind of eh. 5.5/10.
+
+Spell 2: Not too interesting but not offensive. I think a bullet spawned on top of me once? 5.5/10.
+
+Nonspell 3: More interesting than the first two nons, good work! Her random movement could be kind of annoying but it's nice. 6/10.
+
+Spell 3: Seems thoroughly fine. Not a very interesting use of the gimmick. 6/10.
+
+Nonspell 4: Fairly interesting too; maybe a little less so than the previous non. 6/10.
+
+Spell 4: The laser that looks like it could kill you should probably be transparent or otherwise indicate that it won't kill you. I think the idea is kind of fine, but the implementation is boring. There are other ways to make a survival besides turning off player shots. 4.5/10.
+
+Danmaku Score: 5.56/10 (scaled to 8.34/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is below average. Non-looping music leaving you with nothing to listen to, the patterns aren't really aesthetically pleasant, the backgrounds are super boring. 1.75/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is subpar. 2/5.
+ 
+OVERALL SCORE 8.34 + 1.75 + 2 = 12.09/25

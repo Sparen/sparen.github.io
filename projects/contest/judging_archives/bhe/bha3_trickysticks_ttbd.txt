@@ -1,0 +1,53 @@
+Bullet Hell Artistry #3 - TTBD
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played as Reimu with all her default shot options.
+
+Nonspell 1: Those missiles sure home aggressively. It's cool and fun, tough but not unreasonably so. 7.75/10.
+
+Spell 1: Another pattern that is primarily aimed, but it's pretty fun! Highly enjoyable. 8.5/10.
+
+Nonspell 2: I like this non a lot. It encourages movement in places that aren't just the bottom of the screen, and it does so with warning indicators that aren't cheap. I did have the tiniest bit of trouble noticing the targets, but making them more opaque might mean that they get in the way. Either way, very good. 9/10.
+
+Spell 2: Died the first time but I think I understood this one pretty immediately afterwards. Very fun spell, feels like you're under more pressure than you really are. 8.5/10.
+
+Nonspell 3: Oh no her thingy blew up. This non is also quite fun - it's kind of odd how the targeting indicator both means "here is being shot at" and "here is where you're safe", but that comes with learning patterns. I'd personally try having them be different colors or something of that sort. 8/10.
+
+Spell 3: Interesting one. The glowballs that explode based on proximity actually aren't that threatening (probably on purpose?) so I just dodged the pattern Nitori shot while dealing with the easy explosions. Still a good pattern, just doesn't appeal as much as the previous spells. 7.75/10.
+
+Nonspell 4: Now we have a Nitori nonspell that feels like the typical Nitori non, but taken to a level that's appropriate for a final boss. Good. 8.5/10.
+
+Spell 4: Aaaah spinning aaaa but it's not another survival card where you go in a circle the whole time. I quite like this; I thought getting out of the middle in time was a little more challenging than previous attacks but it's not really a detriment. 8.75/10.
+
+Spell 5: A challenging multi-phase script ender. I feel like dodging the aimed bursts of bullets came down to luck occasionally since the small circle bullets are spread randomly? Otherwise it's a fun and challenging fight-ender. 8/10.
+
+The stage portion afterwards is pretty interesting (but we no judge stages oop).
+
+Danmaku Score: 8.31/10 (scaled to 12.46/15)
+
+However, I will note that this difficulty is very high. I struggled to clear it, and you should be mindful that not all judges can play this. I'll chop off the .46 in the above score because of this and just make it 12/15.
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is very good. Everything meshed together very well and I found it overall impressive. 4.5/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is extremely high. It works off of Nitori's existing themes in amped-up ways. 4.5/5.
+ 
+OVERALL SCORE 12 + 4.5 + 4.5 = 21/25

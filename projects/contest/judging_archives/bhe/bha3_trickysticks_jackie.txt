@@ -1,0 +1,51 @@
+Bullet Hell Artistry #3 - Jackie Matthews
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Stages can't be judged but I'll start from Nazrin's first pattern!
+
+Pattern 1: I quite like the first part with the kunai triangle...things. The addition of the white round bullets doesn't seem to make it that much more difficult. The kunai lines and glowy bullets don't seem to last that long, but I found dodging that section for a short while pretty engaging as well. 8/10.
+
+Pattern 2: A rather simple twist on a Nazrin non that walls more at the start, which is fine...and then it turns into something pretty neat when the pattern twists diagonally. Also quite engaging. 8/10.
+
+Pattern 3: Fairly standard variant on Busy Rod, but it becomes really cool when the lasers spawn all of those bullets in a cool-looking pattern. Maybe a tad worse than previous patterns, but still good. 7.75/10.
+
+Pattern 4: C o i n and B u b b l e. Seems quite fine to me. Not as interesting as the last three, but they can't all be. 7.5/10.
+
+Pattern 5: Starts off suspiciously slow...ah, there the extra bullets are. Fun pattern based on what she usually does, as usual. 7.75/10.
+
+Pattern 6: Now these are some interesting kunai patterns. Again, starts slow, but then lol aimed bullets of doom. The transition into the spiral-y bit in the second half is nice and felt fair. 7.5/10.
+
+Pattern 7: Here the pendulum thingies are! I can't believe they did the BoWaP. Something feels kind of weird about how the lasers are fired, but that's an aesthetic thing mainly - I didn't find them particularly problematic to dodge. 7.75/10.
+
+Pattern 8: yay background. The fairies shoot some REALLY fast bullets that aren't easy to see coming, especially this far into the fight. The first part of it is good once you understand how they work though. The second half with the day-the-sea-split kind of thing is also quite good, though I'm not sure if the fire on the sides is EXTREMELY lenient or just lacks a hitbox. The third segment admittedly was still good, just not very impressive? Dodging the glowy orbs while some coin spam comes down is still fair and fun, just not very outstanding. Overall it's hard to average all three parts, but I'll say 7.25/10.
+
+Pattern 9: This one is a pain, I'd say. The gaps in the lasers aren't the easiest thing to see and they actually rotate quite quickly. Nazrin also moves up for the next phase while the lasers are still there, resulting in some weirdness I died to. I wish the second phase with the laser cage actually had you move more, since if you start centered you only need to move one box to the right/left. overall not a bad pattern or anything, just kind of disappointing compared to previous ones. 6.25/10.
+
+It ended here for me, and I assume it's the same for everyone since the script isn't done?
+
+Danmaku Score: 7.53/10 (scaled to 11.29/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is definitely above average. I like the aesthetic quite a lot, and most things are telegraphed well without being ugly. 3.75/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is above average too. Abrupt ending aside, the patterns are appropriately flashy and feel like what a final boss would use. 3.5/5.
+ 
+OVERALL SCORE 11.29 + 3.75 + 3.5 = 18.54/25

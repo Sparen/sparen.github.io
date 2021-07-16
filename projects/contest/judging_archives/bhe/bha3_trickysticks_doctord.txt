@@ -1,0 +1,55 @@
+Bullet Hell Artistry #3 - DoctorD
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played as Flandre.
+
+The opening is weird.
+
+Nonspell 1: This non is fine and why is she dancing. 6.5/10.
+
+Spell 1: Very slow to start but the pattern is...fine? Why is there a random jumpscare. 6/10.
+
+Nonspell 2: Timed this one out. The pattern is fine but she goes around all over the place. 5.5/10.
+
+Spell 2: It's...fine? I don't like it very much but it's not super bad or anything. 6/10.
+
+Nonspell 3: Pretty solid pattern. 7/10.
+
+Spell 3: Also pretty solid. I think the stopping bullets are pretty abrupt, but it's a neat idea! 7/10.
+
+Nonspell 4: Also a solid pattern. I admit I don't have a lot to say about these. 7/10.
+
+Spell 4: Pretty solid survival, too. Maybe too sluggish to start? 6.75/10.
+
+Nonspell 5: Aimed bullets from weird-ass places. Also fine! 7/10.
+
+Spell 5: Why is the cutin that. Why are there teeth. The pattern is fine though! 7/10.
+
+Spell 6: wtf. Anyway, the earlier lasers are so big they're kind of weird? But the last phase is quite interesting. 7/10.
+
+Danmaku Score: 6.61/10 (scaled to 9.92/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is above average. Probably a solid 3.25/5 or so? But I hate, hate, hate jumpscares. Hate them enough to reduce your score to 1.5/5.
+======================================================================================================================
+ 
+I think the script's final boss-ness is...uh...too ridiculous to take seriously, so you also get a 1.5/5.
+ 
+OVERALL SCORE 9.92 + 1.5 + 1.5 = 12.92/25

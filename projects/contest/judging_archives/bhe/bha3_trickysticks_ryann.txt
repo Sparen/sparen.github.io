@@ -1,0 +1,57 @@
+Bullet Hell Artistry #3 - Hiro/RYANNNNN
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played normal mode.
+
+Stage Section I Can't Judge Or I'll be Fined (But I'll Comment Anyway): The gimmick of shooting down a lot of stuff is actually kind of difficult to achieve. That makes it meaningful, so good job. Cirno's non is neat. Why is she a Dyke. Overall, good and interesting. Difficulty balance seems a little jumpy at fine but nothing super egregious. Would give it a 7-8ish out of 10. 
+
+Nonspell 1: Decently fun opener. Not very "pretty" but it gets the job done. Solid work. 7.5/10.
+
+Spell 1: Oh dear, big whirling white things falling down. Macro them or die. Seems solid. 7.25/10.
+
+Nonspell 2: Honestly it took me a while to even notice bullets actually wrapped around here. The gimmick exists, but I ended up just chilling near the bottom and not needing to dodge very much. 6.75/10.
+
+Spell 2: The spell being dodgable from both inside and outside of the...what the hell is a hawser...is good design. I like this one quite a bit. 8/10.
+
+Shou Shows Up: wtf/10
+
+Nonspell 3: Weird pattern. Fun enough, but weird. 6.75/10.
+
+Spell 3: A "the boss invades your personal space" spell that gives plenty of time to see that she's coming and route her appropriately. I like this one. 8/10. 
+
+Nonspell 4: Alpha Bubbles :0. Otherwise, not a lot to say about this one. Decently fun, kind of slow-paced compared to the rest. 6.75/10.
+
+Spell 4: Spending like half the spell unable to shoot her is pretty unsatisfying in my opinion. In fact, a lot of this is relatively unsatisfying dodging within a narrow lane. Good idea, but the execution just seems average. 5/10.
+
+Spell 5: I think you should really make the boss untargetable during survival cards since I thought you had to shoot her for like...most of this. Besides that, I find this pattern shockingly difficult when compared to the rest of the script. Also the name is weird. Altogether I'd rate this a 6/10.
+
+Spell 6: wow it's the name of the script. Anyway, this is a solid multi-phase script ending thingy. 7.5/10.
+ 
+Danmaku Score: 6.95/10 (scaled to 10.425/15)
+======================================================================================================================
+ 
+Aesthetically I actually quite like this. Sound effects were used well, the visuals are nice, and it doesn't completely reek of default LuaSTD. 3.75/5.
+======================================================================================================================
+ 
+As a final boss, I think you did fairly well. The...weird interlude didn't really help your case, but it didn't hurt it too much either. Pacing got a little weird with nonspell 4, but I still like it overall. 3.25/5
+ 
+OVERALL SCORE 10.425 + 3.75 + 3.25 = 17.425/25
+
+post-judging meme comment: ryan wtf is with your spell names

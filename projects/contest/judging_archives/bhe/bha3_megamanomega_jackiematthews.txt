@@ -1,0 +1,44 @@
+Golden Siege of El Dorado by Jackie Matthews
+Difficulty - Original Mode
+Character - Reimu (default)
+Playthrough - https://www.youtube.com/watch?v=wB0nB8JlB6w
+
+Creativity – 5/5
+Very well done and a really cool take on Nazrin. The script features call-outs to her without being direct for too long, and all around feels like a very Nazrin-like fight when it gets tougher. I really love all the gold theming you did for the “treasure hunter”
+
+Aesthetics – 5/5
+Definitely also very well done. Custom HUD, custom sprites, unique effects and I really like the little damage counters you've got on enemies when you deal damage. Only thing is, I would have liked it better if that stage started with some background at the beginning, though as is the blank black does juxtapose nicely with the golden cave background when the fight reaches the crescendo
+
+Spell Grading – 7.78/10 (11.67/15 total)
+
+Phase 1 - 9/10
+Not bad for an opening attack. It gets the point across and is challenging enough for an opener. Plus, the addition of the white bullets was a nice touch to add to what the player's already learned. The lines of kunai I could take or leave, since usually I don't care for attacks that lock you down like that. But it was fast paces and kept you moving, despite the logic of it. 
+
+Phase 2 - 9/10
+Nice use of her original style of non-spell into this attack, and I particularly liked the second half where she rapid fired diagonal bursts that still maintained the same style. It kept the same effect, but looked cool.
+
+Phase 3 - 10/10
+I really like this one. The warning laser gives you a clear idea where you need to keep going to, while you also need to keep track of the coins from the sides and the bullets coming from ahead. A lot of stuff you need to keep track of, and keeps you moving without getting overwhelmed
+
+Phase 4 - 9/10
+I feel this does a good job of “locking” you down, without feeling like you're trapped. You're given very little room to move, but the constant reactivating lasers allow you to, and force you to move about rather than staying in a single place and just focusing on the coins.
+
+Phase 5 - 8/10
+I like the twist on her old style of attack, keeps the Nazrin feel while pulling off something new. That said, I do find near the end of the phase, the flames on flames do make it a little too easy to get trapped. It comes off as a little too oddly dense compared to what came before and after
+
+Phase 6 - 7/10
+Compared to what came before, I'm not really a fan of a hard and fast, yet simple “hug the bottom and dodge what comes your way”, especially when all you have to contend with is some streaming followed by some normal waves. But my real issue with the spell is in the first half with the streaming. Essentially you want to ignore the yellow kunai since you're streaming them, however with the angles they're coming at you from, they'll hide the straight falling white kunai you're trying to focus on and really have to worry about dodging. 
+
+Phase 7 - 8/10
+Is this a slow moving BoWaP with lasers and the occasional sideways coins? It works, but compared to what came before, I really wish there was more to this spell. Like if there was more done with the coins or lasers
+
+Phase 8 - 6/10
+Honestly speaking, for the first part this just feels like “cheap shots: the spell”. First you give warning lasers with enemies that don't quite shoot down said warning laser, they're instead attacks aimed at you that you just need to know not to move much vertically to avoid. Then you also just need to know ahead of time that on the last wave she randomly changes the rules you set up and instead of minor movements, you need to make a wide jerk to the side to avoid the massive wave aimed at you
+The second part looks cool, until you realize the flames are largely ignorable. Because of the way the bullets work (not really forcing you to the sides, just looking like they might) all you really have to do is hug the bottom, stay under her and move just a little bit as needed
+The last phase was kinda cool, I just wish the horizontal bullets were less random. Cause of the nature of them, more often than not you can position yourself in a single spot horizontally between the two of them, and then ignore them for a moment as you focus on the coins exclusively. Depending on your luck, sometimes for multiple waves in a row. 
+
+Phase 9 - 5/10
+I thought the first half was alright. A little overly aggressive, but still fun to do. The problem is that the second half of the phase completely ruins it. You spend so long doing absolutely nothing, and the few times any threat actually does come your way, you have more than ample time to react to it, and it just involves a simple hop to the side.  
+
+Final Score – 21.67/25
+Really cool aesthetics and a really strong start, but the design of the script really felt like it piddled out near the end. I really feel a lot of the latter spells (especially the last couple) could have used some serious work to be a lot more fun to fight against. As is they're just much too simplistically designed and really not that fun to fight against.

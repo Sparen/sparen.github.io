@@ -1,0 +1,51 @@
+Bullet Hell Artistry #3 - Luminous
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played as "reibu". What's a reibu? Lumi...
+
+Nonspell 1: Oh, we're basing it off of THAT ExRumia, aren't we. I think it's not really all that interesting but slightly above average. 5.5/10.
+
+Spell 1: I see the inspiration. I like this a good bit more than the previous non - it's pretty interesting to dodge. Not super exciting or anything, but gooder. 7/10.
+
+Nonspell 2: Simple variant of the previous non. Pretty decent, 6.25/10.
+
+Spell 2: This pattern is a very neat idea! It starts making weird walls/has bullets coming from behind you if you take a while, and as someone who died immediately it did take a while. I assume it's supposed to die quick like most patterns, but I don't think the weirdness if you prolong things is intended? If the pattern were more reasonable without speedkilling it I'd rate it higher, but with that flaw I'd just give it a 5/10.
+
+Nonspell 3: V a r i a n t. Not that exciting. Slightly better than the first? 5.75/10.
+
+Spell 3: Go to middle is illegal 0/10. Just kidding. What SHOULD be illegal is how loud those laser sounds are. The pattern is tough-but-fair otherwise, the go-to-middle is an amusing nod to something else, but the pattern's not really that fun to dodge and my EARS. I'd rate it solidly average. 5/10. 
+
+Nonspell 4: Now it's streaming, yay. I'd say this is actually a below-average streaming pattern, to be honest? It's below average on fun, less fun than patterns that are literally JUST aimed bullets without residual crap to move through. 4/10.
+
+Spell 4: Very unfun spinning that takes ages and makes me want to commit UaUP. 1/10.
+
+Spell 5: It's micrododging of dawn alright. Tight micrododges, way harder than the rest of the patterns, doesn't really have a nice dramatic buildup like most final boss scripts. Below average for sure, but not unsalvageable. 2.5/10.
+ 
+Danmaku Score: 4.389/10 (scaled to 6.583/15)
+======================================================================================================================
+ 
+Aesthetically I'd call this below-average. Not because of ice mountain and default assets - if anything I really don't mind those. But between the music not looping (unless I broke something???) and the utter ear murder of those lasers I'm taking off half a point. 2/5.
+======================================================================================================================
+ 
+As a final-boss, I don't think you did that good of a job. Pacing-wise, some of the patterns felt like slicing through butter with a hot woo, while others took a while. The final pattern didn't really have a climatic build-up. Just...eh. A bit below average. 2/5
+ 
+OVERALL SCORE 6.583 + 2 + 2 = 10.58/25
+
+Post-judging meme comment: I played as mariss and wtf

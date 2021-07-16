@@ -1,0 +1,51 @@
+Bullet Hell Artistry #3 - Syoudre
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played on Normal Mode.
+
+Nonspell 1: Not super interesting. Bouncing balls. A bit above average. 5.25/10.
+
+Spell 1: Seems quite a bit harder than the nonspell before you realize you can shoot down the oranges. I like it, but it feels like almost half a difficulty above the previous. 6/10.
+
+Nonspell 2: Also fine. Angular velocity thingies, not super interesting but above average. 5.25/10.
+
+Spell 2: Bouncing balls with aimed thingies? I like this better than the previous patterns.  6.25/10.
+
+Nonspell 3: BoWaP in disguise?! Anyway it's better than the last two nons. 5.5/10.
+
+Spell 3: Dodging angular velocity in a confined space. Not super interesting unfortunately, but it's fine. 5.5/10.
+
+Nonspell 4: This is way harder than the other patterns, I feel. Not too hard for me, but probably too much compared to previous patterns. 4/10.
+
+Spell 4: It's an acceptable survival. Not super interesting, but not offensive. 5/10.
+
+Spell 5: Multi-phase script ender. The first phase is kind of pointless in my opinion, since it's super easy and only gets easier when you shoot down the oranges. 5.25/10.
+
+Danmaku Score: 5.33/10 (scaled to 8/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is a bit below average. The realistic oranges are pretty weird and I feel like the graphics clash a lot. 2/5.
+======================================================================================================================
+ 
+I think this script's final boss-ness is below average. Most patterns aren't very flashy/bombastic/fitting for a final boss. 1.5/5
+
+Also do note that you can easily cause an error by trying to use C to immediately skip dialogue at the beginning.
+ 
+OVERALL SCORE 8 + 2 + 1.5 = 11.5/25

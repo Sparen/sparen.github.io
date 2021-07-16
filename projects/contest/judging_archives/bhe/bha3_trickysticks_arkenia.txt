@@ -1,0 +1,63 @@
+Bullet Hell Artistry #3 - Arkenia
+For this contest I'm using a 25 point rating scale so I don't get fined.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Final Boss-ness: 5/25
+ 
+5 points will be dedicated to how well the character feels transformed into a final boss. It's a judgment of how their themes translate into a more "serious" fight. Mostly subjective, but I'll try to give detail about why I rated something highly/lowly in this category. 
+======================================================================================================================
+
+Played on Normal Mode with Reimu
+
+Stage Pre-Midboss: Kind of boring but fine. Not judged since not boss oops.
+
+Midboss: This pattern's...not really much of a pattern, I'd say. There's just bullets without rhyme or reason. Also not judged.
+
+==ACTUALLY JUDGED STUFF BELOW==
+
+Nonspell 1: It's a fine nonspell. The line pointing at the player was kind of hard to notice at first. 6.5/10.
+
+Spell 1: Kind of an interesting idea but wasn't particularly fun - For the most part you avoid the blue bullets and chill in safespots once you misdirect the aimed lasers. Neat but boring. 6/10.
+
+Nonspell 2: Continuation of the previous theme. Seems about the same in terms of score. 6.5/10.
+
+Spell 2: E U B!!! Just kidding. Anyway, I appreciate the references to older patterns in this spell. Avoiding the yellow stars tends to be trivial and then there's not actually that much dodging to be done, depending on how the RNG decides to treat you. 6/10.
+
+Nonspell 3: I like this non a little more than the previous two.  6.75/10.
+
+Spell 3: Kind of annoying since the back shot the Reimu player has appears to be pretty weak. Felt more tedious than fun. 4.5/10.
+
+Nonspell 4: Feels really easy compared to the last nons. Also a bit above average. 6/10
+
+Spell 4: A gimmick we've seen before. I think it's kind of weird though and I almost figured it would be a survival as first. 6/10.
+
+Nonspell 5: The time stopping is Weird/doesn't do anything other than maybe kill you since the bullets keep going and why are the bullets flashing. It's...not boring, per se, but it's not very interesting either. 4/10. 
+
+Spell 5: The gimmick is actually good! But I'm not sure if it's all aimed or just mostly aimed, because I beat it by just streaming. Excellent idea though. 7/10.
+
+Spell 6: So the gimmick is that bullets of the same color as your woo are attracted to your woo. However, you have no control over your woo and it starts changing frequently enough that I ended up not caring about my woo color and just ran through bullets. 6/10.
+
+Spell 7: Felt a bit long but I quite like this final pattern. It's pretty fun! 7.5/10.
+
+Credits Pattern: lol (unjudged)
+
+Danmaku Score: 6.0625/10 (scaled to 9.09/15)
+======================================================================================================================
+ 
+Aesthetically, I'd say this script is above average. Work evidently went into this - I think Kisume's boss aura is way oversized, and the grazing stars are annoying, but they aren't enough to detract too heavily from the experience. 3/5.
+======================================================================================================================
+ 
+I think this script's final boss-ness is pretty good. 3/5.
+ 
+OVERALL SCORE 9.09 + 3 + 3 = 15.09/25
