@@ -558,6 +558,14 @@ function participantHistory_graphgen() { //call with a button call
 
     phgg_svg += createBorder(phgg_svg_height, phgg_svg_width);
 
+    // Alternating lines get different color for contrast
+    for (participantctr = 0; participantctr < phgg_selpartic.length; participantctr += 1) {
+        if (participantctr % 2 == 0) {
+            let phgg_curry = 16 + participantctr*16;
+            phgg_svg += '<rect x="4" y="' + (phgg_curry - 8) + '" height="16" width="' + (phgg_svg_width - 132) + '" fill="#282828" stroke="none"></rect>';
+        }
+    }
+
     //Now let's plot the timestamps. The years are 32*6 pixels apart. So that means 16 pixels per month.
     //144 is the buffer on the left (for names). 128 is the buffer on the right (for the key)
     for (yearctr = 0; yearctr < years.length; yearctr += 1) { //years
