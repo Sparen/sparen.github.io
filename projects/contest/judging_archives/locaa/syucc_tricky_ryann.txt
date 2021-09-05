@@ -1,0 +1,65 @@
+Unconnected Card Captors - Ryann1908
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to how well the chosen character uses danmaku themes from other characters. A high score in this category means you did a good job of synthesizing the danmaku style of two characters, while a low score means that your synthesis was lacking.
+======================================================================================================================
+
+I played everything not intended to freeze a single bullet or bomb because apparently that gives a bad end :(
+
+Stage Pre-Misaki: Interesting enough. Literally everything? is aimed but that's not bad. 7.25/10.
+
+Midboss Nonspell 1: Fairly interesting idea actually. I liked it. 7.5/10.
+
+Midboss Spell 1: Actually fairly fun once you learn it. You need to aggressively dodge through gaps. 7.5/10.
+
+Midboss Spell 2: Multi-phase, hmm. The best pattern so far, I'd say. 8.5/10.
+
+Stage Post-Misaki: The parts that force you up and towards the middle are pretty interesting. B o w a p. 7.5/10.
+
+hi Ichirin
+
+Nonspell 1: This non really keeps you moving - it puts you under stress but it's not actually that difficult. Very nice. 8.5/10.
+
+Spell 1: The screen shaking is thematic but I'd still suggest toning it down a notch because it's annoying. I like the idea of it though, and the pattern is fair once you get over the constant earthquake. 7/10.
+
+Nonspell 2: This doesn't feel very strongly like Ichirin, but the pattern itself is quite fine. 7/10.
+
+Spell 2: Thematically neat, but in practice you just dodge the rings. Which is fine, of course! 7.25/10.
+
+Nonspell 3: Fun pattern, but it still doesn't feel very Ichirin. 7.75/10.
+
+Spell 3: Lightning laser hitboxes are always annoying. Besides that I appreciate the multiple phases of this pattern. It's fun and fair enough. 7.5/10.
+
+Nonspell 4: Another solid nonspell. 7.75/10.
+
+Spell 4: Screenflipping is suffering, even if you attach fisting to it. My hatred of the gimmick aside this pattern isn't TOO bad to handle. 6.75/10.
+
+Nonspell 5: S o l i d. Again, feels more like a pure Suika thing than Ichirin - attaching fisting does not an Ichirin make. 7.5/10.
+
+Spell 5: What the hell is this. It's fascinating and novel, that's for sure. Making tiny bullets even tinier in a small window isn't something I like, but this is cool! 7.5/10.
+
+Spell 6: wow fisting survival aaaand what the hell. I'll...judge the existing pattern and say it's fine? A bit harder than everything else, I'd say. 6.75/10.
+
+Danmaku Score: 7.47/10 (scaled to 11.20/15)
+======================================================================================================================
+ 
+Aesthetically this script is pretty neat. Maybe that's just how LuaSTG be, but I'm quite impressed. 3.75/5.
+======================================================================================================================
+ 
+This script does a decent job of following the contest gimmick. I think you leaned too far into the characters that aren't Ichirin, especially in the nonspells. 3/5.
+ 
+OVERALL SCORE 11.20 + 3.75 + 3 = 17.95/25

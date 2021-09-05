@@ -1,0 +1,43 @@
+Unconnected Card Captors - Lushie
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to how well the chosen character uses danmaku themes from other characters. A high score in this category means you did a good job of synthesizing the danmaku style of two characters, while a low score means that your synthesis was lacking.
+======================================================================================================================
+
+Nonspell 1: This one is pretty good! Spirals like Kogasa, but with Seija's gimmick incorporated. 8/10.
+
+Spell 1: I still hate control inversion, but it's part of the gimmick so your soul is spared. Decent enough mix of both character themes and the pattern is fun enough. 7/10.
+
+Nonspell 2: I like this one quite a lot as well. Fun mix of both themes; simple and effective. 8.5/10.
+
+Spell 2: Grudge Bow from the bottom is actually pretty neat. Not the most original, but I had fun. 7.5/10.
+
+Nonspell 3: Choosing an Okina-style pattern after the previous spell is actually quite neat. Good. 8/10.
+
+Spell 3: Hi Kuroji. Actually quite fun and it's not too hard to remember where the brain fingerprint thingies will be. 7.75/10.
+
+Spell 4: Pretty good pattern. I initially forgot I had the back shots available; if I remembered I would likely have taken a lot less time. Also very solid, 8/10. 
+
+Danmaku Score: 7.82/10 (scaled to 11.73/15)
+======================================================================================================================
+ 
+Aesthetically this script is above average. Nothing super fancy, nothing bad. 3.25/5.
+======================================================================================================================
+ 
+This script does a very good job of following the contest gimmick. The patterns always felt like Seija with a mix of the involved character's danmaku style. 4.5/5.
+ 
+OVERALL SCORE 11.73 + 3.25 + 4.5 = 19.48/25

@@ -1,0 +1,54 @@
+Wishmakers Byakuren
+Stage: 14/20
+-The fairy patterns are a bit formulaic, but they follow a formula that works. 
+-Aimed bullets force you to constantly stream preventing you from camping, bulkier enemies spawn bullets that make streaming harder while also forcing you to jump around a bit more.
+-There aren't any patterns that particularly stand out though, they're all pretty generic.
+-Most fairies either spawn all their bullets before you get the chance to kill them, or are spawned in such large quantities with such basic patterns that killing them doesn't change the difficulty at all. This causes the stage to feel more like one long survival spell rather than an actual interactive stage. If you have lingering enemies continue to fire bullets, it encourages the player to make an active effort to kill them. The blue bubble and green knife fairies are the only ones who really take advantage of this.
+
+Murasa: 9/10
+-A simple, but excellent pattern. It has a lot of walls which block of parts of the screen, combined with lanes which further limit your movement. Dodging generic spam within an enclosed space, especially when you have some control over where that space is, is good pattern design.
+-My only complaint is just nitpicking, but this is veeeery generic Murasa so the pattern doesn't leave much of an impression.
+
+Shou Non: 3/10
+-A very basic Shou nonspell. It lacks the speed of the original Shou's nons, as well as the pressure of Shou's shiny orb bullets.
+
+Shou Spell: 6/10
+-Once again, an incredibly basic style spell. 
+-That said, the way the scale bullets move at different speeds subverted my expectations. Usually with this kind of spell moving towards the center is the best, as that's where the least number of bullets will be. However, with this pattern the safest place is actually the bottom of the screen.
+
+Byakuren non 1: 8/10
+-I'm assuming the knives are static, but for a short script like this memorizing their patterns is too much to ask.
+-If they're not static, then they were a bit too fast/plentiful for me to keep track of while also trying to dodge the giant laser.
+-The lower spawn points of the bullets may also have something to do with it.
+-Conceptually the pattern is simple but good, it was just a bit too hard for me, almost to the point of feeling kind of cheap.
+
+Byakuren spell 1: 6/10
+-Aimed bullets from every angle are always fun, and the giant laser fan blocks you in, preventing full movement.
+-While the spell has lots of flashy things going on, when you boil it down, really the only threatening thing is the aimed knives. Basic streaming. You could have upped the difficulty and made it more interesting by adding some bullets to make streaming harder.
+-It's sort of a reverse cheap shot- it looks like there's lots of dangerous stuff, but really it's all flash and no substance.
+
+Byakuren non 2: 7/10
+-A very Tsukasa-esque non. Aimed lasers are kiiiiiind of a cheapout way of saying "this is Byakuren", but I won't dock you for that. All around a decent pattern.
+-It can be cheesed by vertically streaming between the point where the two kunai waves meet and the boss.
+
+Byakuren spell 2: 5/10
+-This is an interesting spell, in a way. It's incredibly easy, you just have to look for the spawn delays of the lasers and from there it's trivial. I'm not used to having to watch for spawn delays, though, so if I'm not paying attention I'll slip up very easily as well.
+-I wouldn't feel right giving this pattern more points because it's so simple and trivial if you're paying attention, but it did make me do something I'm not used to.
+
+Byakuren non 3: 10/10
+-I love this pattern. The way the bubbles spawn walls you in if you're not careful, and the dot bullets are an appropriate amount of spam that you're forced to dodge.
+-It takes similarities between Remilia's and Byakuren's patterns and overlaps them elegantly.
+
+Byakuren spell 3: 9/10
+-A spell reminescent of both Flying Fantastica and Red Magic, but once again combining them makes something that feels altogether unique.
+-My one and only complaint is, when the red orbs start flying in random directions, occasionally they will fly up behind you from off screen, which is very annoying and cheapshotty.
+
+Theme adherence: 8/10
+-The patterns are very clearly Miko, Tsukasa, and Remilia, so good job there. Remilia in particular captured the theme of the contest beautifully.
+-The knife spam you chose for Miko is pretty generic, though, and her spell card barely incorporated any Miko attributes at all. 
+-Similarly, Tsukasa has very generic spells all around so it's pretty easy to make a pattern and say "oh this is a Tsukasa one!" The Tsukasa non barely incorporated any Byakuren themes at all.
+
+Overall: 93/120 = 77.5%
+-My biggest complaint about this script is that there are a loooot of incredibly generic patterns. I've said "good but simple/basic" at least three times in this document. 
+-This is the kind of script that is good because it follows formulas for "what's good", but it's also the kind of script that you play once and then never think about again.
+-Taking more risks in pattern design, even if it ultimately would hurt your score, would go miles towards leaving a more distinct impression.

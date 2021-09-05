@@ -1,0 +1,14 @@
+UCC Judging - Spring Fairy and the Market
+ 
+--Closing Thoughts--
+ 
+Umm, Err.
+This was certainly unique?
+I really can't provide commentary to the patterns individually, This script? Entry? may end up disqualified.
+From incredibly rough patterns, to the player not shooting when outside the play area, to no bounding box, to the hitboxes...
+The patterns themselves aren't that bad but quite rough nonetheless (Such as 20 seconds of a single pattern that doesn't change and doesn't do anything else in the stage)
+
+Uhhh, I mean. For Scratch this is pretty okay?
+	But like, in Danmaku standards...
+		Yeah.
+                                    -cat

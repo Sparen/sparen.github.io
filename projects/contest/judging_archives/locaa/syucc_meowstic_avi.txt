@@ -1,0 +1,42 @@
+UCC Judging - Project Courtain
+ 
+Pattern judging:
+ 
+--Sumireko Non 1--
+"a middle of the road start" (4/10)
+-While we're taking some cues from VD, Two spirals is a good 4/10 baseline to base things from.
+-The aimed portion of the non ultimately does nothing since it's so easy to avoid, but is interesting to look at.
+
+--Sumireko Non 2--
+"getting there, getting there" (4/10)
+-Spirals,  but different.
+-I can definitely see some Miko non shenanigans, but these don't exactly interact with one another.
+-The spiral portion does feel more Mokou-y than VD Sumireko, which I kinda prefer over VD.
+ 
+--Sumireko Spell 1-- Mike Goutokuji "Beckoning Good Fortune"
+"fortunately not as bad as the actual thing" (5610)
+-An Interesting take on Beckon Sign "Shoot Away Disaster, Beckon in Fortune".
+-It does however feel much more chaotic due to the amount of Amulets shooting the rainbow lanes, and how less dense they are.
+-The Bubbles here seem more tacked in, but still serve their purpose of keeping the player in check.
+ 
+--Sumireko Non 3--
+"doooo dodoDOdoooo dodo do do do do do doooo" (6/10)
+-Speaking of Mokou!
+-A very simple but effective Mokou pattern, using the rings from her nonspells of death to keep the player on their toes while they pass the amulet lanes.
+-This is however where the engine starts to show it's bad parts, The hitboxes can be quite deceptive, making it way harder than it should be.
+ 
+--Sumireko Spell 2-- Fujiwara no Mokou "Flight of the Fire Bird" 
+"paper cutout of the fried chimken" (2/10)
+-A very simple take on Mokou's phoenix spells.
+-Dare I say... Way too simple? Backup spiral danmaku and rings would be nice, but the Phoenix shots  only leave very random residue, and a single trail at that.
+-The Phoenixes do even feel like single sprites with no weight to them, they can even be shot down, while being static, meaning one can stay in the center and make the spell relatively easy.
+-I would recommend having the Phoenix shots leave bullets that follow a pattern, like a loose spiral, while also having the Phoenixes be aimed, or alternate between angles, like they do on the actual battle.
+ 
+--Closing Thoughts--
+ 
+I can definitely see this script (Game?) as a tech demo, something Avi can work on and perfect the more time goes on, I can tell from experience that working on Unity is quite confusing at first, Due to this, I can happily await more Unity content in the future.
+
+As is stands however, This script is rather... barebones, No background, no sound, Deceptive hitboxes, the Movement works well, which is something that plagues most bullet hell games from scratch.
+ 
+Keep working at it, Keep going at it, Actual gold is struck by working through the earth.	
+									-cat

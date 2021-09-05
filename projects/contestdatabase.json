@@ -283,8 +283,8 @@
             "host": "PhantomSong",
             "judges": ["ExPorygon/Ozzy840", "AJS"],
             "numparticipants": 17,
-            "result": [["Arby26"], ["Darkness1"], ["Trickysticks"]],
-            "participants": ["bronxterror/Ultimadragon88", "Lunarethic", "Aoki Yakumo/1000 Sun Studios", "Lefkada/Ephy", "Arby26", "Trickysticks", "7636kei/Goldstein Izayoi", "Darkness1", "Baron Blade", "Bob the Tanuki", "Alicirno", "Sariel", "Conarnar", "Yukkurix3", "Kirbio", "TresserT", "Sparen"]
+            "result": [["raz/Arby26"], ["Darkness1"], ["Trickysticks"]],
+            "participants": ["bronxterror/Ultimadragon88", "Lunarethic", "Aoki Yakumo/1000 Sun Studios", "Lefkada/Ephy", "raz/Arby26", "Trickysticks", "7636kei/Goldstein Izayoi", "Darkness1", "Baron Blade", "Bob the Tanuki", "Alicirno", "Sariel", "Conarnar", "Yukkurix3", "Kirbio", "TresserT", "Sparen"]
         },
         {
             "id": "artifact3",
@@ -349,7 +349,7 @@
             "judges": ["Lefkada/Ephy", "Neshima", "AJS"],
             "numparticipants": 18,
             "result": [["TresserT"], ["Python"], ["Spectral Nexus"]],
-            "participants": ["TresserT", "Python", "Spectral Nexus", "Lunarethic", "Kirbio", "Zhan Fox", "NecroHeart/Vigor", "gtbot", "AchySolrock", "Arby26", "Sparen", "Conarnar", "Miplouf", "Haru", "Badz", "DrytheMeowstic", "PhantomSong", "tyrz_939", "Trickysticks", "Fefnir"]
+            "participants": ["TresserT", "Python", "Spectral Nexus", "Lunarethic", "Kirbio", "Zhan Fox", "NecroHeart/Vigor", "gtbot", "AchySolrock", "raz/Arby26", "Sparen", "Conarnar", "Miplouf", "Haru", "Badz", "DrytheMeowstic", "PhantomSong", "tyrz_939", "Trickysticks", "Fefnir"]
         },
         {
             "id": "locaa7",
@@ -568,9 +568,9 @@
             "duration": [2021.06, 2021.07],
             "host": "TresserT",
             "judges": ["TresserT", "Trickysticks", "DrytheMeowstic"],
-            "numparticipants": 0,
-            "result": [[""], [""], [""]],
-            "participants": []
+            "numparticipants": 6,
+            "result": [["WishMakers"], ["raz/Arby26"], ["Lusus"]],
+            "participants": ["WishMakers", "raz/Arby26", "Lusus", "Ryann", "Avi", "Tsuzyx"]
         }
     ]
 }

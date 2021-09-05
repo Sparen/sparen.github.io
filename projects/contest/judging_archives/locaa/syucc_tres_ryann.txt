@@ -1,0 +1,68 @@
+The Lazuline Fulguration of Effervescence
+Stage: 19/20
+-The first half of the stage has an excellent combination of streaming and static patterns, the enemies spawn in ways that force you to jump around, and the fact that enemies continue firing after spawning adds pressure to actually kill them. Great job!
+-The second half is mostly very good, but the part with the fuzzballs that shoot scale bullets is frustrating. They move in ways that aren't intuitive, so you have to memorize where the safe spots are, which is never a good thing in a script that people will likely only play once or twice.
+
+Midboss Non 1: 5/10
+-A very static pattern that doesn't require anything special to dodge. There are several very easy safespots in the static pattern, so it can be cheesed pretty easily just by tap dodging. It's mostly fine though.
+-The bubbles continue spawning amulets even after they leave the screen, meaning amulets can spawn behind you with no warning and cheapshot you.
+
+Midboss Spell 1: 6/10
+-This is my least favorite kind of spell. It's pretty simple to dodge normally and time out, but the "difficulty" comes entirely from trying to chase the boss around the screen and actually hit them.
+-That said, it's not as bad as many similar spells, as it's not able to be safespotted and it's not absolutely trivial if you choose not to chase the boss. The pattern still drags on due to its nature, though.
+
+Midboss Spell 2: 5/10
+-There's a lot going on in this pattern, but none of it's particularly interesting...
+-It's really just a bunch of amulets coming from every direction, pretty trivial to dodge until the aimed shiny bullets come into play.
+-Some of the amulets can spawn on top of you, cheapshotting you. Next time, maybe prevent bullets from spawning if they're too close to the player.
+
+Ichirin Non 1: 6/10
+-A very basic pattern. I don't have too much to say here because there's not much going on. It's not BAD per se, but there's also nothing especially interesting or difficult about it.
+
+Ichirin Spell 1: 6/10
+-While this pattern is very flashy in its presentation, ultimately it doesn't actually require you to do very much to dodge it. It's aimed bullets with a sprinkle of random spam.
+-Ideally, patterns will have you moving around the screen a lot, or making sudden jerky movements. This one doesn't keep me on the edge of my seat at all.
+
+Ichirin Non 2:  5/10
+-Once again, this is a very basic pattern that doesn't really require anything special to dodge. 
+-Had you made the walls wider, I would have been forced to one side of the screen or the other which could have been interesting. As it is, I'm just kind of tap dodging.
+-While the suwako influence is heavy here, it also doesn't really have any Ichirin influences...
+
+Ichirin Spell 2: 4/10
+-Once again, your presentation is very flashy, but the actual pattern requires nothing special to dodge. It essentially boils down to dodging random spam coming from the top of the screen.
+-There's also very little Ichirin influence here, but that won't affect the pattern's score.
+
+Ichirin Non 3: 9/10
+-There's a lot going on in this pattern, and it's quite nice. I said I wanted to be forced to move around the screen a lot, and you do that elegantly here, while having some spam to make it difficult.
+-The lightning lasers have pretty wonky hitboxes, though, and the second time the curvey lasers appear, they overlap so much and spawn so close to you it's impossible to see what's going on.
+
+Ichirin Non 4: 9/10
+-While the Ichirin influence is likewise missing here, the pattern itself is quite nice. The way the droplet bullets spawn, they simultaneously force you one side by walling, and make it difficult to move via spam. Very nice!
+-My only complaint is that it's a very simple non, and so quite forgetable. While I enjoy dodging it, it's not the kind of stand out pattern that makes me remember a script, and thus not 10/10 material.
+
+Ichirin Spell 4: 10/10
+-I really like this! While the majority of it is simple streaming, Ichirin gets so close to you and the screen flip mechanic makes it pretty difficult.
+-Being forced to the top/bottom, and then having the screen flip and being forced to the other side is a nice little brain game that really makes you stop and think about what you're doing.
+-You're also very fair about the screen flips, which is a trap many Seija scripts mess up on. You're careful to only screen flip at points where it's relatively safe, so there are no cheap shots.
+-...All that said, this isn't an Ichirin pattern at all lol.
+
+Ichirin Non 5: 6/10
+-While it looks imposing at first, really this is just a simple misdirection pattern. Once you know what's coming it becomes absolutely trivial.
+-As a suggestion, for this sort of thing you can fire faster, pacman shaped patterns away from the aimed portion to make misdirection harder.
+
+Ichirin Spell 5: 8/10
+-A pretty simple spell consisting of aimed bullets coming from several directions, with static spam to make streaming difficult. The screen jumping gimmick is mostly inconsequential, but it does give the pattern some flavor.
+-The fist bullets can occasionally spawn on top of you, which is super annoying.
+-Ultimately it's just a pretty spammy spell, bullets coming from everywhere type.
+
+Ichirin Spell 6: 6/10
+-Another spell which is just spam coming from every direction. This time the fists do force you to macrododge, at least, but still, the difficulty is just the spam. This sort of thing is never fun.
+
+Theme adherence: 2/10
+-You can't just add fist graphics and call it an Ichirin pattern, especially when the fists are purely graphical half the time.
+-On that note, not a single pattern in this script combined Ichirin's gimmicks with another character's. As an example, Suika's non was a VERY Suika-esque pattern, but it didn't do any of the things Ichirin does. While the Shion spell was very Ichirin-esque, it didn't have much to do with Shion.
+
+Overall: 106/170 = 62.3%
+-Your stage design is excellent, but your boss patterns can definitely use some work.
+-There's an area on the screen that I call the "default point"- horizontally it's at the center of the screen, vertically it's at the bottom. For the most part, you want to force players to move away from this default point, and then pressure them into going back to it. While a few of your patterns did this very well, most of them could be dodged by sitting at the default point and tapping back and forth.
+-While some of your patterns were very good, it was the large number of patterns that were not which weighed your overall score down.

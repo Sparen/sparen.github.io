@@ -1,0 +1,26 @@
+Curtain Desktop
+Non 1: 1/10
+-An incredibly basic pattern. It's really just dodging generic spam from the top of the screen. I can't give much feedback because there's so little going on here.
+
+Non 1.5: 2/10
+- Another very basic non. It's slightly better as the walls kiiiiind of force you to move left and right... but same boat as before. There's very little feedback I can give when there's so little happening here.
+
+Spell 1: 6/10
+-The walls of rainbow bullets block you in, while the aimed walls of coins force you to the side. This spell really makes you look ahead and pay attention to where you're going.
+-It's very repetitive, and it's sort of a one trick pony. Once you know how to read ahead, there's very little else to this.
+
+Non 2: 2/10
+-This is marginally better than the previous non, but only marginally so. Using slow moving walls kiiiiiind of adds variety, but really it's still way too basic.
+
+Spell 2: 2/10
+-Despite using fancy phoenix graphics, this is still just a basic spiral with some rng bullets.
+-The fact that you can sit in the middle and kill the center phoenix every time detracts a lot from this, as it means you just sit under the boss and tap dodge.
+
+Theme adherence: 1/10
+-Most of the patterns consist almost entirely of basic spirals and aimed walls. If you hadn't used "Mike" in the name, I wouldn't have even realized Spell 1 or Non 1.5 were supposed to correspond to her.
+-Even the two Mokou patterns which ARE very Mokou-esque are really just that- they're just Mokou patterns with no Sumireko influence. The point of the contest was to combine two characters' styles.
+
+Overall: 14/60 = 23.3%
+-The easiest way to improve going forward is to just remember: the default position for the player is at the horizontal middle of the screen, and at the vertical bottom. Good patterns force the player to leave their default position.
+-Even if I do have to dodge, if I'm just tapping left or right and still staying roughly in the horizontal middle, vertical bottom, it's probably not a very good pattern.
+-Don't fall into the trap of just moving the default though- a good pattern forces you to move around to multiple locations in the same pattern. You might start on the left, then have to jump to the far right, then the top left, then back to the right. Just keep the player moving around the whole screen.

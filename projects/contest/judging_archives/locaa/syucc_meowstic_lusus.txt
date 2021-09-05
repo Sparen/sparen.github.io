@@ -1,0 +1,52 @@
+UCC Judging - Seija but it's a Children's Card Game 
+
+Pattern judging:
+ 
+--Seija Non 1--
+"i heckin dislike kogasa (7/10)
+-A particularly strong mix between Kogasa's linear spirals and Seija's slowing pellets.
+-While simple, It plays quite well, Incredibly solid non.
+
+--Seija Spell 1-- Reverse Sign "Bake-Danuki's Disorienting Pranks"
+"flip" (6/10)
+-Interesting usage of Seija's flipping gimmick.
+-While an interesting mix, The only pattern mixed together with the flipping gimmick to pose a real threat are the circle walls, both the big spirals and the birds + humans can be dodged by moving to the side, and the human's case, a little micrododging.
+ 
+--Seija Non 2-
+"no cardioids 0/10" (6/10)
+-Seija's nons alongside Aunn's nons feels rather natural.
+-However, They still do have the potential to wall you much like Aunn's nons if not handled carefully.
+-The alternating speeds make this non play quite well.
+ 
+--Seija Spell 2-- Stolen Bow "Houjuu's Unidentifiable Artifact" 
+"the d0rkness begibs..." (8/10)
+-Grudge Bow "The Bow of Genzanmi Yorimasa" alongside Seija's Grudge Bow spell? Heck yeah.
+-Seija's going down and firing a shot directly upwards may be seen as cheap shotty if one can't react to it, but it's otherwise fine.
+-The fog that accumulates during the course of the spell can get thick enough to completely obscure bullets, This can improve or hinder the spell depending on who you ask.
+-The pattern itself is pretty fun due to the bullet warping mechanic of Seija's Grudge Bow spell, I like it.
+
+--Seija Non 3-
+"bullets from the woo" (4/10)
+-The classic Okina non where she comes up from the bottom of the screen.
+-While interesting by itself, The pattern itself is really simple and isn't as interesting as the concept it presents.
+
+--Seija Spell 3-- Brain Sign "Deceit Reflecting Fingerprint" 
+"kuroji called, he wants his gimmick back" (9/10)
+-While I am the kind of person who simply prefer's Satori's recollection over anything she has done in the camera games, This is one of my favourite ways to handle the brain bombs.
+-The fact that both Seija herself flips more than once in order to keep the player on their toes, Or straight up doesn't flip at all, Is bloody nice.
+-The only thing keeping this spell from becoming a 10/10 is the fact that, when flipping, One can easily be cheap shotted by the bullet's suddenly collapsing on themselves, The supplementary danmaku is really simple too, but this makes for a great spell.
+
+--Seija Spell 4-- "Reverse Psychology" 
+"aaaaaaaaaaaaaaa" (7/10)
+-This is a spell that straight up plays with your senses, It feels **wrong** to play, Which is the objective here, and it accomplishes this very well.
+-Although, while a very neat concept, The nature of the bouncing bullet snakes mean that the path the player takes in order to actually damage the boss is ridiculously inconsistent, Meaning the player may be unable to damage the boss. 
+-Conceptually, This spell is great! But it can be a bit wonky in it's gameplay.
+
+
+--Closing Thoughts--
+ 
+Very nice script, Aesthetically it is very close to actual Touhou games, while not taking away any elements that make them great looking.
+When it comes to gameplay, Some of these patterns are mainly rehashes of old ideas in actual 2hu games, This doesn't make them any less good, since some of the mixes can be really creative, such as the Grudge Bow spell.
+ 
+Quite a few neat ideas executed nicely.
+                                    -cat

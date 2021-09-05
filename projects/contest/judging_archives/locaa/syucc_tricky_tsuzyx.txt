@@ -1,0 +1,37 @@
+Unconnected Card Captors - Tsuzyx
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to how well the chosen character uses danmaku themes from other characters. A high score in this category means you did a good job of synthesizing the danmaku style of two characters, while a low score means that your synthesis was lacking.
+======================================================================================================================
+
+Pre-Cisa Stage Portion: Not particularly interesting, I'm afraid. The fairies that wiggle? and shoot the really dense ring of red bullets are unusually difficult. Otherwise it's kind of samey until Cisa shows up. 3/10.
+
+Cisa Attack 1: The fact that the player can't shoot from the very bottom of the screen makes this difficult. It's ALREADY difficult because it's unusually dense compared to everything else in the script, and dodging from the bottom where you'd naturally want to do so makes shooting the boss impossible. 3/10.
+
+Cisa Attack 2: This one is more reasonable than the previous pattern. 4/10.
+
+It seems like the script crashes? Since the minimum is two nonspells and two spells, you get two zeros for the script breaking.
+
+Danmaku Score: 2/10 (scaled to 3/15)
+======================================================================================================================
+ 
+Aesthetically this script is kind of a mess. The player shots definitely should not render above enemy bullets. The fairy wiggling is strange. It's just not cohesive in the slightest. 1/5.
+======================================================================================================================
+ 
+In terms of following the contest gimmick, nothing really stood out to me in the slightest. Maybe I'm just oblivious, but the danmaku didn't feel particularly strongly like Cisa's OR like another Touhou character's. 0/5.
+ 
+OVERALL SCORE 3 + 1 + 0 = 4/25

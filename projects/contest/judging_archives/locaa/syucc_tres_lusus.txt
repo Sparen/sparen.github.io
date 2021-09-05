@@ -1,0 +1,42 @@
+Seija but it's a Children's Card Game
+Note: There seems to be a bug where bullet clears linger on screen indefinitely. I had to go into the code and fix that myself, or else the game was nearly unplayable.
+
+Non 1: 6/10
+-A simple Seija nonspell. Lanes force you to one side while you dodge red bullets.
+-I don't see much Kogasa influence here despite it being a Kogasa non, but you're allowed one non-gimmick pattern anyway, so I guess it's fine.
+-The blue lanes are a bit unfair, unless you know what's coming you can wind up getting walled by the side of the screen. They push you a little too far for the center lane to be safe.
+
+Spell 1: 7/10
+-This is a very fun spell- it's very simple, but the way the screen flip disorients you is extremely Seija-esque.
+-However there are points (particularly when you're surrounded by blue men) that the screen flips while you're completely surrounded by bullets. Those points can be a little cheap.
+-I also have no idea how you're supposed to dodge that initial wave of blue balls while the screen is normal, let alone flipped.
+
+Non 2: 10/10
+-This is very much an aunn nonspell, but it's neat how something as simple as alternating colors and using inverted bullets makes it feel very seija-esque.
+-I also love how it's clear where the bullets are going to go, but you really have to think ahead or else you'll get completely walled in.
+
+Spell 2: 8/10
+-It's a good blend of Nue and Seija's gimmicks, but ultimately for all its flashyness it just amounts to dodging random spam.
+-The way the lanes spawn and darkness appears, there are plenty of safe spots. The only dangerous things are the purple bullets, which again amount to just random spam.
+-Even still, dodging random spam in an enclosed area is okay, even more so when you have to dodge from behind you.
+
+Non 3: 7/10
+-Takes the Okina gimmick of a pattern that should be easy, but you have to circle around it while she gets closer to you.
+-And just like Okina, the pattern becomes trivial once you do manage to circle around.
+-Still, the walls make it a bit more interesting than Okina's version imo.
+
+Spell 3: 10/10
+-I love this spell as well. It's Satori's memory game, but by flipping the screen it forces you to stop and think about it rather than just memorizing.
+-The spam bullets are absolutely trivial- they exist just as a distraction, but they do their job perfectly.
+
+Non 4: 5/10
+-Ending with a Seija spell. Even though it's listed as Koishi... this was even Seija's gimmick in After Extra lol.
+-Ignoring that, the pattern itself, while a feat of scripting, is not very interesting. The gimmick itself is the entirety of the spell, once you have that down there's nothing left to it.
+-It's the type of spell you're likely to time out, as it's easy to dodge but hitting the boss is pretty touch and go.
+
+Theme adherence: 10/10
+-Your first non and your final spell seem kind of forced, but you're allowed one free non and one free spell anyway.
+-Besides those, every pattern feels very much like Seija using every boss's gimmick. Good job!
+
+Overall: 63/80 = 78.8%
+-I think this was a great script overall, bugs aside. I don't have any criticisms overall, just nitpicks on specific patterns.

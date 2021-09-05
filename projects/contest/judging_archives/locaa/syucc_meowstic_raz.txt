@@ -1,0 +1,57 @@
+UCC Judging - Marisa the Unconnected Marketeer
+
+Pattern judging:
+
+--Tsukasa Non 1--
+"Holy carp a Tsukasa non I can actually dodge" (8/10)
+-A different take on Tsukasa's nons, spreading out instead of forming lanes.
+-It works nicely due to this change, the green kunai keeping you on your toes while having to micro, I like this!
+-It does get pretty spicy during later waves but at that point you're timing it out instead of shooting it down regularly.
+
+Onto the main attraction...
+
+--Marisa Non 1--
+"aaaa i really like how these star lanes look" (7/10)
+-While it does have quite a bit of changes to differentiate itself from Lily white from GFW, It does feel more like it's a Lily pattern with Marisa flavor instead of the other way around, However, the usage of familiars to adjust the shooting position does make it more dynamic in that regard.
+-It is nevertheless not a bad pattern, Pretty nice.
+
+--Marisa Spell 1-- "Spring Flowers Fire Sale"
+"*unhealthy screech upon getting swarmed by red stars*" (8/10)
+-An interesting pattern that divides your attention.
+-The supplementary danmaku isn't too intrusive in order to stop you from your task, which is breaking the flower familiars in order to not get swarmed by red bullets, Overall, a nice pattern.
+
+--Marisa Non 2--
+"sneksneksneksneksneksneksneksnek" (6/10)
+-The ways the Ice bullets are aimed make this more interesting than your regular Sekibanki snakes with aimed bullets, as it covers the area with Ice bullets instead of aiming down your position, forcing you to dodge in interesting ways instead of staying comfortable in one spot.
+-Other than that, not much to say, It's definitely Sekibanki...
+
+--Marisa Spell 2-- "Hell's Brambles" 
+"STARHEADS" (7/10)
+-The angle of the lasers and the bullets fired make this a very claustrophobic spell, If this is a good thing or not really depends on the person playing it.
+-Some of the ways they fire from are quite fun to dodge, though sometimes you can get sneak attacked by a bullet coming from the side, or worse yet, from below.
+-I do see plenty of Sekibanki inspiraiton behind it, but somehow, I do feel like this may work better as a Koishi spell? May just be me though.
+
+--Marisa Non 3--
+"BIG DIPPER GIMMIE GIMMIE" (7/10)
+-This is, actually pretty simple all things considered.
+-I love the usage of a Big Dipper in order to actually fire a Murasa nonspell, But this may be the only Marisa-y thing about this non..
+-Although, Dare I say, This non may be more fun to dodge than actual Murasa nonspells?
+
+--Marisa Spell 3-- "Shoot the Submerged Moon"
+"Wavvyyyyyyy" (9/10)
+-While this isn't a pattern that is hard to dodge (I literally just went left and right with small adjustements) Holy heck it is incredibly satisfying to see the pellet shots go spawn and go.
+-I believe the difficulty part may be fixed with making the main shot aimed.
+
+--Marisa Spell 4-- "Raging Flames of the Reverse Scale"
+"Oh no seija is back at it again uuuu" (7/10)
+-I do really enjoy the concept here, It starts a bit slow but it quickly ramps up with the upside down fire.
+-The thing that makes or breaks this spell is the fact that killing the familiar gives a full board clear, It may not be obvious enough that this is the case, even with the familiar's effects, which can quickly lead to one getting clustered.
+
+--Closing Thoughts--
+
+I really do enjoy Raz's work, the fact that they coded their own engine from scratch and know how to use it, *and* make good patterns with it is really nice. (Even though I got a bug that made the hp bar render vertically to the side and then just got rid of the entire music)
+The entry itself: It has really neat ideas, It executes them really nicely, but some patterns may not feel as Marisa-y as they should, Or so I feel.
+Aesthetically, I enjoy it: 
+I can see some pretty nice usage of effects in an unique take for Marisa's Spell background, as well as some bullets having their own aura, such as Tsukasa's green kunai and the start of the final spell's pellets, The effects are top notch too, The fact that the sprites are actually 3d model renders will never cease to amaze me.
+
+All in all, really good script!																	-cat

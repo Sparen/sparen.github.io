@@ -1,0 +1,39 @@
+Unconnected Card Captors - Avi
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to how well the chosen character uses danmaku themes from other characters. A high score in this category means you did a good job of synthesizing the danmaku style of two characters, while a low score means that your synthesis was lacking.
+======================================================================================================================
+
+Nonspell 1: This pattern is fine. Not super impressive but not offensive either. This one dies SUPER fast. 4.75/10.
+
+Nonspell 2: Now this seems like Mike for sure. Maybe a little bit better than the first non by virtue of lasting more than two seconds. 5.25/10.
+
+Spell 1: I like this one a good bit more - it keeps you moving and I think it follows both character themes well enough. 6/10.
+
+Nonspell 3: It seems like the amulet hitboxes are bigger than the graphic. Otherwise this seems like Mokou pretty solidly. 6/10.
+
+Spell 2: I think the phoenix hitboxes are too small. The pattern is perfectly fine though - avoid the oversized amulet hitboxes while dealing with the randomish rice bullets. Not bad. 5.5/10.
+
+Danmaku Score: 5.5/10 (scaled to 6.88/15)
+======================================================================================================================
+ 
+Aesthetically this script isn't too bad. The visuals are fine, if a bit plain. The complete lack of sound effects is a bit jarring. 2/5.
+======================================================================================================================
+ 
+In terms of following the contest gimmick, you do a pretty decent job. The inspirations are obvious and still feel Sumireko enough. 2.5/5.
+ 
+OVERALL SCORE 6.88 + 2 + 2.5 = 11.38/25
