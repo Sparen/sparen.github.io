@@ -1679,8 +1679,8 @@ var dnhph3docs_standard = {
                 {
                     "fname": "GetEnemyIntersectionPositionByIdA2",
                     "args": ["enemyID : number (Object ID)", "xcoord : number", "ycoord : number"],
-                    "returnv": "boss scene object ID : number (Object ID)",
-                    "description": "Returns the boss scene object ID or ID_INVALID when not in a boss scene.",
+                    "returnv": "array of enemy positions : number [][]",
+                    "description": "Returns all collision detection positions of the specified enemy as a 2D array.",
                     "notes": "Return format is [index][&lt;x coordinate, y coordinate&gt;].<br>The first index (index 0) corresponds to the nearest intersection position from the provided x and y coordinates."
                 },
                 {
