@@ -1,0 +1,42 @@
+Bullet Hell Artistry #4 - Drekareen's Bringer of Mountain and Desert
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+ 
+----------------------------------------------------------------------------------
+ 
+Nonspell 1: 8.25/10
+A pretty decent nonspell with an additional phase. Relatively simple and fun to dodge, albeit the second phase can kind of screw you over depending on the RNG. Still, very decent.
+
+Spell 1 [Water Sign " Inhabited Geyser"]: 8/10
+Really cute concept, using Minecraft sprites is unexpected but appreciated nonetheless. Makes use of the larger screen size as well. My issue stems from the blue orbs that are expelled from the "geyser", as they're quite overwhelming and can get you some nasty waves. The second phase could be more interesting if more bullets came from the fish instead of from the boss.
+
+Nonspell 2: 7/10
+A bit of a step down from the previous nonspell. The additional phases seem a bit of a drawback here, as it doesn't make the pattern very coherent. Maybe you could've taken advantage of the swords more? 
+
+Spell 2 [Icy Breeze "Tempest in a Box"]: 8/10
+Pretty interesting, I love how it looks! I'm not sure what to think of the gravity gimmick; as the effect is applied in bursts instead of something more gradual, it comes off a bit jarring. The pattern itself is alright, but as it has to adhere to the gravitational pushes, it had to be a tad simpler than what you've done with the rest of the spells. You can probably get away with the gravity or implement it in a different way.
+
+Nonspell 3: 8/10
+Interesting concept, plus I like how the stars form these little lanes at the end. I feel like the choice of bullets is a tad... strange? Still, it looks and plays pretty well for the most part.
+
+Spell 3 [Last Rockabye "Resplendent Fulgor"]: 6.75/10
+This is one of the spells that made me wish the script came with a Normal mode. The orange lasers are fairly difficult to read, especially since they're slanted. Plus, the diamonds and the large orbs could create some nasty situations. The second phase on the other hand is pretty cool, I like how you have to maneuver through the clumps of purple stars. I noticed they're static, too, so you can do this phase fairly consistently. I wish the second phase was in focus instead of the first.
+
+Nonspell 4: 7.5/10
+Fairly symmetrical, reminds me a bit of the first nonspell. The second phase is a bit difficult to read, but it's not too bad to dodge. I'm not exactly sure what else to say about it; it's fairly decent, but the phases kind of clash with each other.
+
+Spell 4 [Demon and Demigod "Why Not?"]: 8/10
+Now this is an interesting survival. It doesn't overstay its welcome, as it's short and it has a lot of various patterns to dodge. My personal favourite phase was the one with the star-lasers and the purple star slashes. My least favourite was the one with the yellow suns and arrowheads; it tends to wall quite often. I wish that the spell took advantage of the screen more, since you're mostly stuck at the bottom of the screen.
+
+Spell 5 [One and Only "Into the New Heart"]: 7/10
+A fairly strange choice of a final spells. Again, the amount of phases is interesting, but since the spell doesn't stand out from the rest of the script, it's a bit of a shot in the foot. The first phase is a bit inconsistent with the amount of red/yellow orbs it wants to throw at you. Sometimes I had 3, others I had 10. The other phases are okay, but there's nothing much to write home about. Could've been executed better, honestly.
+
+TOTAL: 15.22/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 4.25/5
+You've got neat music and neat visuals as well. I like the inclusion of dialogue. Most of the flash utilizes danmaku as effects, which is a big plus for me. It's a bit uncommon to see scripts that take advantage of a larger screen size, so that makes the script stand out from the rest. On another note, I REALLY hope you implement some difficulty settings in the future.
+
+[TOTAL SCORE: 19.47/25]

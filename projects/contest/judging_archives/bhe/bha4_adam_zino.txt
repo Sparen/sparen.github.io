@@ -1,0 +1,41 @@
+Bullet Hell Artistry #4 - Zino's Nightmarish Restless Eldritch Monster
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+ 
+----------------------------------------------------------------------------------
+Nonspell 1: 7/10
+A speedy spiral of crystal bullets. I like how they sometimes converge into a crystal-shaped clump, otherwise it's pretty chaotic. Could have some other pattern alongside the spiral to make it more interesting.
+
+Spell 1 [Pagoda Art -S.H.O.U.- Tundra Tornado PH]: 7/10
+Relatively simple in execution, but it does keep you on your toes. I wish the snowflake bullets had clearer hitboxes.
+
+Nonspell 2: 6/10
+I don't really know what to say about it. The shape looks cool, but there's nothing much to it besides dodging through lines.
+
+Spell 2 [Conversation Sign -F.A.E.B.- Ice Breaker]: 7.75/10
+Very dynamic misdirection spell, I like dodging it. It can be a bit hard to keep track of, so you can increase the delay time between each "burst".
+
+Nonspell 3: 7.5/10
+Another misdirection attack, this time macrododging large squares. The bullet hitboxes seem small enough to do some micrododges in a pitch as well. Works decently for a nonspell.
+
+Spell 3 [Cry of the Trapped Bird - Snowgrave -F.A.T.A.L.-]: 8.5/10
+where were u when berley died i was playing lua std when noel rang "berley is kill" "no"
+
+Jokes aside, this spell works brilliantly for a survival. It gives you just enough time to escape the snowflake spam, but it tends to be a bit too difficult at the end, especially if the spam spawns diagonally. Either way, the idea is amazing!
+
+Nonspell 4: 6.75/10
+Kind of similar to the previous nonspell, but this time the focus is on the bullet bursts from the boss and not the aimed square. Honestly not that interesting, but it works well enough.
+
+Spell 4 [Thrill Wheel -R.I.T.A. S.P. -Graze 500.621 bullets to win!]: 6/10
+Well, that's... one way to end the battle. Frankly, this spell sticks out like a sore thumb. There's not much coherency between the separate patterns, not to mention that the aesthetic choice for the spell is not that great. I would've liked to see something similar to the third phase and that part going harder as the boss loses HP. To me, it feels like a pretty forced gimmick.
+
+TOTAL: 14.125/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 3.375/5
+LuaSTG titles have always stood out to me in terms of aesthetics. I really like the general presentation. Since all bullets have significant contrast from the background, I don't have any visibility issues. In terms of danmaku, I really like the visual effects on some spells like the Snowgrave one. The system itself seems rather empty and I had some issues with loading certain graphics.
+
+
+[TOTAL SCORE: 17.5/25]

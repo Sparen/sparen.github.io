@@ -1,0 +1,41 @@
+Bullet Hell Artistry #4 - Kevinmonitor's Enigma of the Storm
+
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+
+----------------------------------------------------------------------------------
+
+Nonspell 1: 6/10
+Definitely a jumpscare pattern if I've ever seen one. While the general idea is simple and is okay in execution, the sudden acceleration of the bullets is something that can easily snipe blind players. I feel like the lasers should've been further spaced apart and the stars given a bit of a slower acceleration. Once you find out how the pattern works, you're most likely to never die from it. It looks neat, at least. Displays Erika's personality from the get-go.
+
+Spell 1 [Tempest Dance "Wind God Braves the Palace"]: 6/10
+Interesting concept, though a bit too chaotic in my opinion. The curvy lasers can give you very unpredictable scenarios, sometimes can snipe you when they curve a bit to the sides. The crystal phase is alright, takes advantage of the entire screen, but maybe there should've been a bit more consistency to the spawned fireballs. Could use a bit more work to flesh out the bits and pieces here and there.
+
+Nonspell 2: 5/10
+Again, the lack of warnings is what ruins this pattern for me. The arrows are shot out fairly quickly, plus the orb bullets that are spawned when the arrows hit the edges of the screen are not very predictable. If they were slowed down a notch, it would've been much better. Aiming the arrows in a certain way can also create some... very weird fireball waves. https://prnt.sc/1xiwvpq
+
+Spell 2 [Thunder Dance "Unlimited Arrow Works"]: 7.5/10
+From what I can see, the best strategy for this spell is to spin counter-clockwise around the playing field. Which is a nice touch, since she makes use of the entire screen for her attack. The larger arrows are bit hard to read, plus not knowing their hitbox well can also cause some problems with dodging. Interesting idea overall.
+
+Nonspell 3: 7/10
+Honestly, this is probably my favourite nonspell of hers. The lines are fast, but readable. Her erratic movement is okay here, since you'd be forced to use unfocused movement anyway.
+
+Spell 3 [Shadow Dance "Concealment of Skyward Disaster"]: 4.5/10
+It's... nothing too special, honestly. The concept is alright, but with a concept like that you're severely limiting yourself in terms of danmaku. Since you're forced to use a simple pattern to not get distracted by the clouds too much, you kind of ended up with just rings of orbs and lasers. The hitboxes on both the lasers and the orbs are much smaller than the sprites, so you don't get much challenge from this spell other than moving very slightly. Probably would've been better to use the clouds in a different way.
+
+Spell 4 ["Thunder Palace's Mousetrap"]: 6.5/10
+Pretty much a package of everything Erika threw at you so far. The beginning of the spell had me a bit bored, since spin-to-win survivals are not too interesting. The pattern changes at the end, however, turning from aimed bullets to more random lines. While that's alright, I still feel like you could've made a different spin to each concept to make it more unique compared to what she used in her other spell cards. The larger bullet sprites-hitbox size difference is probably the most notable here.
+
+Spell 5 ["Dancing Plague of the Storm"]: 7.25/10
+I like the variety in this final phase, it's not just multiple patterns stacked together for the most part. I liked the final phase, but the arrows are a bit of overkill. It probably depends on when she starts shooting them, but the arrows can stack up and they're much harder to dodge with everything else going on.
+
+
+TOTAL: 12.5/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 4.25/5
+I really like the fact that you put so much effort into the presentation. Erika and Kouji's portraits look great, the HUD is also looking slick. The music is... kind of hard to listen to, honestly. I want to complain about the bullets once more; their hitboxes are hard to predict most of the time.
+
+
+[TOTAL SCORE: 16.75/25]

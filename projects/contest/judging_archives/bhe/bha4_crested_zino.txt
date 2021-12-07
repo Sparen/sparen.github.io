@@ -1,0 +1,22 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"Nightmarish Restless Eldritch Monster" by Zino
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+No difficulty options given.
+
+Non 1 - Good "patterned chaos" non. 8/10
+Spell 1 - Effective way of forcing spinning. 8/10
+Non 2 - Another decent non. 8/10
+Spell 2 - Simple but brutally effective. It's quite a bit harder than the previous patterns though. 8/10
+Non 3 - Forcing a lot of movement makes an otherwise shape-based pattern better. 8/10
+Spell 3 - Very neat survival that forces patterned movement. The last few waves are... quite a bit harder than everything else. 9/10
+Non 4 - Another movement forcing non. It works well. 8/10
+Spell 4 - I don't know about this one... the patterns are kind of uninspired compared to the rest and honestly seem blind killer for the sake of it. Also grazing to end the spell is a good concept but there's nothing to visualize how much graze you've already gotten (perhaps doable through removing x health per graze from the healthbar). 6/10
+
+Bonus/Penalty - LuaSTG in high resolution looks pretty good. I couldn't really understand the health system that seems to be happening, but it didn't seem to really do much for the script anyway.
+
+Overall Score - 7.9/10
+I'm a little concerned by how difficult some parts of the script can get and how there's no difficulty options, but otherwise very well made and consistent script.

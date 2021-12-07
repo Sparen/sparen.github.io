@@ -1,0 +1,47 @@
+Bullet Hell Artistry #4 - Syoudre's Today's Training Regime
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+
+* Played on Normal Mode *
+----------------------------------------------------------------------------------
+
+Nonspell 1: 6.75/10
+Relatively simple concept, does it job well. You should probably do something with the small ball bullets to remove the "spin around the boss" cheese strategy. 
+
+Spell 1 [Scythe Slayer]: 8.5/10
+Neat concept with a nice amount of variety. The bullets are slow enough to be readable, but fast enough to pose a challenge. I think the delay clouds during the laser phase are a bit distracting, so you should try a different way to telegraph the kunai. Great spell overall!
+
+Nonspell 2: 7.25/10
+I like the idea behind the nonspell, fits the character pretty well. I feel like you should set a minimal value for the length of the laser, as you can kind of cheese the pattern by luring the boss like 10 pixels away from himself. Consider doing something else with the dark bullets, as you already have an aimed attack (the slash) in the nonspell.
+
+Spell 2 [Huntsman's Tactics]: 8/10
+The bullet formations make the relatively simple pattern more unique. It takes a while for the bullets to reach you, but that doesn't ruin the pace. Since the pattern relies mostly on lane switching, perhaps some aimed bullets could actually work well here?
+
+Spell 3 [A Barrage for Warfare]: 6/10
+Seems like it's a pattern that requires switching between left and right through static waves. In my opinion, it relies way too much on aimed bullets to be any type of threat. Consider replacing the black bullets with something else, maybe extra rings. Decreasing the wait time between the white lasers could also work well.
+
+Nonspell 4: 7/10
+Fairly standard nonspell, though I do appreciate the extra blue variant of the pattern. I'd add a bit more wait time for the blue -> yellow wave, as the overlapping bullets may wall you.
+
+Spell 4 [Swiftly Prismatic Supernova]: 7.5/10
+Interesting concept, it's also using arrowhead lasers which is a bit uncommon nowadays. The lasers are a tad slow, which creates some spots with limited movement. Fortunately the stars are with small hitboxes, otherwise getting walled in would be easy. You can try increasing the wait time after each "star".
+
+Nonspell 5: 7/10
+A simple, albeit a bit too easy of a pattern. Since it takes a while for the blue lines to reach you, you can kill the nonspell faster, thus making it less of a threat in general.
+
+Spell 5 [Lightning Surfing]: 5/10
+There's... nothing much to this spell. It's a standard sitting in the middle and dodging bullets from all sides of the screen survival. The boss' movement could've made for something more interesting.
+
+Spell 6 [Lightning Nova]: 6.5/10
+Similar to one of the other spells, this attack relies a bit too much on aimed components. They're also relatively slow, so it makes the spell relatively free. While the shooting stars can add a bit more complexity, the RNG they have doesn't make them that threatening.
+
+TOTAL: 13.90/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 4.25/5
+The visuals are nice, I like the inclusion of dialogue. You've also made use of danmaku as effects, which is something I really like to see. At first I was unsure about the screen resolution and the tinier bullets, but they're not too bad.
+ 
+ 
+[TOTAL SCORE: 18.15/25]

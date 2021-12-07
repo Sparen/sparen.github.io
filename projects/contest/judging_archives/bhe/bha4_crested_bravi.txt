@@ -1,0 +1,23 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+Bravi's Submission
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+Played on Lunatic with no cards equipped.
+I know this is supposed to be part of your overall game mod but uh... not natively providing a way to skip to the boss fight in practice mode seems kind of bad. Had to use thprac to get around it.
+
+Non 1 - While at first glance an interesting pattern, it's completely static and has completely static safespots too... 5/10
+Spell 1 - This pattern seems to serve no real purpose other than being a blind killer? 6/10
+Non 2 - Why is this pattern literally one tap per wave 4/10
+Spell 2 - This is worse than Mike's final 3/10
+Non 3 - Ultimately it's still completely static with aimed stuff but at least it's not as obvious and has some execution difficulty. 8/10
+Spell 3 - This just seems like pure RNG mess that can sometimes decide to wall you... 4/10
+Spell 4 - Apart from the lack of indication that the boss doesn't have a hitbox, there's actually a somewhat interesting pattern here. 8/10
+Spell 5 - The black bullets against the background are obnoxious, the charge effects become visually distracting, on top of this being overtuned to begin with. 4/10
+
+Bonus/Penalty - It's just a mod of UM with no system tweaks, so there's nothing. But not having any way to skip to the boss without using external tools seems very unfriendly towards the judges.
+
+Overall Score - 5.3/10
+The concept of the boss using ability cards against you is neat, but the execution really needs work. The nons look really flashy but are really easy to dodge, and the spells could be more thought out.

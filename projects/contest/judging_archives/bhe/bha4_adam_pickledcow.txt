@@ -1,0 +1,46 @@
+Bullet Hell Artistry #4 - Pickled Cow's Bovine Brine Brawl
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+
+Played with Marisa on Normal Mode
+----------------------------------------------------------------------------------
+Nonspell 1: 7/10
+Relatively simple zig-zag nonspell based on reaction time. A bit too simple for my tastes, but it's decent nonetheless.
+
+Spell 1 [Gerkin "Pickle Leviathan"]: 7.75/10
+A solid spell. The curvy lasers are readable and are used very well here. The pattern of the rings could be a bit more interesting, but I feel the amount of bullets is enough for this type of spell cards.
+
+Nonspell 2: 7.5/10
+It's a cute attack, although I wasn't really forced to move along the curvy lines, so they're not really threatening.
+
+Spell 2 [Picklemancy "Curse of the Pickle Jar"]: 6/10
+While the concept is creative, the pattern itself leaves more to be desired. It does end up being RNG spam with different types of bullets and angular velocity. I'd try the concept out with a more defined pattern and not just random bullets.
+
+Nonspell 3: 5/10
+It is just BoWaP but with a bit more complexity in terms of bullet spawn positions. Nice to see you added anti-cheat bullets to prevent the safespot next to the boss.
+
+Spell 3 [Pickle Sign "Cucumber Fermentation"]: 6/10
+I'm not really fond of this spell. It's rather repetitive as it's the same pattern for 45 seconds. The way the ovals aim at you can get you some weird situations. It's a good thing the bullets' hitboxes are relatively small, otherwise this would be terrible to dodge.
+
+Nonspell 4: 7.5/10
+Urumi stuff. Works fine, nothing much to say here.
+
+Spell 4 [Cow Grinder 6000]: 8/10
+Very unique choice of bullets. Reminds me a bit of what Misumaru can do in UM, but since the bullet hitboxes are fair, it's much more doable. Pretty solid pattern.
+
+Spell 5 [Bovine Disaster "Corrupted Milk"]: 8.25/10
+Loose streaming combined with falling bullets and screen filling. Very interesting concept. Gets pretty tight at the end.
+
+Spell 6 [Pickle Dimensions]: 8.5/10
+A pretty cool final, not gonna lie. The individual patterns are neat and don't clash with each other. I can see some nodes to Junko and Okina. There's a pretty big oversight - the pattern doesn't get any harder if you time out the pattern.
+
+TOTAL: 14.30/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 4.5/10
+This entry's visuals are quite the eyecandy! They're very complex, but they're not distracting. I also like how you move from one area to another, showing off different types of backgrounds. I would want to see bullets that aren't just green and white, but it is fitting I guess? Wonderful work in general!
+
+
+[TOTAL SCORE: 18.80/25]

@@ -1,0 +1,43 @@
+Bullet Hell Artistry #4 - Kirbio's Wavering Flame of Unreality
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+ 
+* Pattern judging is done with no cards equipped *
+----------------------------------------------------------------------------------
+
+Nonspell 1: 7.25/10
+Relatively standard pattern. Despite being simple and somewhat static, it seems like you have to focus more on the arrowheads than the Tetris blocks to begin with. I feel like the boss could have some movement to make the pattern more interesting, but it's a solid start.
+
+Spell 1 [Glitch Sign "Illusionary Blockage"]: 7/10
+Since the main gimmick of the spell is visual obstruction, the pattern kind of has to get a drawback in terms of complexity to make it a fair challenge. You are allowed to look at your own hitbox, though... Maybe have less error pop-ups and have the player jump from one empty spot to another for visibility?
+
+Nonspell 2: 6/10
+Stems down to simple streaming. Honestly, the pattern doesn't seem to stand out much. It can be easily speed-killed by tap streaming up and down, the ice bullet lanes rarely spawn dead-center. The Tetris blocks could have something more to make the pattern more interesting and more challenging.
+
+Spell 2 [Hologram "Imaginary Weapon with No Name"]: 8/10
+Looks very sweet, I like the green geysers the swords shoot out. Fairly standard, but it provides a lot of different ways to dodge bullets, including bullets from behind and from the sides of the screen. Overall a solid spell card.
+
+Nonspell 3: 7/10
+Again, fairly simple and could use something more to make it stand out. You can align yourself in a certain way to go through the walls of Tetris blocks, which is intentional according to the creator.
+
+Spell 3 [Cognitohazard "Information Overload"]: 8.25/10
+Interesting pattern based on that one Flowey section. I think the symbols' unique homing mechanism is enough of additional difficulty, so I don't think there's any need for more bullets. I also like the cute references with the words listed. I can finally die to AMOGUS and keysmashing.
+
+Nonspell 4: 7.75/10
+Definitely my favourite nonspell from the entry. Vertical streaming in a limited space is fairly interesting, plus the arrowheads provide an okay additional challenge. The Tetris blocks could spawn a bit more often, as well as move faster when activated.
+
+Spell 4 [Fear "Claustrophobic Invaders"]: 8.25/10
+Pretty unique, as well as with multiple phases to provide interesting challenges. The transition between the patterns is quite smooth. I feel like there could be a small warning before the invaders crash into you, since you'd be focusing on dodging the leftover bullets. Also, it unfortunately dies way too fast for a final spell.
+
+TOTAL: 14.875/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 5/5
+
+I must say, I'm very impressed with the amount of work put into the script's system, art and general presentation. There's a whole stage portion, three midbosses, a giant TLB phase, as well as dozens of ability cards to pick from. Needless to say, this entry is packed full of content, which makes replaying it much more fun. I believe that this entry in particular is one I've played the most. Wonderful work on everything!
+
+you also get +0.0000000000001 adam points for not giving letty green bullets
+
+[TOTAL SCORE: 19.875/25]

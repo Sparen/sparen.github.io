@@ -1,0 +1,24 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"Dream World Crossing" by Akemi
+=====================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=====================================================================================================================================
+No difficulty options given. 
+I must say, the shottypes move really really slow compared to regular Touhou standards which is a bit hard to get used to.
+
+Non 1 - Fairly standard non that forces staying under the boss. 7/10
+Spell 1 - Seems a bit... simple, since it's just laneswitching. The difficulty almost entirely comes from character movement speed being so low that dashes take much longer than usual in Touhou. 6/10
+Non 2 - The waves where the bullets from the side and amulet walls overlap are a bit nasty, but otherwise it's a good non. 8/10
+Spell 2 - Dodging the unfolding spiral is interesting, but I'm a bit puzzled by the aimed amulets since they do pretty much nothing for the pattern. 8/10
+Non 3 - A very well designed non. 9/10
+Spell 3 - A little simplistic but it works. 7/10
+Non 4 - Good non, though it seems quite a bit simpler than the previous ones. 8/10
+Spell 4 - Pretty good survival spell. 8/10
+Spell 5 - I'm... quite confused about the final phase of this pattern. How are you supposed to dodge it? 6/10
+
+Bonus/Penalty - It seems there's a bug where random bullets are being deleted on spawn. It really doesn't affect the pattern dodging too much but really does cut into their aesthetics. Though the art style is very nice.
+
+Overall Score - 8.4/10
+Overall a very well-made script with many simplistic but effective patterns.

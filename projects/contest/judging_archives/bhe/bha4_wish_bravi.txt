@@ -1,0 +1,76 @@
+Wish's BHA4 Judging - Unworldly Manifestations
+-=Bravi's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-30 points towards general aesthetics, sound, and polish.  (For the record, *average* aesthetics is essentially the defaults per engine, and is at around a 6/10 per category)
+-(Usual contest-specific bonuses will be omitted due to contest theme being OCs lol)
+At the end, the total points will be divided by the total possible points, and then multiplied by <contest average> to get your final score.
+
+(Playing on Normal mode.)
+
+Nonspell 1: 11/20
+Very...ordinary nonspell.  Nothing really fancy about it, just a bunch of Sereinae stars.  A bit annoying to dodge too.
+6/10 - Creativity/Aesthetics, 5/10 - Fun/Design
+
+Ability Card "Miracle Mallet": 15.5/20
+Probably the most unique (and best) attack in the bunch.  I gotta respect the use of the enemies here and their implementation.
+I like how they get you to shoot them down instead of the boss and how you can approach this spell a few different ways.
+I don't really know how this fits the mallet besides haha they drop gold and shoot coins, but otherwise it's pretty solid.
+Frankly, I just wish Sereinae herself was shooting something though because the enemies don't have much HP and if you shoot them down as they spawn the attack gets destroyed.
+8/10 - Creativity/Aesthetics, 7.5/10 - Fun/Design
+
+Nonspell 2: 11.5/20
+Nonspell 1, but pink and with a bit more spread out stars.  A bit easier and more fun to dodge, but still incredibly standard.
+5.5/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Ability Card "Gale Geta": 9/20
+An arrowhead pattern...practically ripped from Aya in RoHL with all its absurd colors.
+She moves around so much that it's hard to follow her and it becomes...annoying quickly.
+5/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+Nonspell 3: 6.5/20
+Listen, you may be using ZUN's engine, but you don't have to do what he does and basically copy paste entire nonspells.
+Look to my Jo'on script.  Yes, a bunch of nons reused a specific fan shape, but each one that did used it in a way where mechanically you have to dodge the pattern differently.
+The pattern is...fine, it's decent to dodge, but I need to dock creativity points for being Nonspell 2 again.  Minor dip from previous non for being slower and more boring.
+1/10 - Creativity/Aesthetics, 5.5/10 - Fun/Design
+
+Ability Card "Great Tengu's Barley Rice": 10/20
+I gotta admit, I like the theming of using the spirit enemies, and having them actually drop power for you when you shoot them down is clever.  Creativity-wise it's solid.
+The problem is everything else is boring.
+The rice bullets are just RNG vomit, which is...whatever.  It's somewhat fun to dodge but it's *incredibly* boring.
+8/10 - Creativity/Aesthetics, 2/10 - Fun/Design
+
+Back Sign "The Shadow Behind Your Back":  4/20
+Ok, for one thing, it's incredibly unclear that you have to shoot her down.  There's no hit effects, she's at the bottom like Okina's survival, there's no back shot, etc.
+For another...this is basically a Gore pattern and shall be rated accordingly.  I feel next to nothing about it.
+Haha funny back door, next.
+(For the record, the dodging is at least ok.  I think if this spell were better designed in other areas this may score higher.)
+2/10 - Creativity/Aesthetics, 2/10 - Fun/Design
+
+Reality Shift "Lurking Rainbow Stars of Hindrance": 5.5/20
+What is this Mamizou BS that I'm seeing here with the different points?
+Uh...it's fine.  The spell looks ok, I like the star border, but the mix of darkened and light pellets is weird, and it's very annoying to dodge.
+You have to learn it but even when you do, it seems like it would be just as boring to learn.  I feel extremely indifferent.
+(I'd probably scrap this altogether, make the previous spell the survival, and tune it a bit to make it better designed.)
+4/10 - Creativity/Aesthetics, 1.5/10 - Fun/Design
+ 
+AESTHETIC: 20.5/30
+Looks: Custom portrait.  Doesn't really fit the art style but I'll give you props because ANM editing is a fuckin nightmare. 7/10
+Sound: Custom music track.  It's ok.  You went the extra distance though and that's worth something. 6.5/10
+Polish: I do like the interaction between Sereinae and Tsukasa, as well as the custom midboss appearance in Stage 6.  It's a neat little touch that you didn't have to do. 8/10
+-1 here though for including literally all your mods in one folder and making this whole download like 500mb.  That wasn't necessary and would've been an easy fix since all the thcraps are standalone.
+ 
+SUM OF PATTERNS: 73/160
+AESTHETIC: 20.5/30
+TOTAL:  93.5/190 * 25 = 12.30/25
+
+At the end of the day...I don't feel very much about this script.
+Part of me was like "well he used ECL instead of DNH and that's gotta be worth something" but ultimately for most of these patterns it wouldn't have made a difference what it was in.
+They were pretty boring and basic, I walk away from this script feeling basically nothing about it, and for someone who has been scripting for this long I'd expect a bit more out of the box thinking.
+Like Priw isn't a scripter like the rest of us in the traditional sense but he made a *far* more novel script.  Several of them, even.  Other modders have ways of making their work unique.
+Look at the work that Ince does on the TriUltra scripts.  They are obviously made for TAS level gameplay, but he has creative solutions to new problems that pushing the bullet and difficulty limit naturally brings up.  You need more of a hint of that creativity.
+If you're going to use ZUN's engine, then you get some inherent benefits and drawbacks, but you don't need to follow in his footsteps.
+These patterns are INCREDIBLY safe and most of them wouldn't take much time to make.  ZUN's restrictions are tough to work with, but I'm sure you could find ways to be a bit more creative with your toolset.
+Or hell, just try and make the dodging a bit more interesting.  Frankly, as much as I bashed that Back Door spell's initial design, its dodging was basic but kept me on my toes.  It's why I gave suggestions elsewhere to improve it.
+You obviously have potential and you've been around long enough to know your toolset, so push the boundaries a little more.  I know you can.

@@ -1,0 +1,68 @@
+Wish's BHA4 Judging - Unworldly Manifestations
+-=Drek's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-30 points towards general aesthetics, sound, and polish.  (For the record, *average* aesthetics is essentially the defaults per engine, and is at around a 6/10 per category)
+-(Usual contest-specific bonuses will be omitted due to contest theme being OCs lol)
+At the end, the total points will be divided by the total possible points, and then multiplied by <contest average> to get your final score.
+
+Non 1: 16/20
+Pattern is relatively standard but it's fun and cool.  Lol Sine Wave.  It's fun and that's good enough for me
+8/10 - Creativity/Aesthetics, 8/10 - Fun/Design
+
+Water Sign "Inhabited Geyser": 15/20
+The use of the Minecraft sprites throughout this script is pretty hilarious and it looks cool.  It's WAY too fast and a bit hard to learn how it even works.
+The huge splash of glowy orbs even when you *do* dodge the fish is just so much.  You can misdirect it but it's a bit goofy due to the bobber.
+Second wave is better in difficulty but a bit more basic to dodge.  A good breather but could be better
+9.5/10 - Creativity/Aesthetics, 5.5/10 - Fun/Design
+
+Non 2: 16/20
+Pretty basic to dodge compared to the first non, but a heavy graphical upgrade.  Overall about on par.
+I really like how the sword v-shape cloud of bullets looks.
+9/10 - Creativity/Aesthetics, 7/10 - Fun/Design
+
+Icy Breeze "Tempest in a Box": 16/20
+Those delay lasers look SEXY and the rest of the pattern isn't...too crazy.  
+The gravity is pretty annoying and can lead to some weird situations, but I probably could be playing around it better.
+9.5/10 - Creativity/Aesthetics, 6.5/10 - Fun/Design
+
+Non 3: 16/20
+Pretty basic dodging but I like how it keeps you constantly on your toes.
+I'm not a super big fan of how the flower clumps look for some reason, but the squares of stars are a semi-neat aesthetic.
+7.5/10 - Creativity/Aesthetics, 8.5/10 - Fun/Design
+
+(-1 - additional penalty on Non 3 because it actively has bullet deletion issues!  they didn't all cancel before the next attack started.
+it wasn't common but did happen while judging!!)
+
+Last Rockabye "Resplendent Fulgor": 17/20
+What on Earth is this spell name... this is Ryann tier.
+I REALLY like the concept behind the first part of the attack but I think it's a bit too tough to read.
+The second part is a pretty basic big burst of dense, slow bullets, but it looks neat.  I think it's my favorite so far.
+8.5/10 - Creativity/Aesthetics, 8.5/10 - Fun/Design
+
+Non 4: 12/20
+I *really* am not a big fan of the dodging on this one.  First part is basic if you just move vertically, and the second part snipes me so often.
+It looks decent but not super outstanding in comparison to the other patterns.
+7/10 - Creativity/Aesthetics, 5/10 - Fun/Design
+
+Demon & Demigod "Why Not?": 17/20
+This attack is...a lot to take in!  It's really dense in variety, which is pretty impressive on its own
+I think the attack is fun but pretty overwhelming to dodge.  It does seem like it'd be pretty fulfilling once it's learned, though
+I like how it's a survival that doesn't overstay its welcome.  Short and sweet
+8.5/10 - Creativity/Aesthetics, 8.5/10 - Fun/Design
+
+One & Only "Into the New Heart": 16/20
+The first part of it is a cool idea, but ultimately pretty basic to dodge.  It's ok, it's clean and looks cool
+Second part of it is MUCH more fun, fast paced and keeps me on my toes.  I wish it was more of the attack
+9/10 - Creativity/Aesthetics, 7/10 - Fun/Design
+
+AESTHETIC: 21.5/30
+Looks: Your package looks cool!  It's not the best one I've seen but it's pretty damn solid 7/10
+Sound: Pretty standard for DNH and some sound effects are oddly quiet.  Good music choice though 6.5/10
+Polish: The dialogue and SnY tie-in with Tricky WHM is pretty funny.  Using the Minecraft sprite motif throughout several attacks is an interesting choice but a nice polish detail.  Same with other effects 8/10
+
+SUM OF PATTERNS: 124/180
+AESTHETIC: 21.5/30
+TOTAL: 145.5/210 * 25 = 17.3215
+That was a fun script!  It was definitely too hard for me to regularly be able to dodge, but the pattern concepts were very good.

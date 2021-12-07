@@ -1,0 +1,61 @@
+Wish's BHA4 Judging - Unworldly Manifestations
+-=Foxigami's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-30 points towards general aesthetics, sound, and polish.  (For the record, *average* aesthetics is essentially the defaults per engine, and is at around a 6/10 per category)
+-(Usual contest-specific bonuses will be omitted due to contest theme being OCs lol)
+At the end, the total points will be divided by the total possible points, and then multiplied by <contest average> to get your final score.
+
+Memez.
+
+Nonspell 1: 9/20
+I can stand still in the center and dodge the whole thing.
+Otherwise it looks fine.
+6/10 - Creativity/Aesthetics, 3/10 - Fun/Design
+
+Butterfly Effect "Regretful Prison": 8/20
+Cool concept but I hate its execution.  There's little warning, if you move a bit it gets absurd, if you don't move much it's piss easy.
+7/10 - Creativity/Aesthetics, 1/10 - Fun/Design
+
+Nonspell 2: 16/20
+Ok this is MUCH better, looks cooler than the first non and you have to actually dodge it too.
+It's interesting too, look at that!  Nice work!
+8/10 - Creativity/Aesthetics, 8/10 - Fun/Design
+
+Dimensional Traps "Creeping Walls": 10/20
+Well... it does what it sets out to do and looks fine.  I just don't really care about it.
+6/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+Nonspell 3: 11/20
+Hmmm... this would be a lot better if there was ANY sort of tell as to where the cyan bullets would go.
+It looks really nice but the cyan bullets destroy it.
+7/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+Bad Memories: "Get Stickbuged[sic] Lol": 12/20
+Ok that actually got me pretty good.  Really creative idea.
+The dodging is meh.
+9/10 - Creativity/Aesthetics, 3/10 - Fun/Design
+
+The CHains That Shackel[sic] Us: 9/20
+This spell title is *extremely* "I'm 14 and this is deep" energy.
+It's a neat idea (hi Len'en Monochrome) but it's WAYYYYY too long.  I was bored by the end and the dodging wasn't amazing.
+6/10 - Creativity/Aesthetics, 3/10 - Fun/Design
+
+Makai's Magical Treasure: "Mystic Square": 12/20
+The buildup on this attack is slower than FFXIV's A Realm Reborn part (read: extremely slow) but it's got a satisfying to dodge final phase.
+Looks ok, Demarcation lol
+6/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+ 
+AESTHETIC: 17/30
+Looks: Standard. 6/10
+Sound: The volume balancing is unusual in places, otherwise standard. 5/10
+Polish: You might want to break free of The Most Glorious Treasure and AJS' system cuz I think it's holding you back lol.  Average. 6/10
+ 
+SUM OF PATTERNS: 87/160
+AESTHETIC: 17/30
+TOTAL: 104/190 * 25 = 13.68/25
+
+This script uh...exists!
+I honestly have no idea how to feel about it.  You've definitely got potential, but a bunch of these attacks are too memey and/or don't have enough testing.
+You can definitely do better than this, keep at it!

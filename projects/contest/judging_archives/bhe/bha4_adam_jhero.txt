@@ -1,0 +1,40 @@
+Bullet Hell Artistry #4 - JHero's entry
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+ 
+----------------------------------------------------------------------------------
+
+Nonspell 1: 5/10
+Uhh, it's kind of *too* simple, honestly. The difficulty comes from the boss being too low on the screen to reliably read the waves, but it's not terribly hard. Still, could benefit from something more.
+
+Spell 1 [Flame of the Future ~ Infinite Reflection]: 5.75/10
+The bullet density is relatively low, making the spell free. You can get away with many more bullets, and even then the repetitive nature of the spell would still hold it back.
+
+Nonspell 2: 5/10
+The bullets are slow enough for you to not need any warning lasers. I'd say they're a hindrance, as they can distract you from the bullets and get you killed. Even then, very easy and repetitive pattern.
+
+Spell 2 [Burning Will ~ Hellfire Grenade]: 4.5/10
+Not much to speak of, honestly. It's a rehashed version of the second nonspell with less amulets and some fireballs underneath. There's hardly anything to dodge most of the time.
+
+Nonspell 3: 4.5/10
+The fact that it immediately starts after defeating the spell before it can cause someone to lose a life, you should avoid that in your future scripts. Besides that, it seems to be random spam of bubbles and stars. Leaves much to be desired.
+
+Spell 3 [Festival of Flames ~ Blooming Burning Chrysanthemum]: 2/10
+Isn't this the same exact concept as the first spell? There are the same issues here as in the first spell, but the bullet density is even *lower*. Seems like an extremely rushed pattern.
+
+Spell 4 [Gate of Flames ~ Kagura Mai]: 6.25/10
+A spell that encompasses all of the boss' established patterns so far. While it looks pretty, there's nothing much going on for the pattern to pose any threat.
+
+Spell 5 [Blooming Field ~ Kagura Odori]: 6/10
+The concept is neat, though the pattern's relatively simple in execution. There isn't much leeway with how close you can stand closer to the boss, and there is no warning ring around it to tell you where the danger zone is. The anti-cheat bullets can really ruin your strategy even if you're not trying to cheese the pattern.
+
+TOTAL: 9.75/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 2/5
+As far as I know, all the system graphics are default for RyannLib. There's no background music, but at least there are sound effects. The script in general seems a bit unfinished.
+ 
+ 
+[TOTAL SCORE: 11.75/25]

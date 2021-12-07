@@ -1,0 +1,73 @@
+Wish's BHA4 Judging - Unworldly Manifestations
+-=Pickled Cow's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-30 points towards general aesthetics, sound, and polish.  (For the record, *average* aesthetics is essentially the defaults per engine, and is at around a 6/10 per category)
+-(Usual contest-specific bonuses will be omitted due to contest theme being OCs lol)
+At the end, the total points will be divided by the total possible points, and then multiplied by <contest average> to get your final score.
+
+This is one of the most cursed screenshots I've ever seen.
+https://media.discordapp.net/attachments/857340164443078686/917244668373266473/IMG_20211205_212430.jpg
+
+Nonspell 1: 12/20
+Basic crisscrossing non, ok.
+Worth reporting fairly consistent flickering on this non.
+6/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Gherkin "Pickle Leviathan": 9/20
+Hi Nitori Cucumber With Curving Lasers
+It's pretty basic.  Still some flickering.
+4/10 - Creativity/Aesthetics, 5/10 - Fun/Design
+
+Nonspell 2: 14/20
+More interesting than the previous one (with more flickering), pretty decent.
+7/10 - Creativity/Aesthetics, 7/10 - Fun/Design
+
+Picklemancy "Curse of the Pickle Jar": 12/20
+Standard, *very basic*, but somewhat effective.  I feel like mechanically the bullet graphic morph doesn't do very much, but it looks nice.
+Aesthetics are majorly carrying this attack, though.
+7/10 - Creativity/Aesthetics, 5/10 - Fun/Design
+
+Nonspell 3: 12/20
+Rotating BoWaP on an ellipse.
+Again, mega basic, but at least it looks pretty and dodging it isn't braindead.
+Much less flickering on this non, but it happened to the items.
+6/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Pickle Sign "Cucumber Fermentation": 5/20
+This attack really lacks impact with sfx and I have absolutely no idea how you dodge it.
+Little aesthetics to carry it either, it's pretty boring.
+3/10 - Creativity/Aesthetics, 2/10 - Fun/Design
+
+Nonspell 4: 6/20
+Urumi non, next.
+3/10 - Creativity/Aesthetics, 3/10 - Fun/Design
+
+Cow Grinder 6000: 10/20
+This is...extremely dark for an otherwise tongue-in-cheek script, wtf
+Otherwise it's pretty boring.  But the aesthetics and theming left an impression.
+6/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+Bovine Disaster "Corrupted Milk": 11/20
+If your cow is making radioactive fireballs you might want to take them to a vet.
+Say it with me now: "basic"! But the theming is pretty neat and the milk filling up the stg frame is neat.
+7/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+"Pickle Dimensions": 15/20
+I think that's the first time I've seen a custom 3D background for *one spell* before.  Reminds me a lot of Stage 7 in Gouyoku Ibun, but green.
+Besides that this is honestly my favorite attack of the bunch.  A serviceable final spell that's actually quite interesting to dodge, I'm impressed.
+7/10 - Creativity/Aesthetics, 8/10 - Fun/Design
+
+AESTHETIC: 26/30
+Looks: I know it's not a fair fight when you consider the other scripts are LuaSTG and DNH but wow this is honestly staggering.  The flickering can be forgiven because everything else is so CLEAN. 10/10
+Sound: Pretty basic sound usage for a custom engine, and I think it's mostly ZUN sfx.  Decent music.  Average.  6/10
+Polish: Lmao why the [expletive] does this script have unusuals, I love it.  I really like how the background is so dynamic, too.
+Otherwise this is an extremely solid showing of your engine and its capabilities and I hope it's decent to use. 10/10
+ 
+SUM OF PATTERNS: 106/200
+AESTHETIC: 26/30
+TOTAL: 132/230 * 25 = 14.35/25
+
+It's a mostly average script that's really carried by its engine and potential, but I think that's the point.
+The script isn't super special, but as a tech demo it's VERY promising and I'm curious to see what comes of it.

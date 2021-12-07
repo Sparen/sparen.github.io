@@ -1,0 +1,40 @@
+Bullet Hell Artistry #4 - Foxigami's Entry
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+ 
+----------------------------------------------------------------------------------
+
+Nonspell 1: 7.5/10
+Simple, symmetrical nonspell. I like the bullets' movement here, the way they kinda retract like that. What's holding it back is the low health, so the pattern dies in just one wave.
+
+Spell 1 [Butterfly Effect "Regretful Prison"]: 6/10
+The concept is nice, but it's very easy to cheese the pattern if you stand right below the boss. The red bullets provide some challenge, but the spell is still relatively free once you get the hang of it.
+
+Nonspell 2: 7.5/10
+Fairly decent nonspell which stands out from the previous one. Can be a bit difficult to read the red lines, could've been better if the squares weren't that tight.
+
+Spell 2 [Dimensional Trap "Creeping Walls"]: 6.25/10
+I'm not really sure what the point of the color switching is. At first I thought the background bullets would get their hitbox back with each movement, but it doesn't work like that. It just ends up being going through walls and hoping you don't get squashed. I think it's memo?
+
+Nonspell 3: 7.5/10
+Another simple and symmetrical nonspell. Relatively fun to dodge, but the RNG can give you some pretty nasty waves from time to time.
+
+Spell 3 [Bad Memories "Get Stickbugged Lol"]: 3.5/10
+Ehh, while the concept is alright, the execution leaves more to be desired. As there are multiple methods for the ovals to move after hitting the borders, it's a bit hard to predict them. The aimed wave especially is ridiculous and feels detrimental to the pattern. Not fun to dodge.
+
+Spell 4 ["The Chains that Shackle Us"]: 6/10
+Relatively okay survival, I like that there are multiple phases to the spell. In terms of issues, the first phase can get you some very weird waves that can either break the pattern or make it free, while the second phase gets kind of too overwhelming after a while.
+
+Spell 5 [Makai's Magical Treasure "Mystic Square"]: 6.75/10
+Simple final spell that gets harder as you shoot it down. I would've preferred different phases to make it more varied. You can also time it down to skip the difficult part altogether, it only gets more difficult if the boss takes damage. It's solid overall.
+
+TOTAL: 12.75/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 2/5
+There isn't anything to write about in terms of visuals. Some of the patterns have neat bullet movement. In terms of sound, the music and sound effects in the script itself are very quiet unlike the player's sound effects. 
+ 
+
+[TOTAL SCORE: 14.75/25]

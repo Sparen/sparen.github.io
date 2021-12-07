@@ -1,0 +1,25 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"Bovine Brine Brawl" by Pickled Cow
+=====================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=====================================================================================================================================
+Played on Normal.
+The 3D backgrounds lagged my computer out. I think you might need to optimize those...
+
+Non 1 - Decent non. 8/10
+Spell 1 - Good use of readable curvy lasers. 8/10
+Non 2 - Very good non. 9/10
+Spell 2 - Amazingly creative idea, but uh, does the hitbox actually change? 9/10
+Non 3 - BoWaP 6/10
+Spell 3 - Thank goodness the hitboxes are small. It's a decent survival. 8/10
+Non 4 - Urumi 7/10
+Spell 4 - YYDO without huge hitboxes... it works? 8/10
+Spell 5 - It feels a bit overtuned if trying to shoot down and free if timing out. 7/10
+Spell 6 - A very well made final that isn't just a mashup of previous patterns. 9/10
+
+Bonus/Penalty - The HD looks nice and I do think it actually helped quite a bit with dodging. Also the HUD indicator for nons/spells/timeout being taken from BDitB is very good. +0.5
+
+Overall Score - 8.4/10
+Very solid patterns all around, very solid boss fight.

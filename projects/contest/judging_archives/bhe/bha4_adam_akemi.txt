@@ -1,0 +1,43 @@
+Bullet Hell Artistry #4 - Akemi's Dream World Crossing
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+ 
+Played with Marisa.
+----------------------------------------------------------------------------------
+Nonspell 1: 7.5/10
+Fairly standard opener. Introduces one of her main nonspell gimmicks well, though I think you could do something more with it.
+
+Spell 1 [Unveil Danmaku Art "Disturbing an Old Text"]: 5.5/10
+Veeeeery slow and boring. The lane switching would be more exciting if the bullet *and* player movement speeds were higher. I like the concept, but it needs a bit of work.
+
+Nonspell 2: 7/10
+Solid nonspell. I've had multiple instances where the flower bullets and the amulets overlap in really weird ways. Add some more wait time between the individual phases. 
+
+Spell 2 [Thought Danmaku Art "Crystallized Knowledge"]: 7.75/10
+The way the spirals unfold looks pretty neat, though I think the blue wave is harder than the purple one. I think there could be a bit more to this spell besides the red aimed amulets.
+
+Nonspell 3: 8.5/10
+Pretty interesting take on her gimmick. I like how you have to aim the flower away from the middle so they don't overlap with the amulets much. The boss also moves along with you to make your life easier.
+
+Spell 3 [Hanakotoba Danmaku Art "Flower Language"]: 7.5/10
+Looks pretty, even though it's a bit simplistic in terms of dodging. I feel like the movement speed makes positioning yourself with the bullets a bit weird.
+
+Nonspell 4: 7.5/10
+Interesting, but I prefer the previous nons over this one. The amulets get a bit too fast in my opinion.
+
+Spell 4 [The Sword Who Shall Not Be Named]: 8/10
+Cool survival spell, has a lot going for it. The bullet formations are unique and there's plenty of different things to dodge during the spell. It's short and sweet, which is a plus. I feel like the sword should be more opaque, it felt a bit distracting.
+
+Spell 5 [Ancient Scripts "Millenium Eternia"]: 5/10
+It feels extremely messy and incoherent. Most of the bullets are there just to distract you and the blue amulets are quite quick and hard to read. The concept needs better execution.
+
+TOTAL: 14.30/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 4/5
+In terms of system and aesthetics, I really enjoyed this script. The portraits are very cute and I love the detail on the boss' sprite. Hell, you can see her get upset when you defeat her attack. While I'm not sure whether I like the maple leaf effect during the spell declaration, the particles don't interrupt gameplay. There are some things like player movement speed and background clarity to worry about.
+
+
+[TOTAL SCORE: 18.30/25]

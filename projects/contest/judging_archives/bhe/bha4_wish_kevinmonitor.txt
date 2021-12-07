@@ -1,0 +1,67 @@
+Wish's BHA4 Judging - Unworldly Manifestations
+-=Kevinmonitor's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-30 points towards general aesthetics, sound, and polish.  (For the record, *average* aesthetics is essentially the defaults per engine, and is at around a 6/10 per category)
+-(Usual contest-specific bonuses will be omitted due to contest theme being OCs lol)
+At the end, the total points will be divided by the total possible points, and then multiplied by <contest average> to get your final score.
+ 
+Nonspell 1: 8/20
+So uh...I respect you trying to make this a bit more "arcade" and fast paced, but I think this goes a bit too far :dying:
+It's visually...striking but the dodging doesn't keep me on my toes like it should.  It's either overwhelming or very basic.
+5/10 - Creativity/Aesthetics, 3/10 - Fun/Design
+
+Tempest Dance "Wind God Braves the Palace": 11.5/20
+You definitely got closer with this one.  Curvy lasers can aim whereever they damn well please though, which makes this pretty annoying to misdirect.
+I do like you trying to make the player move around the screen though, and you mostly succeeded while keeping it spicy.
+Visually I kinda don't care about it, to be honest.
+4.5/10 - Creativity/Aesthetics, 7/10 - Fun/Design
+
+Nonspell 2: 8/20
+This is like...Utsuho tier basic, but it's better than one of those nons if you ask me.  It's ok.  Visually it's not as good as I'd like it to be.
+4/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+Thunder Dance "Unlimited Arrow Works": 6.5/20
+Frankly, this spell would be basically a million times better if she didn't leap towards you like she does.
+It makes the spell extremely claustrophobic and annoying.
+The bubbles are also extremely fast and I feel very blah about how the rainbow works here.
+3/10 - Creativity/Aesthetics, 3.5/10 - Fun/Design
+
+Nonspell 3: 12.5/20
+This was spooky but actually pretty alright to dodge.  Frankly, the lightning lasers should've had hitboxes.
+Either that or make them slightly transparent, but either one needs to be done to make this interesting.
+Visually decent.
+5.5/10 - Creativity/Aesthetics, 7/10 - Fun/Design
+
+Shadow Dance "Concealment of Skyward Disaster": 13.5/20
+This is definitely the coolest attack concept in the bunch and I really like the idea here, but I think something about it...undersells it?
+Maybe it's simply SFX design or visual appeal not pulling its weight here because the attack concept is solid and easy enough to understand.
+The clouds are cool looking but ABSOLUTELY get in the way and I don't like them.
+6/10 - Creativity/Aesthetics, 7.5/10 - Fun/Design
+
+"Thunder Palace's Mousetrap": 11/20
+This was...actually a pretty awesome way to make me circle while also making me think.
+I'm kinda sick of "circle around the screen" attacks, but this was pretty well executed...up until the end which drops the ball by making the arrows much less of a threat.
+I feel like I got blue balled.
+5/10 - Creativity/Aesthetics, 6/10 - Fun/Design (could've been an 8 without the arrow nerf at the end)
+
+"Dancing Plague of the Storm": 14/20
+Well that was the best attack of the bunch, you certainly looked most in your element here with this one.
+Kagemo, anyone?
+I *really* find the lightning lasers uncomfortable with how wide they are :sweat: but otherwise it's good.
+Visually once again I kinda...don't care, but the dodging was quite solid actually.
+6/10 - Creativity/Aesthetics, 8/10 - Fun/Design
+ 
+AESTHETIC: 18/30
+Looks: I really like the portraits for both characters and lightning girl is mega cute, I approve.  Nice custom HUD too 8/10
+Sound: I'm sorry to the musician but I'm *really not* a fan of this theme.  Otherwise the sound was standard. 4/10
+Polish: Basic but useful package and has a few little touches here and there.  Average. 6/10
+ 
+SUM OF PATTERNS: 85/160
+AESTHETIC: 18/30
+TOTAL: 103/190 * 25 = 13.55/25
+
+This was *quite* ambitious and I really respect the attempt to break the comfort zone to make some more unique attacks in terms of design space.
+The arcade feel was certainly not perfect but you did get close a few times, with the script getting overall better as it went on.
+It's certainly not bad, but not the best script of the bunch.  Give it another good try!!

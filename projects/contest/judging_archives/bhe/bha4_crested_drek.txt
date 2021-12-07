@@ -1,0 +1,24 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"Bringer of the Mountain and Desert" by Drekareen
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+No difficulty options given.
+What is a Hard Lunatic anyway
+
+Non 1 - Multipart nons! It's a decent one too. 8/10
+Spell 1 - A bit blind killer but the pattern itself is pretty good. Orange arrowheads being the main difficulty of the pattern seems a little strange though. 8/10
+Non 2 - Those white lasers are super blind killer but it's a good non regardless. Something about the rainbow orbs looks... off though. 8/10
+Spell 2 - The gravity only applying in three bursts seems a little... strange. It's a decent pattern otherwise. 8/10
+Non 3 - Very well made non. 9/10
+Spell 3 - Incredible spell. I absolutely adore the design of the 6 purple laser wave. 9/10
+Non 4 - The perfect symmetry kind of makes this non a little underwhelming... but the laser phase makes up for it. 8/10
+Spell 4 - It might be just a bunch of different patterns but they're all quite good. 8/10
+Spell 5 - It feels like 4 completely different patterns in one spell, which doesn't really seem to be very fitting for a final. The patterns are decent though. 8/10
+
+Bonus/Penalty - Standard boss fight script. Though I think the gameover function broke?
+
+Overall Score - 8.3/10
+It's pretty obvious from every single pattern in the script that you're more than capable of producing a lot of good quality patterns and quite a few of the patterns are highly thematic and creative. That said, I do feel like some of the ideas could have been explored a little more to produce one very well-made pattern, instead of having a multitude of different ideas thrown one after another.

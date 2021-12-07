@@ -1,0 +1,26 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"The Nameless Avatar" by Naudiz
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+No difficulty options given.
+
+Non 1 - Not much to say, but it's decent. 8/10
+Spell 1 - An amazingly well made thematic spell that forces a specific rhythm of dodging. 10/10
+Non 2 - Standard but good. 8/10
+Spell 2 - Pretty standard multidirectional dodging spell. 8/10 (-1, see Bonus/Penalty)
+Non 3 - Well-paced misdirection-based pattern. 8/10
+Spell 3 - The spiral outlines make this spell very reasonable to dodge and it's got some interesting overlaps. 9/10
+Non 4 - Quite flashy but... this ends up being quite a boring patterns to dodge? 7/10
+Spell 4 - Absolutely incredible looking spell. The repositioning forced by the morphing triangles/circles adds quite a unique challenge to this. 10/10 
+
+Bonus/Penalty - Unquestionably one of the most unique styles in the contest. The geometric shapes being hollow 2D shapes doesn't make their hitbox immediately apparent but that's not really going to cause any visual clutter.
+Unfortunately I do have an issue with the some of the flame effects used as well as the player sprite's white square. Especially on the second spell, I felt that my reading of the white dots was especially hampered by poor visibility. This is a very different stylistic approach from Touhou, but that also makes it such that potential visibility issues really need to be focused on even further.
+Since it only really adversely affected one spell, I've issued a penalty to that spell alone.
+Other than that, the system seems quite a bit overkill for a 8 pattern boss script; I'm curious to see how you might want to make use of it if you do decide to further this project.
+Also the pixelly look of it seems to work out quite well despite being in 16:9 fullscreen.
+
+Overall Score - 8.4/10
+A consistently high quality script with a very unique theme and style. Some patterns make very good use of the theme and I'm looking forward to seeing the completed version of this script (if you do decide to make it).

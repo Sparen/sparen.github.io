@@ -1,0 +1,67 @@
+Wish's BHA4 Judging - Unworldly Manifestations
+-=Syoudre's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-30 points towards general aesthetics, sound, and polish.  (For the record, *average* aesthetics is essentially the defaults per engine, and is at around a 6/10 per category)
+-(Usual contest-specific bonuses will be omitted due to contest theme being OCs lol)
+At the end, the total points will be divided by the total possible points, and then multiplied by <contest average> to get your final score.
+ 
+Nonspell 1: 13/20
+Pretty basic non, looks nice, a bit slow, standard dodging.
+7/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Scythe Slayer: 14.5/20
+Another fairly simple attack, but that's fine.  It also looks pretty good.  It's a bit more fast paced, makes you move, pretty fun!
+7/10 - Creativity/Aesthetics, 7.5/10 - Fun/Design
+
+Nonspell 2: 15/20
+This could've used a bit more HP, but I *really* like how you take advantage of the screen space to get the player to move around.
+Everything's telegraphed so there's no jank.  It's pretty fun but could've been a bit faster.  Though I'm playing on a lower difficulty than what I could be.
+7.5/10 - Creativity/Aesthetics, 7.5/10 - Fun/Design
+
+Huntsman's Tactics: 16/20
+An attack that looks simple at first but is surprisingly fun to dodge AND looks nice too!
+8/10 - Creativity/Aesthetics, 8/10 - Fun/Design
+
+A Barrage for Warfare: 14/20
+"Bullet" bullets are pretty slow and could've been way faster to be more fun, even on Normal it could've used a boost.  Looks are pretty average, though the blast with the spinning bullets looks nice.
+The misdirection in this spell is pretty simple but I like how the different timings of the blasts makes you think a bit more about how to move!
+6.5/10 - Creativity/Aesthetics, 7.5/10 - Fun/Design
+
+Nonspell 3: 13.5/20
+A fairly basic Satori-like non, but I like how it looks.
+7.5/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Swiftly Prismatic Supernova: 9.5/20
+Like a few other attacks, it's pretty but with little substance.  Except this one had no substance.  I mostly sat still and waited for lasers to pass me.
+Not particularly creative either, so prettiness points get docked a bit.
+6.5/10 - Creativity/Aesthetics, 3/10 - Fun/Design
+
+Nonspell 4: 15.5/20
+Pretty and the concept behind it was cool.  Just wish it was a *smidge* harder.
+8/10 - Creativity/Aesthetics, 7.5/10 - Fun/Design
+
+Lightning Surfing: 11.5/20
+Pretty but incredibly slow.  Once again like you making the player move around, but it's just boring.
+7.5/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+Lightning Nova: 12.5/20
+Restreaming is the name of the game here.  Pretty but not much substance, though the restreaming can be interesting since the lasers are timed a bit unusually.
+Taking a bit of design credit away though for how the stars are random in x position and can destroy you when close to you with no good way to adapt.
+7/10 - Creativity/Aesthetics, 5.5/10 - Fun/Design
+
+AESTHETIC: 17.5/30
+Looks: The bullets look...really small on the playing field but that could be the resolution I'm using.  Otherwise it looks ok.  Nothing really stands out and the menus look...ok. 5.5/10
+Sound: Len'en music and sfx.  Standard.  Though on the menu the sfx are REALLY LOUD and it's a bit annoying.  5/10
+Polish: I do like how you have the swap of player and boss and the use of the lifebar/bomb bar system.  It's not much, but it's an unnecessary little detail and I respect the work put into it.
+I do think it's worth noting that it could've used a bit more polish in some areas, but there's good things to talk about here.  7/10
+ 
+SUM OF PATTERNS: 135/200
+AESTHETIC: 17.5/30
+TOTAL: 152.5/230 * 25 = 16.57/25
+
+In general, it's a fairly average script.  It's solid and there's some great ideas here.  In general you getting the player to move around and making use of the wider playing field is very good, more people should be doing it.
+I may have been a bit overly critical in places, perhaps, but nothing was outright offensive to play, it was just a little low energy.  If you can pump that up you'll be in business, I'm telling you.
+Nice work, and I hope to see more from you.  Don't let the average score get you down!!
+ 

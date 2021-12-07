@@ -1,0 +1,23 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"Wandering Flame of Unreality" by Kirbio
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+No difficulty options given.
+By the judges' consensus we won't be judging the stage section or midboss patterns, nor the final spell.
+
+Non 1 - Very well-made pattern focusing more on dodging bullets from behind while noting lanes from the front. The I-pieces always spawning in the same positions adds some element of predictability to the pattern but the seemingly random lanes make this a fun pattern to dodge regardless. 9/10
+Spell 1 - Visual obstruction patterns are usually about covering up the hitbox and player sprite, forcing players to dodge blind. This... doesn't hide the hitbox and the pattern doesn't force unfocused movement either, making it very normal instead. (but the jokes are very funny) 7/10
+Non 2 - L and J blocks do nothing apart from aiming, making this an unfortunately standard pattern. 7/10
+Spell 2 - Honestly a little standard but designed pretty well. 8/10
+Non 3 - I had the gap in the wall spawn all the way on the left for 10 waves in a row once. But uh... it's very standard. 7/10
+Spell 3 - Those symbols have pretty heavy homing. It's a very good pattern. (also superdying) 9/10
+Non 4 - Movement limiter with vertical streaming makes for a pretty good pattern. 8/10
+Spell 4 - I'm not sure how to describe it but the way this pattern flows just works really quite well. 9/10
+
+Bonus/Penalty - I was amazed by how well you've recreated UM's card system and despite being a one-stage script, it still ended up being a very fun experience worth replaying multiple times. The system added so much gameplay to the script that even if it isn't directly part of the boss fight or pattern criteria, it would be a shame if it wasn't properly recognized. +0.5
+
+Overall Score - 8.5/10
+The boss fight itself has some fairly ordinary patterns but the amount of creativity and memes stuffed in this incredible passion project makes this enjoyable to play no matter what.

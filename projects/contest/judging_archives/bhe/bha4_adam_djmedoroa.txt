@@ -1,0 +1,60 @@
+Bullet Hell Artistry #4 - DJ Meodora's Fantasy Crossing
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+
+----------------------------------------------------------------------------------
+Nonspell 1: 6.5/10
+Mostly just vertical tap-dodging I guess? A bit uninspired and repetitive, I must say.
+
+Spell 1 [First Dream "Gap in Fairyland"]: 5/10
+Lots of RNG and lots of walls. Really really bad combination. You're at the mercy of having good bullet RNG, otherwise you'll be squished into the walls. At least the arrowheads have smaller hitboxes.
+
+Nonspell 2: 6/10
+More often than not I find myself sitting in one place and speedkilling it. The amount of bullets that overlap depends entirely on the boss' movement RNG. It looks cute I suppose.
+
+Spell 2 [Sweet Dream "Sorcerer's Paradise"]: 5/10
+Very dependent on RNG and micrododging. You can stay next to the boss to cheese the pattern a bit, but only during the first phase. It's still plenty of time to do damage to reliably speedkill, though. I would've liked the spell more if the pattern didn't boil down to random bullets.
+
+Nonspell 3: 5/10
+Simple nonspell with bubble micrododging. There isn't much to it, really. The bullets in the centre of the bubbles make the hitbox more obvious and the kunai never reach you if you hug the bottom. Even then, the bubbles hide the kunai, which is a mistake that should be avoided. Smaller bullets should always have render priority over large ones.
+
+Spell 3 [Spicy Dream "Ognevushka"]: 4.5/10
+Pretty unique in terms of bullet movement and aesthetics. Gameplay-wise, it leaves more to be desired. The coins that the fireballs leave don't reach the dead bottom of the screen most of the time, so you can bottomhug and most of the difficulty will go away. Furthermore, the lines of stars have the tendency to snipe you from the side of the screen.
+
+Nonspell 4: 7/10
+Much better than the previous nonspells, but the problem of large bullets hiding small ones is still present.
+
+Spell 4 [Salty Dream "Otohime's Somniloquy"]: 7/10
+The circles morphing into different wobbly shapes looks interesting. However, there could be something more to this spell to make it more dynamic. Perhaps an aimed component would work wonders here.
+
+Nonspell 5: 7/10
+Pretty cool in terms of dodging. Not really sure about those kunai, though... I think having them spawn with their regular sprites would work better. The stars don't really add anything to the pattern, honestly.
+
+Spell 5 [Savory Dream "Seven-League Boots"]: 7/10
+I actually got the impression that the boss aimed at your position, but it looks like it's a bit more static? Looks okay, though the arrowheads get a bit overwhelming near the end.
+
+Nonspell 6: 7/10
+This time the bullets act as familiars for the kunai. It takes a while to get to the interesting part, but it works well.
+
+Spell 6 [Bitter Dream "The Transient Match Salesgirl"]: 6.5/10
+I mean, it does stand out as a concept. However, the star lanes don't really do much in terms of difficulty. Most of the time they don't aim at spots where you have to dodge them. It looks cool, at least. I'd swap the dot bullets for something else, stars maybe?
+
+Nonspell 7: 7/10
+It works alright, though it gets repetitive quickly.
+
+Spell 7 [Otherworldly Bubble Magic -Five Li in a Dream-]: 8.25/10
+Fairly decent survival with a lot of things going on while still keeping a coherent concept as a main design point. The phases are a bit hit or miss, with the second and fourth being very easy and fifth being hard to get trapped by. I wouldn't have issues with it if it had a bit better balancing.
+
+Spell 8 ["Fantasy Crossing"]: 7/10
+Cue title card. The spell card itself is alright, I like the concept behind it. The laser activation is a bit weird and I've had instances where the laser hitboxes were teeny tiny. It's not a bad spell card, but could use an additional component to make it more unique and fun to dodge.
+
+TOTAL: 12.77/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 2/5
+It looks like a standard Touhou layout, there's nothing really much to comment on. Some of the bullet and color combinations strike me as kind of weird. Besides the large bullets obscuring smaller ones, I can't really think of any visual issues I want to mention. 
+
+
+[TOTAL SCORE: 14.77/25]

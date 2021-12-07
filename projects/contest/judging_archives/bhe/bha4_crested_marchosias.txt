@@ -1,0 +1,26 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"Mirage of Withering Florets" by MarchosiasNull
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+No difficulty options given.
+By the judges' consensus we won't judge the stage section or midboss.
+
+Non 1 - Very well made nonspell. The bubbles stop at just the right time to add some complexity to the pattern. 9/10
+Spell 1 - Aside from the warning lasers being quite thin and not looking good, it's a functional pattern. 7/10
+Non 2 - Another well made nonspell. 8/10
+Spell 2 - Cheesing the spell by sticking to the bottom of the screen unfortunately subverts the interesting part of the pattern, which you could fix by making the amulets not despawn offscreen when they first spawn in. 7/10
+Non 3 - A lot messier than the previous nons but it's still pretty good with the kunai unfolding so low. 8/10
+Spell 3 - I admire the idea of the gimmick but the execution seems a little strange. 7/10
+Non 4 - Black petals are particularly nasty but it's a very well made nonspell. 9/10
+Spell 4 - Pretty standard falling spam pattern with some complexity added by the inversion circles. 8/10
+Non 5 - Amazing nonspell. 10/10
+Spell 5 - Honestly one of the better survivals of this style I've seen. It's not particularly complex but is very comfortable to dodge since the bullets always come from one general direction instead of mindless 360 degree spam. 9/10
+Spell 6 - Not too sure what the point of the visual obstrution is considering it's already a fairly challenging pattern on the final phase. Perhaps the phases could be spread out a little better so the first half of the spell isn't completely free. 8/10
+
+Bonus/Penalty - The items being flowers is neat, but other than that it's a very standard boss script. Stage section seems a bit... unnecessary honestly.
+
+Overall Score - 8.18/10
+I hear that this is your first script; regardless of whether or not it is, you've done absolutely amazingly well with many of these patterns. The nonspells have an incredible distinct identity and this is one of few scripts in the contest that really stood out for sheer pattern quality. There's obvious minor bugs here and there such as 0/0 spawning and lack of spell cap effects, but I'm sure that once you learn how to do them you'll have the potential to make more truly incredible scripts.

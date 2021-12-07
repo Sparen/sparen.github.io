@@ -1,0 +1,29 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"Today's Training Regime" by Syoudre
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+Played on Normal (recommended) difficulty. No shottype selection available.
+
+The idea of a boss fight where you switch perspective between both characters is quite neat.
+Also not entirely sure how but I managed to get the boss on the first non to move and stay on the left edge of the screen.
+
+Non 1 - Static white bullets with aimed blue wave. The gaps are kind of obvious and there's almost no difficulty. 5/10
+Spell 1 - Other than being a blind killer when bottomhugging there's not much else. The pattern looks nice and I guess there is some difficulty in dodging crisscrossing bullets. 6/10
+Non 2 - Quite a good pattern that forces movement and rewards good routing. 9/10
+Spell 2 - Works decently either as a raw dodging spell or a strategic one of moving into large pockets. 8/10
+Spell 3 - Uh... this is just moving between static lanes? 5/10
+
+Non 3 - Decent non, fairly standard. 7/10
+Spell 4 - This works quite well but it might be a bit for the overall difficulty you seem to be going for? 8/10
+Non 4 - It's not really hard to dodge the blue walls but the white stars add some complexity to the dodging I suppose. 7/10
+Spell 5 - Very standard "dodge in middle" survival, but at least it seems balanced. 7/10
+Spell 6- While the overall pattern works well, with how much of the pattern is aimed, it feels like there's almost nothing threatening apart from unlucky comet spawn positions. 8/10
+
+Bonus/Penalty - None. It's a simple short boss fight script and that's exactly what we asked for.
+The HP system instead of life count actually just ends up making it almost impossible to gameover if playing standard, but that's not really our concern here.
+
+Overall Score: 7/10
+While most of the patterns are fairly standard it's fairly obvious the first half of the script has some misses that could be improved on. The "melee vs ranged" theme of the script could also be explored more, but you do need to figure out what makes a good melee-focused pattern.

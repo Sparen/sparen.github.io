@@ -1,0 +1,82 @@
+Wish's BHA4 Judging - Unworldly Manifestations
+-=DJ Medoroa's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-30 points towards general aesthetics, sound, and polish.  (For the record, *average* aesthetics is essentially the defaults per engine, and is at around a 6/10 per category)
+-(Usual contest-specific bonuses will be omitted due to contest theme being OCs lol)
+At the end, the total points will be divided by the total possible points, and then multiplied by <contest average> to get your final score.
+ 
+Nonspell 1: 10/20
+Trivial to dodge, looks ok.
+7/10 - Creativity/Aesthetics, 3/10 - Fun/Design
+
+First Dream "Gap of Fairyland": 13/20
+Shockingly hard, it's...fine.
+7/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Nonspell 2: 10/20
+Same problems and strengths as non 1
+7/10 - Creativity/Aesthetics, 3/10 - Fun/Design
+
+Sweet Dream "Sorcerer's Paradise": 13/20
+Very neat looking, but it's pretty boring to dodge the small, dense stuff.
+8/10 - Creativity/Aesthetics, 5/10 - Fun/Design
+
+Nonspell 3: 10/20
+Slightly less trivial to dodge if you know bubble hitboxes, kinda boring honestly
+6/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+Spicy Dream "Ognevushka": 11/20
+Isn't this basically just one of Salamimaru's spells?  It's fairly fun
+5/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Nonspell 4: 12/20
+Better to dodge, ok looking
+6/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Salty Dream "Otohime's Somnliloquy": 11/20
+Isn't this just an AJS Junko spell?
+5/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Nonspell 5: 9/20
+What in the world happened to the kunai on this non...?
+Anyway it's really obnoxiously hard, but it looks fascinating
+5/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+Savory Dream "Seven League Boots": 14/20
+Indicator looks cool, pattern looks fine, dodges fine
+7/10 - Creativity/Aesthetics, 7/10 - Fun/Design
+
+Nonspell 6: 10/20
+Different from the other nons, but kinda boring and less visually interesting
+5/10 - Creativity/Aesthetics, 5/10 - Fun/Design
+
+Bitter Dream "The Transient Match Salesgirl": 15.5/20
+Good dodging, fun idea
+7.5/10 - Creativity/Aesthetics, 8/10 - Fun/Design
+
+Nonspell 7: 8/20
+Similar deal to non 5 but the star underneath doesn't really add much of anything
+4/10 - Creativity/Aesthetics, 4/10 - Fun/Design
+
+Otherworldly Bubble Magic ~Five Li in a Dream~: 14/20
+VERY long survival but it's got a good amount of variation
+7/10 - Creativity/Aesthetics, 7/10 - Fun/Design
+
+"Fantasy Crossing": 11/20
+It's fine, it looks nice too, pretty boring to dodge though
+6/10 - Creativity/Aesthetics, 5/10 - Fun/Design
+ 
+AESTHETIC: 23/30
+Looks: This is really high quality for a GameMaker engine, really solid.  You can totally improve it too 9/10
+Sound: Sound is average 6/10
+Polish: Honestly what continues to astound me is the quality of this engine, but there are a few quirks.  Overall though there's extra dialogue and other little touches 8/10
+ 
+SUM OF PATTERNS: 171.5/300
+AESTHETIC: 23/30
+TOTAL: 217.5/330 * 25 = 16.47/25
+
+To be 100% transparent with you, this was one of the last scripts I judged and I *massively* ran out of steam as a result.  Sorry, there's a lot of patterns and my critiques ended up being *far* less detailed.
+Overall the script is pretty solid throughout with its own highs and lows, though I think there's massive room for improvement.
+I'm still incredibly fascinated by your engine and want to see it improve too!

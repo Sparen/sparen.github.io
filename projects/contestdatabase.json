@@ -492,7 +492,7 @@
             "judges": ["Trickysticks", "ExPorygon/Ozzy840", "WishMakers"],
             "numparticipants": 9,
             "result": [["iVAwalys"], ["Adam"], ["Python"]],
-            "participants": ["Green Dinobot/Gregory", "Drekareen/JDude", "Python", "iVAwalys", "NecroHeart/Vigor", "Zino", "Adam", "Umbra", "gtbot"]
+            "participants": ["Green Dinobot/Gregory", "Drekareen/JDude", "Python", "iVAwalys", "NecroHeart/Vigor", "Zino/Lathios", "Adam", "Umbra", "gtbot"]
         },
         {
             "id": "range20",
@@ -571,6 +571,19 @@
             "numparticipants": 6,
             "result": [["WishMakers"], ["raz/Arby26"], ["Lusus"]],
             "participants": ["WishMakers", "raz/Arby26", "Lusus", "Ryann", "Avi", "Tsuzyx"]
+        },
+        {
+            "id": "bha4",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "unworldly manifestations",
+            "year": 2021,
+            "duration": [2021.09, 2021.10],
+            "host": "Adam",
+            "judges": ["Adam", "CrestedPeak9", "WishMakers"],
+            "numparticipants": 13,
+            "result": [["Naudiz"], ["Kirbio"], ["Akemi"]],
+            "participants": ["Syoudre", "Bravidunno", "JHero", "Akemi", "Kevinmonitor", "Pickled Cow", "Zino/Lathios", "Drekareen/JDude", "Naudiz", "Foxigami", "Kirbio", "DJ Medoroa"]
         }
     ]
 }

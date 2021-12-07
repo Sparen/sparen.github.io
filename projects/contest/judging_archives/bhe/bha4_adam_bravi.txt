@@ -1,0 +1,41 @@
+Bullet Hell Artistry #4 - Syoudre's Today's Training Regime
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+
+* Played on Hard Mode with Reimu and Sanae (No Cards) *
+----------------------------------------------------------------------------------
+ 
+Nonspell 1: 4.75/10
+The pattern seems completely static, thus not providing too much challenge if you memorize all safespots. Gets pretty repetitive.
+
+Spell 1 [Ability Card "Bountiful Miracle Mallet"]: 5.25/10
+The concept is neat, though since it relies on you killing a yin-yang orb before it reaches too low on the screen, it's obvious that some characters are going to struggle more than others. I've also had instances where the boss spawned a yin-yang orb way too early and I had no chance to kill it before it was too low to handle. Starts off as a blind killer, which is also a minus.
+
+Nonspell 2: 5/10
+A bit more varied than the previous nonspell, but a different problem arises; all you need to do is do a slight tap once you enter a lane. Pattern would really benefit from something more to dodge.
+
+Spell 2 [Ability Card "Graceful Gale Geta"]: 5/10
+Way too random and fast, kind of hard to get into a safe gap. The concept is alright, but the execution leaves much more to be desired.
+
+Nonspell 3: 7.5/10
+A big improvement over the previous nonspell; you now need to read through the stars to avoid the aimed bullets. It *is* the same repetitive concept, but it's an improvement nonetheless. 
+
+Spell 3 [Ability Card "Great Tengu's Delicious Barley Rice"]: 5/10
+Umm... what? I feel like you can get screwed over by the random lasers way too easily, plus there's nothing much to the main pattern that comes from the boss. I definitely hope the intended method of dodging this is not staying on one side of the screen to handle the floating spirits, otherwise this spell would be nigh-impossible to read. There's also a massive lag spike if you die on this spell because of the spirits.
+
+Spell 4 [Ability Card "The Shadow Behind Your Back"]: 7/10
+Relatively interesting concept. Seems like each yin-yang releases the same bullet formation, albeit with slight angle differences depending on where they spawned from. The boss could use an indicator to signify that she doesn't have a hitbox, as during my blind playthrough I kept standing a bit higher on the screen.
+
+Spell 5 [Reality Shift "Lurking Rainbow Stars of Hindrance"]: 2/10
+There's WAY too much going on in this pattern. First, the pattern seems very unbalanced and can easily overwhelm you with all the bullets coming from each corner. They're not slow enough to be easily readable, either. In terms of visual issues, the dark bullets on the dark background are completely unnecessary. The constant charging effects can also distract you from dodging. To be blunt, this pattern feels very rushed and detrimental to the overall quality of the script.
+
+TOTAL: 10.375/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 1.125/5
+I can't really say much regarding this, as it's simply UM Stage 5 with absolutely no changes besides Megumu being replaced with your character. Mentioning that, you should've at least given the judges an opportunity to play the patterns without replaying the stage. Good thing there's thcrap.
+ 
+ 
+[TOTAL SCORE: 11.5/25]

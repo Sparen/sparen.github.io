@@ -1,0 +1,22 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+JHero's Submission
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+No difficulty/shottype options given.
+
+Non 1 - Quite standard, though this seems a bit too difficult for Extra. 6/10
+Spell 1 - This doesn't pose much of a threat with how low the bullet density is... this would probably be much better if the waves were slower but a lot denser. 5/10
+Non 2 - There's really no reason for the warning lines to exist; if anything they just make it harder to read. Also it's really easy. 4/10
+Spell 2 - There's barely any fireballs to pose any threat... if more of the fireballs would fall back down that would make this considerably more interesting. 4/10
+Non 3 - Fairly standard non. 7/10
+Spell 3 - The star density is so low that it poses no threat... also it's really similar to the first spell. 4/10
+Spell 4 - This is still pretty easy apart from potentially unlucky snipes by the falling amulets. It looks somewhat interesting at least? 6/10
+Spell 5 - This sort of idea can be interesting but apart from the last few seconds it's honestly quite boring. Also the penalty bullets seem a bit unfair if the player's just trying to PoC the items from the last spell... 6/10
+
+Bonus/Penalty - Completely standard script but there is no time to PoC at all... won't penalize but please do keep that in mind for future scripts.
+
+Overall Score - 5.3/10
+Unfortunately many of the patterns are just too plain and boring and barely have any difficulty at all. You could consider either adding more elements to each pattern, or to add more complexity to each pattern's gimmick.

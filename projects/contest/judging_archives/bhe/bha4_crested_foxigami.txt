@@ -1,0 +1,23 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"The Most Glorious Treasure" by Foxigami
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+No difficulty options given.
+Why is the Rude Buster so soft
+
+Non 1 - Simple and symmetric. It also... doesn't have enough health. 7/10
+Spell 1 - What is the point of the warning lines? I do like the idea of the pattern where it gets a lot simpler with less movement. But it's either super simple or a complete mess. 7.5/10
+Non 2 - Decent non. 8/10
+Spell 2 - ...uh, this is really boring. You could have just made the walls invert with each creeping motion and it'd probably work better. 6/10
+Non 3 - It's like the first non but higher up. 7/10
+Spell 3 - Uh... this just feels kind of awful to dodge. Especially the aimed waves. 5/10
+Spell 4 - There's an interesting idea presented here but I feel it's not really used very well. Instead it's just a kind of standard survival with forced movements. 7.5/10
+Spell 5 - Actually a very well made final with a fun final phase. 9/10
+
+Bonus/Penalty - Standard boss fight script.
+
+Overall Score - 7.1/10
+Not bad, but I feel like a lot of the ideas could be spiced up more to make them more varied and interesting. The nons could have had something to change up the perfectly symmetrical walls, for instance. Otherwise, a fairly standard loosely thematic script.

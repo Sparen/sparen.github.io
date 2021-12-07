@@ -1,0 +1,75 @@
+Wish's BHA4 Judging - Unworldly Manifestations
+-=JHero's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-30 points towards general aesthetics, sound, and polish.  (For the record, *average* aesthetics is essentially the defaults per engine, and is at around a 6/10 per category)
+-(Usual contest-specific bonuses will be omitted due to contest theme being OCs lol)
+At the end, the total points will be divided by the total possible points, and then multiplied by <contest average> to get your final score.
+ 
+(Oooooooooooooooooooooorb.)
+(Why is she an orb.)
+(Her portrait is cute, why is she confined to orb jail.)
+
+Nonspell 1: 3/20
+Amulet rings.  Yep.
+1/10 - Creativity/Aesthetics, 2/10 - Fun/Design
+
+Flame of the Future ~ Infinite Reflection: 6/20
+A group of orbs gets hurled at me and explodes when it reaches my original position.
+Uh...it gets me to move around the screen?  That's...good?  Far more involved than that nonspell but what is even happening here.
+1/10 - Creativity/Aesthetics, 5/10 - Fun/Design
+
+Nonspell 2: 2/20
+Ow my ears.
+I kinda like the aesthetic of the effect that the falling amulets have but then it's just amulet rain which is boring.
+The sound effects destroyed all love I had for the look of this non.
+1/10 - Creativity/Aesthetics, 1/10 - Fun/Design
+
+Burning Will ~ Hellfire Grenade: 3/20
+Amulets fall from the sky and create fireballs.
+Truly hell on Earth.
+It exists.
+2/10 - Creativity/Aesthetics, 1/10 - Fun/Design
+
+Nonspell 3: 6/20
+Bubbles and...overlapped stars.  Well at least it visually gives me any sort of sensation whatsoever.
+It's kinda whatever but it's the best attack so far.  Not saying much though.
+3/10 - Creativity/Aesthetics, 3/10 - Fun/Design
+
+Festival of Flames ~ Blooming Burning Chrysantemum: 2/20
+This is...basically that first spell, but fires faster, and the explosions are now..."chrysantemums".
+Major points off for not only being the first spell again, but way more boring.
+If this could get a 0, it probably would.
+1/10 - Creativity/Aesthetics, 1/10 - Fun/Design
+
+Gate of Flames ~ Kagura Mai: 4/20
+What on Earth am I looking at.  Is this spell card laced with THC or something, I feel like I've lost all grip on reality.
+My fever dream being this spell's aesthetic aside, it's pretty boring to dodge.
+If there's one thing I'll give it credit for though, I kinda like the idea of combining the previous attacks into the finale.  But I doubt that was intentional.
+3/10 - Creativity/Aesthetics, 1/10 - Fun/Design
+
+Blooming Field ~ Kagura Odori: 3/20
+Spiral where the amulets turn into aimed fireballs when hitting the top or a certain radius near you (??)
+I have to give a point for making anti-safespot rings so you can't just spin the spell but... this is...boring.  Extremely boring.
+I gotta ask though why does the survival have EASILY the longest timer out of all of these attacks?  And why on the most boring attack?
+At least it ramps up near the end.
+1/10 - Creativity/Aesthetics, 2/10 - Fun/Design
+ 
+AESTHETIC: 9/30
+Looks: Standard LuaSTG with Ryannlib.  No background. 4/10
+Sound: Absolutely no music. 1/10
+Polish: Oooooooorb.  Little to no extra touches of any variety besides the portraits and dialogue. 4/10
+ 
+SUM OF PATTERNS: 29/160
+AESTHETIC: 9/30
+TOTAL: 38/190 * 25 = 5/25
+
+I have a feeling this is one of those scripts you'll be looking back on in a few years and be like "why the hell did I ever publish this" because uh...
+Yeah, I'm sorry, there's no way to sugar coat this, this sucked.  There's not much about it I can say is interesting, or fun to play, or even just...a good idea.
+I feel like this kinda has to be a first script, so I don't wanna harp on it forever, but I feel like there was so much more you could do with this character.
+Look at some other scripts and see how they convey certain things.  The realm of fire, dancing, and flower attacks have all been done before, so you can look at some clear examples there.
+Might I suggest taking a look at Suika in FDF2, Kagemo in SoHW, and Yuyuko in...almost any game she's in?  Study their attacks and try some new things.
+
+This is a good start to learning LuaSTG but you've got some learning to do.
+In short, I'd rather play Orb 3D. https://www.youtube.com/watch?v=9-ADkypJMk4

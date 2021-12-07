@@ -1,0 +1,48 @@
+Bullet Hell Artistry #4 - Marchosias' Mirage of Withering Florets
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+ 
+----------------------------------------------------------------------------------
+Nonspell 1: 8/10
+Very fun introduction to the fight and her general nonspell gimmick. At first I thought the bubbles and kunai could cause some trouble, but dodging from a bit further away seems to do the trick. I would suggest keeping a close eye on any RNG you put in terms of bullet speed and angles.
+
+Spell 1 [Cursed Literature "Tomino's Hell"]: 7.75/10
+I noticed that the boss spawns the knives in a set angle? That isn't necessary, really. You can add some RNG here to make the formation a bit more unpredictable and give the player a bit more room to dodge. Other than that, it's a pretty decent spell.
+
+Nonspell 2: 8/10
+Similar to the first nonspell, but this time you need to focus on the kunai and the petal bullets. I'll still advise you to watch out for the kunai RNG. While I haven't had any instances where I was walled and had no way to dodge, there were some nastier kunai waves.
+
+Spell 2 [Rope Shrine Maiden "Five Gates"]: 7/10
+A pretty cute spell, looks and plays very well. I noticed you can cheese the pattern by hugging the bottom, as the bullets will despawn as they're considered off-screen. 
+
+Nonspell 3: 6/10
+Admittedly this nonspell is a bit of a step back. It relies too much on RNG, so there's no cohesive pattern to look at. The kunai are still there and don't pose much of a threat, fortunately. Could be better.
+
+Spell 3 [Book Curse "Anathema from Thieving"]: 7.5/10
+Very neat gimmick that is fun to play against. I'm not sure whether the main difficulty should come from the amulets, the fireballs or the bullets from the side, it makes the spell a tad difficult to keep track of. It does die quickly despite the gimmick that forces you away from the boss.
+
+Nonspell 4: 8/10
+A nice change of pace from the other nonspells. I feel like the black petals spawn a bit too close to you, and since the accelerate quickly, it's hard to keep track of them. Despite that, the nonspell is well-designed and fun.
+
+Spell 4 [Kurosaki Sign "Remains of a Burning Castle"]: 7.5/10
+A spell that relies on waves of falling bullets. It works well, I suppose? I would rather see the inverse circles causing some more interesting movements. One option is to make the fireballs aimed instead of falling down, since the flowers already play that role. 
+
+Nonspell 5: 9/10
+Similar to the previous non, but much better. The black petals are easier to read and the purple orbs provide some nice reflex dodging without being too bullshit. Very good!
+
+Spell 5 [Okiku "Hide and Seek"]: 6.75/10
+A neat survival spell, though I do have some issues with it. The first spell is alright, but I think it could work better with less RNG and have it more focused on going into and outside of the dolls' inversion circles. The second phase on the other hand is just spinning while hugging the edges of the screen.
+
+Spell 6 [Seimei "Longevity of a Blossoming Life"]: 7/10
+It starts off quite slow and unexciting, only getting to the good part at around the penultimate phase. The star around the player would probably benefit from *not* shooting bullets so it doesn't cause any unnecessary visual clutter. Dodging the pattern is fine, though it could be a bit better and more "grandiose" since it's a final spell.
+
+TOTAL: 15/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 3/5
+Looks relatively good, I like the variety of bullet you used in the patterns. For a first script, you've done quite a good job at both balancing, designing fun attacks and even trying out uncommon stuff like stage design. There were some 0,0 spawn errors caused by bullets spawning after the pattern ends, but they didn't linger into the next attack. Wonderful work!
+
+
+[TOTAL SCORE: 18/25]

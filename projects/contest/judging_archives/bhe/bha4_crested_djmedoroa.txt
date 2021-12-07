@@ -1,0 +1,29 @@
+Bullet Hell Artistry #4: Unworldly Manifestations
+Judging notes from Crested
+"泡沫幻想　～Fantasy Crossing～" by DJ Medoroa
+=======================================================================================================================================
+My judging criteria is entirely based on pattern design with bonuses or penalties for other factors such as gameplay systems, presentation and creativity.
+Each boss pattern will be rated up to 10 points and the overall score will be the average of all patterns.
+=======================================================================================================================================
+No difficulty options given.
+
+Non 1 - Pure vertical micro? It works I suppose. 7/10
+Spell 1 - This feels somewhat RNG wally... 6/10
+Non 2 - I'm not sure what this non was supposed to do, it's either stand still or get swarmed. 4/10
+Spell 2 - The gimmick doesn't seem to do very much and it just ends up being a micro spell. 7/10
+Non 3 - It's just simple bubble micro... and the gaps are huge. Even further exemplified by the bullets inside the bullet showing approximately their hitbox. 5/10
+Spell 3 - This ends up just being pure bottomhugging and slight streaming, and it's really not very interesting. 5/10
+Non 4 - Now this is a well designed non. 8/10
+Spell 4 - Not bad, but honestly a bit plain. 7.5/10
+Non 5 - The kunais look really off due to the stars behind them all being grey. But this is pretty good non. 8/10
+Spell 5 - Pretty good spell. 8/10
+Non 6 - This takes quite a bit too long to start up. 7/10
+Spell 6 - It kind of felt like nothing really happened? Just some occasional star lanes. 6/10
+Non 7 - It's a decent non. 7.5/10
+Spell 7 - First phase is good, second phase is just sit in a corner, third phase is good, fourth phase is pure bottomhugging, fifth phase is decent. 8/10
+Spell 8 - Presents a pretty interesting idea, but the way the laser activates throws me off quite a bit when judging if I have time to cross through them. 8/10
+
+Bonus/Penalty - Your engine suffers quite obviously from PoIB syndrome: diagonal movements are significantly faster than they should be. It makes a lot of patterns a hell of a lot harder to dodge than they should be... -1
+
+Overall Score - 5.5/10
+I understand that you're using GameMaker as an engine, but something like movement really shouldn't be screwed up because of it. Aside from that, you present some interesting ideas for many of these patterns but a lot of them end up not really doing anything. Perhaps looking a little closer at some of these spells and reducing the number of patterns overall might help increase the overall quality of the patterns.

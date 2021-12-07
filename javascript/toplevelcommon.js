@@ -1,7 +1,5 @@
 // Set an alert
 document.getElementById("alert_div").innerHTML = `
-<div class="notice_inner_sm">
-BHA#4 Contest!<br><img style="max-width: 320px;" src="https://sparen.github.io/projects/contest/bha4_banner.png"></div>
 <div class="alert_inner_sm">
 ⚠️ Danmakufu Wiki is down indefinitely. For Wiki content not backed up on this site, use the <a target="_blank" href="https://web.archive.org/web/*/http://dmf.shrinemaiden.org/wiki/Main_Page">Wayback Machine</a>. ⚠️
 </div>`;

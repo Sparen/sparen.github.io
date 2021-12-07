@@ -1,0 +1,72 @@
+Wish's BHA4 Judging - Unworldly Manifestations
+-=Akemi's Entry=-
+ 
+Rubric:
+-20 points per pattern - 10 points to creativity and pattern aesthetics, 10 points to fun factor and pattern design.
+-30 points towards general aesthetics, sound, and polish.  (For the record, *average* aesthetics is essentially the defaults per engine, and is at around a 6/10 per category)
+-(Usual contest-specific bonuses will be omitted due to contest theme being OCs lol)
+At the end, the total points will be divided by the total possible points, and then multiplied by <contest average> to get your final score.
+ 
+Nonspell 1: 13.5/20
+I like the bootleg Dream Sealing Circle she's using, and she's got some Shinki-like movement.  A very nostalgic non, pretty nice.
+It's pretty standard otherwise, but a great start.
+6.5/10 - Creativity/Aesthetics, 7/10 - Fun/Design
+
+Unveil Danmaku Art "Disturbing An Old Text": 13/20
+Grid of amulets where she fires a seal that makes some of them red and aimed?
+Works extremely well thematically with the title, a little bit slow (so not as interesting to dodge) but this is pretty nice!
+7/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Nonspell 2: 17/20
+This is VERY good.  Aesthetically it's got a nice theme, and I love how much this attack makes you think.
+Even when you figure out the best way to approach it (dodge one flower, focus on amulets, dodge other flower) it keeps you on your toes.
+Great work!!  The only quirk I have with it is how tough it is in comparison to everything else so far, haha
+8/10 - Creativity/Aesthetics, 9/10 - Fun/Design
+
+Thought Danmaku Art "Crystallized Knowledge": 18.5/20
+Beautiful pattern aesthetic, simple in concept, fun to dodge.  My favorite kind of attack.
+Is it the flashiest in the world?  Maybe not, but simplistic beauty is awesome.
+9/10 - Creativity/Aesthetics, 9.5/10 - Fun/Design
+
+Nonspell 3: 17/20
+A new and slightly different take on the previous non with the amulets now needing to be approached from the corners.
+Pay attention, newer scripters: THIS is how you make a previous non concept have a throughline, but make you approach the attack differently.
+Anyway, quite nice.  Easier than the previous non, a slight knock for creativity, but is otherwise great.
+8/10 - Creativity/Aesthetics, 9/10 - Fun/Design
+
+Hanakotoba Danmaku Art "Flower Language": 14.5/20
+Flowers coming from both Aisho and the corners from the telegraphed bubbles.
+It's serviceable and somewhat pretty but I can't help but feel like it's a step down from the bangers that were the last three attacks.
+7.5/10 - Creativity/Aesthetics, 7/10 - Fun/Design 
+
+Nonspell 4: 15/20
+I like this take on the first non more than the actual first non itself, haha.  A bit more fun to dodge, fairly basic, but good.
+Aesthetically I like how the pellets are fired way more in this non.
+7.5/10 - Creativity/Aesthetics, 7.5/10 - Fun/Design
+
+"The Sword Who Shall Not Be Named": 15.5/20
+Nice custom sword graphic haha.  Feels very Kaisendo, Mumei anyone?
+Aesthetically it's VERY striking and it's got some great variety but I feel like it's one of the lesser attacks in the dodging category.
+Very neat though.
+9.5/10 - Creativity/Aesthetics, 6/10 - Fun/Design
+
+Ancient Scripts "Millenium Eternia": 17/20
+IN Fantasy Seal on crack.
+Very neat attack base and the stuff that builds on top of it is meaningful.  That last phase is pretty gross but learning that I can tap stream it in a pinch helped.
+I hope you can't tap stream the other phases honestly, I feel like it'd be less fun when you've got more room to move.  But I can't say I tested it.
+Otherwise, fuckin cool.
+8.5/10 - Creativity/Aesthetics, 8.5/10 - Fun/Design
+ 
+AESTHETIC: 26/30
+Looks: Script looks fantastic, multiple steps above normal DNH with a striking visual style.  Custom *everything* and the player portraits are adorable!! 9/10
+Sound: Fairly standard SFX but gets the job done.  Neat custom music!  The boss music ending at the start of ending dialogue though is quite weird. 7/10
+Polish: This script (and system in particular) oozes polish.  From the custom pause menu, widescreen adaptation, the ending replay screen, custom cancel handling... it's great.
+It's the kind of system I'm honestly striving to make right now.  Perfect score. 10/10
+ 
+SUM OF PATTERNS: 141/180
+AESTHETIC: 26/30
+TOTAL: 167/210 * 25 = 19.88/25
+
+Dude, this script is rad as hell.  I loved playing it, it's one of the stand out scripts in this entire contest imo
+There's a few weird points I neglected to mention - for example, the player speeds are *weird*.  I don't really know why.
+But besides a couple weird oddities like that (and a couple patterns lower on the tier list) this was an incredibly solid script and you should be proud of it.  Excellent job!

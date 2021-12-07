@@ -1,0 +1,42 @@
+Bullet Hell Artistry #4 - Naudiz' The Nameless Avatar
+ 
+Point distribution is as follows:
+Danmaku Pattern Quality: 20/25 (average of all patterns multiplied by 2)
+Aesthetics: 5/25
+
+----------------------------------------------------------------------------------
+
+Nonspell 1: 8/10
+A very solid opener, showing off the types of bullets you'll see in the rest of the script. Utilizes the entire screen, which is a nice plus. It seems a bit too easy to speedkill, though? Most of the time I only have to dodge a single wave before I kill the attack.
+
+Spell 1 ["Nameless Asterism"]: 9/10
+I like the theme of this spell and how it makes you focus on speedy dodging through lanes. I think the first shape is the one that gave me most trouble for some reason. Since you utilize multiple formations, there's always something unique to dodge before you kill the spell. It's very decent overall!
+
+Nonspell 2: 8.5/10
+I was relatively unhappy with how often I got walled by the V-shaped shots from the triangle, but I figured out that the strategy is to macrododge and not rely on micrododging. Looks great visually as well.
+
+Spell 2 ["Triangular Ouroboros"]: 7.75/10
+I really love the triangular "cage" the player is forced into. However, it doesn't play much role outside of the closing-in triangle bullets at the end of the phase. It looks great, but I think it has potential for something more. The dot bullets were a bit difficult to see.
+
+Nonspell 3: 7/10
+It's a fairly standard pattern based on misdirection. I don't feel like it stands out much from the nonspell that came before it, even though this one's main focus is circles. Again, the visuals are top-notch.
+
+Spell 3 ["The Most Marvelous Spiral"]: 7.5/10
+-0.0000000001 point for the spell name.
+
+This spell would've been an even bigger migraine to dodge if it weren't for the warning lines, plus it's a bit more consistent than I expected. The rainbow lines are telegraphed well. I noticed that you can sort of cheese the pattern if you hug the spirit the spiral is coming from, but you won't be able to damage the boss too well during it.
+
+Nonspell 4: 8/10
+I love the concept of the bullets themselves reforming into different shapes. However, that does come with the cost of some sections being very tight. The larger bullets that spawn after that can also cause some unlucky waves. 
+
+Spell 4 ["Cycle of Emptiness and Form"]: 9.25/10
+This pattern utilizes the previous attack's gimmick much better. I like how the morphing triangles and rings can create interesting situations to dodge. I noticed that there's a certain Y position that lets you safespot the bullets when they're rotating, is it intentional? The spell can get a bit overwhelming especially at the end, but it's not a big drawback.
+
+TOTAL: 16.25/20
+
+----------------------------------------------------------------------------------
+Aesthetics: 4.75/5
+I think nobody is going to argue with me on this one - it's one of the most visually impressive scripts in this contest. It stands out with its choice of a pixel style and the arcade-like bullets. The system itself is pretty cool, as it's based on a rank system. However, I feel like adding a difficulty option would've been a good idea as well. There are some instances where the bullets were hard to read, though. The dots in particular are a bit nasty in that regard, plus the fire effect for the enemy marker is a bit overkill. Despite that, the aesthetics are top notch.
+
+
+[TOTAL SCORE: 21/25]
