@@ -1,0 +1,57 @@
+Bullet Hell Artistry #5 - Samario
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging your choice of character and their danmaku. A high score in this category means you did a good job of integrating a character from another franchise into Touhou, and it means that both of your characters' danmaku works well together.
+======================================================================================================================
+
+Played on unlimited lives mode because I like not dying :)
+
+Nonspell 1: It's a Boring Streaming Non only they both do it, and restreaming is a pain. Timing this out seems easier than trying to kill it as a result. It's...a smidge below average? 4.75/10.
+
+Spell 1: It's That Yukari Spell but the bullets spawn all over the place, so it's even more wild and chaotic. Also seems to take a while to kill? 4.5/10.
+
+Nonspell 2: The characters seem to be doing things more appropriate for them in this Circle-Around-You Streaming Non. I'm also not sure how you kill this in a timely manner considering Marisa's shottype. Still, better than the last one. 5.25/10.
+
+Spell 2: Chasing Yukari around through a fountain of nonsense, or alternatively turn your shot backwards to try to hit Chara instead which...still takes a while. I think these lifebars are too long for the shottype given; if it were homing I could maybe justify it. Anyway, the pattern itself involves a random bullet fountain I don't really enjoy dodging. Thoroughly average. 5/10.
+
+Nonspell 3: Chara steals Yukari's pattern while Yukari does the Aya thing:tm:. This is fine, though I wish the butterfly pattern had more structure so it'd be able to be predictably dodged. 6.5/10.
+
+Spell 3: I think this spell has three disconnected parts that don't work super well together: Mostly-irrelevant lasers, Yukari's fast curvy crap that will snipe you while trying to dodge the aimed bullets, and aimed bullets. They work together in a way that's...eh, feasible to dodge, but not that fun or interesting. 6/10.
+
+Nonspell 4: Patterns are certainly appropriate for the characters, but Yukari's is an utter pain to dodge. Microing the kunai is annoying because they're just so small to see, and macroing through the gaps requires what seems to be luck, since their location seems random each wave? Chara's pattern is fine, as it should be a small challenge while you deal with Yukari's stuff. If Yukari's half were easier I'd like this more. 4/10.
+
+Spell 4: I assume you're supposed to graze the lines to flashbomb the wave of Die from Chara...nice idea! It's just really hard to execute because the player's graze box is tiny and after the death wall Chara shoots a bunch of tiny bullets that might hit you, and while you're invincible you can't graze, so it seems easy to enter an awful death spiral. Good in concept, but a more refined execution would make me really like this one. 6/10.
+
+Nonspell 5: Two bowaps yaaaay. Appropriate for Yukari, less so for Chara, it's Fine but I Sleep. 6/10.
+
+Spell 5: This seems like the best pattern so far. I can hit the boss all the time, it's fair and fun to dodge...good! 8/10.
+
+Nonspell 6: Chara doesn't seem to be contributing much to Yukari's version of a Moriya Shrine nonspell. Still, it's fine. 6/10.
+
+Spell 6: I'm happy it's not ACTUALLY a Danmaku-Bounded Field. Dodging the knives while all the other crap is flying around is a pain, but otherwise this pattern is fine enough too. 5.5/10.
+
+Spell 7: Multi-phase script ender, yay! Becomes a mess near the end, and I overall think it's too hard and long, but 5.75/10.
+
+Danmaku Score: 5.63461538461538461538/10 (scaled to 8.453/15)
+======================================================================================================================
+ 
+Aesthetically I quite like some aspects - the spritework is very good - but other aesthetic choices are a BIG pain, such as having to dodge very tiny bullets. It's still above average overall though. 3/5.
+======================================================================================================================
+ 
+I think character cooperation is a bit above average. Some patterns stand out, but then there are nonspells where Chara rips off Yukari's patterns while also not doing all that much. 3/5.
+ 
+OVERALL SCORE 8.453 + 3 + 3 = 14.453/25

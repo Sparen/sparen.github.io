@@ -1,0 +1,41 @@
+Bullet Hell Artistry #5 - Texel
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging your choice of character and their danmaku. A high score in this category means you did a good job of integrating a character from another franchise into Touhou, and it means that both of your characters' danmaku works well together.
+======================================================================================================================
+
+Nonspell 1: It's fairly fine. Looking at the character I don't THINK it's super relevant to her, but it's not like Cirno shooting fireballs or anything. 6.5/10. 
+
+Spell 1: Quite the fun one. 8/10.
+
+Spell 2: Streaming while going through some easy stuff, woo. Fine. 7.25/10.
+
+Spell 3: I'm not sure why either one of them is shooting hearts, but it's annoying streaming altogether. Restreaming is a pain. 4.75/10.
+
+Spell 4: Hearts seem just as inappropriate, but the pattern's much nicer to dodge. 6.5/10.
+
+Spell 5: Funny. The tiny dot bullets are utterly hellish to dodge though. Would be more fun and probably easier if they were bigger. 4.75/10. 
+
+Danmaku Score: 6.2916/10 (scaled to 9.4375/15)
+======================================================================================================================
+ 
+Aesthetically I like what you're going for, but I dislike how it ended up in practice. The game window is tiny, bullet graphics are a pain to dodge at such a resolution, etc. I actively dislike this for danmaku - maybe it'd work for any other type of game where precise movements don't matter as much. 1.5/5.
+======================================================================================================================
+ 
+Character cooperation seems...below average, actually? Throwing Keine is funny, but otherwise they seem to be sharing the same pattern, which isn't usually relevant to Keine's character at all. 2/5.
+ 
+OVERALL SCORE 9.4375 + 1.5 + 2 = 12.9375/25

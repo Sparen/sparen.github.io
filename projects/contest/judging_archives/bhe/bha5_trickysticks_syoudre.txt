@@ -1,0 +1,43 @@
+Bullet Hell Artistry #5 - Syoudre
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging your choice of character and their danmaku. A high score in this category means you did a good job of integrating a character from another franchise into Touhou, and it means that both of your characters' danmaku works well together.
+======================================================================================================================
+
+Played on Hard Mode (and Contest Mode) because I'm a pro gamer uwu
+
+Nonspell 1: A good start to the script. Certainly an appropriate pattern for each of them, and the straight-lines of green bullets that Rumia shoots complements the fireballs pretty well. The rainbow spreads she shoots are less interesting, but it's still overall good. 7/10.
+
+Spell 1: The pattern's also fairly good. I think this one drags on a little (maybe I'm supposed to change shottypes from Sanae?) but it's still fun to dodge. 6.75/10.
+
+Nonspell 2: Aaaaaa curvy lasers aaaaaa. Rumia doesn't shoot a lot in this nonspell - and while I think it's justified for the pattern to be less dense (because CURVY LASERS) I think you might've taken it too far and made her contribution barely anything. Pattern's not bad though. 6.5/10.
+
+Spell 2: This spell seems to be both a good bit harder than anything else in the script, AND it seems to have a way longer healthbar. It's a lot of random rain so I feel like Mr. Widefurry dominates this pattern too. Rumia's darkness didn't seem very relevant because the bullets rendered above it. Overall, I think these flaws render the pattern itself below average. 4/10.
+
+Nonspell 3: Now it feels like Rumia does the heavy lifting and darkness furry man provides the gimmick. I like this one. 8/10.
+
+Spell 3: Ooh, fancy intro. I for one tend to like modular spells if the parts of it blend together in interesting ways. This one is...alright, I guess? It seems to drag on for a while, much like the second spell, and I don't think the five circles necessarily blend together particularly well. It ends up feeling like dodging a bunch of spam from all sides to me. Props for the declaration though. 5/10. 
+
+Danmaku Score: 6.20833333333333333333/10 (scaled to 9.3125/15)
+======================================================================================================================
+ 
+Aesthetically this script is...fine? I think the game just feels SMALL - tiny player relative to the playing field, and then you dodge a bunch of similarly tiny fireballs. The music not really starting until the first spell is neat but also confused me a bit at first, but maybe it's just my terrible hearing. Overall I'll put this at an above-average 3/5.
+======================================================================================================================
+ 
+I think the characters work together decently well. Spell 2 seems like the most egregious example of one character doing the majority of the work, but otherwise it's solidly above average. 3.5/5.
+ 
+OVERALL SCORE 9.3125 + 3 + 3.5 = 15.8125/25

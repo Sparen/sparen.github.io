@@ -1,0 +1,47 @@
+Bullet Hell Artistry #5 - Ryann1908
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging your choice of character and their danmaku. A high score in this category means you did a good job of integrating a character from another franchise into Touhou, and it means that both of your characters' danmaku works well together.
+======================================================================================================================
+
+Stage: Stage is gud (also I'm counting it as one pattern). 7/10.
+
+Nonspell 1: It's a fine opening. Short and simple warmup, though I guess it's not necessary to be this easy considering there's a stage before it. 6.75/10.
+
+Spell 1: I think this one is simple and fun - and a nice challenge compared to how easy the nonspell prior to this is. 8/10.
+
+Nonspell 2: I think some of the bullets are very sluggishly slow, but this non is still more fun than the previous one. 7/10.
+
+Spell 2: This survival is, unfortunately, not very fun. The dodging is very trivial, doesn't get any harder, and overall I think it's just super uninteresting. Sitting between generous safespots while Clownpencil takes her sweet time doesn't interest me and I want my [insert spell timer here] seconds back. (It's not atrocious though, I just think it's below average.) 3.75/10.
+
+Nonspell 3: Neat. Probably a bit better than the second non, and it took me a little while to realize that the boss was following me, but it was easy enough for me to adapt to. 7.25/10.
+
+Spell 3: It seems like Shizuha isn't doing a lot in this pattern - there's a smattering of leaves falling down that I barely noticed. Pattern-wise it's fine, of course, but the lack of cooperation is troubling. 7.25/10. 
+
+Nonspell 4: Fun and simple challenge. Woo (of Kogasa). The 3 characters seem to lose their uniqueness here though. 7.5/10.
+
+Spell 4: I think there's not a lot of themeing from the other 3 characters present - they're just acting like extensions of the main boss as they shoot their arrowhead thingies. Still, the pattern's a fun challenge - the stuff you actually have to dodge looks a lot randomer than it is. A bit underwhelming for a finale, but good in itself. 7.5/10.
+
+Danmaku Score: 6.88888888888888888889/10 (scaled to 10.33/15)
+======================================================================================================================
+ 
+Aesthetically this script is quite good. I happen to like EoSD, and the script is very faithful to the aesthetic it chooses to mimic. Good work here. 4/5.
+======================================================================================================================
+ 
+As for adherence to the contest theme, I think that it starts off fairly strong but the last few patterns barely give the other characters any meaningful personality - it feels more like the main boss is just using the other as bullet spawners (or in the case of Spell 3, Shizuha barely does anything). As such, I'll say it's...a little above average? 2.75/5.
+ 
+OVERALL SCORE 10.33 + 4 + 2.75 = 17.08/25

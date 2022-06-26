@@ -1,0 +1,53 @@
+Bullet Hell Artistry #5 - Makuta Matara
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging your choice of character and their danmaku. A high score in this category means you did a good job of integrating a character from another franchise into Touhou, and it means that both of your characters' danmaku works well together.
+======================================================================================================================
+
+Played on Origina- actually NO that's way too hard so Novice it is?
+
+Nonspell 1: Both characters' patterns seem to interact quite well, so good work here. 8/10.
+
+Spell 1: Good pattern with good telegraphing! I found that finding time to shoot them was kind of a pain, but that's the only thing I'd say I really dislike about it. 8/10.
+
+Nonspell 2: Speaking of telegraphing, I think this is actually bad. I understand that you need to draw a line from the Fortnite Dude to the targets and know that he'll shoot along those lines, but it's very difficult to do when they seem to be random distances away. Letty's pattern is the usual, but I don't like dodging his part at all. 3.5/10.
+
+Spell 2: I think this spellcard is one where actively hitting the boss is even harder than I would expect. It's a neat and fancy pattern, but with him moving to your position and having to dodge the other thing I find it excessively difficult to damage. 5.75/10.
+
+Nonspell 3: Quite fun. Not much individuality here, but I don't think that's necessary - both of them shooting the same thing is fine too. 7.5/10.
+
+Spell 3: omg a reference. Anyway I think this would fit the Fortnite Fperson a LOT more than Letty. It takes ages to clear and you need to do good damage to the boss while she can be hit. Overall I just don't like this one - I would've preferred an outright survival spell to this. 3/10.
+
+Nonspell 4: The telegraphs confused me until I realized it's just aimed 4head. A rather confusing way to depict something that's just aimed, but I guess it's fine. 6.5/10.
+
+Spell 4: omg anothre french! Anyway, Mr. Fortnite's spawn locations seem random, but I was able to consistently misdirect him and get into the closing Circle of Fortnite. I liked this one. 7.5/10.
+
+Nonspell 5: I actually quite like this non! I think it's balanced in a way that it's too difficult, but I like the idea of dodging within the spaces that Letty allows you. Tone down the difficulty and this would be one of my favorite patterns. 6/10.
+
+Spell 5: Why are we playing Pong now? It's too hard to play two games at once, and the dude's lasers are just mean. 2/10.
+
+Spell 6: how many nights at freddy's now? Anyway the pattern is...actually very good until the end where the clone things do the gun telegraphs too. That's when it gets absurdly messy, but I'll say it's still above average. I like the arrowhead formations! 6/10.
+
+Danmaku Score: 5.79545/10 (scaled to 8.69/15)
+======================================================================================================================
+ 
+Aesthetically it's above average, I'd say. Things are decently well put-together. I will also comment that I really dislike the gun gimmick - it's more cumbersome than fun, and without using it you don't seem to do a lot of damage. It also seems like it doesn't do anything half the time? I don't know. 3/5.
+======================================================================================================================
+ 
+I think the characters work together in a fairly reasonable way - above average for sure. There are some patterns where Mr. Fortnite seems to overshadow Letty, but other than those I like their cooperation. 3/5.
+ 
+OVERALL SCORE 8.69 + 3 + 3 = 14.69/25

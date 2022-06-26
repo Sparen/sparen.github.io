@@ -1,0 +1,51 @@
+Bullet Hell Artistry #5 - Akemi Yume
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging your choice of character and their danmaku. A high score in this category means you did a good job of integrating a character from another franchise into Touhou, and it means that both of your characters' danmaku works well together.
+======================================================================================================================
+
+Nonspell 1: A simple and effective opening that seems appropriate for both the characters. Challenging but fair and fun, good work...actually I think the background could've been chosen better, because the dark stars are difficult to see, but I still like it. 8/10.
+
+Spell 1: I think the boss interaction here is top-notch, and the pattern itself is challenging but fair. However, I think Marx's telegraph is very deceptive - it makes where he's going to come down with laser delay lines, but then you NEED to be there or you die. Once that's understood it's enjoyable, but the telegraphing could be better. Excellent. 8.5/10.
+
+Nonspell 2: A repeat of the previous theme, only Flandre's contribution seems more substantial and Marx's less so. I find this weaker than the first non since Marx more or less does the same thing and it's simple streaming at the end, but worse than the first non is still good! 7/10.
+
+Spell 2: Realizing that you don't need to rush all that much to get out of Marx's way seems key. I thought I had to somehow find my way out of Flandre's bullets and had a Bad Time, but realizing that I can take my time made this pattern pretty fun for me.  7.5/10.
+
+Nonspell 3: I think this one's a bit more interesting to dodge than Non 2, but the dark stars from Marx still don't offer anything new. I'll place this between them first two nons. 7.5/10.
+
+Spell 3: This one's a weird one. I end up dying to Flandre's bullets essentially spawning on top of me, and I'm not sure how to circumvent that considering she aims at least some of them(?) at you. The themeing is nice, but the pattern itself isn't very fun to dodge in my opinion. I'll say it's thoroughly average and give it 5/10. 
+
+Nonspell 4: Flandre's pattern is pretty! Marx exists too I guess. Marx handling the streaming segment instead of Flandre probably makes this the easiest nonspell yet, and quite imbalanced in terms of character contribution. 6.75/10.
+
+Spell 4: Those are some funky curvy lasers. I think I ended up dodging them due to sheer luck, if anything. The pattern itself would be fine with some curvy warning lines or something - dodging the curvy lasers with paths that are simply too hard to predict while also dodging other danmaku is probably asking too much. 6.5/10.
+
+Nonspell 5: Ooh, Marx does something more complicated! And also Flandre's pattern is really good, so it still overshadows him, but I like it all the same. 8/10.
+
+Spell 5: Oh no, b e t r a y a l! Visually fancy, the pattern's dodging a bunch of bullets that are haphazard though. Decent themeing, Fine pattern. 5.5/10.
+
+Spell 6: Much more fun than Spell 5, though I'd say it's REALLY hard compared to the rest of the script. I really like the music syncing, and it's overall a very impressive spell. Tone back the difficulty and I'd say it's amazing; even as it is now I'd say it's excellent. 8.5/10.
+
+Danmaku Score: 7.159/10 (scaled to 10.7386/15)
+======================================================================================================================
+ 
+Aesthetically this script is amazing. There's all sorts of little touches like spell comments on the pause menu, the art is good and cohesive, and sound effects are used very well. The dark stars are annoying to see during nonspells as the biggest visibility problem, but other than that I can't think of many flaws. Great work!  4.5/5.
+======================================================================================================================
+ 
+I think the characters work together very well. The nonspells were somewhat disappointing at times, but their use during spellcards makes up for that. 4.25/5.
+ 
+OVERALL SCORE 10.7386 + 4.5 + 4.25 = 19.487/25

@@ -1,0 +1,43 @@
+Bullet Hell Artistry #5 - Kevinmonitor
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging your choice of character and their danmaku. A high score in this category means you did a good job of integrating a character from another franchise into Touhou, and it means that both of your characters' danmaku works well together.
+======================================================================================================================
+
+Played with the first player team on Original difficulty.
+
+Nonspell 1: Pretty good pattern to start. Not much to say here, good work. 8/10.
+
+Spell 1: I think the telegraph isn't super helpful in knowing that you need to go to the top of the screen, but other than that I like this pattern. Keeping the haniwa's bouncing in mind is kind of tough, but this is still good. 7.5/10.
+
+Nonspell 2: Another good nonspell where both contribute. I think this is a bit better than the previous non, so it gets a bit higher score. 8.25/10.
+
+Spell 2: So a spell where you ignore the rain and focus on the other bullets, which actually aren't too difficult to dodge if you can avoid going cross-eyed from the rainy visual clutter. I think the rainbow bullets have some amount of randomness that can cause nastier waves than necessary, but I can still do it consistently. 7/10.
+
+Spell 3: Fairly easy pattern (and relatively slow compared to the last four). Having to circle Sukune seems quite abrupt, but besides that I appreciate the break. 7.5/10.
+
+Spell 4: I honestly think that the last two phases are quite a bit easier than the first two. Dodging in such a confined space is more of a pain than fast-paced streaming to me. Otherwise this is also pretty fine. 7.5/10.
+
+Danmaku Score: 7.625/10 (scaled to 11.4375/15)
+======================================================================================================================
+ 
+Aesthetically it's good - work was evidently put into all of the graphics, and overall the script seems to have a lighthearted feel. Getting any kind of feel from a script is always a plus, so I applaud that. 3.75/5.
+======================================================================================================================
+ 
+I think the characters cooperate very well, with very little overshadowing of each other. Good! 4.5/5.
+ 
+OVERALL SCORE 11.4375 + 3.75 + 4.5 = 19.6875/25

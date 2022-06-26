@@ -584,6 +584,19 @@
             "numparticipants": 13,
             "result": [["Naudiz"], ["Kirbio"], ["Akemi"]],
             "participants": ["Syoudre", "Bravidunno", "JHero", "Akemi", "Kevinmonitor", "Pickled Cow", "Zino/Lathios", "Drekareen/JDude", "Naudiz", "Foxigami", "Kirbio", "DJ Medoroa"]
+        },
+        {
+            "id": "bha5",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "unbelievable allies",
+            "year": 2022,
+            "duration": [2022.01, 2022.02],
+            "host": "Loann",
+            "judges": ["Python", "Trickysticks", "Taizen"],
+            "numparticipants": 9,
+            "result": [["Kevinmonitor"], ["Akemi"], ["Ryann"]],
+            "participants": ["Kevinmonitor", "Akemi", "Ryann", "Syoudre", "Pickled Cow", "MarchosiasNull", "Makuta Matara", "Samario", "Texel"]
         }
     ]
 }

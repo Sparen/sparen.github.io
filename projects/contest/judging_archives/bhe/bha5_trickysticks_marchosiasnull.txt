@@ -1,0 +1,51 @@
+Bullet Hell Artistry #5 - MarchosiasNull
+For this contest I'm using a 25 point rating scale because I feel like it.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why.
+ 
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging your choice of character and their danmaku. A high score in this category means you did a good job of integrating a character from another franchise into Touhou, and it means that both of your characters' danmaku works well together.
+======================================================================================================================
+
+Played as Reimu
+
+Nonspell 1: I think this nonspell would benefit from the tiny dots rendering above Mike's rainbow bullets. Not a big deal, but I think that's a useful design tip. Otherwise, it's fine...it feels REALLY slow, so dodging is really easy as a result. Not much synergy between them either. 5.5/10.
+
+Spell 1: I think this spell comes down to random dodging. It's harder, but still slow enough to be fine. I do like using coins for Mike though. 6.5/10.
+
+Nonspell 2: It still kind of feels like they're doing their own thing, but Ciel is at least providing an aimed element to Mike's more distributed pattern. 6.5/10.
+
+Spell 2: I think it's also a lot of randomness, though more controlled than the Mike spell. It's kind of disappointing that the keys (which look nice!) just dissolve into bullet blobs. 6.75/10.
+
+Nonspell 3: How hard this is seems to vary a LOT depending on where Mike's rings go? They seem random to me. I think this would function better as a more structured pattern where the rain or Mike's rings form lanes to dodge the other half through. 6/10.
+
+Spell 3: See, now this is the kind of working-together behavior I was thinking of! I think this pattern's fairly good, and you're incentivized to kill the cats if you can't handle their corrupting influence tee em. I like this idea. 7.5/10.
+
+Nonspell 4: While they're doing the same thing which shows teamwork, they're also...doing the same thing. Not random, though, and actually fairly speedy compared to earlier patterns. 7/10.
+
+Spell 4: Also a very solid idea and an example of cooperation. I didn't actually notice that I seemed to be pushed upwards, but it didn't seem all that relevant to the spell? Still good. 7.5/10.
+
+Spell 5: I think this survival is a neat idea that ramps up VERY SLOWLY (besides being slow in itself) and is only really a challenge for the last ~10-15 seconds. The rest is real I-Sleep energy. Excellent concept, but I'd tune it to be quicker. 6.75/10.
+
+Spell 6: A solid final spell that I find good to dodge, probably because of the increased speed from the other attacks. Good ender. 7.75/10.
+
+Danmaku Score: 6.775/10 (scaled to 10.1625/15)
+======================================================================================================================
+ 
+Aesthetically it's above average. I think the aesthetic is well put-together, just not really my style? Everything is super slow, which is part of the pattern aesthetic and not something I really enjoyed. Additionally, the music looping seemed a bit improper and I think you'd benefit from more sound effects to distract from that fact, if nothing else. 3/5.
+======================================================================================================================
+ 
+I think the characters work together...a little below average? The solo spells and them shooting the same thing kind of detracts from the "cooperation" - it's more like "doing your own thing" and "doing identical things". The spells where they do cooperate are nice, so it's not a huge loss, just a slight one. 2.25/5.
+ 
+OVERALL SCORE 10.1625 + 3 + 2.25 = 15.4125/25
