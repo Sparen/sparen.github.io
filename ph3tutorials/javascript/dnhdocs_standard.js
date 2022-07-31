@@ -558,7 +558,7 @@ var dnhph3docs_standard = {
                     "args": ["area : string"],
                     "returnv": "true if successful; false otherwise : bool",
                     "description": "Loads everything in the specified common data area from the replay file.",
-                    "notes": "Do not call this function during a replay."
+                    "notes": "An error will occur if this function is executed in a mode other than replay."
                 }
             ]
         },
