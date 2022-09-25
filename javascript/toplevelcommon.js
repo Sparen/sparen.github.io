@@ -5,5 +5,5 @@ document.getElementById("alert_div").innerHTML = `
 </div>
 <div class="notice_inner_sm">
 Bullet Hell Artistry Contest #6 is now open until October 30, 2022!<br>
-<img src="https://sparen.github.io/projects/contest/bha6_banner.png" style="max-width: 100%">
+<img src="https://sparen.github.io/projects/contest/bha6_banner.png" style="max-height: 128px">
 </div>`;
