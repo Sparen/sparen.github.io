@@ -597,6 +597,19 @@
             "numparticipants": 9,
             "result": [["Kevinmonitor"], ["Akemi"], ["Ryann"]],
             "participants": ["Kevinmonitor", "Akemi", "Ryann", "Syoudre", "Pickled Cow", "MarchosiasNull", "Makuta Matara", "Samario", "Texel"]
+        },
+        {
+            "id": "bha6",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "universal all-stars",
+            "year": 2022,
+            "duration": [2022.09, 2022.10],
+            "host": "Loann",
+            "judges": ["Taizen", "Ryann", "Junky", "Amecchi"],
+            "numparticipants": 0,
+            "result": [[""]],
+            "participants": [""]
         }
     ]
 }
