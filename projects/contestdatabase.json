@@ -608,8 +608,21 @@
             "host": "Loann",
             "judges": ["Taizen", "Ryann", "Junky", "Amecchi"],
             "numparticipants": 0,
-            "result": [[""]],
-            "participants": [""]
+            "result": [[]],
+            "participants": []
+        },
+        {
+            "id": "afc1",
+            "location": "afc",
+            "loc_category": "afc",
+            "name": "re contradictory catastrophe",
+            "year": 2023,
+            "duration": [2022.12, 2023.01],
+            "host": "Loann",
+            "judges": ["VanIsBadAtNames", "Trickysticks", "Fraz.Bright"],
+            "numparticipants": 0,
+            "result": [[]],
+            "participants": []
         }
     ]
 }

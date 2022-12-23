@@ -10,11 +10,12 @@ const color_motk = "#66AAFF";
 const color_locaa = "#66FFAA";
 const color_uwom = "#CCCCCC";
 const color_bhe = "#e0115f";
+const color_afc = "#2986cc";
 
-const num_locations = 4; // Used in select for loops
-const location_names = ["MotK", "LOCAA", "UWoM", "BHE"]; // This allows for for loops. ALL STRUCTURES USE THIS ORDER.
-const location_names_lc = ["motk", "locaa", "uwom", "bhe"]; // Valid locations from JSON, in proper order
-const location_colors = [color_motk, color_locaa, color_uwom, color_bhe];
+const num_locations = 5; // Used in select for loops
+const location_names = ["MotK", "LOCAA", "UWoM", "BHE", "AFC"]; // This allows for for loops. ALL STRUCTURES USE THIS ORDER.
+const location_names_lc = ["motk", "locaa", "uwom", "bhe", "afc"]; // Valid locations from JSON, in proper order
+const location_colors = [color_motk, color_locaa, color_uwom, color_bhe, color_afc];
 
 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -69,6 +70,8 @@ function generatekey(xstart, ystart) {
     output += createCDBSVGText(xstart - 80, ystart + 64, "cdb_horiztext_a", "UWoM");
     output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 90) + '" height="8" width="8" fill="' + color_bhe + '"></rect>';
     output += createCDBSVGText(xstart - 80, ystart + 94, "cdb_horiztext_a", "BHE");
+    output += '<rect x="' + (xstart - 96) + '" y="' + (ystart + 120) + '" height="8" width="8" fill="' + color_afc + '"></rect>';
+    output += createCDBSVGText(xstart - 80, ystart + 124, "cdb_horiztext_a", "AFC");
     return output;
 }
 
@@ -102,6 +105,8 @@ function fetchstartendcolor(contestobj) {
         fsec_color = color_uwom;
     } else if (contestobj.location === "bhe") {
         fsec_color = color_bhe;
+    } else if (contestobj.location === "afc") {
+        fsec_color = color_afc;
     }
     return {
         "startval": fsec_start,
