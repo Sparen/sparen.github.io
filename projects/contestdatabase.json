@@ -557,7 +557,7 @@
             "judges": ["MegamanOmega", "CreepyNinja", "Trickysticks", "Loann"],
             "numparticipants": 24,
             "result": [["Junky"], ["The Terrible Bullet Dodger/auto2112"], ["Adam"]],
-            "participants": ["Junky", "The Terrible Bullet Dodger/auto2112", "Adam", "Kobito", "Bagoum", "Jackie Matthews", "Lusus", "Badz", "Ryann", "Green Dinobot/Gregory", "Middy/Midnight Sparkle", "Drekareen/JDude", "Arkenia", "Zino/Lathios", "Rakaasac", "Taizen", "Akemi", "Kusa", "Syoudre", "DoctorD", "Kagummi", "Hoagie", "Kudo", "Luminous", "Tsuzyx"]
+            "participants": ["Junky", "The Terrible Bullet Dodger/auto2112", "Adam", "Kobito", "Bagoum", "Jackie Matthews", "Lusus", "Badz", "Ryann", "Green Dinobot/Gregory", "Middy/Midnight Sparkle", "Drekareen/JDude", "Arkenia", "Zino/Lathios", "Rakaasac", "Taizen", "Akemi Yume", "Kusa", "Syoudre", "DoctorD", "Kagummi", "Hoagie", "Kudo", "Luminous", "Tsuzyx"]
         },
         {
             "id": "syucc",
@@ -582,8 +582,8 @@
             "host": "Adam",
             "judges": ["Adam", "CrestedPeak9", "WishMakers"],
             "numparticipants": 13,
-            "result": [["Naudiz"], ["Kirbio"], ["Akemi"]],
-            "participants": ["Syoudre", "Bravidunno", "JHero", "Akemi", "Kevinmonitor", "Pickled Cow", "Zino/Lathios", "Drekareen/JDude", "Naudiz", "Foxigami", "Kirbio", "DJ Medoroa"]
+            "result": [["Naudiz"], ["Kirbio"], ["Akemi Yume"]],
+            "participants": ["Syoudre", "Bravidunno", "JHero", "Akemi Yume", "Kevinmonitor", "Pickled Cow", "Zino/Lathios", "Drekareen/JDude", "Naudiz", "Foxigami", "Kirbio", "DJ Medoroa"]
         },
         {
             "id": "bha5",
@@ -595,8 +595,8 @@
             "host": "Loann",
             "judges": ["Python", "Trickysticks", "Taizen"],
             "numparticipants": 9,
-            "result": [["Kevinmonitor"], ["Akemi"], ["Ryann"]],
-            "participants": ["Kevinmonitor", "Akemi", "Ryann", "Syoudre", "Pickled Cow", "MarchosiasNull", "Makuta Matara", "Samario", "Texel"]
+            "result": [["Kevinmonitor"], ["Akemi Yume"], ["Ryann"]],
+            "participants": ["Kevinmonitor", "Akemi Yume", "Ryann", "Syoudre", "Pickled Cow", "MarchosiasNull", "Makuta Matara", "Samario", "Texel"]
         },
         {
             "id": "bha6",
@@ -607,9 +607,9 @@
             "duration": [2022.09, 2022.10],
             "host": "Loann",
             "judges": ["Taizen", "Ryann", "Junky", "Amecchi"],
-            "numparticipants": 0,
-            "result": [[]],
-            "participants": []
+            "numparticipants": 9,
+            "result": [["Syoudre", "Arby26", "Zino/Lathios"]],
+            "participants": ["Luna", "Gusano2314", "Zino/Lathios", "Akemi Yume", "Fuzzbearplush", "Makuta Matara", "Syoudre", "Pickled Cow", "raz/Arby26", "Kevinmonitor"]
         },
         {
             "id": "afc1",
