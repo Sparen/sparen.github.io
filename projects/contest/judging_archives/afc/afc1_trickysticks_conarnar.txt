@@ -1,0 +1,39 @@
+Air Fryer Danmaku Contest #1 - CJ
+
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not a bad thing!
+
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+Nonspell 1: I think this is a fine start. The visual clutter making the streaming harder is acceptable in this case since I think it works out just fine, and if you're not willing to take a risk you can just move pretty far away (though it risks not damaging the boss much). I think the boss's health is a bit higher than it needs to be for this one. Still, good. 7.5/10.
+
+Spell 1: Pretty good one as well. Takes a lot less time than the non prior to it, which only exacerbates my concern with its HP. Still, a simple and effective enough concept. Seems a lot harder than the prior non? 7/10.
+
+Nonspell 2: Seems like both macro and micrododging are possible, leading to two strategies for different kinds of players. Also doesn't seem to take quite as long to die as the first non. The suns do seem quite random but I haven't found myself walled through multiple attempts. 7.75/10.
+
+Spell 2: Another simple and effective concept. The name is stupid >:( but the pattern is not. Maybe has a lot of time spent away from the boss's woo depending on how the sun is directed, but it still seems like a good idea. 8/10.
+
+Danmaku Score: 7.5625/10 (scaled to 11.34375/15)
+==========================================================================================================================
+
+Aesthetically, I find this above average. Lots of monocolored patterns and the spell background is neat enough. The music should probably pause when you pause, and the sound effects don't QUITE annoy me enough in the second non for me to take points off. 3.25/5.
+
+============================================================================================================================
+
+In terms of being contradictory, the danmaku certainly is...loud. I'd argue the falling stars in the second spell could be faster, but I believe the script definitely achieves the opposite of silence. Very easily. 4/5.
+
+OVERALL SCORE 11.34375 + 3.25 + 4 = 18.59375/25

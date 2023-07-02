@@ -608,7 +608,7 @@
             "host": "Loann",
             "judges": ["Taizen", "Ryann", "Junky", "Amecchi"],
             "numparticipants": 9,
-            "result": [["Syoudre", "Arby26", "Zino/Lathios"]],
+            "result": [["Syoudre"], ["Arby26"], ["Zino/Lathios"]],
             "participants": ["Luna", "Gusano2314", "Zino/Lathios", "Akemi Yume", "Fuzzbearplush", "Makuta Matara", "Syoudre", "Pickled Cow", "raz/Arby26", "Kevinmonitor"]
         },
         {
@@ -618,11 +618,11 @@
             "name": "re contradictory catastrophe",
             "year": 2023,
             "duration": [2022.12, 2023.01],
-            "host": "Loann",
-            "judges": ["VanIsBadAtNames", "Trickysticks", "Fraz.Bright"],
-            "numparticipants": 0,
-            "result": [[]],
-            "participants": []
+            "host": "VanIsBadAtNames",
+            "judges": ["Trickysticks", "Fraz.Bright"],
+            "numparticipants": 3,
+            "result": [["Conarnar"], ["Microintervals"], ["gmestanley"]],
+            "participants": ["Conarnar", "Microintervals", "gmestanley"]
         },
         {
             "id": "bha7",

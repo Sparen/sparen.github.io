@@ -1,0 +1,39 @@
+Air Fryer Danmaku Contest #1 - Microintervals
+
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not a bad thing!
+
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+Spell 1: Actually pretty neat. Probably a bit hard and I'm not a fan of the curvy lasers, but I got it down eventually. 6.25/10.
+
+Spell 2: Perfectly good pattern too. Not ultra exciting but I like the pressure the curvy lasers put on you, though I think they're just a smidge too fast. 6.5/10.
+
+Spell 3: Those are some weirddd bullet formations, but as a pattern it seems fine. I like this one. 7.5/10.
+
+Spell 4: Has little room for error for a fast-paced pattern that seems(?) to have a heavy random element to the amulets. Still fine, but could be slowed down a little? 6.5/10.
+
+Danmaku Score: 6.6875/10 (scaled to 10.03125/15)
+==========================================================================================================================
+
+Aesthetically, I find that this is the default system with some things missing. The lowercaseness doesn't really help, but I wouldn't say it hurts THAT much. A little below average. 2.25/5.
+
+============================================================================================================================
+
+In terms of being contradictory, I don't think it's super strong. References to other characters abound, but Suwako and Reimu aren't contraditions to Sanae, I think. 2/5.
+
+OVERALL SCORE 10.03125 + 2.25 + 2 = 14.28125/25

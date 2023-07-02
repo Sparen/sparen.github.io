@@ -1,0 +1,48 @@
+Air Fryer Danmaku Contest #1 - GME
+
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary.
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not a bad thing!
+
+Individual patterns will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+oh no this dialogue music -100000 point (jk)
+
+Nonspell 1: I think this could be a serviceable pattern if it rotated a LOT quicker, so you'd have to choose when to dodge between lines of bullets. As is, I really just had to dodge one bullet before the non ran out of health. Not very great but could be salvaged. 3/10.
+
+Nonspell 2: For this one I didn't really have to move. It's as simple as located a safe area and parking oneself in it, which is not very engaging. 3/10.
+
+Spell 1: Now, this is a pattern where you need to dodge something. I think it's thoroughly average, but how she moves gives it a little bit of dynamic-ness. If she were quicker and maybe went to the other side of the screen too, it'd mean dodging simple rings from a lot of angles. 5.25/10.
+
+Nonspell 3: More sitting in a safespot, only it's even less threatening as the bullets don't really loop up. 2.5/10.
+
+Spell 2: As far as I can tell, it's a variant of the nonspell? Doesn't make it any more engaging to stick Nue in the corner, I'm afraid. Maybe with some firing angle rotation so you have to find gaps to slip through? As is, though, I rate this 2.5/10.
+
+Nonspell 4: An aimed variant of the falling balls does seem to actually fit as a "contradition" here, which is good. I find this a bit below average because it dies very quickly though. 4.5/10.
+
+Nonspell 5: See Nonspell 2 comments - 3/10.
+
+Spell 3: More safespot parking. 3/10.
+
+Danmaku Score: 3.34375/10 (scaled to 5.015625/15)
+==========================================================================================================================
+
+Aesthetically, I find this a little below average. The spell background is fairly neat, but the lack of looping music, sound effects, and use of a lot of the same color of bullets detract from the experience. 2.75/5.
+
+============================================================================================================================
+
+In terms of being contradictory, I guess? Nue's themes don't really seem super strong to me in the first place, but the only "clear" contradiction I see is in the falling ball nonspell and maybe the spell names. I'll call it a 2.75/5.
+
+OVERALL SCORE 5.015625 + 2.75 + 2.75 = 10.515625/25
