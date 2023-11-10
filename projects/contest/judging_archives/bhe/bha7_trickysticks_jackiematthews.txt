@@ -1,0 +1,36 @@
+Bullet Hell Artistry #7 - Jackie Matthews
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary. (It turns out this is necessary, so at the end your score is getting an awesome x4 multiplier!)
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair. This may consider the contest gimmick as well (in this case, non-Touhou mechanics).
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+If I rate individual patterns, they will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score. If I don't rate individual patterns, you'll just get a score out of 15.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+You get general information instead of pattern analysis since there's too many wooooo.
+
+I think the patterns are challenging but fair - on a mode that isn't pointdevice. If I WERE to use pointdevice, I'd imagine I'd be incredibly frustrated. They're fair when you're allowed to die, but if you aren't...oh no. I think the ones where you whack the circles and they relocate somewhere else a bunch of times can be super frustrating too. I like all the bosses in concept except the bumper ones, and Nazrin dowsing her target thingies is a creative spin on things (along with other neat twists on existing patterns).
+
+I'll give you a 7.25/10 for this.
+
+Danmaku Score: 7.25/10 (scaled to 10.875/15)
+==========================================================================================================================
+
+I'm conflicted aesthetically. On one hand, the graphics are cohesive and the music fits the gameplay. On the other hand, the background and the bullets match WAY too much for they're own good. Yes, you can turn the background off (thanks for that instruction), but I thnk default states should have the game be as visible as reasonably possible. I'll give a slightly above average 2.75/5.
+
+============================================================================================================================
+
+I don't know a lot about the original game, but I found this gimmick to be fairly fun and engaging until the jumpy-circles that last a ??? amount of time. Having to visit certain spots while dodging danmaku is neat. Fairly good, but chasing circles with no clear end in sight feels bad. If you kept it to the ones that did visual damage I think I'd like it more. 3.5/5.
+
+OVERALL SCORE 10.875 + 2.75 + 3.5 = 17.125/25 (multiplied by 4 to make this out of 100, so 68.5/100. We love fractions)

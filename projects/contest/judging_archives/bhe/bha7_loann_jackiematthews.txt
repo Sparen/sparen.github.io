@@ -1,0 +1,64 @@
+Bullet Hell Artistry #7: Unlimited Machinations
+Contestant: Jackie Matthews
+Judge: Loann
+
+My English is weak! Please be aware of that.
+
+A little explanation about my scoring:
+Gameplay:
+ - Concept: Idea of the game.
+ - Representation: Idea implementation/Game design.
+ - Game mechanics: Theoretical part of the game.
+ - User experience: Practical part of the game.
+ - Techical Performance: Technical part of the game.
+Visuals:
+ - Concept: Graphical ideas and design.
+ - Composition: Arrangement of resources.
+ 
+
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+General Score: 90/100
+
+Gameplay: 67.5/75
+ - Concept: 9.5/10
+ - Representation: 9/10
+ - Game Mechanics: 24/25
+ - User Experience: 20/25
+ - Technical Performance: 5/5
+ 
+Visuals: 22.5/25
+ - Concept: 4/5
+ - Composition: 18.5/20
+ 
+ 
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+Gameplay:
+ - Concept: "Destroying dust crystals in a close range while dodging danmaku is an intersting idea! It also introduces some of the Dustforce gameplay. I might have wanted to see more references to the game, like Reimu holding a mop or having an ability to destroy all nearby crystals at once in a large area (once per level probably, but that would surely change some patterns)."
+
+ - Representation: "Idea implementation was generaly good, although I still have some questions unanswered after playing the game. Switches mechanic - was it borrowed from the Dustforce or was it a self-addition to the game? All explanation I found regarding the borrowed game was about crystals. I watched tutorial (in Dustforce), but didn't find anything there as well. Same goes for new mechanic with dots pushing player away."
+
+ - Game Mechanics: "Simple and clear. I wasn't only sure why switches mechanic was presented as they show almost no difference to how crystals work (except turning switches off don't clear bullets). With Nazrin they do show some more interesting mechanics, though (with switches being untargetable)."
+
+ - User Experience: "I have a lot to say here, so I will break it down to several points.
+ 1. First off, thank you very much for providing both tutorial and manual. It helps players to understand the game easier.
+ 2. There are some big visilibity issues with the BG, although you do provide an option to turn the BG off. I would still advise to tone down the brightness of the existing BG.
+ 3. I was expecting at least a little explanation on how new mechanics work (switches and dots), but thankfully they are very easy to understand through practice.
+ 4. Some sort of indicator would be good to show which switches were turned off already (like making lines darker).
+ 5. It's not very clear what bullets are going to be erased when destroying a crystal. Deleted bullets fade out slowly and may still give a player an image of an exicsting bullet. Besides, it would be much better if a player could clearly see the radius where bullets are going to be deleted. This mechanic may be used for some strategy, but it is scary to use it without seeing it clearly.
+ 6. Menu options is a bit too hard to see. Perhaps my screen is very bright, but the one that is currently selected is very similar to other ones.
+ 7. Small issues with danmaku balancing. They aren't really worth mentioning, since they don't cause any troubles.
+ 8. Other than that, everything was just wonderful. I really enjoyed the gameplay, not only as an idea, but in practice too! Many patterns make a good use of the game mechanic, which is a big plus too."
+
+ - Technical Performance: "No lags or FPS drops detected."
+
+Visuals:
+ - Concept: "I like the aesthetics of the game, especially character themed BGs! I wanted to see a bit more work in the title screen, though."
+ - Composition: "All resources work well enough with each other (audio, effects and sprites). There's nothing to complain about except bright BG which makes some sprites hard to see (like warning waves in LEVEL02)."
+
+General opinion: "There are some nuances here and there, but for me it's a solid A+ game. Even after finishing the game I still have interest to play more."

@@ -1,0 +1,63 @@
+Bullet Hell Artistry #7: Unlimited Machinations
+Contestant: Fuzzbearplush
+Judge: Loann
+
+My English is weak! Please be aware of that.
+
+A little explanation about my scoring:
+Gameplay:
+ - Concept: Idea of the game.
+ - Representation: Idea implementation/Game design.
+ - Game mechanics: Theoretical part of the game.
+ - User experience: Practical part of the game.
+ - Techical Performance: Technical part of the game.
+Visuals:
+ - Concept: Graphical ideas and design.
+ - Composition: Arrangement of resources.
+ 
+
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+General Score: 20/100
+
+Penalty: -30 points
+
+Gameplay: 25/75
+ - Concept: 1/10
+ - Representation: 5/10
+ - Game Mechanics: 9/25
+ - User Experience: 5/25
+ - Technical Performance: 5/5
+ 
+Visuals: 25/25
+ - Concept: 5/5
+ - Composition: 20/20
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+Penalty: "First off, there was a clear rule about providing explanation for borrowed game mechanic, which wasn't the case in this entry. Despite HRtP being a common game in our community, it's still an overtsight to assume that everyone knows its mechanic. I haven't played nor seen HRtP gameplay, so I had to watch and analyze it myself. I could refuse to judge the entry, but instead I will add a penalty to the general score."
+
+Gameplay:
+ - Concept: "Since HRtP originally introduced the idea of dodging bullets, the concept of the script feels more like an extension of the original idea rather than being something new."
+
+ - Representation: "The idea was implemented pretty well. All main HRtP mechanics were replicated very well. Although, it is pretty hard to judge, since not many new ideas were introduced in the entry."
+
+ - Game Mechanics: "A few things to point out:
+ 1. Having player to control 5 buttons at the same time (aside movement buttons) while dodging danmaku and watching for the ball is quite demanding, thus I don't think is a good idea. In my experience it was quite hard and overwhelming, despite having experience in games where you have to control much more buttons.
+ 2. Player has much more place to dodge bullets now, but is still limited to go far up. I don't see any reason to have this limit, since the player doesn't want to stick to the upper part of the screen anyways. It doesn't reward you nor it doesn't help catching the ball.
+ 3. Being able to shot down amulets helps completing the stage, especially when there's one single amulet is left and you can't catch it with the ball. Additionaly, having this ability won't let you clear amulets fast enough, so I find this mechanic pretty balanced.
+ 4. Sadly, aside from that I barely find any other new mechanics, so I will consider this small part as a 100% of this criteria. Everything else that wasn't mentioned here I find pretty fine/neutral."
+
+ - User Experience (UX): "I have one big complain for this category. Not only an explanation was not provided, but also no manual or in-game explanation for how to play HRtP-like game. As a person who had no idea of HRtP mechanic I had no idea what to do when playing the game (even after reading the ingame manual). Many things in this entry I had to figure on my own which wasn't a pleasant experience. Due to unusual format of the contest (to create a new gameplay), I will prioritize user experience the most. I mentioned that in my message that was posted in the #server-feed alongside other messages written by judges. When a new game/gameplay is created, its creator must make sure that a player understand how to play it. Other than that there's nothing important to mention, just little bugs like misleading advises in menu (X button doesn't work as intended)."
+
+ - Technical Performance: "No lags or FPS drops detected."
+
+Visuals:
+ - Concept: "I like the visual idea of the entry. It replicates well the feeling of the old original game."
+ - Composition: "All resources and sprites work very well with each other."
+
+General opinion:  "I'm very sorry if my judging seemed harsh. Your script is actually interesting and well-done. It has interesting concept on its own. It's just that it doesn't fit contest goal well enough."

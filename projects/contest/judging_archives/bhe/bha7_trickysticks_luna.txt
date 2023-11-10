@@ -1,0 +1,50 @@
+Bullet Hell Artistry #7 - luna_noot
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary. (It turns out this is necessary, so at the end your score is getting an awesome x4 multiplier!)
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair. This may consider the contest gimmick as well (in this case, non-Touhou mechanics).
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+If I rate individual patterns, they will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score. If I don't rate individual patterns, you'll just get a score out of 15.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+After much walking, here is SUIKA!
+
+Nonspell 1: Simple and character-appropriate. I think that she lasted a little long considering I had the persuasion needles on, but maybe not? 7/10.
+
+Spell 1: It's not Scarlet Meister, we promise. I think it's fine enough, if a bit boring for a spellcard. 6.5/10.
+
+Nonspell 2: A similar concept to the first nonspell, though it feels more random and messy? Kind of eh on this one. 6.5/10.
+
+Spell 2: This one is kind of neat. I thought it was more interesting when the MiniSuikas were moving, for what it's worth? But it's a cool spell...that dies before the second phase fairly easily if you use the needles. 7.5/10.
+
+Nonspell 3: I like dodging this one more than the previous, though it's not exactly super-creative since Haha They Curve. I think one must not reinvent the wheel though! 7.25/10.
+
+Spell 3: A bit boring and I'm not super sure how this fits Suika as a character. It's FINE, of course. I like dodging from both in front and behind, but it's just...plain. 7/10.
+
+Spell 4: Ooh, a survival...but um, it's not super interesting either I think. It's short-lived and ends up being dodging random white dots. Eh. Not bad, not super inspired or interesting. 6/10.
+
+Spell 5: ...actually, is Suika just Flandre here? Not-Four-of-a-Kind, not-Catadioptric. Not BAD, just not interesting, even as it ramps up. 6.5/10.
+
+Danmaku Score: 6.78125/10 (scaled to 10.17/15)
+==========================================================================================================================
+
+Aesthetically, I think the game is fine too. The 3d isn't terrible or groundbreaking, the boss fight's aesthetically cohesive and I really appreciate the cute art. Above-average, but doesn't stand out. 3/5.
+
+============================================================================================================================
+
+The system is impressive from a programming perspective, I would imagine. However, the purpose it serves in this entry seems more like a walking simulator through a glorified menu where you get to pick your shottype and some other minor stuff. Additionally, I don't think the menu options actually mattered much? Like, I played with both homing and needles and her patterns seemed to die at the same rate. Maybe I was just bad at staying under her?
+
+Either way, I don't think that the gimmick worked out very well. It gets points for effort and cuteness, but that's about all. I'll give it a 1/5.
+
+OVERALL SCORE 10.17 + 3 + 1 = 14.17/25 (multiplied by 4 to make this out of 56.68. Yay decimals!)

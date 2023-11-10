@@ -1,0 +1,38 @@
+Bullet Hell Artistry #7 - zack1258
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary. (It turns out this is necessary, so at the end your score is getting an awesome x4 multiplier!)
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair. This may consider the contest gimmick as well (in this case, non-Touhou mechanics).
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+If I rate individual patterns, they will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score. If I don't rate individual patterns, you'll just get a score out of 15.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+Played on Contest Mode and then used scene practice. I'll talk about patterns in general, since I feel like they should be evaluated together due to the ammo/weapon system (no pattern really exists in isolation).
+
+Overall, the patterns are very creative and very pretty. You can see where you're intended to use each weapon for each of the four starting bosses, and I think that's good. My main issue is that this is WAY too hard. I tried out Newcomer Mode, and even if that's supposed to be Normal, I think it's too difficult (and it seems to end up scaling up to Lvl 2 anyway). Contest Mode is a lot to ask - thankfully most of the judges can play difficulties like Hard/Lunatic, but for an experience that's supposed to be a gauntlet into the final boss where you're supposed to be high on ammunition, I think the difficulty is pushing it much too far. I think the concepts are there and very high-quality, but they're just WAY too hard.
+
+Danmaku Score: 6.5/10 (scaled to 9.75/15)
+==========================================================================================================================
+
+Aesthetically, this script is gorgeous. Everything is cohesive and pretty, music loops perfectly...I can't find much to criticize here. Maybe the snowflakes in the ice boss could be more visible? The last boss teleporting around is admittedly SUPPOSED to be jarring, but jeez. Otherwise, excellent work.
+
+Aesthetics Score: 4.75/5.
+
+============================================================================================================================
+
+I really like the idea of the weapon system here, and building the bosses to follow is a good touch. I feel as if the ammo system might be faithful to Megaman, but I felt stuck between the idea of using the weapons early to make the bosses easier vs saving them for the final boss's stuff. That and the refills on ammo seeming to be quite limited didn't make me super happy. Much like with the difficulties, I feel as if making it more forgiving would be better. More forgiving and maybe more easily usable? Since you get the weapons in whatever order, maybe just assigning each one a key and letting you hit that key would be better, instead of trying to switch to the weapon you want while dodging danmaku. If I recall, Megaman lets you (or forced you, in older ones) open a menu to switch, so you're never switching while dodging unless you want to. Heck, even Ultra Despair Girls lets you do that.
+
+It's good, but I felt like the points I mentioned above took away from my enjoyment. I'll give it a 3.5/5.
+
+OVERALL SCORE 9.75 + 4.75 + 3.5 = 18/25 (multiplied by 4 to make this 72/100)

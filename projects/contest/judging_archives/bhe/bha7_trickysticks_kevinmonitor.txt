@@ -1,0 +1,44 @@
+Bullet Hell Artistry #7 - kevinmonitor
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary. (It turns out this is necessary, so at the end your score is getting an awesome x4 multiplier!)
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair. This may consider the contest gimmick as well (in this case, non-Touhou mechanics).
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+If I rate individual patterns, they will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score. If I don't rate individual patterns, you'll just get a score out of 15.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+The difficulty is variable so there's only one difficulty to judge yaaaay. I guess I can judge the stage portions and each boss since there's not a ton.
+
+Stage Part 1: I found this a fun way to get used to the gimmick in some sort of, relatively, safe environment. I can kind of see the game being designed around using the drill to slow down bullets, but that also seems to not really help a ton in some situations. Which is fine. Good design, even. 8/10.
+
+Midboss 1 Pattern 1: Awfully stressful for a pattern so simple. I thought it was fine, if a bit ruthless on higher ranks. 7.5/10.
+
+Midboss 1 Pattern 2: I found this much easier than the previous, which doesn't help the sense of progression too much. Still a fine pattern. 7/10
+
+Stage Part 2: The newer enemies make things get pretty crazy here in addition to the higher rank, and with default settings your lives are too limited to die a bunch to reduce rank. I do think the difficulty is Pretty Damn Hard, even if you have the drill and hypers to deal with some of it. 6/10.
+
+Midboss 2 Pattern 1: Horrifying streaming aaaaaa. Simple design, but wow is this difficult. 6.75/10.
+
+Midboss 2 Pattern 2: Like the previous midboss, I believe this pattern is easier than the one that precedes it. Maybe I'm just not using the drill properly in the last one? I think it's a bit more interesting than the last pattern, even if the difficulty is lacking compared to it, so I'll split the difference and give it the same score. 6.75/10.
+
+Danmaku Score: 7/10 (scaled to 10.5/15)
+==========================================================================================================================
+
+Aesthetically, the creator did say it was rushed...but it still seems fine enough to me? I didn't look super closely, and only stuff like the giant amount of invincibility-frames and bullet graphics maybe being a little crunchy even for pixelated bullets stood out. Still, eh, I think it's fine. A bit above fine, even. 3/5.
+
+============================================================================================================================
+
+I like the idea of having to manage a "power" that's not really a pro or a con, depending on how you use the bullet slowing. However, hypers just kill and delete everything and last for a while - I can ignore the midbossess entirely if I hyper them, and I think it's too polarizing as they are murderous on higher ranks if you don't. I know this can be common in other SHMUP gameplay, but it's the sort of thing I like about Touhou as opposed to those games. Scoring IS fun with big numbers on screen though. I'll split the difference and say it's above-average too. 3.25/5.
+
+OVERALL SCORE 10.5 + 3 + 3.25 = 16.75/25 (multiplied by 4 to make this out of 100, so 67/100.)

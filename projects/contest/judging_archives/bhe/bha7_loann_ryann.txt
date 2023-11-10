@@ -1,0 +1,56 @@
+Bullet Hell Artistry #7: Unlimited Machinations
+Contestant: Ryann
+Judge: Loann
+
+My English is weak! Please be aware of that.
+
+A little explanation about my scoring:
+Gameplay:
+ - Concept: Idea of the game.
+ - Representation: Idea implementation/Game design.
+ - Game mechanics: Theoretical part of the game.
+ - User experience: Practical part of the game.
+ - Techical Performance: Technical part of the game.
+Visuals:
+ - Concept: Graphical ideas and design.
+ - Composition: Arrangement of resources.
+ 
+
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+General Score: 51.5/100
+
+Gameplay: 31/75
+ - Concept: 10/10
+ - Representation: 1/10
+ - Game Mechanics: 8/25
+ - User Experience: 7/25
+ - Technical Performance: 5/5
+ 
+Visuals: 20.5/25
+ - Concept: 2.5/5
+ - Composition: 18/20
+
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+Gameplay:
+ - Concept: "The idea seems to be intriguing. A danmaku game where a player must control planted objects. I like the format and the direction of the idea."
+ 
+ - Representation: "Two genres barely interact with each other. It doesn't feel combined in one single gameplay, rather makes player play two different games at once. As an example for this criteria: a player shouldn't let any fairy go down the screen. A player can shot any fairy down, but must plant additional objects to deal with big waves of fairies. Some shot-types dealt by either a player or a plant may be more efficient against certain types of fairies. Some plants may stun fairies or even block bullets. After all, a tower defence is all about thinking stragetically. I will write more about it later."
+ 
+ - Game Mechanics: "Within the entry idea game mechanics seem to be pretty much balanced. Although, different types of plants don't affect pvz-side gameplay much. Changing shot types dynamically is an interesting idea, but then again, I wish there was more use of that for danmaku-side of the game, because right now you can just invest all resources in one plant and have a win for both sides (pvz and danmaku)."
+ 
+ - User Experience (UX): "There's no progression in difficulty nor there's any options to change it. The game was extremely hard (danmaku-wise) for my experience. Besides, while focusing a lot on dodging, I was still figuring out how the system works, because tutorial doesn't really teach you about game mechanics. It describes everything, but doesn't show player how to do it (there were no bg fairies to use plants for and this made me think plants were used to shot normal fairies). So, basically, there was no need in tutorial, it may even mislead. A simple manual would do."
+ 
+ - Technical Performance: "No bugs or FPS drops found."
+
+Visuals:
+ - Concept: "Visual design ideas doesn't seem bad, but I can't call them interesting either."
+ - Composition: "All resources work pretty well with each other. There were small issues with visibility, but not much."
+
+General opinion: "I like the direction of ideas, but the game feels too intence as if the development was rushed. Contest doesn't give much time to contestants, but my advise is to keep ideas simple, because big and detailed mechanics require a lot of invest."

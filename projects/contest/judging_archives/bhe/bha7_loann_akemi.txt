@@ -1,0 +1,67 @@
+Bullet Hell Artistry #7: Unlimited Machinations
+Contestant: Akemi Yume
+Judge: Loann
+
+My English is weak! Please be aware of that.
+
+A little explanation about my scoring:
+Gameplay:
+ - Concept: Idea of the game.
+ - Representation: Idea implementation/Game design.
+ - Game mechanics: Theoretical part of the game.
+ - User experience: Practical part of the game.
+ - Techical Performance: Technical part of the game.
+Visuals:
+ - Concept: Graphical ideas and design.
+ - Composition: Arrangement of resources.
+
+
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+General Score: 58.5/100
+
+Gameplay: 36.5/75
+ - Concept: 10/10
+ - Representation: 5/10
+ - Game Mechanics: 5/25
+ - User Experience: 12/25
+ - Technical Performance: 4.5/5
+ 
+Visuals:22/25
+ - Concept: 2/5
+ - Composition: 20/20
+
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+Gameplay:
+ - Concept: "The script introduces the ability to inhale bullets and use them as a weapon to fight the boss. This is a simple and a nice way to replicate one of the main gimmicks from Kirby series. I enjoyed the fact that characters from both worlds are introduced in pairs as players and as a boss. I also enjoyed music being a mashup of two themes from different universes."
+ 
+ - Representation: "I was expecting for each playable character to show more of their potential. If you're using different characters from different universes, show what they're capable of in their unique ways and how each of them can be different from one another. Currently all player teams are too similar to each other except for their visuals (like Laevateinn). For example, Meta Knight has many details to reference (tornado, blade, etc.) that could be used, meanwhile in game he has an ability out of character for him. Although, I did enjoy some visual/audio ideas like Marx inhaling ability. While the idea of inhaling bullets (X by default) fits perfectly with the vision, collecting them with Z feels out of place, since it isn't really a mechanic featured in Kirby series and its payoff is no different from the inhaling mechanic."
+
+ - Game Mechanics: "I have a lot to say here, so I'm going to break it down into several points.
+ 1. Disabling usual shot and bomb abilities and replacing them with a new inhaling mechanics is quite unique approach to the bullet-hell genre. I like this idea. Although, it being introduced as a MAIN mechanic forces you (author) to be extra cautious implementing it. Small oversights will cause players a lot of confusion.
+ 2. Inhaling mechanic (X button) is easily abusable with Reimu by pressing X and Z periodically which gives immense damage and provides good survivability. Some balancing is needed.
+ 3. I'm not sure if shot aiming (othan than Reimu) is neccessary. There are no other targets other than the boss. There's something more to it that is more UX related, so I will talk about it there.
+ 4. Adding bullets that behave differently (can't be erased) is a good idea to balance a game where you can erase big amounts of bullets."
+
+ - User Experience (UX): "A lot to mention here as well, so I will break it down into points again.
+ 1. This script introduces a manual which is expected as it teaches the player new mechanics, although, the manual itself is poorly done. It contains a lot of unnecessary text, which discourages the player from reading it. It is better to have short explanations or visual examples, as I still had many questions about game mechanics after reading the manual. What kind of object are you referencing? Where do I find the collection gauge? After starting the game I had to spend some time figuring out how the new mechanics actually work, as the game doesn't help player understand mechanics either.
+ 2. The problem of the collection mechanic (Z button) lies in its gauge bar. It is difficult to see when it's full, while this is important for the player to change their gameplay from collecting/erasing bullets to shooting a projectile. And this can cause the player to run into a bullet they can no longer erase.
+ 3. In usual danmaku games you must follow the boss horizontally to damage them while dodging danmaku. Having to aim your attacks is another demanding task, especially for beginners. The fact that your attacks are narrow and sparse (especially as Flandre x Marx) makes it all the more difficult. The root of the problem lies in the game mechanic.
+ 4. Using dark bullets is a good idea to indicate bullets with special functionality which is easy for a player to understand intuitively.
+ 5. Although, not all elements are intuitively clear, for example: object gauge, object hitbox, shot direction, invulnerability frames, etc.
+ 6. Danmaku patterns were interesting both visually and mechanically. Some patterns showed good synergy with game mechanics.
+ 7. Needing to constantly collect bullets to damage the boss is a very interactive gameplay which makes it fun to play. Some patterns even require you to clear bullets to dodge them, which adds more gameplay to the game."
+
+ - Technical Performance: "If you time out one spellcard FPS starts to drop down. Tree loop animation was slightly off. Other than that everything worked flawlessly."
+
+Visuals:
+ - Concept: "Menu and pause design don't include anything related to Kirby games which in my opinion is strange."
+ - Composition: "Everything works very well together. Smooth effects, pleasant palette and accurate sprites. The way trees were done on BG is very conceptual, I like it!"
+
+General opinion: "I would advise to review the way this system works. Main mechanics of the game must be paid attention the most as it's most important part of the game. I like the direction of your ideas, they are very interesting. As for visual part everything is perfect!"

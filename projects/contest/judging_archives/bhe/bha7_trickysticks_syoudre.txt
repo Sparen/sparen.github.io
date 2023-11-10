@@ -1,0 +1,59 @@
+Bullet Hell Artistry #7 - Syoudre
+
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary. (It turns out this is necessary, so at the end your score is getting an awesome x4 multiplier!)
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair. This may consider the contest gimmick as well (in this case, non-Touhou mechanics).
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+If I rate individual patterns, they will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score. If I don't rate individual patterns, you'll just get a score out of 15.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+I'll break this one up into segments wherever it makes sense to.
+ 
+Pre-Aya: A reasonable enough introduction to the game. I wandered around a bit until I found the sword which is not a bad thing. Maybe a bit slow and sleepy, only because I took going east incredibly literally and was confused when it wasn't all the way to the right.
+
+Aya: Short and sweet. I thought the second attack was more intimidating than it really was - maybe I underestimated the sword's hitbox and/or the wideness of the boss? Good work either way.
+
+Wisp Gathering: I couldn't find the last oneeeee and then I did after a few minutes, so woo. I wouldn't say more guidance is necessary for this part or anything, it's fine.
+
+Mokou: Another short and sweet boss fight. I did think the random exploding bubbles COULD lead to some nonsense, but they did not when I played.
+
+KILL 40: This is a lot harder than previous portions of the game and kind of tedious. At least it's cheeseable by finding a good enemy spawn point and spamming screen switches, but do you really need to make people kill 40 enemies?
+
+I'll Face Myself: I think that it's a reasonable difficulty increase from Mokou. The clone spell actually killed me once but I got it after some thinking with my brain.
+
+GO SeArCH/Hakugyawhatever Onslaught: I do like how varied the patterns of the onslaughts are, though I'm glad the one before the dialogue was the last one. I went left to deal with the bullets from nowhere:tm: afterwards. A good homage to the relevant games, but does this really need to be repeated instead of giving a checkpoint RIGHT at the boss if you die?
+
+Yukari: The last pattern confused me a bit until I realized that the barrier blocked bullets. Neat ideas overall. I think the train spell in particular was excellent, as it allows for misdirection which meshes nicely with the sword gimmick.
+
+Yuyukon't: I admittedly wasn't expecting that last bunch of phases, but I do like the different gameplay of having to kill the fairies to hurt her at the end. A good way to end the script.
+
+Overall, I think the danmaku content of this script is very good! I liked the boss patterns, and the enemies only got really repetitive near the end.
+
+I'll give this a danmaku score of 8.5/10 overall. It's great, but I felt like it dragged on a bit and had some pain points that I mentioned below. Still very good!
+
+Danmaku Score: 8.5/10 (scaled to 12.75/15)
+==========================================================================================================================
+
+Aesthetically, I find this script is HIGHLY cohesive and meets all of my standards. My only complaint is that the music got kind of grating during the kill 40 enemies part, but that's more of a gameplay issue. I'll give this a very high score of 4.75/5.
+
+============================================================================================================================
+
+I would say you integrated the Zelda-style mechanics into your script very well. There were some patterns where I waited for attempts to slash at the boss that never came, but you're given the ranged charge attack option or you can just hold Z and wait (a lot). I believe the train pattern, in particular, is a good one where you can get good sword-slashing uptime by misdirecting bullets. 
+
+I don't know if the level system is necessary since you already give out upgrades periodically - I'm not sure how much the ATK/DEF up things mattered, but the sword upgrades especially felt impactful. Killing 40 enemies is the only thing I'd say is "superdying" here - I guess it's kind of a forced interaction with the level up system, but ew. Having to redo the PC-98ish section before Yukari if you die to her is also unpleasant. Otherwise, a very solid script. 
+
+I'll say that this is a 3.75/5 in terms of mechanic integration.
+
+OVERALL SCORE 12.75 + 4.75 + 3.75 = 21/25 (multiplied by 4 to make this out of 100, so 84/100)

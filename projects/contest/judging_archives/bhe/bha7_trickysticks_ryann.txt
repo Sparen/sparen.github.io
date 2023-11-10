@@ -1,0 +1,34 @@
+Bullet Hell Artistry #7 - ryann
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary. (It turns out this is necessary, so at the end your score is getting an awesome x4 multiplier!)
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair. This may consider the contest gimmick as well (in this case, non-Touhou mechanics).
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+If I rate individual patterns, they will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score. If I don't rate individual patterns, you'll just get a score out of 15.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+Too many patterns to rate individually, so I WILL NOT!
+
+Generally speaking, I think the danmaku is pretty fine. I'm personally not a fan of randomized stages, as I prefer handcrafted stages to BPoHC. The boss patterns occasionally were VERY rude to forward-focus shots. Like, a lot of them encourage you to fuck off somewhere else and you end up timing out the patterns. I'd say it's above-average danmaku-wise but nothing to write home about.
+
+Danmaku Score: 6.5/10 (scaled to 9.75/15)
+==========================================================================================================================
+
+Aesthetically, I think the script is pretty, BUT it has some pain points. Such as bullet rendering issues (why are those purple ones semitransparent, why is ANY bullet semitransparent when the transparency should be for the back row). The music and graphics do have their charm, so I'll say it's above-average. 3/5.
+
+============================================================================================================================
+
+I did not like the gimmick at all. I think the game would be outright better if the gimmick weren't there - you don't exactly throw EASY danmaku at the player, and the fact that you're expected to juggle plants while dodging Hard-level stuff isn't workable. The enemies are limited to fairies that just walk down the lane, you can only have one plant per lane, you have to buy plants each time so you need to grind if you want to do any experimentation. I just max-upgraded the starter green plant, dumped them in each lane and ignored the gimmick entirely. Except for when a fairy randomly got through. Then I died. You don't have enough extra plants to really recover unless you want your shots to be garbage, and overall I think this is a very poor implementation. When an entry would be more functional/fun without the gimmick at all, I think you have an issue. Besides the fact that adding grinding to a contest entry is...ugh. I appreciate the idea, but no. 1/5.
+
+OVERALL SCORE 9.75 + 3 + 1 = 13.75/25 (multiplied by 4 to make this out of 100, so 55/100)

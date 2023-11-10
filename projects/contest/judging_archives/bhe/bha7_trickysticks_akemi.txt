@@ -1,0 +1,72 @@
+Bullet Hell Artistry #7 - akemi-yume
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary. (It turns out this is necessary, so at the end your score is getting an awesome x4 multiplier!)
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair. This may consider the contest gimmick as well (in this case, non-Touhou mechanics).
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+If I rate individual patterns, they will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score. If I don't rate individual patterns, you'll just get a score out of 15.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+This seems judgeable on a pattern-by-pattern basis, so I shall do so. I played as ReimuKnight for better or worse.
+
+Nonspell 1: It's a good Yukari non to introduce the gimmick. Not too hard, not too trivial, creative enough. 7/10.
+
+Spell 1: This also seems to serve to introduce the black-cored bullets. Of note is that I did read the manual, but I still found it awkward to get the thing to swing in the direction I wanted. Still a good intro pattern. 7.5/10.
+
+Nonspell 2: Collect the red bullets to get those thingies to break apart. I like this quite a bit, actually. 8/10.
+
+Spell 2: I was briefly concerned about this pattern being a survival, but then I had bullets to munch on and it was over pretty quick. I'm not sure if the system lends itself to feast-or-famine gameplay, where you two-shot every pattern pretty quick or struggle, but I felt that way with this spell. Still pretty good tbh, but just a system worry. 6.5/10.
+
+Nonspell 3: A good mix of dark-cored orbs and light kunai. Over quick, but pretty fun to dodge. 7.5/10.
+
+Spell 3: Yakumo ball? I was admittedly confused about how this one works. It is a funny reference, and it's not QUITE throwing the gimmick out the window, but it's kind of just...there. 7/10.
+
+Nonspell 4: This is a cool twist on the usual collection/succ gimmick. Didn't feel too hard either. 8/10.
+
+Spell 4: Oh no it's the shikishikigamigami. Killed this one pretty quick too so I didn't see it for too long, but the idea seems good. 7.5/10.
+
+Nonspell 5: wtf they stay in the nonspell. Neat little ideas, I approve. 8.25/10.
+
+Spell 5: This one I found dragging on a bit due to my incessant dying and trying to control the gohei in a way that actually swept in front of me protectively. I ended up just trying to redirect everything safely, so it took a long while. Neat idea, and maybe I executed this one poorly? But I ended up not liking it too much at the end. 5/10.
+
+wtf it turned into another thing
+
+the other thing is a new boss so I reset numbers
+
+Nonspell 1: And here we are. I should've paid more attention to the timer but neat music syncing thingy. 6.5/10.
+
+Spell 1: Pins? Get to the points. I like this pattern a good bit too - maybe behaves a bit messily if the player dies, but that's the cost of doing business with aimed bullets. I like how they explode into the normal shots, so if you're good you can spawndelete a bunch of them. 8/10.
+
+Nonspell 2: me like when given lots of bullets to eat (and two-shot the non with in like 10 seconds). The idea follows up on the previous spell well and I like it. 7/10.
+
+Spell 2: Another spell that provides an abundance of bullets with which to gimmick. I didn't kill this one immediately, and I do say that the ellipse-style formations look pretty neat. Otherwise the pattern is another solid addition to the script. I like it more than the previous nons, but not as much as the first spell. 7.5/10.
+
+Nonspell 3: Bouncy bouncy. I admittedly don't have a lot to say about this one - it keeps with the theme of integrating an element of the last spell that this script's had going for it, and it does so well. 7.5/10.
+
+Spell 3: This is definitely a pattern where I'd appreciate some form of finer control, considering it's about encircling you. I managed well enough, but I could easily see a player being more frustrated with this. 7/10.
+
+Spell 4: Another multi-phaser. Due to the nature of this script, I found that this one and the final fakeYukari one both dragged on. Yet, I feel like this one utilized the gameplay system better? Trying to grab fireballs from adjacent lanes and launch them, and absorbing bullets when they're near you felt pretty neat. It just dragged on, and I found myself almost timing it out. Nice concept, though the execution might stand to be more "exciting" somehow. 6.5/10.
+ 
+I'll give this a danmaku score of 8.5/10 overall. It's great, but I felt like it dragged on a bit and had some pain points that I mentioned above. Still very good!
+
+Danmaku Score: 7.19/10 (scaled to 10.79/15)
+==========================================================================================================================
+
+Aesthetically, I find this script is VERY pretty. You clearly put a lot into the aesthetic and it shows. None of the visuals bothered me and it all fit together nicely. 5/5.
+
+============================================================================================================================
+
+Unfortunately, I didn't like the gimmick of this script overly much? It just feels funky. I did have some high moments where I could kill patterns quick...but then I didn't like that too much either, since I find the joy in danmaku isn't in shooting stuff down in seconds. It's a nice idea, certainly, and fits with the idea of Kirby, but I simply didn't enjoy it too much. It's not downright TERRIBLE, but I felt it was below average. 2/5.
+
+OVERALL SCORE 10.79 + 5 + 2 = 17.79/25 (multiplied by 4 to make this out of 100, so 71.16/100. We love fractions)

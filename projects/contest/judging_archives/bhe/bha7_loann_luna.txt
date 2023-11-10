@@ -1,0 +1,56 @@
+Bullet Hell Artistry #7: Unlimited Machinations
+Contestant: Luna
+Judge: Loann
+
+My English is weak! Please be aware of that.
+
+A little explanation about my scoring:
+Gameplay:
+ - Concept: Idea of the game.
+ - Representation: Idea implementation/Game design.
+ - Game mechanics: Theoretical part of the game.
+ - User experience: Practical part of the game.
+ - Techical Performance: Technical part of the game.
+Visuals:
+ - Concept: Graphical ideas and design.
+ - Composition: Arrangement of resources.
+ 
+
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+General Score: 23.5/100
+
+Gameplay: 19.5/75
+ - Concept: 5/10
+ - Representation: 0/10
+ - Game Mechanics: 5/25
+ - User Experience: 5/25
+ - Technical Performance: 4.5/5
+ 
+Visuals: 12/25
+ - Concept: 2/5
+ - Composition: 10/20
+
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+Gameplay:
+ - Concept: "I like the idea a lot! Although, I did expect a certain game to be referenced, as it was mentioned in the contest rules. Here the entry references a genre as a whole, so I guess it's okay?"
+
+ - Representation: "The entry feels more like a showcase of mechanics rather than being an actual game. It lacks interaction with the game mechanic, where a player could build a strategy as the player makes progress through the game (for example different bosses/enemies require different items/shot type/bombs for better experience)."
+
+ - Game Mechanics: "In the category above I mentioned an example of a full-fledged gameplay. As the entry introduces only a raw idea of the game mechanic I can't really judge anything here. Due to the absence of the detailed gameplay I will score this category low. I won't count standard danmaku battle as a gameplay, since it wasn't the goal of the contest. Besides, picked items doesn't affect danmaku expereince much."
+
+ - User Experience (UX): "Can't really say much here either. I didn't experience much while playing the script. I had some troubles understanding the controls. I couldn't find the way to manage items. RPG part felt less interactive and pretty slow, while danmaku added a little to the pace and was pretty challanging."
+
+ - Technical Performance: "Small issues were found while invastingeting areas. I had to restart the game to fix the problem (floor was constantly disappearing and Reimu was constantly falling down)."
+
+Visuals:
+ - Concept: "The visual idea of the script feels pretty simple, but not bad."
+ - Composition: "Not really a fan of seeing different styles of graphic in one game. Danmaku part and RPG part feel really separated visually from each other. Other than that resources work pretty fine with each other."
+
+General opinion: "While the concept and technical abilities are really good, the entry still seem pretty raw for a complete game. I would rate you high for these achievments solely, but the goal of the contest is to create a game that can be played in practice. Either way if you develop this idea in the future I do see it having a big potential."

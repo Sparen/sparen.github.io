@@ -1,0 +1,56 @@
+Bullet Hell Artistry #7: Unlimited Machinations
+Contestant: Kevin
+Judge: Loann
+
+My English is weak! Please be aware of that.
+
+A little explanation about my scoring:
+Gameplay:
+ - Concept: Idea of the game.
+ - Representation: Idea implementation/Game design.
+ - Game mechanics: Theoretical part of the game.
+ - User experience: Practical part of the game.
+ - Techical Performance: Technical part of the game.
+Visuals:
+ - Concept: Graphical ideas and design.
+ - Composition: Arrangement of resources.
+ 
+
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+General Score: 97/100
+
+Gameplay: 72/75
+ - Concept: 8/10
+ - Representation: 10/10
+ - Game Mechanics: 25/25
+ - User Experience: 25/25
+ - Technical Performance: 4/5
+ 
+Visuals: 25/25
+ - Concept: 5/5
+ - Composition: 20/20
+
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+Gameplay:
+ - Concept: "I like the idea, but I wish more references/game mechanics were used from the borrowed game."
+
+ - Representation: "All ideas seem to be represented well. No commentary here."
+
+ - Game Mechanics: "In my opinion the game mechanics within the entry idea is flawless. Every single game mechanic is being actively used by player. All things that are presented in the game are interactive. The game gets dynamically harder, where having more lifes is vital. That's the moment where player understands that scoring and drilling system helps with this task and starts actively using it by trying to gain as much score as possible. Also, I like the fact that both shot types (range and drill) are fairly balanced despite them working almost opposite to each other. Being able to slow down bullets any moment isn't a broken ability, because the more bullets you slow the more bullets there are on the screen which makes it harder to dodge."
+
+ - User Experience (UX): "Very positive. I never played caravan-style shmups before (any shmup/danmaku beside Touhou in general) and I must say I'm in love with the genre already. A description was provided, although, investing more time into explaining/making visual manual/having tutorial would help a lot. Also, I would like to mention that good mechanics ensures good user experience most of the time. And that was the case here too, the game was very enjoyable and not too hard, just enough for a challange. I tried actively using the drill system to gain as much score as possible and that was very fun."
+
+ - Technical Performance: "No FPS drops found. There was a lag where a stage would just stop. Comparing to the size of the game the bug is pretty noticable."
+
+Visuals:
+ - Concept: "I like all visuals. It has an idea and style."
+ - Composition: "All resources work very well together. All important mechanics were visible. Sounds effects pleasant."
+
+General opinion: "This entry fullfills all expectations I had within the contest rules. Surely it lacks content for a full game, but perfectly enough for a contest."

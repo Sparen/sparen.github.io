@@ -1,0 +1,56 @@
+Bullet Hell Artistry #7: Unlimited Machinations
+Contestant: Makuta Matara
+Judge: Loann
+
+My English is weak! Please be aware of that.
+
+A little explanation about my scoring:
+Gameplay:
+ - Concept: Idea of the game.
+ - Representation: Idea implementation/Game design.
+ - Game mechanics: Theoretical part of the game.
+ - User experience: Practical part of the game.
+ - Techical Performance: Technical part of the game.
+Visuals:
+ - Concept: Graphical ideas and design.
+ - Composition: Arrangement of resources.
+ 
+
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+General Score: 74/100
+
+Gameplay: 53/75
+ - Concept: 7/10
+ - Representation: 3.5/10
+ - Game Mechanics: 17/25
+ - User Experience: 20.5/25
+ - Technical Performance: 5/5
+ 
+Visuals: 21/25
+ - Concept: 1/5
+ - Composition: 20/20
+
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+Gameplay:
+ - Concept: "Mechanically, the idea fits the contest theme pretty well. As for other parts (like visuals, cutscenes) I wanted to see more references to the original game."
+
+ - Representation: "I expected to see more minigames introducing bullet-hell genre mechanics. Boss battles show no difference to usual danmaku battles, while most of the minigames have nothing to do with danmaku. Two different genres feel separated from each other rather than being one single idea. As an example for a minigame: a player must take a single photo of a boss while dodging danmaku (StB/DB/etc.)."
+
+ - Game Mechanics: "Some minor balancing is needed in minigames, other than that mechanically everything seems to be okay. I would only suggest adding more minigames as it being very repeptitive due to the amount of minigames you have to play in one run."
+
+ - User Experience (UX): "User experience is done very well. A player constantly faces challanges which makes gameplay fun. A balance between intencity and idleness is good. Gameplay feels pretty intuitive, although some minigames were unclear. After playing the script 5 times I still don't get how to jump on Multitasking minigame. Button description doesn't help either. First times Memory game wasn't clear for me as well. Another complain are bosses. They are either fast or don't warn you well enough. I still die on Marisa a lot because of the laser, especially on very first laser."
+
+ - Technical Performance: "No bugs or FPS drops recorded."
+
+Visuals:
+ - Concept: "Sometimes graphics is bright, because of the Touhou sprites. And sometimes graphics is dark/realistic. It might have been done intentionally to make it look fun, but I'm still not a fan of two different graphic styles not being blend together."
+ - Composition: "Visually sprites don't interfere with each other which is good. All game objects have good visibility. Music and sfx don't distract player as well."
+
+General opinion: "Most of my comments mentioned things that could be improven in my opinion. But here I want to mention that in general I enjoyed playing your script a lot! I like your approach to many things."

@@ -1,0 +1,56 @@
+Bullet Hell Artistry #7: Unlimited Machinations
+Contestant: Zack
+Judge: Loann
+
+My English is weak! Please be aware of that.
+
+A little explanation about my scoring:
+Gameplay:
+ - Concept: Idea of the game.
+ - Representation: Idea implementation/Game design.
+ - Game mechanics: Theoretical part of the game.
+ - User experience: Practical part of the game.
+ - Techical Performance: Technical part of the game.
+Visuals:
+ - Concept: Graphical ideas and design.
+ - Composition: Arrangement of resources.
+ 
+
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+General Score: 76/100
+
+Gameplay: 51/75
+ - Concept: 5/10
+ - Representation: 10/10
+ - Game Mechanics: 22/25
+ - User Experience: 9/25
+ - Technical Performance: 5/5
+ 
+Visuals: 25/25
+ - Concept: 5/5
+ - Composition: 20/20
+
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+Gameplay:
+ - Concept: "As the rules mentions, I expected to see video/explanation of a borrowed game mechanics. The entry does include manual where everything seems to be explained, but as a person who's not familiar with the Megaman series I can't really value how well are you referencing the game. That's why I can't fully rate this category despite the fact that the idea seems to be actually very interesting."
+
+ - Representation: "Idea implementation is well done. I have no comments here!"
+
+ - Game Mechanics: "No complaints regarding game mechanics as well, except one thing: difficulty balance. Difference between difficulties is barely noticable. Other than that everything is excellent. Many new mechanics presented here are interesting and balanced. It is very interactive and makes player think strategically as game progresses, which I find is a good point."
+
+ - User Experience (UX): "Good mechanics ensures good user experience, but there's one major thing to add: danmaku balancing. All patterns are super intence and force player to memorize them in order to make it through the game. Also because many patterns don't warn you (like last boss spawning right on/next to your position). Such approach may not be welcome to new players. In my experience, I was never able to finish the game even on newcomer difficulty, the game is just this hard. Now, I believe that difficult games have their place on the global market, but speaking within the contest it is best to provide variance in gameplay/difficulty. As for the rest I do want to mention the fact that manual and other in-game descriptions are easy to understand. Visual examples help player to understand the game much easier. Other parts of the game seem to be pretty intuitive as well which is good."
+
+ - Technical Performance: "No bugs or FPS drops noticed."
+
+Visuals:
+ - Concept: "I like the visual design a lot!"
+ - Composition: "All resources work very well with each other!"
+
+General opinion: "Despite the fact that the game is too hard for me, I still like it a lot. I really like your approach to the game development. Many things seem to be very accurate. I just wish that gameplay allowed more low-skill people to play the game."

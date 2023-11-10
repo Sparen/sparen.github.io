@@ -1,0 +1,60 @@
+Bullet Hell Artistry #7: Unlimited Machinations
+Contestant: Syoudre
+Judge: Loann
+
+My English is weak! Please be aware of that.
+
+A little explanation about my scoring:
+Gameplay:
+ - Concept: Idea of the game.
+ - Representation: Idea implementation/Game design.
+ - Game mechanics: Theoretical part of the game.
+ - User experience: Practical part of the game.
+ - Techical Performance: Technical part of the game.
+Visuals:
+ - Concept: Graphical ideas and design.
+ - Composition: Arrangement of resources.
+
+
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+General Score: 89/100
+
+Gameplay: 64/75
+ - Concept: 10/10
+ - Representation: 6/10
+ - Game Mechanics: 20/25
+ - User Experience: 23/25
+ - Technical Performance: 5/5
+ 
+Visuals: 25/25
+ - Concept: 5/5
+ - Composition: 20/20
+
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+Gameplay:
+ - Concept: "I find the concept of the script pretty interesting. I also enjoy the fact that almost all details of an action RPG is presented."
+ 
+ - Representation: "Nothing notebaly to mention here. Dodging through danmaku while exploring pixel RPG world is what I expected to see. I like the fact that danmaku is well balanced for that, it considers your level progression too. Although boss battles doesn't seem to differ much from classic danmaku battles. Sometimes patterns are built around player mechanics, which is interesting, but only sometimes."
+ 
+ - Game Mechanics: "The game seems to be fairly balanced an thought-out, but there are a few things to point out.
+ 1. Shift and un-shift speed difference is way too small to make a good use of it. Showing hitbox won't count as a reason too. Having different speed options is often vital for a danmaku game. As an example I had a lot of troubles dodging Mokou's nonspell due to it, but this goes more to the UX.
+ 2. Charge attack makes a player stop for a while after you launch it. It's not a big deal, although it's a risky decision for a game that involves dodging. I think it would be better if bullets were erased in a small radius around the player when the attack launches, but it would have a recharge time. It is only one example."
+ 
+ - User Experience (UX): "I had a lot of fun completing all the quests, discovering new mechanics as the game advances and, of course, dodging danmaku! There are surely some nuances (as example: spirit sprites are being hard to see) but they don't affect the gameplay much. Some boss patterns were interesting as they let player use alternative mechanics to defeat the boss faster. But some patterns felt long and boring as the only damage-dealing option was homing attack which deals low damage. It would be more interesting if patterns forced/let you to find windows for an attack or let player periodically erase bullets to get closer. But the issue is more related to the game mechanics (providing homing damage) and representation (game design)."
+ 
+ - Technical Performance: "No bugs or FPS drops were found."
+
+Visuals:
+ - Concept: "I find all introduced design ideas in the script appealing!"
+ - Composition: "All resources work absolutely well with each other. One minor thing I want to mention: I don't think spirit sprites fit well into the style, in which the game was done."
+
+General Opinion: "I probably shouldn't have judged the whole script, but at the same time I don't judge patterns in a close scope. I judge general game design choices and user experience as the topic of this contest is more about inventing new genre. The beauty of all your ideas lies in the whole script. If i were to judge only boss battles, it would result in a much lower score."
+
+

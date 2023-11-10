@@ -633,9 +633,9 @@
             "duration": [2023.07, 2023.08],
             "host": "Loann",
             "judges": ["Taizen", "Trickysticks", "Adam", "Loann"],
-            "numparticipants": 0,
-            "result": [[]],
-            "participants": []
+            "numparticipants": 9,
+            "result": [["Syoudre", "Makuta Matara", "ZackDiamond1258"]],
+            "participants": ["Syoudre", "Makuta Matara", "ZackDiamond1258", "Jackie Matthews", "Kevinmonitor", "Akemi Yume", "Ryann", "Fuzzbearplush", "Luna"]
         }
     ]
 }

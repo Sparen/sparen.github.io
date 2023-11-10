@@ -1,0 +1,34 @@
+Bullet Hell Artistry #7 - fuzzbearplush
+For this contest I'm using a 25 point rating scale because I feel like it. It will be scaled to accommodate the other judges' scores if necessary. (It turns out this is necessary, so at the end your score is getting an awesome x4 multiplier!)
+ 
+Danmaku Quality: 15/25
+ 
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair. This may consider the contest gimmick as well (in this case, non-Touhou mechanics).
+
+To be more clear, an "average" pattern is a 5. You can gain or lose points and I'll probably tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+If I rate individual patterns, they will be rated out of 10. The average of that will be taken and scaled to calculate the Danmaku Quality score. If I don't rate individual patterns, you'll just get a score out of 15.
+ 
+Aesthetics: 5/25
+ 
+This category encompasses how your entry looks (and sounds). While danmaku should absolutely come first, visual and audio elements are also a part of the gameplay experience. A high score in this category comes from your script being aesthetically appealing without being distracting. A low score in this category comes from annoying sounds, grating music, and visuals that make dodging more difficult.
+ 
+Adherence to Contest Theme: 5/25
+ 
+5 points will be dedicated to judging the contest theme - in which case, how well I think your patterns embody the idea of being "contradictory". Creativity is key - think outside the box as you strive to find unity in opposites.
+======================================================================================================================
+
+2long you get summary. Played on Normal mode.
+
+Generally I think the danmakuficiation:tm: of HRtP is good! The patterns tend to fit the gimmick well. They ARE very simple, but simple isn't bad and I think simple is necessary for this sort of game. The survival at the end is a neat touch. The danmaku is faithful to the characters (well, some iterations of them) and overall I thought it was fun.
+
+Danmaku Score: 8.5/10 (scaled to 12.75/15)
+==========================================================================================================================
+
+I think the script is aesthetically consistent. I mean, it's PC-98, so it's a fairly safe aesthetic and not super ORIGINAL, but I think it's good any way. 3.5/5.
+
+============================================================================================================================
+
+It's HRtP. I think it's kind of dubious to count this as a non-SHMUP, and I think the same HRtP issues exist (staring at that one card while the ball twerks around). Still, I find this more fun than HRtP, so I'll give you a score of "1.5 above average". 3.5/5.
+
+OVERALL SCORE 12.75 + 3.5 + 3.5 = 19.75/25 (multiplied by 4 to make this out of 100, so 79/100.)
