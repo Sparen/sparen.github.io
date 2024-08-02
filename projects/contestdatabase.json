@@ -634,8 +634,21 @@
             "host": "Loann",
             "judges": ["Taizen", "Trickysticks", "Adam", "Loann"],
             "numparticipants": 9,
-            "result": [["Syoudre", "Makuta Matara", "ZackDiamond1258"]],
+            "result": [["Syoudre"], ["Makuta Matara"], ["ZackDiamond1258"]],
             "participants": ["Syoudre", "Makuta Matara", "ZackDiamond1258", "Jackie Matthews", "Kevinmonitor", "Akemi Yume", "Ryann", "Fuzzbearplush", "Luna"]
+        },
+        {
+            "id": "bha8",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "unconventional minimalism",
+            "year": 2024,
+            "duration": [2024.07, 2024.08],
+            "host": "Loann",
+            "judges": ["Python", "thatonefrogxd/Gren", "Trickysticks"],
+            "numparticipants": 0,
+            "result": [],
+            "participants": []
         }
     ]
 }
