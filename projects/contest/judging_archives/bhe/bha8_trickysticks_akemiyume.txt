@@ -1,0 +1,43 @@
+Bullet Hell Artistry #8 - Akemi Yume
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+Played with Reimu! I think the practice options are a good start - starting from seconds.
+
+I think the stage is pretty great! I hate hate hate those bullets that go and then stop and then go, but they aren't UNFAIR or anything. I can cast aside my biases and say you made a fun and engaging stage. Nothing drags on at all, the enemies have sufficient variety, I think you're encouraged to move well enough. 42.5/50.
+
+======================================================================================================================
+
+Midboss Nonspell: I like how she enters the screen! The rest of the pattern is more pedestrian, but pretty flavorful. 6.5/10.
+
+Boss Nonspell 1: I believe this pattern to be a logical continuation of the midboss non - a bit harder, seems faster, still fine. 7/10. 
+
+Boss Spell 1: This spell also seems fine? Killing the fairies to hurt her is a neat touch - the flavor is great - but dodging-wise it returns to pedestrian after not too long, as it's just two alternating waves and neither wave is very difficult. 7/10.
+
+Boss Nonspell 2: Very good that you stop bullets from spawning on you. I think these formations are a good departure from the previous nonspell theme, and I thought watching the pattern unravel was interesting. 7/10.
+
+Boss Spell 2: The sea sure is splitting, but I don't actually like this one as much as I could have? I think the warning is actually excessively large and puts you under more pressure to move than you really need to - you don't have to move out of it, and most of my deaths were in a scramble to move out of that warning, when I should have sat still in a gap between the fireball bullets. That aside, I liked the idea quite a lot once I got used to it. 7.5/10.
+
+Boss Nonspell 3: It seems like some VERY specific bullets overlap here to make things nasty - a pretty quick fireball seems to come at the same time as a purple arrowhead. Big ouchie ouch, but it's only every other wave. Were it now for this big disparity, I'd rate it more highly. 6.5/10. 
+
+Boss Spell 3: It's kind of odd for the bubbles and the child fireballs to just STOP so abruptly. Maybe some kind of interpolated deceleration would be smoother to play through? Fairly minor in the grand scheme of things since it's still best to just stay far away from one in the first place. A nice way to end things off. 7/10.
+
+
+Danmaku Score: 6.9285/10 (scaled to 34.65/50)
+==========================================================================================================================
+
+OVERALL SCORE: 42.5 + 34.65 = 77.15

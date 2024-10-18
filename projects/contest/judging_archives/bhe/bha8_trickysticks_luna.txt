@@ -1,0 +1,41 @@
+Bullet Hell Artistry #8 - Lunaaaaa
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+Played with Rin Satsuki Flower.
+
+Pre-midboss section is good, displays a solid grasp of stage design fundamentals. Post-midboss section fulfills the same criteria, and a return of those magic circles is neat. I would say its flow is good, but not GREAT - something a bit more high energy would've been nice, maybe? Either way, great work. 40/50.
+
+======================================================================================================================
+
+Midboss Nonspell 1: Streaming but it's fun! I think this one is good. 7.5/10.
+
+Midboss Spell 1: How spicy are the bubbles? Spicy enough for me to think this is also a solid pattern. It's interesting how you can take simple bouncing and make a pattern that's fun to dodge. I think I might have broken this on one playthrough and deleted the bubbles somehow? 8/10.
+
+Boss Nonspell 1: I think I liked the midboss non more, all things considered. This isn't bad, but it's nothing special. 6.75/10.
+
+Boss Spell 1: Compared to the nonspell, this has just enough pattern variety to stay interesting. Good. 7.5/10.
+
+Boss Nonspell 2: This non makes it very easy to literally not move, which is not the most interesting. Maybe rotating it in a way that prevents safespots is good? But even then, it might not be the most interesting. 5/10.
+
+Boss Spell 2: I think the indicator isn't useful helpful, since I assumed the particles converging on the player meant that you should move (which kills you). Once you understand, it's a fine enough pattern? Nothing too special, nothing bad. 6/10.
+
+Boss Spell 3: If you're going to make a spell this long, it should have some variation at least. Still, it's fine. The curvy lasers are a nice representation of the idea of a hangover. 6.5/10.
+
+Danmaku Score: 6.75/10 (scaled to 21.46/50)
+==========================================================================================================================
+
+OVERALL SCORE: 40 + 33.75 = 73.75

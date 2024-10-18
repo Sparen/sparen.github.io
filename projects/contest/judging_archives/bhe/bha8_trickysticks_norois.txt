@@ -1,0 +1,38 @@
+Bullet Hell Artistry #8 - Norois
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+The dark blue kunai on ice mountain hurt my soullll. The orange star fairy right before Sunny is an interesting idea! But only in comparison to the rest of the stage, which is bland. Enemies don't flow into each other, and with some visibility issues and otherwise bland design, I didn't like this stage too much. I absolutely applaud the effort, though. 15/50
+
+======================================================================================================================
+
+Midboss Nonspell 1: The startup is awfully long, but nothing's OFFENSIVE about this. Just not super interesting, and the long startup time means I'd take away a little bit. This could be a random fairy's pattern, instead of a boss pattern. 4/10.
+
+Midboss Nonspell 2: Much like the second, but the startup isn't too long this time. Not very complex, but...eh. 4.25/10.
+
+Boss Nonspell 1: Continuous firing isn't too interesting, but I forget what Sunny actually did in her game. Still, not too interesting. 4/10.
+
+Boss Spell 1: Dense and slow. Still boring, but a departure from the other patterns beforehand. I'd maybe reduce the density, up the speed, and fire different waves that unfold in different ways. 4.5/10.
+
+Boss Nonspell 2: You could combine the slow waves from this and the fast waves from the previous non and have an interesting dynamic of dodging fast bullets, while dealing with lingering slow ones. Alone, these nons don't stand too well on their own. 4/10.
+
+Boss Spell 2: It's a pattern with multiple elements that ramps up in difficulty, and that aspect is good. Being a survival is kind of weird, but I guess it helps make sure that you get the experience you're looking for the player to have. A solid attempt, but I think the fireball rings are a bit too dense and the Koishi-style rings are out of nowhere. 5/10.
+
+Danmaku Score: 4.29/10 (scaled to 21.46/50)
+==========================================================================================================================
+
+OVERALL SCORE: 15 + 21.46 = 36.46

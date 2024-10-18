@@ -1,0 +1,52 @@
+Bullet Hell Artistry #8 - Valon
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+Me pick Normal Mode (because it's the only option). I chose Reimu.
+
+The pre-Reisen section is pretty...fine? I would go with "safe" - it understands the fundamentals of how stages work, has enough aimed stuff and not aimed stuff to keep you moving. Nothing too special though, it's fine for a stage. Feels a bit slow-paced near the end? 
+
+The post-Reisen section seems to speed up to a point, at least in terms of bullet velocity? At least it feels shorter than the pre-Reisen part, and I found myself a little more excited to get to the end. 
+
+Overall, a case of being not bad but not really earning a lot more above average. This gets you 30/50.
+
+======================================================================================================================
+
+Midboss Reisen Spell 1: I think the slow pacing continues with this first boss pattern. I understand that Link-climbing Cyberse piles tend to be slow to watch, but it need not extend to pattern design. I think it's full of a lot of dead time that I would rather spend watching SPYral combos. That is to say - up the pacing and I'd like the idea more. Telegraphs are useful, but the one thing you DON'T telegraph (the pink bullets returning aimed at you) is probably the most important. I hope you have a Desavewurm to send to the GY off of Terahertz in your extra deck. 4.5/10.
+
+Midboss Reisen Spell 2: The way the circle is lobbed at you suggests that you need to dodge it, but if you try THAT you just die. Furthermore, the pattern remains "fine" once you get that. A few aimed lines to dodge, and the remaining bullets scatter (seemingly?) randomly. I would find a more clear way to have the player dodge into the circle, or just have the circle come in from the edges and surround you. 3.5/10. 
+
+Toyohime Nonspell 1: It's fine. I don't really have a ton to say, so a 5/10 it is.
+
+Toyohime Spell 1: I had a little mental "aha" moment when I read the spell name and knew bullets would reflect back in. Without that, there's probably not really sufficient indication that the triangles will come back in. It's learnable for sure, and I thought the pattern was pretty engaging, but I'd be careful with bouncing bullets off the bottom without prior warning. Would be rated higher, but I think the telegraphing is a flaw that bumps it down to a bit above average. 5.25/10.
+
+Toyohime Nonspell 2: I think this one is a little more engaging than the previous, since the curving makes reading it less...predictable? Samey? Something like that. Anyway more points for you 5.5/10.
+
+Toyohime Spell 2: A slow starting spell that has sufficient gameplay payoff. Of note, I was really not noticing the aimed red bullets until they were almost on top of me, maybe a sound effect or a more eye-catching graphic could be useful. And, again, if it had less startup I would like it more - but as it is, not bad. 6.5/10.
+
+Toyohime Nonspell 3: I think it's about as engaging as the previous nonspell. The blue lines of amulets feel kind of haphazardly thrown in - they aren't aimed (I think). 5.5/10.
+
+Toyohime Spell 3: An odd one for sure. I think the "grid" has a pattern that depends on the boss's movement, so the hard part is those transition periods where Toyohime is moving around in her circle. Otherwise, it's fine - engaging enough. 6/10.
+
+Toyohime Spell 4: This one has a startup time that is EXTREMELY long, the boss appears to be targetable even though she's gone (or should this be a shoot-down spell)? It also seems like bombs delete objects that really should not be deleted. There's a lot to work on here, but it has the bones of a workable idea. 2.5/10.
+
+Toyohime Spell 5: Your run-of-the-mill ramping up lots-of-stacking-waves spell. With some oddness that has her stopping the bullets and tossing them down at you. It's about average. 5/10.
+
+Danmaku Score: 4.925/10 (scaled to 24.625/50)
+==========================================================================================================================
+
+OVERALL SCORE: 30 + 24.625

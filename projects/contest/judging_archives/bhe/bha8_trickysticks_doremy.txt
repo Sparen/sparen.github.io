@@ -1,0 +1,44 @@
+Bullet Hell Artistry #8 - Doremy
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+I found this stage also to be very good - the bit of music syncing with the fairies that move down and then fire aimed bullets at once was pretty nice, as well as the sync at the end. I never felt bored, or that one section dragged on for too long. Maybe the spirits that shoot the rings of hearts are overused, but that's the only immediate gripe I can come up with. 45/50.
+
+======================================================================================================================
+
+Midboss Spell 1: Streaming, but it's interesting streaming. The shottype's three streams made actually hitting her a pain, particularly if you're not below the boss but also not far enough to the sides. Not a major issue with the pattern and more a quirk of the shot, but they go hand-in-hand. Anyway, it's better than average, certainly 6.5/10.
+
+Boss Nonspell 1: The teapot is cool! I think the pattern density is just a bit too high since you need to dodge the coin shotgun, but it's so close to greatness. 7/10.
+
+Boss Spell 1: Pretty with the spinny whatever-those-are, but ultimately it's kind of samey dodging that goes a little long. 6.5/10.
+
+Boss Nonspell 2: A better indication of the edge-screen butterflies spawning would be good, but I like this otherwise. 6.5/10.
+
+Boss Spell 2: The fairies shoot some kinda neat flower-y things, buttt then they all go down with random angles and the pattern's pretty goes to heck. Dodging it is fine enough, but a more structured pattern might've been more interesting. 6.5/10.
+
+Boss Nonspell 3: The fireball patterns seems close enough to the first nonspell's, but they spawn higher on the screen to let them spread out a little bit more. The main gripe with the density is there still, but diminished somewhat. The umbrella is cute. 7/10.
+
+Boss Spell 3: I'd probably make the wiggly things bomb resistant, and the warning lines aren't quite enough to get attention since there's lots of rapid randomly-distributed bullets coming from the top. Good idea, but some execution improvements would be wise. Maybe make the wigglers a little more predictable? Or the bullet formations at the top? 5.75/10.
+
+Boss Spell 4: Yay indicator to go to middle. I do think that some of the patterns are more of a problem than the others, like green bullets that become SO SLOW and just linger, and the coins being pretty fast and hard to see. I'll put it as above average, but I think you could've done something more creative with this. 5.5/10.
+
+Boss Spell 5: Last attack that gets harder as time passes - but, it spawns bullets from places that aren't just the boss. I think it devolved into really persistent streaming by the end, but I happen to like that! Not bad, 8/10.
+
+Danmaku Score: 6.58333/10 (scaled to 32.92/50)
+==========================================================================================================================
+
+OVERALL SCORE: 45 + 32.92 = 77.92

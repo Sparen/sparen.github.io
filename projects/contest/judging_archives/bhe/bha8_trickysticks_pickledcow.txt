@@ -1,0 +1,56 @@
+Bullet Hell Artistry #8 - Pickled Cow
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+The judges played Eternal Diamond version. I played Normal mode.
+
+I think the stage is too long - enemies are pretty tanky, killing them doesn't matter a ton since by the time you can, they've already shot their patterns. The Zubats and Gravelers are the exception. Otherwise, it follows the basic core tenet well enough? A little below average because it's not super interesting. 20/50.
+
+======================================================================================================================
+
+Midboss Pattern 1: NotBooks but they're games oh my goddd. It's not quite as nonsense as books but WHY. 5/10.
+
+Midboss Pattern 2: Okay now it's LoLK rain! What did I do to deserve this??? It's probably more pleasant than the books, at least, but you earn no points for originality. 5.5/10.
+
+Midboss Pattern 3: Okay the music syncing is pretty funny and dodging it was pretty intuitive. I like this segment-wait it's sans 7/10.
+
+Boss Nonspell 1: I feel thoroughly "eh" about this non - dodging it isn't super interesting. 5/10.
+
+Boss Spell 1: I feel thoroughly "eh" about this too, though it's a bit more interesting to dodge. 5.5/10.
+
+Boss Nonspell 2: For how simple that non was, I actually thought it was pretty neat. More nons like that would be great. 6.5/10.
+
+Boss Spell 2: Well, the bullet pushing is mechanically interesting? But in practice, the pushing doesn't really do much but mess the pattern up with "random" variance. Could be done more interestingly in terms of actually-dodging-it. 6/10.
+
+Boss Nonspell 3: They are bullets and they spin, but you have to move a lot so I'll take it. 6/10.
+
+Boss Spell 3: Kinda just dodging a bunch of stuff, and it doesn't really feel that fun. 4.5/10.
+
+Boss Spell 4: More random dodging but it takes longer. Still kinda fun though, the music slowing down is also funny, but I could see this being a pain upon repeat playthroughs. 5/10.
+
+Boss Spell 5: The idea is neat, but I found myself having trouble killing Palkia during the second phase and it dragged onnnn. 6/10.
+
+Boss Spell 6: The bullets crisscross in a weird way...so just go around them 4head. I actually like this idea quite a bit, and thank you so so so much for not changing player controls based on rotation. 7/10.
+
+Boss Spell 7: Well, I assume it's meant to be a bunch of Pokemon types, but it drags on for too long imo. The water wave can be really mean when it layers with the fire one. Two of them are Eternal Meek and Basically Eternal Meek respectively. Bravo for the concept, but I'd pick way fewer types and have them be more interesting. 3/10.
+
+Danmaku Score: 5.0769/10 (scaled to 25.38/50)
+
+As a special note - you actually have some very, very neat ideas and concepts, it's just mired in "meh" patterns. You have much potential, that is for sure.
+==========================================================================================================================
+
+OVERALL SCORE: 20 + 25.38 = 45.38

@@ -1,0 +1,40 @@
+Bullet Hell Artistry #8 - Anna says hi (Tricky says hi back)
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+I think the stage could definitely use more enemy variety, it seems rather low. Functional for a proof-of-concept for your engine, though. But again, it's very repetitive and I believe low enemy variety is the reason for this. I'll take off a bit for this, compared to average - it's not a snooze fest despite the repetitiveness. 20/50.
+
+======================================================================================================================
+
+Midboss Attack 1: Killing one of them is a pain due to their location...but that's fine, I think? It's cool how they shoot at each other to make that explosion. 7/10.
+
+Midboss Attack 2: I think this attack is less interesting since it's a constant stream that sways a bit. 6/10.
+
+Boss Attack 1: The double spirals are shockingly difficult and not the most interesting concept. 5.5/10.
+
+Boss Attack 2: The bullets that leave the arrowheads form an interesting "web" of lines that you'd have to dodge through. If the arrowheads formed a more coherent pattern, I think it would be more fun to dodge than relative randomness. 6/10.
+
+Boss Attack 3: Spirals againnnnn. Do these bullets have chonky hitboxes or something? They feel like they shouldn't be so big. 5.25/10.
+
+Boss Attack 4: The bullets go like fwooosh waaaah weesnaw and then they just go out in plain old shapes...which might be okay. It's better than randomness, I believe. I do like the star shapes. 6.5/10.
+
+Boss Attack 5: I think this one is a fitting end to the script. A pain to dodge, but hitboxes seem fair and it ends just about before I got tired of it. 6.75/10.
+
+Danmaku Score: 6.14/10 (scaled to 30.71/50)
+==========================================================================================================================
+
+OVERALL SCORE: 20 + 30.71 = 50.71

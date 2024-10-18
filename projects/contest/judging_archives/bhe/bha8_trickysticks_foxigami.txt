@@ -1,0 +1,44 @@
+Bullet Hell Artistry #8 - Foxigami
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+Having the stage pause until the enemies die is an interesting choice - not bad, just interesting. The patterns themselves are fine - not super interesting and kind of repetitive, but not enough so that it becomes a big problem. Why do some of them yippee. 25/50.
+
+======================================================================================================================
+
+Boss First Pattern: Not really sure what the boss IS, but I'll use the music swap. This pattern is kind of random looking but I think it's fun enough. 5.5/10.
+
+Boss Second Pattern: The way the bullets converge on those locations is actually pretty cool! I just wish it didn't have so much dead time. 6.5/10.
+
+Boss Third Pattern: it streaming (which gets kind of boring since you don't do a ton of damage while moving so widely). 4.5/10.
+
+Boss Fourth Pattern: I think this is an interesting pattern that doesn't hold up for as long as you keep it happening. Maybe have the directions change, or some other way to spice it up? Or even just give it less health. 5.5/10.
+
+Boss Fifth Pattern: I don't think you need lines for this one - they're a distraction in this pattern. Slight deduction for that. 4.75/10.
+
+Boss Sixth Pattern: This is fine, leaning towards good. 5.5/10.
+
+Boss Seventh Pattern: Less of a visual mess I think, so I will take it. 5/10.
+
+Boss Eighth Pattern: This is a good attack, I think it stands out for that. 7.5/10.
+
+Overall, it felt kind of long to play? Maybe cutting a lot of the less-good patterns could improve the feel.
+
+Danmaku Score: 5.59375/10 (scaled to 27.97/50)
+==========================================================================================================================
+
+OVERALL SCORE: 25 + 27.97 = 52.97

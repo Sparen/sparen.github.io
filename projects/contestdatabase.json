@@ -646,9 +646,9 @@
             "duration": [2024.07, 2024.08],
             "host": "Loann",
             "judges": ["Python", "thatonefrogxd/Gren", "Trickysticks"],
-            "numparticipants": 0,
-            "result": [],
-            "participants": []
+            "numparticipants": 14,
+            "result": [["Makuta Matara"], ["ABBurlap"], ["Akemi Yume"]],
+            "participants": ["Makuta Matara", "ABBurlap", "Akemi Yume", "Doremy", "Pyralfruit", "Kevinmonitor", "Luna", "Kobito", "Valon", "Foxigami", "Syoudre", "Pickled Cow", "Anna Says Hi", "Norois"]
         }
     ]
 }

@@ -1,0 +1,48 @@
+Bullet Hell Artistry #8 - Syoudre
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+What is this?
+
+Anyway to judge this seriously, the pre-midboss section is certainly Wacky and Zany. Having residual superdyings after you die is probably not a good idea since it contributes to death spirals. The Star Sparks:tm: or whatever look hideous, which is probably the intent, but it also makes it not so clear what the hitbox is (and they are faaaast).
+
+Spears that stick into the screen edges are a pain but make some sense at least. Why is Avril Lavigne here. 
+
+Anyway a lot of it is nonsense. Funny nonsense, but untelegraphed difficult nonsense nonetheless. 18/50.
+
+======================================================================================================================
+
+Midboss Spell 1: most glorious whatsit :(. Anyway, the white square being safety isn't the most intuitive and it IS just spinning. Kinda pretty, but It's Spinning. 4/10.
+
+Midboss Spell 2: Dodgeable! And keeps you moving, though it's still kind of plain. The ending is certainly a thing. 5.5/10.
+
+Midboss Spell 3: Singlehandedly increased contest judging by 2 months. Anyway, I'll be nice and assume all the dead time is part of the FUN! In which case it's strangely easy compared to everything else and you get 4/10.
+
+Boss Nonspell 1: Oh my god a pattern that's serious for real for real. Good, I like this one. Maybe a little on the hard side. 7/10.
+
+Boss Spell 1: Spinnnn and then you don't need to spin anymore. I think it's pretty good, though I'd appreciate more structure near the end. 6.5/10.
+
+Boss Nonspell 2: Similar thoughts as the last one, though it felt a bit easier to me. These are good nons. 7.25/10.
+
+Boss Spell 2: Ikaruga spells aren't ones I tend to like, but this one explains it clearly and starts with something simple enough. If the phase with the green kunai wasn't so random I'd appreciate this one a good bit more. 5.5/10.
+
+Boss Spell 3: This one feels like it could've been two separate spellcards - NotHouraiElixir and the last bit with the burst mechanic. Instead they got combined into one pattern, and I like the last one more than Hourai-Elixir-But-You-Stay-At-The-Bottom. I'll average them out to Fine and give it 5/10. 
+
+Danmaku Score: 5.59375/10 (scaled to 27.96875/50)
+==========================================================================================================================
+
+OVERALL SCORE: 18 + 27.96875 = 45.96875

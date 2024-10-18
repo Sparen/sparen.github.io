@@ -1,0 +1,38 @@
+Bullet Hell Artistry #8 - Makuta Matara
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+The stage is fast-paced, engaging, and fun. A departure from Touhou style, but one I can get used to after some practice. Maybe not to enemies popping in so quick and shooting, but I'll survive. 40/50.
+
+======================================================================================================================
+
+Midboss Nonspell: I think it's a little too hard, but a very engaging pattern too! 7.25/10.
+
+Midboss Spell 1: Cheetos aaaaah. Same bit of maybe-too-hard, but fun and engaging even if you get blasted. 7/10.
+
+Boss Nonspell 1: The timing of the macrododgy-triangles of doom seems to fit in the spiral-you-have-to-follow quite well. An excellent beginning to the battle. 8.5/10.
+
+Boss Spell 1: Killing enemies quickly to reduce squareness of squares is an interesting idea. It took some practice, but I think this is a wonderful pattern. 9/10.
+
+Boss Nonspell 2: Streaming but fun and fast paced, again! I like this one as well. 8.25/10.
+
+Boss Spell 2: This one seems hard to follow - after some practice, I think I found a fairly consistent way through. Maybe chaos is a good end to a script. 7.5/10.
+
+Danmaku Score:  7.92/10 (scaled to 39.58/50)
+==========================================================================================================================
+
+OVERALL SCORE: 40 + 39.58 = 79.58

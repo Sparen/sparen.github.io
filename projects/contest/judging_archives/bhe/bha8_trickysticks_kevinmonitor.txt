@@ -1,0 +1,40 @@
+Bullet Hell Artistry #8 - Kevinmonitor
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+Played on Original Difficulty with Lavender.
+
+The stage is good, but not great, because I think you're playing things a bit too safe. Rings and spirals and aimed bullets are the meat of a good stage (and it IS good), but no new ground is really tread here. It's still exciting, I'd say! But it's missing the fancy kevinmonitor touch tee em. 35/50.
+
+======================================================================================================================
+
+Midboss Pattern 1: A fine enough pattern. Nothing too fancy, nothing outrageous. 7/10.
+
+Midboss Pattern 2: This felt a little harder than the previous attack, and about just as interesting. 7/10.
+
+Boss Pattern 1: This is a fun one! My only gripe is with the red wave at the beginning - it seems to easily catch you off guard, and I don't think the proper way of handling it (be in the right place or go to Jesus) is very neat. The rest of the pattern is sufficiently fun to make up for it, though. 7.5/10.
+
+Boss Pattern 2: I rarely say this, but I think this pattern was WAY too easy compared to the previous ones. The stars aren't dense enough to make the lasers really act as a meaningful "box". Make it harder! 6/10.
+
+Boss Pattern 3: This is a good contrast to the previous pattern. It took me a bunch of routing to see how you're supposed to do it, but execution is pretty enjoyable once you get the hang of it. 8/10.
+
+Boss Pattern 4: I thought it was an underwhelming finish to an otherwise-good script. You can kinda just sit still for a lot of it, and that's a bad contrast to some of the earlier high energy. Not an inherently bad pattern, but not good for the game's flow. 6/10.
+
+Danmaku Score: 6.916/10 (scaled to 34.58/50)
+==========================================================================================================================
+
+OVERALL SCORE: 35 + 34.58 = 69.58

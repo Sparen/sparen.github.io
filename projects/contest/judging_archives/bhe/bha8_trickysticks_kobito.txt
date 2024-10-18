@@ -1,0 +1,40 @@
+Bullet Hell Artistry #8 - kobito
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+I think the stage is fun and fast paced, but the initial impression I get is how RED everything is. I think it's not inherently bad to stick to one color, but it makes it hard to tell things apart and the bullet flashing is the one thing I never like about arcade games.
+
+Color griping aside, I think the stage is good fun. Just beware eye ouchies - the aesthetics get in the way of gameplay, so I'll give it 30/50.
+
+======================================================================================================================
+
+Midboss Pattern 1: Simple and arcade-y. Dodge the stuff, watch the walls. 7.5/10.
+
+Midboss Pattern 2: Strangely, I feel as if the pattern is simpler, but dodging is more complex? Which is a good thing. 7.5/10.
+
+Boss Pattern 1: I thought this was interesting, maybe a bit less fun than the midboss patterns The music helps make it pretty exciting nonetheless 7/10.
+
+Boss Pattern 2: Now this is one I struggled with quite a lot - once I figured out good heights for slipping between the bullets, it got better at least. It's still keeping the pace of the script going either way. 7/10.
+
+Boss Pattern 3: Relatively slower, and it feels like a time to relax before cube.mqo. 8.25/10.
+
+Boss Pattern 4: Here is the only time I have a major problem with the flashing bullets, probably because of the background making it more apparent? It seems like a lot of mini-patterns rolled into one (even more than usual for arcade-y standards). Fitting way to end the script, and I was hoping there wasn't a triangle next. 7/10.
+
+Danmaku Score:  7.375/10 (scaled to 36.88/50)
+==========================================================================================================================
+
+OVERALL SCORE: 30 + 36.88 = 66.88

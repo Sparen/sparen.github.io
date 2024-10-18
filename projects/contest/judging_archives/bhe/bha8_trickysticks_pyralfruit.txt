@@ -1,0 +1,46 @@
+Bullet Hell Artistry #8 - Pyralfruit
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+This is a good stage. The walls are a unique gimmick that aren't immediately nonsense, and it moves the player to a side in an interesting way. I think it becomes more pedestrian near the end (idk what the death fairy is doing really), but not enough to diminish its quality too much. 35/50.
+
+======================================================================================================================
+
+Midboss Nonspell 1: Wasn't expecting this to be a survival nonspell, but it's not unwelcome. Not bad, 6/10.
+
+Midboss Spell: An interesting idea that kind of drags on. I also encountered some odd bug where the bullets persist when the spell is done - maybe the bullets should just clear while the boss is dropping items, anyway. 5.5/10.
+
+Boss Nonspell 1: This looks neat when it spawns! The pattern itself is not as neat as it looks, but still neat. 7/10.
+
+Boss Spell 1: This is cool! Strangely, my only gripe is that it doesn't seem to last a very long time - I'd have no problem dodging two waves, but it seemed pretty much done at 1 wave and some change. 8/10.
+
+Boss Nonspell 2: Still looks neat! I think I prefer the amulets to the dots, but both are good patterns either way. 7/10.
+
+Boss Spell 2: Ooh, being chased. Admittedly the curvy demarcation-ish bullets aren't the most interesting, but redirecting a charging boss through them is. 7.5/10.
+
+Boss Nonspell 3: The wings exploding into an obviously wing-shaped bullet formation is a nice touch. 7.5/10.
+
+Boss Spell 3: This one is merely "fine" - I think you just stay far away from the giant flame thingy and the red bullets aren't super relevant, but also avoid the sides because bullets come from there. 6.5/10.
+
+Boss Spell 4: Initially didn't realize it was a survival again - and again, not bad, but maybe it could change up more somehow? 6.25/10.
+
+Boss Spell 5: Ooh, the pushing down effect is neat, and the falling structures are an interesting way to use bullet shapes. I think the actual dodging of bullets is a little lackluster, but the tension between being high enough to react to buildings while not so high you get sniped is good. Nice way to end the script. 8/10.
+
+Danmaku Score: 6.925/10 (scaled to 34.63/50)
+==========================================================================================================================
+
+OVERALL SCORE: 35 + 34.63 = 69.63

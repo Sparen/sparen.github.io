@@ -1,0 +1,46 @@
+Bullet Hell Artistry #8 - ABBurlap
+For this contest I'm using a 100-point grading scale so I'm not fined by the FBI- I mean Loann.
+ 
+Stage Quality: 50/100
+This score will be based on how much I enjoyed playing the stage. Factors such as length and difficulty may be involved. Aesthetics are not going to be a positive factor, but aesthetic choices can make the meat of the gameplay (avoid bullet) less enjoyable, so they may still be a negative factor. I will leave specific comments on things that I thought were particularly good or bad for the experience. 
+
+(Mid)Boss Quality: 50/100
+ 
+This category has to deal with the (mid)boss quality - pretty much solely based on the patterns they have. In other words, it's their Danmaku Quality. I will talk about each pattern, give it a score out of 10, average that up and multiply by 5 to get this category's score.
+
+Danmaku Quality encompasses the quality of the danmaku in your script. "Good" patterns will equal a "good" score in this category. What makes a pattern good is subjective, but the #1 factor is fun. A flashy, gorgeous pattern that isn't fun won't fare well here. Note that aesthetic factors can still factor into this - proper usage of sound effects and graphics can make an unfair pattern fair, and improper usage of those can make an otherwise-fair pattern unfair.
+
+An "average" pattern is a 5. You can gain or lose points and I'll tell you why. If you get a bunch of 5s, that's not necessarily a bad thing!
+
+
+that's it for categories lol
+======================================================================================================================
+
+Judged on the recommended Contest settings and as Agnes. I did think that all the players are particularly slow, for what it's worth.
+
+This stage is excellent! There were a few sections I didn't like, such as when the bullets acted as if they were being blown by wind, or when one enemy kept moving around a bunch. Otherwise, I think this is very good stage design - nice work. 45/50.
+
+======================================================================================================================
+
+Midboss Nonspell 1: I think delay lines or something would be better than a bullet graphic telling you which way it's going to go, since I found it very hard to read. It's easy to incorrectly judge and I'm not sure if that's where you want the difficulty to be. I like the pattern, but a telegraph would be neat. 5.5/10.
+
+Midboss Nonspell 2: This one feels better to dodge to me, but it still seems a bit messy? Enjoyable still. 6.5/10.
+
+Boss Nonspell 1: I thought this one was better at the previous nons at telling you where they will go - likely because they spread out earlier and form clean lines for you to observe before they accelerate. A bit stressful, but that's fine in a video game. 7.25/10.
+
+Boss Spell 1: I'm not certain if the bullets that the yellow orbs fire follow any kind of logic with how they switch angles - I got caught by surprise once or twice. The players aren't really quick enough for the rapid twitch movements you'd need to adjust to that. Still, I think the pattern is good despite that. 6.75/10.
+
+Boss Nonspell 2: The same issues of judging where bullets will go, only now they curve a bunch before they go on their accelerating way. Took some learning, for sure. The fast pace is appreciated generally, but I'd slow this pattern down a bit. 5.5/10.
+
+Boss Spell 2: A neat concept that I found fun to play. Despite how disorderly the idea of pushing everything up is, I found this one "neater" to dodge. Maybe it's due to slower speeds? 7/10.
+
+Boss Nonspell 3: Another pattern where I'd advise you to slow down. Or have fewer bullets if it'll curve and accelerate that quickly. 5.5/10.
+
+Boss Spell 3: The Sundog Thing but much better. The effect in the background clearly tells you when the angle changes will happen, and moving up through the bullets is no problem by comparison. This is good. 8/10.
+
+Boss Spell 4: You clearly realize that the wind is a good idea if you use it twice. Having to pay attention to bullets from the bottom is mitigated by having actual line telegraphs. This is also a good pattern. 8/10.
+
+Danmaku Score: 6.67/10 (scaled to 33.33/50)
+==========================================================================================================================
+
+OVERALL SCORE: 45 + 33.33 = 78.33
