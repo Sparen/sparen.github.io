@@ -649,6 +649,19 @@
             "numparticipants": 14,
             "result": [["Makuta Matara"], ["ABBurlap"], ["Akemi Yume"]],
             "participants": ["Makuta Matara", "ABBurlap", "Akemi Yume", "Doremy", "Pyralfruit", "Kevinmonitor", "NutterzButterz", "Luna", "Kobito", "Valon", "Foxigami", "Syoudre", "Pickled Cow", "Anna Says Hi", "Norois"]
+        },
+        {
+            "id": "bha9",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "unorthodox firepower",
+            "year": 2025,
+            "duration": [2025.01, 2025.02],
+            "host": "Loann",
+            "judges": ["Loann", "Teagen", "Grayvy Guy"],
+            "numparticipants": 0,
+            "result": [],
+            "participants": []
         }
     ]
 }
