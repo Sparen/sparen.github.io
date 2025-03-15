@@ -659,9 +659,9 @@
             "duration": [2025.01, 2025.02],
             "host": "Loann",
             "judges": ["Loann", "Teagen", "Grayvy Guy"],
-            "numparticipants": 0,
+            "numparticipants": 4,
             "result": [],
-            "participants": []
+            "participants": ["Zino", "Ryann", "Makuta Matara", "Asthmagician"]
         }
     ]
 }
