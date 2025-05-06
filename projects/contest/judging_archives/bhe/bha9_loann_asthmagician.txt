@@ -1,0 +1,38 @@
+Bullet Hell Artistry #9: Unorthodox Firepower
+
+Contestant: Asthmagician
+Judge: Loann Fox
+
+-------------------------------------
+
+My English is weak! Please be aware of that.
+
+My judging criteria has been posted in the #judging-criteria channel in BHE.
+ 
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+1. Game Design: [22/25]
+2. Game Experience: [41/50]
+3. Game Aesthetics: [20/25]
+4. Bonus (if present): [0]
+Result: [83/100]
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+1. ---------- Game Design: ----------
+
+	Simple ideas almost guarantee a successful result and there's no reason to avoid that. I respect such decisions. Changing attack type depending on movement direction is also a very simple and practical idea for a shmup, since you have to constantly focus on dodging bullets. But attacks doesn't feel unique enough to make a decent difference nor the boss give you opportunity to make use of some attacks.
+
+2. -------- Game Experience: --------
+
+	All patterns are solid and balanced. Learning boss weak phases is also very simple: Patterns help you to memorize them by being repetitive, which is good.
+
+A big problem I experienced was trying to figure out how to use the attack button. For some reason it wasn't easy to activate attack; it wouldn't shoot despite fulfilling requirements. As a result I figured a new way to generate a successful attack each time: You have to hold attack button and then free it once the attack is charged to shoot.
+
+3. -------- Game Aesthetics: --------
+
+	 Pretty sweet, but I'm not a fan of some design choices. If there's no idea on how to design one thing or another, it's always safer to go with the minimalistic design. One detail I love A LOT is being able to choose a skin for a player that changes the outfit and player bullets. I think I have never seen something like that in a shmup before.

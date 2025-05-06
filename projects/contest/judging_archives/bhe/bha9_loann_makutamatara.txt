@@ -1,0 +1,71 @@
+Bullet Hell Artistry #9: Unorthodox Firepower
+
+Contestant: Makuta Matara
+Judge: Loann Fox
+
+-------------------------------------
+
+My English is weak! Please be aware of that.
+
+My judging criteria has been posted in the #judging-criteria channel in BHE.
+ 
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+1. Game Design: [20/25]
+2. Game Experience: [27/50]
+3. Game Aesthetics: [23/25]
+4. Bonus (if present): [0]
+Result: [70/100]
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+1. ---------- Game Design: ----------
+
+	There are a lot of mechanics introduced in this entry and all of them do fulfill requirements of the contest and even go beyond simple examples. However, it is a bit too much for an entry to introduce so much in terms of mechanics in so little time. Moreover, all of them are being introduced right in the beginning without giving time to practice each mechanic which can be stressful. Some sense of gradation would make the game experience much better. Let's say, first few patterns you learn to dodge the familiar, another few patterns you learn to erase bullets and reflect the familiar and etc. Other than that all mechanics are interesting and even works well combined. As for scoring system I can't give any comments.
+
+2. -------- Game Experience: --------
+
+	I must really point out the challenge and high entry threshold this game offers. And while high challenge games have right to exist, it's not the best idea to consider it for an entry. Judges may have hard time judging and may not get the full experience of the entry.
+
+Once you have a grasp of most important mechanics it gets interesting to plan your strategy ahead, but there are a few more details I would like to point out.
+
+It might be my skill issue, but in my vision it is nearly impossible to play around the familiar when there are so much to keep track of. Not only dodging bullets, but also preparing for the familiar charge, using right weapons when necessary like for erasing bullets and many other details too. Redirecting familiar in the right direction while dodging bullets feels more subject to luck. Hence, no matter how I tried, I left the lockon mechanic behind.
+
+Patterns are generally very nice I must say, I won't go too much in detail here. But I had some problem with visibility/readability during playing. There are many colors and many details on the screen that I had no idea about. It would be better to let colors serve a certain role. As example: Red is familiar. Yellow is your weapon. White (and maybe some extra shades) - bullets.
+
+Menu is very polished. Manual is very elaborative. I think only because manual (+ tutorial) was very detailed I was able to understand mechanics quickly.
+
+Generally speaking, the game has an interesting concept and idea, but the demand of skills is too high. And, while I believe that in a full game it can reveal its full potential, for a demo/contest entry it was a bit too much.
+
+3. -------- Game Aesthetics: --------
+
+	Everything looks pretty nice, but I would change one thing - simplify bullets to a state it looks flat. The mixture of Touhou bullets and flat sprites feels a bit weird.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

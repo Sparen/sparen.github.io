@@ -1,0 +1,64 @@
+Bullet Hell Artistry #9: Unorthodox Firepower
+
+Contestant: Zino
+Judge: Loann Fox
+
+-------------------------------------
+
+My English is weak! Please be aware of that.
+
+My judging criteria has been posted in the #judging-criteria channel in BHE.
+ 
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+1. Game Design: [10/25]
+2. Game Experience: [32/50]
+3. Game Aesthetics: [21/25]
+4. Bonus (if present): [2]
+Result: [65/100]
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+1. ---------- Game Design: ----------
+
+	Implementing a deck builder gimmick into a shmup game is a very brave idea. I'm willing to give extra points for that. I have been trying to build various decks to test various playstyles, but figures that the only playable playstyle is the most common straight shot type, which is not what the contest encourages. Many non-spells and spellcards mostly force you to stick to the bottom don't giving any potential outplay from sides or in close range. There is a possibility to build a magic circle oriented deck, but that doesn't change the picture.
+
+2. -------- Game Experience: --------
+
+	Generally speaking, I had a lot of fun experimenting with building decks and reaching limits. Source management, card cost and discard system are all balanced well. But I heavily suggest against using V key for swapping cards. Dodging bullets is already a huge task and offering a lot of keys takes a lot of human RAM. Possible ideas to avoid it could be: press C to swap and long press C to use a card. Another idea: Shift + C, but that's harder to keep in mind. Maybe the swap mechanic is something not to be considered, since there's no time to control it when dodging danmaku. Probably the best idea would be to let cards swap automatically every 5 seconds.
+
+I want to also complain about magic circle. It took me a long while to understand how it works, because somehow I can get hit even during invulnerability frames. The visuals didn't explain it either. The visual is purely for the bullet slow effect. It's not the first frames of activating the magic circle, but it also doesn't last long too. It might be even buggy, and thus I don't rely on using magic circle mostly. A more intuitive and visible way of using it would be appreciated for a better experience.
+
+More about patterns:
+[C] Stage Section: Once memorized, the stage is almost empty. Stage patterns also feel pretty random.
+[B] Midboss N1: Seems fine.
+[A] Midboss S1: Good spell.
+[A] Midboss S2: Good spell.
+[A] Boss N1: Interesting for dodging.
+[B] Boss S1: Progressive spell, but looks very messy. At least the spell makes it clear on how to route it.
+[A] Boss N2: Excellent. Speed and spacing is perfect.
+[S] Boss S2: It really took a while to understand the gimmick of this spellcard, but this is a very decent spellcard actually. Player is given some time to read the amulet ring pattern and memorize it, since amulets won't be visible when the laser approaches. Amulet ring is not dense, so it is possible to pass quickly through them.
+[B] Boss N3: Simple, but works.
+[D] Boss S3: Interesting concept, but the spell is too challenging. Remember when ZUN introduced Seija's mechanic, her danmaku wasn't too hard. The idea is that (for a better experience) you shouldn't expect a player use the same level of dodging skills when you are planning to play around some basic concepts like 2D space. This spell also has several issues like screen flashing when teleporting from the top to the bottom (or vice versa) and spellcard name text blocking vision.
+[A] Boss N4: Looks good and playable.
+[D] Boss S4: Probably my least favorite spell due to it having a lot of RNG and fast paced bullets coming from everywhere. There is too much information to keep track of.
+[C] Boss N5: Feels random, but is probably fine.
+[C] Boss S5: Another progressive spell, but is less interesting to dodge. The first spell had dynamic, while here you are basically following steps without needing to dodge anything.
+[S] Boss N6: Probably my most favorite nonspell. Interesting logic that creates interesting experience. Although, with RNG boss movement, this spell may trap you. A solution for this pattern would be to create a familiar that slowly follows the boss and spawns this pattern. 
+[SS] Boss S6: My most favorite spell (and most favorite pattern in the whole game). A simple logic that creates a whole pattern without needing to add any other details. The spell is balanced well and mixes macrododging with micrododging well too.
+[A] Boss N7: Pretty decent.
+[F] Boss S7: Gets very unplayable once first few waves are spawned. Bullets are getting dense, it's hard to move fast in them and read the laser warnings.
+[A] Boss N8: Excellent.
+[B] Boss S8: Very basic, but is playable.
+[A] Boss N9: Excellent.
+[B] Boss S9: Seems fine.
+
+3. -------- Game Aesthetics: --------
+
+	Game looks solid, but I have two things to point out.
+First: Slightly unbalanced sounds effects. The overusage of the charge effect sound, which is not only loud, but also creates a messy noise by being very persistent. Music and other sound effects must have its place in sound composition.
+Second: The stars on stage background are very distracting to dodge danmaku. Since stage background is very dark, stars create a very high contrast, which may be confusing when trying to read information for dodging bullets. My advise would be to remove all hue from the screenshot of any time of the game and check the level of contrast and brightness. 

@@ -1,0 +1,64 @@
+Bullet Hell Artistry #9: Unorthodox Firepower
+
+Contestant: Ryann1908
+Judge: Loann Fox
+
+-------------------------------------
+
+My English is weak! Please be aware of that.
+
+My judging criteria has been posted in the #judging-criteria channel in BHE.
+ 
+-------------------------------------
+=========== General Score ===========
+-------------------------------------
+
+1. Game Design: [12/25]
+2. Game Experience: [44/50]
+3. Game Aesthetics: [25/25]
+4. Bonus (if present): [2]
+Result: [83/100]
+
+-------------------------------------
+============= Comments ==============
+-------------------------------------
+
+1. ---------- Game Design: ----------
+
+	 The reason behind low ranking lies in the main goal of the contest. Generally, there is nothing really off in game design, but introduced mechanics barely expand on the topic. Rune mechanic does not affect playstyle. It does offer a strategy, but it doesn't change any of the player mechanics fundamentally. Each scene did offer a unique player mechanic, though. But the problem is that no matter how different mechanics are, in essence they all play pretty much the same - mechanics have different logics, but you don't have to focus on them to be able to play the game. Only a few scenes really forced you to learn the shot type.
+
+2. -------- Game Experience: --------
+
+	Game experience was pretty solid for a scene game. I enjoyed the rune system and building my strategy around it. Most of the game experience is centered around patterns, so I will discuss them in detail.
+
+[A] Act 1-1: Creative spell, not quite sure if danmaku makes sense here.
+[A] Act 1-2: Good and creative spell. Might be a bit too early for a spell like this for an act 1.
+[B] Act 1-3: Seems conceptual at first, but in result danmaku feels a bit messy.
+[S] Act 1-4: Perfect spell.
+[A] Act 1-5: Good spell.
+[C] Act 1-6: Even after understanding the concept behind this spell, the spell still feels very confusing and strange. There are ways to simplify this idea.
+
+[A] Act 2-1: Good spell for a scene-like game. Some spells may ask you to learn their route, but only in a scene game. Otherwise such spells are very unwelcome.
+[C] Act 2-2: A bit harsh to introduce this spell so early. Not only you have to learn its route, but it's hard on its own. Another note: it's best for a good experience not to introduce two spells in a row that require routing, as it is a pretty demanding task. Leave it for late-game challenge, let them enjoy the game first.
+[B] Act 2-3: This spell seem interesting on a creative side (manipulating sound speed), but I can't say the same about danmaku. Feels pretty boring.
+[A] Act 2-4: Pretty good.
+[B] Act 2-5: Pretty fine.
+[C] Act 2-6: The concept is fine, but the spell is way too hard.
+
+[A] Act 3-1: This is funny. Now this is a spell that feels like it could fit early game, due to how simple it is.
+[D] Act 3-2: I'm going to copy one text from Zino's entry, as it has literally the same problem: "Interesting concept, but the spell is too challenging. Remember when ZUN introduced Seija's mechanic, her danmaku wasn't too hard. The idea is that (for a better experience) you shouldn't expect a player use the same level of dodging skills when you are planning to play around some basic concepts like 2D space."
+[C] Act 3-3: Probably the hardest spell here for me. I still don't think I understand how it works. (Note: I am aware of how the player works and even know the bug thath helps speedrunning this boss.)
+[B] Act 3-4: Seems fine, but it's a bit too quick to adapt.
+[C] Act 3-5: The same problem as 3-2 spell. If not the up-down movement, which actually breaks the whole idea of the spell, this spell would have been way too hard.
+[C] Act 3-6: This spell is good, but it takes way to long to understand how it works. Maybe some graphical hints could be implemented.
+
+[B] Act 4-1: Despite a fast-paced laser, which you get used to, is actually a simple spell for a late-game spell. Danmaku-wise everything is fine.
+[S] Act 4-2: Good spell.
+[???] Act 4-3: No idea how to react on this spell. It would be probably better to implement another idea or make this one a lot simpler and clear.
+[A] Act 4-4: Seems fine.
+[A] Act 4-5: Seems good.
+[C] Act 4-6: The spell feels too heavy and random.
+
+3. -------- Game Aesthetics: --------
+
+	Everything is beyond perfect. I'm willing to give a few extra points for the work. Early game spell (and original character) designs are much more interesting than late game.
