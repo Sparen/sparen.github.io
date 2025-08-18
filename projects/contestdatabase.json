@@ -662,6 +662,19 @@
             "numparticipants": 4,
             "result": ["Ryann", "Makuta Matara", "Zino"],
             "participants": ["Zino", "Ryann", "Makuta Matara", "Asthmagician"]
+        },
+        {
+            "id": "bha10",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "uninhibited unlimitations",
+            "year": 2025,
+            "duration": [2025.07, 2025.08],
+            "host": "Ryann",
+            "judges": ["COMMUNITY"],
+            "numparticipants": 0,
+            "result": [],
+            "participants": []
         }
     ]
 }

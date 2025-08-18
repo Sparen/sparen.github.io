@@ -1,5 +1,8 @@
 // Set an alert
-document.getElementById("alert_div").innerHTML = ``;
+document.getElementById("alert_div").innerHTML = `<div class="notice_inner_sm">
+Bullet Hell Artistry Contest #10 is now open until September 01, 2025!<br>
+<img src="https://sparen.github.io/projects/contest/bha10_banner.webp" style="max-height: 128px">
+</div>`;
 
 // -- Original Danmakufu Wiki notice
 //<div class="alert_inner_sm">
