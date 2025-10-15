@@ -672,9 +672,9 @@
             "duration": [2025.07, 2025.08],
             "host": "Ryann",
             "judges": ["COMMUNITY"],
-            "numparticipants": 0,
-            "result": [],
-            "participants": []
+            "numparticipants": 10,
+            "result": ["Syoudre", "Pickled Cow", "Kaxzer"],
+            "participants": ["Syoudre", "Pickled Cow", "Kaxzer", "Makuta Matara", "Selene", "ABBurlap", "Fumo Rin", "nolavthe", "kobito", "Tsuzyx"]
         }
     ]
 }
