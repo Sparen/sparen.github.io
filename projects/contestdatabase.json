@@ -583,7 +583,7 @@
             "judges": ["Adam", "CrestedPeak9", "WishMakers"],
             "numparticipants": 14,
             "result": [["Naudiz"], ["Kirbio"], ["Akemi Yume"]],
-            "participants": ["Syoudre", "Bravidunno", "JHero", "Ryann", "Akemi Yume", "Kevinmonitor", "Pickled Cow", "Zino/Lathios", "MarchosiasNull", "Drekareen/JDude", "Naudiz", "Foxigami", "Kirbio", "DJ Medoroa"]
+            "participants": ["Syoudre", "Bravidunno", "JHero", "Ryann", "Akemi Yume", "Kevinmonitor/Kevin Minh", "Pickled Cow", "Zino/Lathios", "MarchosiasNull", "Drekareen/JDude", "Naudiz", "Foxigami", "Kirbio", "DJ Medoroa"]
         },
         {
             "id": "bha5",
@@ -595,8 +595,8 @@
             "host": "Loann",
             "judges": ["Python", "Trickysticks", "Taizen"],
             "numparticipants": 9,
-            "result": [["Kevinmonitor"], ["Akemi Yume"], ["Ryann"]],
-            "participants": ["Kevinmonitor", "Akemi Yume", "Ryann", "Syoudre", "Pickled Cow", "MarchosiasNull", "Makuta Matara", "Samario", "Texel"]
+            "result": [["Kevinmonitor/Kevin Minh"], ["Akemi Yume"], ["Ryann"]],
+            "participants": ["Kevinmonitor/Kevin Minh", "Akemi Yume", "Ryann", "Syoudre", "Pickled Cow", "MarchosiasNull", "Makuta Matara", "Samario", "Texel"]
         },
         {
             "id": "bha6",
@@ -609,7 +609,7 @@
             "judges": ["Taizen", "Ryann", "Junky", "Amecchi"],
             "numparticipants": 9,
             "result": [["Syoudre"], ["Arby26"], ["Zino/Lathios"]],
-            "participants": ["Luna", "Gusano2314", "Zino/Lathios", "Akemi Yume", "Fuzzbearplush", "Makuta Matara", "Syoudre", "Pickled Cow", "raz/Arby26", "Kevinmonitor"]
+            "participants": ["Luna", "Gusano2314", "Zino/Lathios", "Akemi Yume", "Fuzzbearplush", "Makuta Matara", "Syoudre", "Pickled Cow", "raz/Arby26", "Kevinmonitor/Kevin Minh"]
         },
         {
             "id": "afc1",
@@ -635,7 +635,7 @@
             "judges": ["Taizen", "Trickysticks", "Adam", "Loann"],
             "numparticipants": 9,
             "result": [["Syoudre"], ["Makuta Matara"], ["ZackDiamond1258"]],
-            "participants": ["Syoudre", "Makuta Matara", "ZackDiamond1258", "Jackie Matthews", "Kevinmonitor", "Akemi Yume", "Ryann", "Fuzzbearplush", "Luna"]
+            "participants": ["Syoudre", "Makuta Matara", "ZackDiamond1258", "Jackie Matthews", "Kevinmonitor/Kevin Minh", "Akemi Yume", "Ryann", "Fuzzbearplush", "Luna"]
         },
         {
             "id": "bha8",
@@ -648,7 +648,7 @@
             "judges": ["Python", "thatonefrogxd/Gren", "Trickysticks"],
             "numparticipants": 14,
             "result": [["Makuta Matara"], ["ABBurlap"], ["Akemi Yume"]],
-            "participants": ["Makuta Matara", "ABBurlap", "Akemi Yume", "Doremy", "Pyralfruit", "Kevinmonitor", "NutterzButterz", "Luna", "Kobito", "Valon", "Foxigami", "Syoudre", "Pickled Cow", "Anna Says Hi", "Norois"]
+            "participants": ["Makuta Matara", "ABBurlap", "Akemi Yume", "Doremy/Iesua Inane", "Pyralfruit", "Kevinmonitor/Kevin Minh", "NutterzButterz", "Luna", "Kobito", "Valon", "Foxigami", "Syoudre", "Pickled Cow", "Anna Says Hi", "Norois"]
         },
         {
             "id": "bha9",
@@ -675,6 +675,32 @@
             "numparticipants": 10,
             "result": ["Syoudre", "Pickled Cow", "Kaxzer"],
             "participants": ["Syoudre", "Pickled Cow", "Kaxzer", "Makuta Matara", "Selene", "ABBurlap", "Fumo Rin", "nolavthe", "kobito", "Tsuzyx", "Nightwolf"]
+        },
+        {
+            "id": "bha11",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "uninhibited unlimitations",
+            "year": 2026,
+            "duration": [2026.01, 2026.02],
+            "host": "Ryann",
+            "judges": ["thatonefrogxd/Gren", "VanIsBadAtNames", "simplyshoki"],
+            "numparticipants": 7,
+            "result": ["Doremy/Iesua Inane", "Kevinmonitor/Kevin Minh", "Makuta Matara"],
+            "participants": ["Doremy/Iesua Inane", "Kevinmonitor/Kevin Minh", "Makuta Matara", "Selene", "Roger L", "create2019", "Syoudre"]
+        },
+        {
+            "id": "bha12",
+            "location": "bhe",
+            "loc_category": "bhe",
+            "name": "unified universes",
+            "year": 2026,
+            "duration": [2026.07, 2026.09],
+            "host": "Ryann",
+            "judges": ["thatonefrogxd/Gren", "Rül Hölos/Runa", "Syoudre"],
+            "numparticipants": 0,
+            "result": [],
+            "participants": []
         }
     ]
 }
